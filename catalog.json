@@ -1,5 +1,5 @@
 {
-  "total": 175,
+  "total": 218,
   "categories": [
     {
       "id": "01-copy-writing",
@@ -9,6 +9,10 @@
         {
           "name": "cold-email",
           "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \"cold outreach,\" \"prospecting email,\" \"outbound email,\" \"email to leads,\" \"reach out to prospects,\" \"sales email,\" \"follow-up email sequence,\" \"nobody's replying to my emails,\" or \"how do I write a cold email.\" Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see emails. For sales collateral beyond emails, see sales-enablement."
+        },
+        {
+          "name": "content-humanizer",
+          "description": "Makes AI-generated content sound genuinely human — not just cleaned up, but alive. Use when content feels robotic, uses too many AI clichés, lacks personality, or reads like it was written by committee. Triggers: 'this sounds like AI', 'make it more human', 'add personality', 'it feels generic', 'sounds robotic', 'fix AI writing', 'inject our voice'. NOT for initial content creation (use content-production). NOT for SEO optimization (use content-production Mode 3)."
         },
         {
           "name": "copy-editing",
@@ -72,6 +76,10 @@
         {
           "name": "frontend-design",
           "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults."
+        },
+        {
+          "name": "landing",
+          "description": "Generates a premium single-page HTML landing page with 3D CSS animations, GSAP scroll effects, and mouse-parallax depth. Forcing intake (product + elevator pitch, audience register, brand overrides, tone) locks down positioning before any copy or markup is written, so the page reflects the actual product rather than generic boilerplate. Use whenever the user says 'landing for X', 'create a landing page', 'build a landing page', 'make a landing page for X', 'I need a web page for Y', or provides product/service details and wants a polished website. Also triggers on 'promotional page', 'product page', 'one-pager', 'web presence', 'sales page'. Outputs a single self-contained HTML file (Claude Code) or HTML artifact (Claude.ai). Supports configurable brand colors via CSS custom property overrides."
         },
         {
           "name": "scroll-experience",
@@ -153,6 +161,10 @@
           "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'battle card,' or 'competitor teardown.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For sales-specific competitor docs, see sales-enablement."
         },
         {
+          "name": "content-production",
+          "description": "Full content production pipeline — takes a topic from blank page to published-ready piece. Use when you need to execute content: write a blog post, article, or guide end-to-end. Triggers: 'write a post about', 'draft an article', 'create content for', 'help me write', 'I need a blog post'. NOT for content strategy or calendar planning (use content-strategy). NOT for repurposing existing content (use content-repurposing). NOT for social captions only."
+        },
+        {
           "name": "content-strategy",
           "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social."
         },
@@ -189,8 +201,16 @@
           "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,\" \"PDF download,\" \"resource library,\" \"content offer,\" \"email capture content,\" \"Notion template,\" \"spreadsheet template,\" or \"what should I give away for emails.\" Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tools. For writing the actual content, see copywriting. For the email sequence after capture, see emails."
         },
         {
+          "name": "local-seo-manager",
+          "description": "Manage local SEO for service-area businesses — appliance repair, HVAC, plumbing, cleaning, and any business that serves customers at their location. Use when the user wants to: audit Google Business Profile, generate neighborhood service area pages, check NAP consistency across directories, create LocalBusiness schema, or write review responses. Triggers: 'local SEO', 'Google Business Profile', 'GBP', 'service area page', 'NAP consistency', 'local citations', 'LocalBusiness schema', 'review responses', 'Google Maps ranking'. NOT for national SEO (use seo-audit). NOT for general schema (use schema-markup). NOT for AI answer-engine visibility (use aeo)."
+        },
+        {
           "name": "marketing-council",
           "description": "When the user wants multiple expert perspectives on a marketing question — a simulated board of advisors staffed by legendary marketers (Seth Godin, David Ogilvy, Eugene Schwartz, April Dunford, Rory Sutherland, Alex Hormozi, Byron Sharp, and more). Also use when the user mentions 'marketing council,' 'board of advisors,' 'advisory board,' 'what would Seth Godin say,' 'what would Ogilvy think,' 'channel Hormozi,' 'get multiple perspectives,' 'debate this,' 'have the council review,' 'marketing mentors,' or asks how a famous marketer would approach their problem. The council gives each advisor's take through their documented frameworks, surfaces where they disagree, and synthesizes a recommendation. For executing the winning direction, hand off to positioning, offers, copywriting, ads, or the relevant skill."
+        },
+        {
+          "name": "marketing-demand-acquisition",
+          "description": "Creates demand generation campaigns, optimizes paid ad spend across LinkedIn, Google, and Meta, develops SEO strategies, and structures partnership programs. Use when planning demand gen strategy, growth marketing, advertising campaigns, PPC optimization, lead generation, pipeline generation, or marketing budgets. Covers multi-channel acquisition (Google Ads, LinkedIn Ads, Meta Ads), CAC analysis, MQL/SQL workflows, attribution modeling, technical SEO, and co-marketing partnerships. Default calibration profile is a Series A+ B2B SaaS scaling internationally (EU/US/Canada, hybrid PLG/Sales-Led) — adapt benchmarks for other stages and motions rather than skipping the skill."
         },
         {
           "name": "marketing-ideas",
@@ -207,6 +227,10 @@
         {
           "name": "marketing-psychology",
           "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context. For applying psychology to specific pages, see cro; for pricing tactics, see pricing; for copy framing, see copywriting."
+        },
+        {
+          "name": "marketing-strategy-pmm",
+          "description": "Product marketing skill for positioning, GTM strategy, competitive intelligence, and product launches. Use when the user asks about product positioning, go-to-market planning, competitive analysis, target audience definition, ICP definition, market research, launch plans, or sales enablement. Covers April Dunford positioning, ICP definition, competitive battlecards, launch playbooks, and international market entry. Produces deliverables including positioning statements, battlecard documents, launch plans, and go-to-market strategies."
         },
         {
           "name": "offers",
@@ -273,8 +297,32 @@
           "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \"sitemap,\" \"site map,\" \"visual sitemap,\" \"site structure,\" \"page hierarchy,\" \"information architecture,\" \"IA,\" \"navigation design,\" \"URL structure,\" \"breadcrumbs,\" \"internal linking strategy,\" \"website planning,\" \"what pages do I need,\" \"how should I organize my site,\" or \"site navigation.\" Use this whenever someone is planning what pages a website should have and how they connect. NOT for XML sitemaps (that's technical SEO — see seo-audit). For SEO audits, see seo-audit. For structured data, see schema."
         },
         {
+          "name": "social-media-analyzer",
+          "description": "Social media campaign analysis and performance tracking. Calculates engagement rates, ROI, and benchmarks across platforms. Use when analyzing social media performance, calculating engagement rate, measuring campaign ROI, comparing platform metrics, or benchmarking against industry standards. Also use when the user mentions \"social media audit,\" \"engagement rate,\" or \"which platform performs best.\""
+        },
+        {
+          "name": "social-media-manager",
+          "description": "When the user wants to develop social media strategy, plan content calendars, manage community engagement, or grow their social presence across platforms. Also use when the user mentions 'social media strategy,' 'social calendar,' 'community management,' 'social media plan,' 'grow followers,' 'engagement rate,' 'social media audit,' or 'which platforms should I use.' For writing individual social posts, see social-content. For analyzing social performance data, see social-media-analyzer."
+        },
+        {
           "name": "video",
           "description": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,' 'Synthesia,' 'Veo,' 'Sora,' 'Runway,' 'Kling,' 'Seedance,' 'Hailuo,' 'MiniMax,' 'Pika,' 'Hunyuan,' 'Wan,' 'video generation,' 'AI avatar,' 'talking head video,' 'programmatic video,' 'video template,' 'explainer video,' 'product demo video,' 'video pipeline,' 'copy this edit,' 'match this video style,' 'reverse-engineer this video,' 'edit like this reference,' or 'make me a video.' Use this for video creation, generation, and production workflows. For video content strategy and what to post, see social. For paid video ad creative, see ad-creative."
+        },
+        {
+          "name": "video-content-strategist",
+          "description": "Use when planning video content strategy, writing video scripts, optimizing YouTube channels, building short-form video pipelines (Reels, TikTok, Shorts), or repurposing long-form content into video. Triggers: 'start a YouTube channel', 'video content strategy', 'write a video script', 'repurpose into video', 'YouTube SEO', 'short-form video'. NOT for written blog content (use content-production). NOT for social captions without video (use social-media-manager)."
+        },
+        {
+          "name": "webinar-marketing",
+          "description": "When the user wants to plan, promote, run, or improve a webinar or virtual event to generate and convert demand. Use when the user mentions 'webinar,' 'virtual event,' 'online event,' 'live demo,' 'virtual summit,' 'workshop,' 'masterclass,' 'fireside chat,' 'roundtable,' 'registration funnel,' 'show-up rate,' 'attendance rate,' 'webinar promotion,' 'webinar follow-up,' or 'on-demand webinar.' Also use when they have a webinar that isn't converting — low registrations, low show-up, or attendees who don't buy — and want to diagnose and fix it. Covers the full funnel: registration, promotion, show-up, live engagement, live-to-close, and post-event nurture. Distinct from launch-strategy (full product launches) and email-sequence (lifecycle nurture) — this is the end-to-end webinar/event motion. NOT for in-person field events logistics, and NOT for generic lifecycle email (use email-sequence)."
+        },
+        {
+          "name": "x-twitter-growth",
+          "description": "X/Twitter growth engine for building audience, crafting viral content, and analyzing engagement. Use when the user wants to grow on X/Twitter, write tweets or threads, analyze their X profile, research competitors on X, plan a posting strategy, or optimize engagement. Complements social-content (generic multi-platform) with X-specific depth: algorithm mechanics, thread engineering, reply strategy, profile optimization, and competitive intelligence via web search."
+        },
+        {
+          "name": "youtube-full",
+          "description": "Use when the user needs YouTube transcripts, video search, channel browsing, playlist extraction, or content monitoring. Trigger phrases: 'get the transcript for', 'search YouTube for', 'what are the latest videos on', 'list this playlist', 'monitor this channel', or any request involving a YouTube URL, video ID, or @handle. Do NOT use for downloading video or audio files, YouTube engagement data (likes, comments), or private/age-restricted videos."
         }
       ]
     },
@@ -361,6 +409,10 @@
         {
           "name": "finishing-a-development-branch",
           "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work"
+        },
+        {
+          "name": "fix-tests",
+          "description": "Systematically fix all failing tests after business logic changes or refactoring"
         },
         {
           "name": "mcp-builder",
@@ -761,13 +813,140 @@
       ]
     },
     {
+      "id": "10-hyperfx-marketing",
+      "title": "Hyper — פלטפורמות שיווק ומודעות (MCP)",
+      "description": "חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP",
+      "skills": [
+        {
+          "name": "ad-creative-generation",
+          "description": "Generate on-brand ad creatives — visuals + copy — for Google, Meta (Facebook / Instagram), and other paid platforms via the Hyper MCP. Extracts brand identity from a website, writes ad copy variants, and produces brand-consistent images using reference-based image generation. Use when the user asks for ad creative, ad copy variants, RSA headlines, Meta ad creative, display ads, carousel ads, or A/B test variants."
+        },
+        {
+          "name": "amazon-ads",
+          "description": "Plan and create Amazon Sponsored Products campaigns end-to-end via the Hyper MCP. Use when the user wants to launch Amazon Ads, set up Sponsored Products, manage keyword targeting and bids, configure ASIN or category product targeting, add negative keywords, automate budget rules, analyze ACoS / ROAS, or generate Sponsored Products reports. Also triggers on amazon ppc, amazon campaign, amazon keywords, or amazon report."
+        },
+        {
+          "name": "analytics-insights",
+          "description": "Drive Google Analytics (GA4), Google Tag Manager, Google Search Console, and BigQuery from chat — tracking plans, GA4 reports, key-event (conversion) setup, custom dimensions and metrics, GTM audits, GSC performance, and GA4 BigQuery export queries. Use when the user wants an analytics audit, a GA4 report, a tracking plan, conversion setup, GTM cleanup, search-performance data, or asks \"how is the site performing?\" or \"are my conversions firing?\"."
+        },
+        {
+          "name": "blog-generation",
+          "description": "Generate one excellent, on-brand blog post per run for any business, built to rank on Google and get cited by AI search (ChatGPT, Claude, Perplexity, AI Overviews). A stateful engine: reads a brand strategy doc, picks a fresh topic (never repeats), researches, writes in the brand's voice, and logs the post back. Use when the user wants to write a blog post, run a daily or recurring blog task, or generate SEO / AEO / blog content. For keyword data and audits, defer to seo-research."
+        },
+        {
+          "name": "brand-context",
+          "description": "Create and maintain a single brand-context.md — positioning, audience, personas, pain points, customer language, voice, proof points — that every other marketing skill reads before asking the user to re-explain their business. Auto-drafts from the brand's site via Firecrawl, or builds the doc through a short interview. Use when the user wants to set up brand context, onboard a new brand, define positioning / brand voice / ICP, or complains about re-answering the same brand questions."
+        },
+        {
+          "name": "cold-email-outreach",
+          "description": "Run end-to-end B2B cold-email outreach through the Hyper MCP — enrich prospects with Apollo, scrape per-prospect signals from company sites and LinkedIn, draft personalized emails using proven hook frameworks, send via Gmail with safe defaults, and route replies into labeled folders. Use when the user wants to write cold emails, run an outbound sequence, prospect a list, build a follow-up cadence, \"reach out to leads,\" or asks why nobody is replying to their cold emails."
+        },
+        {
+          "name": "competitor-intel",
+          "description": "Run end-to-end competitor research and monitoring through the Hyper MCP — pick the set, scrape every public surface (site, blog, pricing, organic social, search rank, mentions, demand) via Firecrawl + HyperSEO + the Apify scrapers, diff against last run, and synthesize a brief. Use when the user wants to research competitors, build a battle card or comparison page, run a weekly digest, or asks \"what's [competitor] doing?\" or \"how do we compare?\"."
+        },
+        {
+          "name": "customer-research",
+          "description": "Mine online communities and analyze existing assets to understand what customers actually think, say, and struggle with. Use when the user wants to do customer research, ICP research, voice-of-customer (VOC), review mining, Reddit mining, YouTube comment analysis, G2/Capterra scraping, build customer personas, map jobs to be done, understand churn reasons, or find authentic customer language for copy. Also use when given transcripts, surveys, or support tickets to synthesize."
+        },
+        {
+          "name": "email-lifecycle",
+          "description": "Plan, build, and run lifecycle email programs through the Hyper MCP — welcome / onboarding, nurture, re-engagement, win-back, and abandoned-cart sequences across whichever provider fits (Klaviyo for ecommerce, Resend for SaaS / dev tools, Beehiiv for newsletters, Gmail for low-volume ops). Use when the user wants to build an email sequence, set up a welcome flow, recover lapsed users, send a broadcast, manage a list / audience / segment, or asks about lifecycle / drip / nurture campaigns."
+        },
+        {
+          "name": "gmail",
+          "description": "Manage Gmail end-to-end — send, reply, search, drafts, labels, attachments, and inbox organization. Use when the user wants to send or reply to email, clean up an inbox, build label systems, manage drafts, or pull attachments."
+        },
+        {
+          "name": "google-ads",
+          "description": "Plan and create new Google Ads campaigns and report on existing accounts via the Hyper MCP. Use when the user wants to launch Search, Display, Performance Max, Video, Demand Gen, Shopping, or App campaigns, build Google Ads reports or dashboards, diagnose conversion tracking, or mentions Google Ads, AdWords, search ads, display ads, Performance Max, PMax, PPC, Google campaigns, search term reports, budget analysis, conversion funnels, negative keywords, or manager accounts (MCC)."
+        },
+        {
+          "name": "google-sheets",
+          "description": "Safe workflow for reading, mapping, and writing Google Sheets without shifting columns or overwriting the wrong ranges. Use when the user wants to read, update, or append spreadsheet data, fix sheet structure, or sync data into Google Sheets."
+        },
+        {
+          "name": "hyper-cli",
+          "description": "Use the Hyper CLI to run Hyper marketing skills from a terminal. Use when the user wants to use `hyperai`, inspect live tool schemas, translate MCP tool names from a skill into CLI commands, switch connected accounts, or run marketing tools outside an MCP-native agent host."
+        },
+        {
+          "name": "image-generation",
+          "description": "Generate images through the Hyper MCP with the unified `images_generate` tool — text-to-image, image-to-image, and branded ad creatives — choosing the model (gpt-image-2, nano-banana, nano-banana-pro, seedream-4.5) per task. Use when the user asks to generate an image, create an ad creative, do an image-to-image edit, render text inside an image, or produce a print-quality poster."
+        },
+        {
+          "name": "instagram",
+          "description": "Manage Instagram professional accounts via the Hyper MCP — publish photos, Reels, Stories, and carousels; moderate comments and mentions; send Direct Messages; pull account and media insights. Uses the Instagram API with Instagram Login (Business Login). Use when the user mentions Instagram posts, Reels, Stories, carousels, IG DMs, Instagram comments, mentions, profile, or analytics. For paid Instagram advertising, use `meta-ads`."
+        },
+        {
+          "name": "linkedin",
+          "description": "Publish and manage LinkedIn content via the Hyper MCP — text posts, article / link previews, document and PDF posts, organization (company page) posts, and AI-generated text-to-carousel posts. Use when the user wants to post on LinkedIn, share an article on LinkedIn, post to a LinkedIn company page, upload a PDF / document to LinkedIn, or build a LinkedIn carousel from text."
+        },
+        {
+          "name": "meta-ads",
+          "description": "Plan and create Meta (Facebook + Instagram) advertising campaigns end-to-end via the Hyper MCP, defaulting to Advantage+ automation. Use when the user wants to launch Meta ads, Facebook ads, Instagram ads, Advantage+ campaigns, carousel ads, dynamic creative ads, set up Meta conversion tracking, analyze performance, audit a Meta ads account, or build Meta performance dashboards. Also triggers on phrases like meta campaign, facebook campaign, advantage+, or meta account audit."
+        },
+        {
+          "name": "meta-ads-library",
+          "description": "Research competitor Facebook and Instagram ads from the Meta Ads Library via the Hyper MCP — search by keyword, pull full ad creative and metadata, enrich with page contact info for lead generation, and surface structured ad-intelligence summaries in chat. Use when the user wants to scrape the Meta Ads Library, spy on competitor ads, monitor new ads in a category, build a lead list from advertisers, or surface creative trends across an industry."
+        },
+        {
+          "name": "openai-ads",
+          "description": "Plan and manage OpenAI Ads (ChatGPT ads) campaigns end-to-end via the Hyper MCP — API-key auth, account discovery, geo targeting, image upload, chat_card and product-feed creatives, custom audiences, conversion tracking, status flow, and insights, with integer-micros money values. Use when the user wants to launch OpenAI ads, ChatGPT ads, chat card ads, manage OpenAI ad groups or audiences, or pull OpenAI Ads insights."
+        },
+        {
+          "name": "pinterest-ads",
+          "description": "Plan and create Pinterest Ads campaigns through the Hyper MCP — Awareness, Consideration, Video View, Web Conversion, Catalog Sales, and Web Sessions objectives — with strict microcurrency budgeting, CBO rules, audience and customer-list management, conversion tag handling, keyword targeting, and campaign analytics. Use when the user mentions Pinterest ads, Pinterest campaign, Pinterest ad group, Pinterest audience, Pinterest conversion tracking, Pinterest tag, or Pinterest customer list."
+        },
+        {
+          "name": "reddit",
+          "description": "Research Reddit discussions with high signal using scrape_reddit_leads and scrape_reddit — pain points, intent discovery, and trend tracking. Use when the user wants to mine subreddits for leads, find threads worth replying to, or track what a community says about a topic."
+        },
+        {
+          "name": "reddit-ads",
+          "description": "Plan and create Reddit Ads campaigns end-to-end via the Hyper MCP — campaign, ad group, ad build order with subreddit / interest / geo targeting, promoted posts, custom and saved audiences, Reddit pixel conversion tracking, and reporting, with micro-currency budgets. Use when the user wants to launch Reddit ads, promote a Reddit post, target subreddits, set up a Reddit pixel, or pull Reddit ad reports. Also triggers on reddit campaign, reddit ppc, or reddit ads manager."
+        },
+        {
+          "name": "seo-research",
+          "description": "Data-driven SEO research and analysis through the Hyper MCP — keyword research, competitor analysis, content planning, AI search visibility (ChatGPT, Claude, Perplexity, Google AI Overviews), backlink trends, search intent classification, page speed / Core Web Vitals, and full site audits. Use when the user asks for an SEO audit, keyword research, content strategy, competitor benchmarks, brand visibility in AI search, ranking history, or any organic search analysis."
+        },
+        {
+          "name": "slack",
+          "description": "Slack messaging, file sharing, Block Kit formatting, and channel management. Use when the user wants to send Slack messages, post rich Block Kit layouts, share files, react, or manage channels and members."
+        },
+        {
+          "name": "snapchat-ads",
+          "description": "Plan and create Snapchat Ads campaigns end-to-end via the Hyper MCP — campaign, ad squad, ad build order with media upload, creatives, targeting, Snap Pixel conversion tracking, and sync / async reporting, using micro-currency budgets and JSON-Patch partial updates. Use when the user wants to launch Snapchat ads, build ad squads, upload Snap creatives, set up Snap Pixel tracking, or analyze Snapchat ad performance. Also triggers on snap ads, snapchat campaign, or snapchat ads manager."
+        },
+        {
+          "name": "tiktok",
+          "description": "Publish organic TikTok content (videos, photos, carousels) through the TikTok-compliant interactive posting form via the Hyper MCP. Use when the user wants to post a video to TikTok, share photos on TikTok, upload to TikTok, or any phrase like \"post this to TikTok\" / \"share on TikTok\" / \"put this on my TikTok\". For paid TikTok advertising campaigns, use the `tiktok-ads` skill instead."
+        },
+        {
+          "name": "tiktok-ads",
+          "description": "Plan and create TikTok advertising campaigns end-to-end via the Hyper MCP, with strict parameter validation for objective-specific requirements. Use when the user wants to launch TikTok ads, set up TikTok traffic or reach campaigns, configure conversions or app-promotion campaigns, upload TikTok video creatives, or analyze TikTok ad performance. Also triggers on tiktok marketing, tiktok campaign, tiktok ppc, or tiktok ads manager."
+        },
+        {
+          "name": "twilio",
+          "description": "Twilio messaging, voice, phone number management, and verification workflows. Use when the user wants to send SMS or WhatsApp messages, make voice calls, buy or configure phone numbers, or run OTP verification."
+        },
+        {
+          "name": "video-generation",
+          "description": "End-to-end AI video production through the Hyper MCP — text-to-video and image-to-video generation (Sora, Veo, Seedance), scene chaining, video analysis, transcription, subtitles, TikTok / karaoke captions, voiceover (TTS), audio mixing, clipping, stitching, and text overlays. Use when the user asks to generate a video, create UGC, scene-chain, add captions or subtitles, add narration, stitch clips, clip a podcast highlight, or do any AI video editing."
+        },
+        {
+          "name": "youtube",
+          "description": "Work with YouTube content end to end — fetch transcripts and turn them into summaries, blog posts, social content, quotes, or show notes; create high-CTR thumbnails (with the user's face from an upload), clone the style of top-ranking thumbnails; and produce SEO-optimised titles + descriptions. Use when the user pastes a YouTube URL, wants to repurpose video content, research competitor videos, make or refresh a thumbnail, or package a video for upload."
+        }
+      ]
+    },
+    {
       "id": "99-other",
       "title": "אחר",
       "description": "סקילים שלא סווגו לקטגוריה ברורה",
       "skills": [
         {
-          "name": "fix-tests",
-          "description": "Systematically fix all failing tests after business logic changes or refactoring"
+          "name": "awesome-agent-skills",
+          "description": "Discovery guide for finding new agent skills on the internet. Use when the user wants to find, browse, or install new skills for their agent — e.g. \"find a skill for X,\" \"is there a skill that does Y,\" \"what skills exist for marketing/design/testing,\" \"add more skills to my library,\" or \"where can I get official skills from Anthropic/Vercel/Stripe/Cloudflare.\" Points to curated, hand-picked skill collections (1400+ skills) from leading teams and the community, with install paths per agent (Claude Code, Cursor, Codex, Gemini CLI, and more)."
         }
       ]
     }

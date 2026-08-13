@@ -2,7 +2,7 @@
 
 Superpowers, בדיקות, תוכניות עבודה
 
-**מספר סקילים:** 24
+**מספר סקילים:** 25
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -12,6 +12,7 @@ Superpowers, בדיקות, תוכניות עבודה
 | `dispatching-parallel-agents` | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies |
 | `executing-plans` | Use when you have a written implementation plan to execute in a separate session with review checkpoints |
 | `finishing-a-development-branch` | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work |
+| `fix-tests` | Systematically fix all failing tests after business logic changes or refactoring |
 | `mcp-builder` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK). |
 | `receiving-code-review` | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation |
 | `requesting-code-review` | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
