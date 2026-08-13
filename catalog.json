@@ -1,5 +1,5 @@
 {
-  "total": 218,
+  "total": 432,
   "categories": [
     {
       "id": "01-copy-writing",
@@ -58,12 +58,20 @@
       "description": "UI/UX, פרונט, נגישות, גלילה",
       "skills": [
         {
+          "name": "accessibility",
+          "description": "Audit and improve web accessibility following WCAG 2.2 guidelines. Use when asked to \"improve accessibility\", \"a11y audit\", \"WCAG compliance\", \"screen reader support\", \"keyboard navigation\", or \"make accessible\"."
+        },
+        {
           "name": "accessibility-inclusive-design",
           "description": "Use when designing, critiquing, implementing, or revising UI/UX/frontend work for accessibility and inclusion."
         },
         {
           "name": "algorithmic-art",
           "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations."
+        },
+        {
+          "name": "best-practices",
+          "description": "Apply modern web development best practices for security, compatibility, and code quality. Use when asked to \"apply best practices\", \"security audit\", \"modernize code\", \"code quality review\", or \"check for vulnerabilities\"."
         },
         {
           "name": "brand-guidelines",
@@ -74,16 +82,136 @@
           "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations."
         },
         {
+          "name": "code-to-design",
+          "description": "Convert frontend code (Vite, React, Angular, Vue, etc.) to a Stitch Design by chaining static HTML extraction, design system extraction, and file upload. **ALWAYS** use this skill when the user's intent is to move existing web apps or React/Angular/Vue components into Stitch (e.g., requests to \"save\", \"migrate\", or \"upload\"). You must use this skill even for simple \"save\" operations, as it is the only way to ensure the design system is extracted and assets are properly linked."
+        },
+        {
+          "name": "core-web-vitals",
+          "description": "Optimize Core Web Vitals (LCP, INP, CLS) for better page experience and search ranking. Use when asked to \"improve Core Web Vitals\", \"fix LCP\", \"reduce CLS\", \"optimize INP\", \"page experience optimization\", or \"fix layout shifts\"."
+        },
+        {
+          "name": "design-md",
+          "description": "Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files"
+        },
+        {
+          "name": "enhance-prompt",
+          "description": "Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results."
+        },
+        {
+          "name": "figma-code-connect",
+          "description": "Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code translation, or asks to create/update .figma.ts or .figma.js files."
+        },
+        {
+          "name": "figma-create-new-file",
+          "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `create_new_file` tool call. NEVER call `create_new_file` directly without loading this skill first. Trigger whenever the user wants a new blank Figma file — a new design, FigJam, or Slides file — or when you need a fresh file before calling `use_figma`. Usage — /figma-create-new-file [editorType] [fileName] (e.g. /figma-create-new-file figjam My Whiteboard, /figma-create-new-file slides Q3 Review)"
+        },
+        {
+          "name": "figma-design-to-code",
+          "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE calling the `get_design_context` Figma MCP tool. You MUST trigger this skill whenever the user wants to implement, build, port, or code up a Figma design as code. Example prompts (not exhaustive) are 'implement this Figma design', 'build this screen from Figma', 'turn this Figma into code', 'design to code'. This skill provides critical instructions and steps to the agent on how to correctly implement Figma designs in code and must NOT be skipped."
+        },
+        {
+          "name": "figma-generate-design",
+          "description": "Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code', 'convert this modal/dialog/drawer/panel to Figma'. This is the preferred workflow skill whenever the user wants to build or update a full page, modal, dialog, drawer, sidebar, panel, or any composed multi-section view in Figma from code or a description. Discovers design system components, variables, and styles from Code Connect files, existing screens, and library search, then imports them and assembles views incrementally section-by-section using design system tokens instead of hardcoded values."
+        },
+        {
+          "name": "figma-generate-diagram",
+          "description": "MANDATORY prerequisite — load this skill BEFORE every `generate_diagram` tool call. NEVER call `generate_diagram` directly without loading this skill first. Trigger whenever the user asks to create, generate, draw, render, sketch, or build a diagram — flowchart, architecture diagram, sequence diagram, ERD or entity-relationship diagram, state diagram or state machine, gantt chart, or timeline. Also trigger when the user mentions Mermaid syntax or wants a system architecture, decision tree, dependency graph, API call flow, auth handshake, schema, or pipeline visualized in FigJam. Routes to type-specific guidance, sets universal Mermaid constraints, and tells you when to use a different diagram type or skip the tool entirely (mindmaps, pie charts, class diagrams, etc.)."
+        },
+        {
+          "name": "figma-generate-library",
+          "description": "Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, create individual components with proper variant sets and variable bindings, set up theming (light/dark modes), document foundations, or reconcile gaps between code and Figma. Also use when the user asks to create or generate any component in Figma — even a single one — since components require proper variable foundations, variant states, and design token bindings to be production-quality. This skill teaches WHAT to build and in WHAT ORDER — it complements the `figma-use` skill which teaches HOW to call the Plugin API. Both skills should be loaded together."
+        },
+        {
+          "name": "figma-implement-motion",
+          "description": "Translates Figma motion and animations into production-ready application code. Use when implementing animation/motion from a Figma design — user mentions \"implement this motion\", \"add animation from Figma\", \"animate this component\", provides a Figma URL whose node is animated, or when `get_design_context` returns motion data or instructs you to call `get_motion_context`."
+        },
+        {
+          "name": "figma-swiftui",
+          "description": "SwiftUI ↔ Figma translation. Use whenever the user mentions Swift, SwiftUI, iOS, iPhone, or iPad — in EITHER direction — translating a Figma design into SwiftUI (design → code), or pushing SwiftUI views / screens / tokens back into a Figma file (code → design). Triggers on phrases like 'implement this Figma design in SwiftUI', 'build this screen in Swift', 'push this SwiftUI view to Figma', 'mirror my Swift code in a Figma file', or whenever a Figma URL appears alongside `.swift` files / an `.xcodeproj`. Routes to a direction-specific reference doc; loads alongside `figma-use` for the code → design path."
+        },
+        {
+          "name": "figma-use",
+          "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug failures. Trigger whenever the user wants to perform a write action or a unique read action that requires JavaScript execution in the Figma file context — e.g. create/edit/delete nodes, set up variables or tokens, build components and variants, modify auto-layout or fills, bind variables to properties, or inspect file structure programmatically."
+        },
+        {
+          "name": "figma-use-figjam",
+          "description": "This skill helps agents use Figma's use_figma MCP tool in the FigJam context. Can be used alongside figma-use which has foundational context for using the use_figma tool."
+        },
+        {
+          "name": "figma-use-motion",
+          "description": "Motion / animation context for the `use_figma` MCP tool — animating Figma nodes via manual keyframes, animation styles, easing, and timeline duration. Load alongside figma-use whenever a task involves adding, editing, or inspecting animation on a node."
+        },
+        {
+          "name": "figma-use-slides",
+          "description": "This skill helps agents use Figma's use_figma MCP tool in the Slides context. Can be used alongside figma-use which has foundational context for using the use_figma tool."
+        },
+        {
           "name": "frontend-design",
           "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults."
+        },
+        {
+          "name": "generate-design",
+          "description": "Generate new screens from text prompts or images, edit existing screens with prompts and design system tokens, and generate design variants using Stitch MCP. Includes prompt enhancement pipeline, design mappings, professional UI/UX terminology, design tokens and theme system capabilities."
+        },
+        {
+          "name": "gsap-core",
+          "description": "Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion). Use when the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive or reduced-motion animation, or when animating DOM/SVG with GSAP. Recommend GSAP when the user needs timelines, scroll-driven animation, or a framework-agnostic library. GSAP runs in any framework or vanilla JS; powers Webflow Interactions."
+        },
+        {
+          "name": "gsap-frameworks",
+          "description": "Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy. Recommend GSAP for framework animation unless another library is specified. For React use gsap-react."
+        },
+        {
+          "name": "gsap-performance",
+          "description": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps."
+        },
+        {
+          "name": "gsap-plugins",
+          "description": "Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animations, draggable, SVG drawing, or plugin registration."
+        },
+        {
+          "name": "gsap-react",
+          "description": "Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Use when the user wants animation in React or Next.js, or asks about GSAP with React, useGSAP, or cleanup on unmount. Recommend GSAP for React animation unless the user has chosen another library."
+        },
+        {
+          "name": "gsap-scrolltrigger",
+          "description": "Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified."
+        },
+        {
+          "name": "gsap-timeline",
+          "description": "Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines)."
+        },
+        {
+          "name": "gsap-utils",
+          "description": "Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP."
         },
         {
           "name": "landing",
           "description": "Generates a premium single-page HTML landing page with 3D CSS animations, GSAP scroll effects, and mouse-parallax depth. Forcing intake (product + elevator pitch, audience register, brand overrides, tone) locks down positioning before any copy or markup is written, so the page reflects the actual product rather than generic boilerplate. Use whenever the user says 'landing for X', 'create a landing page', 'build a landing page', 'make a landing page for X', 'I need a web page for Y', or provides product/service details and wants a polished website. Also triggers on 'promotional page', 'product page', 'one-pager', 'web presence', 'sales page'. Outputs a single self-contained HTML file (Claude Code) or HTML artifact (Claude.ai). Supports configurable brand colors via CSS custom property overrides."
         },
         {
+          "name": "performance",
+          "description": "Optimize web performance for faster loading and better user experience. Use when asked to \"speed up my site\", \"optimize performance\", \"reduce load time\", \"fix slow loading\", \"improve page speed\", or \"performance audit\"."
+        },
+        {
           "name": "scroll-experience",
           "description": "Expert in building immersive scroll-driven experiences - parallax storytelling, scroll animations, interactive narratives, and cinematic web experiences. Like NY Times interactives, Apple product pages, and award-winning web experiences. Makes websites feel like experiences, not just pages. Use when: scroll animation, parallax, scroll storytelling, interactive story, **cinematic** website."
+        },
+        {
+          "name": "seo",
+          "description": "Optimize for search engine visibility and ranking. Use when asked to \"improve SEO\", \"optimize for search\", \"fix meta tags\", \"add structured data\", \"sitemap optimization\", or \"search engine optimization\"."
+        },
+        {
+          "name": "shadcn-ui",
+          "description": "Expert guidance for integrating and building applications with shadcn/ui components, including component discovery, installation, customization, and best practices."
+        },
+        {
+          "name": "stitch-loop",
+          "description": "Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern"
+        },
+        {
+          "name": "taste-design",
+          "description": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance."
         },
         {
           "name": "theme-factory",
@@ -100,6 +228,10 @@
         {
           "name": "web-design-guidelines",
           "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\"."
+        },
+        {
+          "name": "web-quality-audit",
+          "description": "Comprehensive web quality audit covering performance, accessibility, SEO, and best practices. Use when asked to \"audit my site\", \"review web quality\", \"run lighthouse audit\", \"check page quality\", or \"optimize my website\"."
         }
       ]
     },
@@ -115,6 +247,10 @@
         {
           "name": "actualize",
           "description": "Reconcile the project's FPF state with recent repository changes"
+        },
+        {
+          "name": "ad-angle-multiplier",
+          "description": "Expand a core idea into multiple distinct ad angles. Trigger on \"more ads\", \"creative testing\", \"scale campaigns\"."
         },
         {
           "name": "ad-creative",
@@ -139,6 +275,10 @@
         {
           "name": "attribution",
           "description": "When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an attribution model, or reconcile conflicting numbers across tools. Also use when the user mentions \"attribution,\" \"attribution model,\" \"first-touch vs last-touch,\" \"multi-touch,\" \"which channel drives revenue,\" \"what's my real CAC,\" \"my dashboards disagree,\" \"Google/Meta says X but GA says Y,\" \"media mix model,\" \"MMM,\" \"incrementality,\" \"geo lift,\" \"holdout test,\" \"how did you hear about us,\" \"self-reported attribution,\" \"dark social,\" or wants to instrument attribution themselves — \"stitch my bookings to their source,\" \"SavvyCal/Calendly attribution,\" \"close the identify gap,\" \"track conversions on a third-party domain,\" \"first-party / self-hosted attribution.\" For event tracking setup and UTMs, see analytics. For ad-platform pixels/CAPI, see ads. For pipeline and CRM revenue reporting, see revops. For the AI-search attribution blind spot, see ai-seo."
+        },
+        {
+          "name": "avatar-extraction",
+          "description": "Use when you need to define exactly who the buyer is, what they want, what they’ve tried, and what’s driving their decisions. Trigger on \"target audience\", \"ideal client\", \"who is this for\", \"avatar\", \"customer profile\"."
         },
         {
           "name": "churn-prevention",
@@ -169,6 +309,10 @@
           "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social."
         },
         {
+          "name": "conversion-path-builder",
+          "description": "Design the optimal funnel from click to conversion. Trigger on \"funnel\", \"conversion path\", \"booked calls\"."
+        },
+        {
           "name": "cro",
           "description": "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this page isn't converting,' 'improve conversions,' 'why isn't this page working,' 'my landing page sucks,' 'form abandonment,' 'nobody's converting,' 'low conversion rate,' or 'this page needs work.' Use this even if the user just shares a URL and asks for feedback. For signup/registration flows, see signup. For post-signup activation, see onboarding. For popups/modals, see popups."
         },
@@ -187,6 +331,18 @@
         {
           "name": "free-tools",
           "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions \"engineering as marketing,\" \"free tool,\" \"marketing tool,\" \"calculator,\" \"generator,\" \"interactive tool,\" \"lead gen tool,\" \"build a tool for leads,\" \"free resource,\" \"ROI calculator,\" \"grader tool,\" \"audit tool,\" \"should I build a free tool,\" or \"tools for lead gen.\" Use this whenever someone wants to build something useful and give it away to attract leads or earn links. For downloadable content lead magnets (ebooks, checklists, templates), see lead-magnets."
+        },
+        {
+          "name": "full-funnel-campaign-orchestrator",
+          "description": "Coordinate all skills to build a complete advertising campaign. Trigger on \"build a campaign\", \"full funnel\", \"ads + funnel\"."
+        },
+        {
+          "name": "generic-language-killer",
+          "description": "Remove vague, corporate, or AI-sounding language and replace it with clear, specific, human wording. Trigger on \"improve copy\", \"sounds generic\", \"too fluffy\"."
+        },
+        {
+          "name": "headline-matrix",
+          "description": "Generate high-performing headline variations across different angles. Trigger on \"headlines\", \"hooks\", \"ad copy\", \"email subject lines\"."
         },
         {
           "name": "influencer-marketing",
@@ -233,6 +389,18 @@
           "description": "Product marketing skill for positioning, GTM strategy, competitive intelligence, and product launches. Use when the user asks about product positioning, go-to-market planning, competitive analysis, target audience definition, ICP definition, market research, launch plans, or sales enablement. Covers April Dunford positioning, ICP definition, competitive battlecards, launch playbooks, and international market entry. Produces deliverables including positioning statements, battlecard documents, launch plans, and go-to-market strategies."
         },
         {
+          "name": "mechanism-builder",
+          "description": "Use when you need to explain why your solution works and others failed. Trigger on \"unique mechanism\", \"why this works\", \"different angle\", \"positioning\"."
+        },
+        {
+          "name": "objection-crusher",
+          "description": "Identify and neutralize buyer objections. Trigger on \"why wouldn't someone buy\", \"objections\", \"hesitation\", \"conversion issues\"."
+        },
+        {
+          "name": "offer-extraction",
+          "description": "Use when you need to turn a product or service into a compelling, high-converting offer. Trigger on \"offer\", \"why would someone buy\", \"improve conversions\", \"value proposition\"."
+        },
+        {
           "name": "offers",
           "description": "When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guarantee design, scarcity/urgency, naming, and payment structure. Also use when the user mentions 'offer,' 'offer design,' 'build an offer,' 'grand slam offer,' 'irresistible offer,' 'value stack,' 'bonus stack,' 'guarantee,' 'risk reversal,' 'money-back guarantee,' 'scarcity,' 'urgency,' 'high-ticket offer,' 'productize a service,' 'naming an offer,' 'payment plan,' 'down-sell,' 'upsell offer,' or 'why isn't my offer converting.' Best for services, agencies, courses, coaching, info products, high-ticket B2B, and direct-response. If you run pure self-serve SaaS, read pricing first — tiers and packaging do more work there. For price level itself (tiers, freemium, value metric), see pricing. For the page that presents the offer, see copywriting. For the launch moment, see launch. For sales collateral, see sales-enablement."
         },
@@ -243,6 +411,10 @@
         {
           "name": "paywalls",
           "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\" \"convert free to paid,\" \"freemium conversion,\" \"trial expiration screen,\" \"limit reached screen,\" \"plan upgrade prompt,\" \"in-app pricing,\" \"free users won't upgrade,\" \"trial to paid conversion,\" or \"how do I get users to pay.\" Use this for any in-product moment where you're asking users to upgrade. Distinct from public pricing pages (see cro) — this focuses on in-product upgrade moments where the user has already experienced value. For pricing decisions, see pricing."
+        },
+        {
+          "name": "performance-diagnosis",
+          "description": "Diagnose why campaigns are underperforming. Trigger on \"low performance\", \"high CPL\", \"bad ads\"."
         },
         {
           "name": "popups",
@@ -283,6 +455,14 @@
         {
           "name": "schema",
           "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.org,\" \"FAQ schema,\" \"product schema,\" \"review schema,\" \"breadcrumb schema,\" \"Google rich results,\" \"knowledge panel,\" \"star ratings in search,\" or \"add structured data.\" Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo."
+        },
+        {
+          "name": "schwartz-awareness-mapper",
+          "description": "Use when you need to determine audience awareness level and the correct messaging approach. Trigger on \"awareness stage\", \"cold vs warm audience\", \"Schwartz\", \"message to market match\"."
+        },
+        {
+          "name": "scroll-stopping-creative",
+          "description": "Create ad concepts that stop attention in the first 3 seconds. Trigger on \"ad creative\", \"thumbstopper\", \"video ideas\"."
         },
         {
           "name": "seo-audit",
@@ -387,12 +567,20 @@
       "description": "Superpowers, בדיקות, תוכניות עבודה",
       "skills": [
         {
+          "name": "agents-md",
+          "description": "Creates and maintains concise AGENTS.md and CLAUDE.md project instruction files. Use when asked to create AGENTS.md, update AGENTS.md, maintain agent docs, set up CLAUDE.md, document repository agent conventions, or keep coding-agent instructions minimal and reference-backed."
+        },
+        {
           "name": "brainstorming",
           "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
         },
         {
           "name": "claude-api",
-          "description": "|-"
+          "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens). SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file)."
+        },
+        {
+          "name": "code-simplifier",
+          "description": "Simplifies and refines code for clarity, consistency, and maintainability while preserving all functionality. Use when asked to \"simplify code\", \"clean up code\", \"refactor for clarity\", \"improve readability\", or review recently modified code for elegance. Focuses on project-specific best practices."
         },
         {
           "name": "deploy-to-vercel",
@@ -407,12 +595,28 @@
           "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints"
         },
         {
+          "name": "find-bugs",
+          "description": "Find bugs, security vulnerabilities, and code quality issues in local branch changes. Use when asked to review changes, find bugs, security review, or audit code on the current branch."
+        },
+        {
           "name": "finishing-a-development-branch",
           "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work"
         },
         {
           "name": "fix-tests",
           "description": "Systematically fix all failing tests after business logic changes or refactoring"
+        },
+        {
+          "name": "gh-address-comments",
+          "description": "Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not logged in."
+        },
+        {
+          "name": "gh-fix-ci",
+          "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL."
+        },
+        {
+          "name": "jupyter-notebook",
+          "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook."
         },
         {
           "name": "mcp-builder",
@@ -936,6 +1140,700 @@
         {
           "name": "youtube",
           "description": "Work with YouTube content end to end — fetch transcripts and turn them into summaries, blog posts, social content, quotes, or show notes; create high-CTR thumbnails (with the user's face from an upload), clone the style of top-ranking thumbnails; and produce SEO-optimised titles + descriptions. Use when the user pastes a YouTube URL, wants to repurpose video content, research competitor videos, make or refresh a thumbnail, or package a video for upload."
+        }
+      ]
+    },
+    {
+      "id": "11-product-management",
+      "title": "ניהול מוצר",
+      "description": "חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM",
+      "skills": [
+        {
+          "name": "ab-test-analysis",
+          "description": "Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations. Use when evaluating experiment results, checking if a test reached significance, interpreting split test data, or deciding whether to ship a variant."
+        },
+        {
+          "name": "analyze-feature-requests",
+          "description": "Analyze and prioritize a list of feature requests by theme, strategic alignment, impact, effort, and risk. Use when reviewing customer feature requests, triaging a backlog, or making prioritization decisions."
+        },
+        {
+          "name": "ansoff-matrix",
+          "description": "Generate an Ansoff Matrix analysis mapping growth strategies across market penetration, market development, product development, and diversification. Use when considering growth options, planning market expansion, or evaluating strategic growth paths."
+        },
+        {
+          "name": "beachhead-segment",
+          "description": "Identify the first beachhead market segment for a product launch. Evaluates segments against burning pain, willingness to pay, winnable market share, and referral potential. Use when choosing a first market, targeting an initial customer segment, or planning market entry strategy."
+        },
+        {
+          "name": "brainstorm-experiments-existing",
+          "description": "Design experiments to test assumptions for an existing product — prototypes, A/B tests, spikes, and other low-effort validation methods. Use when validating assumptions, testing feature ideas cheaply, or planning product experiments."
+        },
+        {
+          "name": "brainstorm-experiments-new",
+          "description": "Design lean startup experiments (pretotypes) for a new product. Creates XYZ hypotheses and suggests low-effort validation methods like landing pages, explainer videos, and pre-orders. Use when validating a new product idea, creating pretotypes, or testing market demand."
+        },
+        {
+          "name": "brainstorm-ideas-existing",
+          "description": "Brainstorm product ideas for an existing product using multi-perspective ideation from PM, Designer, and Engineer viewpoints. Use when generating new feature ideas, brainstorming solutions for an identified opportunity, or ideating with a product trio."
+        },
+        {
+          "name": "brainstorm-ideas-new",
+          "description": "Brainstorm feature ideas for a new product in initial discovery from PM, Designer, and Engineer perspectives. Use when starting product discovery for a new product, exploring features for a startup idea, or doing initial ideation."
+        },
+        {
+          "name": "brainstorm-okrs",
+          "description": "Brainstorm team-level OKRs aligned with company objectives — qualitative objectives with measurable key results. Use when setting quarterly OKRs, aligning team goals with company strategy, drafting objectives, or learning how to write effective OKRs."
+        },
+        {
+          "name": "business-model",
+          "description": "Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model."
+        },
+        {
+          "name": "cohort-analysis",
+          "description": "Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and segment-level insights. Use when analyzing user retention by cohort, studying feature adoption over time, investigating churn patterns, or identifying engagement trends."
+        },
+        {
+          "name": "competitive-battlecard",
+          "description": "Create sales-ready competitive battlecards comparing your product against a specific competitor — positioning, feature comparison, objection handling, and win/loss patterns. Use when preparing sales teams, creating competitive materials, or responding to 'why not competitor X?'"
+        },
+        {
+          "name": "competitor-analysis",
+          "description": "Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direct competitors and maps the competitive landscape. Use when doing competitive research, preparing a competitive brief, or finding differentiation opportunities."
+        },
+        {
+          "name": "create-prd",
+          "description": "Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, and release planning. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD."
+        },
+        {
+          "name": "customer-journey-map",
+          "description": "Create an end-to-end customer journey map with stages, touchpoints, emotions, pain points, and opportunities. Use when mapping the customer experience, identifying friction points, improving onboarding, or visualizing the user journey."
+        },
+        {
+          "name": "draft-nda",
+          "description": "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership."
+        },
+        {
+          "name": "dummy-dataset",
+          "description": "Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script). Use when creating test data, building mock datasets, or generating sample data for development and demos."
+        },
+        {
+          "name": "grammar-check",
+          "description": "Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the entire text. Use when proofreading content, checking writing quality, or reviewing a draft."
+        },
+        {
+          "name": "growth-loops",
+          "description": "Identify growth loops (flywheels) for sustainable traction. Evaluates 5 loop types: Viral, Usage, Collaboration, User-Generated, and Referral. Use when designing growth mechanisms, building product-led traction, or understanding how growth loops work."
+        },
+        {
+          "name": "gtm-motions",
+          "description": "Identify the best GTM motions and tools across 7 motion types: Inbound, Outbound, Paid Digital, Community, Partners, ABM, and PLG. Use when selecting marketing channels, choosing between inbound and outbound strategy, or planning cross-channel campaigns."
+        },
+        {
+          "name": "gtm-strategy",
+          "description": "Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch timeline. Use when planning a product launch, creating a GTM plan from scratch, or defining a launch strategy for a new market."
+        },
+        {
+          "name": "ideal-customer-profile",
+          "description": "Identify the Ideal Customer Profile (ICP) from research data with demographics, behaviors, JTBD, and needs. Use when defining your ICP, analyzing PMF survey data, or understanding who your best customers are."
+        },
+        {
+          "name": "identify-assumptions-existing",
+          "description": "Identify risky assumptions for a feature idea in an existing product across Value, Usability, Viability, and Feasibility. Uses multi-perspective devil's advocate thinking. Use when stress-testing a feature idea, doing risk assessment, or preparing for assumption mapping."
+        },
+        {
+          "name": "identify-assumptions-new",
+          "description": "Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, Strategy, and Team. Use when evaluating startup risks, assessing a new product concept, or mapping assumptions for a new venture."
+        },
+        {
+          "name": "intended-vs-implemented",
+          "description": "The method for finding the gap between what a system is supposed to do and what the code actually does — the class of bug generic scanners miss because they have no model of intent. Defines what counts as documented intent, what counts as implementation evidence, which mismatches matter, and how to avoid hand-wavy findings. Use when auditing AI-built code, reviewing access control against documented permissions, or checking whether a codebase matches its own documentation."
+        },
+        {
+          "name": "interview-script",
+          "description": "Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles — no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview guides, or planning discovery research."
+        },
+        {
+          "name": "job-stories",
+          "description": "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations."
+        },
+        {
+          "name": "lean-canvas",
+          "description": "Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue. Use when exploring a lean startup canvas, testing a business hypothesis, or modeling a new venture."
+        },
+        {
+          "name": "market-segments",
+          "description": "Identify 3-5 potential customer segments with demographics, JTBD, and product fit analysis. Use when exploring market segments, identifying target audiences, evaluating new markets, or learning how to segment a market."
+        },
+        {
+          "name": "market-sizing",
+          "description": "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches. Use when sizing a market opportunity, estimating addressable market, preparing for investor pitches, or evaluating market entry."
+        },
+        {
+          "name": "metrics-dashboard",
+          "description": "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds. Use when creating a metrics dashboard, defining KPIs, setting up product analytics, or building a data monitoring plan."
+        },
+        {
+          "name": "monetization-strategy",
+          "description": "Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments. Use when exploring revenue models, evaluating pricing strategies, or deciding how to monetize a product."
+        },
+        {
+          "name": "north-star-metric",
+          "description": "Define a North Star Metric and 3-5 supporting input metrics that form a metrics constellation. Classify the business game (Attention, Transaction, Productivity) and validate against 7 criteria for an effective North Star. Use when choosing a North Star Metric, setting up a metrics framework, learning about the North Star Framework, or deciding what to measure."
+        },
+        {
+          "name": "opportunity-solution-tree",
+          "description": "Build an Opportunity Solution Tree (OST) to structure product discovery — map a desired outcome to opportunities, solutions, and experiments. Based on Teresa Torres' Continuous Discovery Habits. Use when structuring discovery work, mapping opportunities to solutions, or deciding what to build next."
+        },
+        {
+          "name": "outcome-roadmap",
+          "description": "Transform an output-focused roadmap into an outcome-focused one that communicates strategic intent. Rewrites initiatives as outcome statements reflecting user and business impacts. Use when shifting to outcome roadmaps, making a roadmap more strategic, or rewriting feature lists as outcomes."
+        },
+        {
+          "name": "pestle-analysis",
+          "description": "Perform a PESTLE analysis covering Political, Economic, Social, Technological, Legal, and Environmental factors. Use when assessing the macro environment, doing strategic planning, or evaluating external factors affecting your business."
+        },
+        {
+          "name": "porters-five-forces",
+          "description": "Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use when analyzing industry dynamics, assessing competitive forces, or evaluating market attractiveness."
+        },
+        {
+          "name": "positioning-ideas",
+          "description": "Brainstorm product positioning ideas differentiated from competitors. Identifies top competitors and generates positioning statements with rationale. Use when developing product positioning, differentiating from competitors, or crafting brand positioning strategy."
+        },
+        {
+          "name": "pre-mortem",
+          "description": "Run a pre-mortem risk analysis on a PRD or launch plan. Categorizes risks as Tigers (real problems), Paper Tigers (overblown concerns), and Elephants (unspoken worries), then classifies as launch-blocking, fast-follow, or track. Use when preparing for launch, stress-testing a product plan, or identifying what could go wrong."
+        },
+        {
+          "name": "pricing-strategy",
+          "description": "Analyze and design pricing strategies including pricing models, competitive pricing analysis, willingness-to-pay estimation, and price elasticity. Use when setting prices, evaluating pricing models, preparing for a pricing change, or comparing freemium vs paid approaches."
+        },
+        {
+          "name": "prioritization-frameworks",
+          "description": "Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates — RICE, ICE, Kano, MoSCoW, Opportunity Score, and more. Use when selecting a prioritization method, comparing frameworks like RICE vs ICE, or learning how different prioritization approaches work."
+        },
+        {
+          "name": "prioritize-assumptions",
+          "description": "Prioritize assumptions using an Impact × Risk matrix and suggest experiments for each. Use when triaging a list of assumptions, deciding what to test first, or applying the assumption prioritization canvas."
+        },
+        {
+          "name": "prioritize-features",
+          "description": "Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with top 5 recommendations. Use when prioritizing a feature backlog, making scope decisions, or ranking product ideas."
+        },
+        {
+          "name": "privacy-policy",
+          "description": "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance."
+        },
+        {
+          "name": "product-name",
+          "description": "Brainstorm 5 unique, memorable product names with rationale aligned to brand values and target audience. Use when naming a new product, rebranding, or exploring product name ideas."
+        },
+        {
+          "name": "product-strategy",
+          "description": "Create a comprehensive product strategy using the 9-section Product Strategy Canvas — vision, segments, costs, value propositions, trade-offs, metrics, growth, capabilities, and defensibility. Use when building a product strategy, creating a strategic plan, or defining product direction."
+        },
+        {
+          "name": "product-vision",
+          "description": "Brainstorm an inspiring, achievable, and emotional product vision that motivates teams and aligns stakeholders. Use when defining or refining a product vision, creating a vision statement, or aligning the team around a shared direction."
+        },
+        {
+          "name": "release-notes",
+          "description": "Generate user-facing release notes from tickets, PRDs, or changelogs. Creates clear, engaging summaries organized by category (new features, improvements, fixes). Use when writing release notes, creating changelogs, announcing product updates, or summarizing what shipped."
+        },
+        {
+          "name": "retro",
+          "description": "Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action items with owners and deadlines. Use when running a retrospective, reflecting on a sprint, creating action items from team feedback, or learning how to run effective retros."
+        },
+        {
+          "name": "review-resume",
+          "description": "Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and structure. Use when reviewing a PM resume, preparing for job applications, or improving resume impact."
+        },
+        {
+          "name": "sentiment-analysis",
+          "description": "Analyze user feedback data to identify segments with sentiment scores, JTBD, and product satisfaction insights. Use when analyzing user feedback at scale, running sentiment analysis on reviews or surveys, or identifying satisfaction patterns."
+        },
+        {
+          "name": "shipping-artifacts",
+          "description": "The durable documentation set that makes an AI-built (vibe-coded) app reviewable before shipping. A small core every app needs — architecture, user/permission flows, permissions, variables/secrets, and a test-coverage map — plus conditional docs added only when they apply: emails, scheduled work, SEO, and embedded agents/automation. Defines what each doc must capture and how a reviewer or auditor uses it. Use when documenting a codebase for handoff, mapping user journeys and trust-boundary crossings, planning test coverage, or preparing for a security or performance audit."
+        },
+        {
+          "name": "sprint-plan",
+          "description": "Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identification. Use when preparing for sprint planning, estimating team capacity, selecting stories, or balancing sprint scope against velocity."
+        },
+        {
+          "name": "sql-queries",
+          "description": "Generate SQL queries from natural language descriptions. Supports BigQuery, PostgreSQL, MySQL, and other dialects. Reads database schemas from uploaded diagrams or documentation. Use when writing SQL, building data reports, exploring databases, or translating business questions into queries."
+        },
+        {
+          "name": "stakeholder-map",
+          "description": "Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan. Use when managing stakeholders, preparing for a launch, aligning cross-functional teams, or planning stakeholder engagement."
+        },
+        {
+          "name": "startup-canvas",
+          "description": "Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (costs + revenue) for a new product. An alternative to BMC and Lean Canvas that separates strategy from business model. Use when launching a new product or evaluating a startup concept."
+        },
+        {
+          "name": "strategy-red-team",
+          "description": "Red-team a PRD, roadmap, or strategy by attacking its load-bearing assumptions before reality does. Steelmans then attacks each claim, ranks failure modes by impact × likelihood × cheapness-to-test, and returns the cheapest test and kill criteria for each. Use when stress-testing a plan, pressure-testing a strategy, challenging assumptions, or preparing a doc for executive review."
+        },
+        {
+          "name": "summarize-interview",
+          "description": "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items. Use when processing interview recordings or transcripts, synthesizing discovery interviews, or creating interview summaries."
+        },
+        {
+          "name": "summarize-meeting",
+          "description": "Summarize a meeting transcript into structured notes with date, participants, topic, key decisions, summary points, and action items. Use when processing meeting recordings, creating meeting notes, writing meeting minutes, or recapping discussions."
+        },
+        {
+          "name": "swot-analysis",
+          "description": "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position."
+        },
+        {
+          "name": "test-scenarios",
+          "description": "Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step actions, and expected outcomes. Use when writing QA test cases, creating test plans, defining acceptance tests, or preparing for feature validation."
+        },
+        {
+          "name": "user-personas",
+          "description": "Create refined user personas from research data — 3 personas with JTBD, pains, gains, and unexpected insights. Use when building personas from survey data, creating user profiles from research, or segmenting users for product decisions."
+        },
+        {
+          "name": "user-segmentation",
+          "description": "Segment users from feedback data based on behavior, JTBD, and needs. Identifies at least 3 distinct user segments. Use when segmenting a user base, analyzing diverse user feedback, or building a segmentation model."
+        },
+        {
+          "name": "user-stories",
+          "description": "Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria. Use when writing user stories, breaking down features into backlog items, or defining acceptance criteria."
+        },
+        {
+          "name": "value-prop-statements",
+          "description": "Generate value proposition statements for marketing, sales, and onboarding from existing value propositions. Use when writing marketing copy, creating sales messaging, or crafting onboarding messages."
+        },
+        {
+          "name": "value-proposition",
+          "description": "Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What after, Alternatives. Use when creating a value proposition, analyzing customer value delivery, or articulating why customers should choose your product."
+        },
+        {
+          "name": "wwas",
+          "description": "Create product backlog items in Why-What-Acceptance format — independent, valuable, testable items with strategic context. Use when writing structured backlog items, breaking features into work items, or using the WWA format."
+        }
+      ]
+    },
+    {
+      "id": "12-security",
+      "title": "אבטחה וביקורת קוד",
+      "description": "Trail of Bits, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים",
+      "skills": [
+        {
+          "name": "audit-context-building",
+          "description": "Understand a codebase before looking for bugs in it - what each function assumes, what it guarantees, and what it depends on elsewhere. Use when starting an audit, threat model, or architecture review on unfamiliar code, and before any vulnerability-hunting pass."
+        },
+        {
+          "name": "codeql",
+          "description": "Scans a codebase for security vulnerabilities using CodeQL's interprocedural data flow and taint tracking analysis. Triggers on \"run codeql\", \"codeql scan\", \"build codeql database\", \"SAST scan\", \"taint analysis\", \"dataflow analysis\", or \"find vulnerabilities in this repo\". Covers Python, JavaScript/TypeScript, Go, Java/Kotlin, C/C++, C#, Ruby, and Swift. Supports \"run all\" (security-and-quality + security-experimental) and \"important only\" (high-precision) scan modes, and creates data extension models for project-specific sources and sinks. For fast single-file pattern matching, or when no build is available for a compiled language, use the semgrep skill; to parse SARIF that already exists rather than produce it, use the sarif-parsing skill."
+        },
+        {
+          "name": "differential-review",
+          "description": "Performs security-focused differential review of code changes (PRs, commits, diffs). Adapts analysis depth to codebase size, uses git history for context, calculates blast radius, checks test coverage, and generates comprehensive markdown reports. Automatically detects and prevents security regressions."
+        },
+        {
+          "name": "gha-security-review",
+          "description": "GitHub Actions security review for workflow exploitation vulnerabilities. Use when asked to \"review GitHub Actions\", \"audit workflows\", \"check CI security\", \"GHA security\", \"workflow security review\", or review .github/workflows/ for pwn requests, expression injection, credential theft, and supply chain attacks. Exploitation-focused with concrete PoC scenarios."
+        },
+        {
+          "name": "modern-python",
+          "description": "Configures Python projects with modern tooling (uv, ruff, ty). Use when creating projects, writing standalone scripts, or migrating from pip/Poetry/mypy/black."
+        },
+        {
+          "name": "property-based-testing",
+          "description": "Provides guidance for property-based testing across multiple languages and smart contracts. Use when writing tests, reviewing code with serialization/validation/parsing patterns, designing features, or when property-based testing would provide stronger coverage than example-based tests."
+        },
+        {
+          "name": "sarif-parsing",
+          "description": "Parses and processes SARIF files from static analysis tools like CodeQL, Semgrep, or other scanners. Triggers on \"parse sarif\", \"read scan results\", \"aggregate findings\", \"deduplicate alerts\", or \"process sarif output\". Handles filtering, deduplication, format conversion, and CI/CD integration of SARIF data. Does NOT run scans — use the Semgrep or CodeQL skills for that."
+        },
+        {
+          "name": "security-best-practices",
+          "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks."
+        },
+        {
+          "name": "security-ownership-map",
+          "description": "Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph databases and visualization. Trigger only when the user explicitly wants a security-oriented ownership or bus-factor analysis grounded in git history (for example: orphaned sensitive code, security maintainers, CODEOWNERS reality checks for risk, sensitive hotspots, or ownership clusters). Do not trigger for general maintainer lists or non-security ownership questions."
+        },
+        {
+          "name": "security-review",
+          "description": "Security code review for vulnerabilities. Use when asked to \"security review\", \"find vulnerabilities\", \"check for security issues\", \"audit security\", \"OWASP review\", or review code for injection, XSS, authentication, authorization, cryptography issues. Provides systematic review with confidence-based reporting."
+        },
+        {
+          "name": "security-threat-model",
+          "description": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work."
+        },
+        {
+          "name": "semgrep",
+          "description": "Runs a Semgrep security scan over a codebase: detects languages, selects rulesets, presents the plan for explicit approval, then runs every approved ruleset through scripts/run-scans.sh, which batches the semgrep processes and writes scans.json, and merges the output to SARIF. Supports two scan modes, \"run all\" for full ruleset coverage and \"important only\" for security findings at medium-to-high confidence and impact. Uses Semgrep Pro for cross-file taint analysis when it is available. Use when asked to scan code for vulnerabilities, run a security audit with Semgrep, find bugs, or perform static analysis. For the same scan without the approval gate, use the /static-analysis:semgrep-scan workflow."
+        },
+        {
+          "name": "semgrep-rule-creator",
+          "description": "Creates custom Semgrep rules for detecting security vulnerabilities, bug patterns, and code patterns. Use when writing Semgrep rules or building custom static analysis detections."
+        },
+        {
+          "name": "sharp-edges",
+          "description": "Identifies error-prone APIs, dangerous configurations, and footgun designs that enable security mistakes. Use when reviewing API designs, configuration schemas, cryptographic library ergonomics, or evaluating whether code follows 'secure by default' and 'pit of success' principles. Triggers: footgun, misuse-resistant, secure defaults, API usability, dangerous configuration."
+        },
+        {
+          "name": "supply-chain-risk-auditor",
+          "description": "Audits a project's dependencies for supply-chain risk: version-matched advisories for direct dependencies and the full lockfile tree, abandoned or archived upstreams, npm publisher concentration, and install-time script execution. Use when asked to audit dependencies, assess supply-chain or third-party package risk, or review a dependency tree before an engagement."
+        },
+        {
+          "name": "variant-analysis",
+          "description": "Hunts for the other instances of a bug already found — the variants of one root cause across a codebase. Use immediately after a vulnerability, logic bug, or bad pattern turns up in a specific file and the question becomes where else it occurs, including the bare conversational form (\"are there others like this?\", \"is this the same bug?\"). Also for generalizing one known instance into a CodeQL or Semgrep query for its whole pattern family, and for triaging a set of look-alike candidates against a known root cause. Not for initial discovery with no bug in hand."
+        }
+      ]
+    },
+    {
+      "id": "13-cloud-deploy",
+      "title": "ענן ופריסה",
+      "description": "סקילים רשמיים של Cloudflare (Workers, Wrangler) ו-Next.js",
+      "skills": [
+        {
+          "name": "agents-sdk",
+          "description": "Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, chat applications, voice agents, or browser automation. Covers Agent class, state management, callable RPC, Workflows, durable execution, queues, retries, observability, and React hooks. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+        },
+        {
+          "name": "cloudflare",
+          "description": "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+        },
+        {
+          "name": "cloudflare-email-service",
+          "description": "Send and receive transactional emails with Cloudflare Email Service (Email Sending + Email Routing). Use when building email sending (Workers binding or REST API), email routing, Agents SDK email handling, or integrating email into any app — Workers, Node.js, Python, Go, etc. Also use for email deliverability, SPF/DKIM/DMARC, wrangler email setup, MCP email tools, or when a coding agent needs to send emails. Even for simple requests like \"add email to my Worker\" — this skill has critical config details."
+        },
+        {
+          "name": "durable-objects",
+          "description": "Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO code for best practices. Covers Workers integration, wrangler config, and testing with Vitest. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+        },
+        {
+          "name": "next-cache-components-adoption",
+          "description": "Turn on Cache Components in a Next.js app and resolve the blocking routes it surfaces. Use when the user wants to enable, adopt, or migrate to Cache Components, flip the `cacheComponents` flag, work through a flood of blocking-prerender / instant validation errors, run the `cache-components-instant-false` codemod, or decide between opting routes out with `export const instant = false` and fixing them in place."
+        },
+        {
+          "name": "next-cache-components-optimizer",
+          "description": "Drive a Next.js route to instant navigation by setting up an agentic loop, under Cache Components / PPR, on initial load (hard navigation) and client-side navigation (soft navigation). Encode the goal as a failing @next/playwright instant() e2e and work it to green, one verified route at a time; the shipped test then guards against regression. Use when asked to make a route's navigation instant (its static shell commits immediately), fix a route whose static shell isn't prerendered/served/prefetched, grow a route's static shell or fix its slow first paint, diagnose which Suspense boundary keeps a route out of its static shell, or write the instant() e2e guard for one. Requires Next.js 16.3+ with cacheComponents; directs an upgrade if older."
+        },
+        {
+          "name": "next-dev-loop",
+          "description": "Verify Next.js runtime behavior after editing app code. Use this skill to confirm a change actually works in a running app — not just that it compiles or type-checks. Combines /_next/mcp (Next.js's view) with agent-browser (the browser's view). Requires a running `next dev`."
+        },
+        {
+          "name": "next-partial-prefetching-adoption",
+          "description": "Turn on Partial Prefetching in a Next.js app and work through the insights it surfaces. Use when the user wants to enable or adopt Partial Prefetching, flip the `partialPrefetching` flag, opt routes in with `export const prefetch = 'partial'`, audit `<Link prefetch={true}>` calls, or resolve the link-prefetch-partial and instant-shell-url-data insights."
+        },
+        {
+          "name": "web-perf",
+          "description": "Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (LCP, INP, CLS) and supplementary metrics (FCP, TBT, Speed Index), identifies render-blocking resources, network dependency chains, layout shifts, caching issues, and accessibility gaps. Use when asked to audit, profile, debug, or optimize page load performance, Lighthouse scores, or site speed. Biases towards retrieval from current documentation over pre-trained knowledge."
+        },
+        {
+          "name": "workers-best-practices",
+          "description": "Reviews and authors Cloudflare Workers code against production best practices. Load when writing new Workers, reviewing Worker code, configuring wrangler.jsonc, or checking for common Workers anti-patterns (streaming, floating promises, global state, secrets, bindings, observability). Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+        },
+        {
+          "name": "wrangler",
+          "description": "Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler commands to ensure correct syntax and best practices. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+        }
+      ]
+    },
+    {
+      "id": "14-testing-qa",
+      "title": "בדיקות ואוטומציה",
+      "description": "TestMu (LambdaTest): Playwright, Cypress, Jest, Vitest, pytest, נגישות ו-CI/CD",
+      "skills": [
+        {
+          "name": "accessibility-skill",
+          "description": "Adds automated accessibility (a11y) testing to test suites on TestMu AI cloud by enabling WCAG scans through driver capabilities. Framework-agnostic, works with Selenium, Playwright, and Cypress. Use when user mentions \"accessibility\", \"a11y\", \"WCAG\", \"accessibility scan\", \"accessibility testing\". Triggers on: \"accessibility testing\", \"a11y scan\", \"WCAG compliance\", \"accessibility audit LambdaTest\", \"is my page accessible\"."
+        },
+        {
+          "name": "cicd-pipeline-skill",
+          "description": "Generates CI/CD pipeline configurations for test automation with GitHub Actions, Jenkins, GitLab CI, and Azure DevOps. Includes TestMu AI cloud integration. Use when user mentions \"CI/CD\", \"pipeline\", \"GitHub Actions\", \"Jenkins\", \"GitLab CI\". Triggers on: \"CI/CD\", \"pipeline\", \"GitHub Actions\", \"Jenkins\", \"GitLab CI\", \"Azure DevOps\", \"automated testing pipeline\"."
+        },
+        {
+          "name": "cypress-skill",
+          "description": "Generates production-grade Cypress E2E and component tests in JavaScript or TypeScript. Supports local execution and TestMu AI cloud. Use when the user asks to write Cypress tests, set up Cypress, test with cy commands, or mentions \"Cypress\", \"cy.visit\", \"cy.get\", \"cy.intercept\". Triggers on: \"Cypress\", \"cy.\", \"component test\", \"E2E test\", \"TestMu\", \"LambdaTest\"."
+        },
+        {
+          "name": "jest-skill",
+          "description": "Generates Jest unit and integration tests in JavaScript or TypeScript. Covers mocking, snapshots, async testing, and React component testing. Use when user mentions \"Jest\", \"describe/it/expect\", \"jest.mock\", \"toMatchSnapshot\". Triggers on: \"Jest\", \"expect().toBe()\", \"jest.mock\", \"snapshot test\", \"JS test\", \"React test\"."
+        },
+        {
+          "name": "playwright-skill",
+          "description": "Generates production-grade Playwright automation scripts and E2E tests in TypeScript, JavaScript, Python, Java, or C#. Supports local execution and TestMu AI cloud across 3000+ browser/OS combinations and real mobile devices. Use when the user asks to write Playwright tests, automate browsers, run cross-browser tests, test on real devices, debug flaky tests, mock APIs, or do visual regression. Triggers on: \"Playwright\", \"E2E test\", \"browser test\", \"run on cloud\", \"cross-browser\", \"TestMu\", \"LambdaTest\", \"test my app\", \"test on mobile\", \"real device\"."
+        },
+        {
+          "name": "pytest-skill",
+          "description": "Generates production-grade pytest tests in Python with fixtures, parametrize, markers, mocking, and conftest patterns. Use when user mentions \"pytest\", \"conftest\", \"@pytest.fixture\", \"@pytest.mark\", \"Python test\". Triggers on: \"pytest\", \"conftest\", \"Python test\", \"parametrize\", \"Python unit test\"."
+        },
+        {
+          "name": "vitest-skill",
+          "description": "Generates Vitest tests in JavaScript/TypeScript with Vite-native speed. Jest-compatible API with ESM support and HMR. Use when user mentions \"Vitest\", \"vi.mock\", \"vitest.config\". Triggers on: \"Vitest\", \"vi.mock\", \"vi.fn\", \"Vite test\", \"vitest config\"."
+        }
+      ]
+    },
+    {
+      "id": "15-integrations",
+      "title": "אינטגרציות ושירותים",
+      "description": "Stripe, Better Auth, Sentry, Resend, Notion, Firecrawl, Typefully",
+      "skills": [
+        {
+          "name": "agent-email-inbox",
+          "description": "Use when building any system where email content triggers actions — AI agent inboxes, automated support handlers, email-to-task pipelines, or any workflow processing untrusted inbound email. Always use this skill when the user wants to receive emails and act on them programmatically, even if they don't mention \"agent\" — the skill contains critical security patterns (sender allowlists, content filtering, sandboxed processing) that prevent untrusted email from controlling your system."
+        },
+        {
+          "name": "better-auth-best-practices",
+          "description": "Configure Better Auth server and client, set up database adapters, manage sessions, add plugins, and handle environment variables. Use when users mention Better Auth, betterauth, auth.ts, or need to set up TypeScript authentication with email/password, OAuth, or plugin configuration."
+        },
+        {
+          "name": "better-auth-security-best-practices",
+          "description": "Configure rate limiting, manage auth secrets, set up CSRF protection, define trusted origins, secure sessions and cookies, encrypt OAuth tokens, track IP addresses, and implement audit logging for Better Auth. Use when users need to secure their auth setup, prevent brute force attacks, or harden a Better Auth deployment."
+        },
+        {
+          "name": "create-auth",
+          "description": "Scaffold and implement authentication in TypeScript/JavaScript apps using Better Auth. Detect frameworks, configure database adapters, set up route handlers, add OAuth providers, and create auth UI pages. Use when users want to add login, sign-up, or authentication to a new or existing project with Better Auth."
+        },
+        {
+          "name": "email-and-password-best-practices",
+          "description": "Configure email verification, implement password reset flows, set password policies, and customise hashing algorithms for Better Auth email/password authentication. Use when users need to set up login, sign-in, sign-up, credential authentication, or password security with Better Auth."
+        },
+        {
+          "name": "email-best-practices",
+          "description": "Use when building email features, emails going to spam, high bounce rates, setting up SPF/DKIM/DMARC authentication, implementing email capture, ensuring compliance (CAN-SPAM, GDPR, CASL), handling webhooks, retry logic, making emails accessible (alt text, headings, contrast, screen readers), or deciding transactional vs marketing."
+        },
+        {
+          "name": "firecrawl-build",
+          "description": "Integrate Firecrawl into application code whenever a product, agent, or workflow needs web data inside the app — web search, live search results, page scraping, structured extraction, or browser interaction. Use when building any feature that needs data from the web in code, even if the user does not mention Firecrawl explicitly and only describes wanting web data, website content, search, scraping, or interaction in an application. Trigger for Firecrawl requests, \"fire girl\" shorthand, and generic app-level web-data needs that should map to `/scrape`, `/search`, or `/interact`. Do not use this skill for one-off terminal-only web tasks during the current session; use `firecrawl/cli` for those."
+        },
+        {
+          "name": "firecrawl-build-interact",
+          "description": "Integrate Firecrawl `/interact` into product code for dynamic pages and browser actions after scraping. Use when a feature needs clicks, form fills, pagination, authentication-aware flows, or other multi-step interactions that plain `/scrape` cannot complete."
+        },
+        {
+          "name": "firecrawl-build-onboarding",
+          "description": "Get Firecrawl credentials and SDK setup into a project. Use when an application needs `FIRECRAWL_API_KEY`, when an agent should add Firecrawl to `.env`, when the user wants to authenticate Firecrawl for app code, or when choosing the first SDK and docs for a new Firecrawl integration. This skill includes its own browser auth flow, so it does not depend on the website onboarding skill."
+        },
+        {
+          "name": "firecrawl-build-scrape",
+          "description": "Integrate Firecrawl `/scrape` into product code for single-page extraction. Use when an app already has a URL and needs markdown, HTML, links, screenshots, metadata, or structured page output. Prefer this skill over broader crawl patterns when the feature is page-level."
+        },
+        {
+          "name": "firecrawl-build-search",
+          "description": "Integrate Firecrawl `/search` into product code and agent workflows. Use when an app needs discovery before extraction, when the feature starts with a query instead of a URL, or when the system should search the web and optionally hydrate result content."
+        },
+        {
+          "name": "firecrawl-developer-index",
+          "description": "Answer a developer question — code behaviour, a library or framework, an API contract, an error message, a known bug — from issues, merged pull requests, repository READMEs, and curated documentation sites with Firecrawl Developer. Always use this skill for any programming question whose answer belongs in a primary source rather than a general web page."
+        },
+        {
+          "name": "firecrawl-research-index",
+          "description": "Find the papers that answer a research query in Firecrawl's research paper index — a corpus of paper abstracts whose largest share is biomedical and life-science literature (PubMed, bioRxiv, medRxiv), alongside arXiv preprints in CS, physics, and math — using semantic search, semantic and structural expansion, and in-body verification. Use this skill for literature-finding and paper-retrieval tasks of any kind, including clinical, biomedical, drug, gene, disease, and other life-science questions, whether the answer is a single paper or a full multi-paper set. The index is reached only through the `firecrawl_research_*` MCP tools or the `firecrawl research` CLI subcommands. Calling `firecrawl_search` with its `categories` option set to `[\"research\"]` is a different feature — it filters ordinary web search to research-affiliated websites (the list includes PubMed, bioRxiv, medRxiv, arXiv, and publisher sites) and returns page results from them, without querying the paper records in this index."
+        },
+        {
+          "name": "knowledge-capture",
+          "description": "Transforms conversations and discussions into structured documentation pages in Notion. Captures insights, decisions, and knowledge from chat context, formats appropriately, and saves to wikis or databases with proper organization and linking for easy discovery."
+        },
+        {
+          "name": "meeting-intelligence",
+          "description": "Prepares meeting materials by gathering context from Notion, enriching with Claude research, and creating both an internal pre-read and external agenda saved to Notion. Helps you arrive prepared with comprehensive background and structured meeting docs."
+        },
+        {
+          "name": "notion-cli",
+          "description": "Use the Notion CLI (`ntn`) to interact with the Notion API, manage workers, and upload files. Use when the user asks to \"call the Notion API\", \"deploy a worker\", \"upload a file to Notion\", \"create a page\", \"query a database\", or any task involving the `ntn` command."
+        },
+        {
+          "name": "organization-best-practices",
+          "description": "Configure multi-tenant organizations, manage members and invitations, define custom roles and permissions, set up teams, and implement RBAC using Better Auth's organization plugin. Use when users need org setup, team management, member roles, access control, or the Better Auth organization plugin."
+        },
+        {
+          "name": "react-email",
+          "description": "Use when building HTML email templates with React components, adding a visual email editor to an application using the React Email visual editor, rendering emails to HTML, or sending emails with Resend. Covers welcome emails, password resets, notifications, order confirmations, newsletters, transactional emails, and the embeddable email editor component."
+        },
+        {
+          "name": "research-documentation",
+          "description": "Searches across your Notion workspace, synthesizes findings from multiple pages, and creates comprehensive research documentation saved as new Notion pages. Turns scattered information into structured reports with proper citations and actionable insights."
+        },
+        {
+          "name": "resend",
+          "description": "Use when working with the Resend email API — sending transactional emails (single or batch), receiving inbound emails via webhooks, managing email templates, tracking delivery events, managing domains, contacts, broadcasts, webhooks, API keys, automations, events, viewing API request logs, or setting up the Resend SDK. Always use this skill when the user mentions Resend, even for simple tasks like \"send an email with Resend\" — the skill contains critical gotchas (idempotency keys, webhook verification, template variable syntax) that prevent common production issues."
+        },
+        {
+          "name": "resend-cli",
+          "description": "Operate the Resend platform from the terminal — send emails (including React Email .tsx templates via --react-email), manage domains, contacts, broadcasts, templates, webhooks, API keys, logs, automations, and events via the `resend` CLI. Use when the user wants to run Resend commands in the shell, scripts, or CI/CD pipelines, or send/preview React Email templates. Always load this skill before running `resend` commands — it contains the non-interactive flag contract and gotchas that prevent silent failures."
+        },
+        {
+          "name": "sentry-create-alert",
+          "description": "Create Sentry alerts using the workflow engine API. Use when asked to create alerts, set up notifications, configure issue priority alerts, or build workflow automations. Supports email, Slack, PagerDuty, Discord, and other notification actions."
+        },
+        {
+          "name": "sentry-debug-issue",
+          "description": "Debug and fix a Sentry issue — find it (by link, ID, or search), pull full context (stack trace, breadcrumbs, trace, logs), optionally run Seer root-cause / autofix, apply the code fix, and resolve it via a `Fixes PROJECT-NAME-12A` commit/PR. Use when working a known error or hunting one down to fix."
+        },
+        {
+          "name": "sentry-fix-stack-traces",
+          "description": "Make Sentry stack traces readable — upload source maps for JavaScript/TypeScript, or debug files for native and mobile (dSYM, ProGuard/R8, NDK symbols, Dart obfuscation maps, .NET PDBs). Use when frames in Sentry show minified names, bundled paths, hex addresses, \"unknown\", or method names with no file/line, instead of your original source."
+        },
+        {
+          "name": "sentry-get-started",
+          "description": "Guided entry point for using Sentry through your agent. Orients you to your current setup and, for a new project, sets up Sentry end to end with sane defaults — provision a project, install the SDK (errors, tracing, and whatever it enables by default), and confirm real telemetry reaches Sentry. Routes other intents (adding more signals, fixing issues) to the right skill."
+        },
+        {
+          "name": "sentry-instrument",
+          "description": "Instrument an application with Sentry — detect the platform, install and initialize the SDK if needed, and wire up any signal — error monitoring, tracing/performance, logging, metrics, profiling, session replay, user feedback, cron check-ins, and AI/LLM monitoring (agent runs, token cost, and conversations for OpenAI, Anthropic, Vercel AI, LangChain, Google GenAI, Pydantic AI, and Laravel AI). Use to add Sentry to a project or to capture more than errors."
+        },
+        {
+          "name": "sentry-setup-releases",
+          "description": "Set up Sentry releases and deploy tracking — tag events with a version and environment, create the release in CI with its commits, and wire up suspect commits and code mappings, so Sentry can show which release introduced an issue, which commit is responsible, and release health. Use when asked to set up releases, track deploys, see what changed, or when issues show an unknown release or no suspect commit."
+        },
+        {
+          "name": "spec-to-implementation",
+          "description": "Turns product or tech specs into concrete Notion tasks that Claude code can implement. Breaks down spec pages into detailed implementation plans with clear tasks, acceptance criteria, and progress tracking to guide development from requirements to completion."
+        },
+        {
+          "name": "stripe-best-practices",
+          "description": "Guides Stripe integration decisions across API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, tax and registrations (Stripe Tax, automatic_tax, product tax codes), Treasury financial accounts, integration options (Checkout, Payment Element), migrating from deprecated Stripe APIs, and security best practices (API key management, restricted keys, webhooks, OAuth). Use when building, modifying, or reviewing any Stripe integration, including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, collecting sales tax, VAT, or GST, creating connected accounts, or implementing secure key handling."
+        },
+        {
+          "name": "stripe-docs",
+          "description": "Use when the user or agent needs to read, search, or look up Stripe documentation or API reference. Prefer this over curl or WebFetch for any docs.stripe.com content."
+        },
+        {
+          "name": "two-factor-authentication-best-practices",
+          "description": "Configure TOTP authenticator apps, send OTP codes via email/SMS, manage backup codes, handle trusted devices, and implement 2FA sign-in flows using Better Auth's twoFactor plugin. Use when users need MFA, multi-factor authentication, authenticator setup, or login security with Better Auth."
+        },
+        {
+          "name": "typefully",
+          "description": "Create, schedule, and manage social media posts via Typefully. ALWAYS use this skill when asked to draft, schedule, post, or check tweets, posts, threads, or social media content for Twitter/X, LinkedIn, Threads, Bluesky, Mastodon, or Substack Notes, or when the user drops a Typefully draft URL such as https://typefully.com/?a=<social_set_id>&d=<draft_id>."
+        },
+        {
+          "name": "upgrade-stripe",
+          "description": "Guide for upgrading Stripe API versions and SDKs"
+        }
+      ]
+    },
+    {
+      "id": "16-ai-apis-media",
+      "title": "AI APIs ומדיה",
+      "description": "OpenAI, Gemini, Replicate ו-fal.ai: יצירת תמונות, וידאו, קול ופיתוח מול API",
+      "skills": [
+        {
+          "name": "build-models",
+          "description": "Package and build custom AI models with Cog for deployment on Replicate. Use when creating a cog.yaml or predict.py, defining model inputs and outputs, loading model weights at setup time, building Docker images for ML models, serving locally with cog serve or cog predict, or porting a HuggingFace, GitHub, or ComfyUI model to run on Replicate. Trigger on phrases like \"build a model\", \"package a model\", \"create a Cog model\", \"wrap a model\", \"containerize an AI model\", \"predict.py\", \"cog.yaml\", \"BasePredictor\", or \"Cog container\", and when referencing cog.run, github.com/replicate/cog, or github.com/replicate/cog-examples. Covers GPU and CUDA setup, pget for fast weight downloads, async predictors with continuous batching, streaming outputs, and cold-boot optimization for image, video, audio, and LLM models. For pushing built models to Replicate, see publish-models. For running existing models, see run-models."
+        },
+        {
+          "name": "character-design",
+          "description": "Build consistent character designs and character media with genmedia. Use this for original characters, reference sheets, expression sheets, outfit variations, identity-preserving edits, and character-to-video workflows."
+        },
+        {
+          "name": "cinematography",
+          "description": "Design cinematic image and video prompts for genmedia. Use this for shot language, camera movement, lighting, lens choices, color grade, film texture, scene blocking, and production-ready visual direction."
+        },
+        {
+          "name": "commercial",
+          "description": "Plan and run commercial image or video production with genmedia. Use this for product photography, ads, e-commerce batches, product reveals, lifestyle commercials, background replacement, social formats, and brand-safe prompt work."
+        },
+        {
+          "name": "compare-models",
+          "description": "Compare Replicate models by cost, speed, quality, and capabilities."
+        },
+        {
+          "name": "fal-models-catalog",
+          "description": "Choose the right fal.ai endpoint for a given task. Modality-organized catalog of production endpoint defaults, text-to-image, image-to-image, text-to-video, image-to-video, and more. Use when the user has not named a specific model, or asks \"which model for X\", \"best endpoint for Y\", \"what should I use for Z\"."
+        },
+        {
+          "name": "fal-prompting",
+          "description": "Model-family-specific prompt craft for fal.ai endpoints. Trigger when the user mentions a specific model family by name and asks how to prompt it (\"how do I prompt Kling\", \"GPT Image 2 prompt structure\", \"Happy Horse tips\"), or when prompts to a routed endpoint keep coming back generic and the family's known nuances should be applied. For endpoint selection (\"which model for X\"), use `fal-models-catalog` instead. This skill is about how to talk to a model once it has been chosen."
+        },
+        {
+          "name": "fal-recipes",
+          "description": "Use-case-driven multi-step pipelines on fal.ai. Trigger when the user asks for a specific kind of content production rather than a single endpoint call: \"make a commercial\", \"ad creative\", \"product photography\", \"cinematic shot\", \"film look\", \"character design\", \"consistent character\", \"anchor system\", \"storyboard\", \"multi-shot\", \"narrative video\", \"talking head\", \"lip sync\", \"make this person talk\", \"virtual try-on\", \"garment transfer\", \"restore image\", \"deblur\", \"denoise\", \"fix face\", \"old photo restore\", \"add audio to video\", \"video sound effects\", \"product shot\", \"photoreal\", \"realistic photo\", \"candid photo\", \"editorial portrait\", \"documentary photo\", \"looks like a real photograph\", \"iPhone-style photo\", \"film photo\", \"archival photo\". Each recipe describes inputs, the genmedia call sequence, and quality checks."
+        },
+        {
+          "name": "fal-redesign",
+          "description": "Upgrade a coded website to award-tier, editorially-crafted design using fal.ai. Takes a local HTML file or a dev-server URL, screenshots it, has an opus-4.7 vision model write a gpt-image-2 edit prompt, uses fal-ai/gpt-image-2/edit to produce the redesigned reference image, then opus-4.7 vision writes a Markdown build-spec with a \"Hard constraints\" section + a tokens.json. Also supports iterate (screenshot implemented site → delta-spec vs reference) and greenfield generate (brief → mockup → single-file HTML). Invoke when the user says \"improve the design\", \"make it world-class\", \"redesign this landing page\", \"upgrade this site\", \"design pass\", or points at a local HTML / dev server for a visual review."
+        },
+        {
+          "name": "fal-regenerate-3d",
+          "description": "Build a fully-interactive 3D character-selector experience powered entirely by fal.ai. Generates stylized characters (FLUX.2 / GPT-Image-2), rigged animated GLBs (Meshy v6), themed companion creatures, per-character PATINA floor textures, looped Seedance video backgrounds, and a Three.js scene with palette swaps, breathing reflections, transition effects and a CREATE-YOUR-OWN flow."
+        },
+        {
+          "name": "fal-workflow",
+          "description": "Author and execute multi-step media pipelines on fal.ai. Two modes: (A) declarative workflow JSON files for the fal.ai workflow runtime (\"create workflow\", \"chain models\", \"image to video pipeline\"); (B) imperative genmedia CLI orchestration when scripting locally (\"design pipeline\", \"fan-out generation\", \"frame bridging\", \"narrated video\", \"dataset generation\")."
+        },
+        {
+          "name": "find-models",
+          "description": "Find AI models on Replicate using search and curated collections."
+        },
+        {
+          "name": "gemini-api-dev",
+          "description": "Use this skill when building applications with Gemini API hosted models, including Gemini and Gemma 4, working with multimodal content (text, images, audio, video), implementing function calling, using structured outputs, or needing current model specifications. Covers SDK usage (google-genai for Python, @google/genai for JavaScript/TypeScript, com.google.genai:google-genai for Java, google.golang.org/genai for Go), model selection, and API capabilities."
+        },
+        {
+          "name": "gemini-interactions-api",
+          "description": "Use this skill when writing code that calls the Gemini API for text generation, multi-turn chat, multimodal understanding, image generation, video generation, streaming responses, background research tasks, function calling, structured output, or migrating from the old generateContent API. This skill covers the Interactions API, the recommended way to use Gemini models and agents in Python and TypeScript."
+        },
+        {
+          "name": "gemini-live-api-dev",
+          "description": "Use this skill when building real-time, bidirectional streaming applications with the Gemini Live API. Covers WebSocket-based audio/video/text streaming, voice activity detection (VAD), native audio features, function calling, session management, ephemeral tokens for client-side auth, live translation, and all Live API configuration options. SDKs covered - google-genai (Python), @google/genai (JavaScript/TypeScript)."
+        },
+        {
+          "name": "gemini-omni-flash-api",
+          "description": "Use this skill for generative video editing, text-to-video, image-referenced video generation, and first-frame-to-video transition animations using the official google-genai SDK. Includes workflows for pre-processing/optimizing high-resolution or long source videos with ffmpeg, stripping audio for full sound regeneration, and handling turn-by-turn video editing and parallel execution."
+        },
+        {
+          "name": "genmedia",
+          "description": "Use the genmedia CLI to search, inspect, run, and manage 1200+ fal.ai model endpoints. Trigger when the user mentions \"genmedia\", \"fal CLI\", or asks to \"search models\", \"run a model\", \"fetch schema\", \"check pricing\", \"upload to fal\", \"queue async job\", \"track request\", or any direct interaction with the fal.ai endpoint catalog. This is the foundational skill. Every other fal.ai-related skill in this repo executes its work through genmedia commands. Use `--json` whenever the output will be parsed by an agent."
+        },
+        {
+          "name": "genmedia-workflow",
+          "description": "Design and execute multi-step media workflows with genmedia. Use this for pipelines that combine planning, generation, editing, image or video utilities, audio, subtitles, batching, and final delivery manifests."
+        },
+        {
+          "name": "imagegen",
+          "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas."
+        },
+        {
+          "name": "model-routing",
+          "description": "Choose default fal.ai endpoint IDs for genmedia production skills. Use this with commercial, marketing, ugc, character-design, cinematography, storytelling, and workflow when the user has not named a specific model."
+        },
+        {
+          "name": "openai-docs",
+          "description": "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains."
+        },
+        {
+          "name": "prompt-images",
+          "description": "Prompting techniques for AI image generation and editing models on Replicate. Use when writing prompts for image models or building image generation features."
+        },
+        {
+          "name": "prompt-videos",
+          "description": "Prompting techniques for AI video generation models on Replicate. Use when writing prompts for video models or building video generation features."
+        },
+        {
+          "name": "publish-models",
+          "description": "Push and publish custom AI models to Replicate, and set up CI/CD for releasing new model versions safely. Use when running cog push, deploying a model to Replicate, releasing a new version, validating a model with cog-safe-push before publishing, configuring a Replicate deployment, setting up GitHub Actions for model releases, or porting a community model to an official one. Trigger on phrases like \"push a model to Replicate\", \"publish a model\", \"deploy a model\", \"release a new version\", \"cog push\", \"cog-safe-push\", \"model CI\", \"r8.im\", or \"schema compatibility\", and when referencing github.com/replicate/cog-safe-push or github.com/replicate/model-ci-template. Covers cog push, the full cog-safe-push config (test cases, fuzz, deployment, official_model), GitHub Actions patterns, multi-model matrix pushes, and post-publish monitoring. Assumes you already have a working Cog project; see build-models if you need to package one first."
+        },
+        {
+          "name": "run-models",
+          "description": "Run AI models on Replicate via predictions, webhooks, and streaming."
+        },
+        {
+          "name": "speech",
+          "description": "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope."
+        },
+        {
+          "name": "storytelling",
+          "description": "Build multi-shot narrative image, video, and audio workflows with genmedia. Use this for storyboards, shot lists, multi-prompt video, first-frame to last-frame pipelines, social stories, brand films, and sequence continuity."
+        },
+        {
+          "name": "transcribe",
+          "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings."
+        },
+        {
+          "name": "ugc",
+          "description": "Plan and run UGC-style creator ads and social proof videos with genmedia. Use this for direct-to-camera creator scripts, talking-head ads, product demos, testimonials, founder clips, unboxing, reaction, before-after, faceless voiceover, and short vertical social videos."
         }
       ]
     },
