@@ -2,9 +2,10 @@
 
 יצירת סקילים, תבניות, בדיקות וכו׳
 
-**מספר סקילים:** 2
+**מספר סקילים:** 3
 
 | סקיל | מה הוא עושה |
 |---|---|
-| `skill-creator` | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy. |
-| `slack-gif-creator` | Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like "make me a GIF of X doing Y for Slack. |
+| [`skill-creator`](./skill-creator/SKILL.md) | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better t |
+| [`slack-gif-creator`](./slack-gif-creator/SKILL.md) | Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like "make me a GIF of X doing Y for Slack. |
+| [`template--anthropics`](./template--anthropics/SKILL.md) | Replace with description of the skill and when Claude should use it. |
