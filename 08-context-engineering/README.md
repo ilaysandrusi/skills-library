@@ -2,10 +2,11 @@
 
 ניהול קונטקסט, סוכני משנה, חשיבה
 
-**מספר סקילים:** 62
+**מספר סקילים:** 63
 
 | סקיל | מה הוא עושה |
 |---|---|
+| `actualize` | Reconcile the project's FPF state with recent repository changes |
 | `add-task` | creates draft task file in .specs/tasks/draft/ with original user intent |
 | `agent-evaluation` | Evaluate and improve Claude Code commands, skills, and agents. Use when testing prompt effectiveness, validating context engineering choices, or measuring improvement quality. |
 | `analyse` | Auto-selects best Kaizen method (Gemba Walk, Value Stream, or Muda) for target |
@@ -26,6 +27,7 @@
 | `create-skill` | Guide for creating effective skills. This command should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations. Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulletproof against rationalization |
 | `create-workflow-command` | Create a workflow command that orchestrates multi-step execution through sub-agents with file-based task prompts |
 | `critique` | Comprehensive multi-perspective review using specialized judges with debate and consensus building |
+| `decay` | Manage evidence freshness by identifying stale decisions and providing governance actions |
 | `design-testing-strategy` | Use before writing any type of tests. Distills 14 industry sources into deterministic decision gates, schemas, and worked test examples. |
 | `do-and-judge` | Execute a task with sub-agent implementation and LLM-as-a-judge verification with automatic retry loop |
 | `do-competitively` | Execute tasks through competitive multi-agent generation, meta-judge evaluation specification, multi-judge evaluation, and evidence-based synthesis |
@@ -33,7 +35,6 @@
 | `do-in-steps` | Execute one complex task as ordered, dependent steps run sequentially, passing context from each step to the next, with per-step LLM-as-a-judge verification. Use when later steps depend on the results of earlier ones. |
 | `git-notes` | Use when adding metadata to commits without changing history, tracking review status, test results, code quality annotations, or supplementing commit messages post-hoc - provides git notes commands and patterns for attaching non-invasive metadata to Git objects. |
 | `git-worktrees` | Use when working on multiple branches simultaneously, context switching without stashing, reviewing PRs while developing, testing in isolation, or comparing implementations across branches - provides git worktree commands and workflow patterns for parallel development with multiple working directories. |
-| `image` | When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Flux Kontext,' 'Midjourney,' 'DALL-E,' 'GPT Image,' 'ChatGPT Images,' 'Ideogram,' 'Gemini image,' 'Nano Banana,' 'Recraft,' 'Stable Diffusion,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video. |
 | `implement-task` | Implement a task with automated LLM-as-Judge verification per step |
 | `judge` | Launch a meta-judge then a judge sub-agent to evaluate results produced in the current conversation |
 | `judge-with-debate` | Evaluate solutions through multi-round debate between independent judges until consensus |

@@ -245,10 +245,6 @@
           "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"should I test this,\" \"which version is better,\" \"test two versions,\" \"statistical significance,\" \"how long should I run this test,\" \"growth experiments,\" \"experiment velocity,\" \"experiment backlog,\" \"ICE score,\" \"experimentation program,\" or \"experiment playbook.\" Use this whenever someone is comparing two approaches and wants to measure which performs better, or when they want to build a systematic experimentation practice. For tracking implementation, see analytics. For page-level conversion optimization, see cro."
         },
         {
-          "name": "actualize",
-          "description": "Reconcile the project's FPF state with recent repository changes"
-        },
-        {
           "name": "ad-angle-multiplier",
           "description": "Expand a core idea into multiple distinct ad angles. Trigger on \"more ads\", \"creative testing\", \"scale campaigns\"."
         },
@@ -321,10 +317,6 @@
           "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer interviews,\" \"survey analysis,\" \"support ticket analysis,\" \"voice of customer,\" \"VOC,\" \"build personas,\" \"customer personas,\" \"jobs to be done,\" \"JTBD,\" \"what do customers say,\" \"what are customers struggling with,\" \"Reddit mining,\" \"G2 reviews,\" \"review mining,\" \"digital watering holes,\" \"community research,\" \"forum research,\" \"competitor reviews,\" \"customer sentiment,\" or \"find out why customers churn/convert/buy.\" Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see cro."
         },
         {
-          "name": "decay",
-          "description": "Manage evidence freshness by identifying stale decisions and providing governance actions"
-        },
-        {
           "name": "directory-submissions",
           "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \"directory submissions,\" \"submit to directories,\" \"backlinks from directories,\" \"list my product,\" \"submit to Product Hunt,\" \"BetaList,\" \"TAAFT,\" \"Futurepedia,\" \"G2 listing,\" \"Capterra listing,\" \"AlternativeTo,\" \"SaaSHub,\" \"AI directories,\" \"MCP registry,\" \"agent directory,\" \"dofollow backlinks,\" \"launch directories,\" or \"directory tracker.\" Use this whenever someone is planning the directory layer of a product launch or an ongoing backlink campaign. For the broader launch moment, see launch. For programmatic SEO pages that should live behind these backlinks, see programmatic-seo. For AI citation optimization, see ai-seo."
         },
@@ -343,6 +335,10 @@
         {
           "name": "headline-matrix",
           "description": "Generate high-performing headline variations across different angles. Trigger on \"headlines\", \"hooks\", \"ad copy\", \"email subject lines\"."
+        },
+        {
+          "name": "image",
+          "description": "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Flux Kontext,' 'Midjourney,' 'DALL-E,' 'GPT Image,' 'ChatGPT Images,' 'Ideogram,' 'Gemini image,' 'Nano Banana,' 'Recraft,' 'Stable Diffusion,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video."
         },
         {
           "name": "influencer-marketing",
@@ -744,6 +740,10 @@
       "description": "ניהול קונטקסט, סוכני משנה, חשיבה",
       "skills": [
         {
+          "name": "actualize",
+          "description": "Reconcile the project's FPF state with recent repository changes"
+        },
+        {
           "name": "add-task",
           "description": "creates draft task file in .specs/tasks/draft/ with original user intent"
         },
@@ -824,6 +824,10 @@
           "description": "Comprehensive multi-perspective review using specialized judges with debate and consensus building"
         },
         {
+          "name": "decay",
+          "description": "Manage evidence freshness by identifying stale decisions and providing governance actions"
+        },
+        {
           "name": "design-testing-strategy",
           "description": "Use before writing any type of tests. Distills 14 industry sources into deterministic decision gates, schemas, and worked test examples."
         },
@@ -850,10 +854,6 @@
         {
           "name": "git-worktrees",
           "description": "Use when working on multiple branches simultaneously, context switching without stashing, reviewing PRs while developing, testing in isolation, or comparing implementations across branches - provides git worktree commands and workflow patterns for parallel development with multiple working directories."
-        },
-        {
-          "name": "image",
-          "description": "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Flux Kontext,' 'Midjourney,' 'DALL-E,' 'GPT Image,' 'ChatGPT Images,' 'Ideogram,' 'Gemini image,' 'Nano Banana,' 'Recraft,' 'Stable Diffusion,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video."
         },
         {
           "name": "implement-task",
