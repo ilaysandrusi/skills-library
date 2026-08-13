@@ -2,7 +2,7 @@
 
 Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG
 
-**מספר סקילים:** 136
+**מספר סקילים:** 135
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -111,7 +111,6 @@ Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG
 | [`hig-project-context`](./hig-project-context/SKILL.md) | Create or update a shared Apple design context document that other HIG skills use to tailor guidance. Use when the user says "set up my project context," "what platforms am I targeting," "configure HIG settings," or when starting a new Apple platform project. Also activates when other HIG skills nee |
 | [`hig-technologies`](./hig-technologies/SKILL.md) | Apple HIG guidance for Apple technology integrations: Siri, Apple Pay, HealthKit, HomeKit, ARKit, machine learning, generative AI, iCloud, Sign in with Apple, SharePlay, CarPlay, Game Center, in-app purchase, NFC, Wallet, VoiceOver, Maps, Mac Catalyst, and more. Use when asked about: "Siri integrati |
 | [`hummingbird`](./hummingbird/SKILL.md) | Expert guidance on Hummingbird 2 web framework. Use when developers mention: (1) Hummingbird, HB, or Hummingbird 2, (2) Swift web server or HTTP server, (3) server-side Swift routing or middleware, (4) building REST APIs in Swift, (5) RequestContext or ChildRequestContext, (6) HummingbirdAuth or aut |
-| [`invalid`](./invalid/SKILL.md) | A deliberately broken fixture used by example/README.md to show what each rule's error output looks like. |
 | [`ios-simulator-skill`](./ios-simulator-skill/SKILL.md) | 29 production-ready scripts for iOS app testing, building, and automation. Provides semantic UI navigation, build automation, accessibility testing, and simulator lifecycle management. Optimized for AI agents with minimal token output. |
 | [`linear`](./linear/SKILL.md) | Linear CLI for issue tracking and project management. Use when developers mention: (1) Linear issues or tickets, (2) issue tracking or task management, (3) WDY team issues, (4) closing, updating, or triaging tickets, (5) linking PRs to issues, (6) issue states (triage, backlog, started, completed). |
 | [`natural-writing`](./natural-writing/SKILL.md) | Contains well-defined rules for creating natural, accurate, and readable writing. Use whenever authoring longer text, like analysis documents, PR or CL descriptions, or documentation. |

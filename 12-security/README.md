@@ -2,7 +2,7 @@
 
 Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים
 
-**מספר סקילים:** 146
+**מספר סקילים:** 145
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -73,7 +73,6 @@ Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סט�
 | [`hermes-traffic-guardian`](./hermes-traffic-guardian/SKILL.md) | Hermes runtime traffic monitoring baseline for opt-in proxy inspection, egress detection, and attestation-aware traffic posture. |
 | [`internal-comms--snyk`](./internal-comms--snyk/SKILL.md) | A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident rep |
 | [`interpreting-culture-index`](./interpreting-culture-index/SKILL.md) | Interprets Culture Index (CI) surveys, behavioral profiles, and personality assessment data. Supports individual profile interpretation, team composition analysis (gas/brake/glue), burnout detection, profile comparison, hiring profiles, manager coaching, interview transcript analysis for trait predi |
-| [`invalid-skill`](./invalid-skill/SKILL.md) |  |
 | [`let-fate-decide`](./let-fate-decide/SKILL.md) | Draws the 12 Houses of the Zodiac Tarot spread to inject entropy into planning when prompts are vague, ambiguous, or casually delegated. Interprets the spread to guide next steps. Use when the user says 'let fate decide', 'YOLO', 'whatever', 'idk', or other nonchalant phrases, makes Yu-Gi-Oh referen |
 | [`libafl`](./libafl/SKILL.md) | LibAFL is a modular fuzzing library for building custom fuzzers. Use for advanced fuzzing needs, custom mutators, or non-standard fuzzing targets. |
 | [`libfuzzer`](./libfuzzer/SKILL.md) | Coverage-guided fuzzer built into LLVM for C/C++ projects. Use for fuzzing C/C++ code that can be compiled with Clang. |

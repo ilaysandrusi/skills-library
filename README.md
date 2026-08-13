@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6165
+**סה״כ סקילים:** 6163
 
 ## איך ללמוד
 
@@ -27,7 +27,7 @@
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 3 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 146 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |
-| [אבטחה וביקורת קוד](./12-security/) | 146 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
+| [אבטחה וביקורת קוד](./12-security/) | 145 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
 | [ענן ופריסה](./13-cloud-deploy/) | 75 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
 | [בדיקות ואוטומציה](./14-testing-qa/) | 197 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
 | [אינטגרציות ושירותים](./15-integrations/) | 235 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
@@ -41,7 +41,7 @@
 | [Microsoft](./23-microsoft/) | 186 | הסקילים הרשמיים של מיקרוסופט: Azure, .NET, TypeSpec, Playwright, GitHub ועוד |
 | [מדע ומחקר](./24-science-research/) | 486 | K-Dense scientific, AI-research, סימולציות חומרים, הנדסה ומחקר אוטומטי |
 | [דאטה ובסיסי נתונים](./25-data-databases/) | 74 | MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB |
-| [מובייל ו-Apple](./26-mobile-apple/) | 136 | Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG |
+| [מובייל ו-Apple](./26-mobile-apple/) | 135 | Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG |
 | [Web3 וקריפטו](./27-web3-crypto/) | 43 | Binance, Coinbase, Helius (Solana): ארנקים, מסחר ופיתוח בלוקצ'יין |
 | [קריירה, חינוך ובריאות](./28-career-education-health/) | 45 | קורות חיים, ניהול קריירה, חונכות לימודית ובריאות אישית |
 | [אחר](./99-other/) | 116 | סקילים שלא סווגו לקטגוריה ברורה |
