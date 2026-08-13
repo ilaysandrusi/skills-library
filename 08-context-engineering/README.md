@@ -2,7 +2,7 @@
 
 ניהול קונטקסט, סוכני משנה, חשיבה
 
-**מספר סקילים:** 63
+**מספר סקילים:** 59
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -13,8 +13,6 @@
 | `analyse-problem` | Comprehensive A3 one-page problem analysis with root cause and action plan |
 | `analyze-issue` | Analyze a GitHub issue and create a detailed technical specification |
 | `attach-review-to-pr` | Add line-specific review comments to pull requests using GitHub CLI API |
-| `brainstorm` | Use when creating or developing, before writing code or implementation plans - refines rough ideas into fully-formed designs through collaborative questioning, alternative exploration, and incremental validation. Don't use during clear 'mechanical' processes |
-| `build-mcp` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK). |
 | `cause-and-effect` | Systematic Fishbone analysis exploring problem causes across six categories |
 | `commit` | Create well-formatted commits with conventional commit messages and emoji |
 | `context-engineering` | Understand the components, mechanics, and constraints of context in agent systems. Use when writing, editing, or optimizing commands, skills, or sub-agents prompts. |
@@ -24,7 +22,6 @@
 | `create-ideas` | Generate ideas in one shot using creative sampling |
 | `create-pr` | Create pull requests using GitHub CLI with proper templates and formatting |
 | `create-rule` | Use when found gap or repetative issue, that produced by you or implemenataion agent. Esentially use it each time when you say "You absolutly right, I should have done it differently." -> need create rule for this issue so it not appears again. |
-| `create-skill` | Guide for creating effective skills. This command should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations. Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulletproof against rationalization |
 | `create-workflow-command` | Create a workflow command that orchestrates multi-step execution through sub-agents with file-based task prompts |
 | `critique` | Comprehensive multi-perspective review using specialized judges with debate and consensus building |
 | `decay` | Manage evidence freshness by identifying stale decisions and providing governance actions |
@@ -34,7 +31,6 @@
 | `do-in-parallel` | Run independent tasks concurrently across multiple files or targets using parallel sub-agents, with per-task model selection and LLM-as-a-judge verification. Use when tasks do not depend on each other and can run side by side. |
 | `do-in-steps` | Execute one complex task as ordered, dependent steps run sequentially, passing context from each step to the next, with per-step LLM-as-a-judge verification. Use when later steps depend on the results of earlier ones. |
 | `git-notes` | Use when adding metadata to commits without changing history, tracking review status, test results, code quality annotations, or supplementing commit messages post-hoc - provides git notes commands and patterns for attaching non-invasive metadata to Git objects. |
-| `git-worktrees` | Use when working on multiple branches simultaneously, context switching without stashing, reviewing PRs while developing, testing in isolation, or comparing implementations across branches - provides git worktree commands and workflow patterns for parallel development with multiple working directories. |
 | `implement-task` | Implement a task with automated LLM-as-Judge verification per step |
 | `judge` | Launch a meta-judge then a judge sub-agent to evaluate results produced in the current conversation |
 | `judge-with-debate` | Evaluate solutions through multi-round debate between independent judges until consensus |

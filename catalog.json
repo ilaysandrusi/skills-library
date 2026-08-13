@@ -1,5 +1,5 @@
 {
-  "total": 432,
+  "total": 426,
   "categories": [
     {
       "id": "01-copy-writing",
@@ -768,14 +768,6 @@
           "description": "Add line-specific review comments to pull requests using GitHub CLI API"
         },
         {
-          "name": "brainstorm",
-          "description": "Use when creating or developing, before writing code or implementation plans - refines rough ideas into fully-formed designs through collaborative questioning, alternative exploration, and incremental validation. Don't use during clear 'mechanical' processes"
-        },
-        {
-          "name": "build-mcp",
-          "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
-        },
-        {
           "name": "cause-and-effect",
           "description": "Systematic Fishbone analysis exploring problem causes across six categories"
         },
@@ -812,10 +804,6 @@
           "description": "Use when found gap or repetative issue, that produced by you or implemenataion agent. Esentially use it each time when you say \"You absolutly right, I should have done it differently.\" -> need create rule for this issue so it not appears again."
         },
         {
-          "name": "create-skill",
-          "description": "Guide for creating effective skills. This command should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations. Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulletproof against rationalization"
-        },
-        {
           "name": "create-workflow-command",
           "description": "Create a workflow command that orchestrates multi-step execution through sub-agents with file-based task prompts"
         },
@@ -850,10 +838,6 @@
         {
           "name": "git-notes",
           "description": "Use when adding metadata to commits without changing history, tracking review status, test results, code quality annotations, or supplementing commit messages post-hoc - provides git notes commands and patterns for attaching non-invasive metadata to Git objects."
-        },
-        {
-          "name": "git-worktrees",
-          "description": "Use when working on multiple branches simultaneously, context switching without stashing, reviewing PRs while developing, testing in isolation, or comparing implementations across branches - provides git worktree commands and workflow patterns for parallel development with multiple working directories."
         },
         {
           "name": "implement-task",
@@ -999,20 +983,12 @@
       "description": "יצירת סקילים, תבניות, בדיקות וכו׳",
       "skills": [
         {
-          "name": "apply-anthropic-skill-best-practices",
-          "description": "Comprehensive guide for skill development based on Anthropic's official best practices - use for complex skills requiring detailed structure"
-        },
-        {
           "name": "skill-creator",
           "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy."
         },
         {
           "name": "slack-gif-creator",
           "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack."
-        },
-        {
-          "name": "template-skill",
-          "description": "Replace with description of the skill and when Claude should use it."
         }
       ]
     },

@@ -1,9 +1,6 @@
----
-name: git-worktrees
-description: Use when working on multiple branches simultaneously, context switching without stashing, reviewing PRs while developing, testing in isolation, or comparing implementations across branches - provides git worktree commands and workflow patterns for parallel development with multiple working directories.
----
+# Git Worktrees — Command Reference
 
-# Git Worktrees
+> Merged from the former `08-context-engineering/git-worktrees` skill into `using-git-worktrees` as a reference document.
 
 ## Overview
 
