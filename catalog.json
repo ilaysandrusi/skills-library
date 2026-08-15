@@ -1,5 +1,5 @@
 {
-  "total": 175,
+  "total": 178,
   "categories": [
     {
       "id": "01-copy-writing",
@@ -76,6 +76,10 @@
         {
           "name": "scroll-experience",
           "description": "Expert in building immersive scroll-driven experiences - parallax storytelling, scroll animations, interactive narratives, and cinematic web experiences. Like NY Times interactives, Apple product pages, and award-winning web experiences. Makes websites feel like experiences, not just pages. Use when: scroll animation, parallax, scroll storytelling, interactive story, **cinematic** website."
+        },
+        {
+          "name": "stitch-generate-design",
+          "description": "Generate new screens from text prompts or images, edit existing screens with prompts and design system tokens, and generate design variants using Stitch MCP. Includes prompt enhancement pipeline, design mappings, professional UI/UX terminology, design tokens and theme system capabilities."
         },
         {
           "name": "theme-factory",
@@ -344,7 +348,7 @@
         },
         {
           "name": "claude-api",
-          "description": "|-"
+          "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens). SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file)."
         },
         {
           "name": "deploy-to-vercel",
@@ -363,6 +367,14 @@
           "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work"
         },
         {
+          "name": "fix-tests",
+          "description": "Systematically fix all failing tests after business logic changes or refactoring"
+        },
+        {
+          "name": "linear",
+          "description": "Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear."
+        },
+        {
           "name": "mcp-builder",
           "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
         },
@@ -373,6 +385,10 @@
         {
           "name": "requesting-code-review",
           "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
+        },
+        {
+          "name": "sentry",
+          "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry CLI; perform read-only queries using the `sentry` command."
         },
         {
           "name": "subagent-driven-development",
@@ -400,7 +416,7 @@
         },
         {
           "name": "vercel-composition-patterns",
-          "description": "React composition patterns that scale. Use when refactoring components with"
+          "description": ""
         },
         {
           "name": "vercel-optimize",
@@ -412,7 +428,7 @@
         },
         {
           "name": "vercel-react-native-skills",
-          "description": "React Native and Expo best practices for building performant mobile apps. Use"
+          "description": ""
         },
         {
           "name": "vercel-react-view-transitions",
@@ -452,6 +468,10 @@
         {
           "name": "internal-comms",
           "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.)."
+        },
+        {
+          "name": "notion-knowledge-capture",
+          "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking."
         },
         {
           "name": "pdf",
@@ -514,10 +534,6 @@
         {
           "name": "brainstorm",
           "description": "Use when creating or developing, before writing code or implementation plans - refines rough ideas into fully-formed designs through collaborative questioning, alternative exploration, and incremental validation. Don't use during clear 'mechanical' processes"
-        },
-        {
-          "name": "build-mcp",
-          "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
         },
         {
           "name": "cause-and-effect",
@@ -757,17 +773,6 @@
         {
           "name": "template-skill",
           "description": "Replace with description of the skill and when Claude should use it."
-        }
-      ]
-    },
-    {
-      "id": "99-other",
-      "title": "אחר",
-      "description": "סקילים שלא סווגו לקטגוריה ברורה",
-      "skills": [
-        {
-          "name": "fix-tests",
-          "description": "Systematically fix all failing tests after business logic changes or refactoring"
         }
       ]
     }
