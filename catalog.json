@@ -1,5 +1,5 @@
 {
-  "total": 175,
+  "total": 178,
   "categories": [
     {
       "id": "01-copy-writing",
@@ -142,7 +142,7 @@
         },
         {
           "name": "community-marketing",
-          "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users post-signup, or turn customers into evangelists. Trigger phrases: \\\"build a community,\\\" \\\"community strategy,\\\" \\\"Discord community,\\\" \\\"Slack community,\\\" \\\"community-led growth,\\\" \\\"brand advocates,\\\" \\\"user community,\\\" \\\"forum strategy,\\\" \\\"community engagement,\\\" \\\"grow our community,\\\" \\\"ambassador program,\\\" \\\"community flywheel.\\"
+          "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users post-signup, or turn customers into evangelists. Trigger phrases: \\\"build a community,\\\" \\\"community strategy,\\\" \\\"Discord community,\\\" \\\"Slack community,\\\" \\\"community-led growth,\\\" \\\"brand advocates,\\\" \\\"user community,\\\" \\\"forum strategy,\\\" \\\"community engagement,\\\" \\\"grow our community,\\\" \\\"ambassador program,\\\" \\\"community flywheel.\\\""
         },
         {
           "name": "competitor-profiling",
@@ -336,7 +336,7 @@
     {
       "id": "05-development",
       "title": "פיתוח ודיבאג",
-      "description": "Superpowers, בדיקות, תוכניות עבודה",
+      "description": "Superpowers, בדיקות, תשתיות, תשלומים ואבטחה",
       "skills": [
         {
           "name": "brainstorming",
@@ -344,7 +344,11 @@
         },
         {
           "name": "claude-api",
-          "description": "|-"
+          "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens). SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file)."
+        },
+        {
+          "name": "cloudflare",
+          "description": "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
         },
         {
           "name": "deploy-to-vercel",
@@ -363,6 +367,14 @@
           "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work"
         },
         {
+          "name": "fix-tests",
+          "description": "Systematically fix all failing tests after business logic changes or refactoring"
+        },
+        {
+          "name": "huggingface-best",
+          "description": "Use when the user asks about finding the best, top, or recommended model for a task, wants to know what AI model to use, or wants to compare models by benchmark scores. Triggers on: \"best model for X\", \"what model should I use for\", \"top models for [task]\", \"which model runs on my laptop/machine/device\", \"recommend a model for\", \"what LLM should I use for\", \"compare models for\", \"what's state of the art for\", or any question about choosing an AI model for a specific use case. Always use this skill when the user wants model recommendations or comparisons, even if they don't explicitly mention HuggingFace or benchmarks."
+        },
+        {
           "name": "mcp-builder",
           "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
         },
@@ -373,6 +385,14 @@
         {
           "name": "requesting-code-review",
           "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
+        },
+        {
+          "name": "security-best-practices",
+          "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks."
+        },
+        {
+          "name": "stripe-best-practices",
+          "description": "Guides Stripe integration decisions across API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, tax and registrations (Stripe Tax, automatic_tax, product tax codes), Treasury financial accounts, integration options (Checkout, Payment Element), migrating from deprecated Stripe APIs, and security best practices (API key management, restricted keys, webhooks, OAuth). Use when building, modifying, or reviewing any Stripe integration, including accepting payments, building marketplaces, integrating Stripe, processing payments, setting up subscriptions, collecting sales tax, VAT, or GST, creating connected accounts, or implementing secure key handling."
         },
         {
           "name": "subagent-driven-development",
@@ -400,7 +420,7 @@
         },
         {
           "name": "vercel-composition-patterns",
-          "description": "React composition patterns that scale. Use when refactoring components with"
+          "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes."
         },
         {
           "name": "vercel-optimize",
@@ -412,7 +432,7 @@
         },
         {
           "name": "vercel-react-native-skills",
-          "description": "React Native and Expo best practices for building performant mobile apps. Use"
+          "description": "React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing animations, or working with native modules. Triggers on tasks involving React Native, Expo, mobile performance, or native platform APIs."
         },
         {
           "name": "vercel-react-view-transitions",
@@ -514,10 +534,6 @@
         {
           "name": "brainstorm",
           "description": "Use when creating or developing, before writing code or implementation plans - refines rough ideas into fully-formed designs through collaborative questioning, alternative exploration, and incremental validation. Don't use during clear 'mechanical' processes"
-        },
-        {
-          "name": "build-mcp",
-          "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
         },
         {
           "name": "cause-and-effect",
@@ -752,22 +768,11 @@
         },
         {
           "name": "slack-gif-creator",
-          "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack."
+          "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\""
         },
         {
           "name": "template-skill",
           "description": "Replace with description of the skill and when Claude should use it."
-        }
-      ]
-    },
-    {
-      "id": "99-other",
-      "title": "אחר",
-      "description": "סקילים שלא סווגו לקטגוריה ברורה",
-      "skills": [
-        {
-          "name": "fix-tests",
-          "description": "Systematically fix all failing tests after business logic changes or refactoring"
         }
       ]
     }
