@@ -165,3 +165,7 @@ Ready to implement <feature-name>
 | "The worktree directory is surely ignored already" | Run `git check-ignore`. An unignored worktree directory commits the whole tree into the repo. |
 | "Any directory name works" | Explicit instructions beat an existing project-local directory, which beats the `.worktrees/` default. |
 | "The workspace is fresh — baseline tests can wait" | A dirty baseline makes every later failure ambiguous. Run the tests now; proceeding past failures is your human partner's call. |
+
+## Reference
+
+For the full `git worktree` command reference (create/list/remove/move variants, multi-branch workflows, IDE integration patterns), see [references/git-worktrees-command-reference.md](references/git-worktrees-command-reference.md).
