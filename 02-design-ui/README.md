@@ -6,6 +6,7 @@ UI/UX, פרונט, נגישות, גלילה
 
 | סקיל | מה הוא עושה |
 |---|---|
+| [stitch-generate-design](./stitch-generate-design/) | Generate new screens from text prompts or images using Stitch MCP |
 | [`accessibility`](./accessibility/SKILL.md) | Audit and improve web accessibility following WCAG 2.2 guidelines. Use when asked to "improve accessibility", "a11y audit", "WCAG compliance", "screen reader support", "keyboard navigation", or "make accessible". |
 | [`accessibility-inclusive-design`](./accessibility-inclusive-design/SKILL.md) | Use when designing, critiquing, implementing, or revising UI/UX/frontend work for accessibility and inclusion. |
 | [`algorithmic-art`](./algorithmic-art/SKILL.md) | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avo |

@@ -17,13 +17,13 @@
 | קטגוריה | סקילים | תיאור |
 |---|---|---|
 | [כתיבה וניקוי טקסט](./01-copy-writing/) | 99 | עצירת סלופ AI, קופי, הנחיות כתיבה |
-| [עיצוב וממשק](./02-design-ui/) | 105 | UI/UX, פרונט, נגישות, גלילה |
+| [עיצוב וממשק](./02-design-ui/) | 106 | UI/UX, פרונט, נגישות, גלילה |
 | [שיווק ותוכן](./03-marketing/) | 496 | חבילת Corey Haines וסקילים שיווקיים |
 | [Remotion (וידאו מקוד)](./04-remotion/) | 12 | יצירת וידאו עם React / Remotion |
-| [פיתוח ודיבאג](./05-development/) | 409 | Superpowers, בדיקות, תוכניות עבודה |
-| [מסמכים](./06-documents/) | 33 | PDF, Word, PowerPoint, Excel |
+| [פיתוח ודיבאג](./05-development/) | 410 | Superpowers, בדיקות, תוכניות עבודה |
+| [מסמכים](./06-documents/) | 34 | PDF, Word, PowerPoint, Excel |
 | [Supabase / Postgres](./07-supabase/) | 2 | עבודה עם מסדי נתונים של Supabase |
-| [Context Engineering](./08-context-engineering/) | 138 | ניהול קונטקסט, סוכני משנה, חשיבה |
+| [Context Engineering](./08-context-engineering/) | 137 | ניהול קונטקסט, סוכני משנה, חשיבה |
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 3 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 146 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |

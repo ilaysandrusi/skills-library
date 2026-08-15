@@ -6,6 +6,7 @@ PDF, Word, PowerPoint, Excel
 
 | סקיל | מה הוא עושה |
 |---|---|
+| [notion-knowledge-capture](./notion-knowledge-capture/) | Capture conversations into structured Notion wiki pages |
 | [`alef-generated-bindings`](./alef-generated-bindings/SKILL.md) | Alef-managed generated bindings in packages/* and binding crates — the regeneration workflow (task alef:generate / alef:format), Go DocumentExtractor→Extractor rename mapping, the git-diff freshness check, and the key alef.toml sections. Load before editing anything under packages/* or a binding cra |
 | [`api-server-mcp`](./api-server-mcp/SKILL.md) | REST API server and MCP protocol integration |
 | [`batch-extraction`](./batch-extraction/SKILL.md) | Use when extracting from many files at once with shared config, bounded parallelism, per-file overrides, and error recovery. Covers the `batch` command, `--file-configs`, `--max-concurrent`, and output layout. |
