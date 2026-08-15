@@ -2,7 +2,7 @@
 
 ניהול קונטקסט, סוכני משנה, חשיבה
 
-**מספר סקילים:** 62
+**מספר סקילים:** 61
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -13,7 +13,6 @@
 | `analyze-issue` | Analyze a GitHub issue and create a detailed technical specification |
 | `attach-review-to-pr` | Add line-specific review comments to pull requests using GitHub CLI API |
 | `brainstorm` | Use when creating or developing, before writing code or implementation plans - refines rough ideas into fully-formed designs through collaborative questioning, alternative exploration, and incremental validation. Don't use during clear 'mechanical' processes |
-| `build-mcp` | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK). |
 | `cause-and-effect` | Systematic Fishbone analysis exploring problem causes across six categories |
 | `commit` | Create well-formatted commits with conventional commit messages and emoji |
 | `context-engineering` | Understand the components, mechanics, and constraints of context in agent systems. Use when writing, editing, or optimizing commands, skills, or sub-agents prompts. |
