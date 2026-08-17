@@ -328,20 +328,20 @@ For large-scale creative production (Anthropic's growth team generates 100+ vari
 
 ## Tool Integrations
 
-For pulling performance data and managing campaigns, see the [tools registry](../../tools/REGISTRY.md).
+For pulling performance data and managing campaigns, see the [tools registry](../../tools/infrasity-dev-gtm/REGISTRY.md).
 
 | Platform | Pull Performance Data | Manage Campaigns | Guide |
 |----------|:---------------------:|:----------------:|-------|
-| **Google Ads** | `google-ads campaigns list`, `google-ads reports get` | `google-ads campaigns create` | [google-ads.md](../../tools/integrations/google-ads.md) |
-| **Meta Ads** | `meta-ads insights get` | `meta-ads campaigns list` | [meta-ads.md](../../tools/integrations/meta-ads.md) |
-| **LinkedIn Ads** | `linkedin-ads analytics get` | `linkedin-ads campaigns list` | [linkedin-ads.md](../../tools/integrations/linkedin-ads.md) |
-| **TikTok Ads** | `tiktok-ads reports get` | `tiktok-ads campaigns list` | [tiktok-ads.md](../../tools/integrations/tiktok-ads.md) |
+| **Google Ads** | `google-ads campaigns list`, `google-ads reports get` | `google-ads campaigns create` | [google-ads.md](../../tools/infrasity-dev-gtm/integrations/google-ads.md) |
+| **Meta Ads** | `meta-ads insights get` | `meta-ads campaigns list` | [meta-ads.md](../../tools/infrasity-dev-gtm/integrations/meta-ads.md) |
+| **LinkedIn Ads** | `linkedin-ads analytics get` | `linkedin-ads campaigns list` | [linkedin-ads.md](../../tools/infrasity-dev-gtm/integrations/linkedin-ads.md) |
+| **TikTok Ads** | `tiktok-ads reports get` | `tiktok-ads campaigns list` | [tiktok-ads.md](../../tools/infrasity-dev-gtm/integrations/tiktok-ads.md) |
 
 ### Workflow: Pull Data, Analyze, Generate
 
 ```bash
 # 1. Pull recent ad performance
-node tools/clis/google-ads.js reports get --type ad_performance --date-range last_30_days
+node ../../tools/infrasity-dev-gtm/clis/google-ads.js reports get --type ad_performance --date-range last_30_days
 
 # 2. Analyze output (identify top/bottom performers)
 # 3. Feed winning patterns into this skill

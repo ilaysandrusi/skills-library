@@ -1,6 +1,6 @@
 ---
 name: backlink-gap
-description: "Find referring domains that link to your competitors but not to you, ranked by an outreach-priority score (0.40 DR + 0.25 link-overlap + 0.20 traffic + 0.15 topical relevance) — outputs a four-gate quality scorecard, a 30-prospect outreach shortlist, broken-link candidates, and pre-filled outreach templates. Triggers on \"/digital-marketing-pro:backlink-gap\", \"where are competitors getting links we aren't\", \"plan a link-building campaign\", \"quarterly backlink audit\", \"first 50 link targets for a new client\". Consumes backlink CSV exports from the brand's connected backlink MCP, runs scripts/backlink_gap.py, reads the brand profile for DR thresholds and voice, and hands off to /digital-marketing-pro:digital-pr and /digital-marketing-pro:pr-pitch."
+description: "Find referring domains that link to your competitors but not to you, ranked by an outreach-priority score (0.40 DR + 0.25 link-overlap + 0.20 traffic + 0.15 topical relevance) — outputs a four-gate quality scorecard, a 30-prospect outreach shortlist, broken-link candidates, and pre-filled outreach templates. Triggers on \"/digital-marketing-pro:backlink-gap\", \"where are competitors getting links we aren't\", \"plan a link-building campaign\", \"quarterly backlink audit\", \"first 50 link targets for a new client\". Consumes backlink CSV exports from the brand's connected backlink MCP, runs ../../scripts/digital-marketing-pro/backlink_gap.py, reads the brand profile for DR thresholds and voice, and hands off to /digital-marketing-pro:digital-pr and /digital-marketing-pro:pr-pitch."
 argument-hint: "[brand-name]"
 user-invocable: true
 ---
@@ -53,7 +53,7 @@ All outputs go to `${CLAUDE_PLUGIN_DATA}/{brand}/seo/backlink-gap/{YYYY-MM-DD}/`
 4. **`03-comp-{competitor}.csv`** — one CSV per competitor (raw)
 5. **`04-gap-run.json`** — run the script:
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/scripts/backlink_gap.py" \
+   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/backlink_gap.py" \
        --ours "${CLAUDE_PLUGIN_DATA}/{brand}/seo/backlink-gap/{date}/02-ours.csv" \
        --competitors \
          "${CLAUDE_PLUGIN_DATA}/{brand}/seo/backlink-gap/{date}/03-comp-competitor1.csv" \
@@ -146,4 +146,4 @@ This skill is a producer in a longer chain:
 - `/digital-marketing-pro:digital-pr` — runs the actual outreach
 - `/digital-marketing-pro:seo-drift` — re-run quarterly to track delta
 - `/digital-marketing-pro:seo-audit` — broader site-level audit including own-profile health
-- `scripts/backlink_gap.py` — the underlying gap engine
+- `../../scripts/digital-marketing-pro/backlink_gap.py` — the underlying gap engine

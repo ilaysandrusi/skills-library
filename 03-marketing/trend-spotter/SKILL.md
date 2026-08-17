@@ -44,7 +44,7 @@ Should [brand] participate in [trend/challenge]? Score the brand fit and give a 
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -55,13 +55,13 @@ This skill works with no live integrations (Tier 1): ask the user for the brand,
 - `~~social listening` — cultural conversations and sentiment around a topic.
 - `~~competitor tracking` — which trends rival brands have adopted and how they performed.
 
-No connector is required to produce a useful report. See [CONNECTORS.md](../../../CONNECTORS.md) for the free/keyless recipe per category.
+No connector is required to produce a useful report. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the free/keyless recipe per category.
 
 For a keyless way to fill the trending tables with real signal, run the multi-source trend scout — Google Trends RSS + Hacker News + Reddit + YouTube-outlier, scored against the brand's verticals via the bundled stdlib `rss_monitor.py` (no new dependency): [references/trend-scout-recipe.md](references/trend-scout-recipe.md). This is the Tier-1 recipe behind `~~trend database` (Google Trends RSS).
 
-**Keyless news pulse (Tavily)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/tavily.py" search "<vertical or candidate trend>" --topic news --time-range w --limit 10` adds a recency-filtered news read with per-result relevance scores to the scout mix — a second keyless source to corroborate an RSS spike before calling it a rising trend. Keep single-source signals labeled **Estimated**; two independent sources agreeing upgrades the confidence note, not the label.
+**Keyless news pulse (Tavily)**: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/tavily.py" search "<vertical or candidate trend>" --topic news --time-range w --limit 10` adds a recency-filtered news read with per-result relevance scores to the scout mix — a second keyless source to corroborate an RSS spike before calling it a rising trend. Keep single-source signals labeled **Estimated**; two independent sources agreeing upgrades the confidence note, not the label.
 
-**Keyless momentum sharpeners**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/pageviews.py" "<Topic_Article>" --granularity daily --days 30` shows whether a topic's Wikipedia attention is actually climbing — Measured evidence for the rising / peak / declining format call — and the Hacker News Algolia API (`https://hn.algolia.com/api/v1/search?query=<topic>`, keyless) upgrades the HN RSS read with points and comment counts usable as a heat score.
+**Keyless momentum sharpeners**: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/pageviews.py" "<Topic_Article>" --granularity daily --days 30` shows whether a topic's Wikipedia attention is actually climbing — Measured evidence for the rising / peak / declining format call — and the Hacker News Algolia API (`https://hn.algolia.com/api/v1/search?query=<topic>`, keyless) upgrades the HN RSS read with points and comment counts usable as a heat score.
 
 ## Instructions
 
@@ -85,10 +85,10 @@ Output names the top trends to act on now — e.g. "Hot Girl Walk" Evolution (2.
 
 - [references/templates.md](references/templates.md) — fill-in templates for every step, the extended worked example, and execution tips.
 
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — HOT/WARM/COLD memory tiers and save paths.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipe per connector category.
-- STAR benchmark scoring at [references/star-benchmark.md](../../../references/star-benchmark.md) — for grading trend-driven creative output downstream.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — HOT/WARM/COLD memory tiers and save paths.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipe per connector category.
+- STAR benchmark scoring at [references/star-benchmark.md](../../references/aaron-marketing/star-benchmark.md) — for grading trend-driven creative output downstream.
 - Siblings in the scout phase: [audience-mapper](../audience-mapper/SKILL.md), [influencer-discovery](../influencer-discovery/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md).
 
 ## Next Best Skill

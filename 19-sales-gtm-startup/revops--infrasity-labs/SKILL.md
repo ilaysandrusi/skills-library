@@ -337,18 +337,18 @@ RevOps documents are operational references the whole revenue team depends on â€
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key RevOps tools:
+For implementation, see the [tools registry](../../tools/infrasity-dev-gtm/REGISTRY.md). Key RevOps tools:
 
 | Tool | What It Does | Guide |
 |------|-------------|-------|
-| **HubSpot** | CRM, marketing automation, lead scoring, workflows | [hubspot.md](../../tools/integrations/hubspot.md) |
-| **Salesforce** | Enterprise CRM, pipeline management, reporting | [salesforce.md](../../tools/integrations/salesforce.md) |
-| **Calendly** | Meeting scheduling, round-robin routing | [calendly.md](../../tools/integrations/calendly.md) |
-| **SavvyCal** | Scheduling with priority-based availability | [savvycal.md](../../tools/integrations/savvycal.md) |
-| **Clearbit** | Real-time lead enrichment and scoring | [clearbit.md](../../tools/integrations/clearbit.md) |
-| **Apollo** | Contact data, enrichment, and outbound sequences | [apollo.md](../../tools/integrations/apollo.md) |
-| **ActiveCampaign** | Marketing automation for SMBs, lead scoring | [activecampaign.md](../../tools/integrations/activecampaign.md) |
-| **Zapier** | Cross-tool automation and workflow glue | [zapier.md](../../tools/integrations/zapier.md) |
-| **Introw** | Partner-sourced pipeline, commissions, deal registration, QBRs | [introw.md](../../tools/integrations/introw.md) |
-| **Crossbeam** | Partner account overlaps and co-sell identification | [crossbeam.md](../../tools/integrations/crossbeam.md) |
+| **HubSpot** | CRM, marketing automation, lead scoring, workflows | [hubspot.md](../../tools/infrasity-dev-gtm/integrations/hubspot.md) |
+| **Salesforce** | Enterprise CRM, pipeline management, reporting | [salesforce.md](../../tools/infrasity-dev-gtm/integrations/salesforce.md) |
+| **Calendly** | Meeting scheduling, round-robin routing | [calendly.md](../../tools/infrasity-dev-gtm/integrations/calendly.md) |
+| **SavvyCal** | Scheduling with priority-based availability | [savvycal.md](../../tools/infrasity-dev-gtm/integrations/savvycal.md) |
+| **Clearbit** | Real-time lead enrichment and scoring | [clearbit.md](../../tools/infrasity-dev-gtm/integrations/clearbit.md) |
+| **Apollo** | Contact data, enrichment, and outbound sequences | [apollo.md](../../tools/infrasity-dev-gtm/integrations/apollo.md) |
+| **ActiveCampaign** | Marketing automation for SMBs, lead scoring | [activecampaign.md](../../tools/infrasity-dev-gtm/integrations/activecampaign.md) |
+| **Zapier** | Cross-tool automation and workflow glue | [zapier.md](../../tools/infrasity-dev-gtm/integrations/zapier.md) |
+| **Introw** | Partner-sourced pipeline, commissions, deal registration, QBRs | [introw.md](../../tools/infrasity-dev-gtm/integrations/introw.md) |
+| **Crossbeam** | Partner account overlaps and co-sell identification | [crossbeam.md](../../tools/infrasity-dev-gtm/integrations/crossbeam.md) |
 

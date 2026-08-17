@@ -35,7 +35,7 @@ The user must provide (or will be prompted for):
 2. **Gather content performance data**: Connect to analytics MCPs (Google Analytics, Google Search Console) and pull performance data for the content library — monthly traffic for the past 6 months per URL, keyword position data for primary and secondary keywords, click-through rates from search results, and conversion data if available. For content not covered by MCPs, use any exported data the user provided. Build a performance timeline for each content piece showing the trajectory over the past 6 months.
 3. **Score each content piece for decay**: Run the decay scorer with the performance data:
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/scripts/creative-fatigue-predictor.py" \
+   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/creative-fatigue-predictor.py" \
        --action decay-scan \
        --data '[{"content_id":"blog_01","url":"/blog/post-a","monthly_traffic_current":1200,"monthly_traffic_previous":1600,"monthly_traffic_6mo_ago":2100,"keyword_positions_current":{"seo tips":12},"keyword_positions_previous":{"seo tips":7},"last_updated":"2024-11-01"}, ...]'
    ```

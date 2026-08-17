@@ -40,13 +40,13 @@ Analyze ranking changes for [domain] over the past [time period]
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
-All integrations optional (see [CONNECTORS.md](../../../CONNECTORS.md)). With tools, pull rankings from ~~SEO tool, impressions from ~~search console, traffic from ~~analytics, and AI citations from ~~AI monitor. Without tools, ask for positions, volumes, competitor data, and SERP feature status.
+All integrations optional (see [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md)). With tools, pull rankings from ~~SEO tool, impressions from ~~search console, traffic from ~~analytics, and AI citations from ~~AI monitor. Without tools, ask for positions, volumes, competitor data, and SERP feature status.
 
-**Zero-dependency measurement loop** (no paid tool needed): never narrate a ranking movement you did not measure — record each check as a snapshot and let the ledger compute the delta. `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/ledger.py" record <domain> --source rank --data '{"<keyword>": <position>, ...}'`, then `ledger.py diff <domain> --source rank` for the change since the last check and `ledger.py trend <domain> --source rank --field "<keyword>"` for the series. Record real Search Console positions when connected, or the positions the user provides at Tier 1. A ranking delta is a **week-scale, confounded outcome** — attribute it against a control (a holdout keyword/competitor), not against zero; see [references/measurement-protocol.md](../../../references/measurement-protocol.md). See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Zero-dependency measurement loop** (no paid tool needed): never narrate a ranking movement you did not measure — record each check as a snapshot and let the ledger compute the delta. `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/ledger.py" record <domain> --source rank --data '{"<keyword>": <position>, ...}'`, then `ledger.py diff <domain> --source rank` for the change since the last check and `ledger.py trend <domain> --source rank --field "<keyword>"` for the series. Record real Search Console positions when connected, or the positions the user provides at Tier 1. A ranking delta is a **week-scale, confounded outcome** — attribute it against a control (a holdout keyword/competitor), not against zero; see [references/measurement-protocol.md](../../references/aaron-marketing/measurement-protocol.md). See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 ## Decision Gates
 
@@ -93,7 +93,7 @@ A ranking report names the biggest winners, biggest drops, and next actions, wit
 
 ### Save Results
 
-Ask "Save these results?" If yes, write to `memory/monitoring/` — see [Skill Contract](../../../references/skill-contract.md) §Save Results Template.
+Ask "Save these results?" If yes, write to `memory/monitoring/` — see [Skill Contract](../../references/aaron-marketing/skill-contract.md) §Save Results Template.
 
 ## Reference Materials
 
@@ -101,4 +101,4 @@ Ask "Save these results?" If yes, write to `memory/monitoring/` — see [Skill C
 
 ## Next Best Skill
 
-Initial setup (no baseline) → [performance-monitor](../performance-monitor/SKILL.md). Subsequent runs (baseline exists) → Terminal. Visited-set rule applies per [skill-contract.md](../../../references/skill-contract.md).
+Initial setup (no baseline) → [performance-monitor](../performance-monitor/SKILL.md). Subsequent runs (baseline exists) → Terminal. Visited-set rule applies per [skill-contract.md](../../references/aaron-marketing/skill-contract.md).

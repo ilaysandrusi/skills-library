@@ -54,7 +54,7 @@ All outputs go to `${CLAUDE_PLUGIN_DATA}/{brand}/seo/keyword-cluster/{YYYY-MM-DD
 4. **`03-serps.json`** — fetch top-10 SERP URLs per keyword via the connected rank-tracker (skip if SERPs already provided). **Budget guard**: if estimated cost > 500 credits, surface the cost and ask "Continue? (y/N — default N)" before fetching.
 5. **`04-cluster-run.json`** — run the script:
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/scripts/keyword_cluster.py" \
+   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/keyword_cluster.py" \
        --keywords "${CLAUDE_PLUGIN_DATA}/{brand}/seo/keyword-cluster/{date}/02-filtered.csv" \
        --serps "${CLAUDE_PLUGIN_DATA}/{brand}/seo/keyword-cluster/{date}/03-serps.json" \
        --overlap 0.4 \
@@ -93,7 +93,7 @@ ${CLAUDE_PLUGIN_DATA}/{brand}/seo/keyword-cluster/2026-06-04/
 
 ## Quality scorecard (the four gates)
 
-Every run produces a scorecard from `scripts/keyword_cluster.py`. **All four must pass** for `status: ready`:
+Every run produces a scorecard from `../../scripts/digital-marketing-pro/keyword_cluster.py`. **All four must pass** for `status: ready`:
 
 | Gate | What it checks | Why it matters |
 |---|---|---|
@@ -135,4 +135,4 @@ This skill is a producer in the chain:
 - `/digital-marketing-pro:content-brief` — consumes the cluster plan (use next)
 - `/digital-marketing-pro:seo-implement` — applies internal-link map to CMS
 - `/digital-marketing-pro:seo-drift` — re-run quarterly to detect cluster drift
-- `scripts/keyword_cluster.py` — the underlying clustering engine
+- `../../scripts/digital-marketing-pro/keyword_cluster.py` — the underlying clustering engine

@@ -1,6 +1,6 @@
 ---
 name: status
-description: "Print a read-only status snapshot of the active brand via scripts/dm-status.py: profile summary, engagements with current part and update age, last five insights, recent compliance violations, and Python dependency mode — with --quiet, --json, --section, and --brand variants. Triggers on \"/digital-marketing-pro:status\", \"what's my DMP status\", \"what brand am I on\", \"show engagement status\", \"status snapshot\". Never modifies state: switching brands is /digital-marketing-pro:switch-brand, advancing engagements is /digital-marketing-pro:engagement, connector status is /digital-marketing-pro:integrations, and content checks are /digital-marketing-pro:check."
+description: "Print a read-only status snapshot of the active brand via ../../scripts/digital-marketing-pro/dm-status.py: profile summary, engagements with current part and update age, last five insights, recent compliance violations, and Python dependency mode — with --quiet, --json, --section, and --brand variants. Triggers on \"/digital-marketing-pro:status\", \"what's my DMP status\", \"what brand am I on\", \"show engagement status\", \"status snapshot\". Never modifies state: switching brands is /digital-marketing-pro:switch-brand, advancing engagements is /digital-marketing-pro:engagement, connector status is /digital-marketing-pro:integrations, and content checks are /digital-marketing-pro:check."
 user-invocable: true
 triggers:
   - what's my dmp status
@@ -92,7 +92,7 @@ Print only the requested section. Useful when you only need one piece of state.
 
 2. **Execute the script.**
    ```
-   python ${CLAUDE_PLUGIN_ROOT}/scripts/dm-status.py [--brand <slug>] [--json] [--quiet] [--section <name>]
+   python ${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/dm-status.py [--brand <slug>] [--json] [--quiet] [--section <name>]
    ```
 
 3. **Pass through the formatted output to the user.** The script does the heavy lifting; the skill is a thin orchestration layer.
@@ -106,7 +106,7 @@ Print only the requested section. Useful when you only need one piece of state.
 ```
 User: /digital-marketing-pro:status
 
-Skill runs: python "${CLAUDE_PLUGIN_ROOT}/scripts/dm-status.py"
+Skill runs: python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/dm-status.py"
 Output:
 
 ============================================================
@@ -228,5 +228,5 @@ Workspace: ~/.claude-marketing      # or $CLAUDE_PLUGIN_DATA/digital-marketing-p
 
 ## Related references
 
-- `scripts/dm-status.py` — the underlying script
+- `../../scripts/digital-marketing-pro/dm-status.py` — the underlying script
 - `docs/getting-started.md` — context on what was lost when the SessionStart hook was removed and why /digital-marketing-pro:status replaced it

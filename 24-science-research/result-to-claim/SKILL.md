@@ -87,7 +87,7 @@ if [ -n "$EVIDENCE_CHECK" ]; then
 else
     echo "WARN: evidence_check.py not resolved at .aris/tools/, tools/, \$ARIS_REPO/tools/, or via ~/.aris/repo." >&2
     echo "      Pre-check skipped (Policy B); the Codex jury still runs. Fix: rerun" >&2
-    echo "      bash tools/install_aris.sh, export ARIS_REPO, or copy the helper to tools/." >&2
+    echo "      bash ../../tools/aris/install_aris.sh, export ARIS_REPO, or copy the helper to tools/." >&2
 fi
 ```
 
@@ -242,7 +242,7 @@ WIKI_SCRIPT=".aris/tools/research_wiki.py"
 [ -f "$WIKI_SCRIPT" ] || WIKI_SCRIPT="tools/research_wiki.py"
 [ -f "$WIKI_SCRIPT" ] || { [ -n "${ARIS_REPO:-}" ] && WIKI_SCRIPT="$ARIS_REPO/tools/research_wiki.py"; }
 [ -f "$WIKI_SCRIPT" ] || {
-  echo "WARN: research_wiki.py not found; verdict will be reported but wiki edges/query-pack/log will be skipped. Fix: bash tools/install_aris.sh or smart_update.sh (refreshes ~/.aris/repo), export ARIS_REPO, or cp <ARIS-repo>/tools/research_wiki.py tools/." >&2
+  echo "WARN: research_wiki.py not found; verdict will be reported but wiki edges/query-pack/log will be skipped. Fix: bash ../../tools/aris/install_aris.sh or smart_update.sh (refreshes ~/.aris/repo), export ARIS_REPO, or cp <ARIS-repo>/tools/research_wiki.py tools/." >&2
   WIKI_SCRIPT=""
 }
 ```

@@ -46,7 +46,7 @@ What's the ROI of our campaign using direct revenue, EMV, and LTV-based methods?
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -57,7 +57,7 @@ This family is Tier 1 — it works with no live integrations. Ask the user for s
 - `~~CRM` — new-customer counts, repeat-purchase rate, and lifetime value for LTV-based ROI.
 - `~~influencer database` — per-influencer fees and tier data for by-influencer ROI.
 
-With zero integrations, supply the investment and results tables by hand and the skill still produces every calculation. See [CONNECTORS.md](../../../CONNECTORS.md) for the free/keyless recipe per category.
+With zero integrations, supply the investment and results tables by hand and the skill still produces every calculation. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the free/keyless recipe per category.
 
 ## Instructions
 
@@ -133,11 +133,11 @@ The source-dated benchmark evidence template lives in [references/roi-templates.
 ## Reference Materials
 
 - [references/roi-templates.md](references/roi-templates.md) — fill-in templates for every Instructions step, the worked example, and benchmark evidence inputs.
-- [measurement-protocol.md](../../../references/measurement-protocol.md) — read ROI and Return (R) deltas against a control over the readback window; do not over-claim attribution.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipe per connector category.
-- STAR scoring: [star-benchmark.md](../../../references/star-benchmark.md) — the Return (R) dimension this skill's evidence feeds and the profile-weighted SQS the gate computes.
+- [measurement-protocol.md](../../references/aaron-marketing/measurement-protocol.md) — read ROI and Return (R) deltas against a control over the readback window; do not over-claim attribution.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipe per connector category.
+- STAR scoring: [star-benchmark.md](../../references/aaron-marketing/star-benchmark.md) — the Return (R) dimension this skill's evidence feeds and the profile-weighted SQS the gate computes.
 - [performance-analyzer](../performance-analyzer/SKILL.md) — supplies the results data this skill consumes.
 - [report-generator](../report-generator/SKILL.md) — wraps these numbers into a full report.
 - [budget-optimizer](../budget-optimizer/SKILL.md) — uses ROI output to reallocate spend.

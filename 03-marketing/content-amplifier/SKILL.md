@@ -61,7 +61,7 @@ Output expectation — **paid**: every candidate scored, tiered, and given a spe
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md). State which mode ran. Label every metric Measured / User-provided / Estimated — never present a CPM, ROAS, view count, or rights date you were not given as Measured; if it is missing, ask for the export or mark it Estimated with the basis.
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md). State which mode ran. Label every metric Measured / User-provided / Estimated — never present a CPM, ROAS, view count, or rights date you were not given as Measured; if it is missing, ask for the export or mark it Estimated with the basis.
 
 ## Data Sources
 
@@ -75,7 +75,7 @@ Where a connector could sharpen the output (all optional, opt-in Tier 2/3):
 - `~~DAM / asset library` — store and tag processed assets; enforce the naming convention (repurpose).
 - `~~CRM` — supply retargeting/exclusion audiences (paid); reconcile creator records with usage-rights expirations (repurpose).
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the verified free/keyless recipe per category. None are required; absent a connector, the user supplies the numbers.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the verified free/keyless recipe per category. None are required; absent a connector, the user supplies the numbers.
 
 ## Instructions
 
@@ -134,11 +134,11 @@ Full rankings, strategies, setups, and both worked examples: [references/templat
 
 - [templates.md](references/templates.md) — fill-in templates for every step of both modes, platform setup guides, format transformation specs, both worked examples, and tips.
 - [atom-extraction.md](references/atom-extraction.md) — 7-tier content-atom extraction, the virality heuristic, and the Jaccard near-duplicate flag for slicing one source into many (repurpose mode).
-- Per-platform format & placement specs: [tiktok](../../../references/platforms/tiktok.md) · [youtube](../../../references/platforms/youtube.md) · [linkedin](../../../references/platforms/linkedin.md) · [x](../../../references/platforms/x.md) · [reddit](../../../references/platforms/reddit.md) · [grokipedia](../../../references/platforms/grokipedia.md).
-- [star-benchmark.md](../../../references/star-benchmark.md) — the STAR framework; the Trust vetoes (`STAR-T1` FTC disclosure, `STAR-T2` claim integrity) that creator-content-auditor enforces before this skill runs.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — HOT/WARM/COLD memory tiers and save conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipe per connector category.
+- Per-platform format & placement specs: [tiktok](../../references/aaron-marketing/platforms/tiktok.md) · [youtube](../../references/aaron-marketing/platforms/youtube.md) · [linkedin](../../references/aaron-marketing/platforms/linkedin.md) · [x](../../references/aaron-marketing/platforms/x.md) · [reddit](../../references/aaron-marketing/platforms/reddit.md) · [grokipedia](../../references/aaron-marketing/platforms/grokipedia.md).
+- [star-benchmark.md](../../references/aaron-marketing/star-benchmark.md) — the STAR framework; the Trust vetoes (`STAR-T1` FTC disclosure, `STAR-T2` claim integrity) that creator-content-auditor enforces before this skill runs.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — HOT/WARM/COLD memory tiers and save conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipe per connector category.
 - Sibling skills: [creator-content-auditor](../creator-content-auditor/SKILL.md), [contract-helper](../contract-helper/SKILL.md), [landing-optimizer](../landing-optimizer/SKILL.md), [budget-optimizer](../budget-optimizer/SKILL.md), [performance-analyzer](../performance-analyzer/SKILL.md).
 
 ## Save Results

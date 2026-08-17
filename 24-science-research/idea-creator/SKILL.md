@@ -79,7 +79,7 @@ WIKI_SCRIPT=".aris/tools/research_wiki.py"
   echo "WARN: research_wiki.py not found at .aris/tools/, tools/, \$ARIS_REPO/tools/, or via ~/.aris/repo." >&2
   echo "      The idea-creation primary output (idea ranking) will still be produced." >&2
   echo "      Wiki integration (load query_pack, write idea pages, add edges, rebuild query_pack) will be skipped." >&2
-  echo "      Fix: rerun 'bash tools/install_aris.sh' or 'smart_update.sh' (refreshes ~/.aris/repo), export ARIS_REPO, or 'cp <ARIS-repo>/tools/research_wiki.py tools/'." >&2
+  echo "      Fix: rerun 'bash ../../tools/aris/install_aris.sh' or 'smart_update.sh' (refreshes ~/.aris/repo), export ARIS_REPO, or 'cp <ARIS-repo>/tools/research_wiki.py tools/'." >&2
   WIKI_SCRIPT=""
 }
 ```
@@ -409,7 +409,7 @@ index + query_pack in a single call. **Default skip-on-exist**: a re-ideation
 run records NEW ideas without clobbering an existing idea whose `outcome`
 `/result-to-claim` may already have enriched. If `$WIKI_SCRIPT` is empty
 (helper unreachable) the ideas are **NOT** recorded and a single WARN prints
-(fix: `bash tools/install_aris.sh` or `export ARIS_REPO`).
+(fix: `bash ../../tools/aris/install_aris.sh` or `export ARIS_REPO`).
 
 ```
 if research-wiki/ exists AND [ -n "$WIKI_SCRIPT" ]:
@@ -426,7 +426,7 @@ if research-wiki/ exists AND [ -n "$WIKI_SCRIPT" ]:
           || echo "WARN: upsert_idea failed for <id> (continuing; audit/report unaffected)" >&2
     python3 "$WIKI_SCRIPT" log research-wiki/ "idea-creator wrote N ideas (M recommended, K eliminated)"
 elif research-wiki/ exists AND [ -z "$WIKI_SCRIPT" ]:
-    echo "WARN: ideas NOT recorded — research_wiki.py unreachable (see Phase 0). Fix: bash tools/install_aris.sh or smart_update.sh (refreshes ~/.aris/repo), or export ARIS_REPO." >&2
+    echo "WARN: ideas NOT recorded — research_wiki.py unreachable (see Phase 0). Fix: bash ../../tools/aris/install_aris.sh or smart_update.sh (refreshes ~/.aris/repo), or export ARIS_REPO." >&2
 ```
 
 ## Output Protocols

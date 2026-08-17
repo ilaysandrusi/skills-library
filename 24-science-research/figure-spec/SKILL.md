@@ -71,7 +71,7 @@ if [ -z "$FIGURE_RENDERER" ]; then
 fi
 [ -z "$FIGURE_RENDERER" ] && {
   echo "ERROR: figure_renderer.py not resolved (layer 0: \$CLAUDE_SKILL_DIR/scripts/; layers 1-4: .aris/tools/, tools/, \$ARIS_REPO/tools/, \$ARIS_REPO/tools/ via ~/.aris/repo)." >&2
-  echo "       /figure-spec cannot produce SVG output. Fix: rerun bash tools/install_aris.sh or smart_update.sh (refreshes ~/.aris/repo), or copy the helper from \$ARIS_REPO/skills/figure-spec/scripts/." >&2
+  echo "       /figure-spec cannot produce SVG output. Fix: rerun bash ../../tools/aris/install_aris.sh or smart_update.sh (refreshes ~/.aris/repo), or copy the helper from \$ARIS_REPO/skills/figure-spec/scripts/." >&2
   exit 1
 }
 ```

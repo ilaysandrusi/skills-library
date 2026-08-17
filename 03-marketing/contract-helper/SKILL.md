@@ -41,7 +41,7 @@ Review these contract terms from an influencer agency: [paste terms]
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -53,7 +53,7 @@ Optional connectors that COULD speed up specific steps:
 - `~~influencer database` — confirm the creator's legal name, entity, and audience-authenticity signals for the warranties section.
 - `~~e-signature` — route the finished agreement for signing.
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the free/keyless recipe per category. None are required.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the free/keyless recipe per category. None are required.
 
 ## Instructions
 
@@ -75,9 +75,9 @@ Save the drafted agreement or review memo to `memory/influencer/contract-helper/
 ## Reference Materials
 
 - [references/templates.md](references/templates.md) — gathering form, full 11-section agreement template, clause explanations, review checklist, negotiation tables, tips, worked example.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path convention.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless connector recipes per category.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path convention.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless connector recipes per category.
 - Sibling skills: [outreach-manager](../outreach-manager/SKILL.md) (negotiate before contract), [creator-content-auditor](../creator-content-auditor/SKILL.md) (execute the approval clause), [budget-optimizer](../budget-optimizer/SKILL.md) (set compensation), [brief-generator](../brief-generator/SKILL.md) (attach the brief as an exhibit).
 
 ## Next Best Skill

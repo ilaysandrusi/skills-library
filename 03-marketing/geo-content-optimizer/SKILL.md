@@ -37,7 +37,7 @@ See [AI Overview Recovery](references/ai-overview-recovery.md) for the 4-phase p
 
 **Expected output**: a ready-to-use asset or implementation-ready transformation plus a short handoff summary ready for `memory/content/`.
 
-- **Reads**: the brief, target keywords, entity inputs, and quality constraints. **Canonical entity profiles**: if the content mentions a brand / person / product, this skill MUST consult `memory/entities/<slug>.md` (per the [entity-geo handoff schema](../../../references/entity-geo-handoff-schema.md)) to populate `display_name`, `description_short`, `ai_resolution_status` and decide whether disambiguation boilerplate is needed. If the profile is missing or stale (>90 days), declare `DONE_WITH_CONCERNS` and recommend `entity-registry` as an open loop.
+- **Reads**: the brief, target keywords, entity inputs, and quality constraints. **Canonical entity profiles**: if the content mentions a brand / person / product, this skill MUST consult `memory/entities/<slug>.md` (per the [entity-geo handoff schema](../../references/aaron-marketing/entity-geo-handoff-schema.md)) to populate `display_name`, `description_short`, `ai_resolution_status` and decide whether disambiguation boilerplate is needed. If the profile is missing or stale (>90 days), declare `DONE_WITH_CONCERNS` and recommend `entity-registry` as an open loop.
 - **Writes**: a user-facing content, metadata, or schema deliverable plus a reusable summary that can be stored under `memory/content/`.
 - **Promotes**: approved angles, messaging choices, missing evidence, and publish blockers to `memory/hot-cache.md` and `memory/open-loops.md`; propose durable decisions as pending-decision items.
 - **Done when**: each target AI query has a standalone, quotable answer block; a before/after GEO score and AI Query Coverage are reported; and the CORE-EEAT GEO self-check (C02, O03, O05, E01) has no unaddressed Fail.
@@ -45,15 +45,15 @@ See [AI Overview Recovery](references/ai-overview-recovery.md) for the 4-phase p
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
-Use `~~AI monitor` and `~~SEO tool` when connected; otherwise ask for target queries, content, engines, competitor examples, and known AI-citation gaps. See [CONNECTORS.md](../../../CONNECTORS.md).
+Use `~~AI monitor` and `~~SEO tool` when connected; otherwise ask for target queries, content, engines, competitor examples, and known AI-citation gaps. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md).
 
-**Measuring whether GEO work paid off:** the changes this skill makes (extractable, quotable, answer-shaped content) move **citability** — testable in minutes by handing a live-fetch engine the URL and asking the target query. That is a *proxy*. Whether an engine then cites you *unprompted* (surfacing) is gated by its crawl/index refresh — week-scale and confounded, not minute-level. Do not conflate the two or promise fast surfacing. The latency of each signal, and why outcome deltas need a control group, are defined in [references/measurement-protocol.md](../../../references/measurement-protocol.md).
+**Measuring whether GEO work paid off:** the changes this skill makes (extractable, quotable, answer-shaped content) move **citability** — testable in minutes by handing a live-fetch engine the URL and asking the target query. That is a *proxy*. Whether an engine then cites you *unprompted* (surfacing) is gated by its crawl/index refresh — week-scale and confounded, not minute-level. Do not conflate the two or promise fast surfacing. The latency of each signal, and why outcome deltas need a control group, are defined in [references/measurement-protocol.md](../../references/aaron-marketing/measurement-protocol.md).
 
-**Keyless AI-citation probe (Tavily)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/tavily.py" search "<target query>" --answer --limit 10` runs that citability test against a real AI answer engine, no key needed — check whether the synthesized answer cites your URL/domain and where the page ranks among the scored sources. This is **Measured** for Tavily's own layer and an **Estimated proxy** for ChatGPT/Perplexity/Google AI Overviews (different indexes, different retrieval). Re-run after shipping changes for a minutes-scale citability read; unprompted surfacing stays week-scale per the paragraph above. See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Keyless AI-citation probe (Tavily)**: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/tavily.py" search "<target query>" --answer --limit 10` runs that citability test against a real AI answer engine, no key needed — check whether the synthesized answer cites your URL/domain and where the page ranks among the scored sources. This is **Measured** for Tavily's own layer and an **Estimated proxy** for ChatGPT/Perplexity/Google AI Overviews (different indexes, different retrieval). Re-run after shipping changes for a minutes-scale citability read; unprompted surfacing stays week-scale per the paragraph above. See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 ## Instructions
 
@@ -63,7 +63,7 @@ When a user requests GEO optimization, run these five steps:
 2. **Analyze Current Content** — score clear definitions, quotable statements, factual density, source citations, Q&A format, authority signals, freshness, and structure clarity.
 3. **Apply GEO Techniques** — add standalone 25-50 word definitions, sourced quotable statements, expert/source signals, Q&A/tables/lists, specific data, and visible-content-matching FAQ schema.
 4. **Generate GEO Output** — report Changes Made, before/after GEO score, and AI Query Coverage.
-5. **CORE-EEAT GEO Self-Check** — verify C02, C04, C09, O02, O03, O05, O06, R01, R02, R04, R07, E01, Exp10, Ept08 with Pass/Warn/Fail. Then run the [slop self-check](../../../references/humanizer-slop.md) to strip AI-tell phrasing before the asset ships.
+5. **CORE-EEAT GEO Self-Check** — verify C02, C04, C09, O02, O03, O05, O06, R01, R02, R04, R07, E01, Exp10, Ept08 with Pass/Warn/Fail. Then run the [slop self-check](../../references/aaron-marketing/humanizer-slop.md) to strip AI-tell phrasing before the asset ships.
 
 Label every metric **Measured** (tool/export), **User-provided**, or **Estimated** (model inference); never present an estimate as measured; if a required metric is unavailable, mark it N/A — do not invent it.
 
@@ -81,7 +81,7 @@ Label every metric **Measured** (tool/export), **User-provided**, or **Estimated
 
 ## Save Results
 
-On user confirmation, save to `memory/content/YYYY-MM-DD-<topic>.md` — see [Skill Contract](../../../references/skill-contract.md) §Save Results Template.
+On user confirmation, save to `memory/content/YYYY-MM-DD-<topic>.md` — see [Skill Contract](../../references/aaron-marketing/skill-contract.md) §Save Results Template.
 
 ## Reference Materials
 
@@ -90,13 +90,13 @@ On user confirmation, save to `memory/content/YYYY-MM-DD-<topic>.md` — see [Sk
 - [AI Citation Patterns](references/ai-citation-patterns.md) - Evidence-bounded discovery, retrieval, and citation controls for Google AI features, ChatGPT Search, Perplexity, Claude, Gemini grounding, Copilot Studio, and Brave Search
 - [Quotable Content Examples](references/quotable-content-examples.md) - Before/after examples of content optimized for AI citation
 - [Medium / GitHub AI-Citation Surfaces](references/medium-github-surfaces.md) - Off-site surfaces engines cite (Medium articles, GitHub repos/READMEs)
-- [Slop Self-Check](../../../references/humanizer-slop.md) - Pre-publish pass to strip AI-tell phrasing before content ships
-- [Agent-Readable File Stack (llms.txt / OKF)](../../../references/llms-txt-okf.md) - Machine-readable files so agents and engines can parse your site
-- [Grokipedia Tactics](../../../references/platforms/grokipedia.md) - AI-citation tactics for Grok / Grokipedia
-- **GEO distribution surfaces** — platform refs engines pull from: [X](../../../references/platforms/x.md), [LinkedIn](../../../references/platforms/linkedin.md), [YouTube](../../../references/platforms/youtube.md), [Reddit](../../../references/platforms/reddit.md)
+- [Slop Self-Check](../../references/aaron-marketing/humanizer-slop.md) - Pre-publish pass to strip AI-tell phrasing before content ships
+- [Agent-Readable File Stack (llms.txt / OKF)](../../references/aaron-marketing/llms-txt-okf.md) - Machine-readable files so agents and engines can parse your site
+- [Grokipedia Tactics](../../references/aaron-marketing/platforms/grokipedia.md) - AI-citation tactics for Grok / Grokipedia
+- **GEO distribution surfaces** — platform refs engines pull from: [X](../../references/aaron-marketing/platforms/x.md), [LinkedIn](../../references/aaron-marketing/platforms/linkedin.md), [YouTube](../../references/aaron-marketing/platforms/youtube.md), [Reddit](../../references/aaron-marketing/platforms/reddit.md)
 
 ## Next Best Skill
 
 - **Primary**: [content-quality-auditor](../content-quality-auditor/SKILL.md) — verify the optimized content is strong enough to ship and cite.
 
-**Termination note**: keep a visited-set this session; if the recommended skill was already invoked, stop and report the chain complete rather than re-running it. Honor a max handoff depth of 3 to avoid loops (per [skill-contract.md §Termination rules](../../../references/skill-contract.md)).
+**Termination note**: keep a visited-set this session; if the recommended skill was already invoked, stop and report the chain complete rather than re-running it. Honor a max handoff depth of 3 to avoid loops (per [skill-contract.md §Termination rules](../../references/aaron-marketing/skill-contract.md)).

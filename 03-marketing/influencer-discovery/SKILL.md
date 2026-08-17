@@ -42,7 +42,7 @@ based in [location], engagement above 4%, who have worked with brands like [bran
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -57,9 +57,9 @@ Where a tool *could* sharpen results, use `~~` connector placeholders:
 
 **Keyless candidate-card metadata (oEmbed)**: YouTube (`https://www.youtube.com/oembed?url=<video-url>&format=json`), TikTok (`https://www.tiktok.com/oembed?url=<post-url>`), and X (`https://publish.twitter.com/oembed?url=<post-url>`) return a post's title, author name/handle, and thumbnail with **no key** — enough to auto-fill a candidate's profile row from pasted links instead of hand-copying. Metadata only: no follower or engagement metrics, so those stay `~~influencer database` or manual export — **except YouTube**, below.
 
-**Measured YouTube metrics (free key)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/youtube.py" channel @handle` returns the real displayed subscriber count, total views, and video count, and `youtube.py videos @handle --limit 10` adds per-video views/likes/comments — upgrading a YouTube candidate's profile row from Estimated to **Measured**. Free `YOUTUBE_API_KEY` (10,000 units/day; one channel check ≈ 1–3 units). ToS boundary: vet a **named shortlist**, don't build a bulk creator database — quota extensions are refused for competitive harvesting. See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Measured YouTube metrics (free key)**: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/youtube.py" channel @handle` returns the real displayed subscriber count, total views, and video count, and `youtube.py videos @handle --limit 10` adds per-video views/likes/comments — upgrading a YouTube candidate's profile row from Estimated to **Measured**. Free `YOUTUBE_API_KEY` (10,000 units/day; one channel check ≈ 1–3 units). ToS boundary: vet a **named shortlist**, don't build a bulk creator database — quota extensions are refused for competitive harvesting. See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the free/keyless recipe per category and the opt-in MCP layer. None are required — every step degrades to user-supplied inputs.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the free/keyless recipe per category and the opt-in MCP layer. None are required — every step degrades to user-supplied inputs.
 
 ## Instructions
 
@@ -85,10 +85,10 @@ Return the discovery report inline. Saving the report, caching the shortlist, an
 - [references/templates.md](references/templates.md) — all step fill-in blocks (criteria, search, screening, profile, report, insights), the worked example, tips, and the "what/when" overview.
 - [references/platform-vetting.md](references/platform-vetting.md) — per-platform creator playbooks (X/LinkedIn/TikTok/YouTube/Reddit) feeding screening and profiling in steps 3-4.
 - [references/creator-dossier.md](references/creator-dossier.md) — structured per-creator dossier from public data, with a contact-discovery waterfall.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipes and opt-in MCP layer.
-- STAR benchmark at [references/star-benchmark.md](../../../references/star-benchmark.md) — scoring framework that fit-scorer applies downstream.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipes and opt-in MCP layer.
+- STAR benchmark at [references/star-benchmark.md](../../references/aaron-marketing/star-benchmark.md) — scoring framework that fit-scorer applies downstream.
 - Siblings in the scout phase: [fit-scorer](../fit-scorer/SKILL.md), [audience-mapper](../audience-mapper/SKILL.md), [trend-spotter](../trend-spotter/SKILL.md).
 
 ## Next Best Skill

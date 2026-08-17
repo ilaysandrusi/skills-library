@@ -55,15 +55,15 @@ For a pre-launch account-audit request, use the narrow route `conversion-signal-
 
 ### Runtime Reads
 
-- `../../../references/auditor-runbook.md`
-- `../../../references/scoring-semantics.md`
-- `../../../references/roas-benchmark.md`
-- `../../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/auditor-runbook.md`
+- `../../references/aaron-marketing/scoring-semantics.md`
+- `../../references/aaron-marketing/roas-benchmark.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 - `references/auditor-runtime.md`
 
 ### Runtime and Setup
 
-Read `../../../references/auditor-runbook.md`, `scoring-semantics.md`, `roas-benchmark.md`, and the ROAS catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
+Read `../../references/aaron-marketing/auditor-runbook.md`, `scoring-semantics.md`, `roas-benchmark.md`, and the ROAS catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
 
 Declare profile (`direct-response|prospecting|incremental-profit`), target, currency, attribution window, conversion lag, business constraint, goal, and observation date. If any required context is missing, return `NEEDS_INPUT/UNDECIDED`.
 
@@ -119,10 +119,10 @@ Persist only after explicit authorization to `memory/audits/ad/YYYY-MM-DD-<topic
 
 ## Reference Materials
 
-- [ROAS benchmark](../../../references/roas-benchmark.md)
-- [Measurement protocol](../../../references/measurement-protocol.md)
-- [Auditor runbook](../../../references/auditor-runbook.md)
-- [Scoring semantics](../../../references/scoring-semantics.md)
+- [ROAS benchmark](../../references/aaron-marketing/roas-benchmark.md)
+- [Measurement protocol](../../references/aaron-marketing/measurement-protocol.md)
+- [Auditor runbook](../../references/aaron-marketing/auditor-runbook.md)
+- [Scoring semantics](../../references/aaron-marketing/scoring-semantics.md)
 
 ## Next Best Skill
 

@@ -44,7 +44,7 @@ Generate a TikTok brief for micro-influencers promoting [product], 1 review vide
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md), including the Narrative/claims dependency tuple.
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md), including the Narrative/claims dependency tuple.
 
 Required fields: `narrative_canon_id`, `narrative_canon_version`, `claims_projection_offset`, and `dependency_status: verified | approved-fallback | blocked`.
 
@@ -60,7 +60,7 @@ Optional connectors that can enrich a brief when available:
 
 Read accepted Narrative and claims projections before drafting. Claim approval is contextual: audience, market, media, offer window, and required disclaimer must match. No usable canon permits only an explicitly approved exploratory brief, never a creator-ready/on-canon label.
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the verified free/keyless recipe per category. None are required.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the verified free/keyless recipe per category. None are required.
 
 ## Instructions
 
@@ -81,10 +81,10 @@ Disclosure and usage rights must be stated explicitly — never leave them as pl
 
 ## Reference Materials
 
-- Shared contract: [skill-contract.md](../../../references/skill-contract.md)
-- Shared state model: [state-model.md](../../../references/state-model.md)
-- Connector recipes: [CONNECTORS.md](../../../CONNECTORS.md)
-- STAR benchmark (when scoring brief quality): [references/star-benchmark.md](../../../references/star-benchmark.md)
+- Shared contract: [skill-contract.md](../../references/aaron-marketing/skill-contract.md)
+- Shared state model: [state-model.md](../../references/aaron-marketing/state-model.md)
+- Connector recipes: [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md)
+- STAR benchmark (when scoring brief quality): [references/star-benchmark.md](../../references/aaron-marketing/star-benchmark.md)
 - Brief templates & variations (master fill-in template, content-type and campaign-type variations, invoke patterns, tips): [brief-templates.md](references/brief-templates.md)
 - Creator voice intake (capture real voice before briefing; creator-content-auditor reads the captured voice): [creator-voice-intake.md](references/creator-voice-intake.md)
 - Sibling skills:

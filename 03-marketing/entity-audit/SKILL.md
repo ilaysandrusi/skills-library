@@ -27,7 +27,7 @@ The user must provide (or will be prompted for):
 5. **Check industry directories**: For each relevant directory, verify the listing exists and check data consistency — business name spelling, address, phone number, website URL, business description, category classification, and any directory-specific fields. Record each listing as consistent, inconsistent (with specific discrepancies), incomplete (missing fields), or absent. Flag NAP (Name, Address, Phone) inconsistencies specifically, as these have outsized impact on entity resolution by AI engines.
 6. **Record findings**: Store each entity finding via geo-tracker's `entity-check` action (`--platform` takes an entity platform: `wikidata`, `google-kp`, `wikipedia`, or `directory`; `--status` takes `present`, `absent`, `inconsistent`, or `outdated`):
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/scripts/geo-tracker.py" \
+   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/geo-tracker.py" \
        --brand {slug} --action entity-check \
        --platform wikidata \
        --entity-name "Acme Corp" \

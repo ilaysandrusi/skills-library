@@ -39,15 +39,15 @@ What content am I missing compared to my top 3 competitors?
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
-Optional integrations: ~~SEO tool, ~~search console, ~~analytics, ~~AI monitor. Without tools, ask for site URL, content inventory, competitor URLs, and business goals. See [CONNECTORS.md](../../../CONNECTORS.md).
+Optional integrations: ~~SEO tool, ~~search console, ~~analytics, ~~AI monitor. Without tools, ask for site URL, content inventory, competitor URLs, and business goals. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md).
 
-**Trend-scout as a gap-discovery input (keyless)**: feed the multi-source trend scout — Google Trends RSS plus Hacker News and Reddit, via [`scripts/connectors/rss_monitor.py`](../../../scripts/connectors/rss_monitor.py) — to surface rising topics your competitors and you may both miss. Treat each hit as a candidate gap, then check it against your and competitor coverage in steps 5-7. Mark these signals **Estimated**. See [CONNECTORS.md](../../../CONNECTORS.md) `~~trend database`.
+**Trend-scout as a gap-discovery input (keyless)**: feed the multi-source trend scout — Google Trends RSS plus Hacker News and Reddit, via [`scripts/connectors/rss_monitor.py`](../../scripts/aaron-marketing/connectors/rss_monitor.py) — to surface rising topics your competitors and you may both miss. Treat each hit as a candidate gap, then check it against your and competitor coverage in steps 5-7. Mark these signals **Estimated**. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) `~~trend database`.
 
-**Keyless competitor-coverage inventory**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/firecrawl.py" map <competitor-domain> --search "<topic>" --limit 1000` lists a competitor's URLs ordered by relevance to the topic — a fast **Measured** coverage inventory for steps 5-7 — and `firecrawl.py scrape <url>` reads any candidate page as rendered markdown. robots.txt is pre-flighted locally; a Disallow is refused per [SECURITY.md §Scraping Boundaries](../../../SECURITY.md). Firecrawl keyless free tier (~1,000 credits/mo). See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Keyless competitor-coverage inventory**: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/firecrawl.py" map <competitor-domain> --search "<topic>" --limit 1000` lists a competitor's URLs ordered by relevance to the topic — a fast **Measured** coverage inventory for steps 5-7 — and `firecrawl.py scrape <url>` reads any candidate page as rendered markdown. robots.txt is pre-flighted locally; a Disallow is refused per [SECURITY.md §Scraping Boundaries](../../references/aaron-marketing/SECURITY.md). Firecrawl keyless free tier (~1,000 credits/mo). See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 ## Decision Gates
 
@@ -104,7 +104,7 @@ Find gaps in our [commercial/informational] intent content
 
 ## Save Results
 
-Write path: `memory/research/content-gap-analysis/YYYY-MM-DD-<topic>.md`; promote durable gap priorities and competitor facts to `memory/hot-cache.md`. See [Skill Contract](../../../references/skill-contract.md) §Save Results Template.
+Write path: `memory/research/content-gap-analysis/YYYY-MM-DD-<topic>.md`; promote durable gap priorities and competitor facts to `memory/hot-cache.md`. See [Skill Contract](../../references/aaron-marketing/skill-contract.md) §Save Results Template.
 
 ## Reference Materials
 

@@ -44,7 +44,7 @@ Compare influencer strategies across [competitor 1], [competitor 2], and [compet
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -56,11 +56,11 @@ Where a tool could speed things up, use `~~` connector placeholders:
 - `~~social platform analytics` — estimate reach, engagement rate, and post cadence per creator.
 - `~~CRM` — cross-check whether a former competitor partner has already touched your pipeline.
 
-**Keyless news read on rivals**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/gdelt.py" '"<competitor>"' --days 30` lists a rival's global news coverage with no key — campaign launches, partnership announcements, PR pushes — **Measured** from GDELT's news index (news media only, not social posts; ≥5s between calls). See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Keyless news read on rivals**: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/gdelt.py" '"<competitor>"' --days 30` lists a rival's global news coverage with no key — campaign launches, partnership announcements, PR pushes — **Measured** from GDELT's news index (news media only, not social posts; ≥5s between calls). See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
-**Rival-partner channel watch (free key / keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/youtube.py" channel <partner-handle>` reads a competitor partner's real subscriber/view counts (free `YOUTUBE_API_KEY`), and every YouTube channel also has a **keyless RSS feed** — `https://www.youtube.com/feeds/videos.xml?channel_id=UC…` piped into `rss_monitor.py` — for tracking partner posting cadence and spotting a burst of sponsored content without any API at all.
+**Rival-partner channel watch (free key / keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/youtube.py" channel <partner-handle>` reads a competitor partner's real subscriber/view counts (free `YOUTUBE_API_KEY`), and every YouTube channel also has a **keyless RSS feed** — `https://www.youtube.com/feeds/videos.xml?channel_id=UC…` piped into `rss_monitor.py` — for tracking partner posting cadence and spotting a burst of sponsored content without any API at all.
 
-Label every estimate as an estimate. See [CONNECTORS.md](../../../CONNECTORS.md) for the keyless/free recipe per category.
+Label every estimate as an estimate. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the keyless/free recipe per category.
 
 ## Instructions
 
@@ -84,9 +84,9 @@ Each step has a fill-in template in [references/templates.md](references/templat
 ## Reference Materials
 
 - [references/templates.md](references/templates.md) — fill-in templates for all 8 steps, invocation patterns, worked example, and tips.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and handoff summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — keyless/free data recipe per `~~` connector category.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and handoff summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — keyless/free data recipe per `~~` connector category.
 - Sibling Scout skills: [influencer-discovery](../influencer-discovery/SKILL.md) — find creators competitors aren't using; [fit-scorer](../fit-scorer/SKILL.md) — score competitor partners for your brand.
 - [trend-spotter](../trend-spotter/SKILL.md) — spot trends competitors are riding.
 

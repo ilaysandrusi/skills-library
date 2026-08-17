@@ -47,7 +47,7 @@ DataForSEO charges per API call. Be efficient:
 
 **Before every DataForSEO MCP call**, run cost estimation:
 ```
-python scripts/dataforseo_costs.py check <endpoint> [--count N]
+python ../../scripts/infrasity-dev-gtm/dataforseo_costs.py check <endpoint> [--count N]
 ```
 
 - If `"status": "approved"` → proceed with the API call
@@ -56,7 +56,7 @@ python scripts/dataforseo_costs.py check <endpoint> [--count N]
 
 **After each API call completes**, log the cost:
 ```
-python scripts/dataforseo_costs.py log <endpoint> <actual_cost>
+python ../../scripts/infrasity-dev-gtm/dataforseo_costs.py log <endpoint> <actual_cost>
 ```
 
 **User commands for cost management:**

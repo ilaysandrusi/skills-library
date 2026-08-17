@@ -46,7 +46,7 @@ Generate an executive summary for our Q3 influencer campaigns
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -59,7 +59,7 @@ Optional connectors that can pre-fill data where available:
 - `~~analytics` — link clicks, conversions, attributed revenue
 - `~~CRM` — new-customer counts and downstream revenue
 
-Without any of these, the skill asks you for the numbers and proceeds. See [CONNECTORS.md](../../../CONNECTORS.md) for the free/keyless data recipe per category.
+Without any of these, the skill asks you for the numbers and proceeds. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the free/keyless data recipe per category.
 
 ## Instructions
 
@@ -102,9 +102,9 @@ Increase Q1 influencer budget by 25%, focused on TikTok micro-influencers and pr
 ## Reference Materials
 
 - [report-templates.md](references/report-templates.md) — full executive/client/team templates, visualization recs, writing best practices, worked example
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and handoff format
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path convention
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipes per connector category
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and handoff format
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path convention
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipes per connector category
 - [performance-analyzer](../performance-analyzer/SKILL.md) — generates the metrics this report consumes
 - [roi-calculator](../roi-calculator/SKILL.md) — supplies ROI/ROAS figures
 - [campaign-planner](../campaign-planner/SKILL.md) — original plan to compare results against

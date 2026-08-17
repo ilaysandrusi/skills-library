@@ -57,14 +57,14 @@ The user must provide (or will be prompted for):
    contextualize performance relative to category averages. Flag metrics significantly above or below industry norms.
 8. **Identify notable findings**: Surface the top 3 wins (best-performing metrics or biggest improvements), top 3 concerns
    (underperforming or declining metrics), and any material changes that warrant deeper investigation. Before labelling a
-   conversion-rate change "statistically significant," confirm it with `python "${CLAUDE_PLUGIN_ROOT}/scripts/significance-tester.py" --control-visitors {n} --control-conversions {n} --variant-visitors {n} --variant-conversions {n} --confidence 0.95` — do not call a movement significant off a raw percentage delta.
+   conversion-rate change "statistically significant," confirm it with `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/significance-tester.py" --control-visitors {n} --control-conversions {n} --variant-visitors {n} --variant-conversions {n} --confidence 0.95` — do not call a movement significant off a raw percentage delta.
 9. **Generate recommended actions**: Based on the data, produce 3-5 specific, actionable next steps — e.g., "Pause
    underperforming ad set X", "Increase budget on high-ROAS channel Y", "Investigate traffic drop on Z",
    "Scale winning creative variant", "Run /digital-marketing-pro:anomaly-scan for deeper diagnosis".
-10. **Save performance snapshot**: Execute `python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand {slug} --action save-snapshot --data '{...current metrics...}'`
+10. **Save performance snapshot**: Execute `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand {slug} --action save-snapshot --data '{...current metrics...}'`
     to persist the snapshot for historical comparison and trend tracking across future runs.
 11. **Log significant insights**: For any metric with a notable deviation, save via
-    `python "${CLAUDE_PLUGIN_ROOT}/scripts/campaign-tracker.py" --brand {slug} --action save-insight --data '{"type":"anomaly","insight":"...","context":"..."}'`
+    `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/campaign-tracker.py" --brand {slug} --action save-insight --data '{"type":"anomaly","insight":"...","context":"..."}'`
     so findings surface in future reports and campaign planning.
 
 ## Output

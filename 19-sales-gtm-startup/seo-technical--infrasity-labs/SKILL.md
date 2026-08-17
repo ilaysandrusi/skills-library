@@ -143,7 +143,7 @@ layout stability across templates, `cursor: pointer` correctness — live in
 
 ```bash
 # Render with Playwright + capture accessibility tree, then score
-python scripts/agent_ux_check.py https://example.com --json
+python ../../scripts/infrasity-dev-gtm/agent_ux_check.py https://example.com --json
 ```
 
 The scanner outputs an Agent-UX score (0-100) plus itemized issues:
@@ -154,7 +154,7 @@ The scanner outputs an Agent-UX score (0-100) plus itemized issues:
 
 The accessibility-tree snapshot uses Playwright's
 `page.accessibility.snapshot(interesting_only=False)`. To capture the tree
-without scoring, use `python scripts/render_page.py <url> --a11y-tree --json`.
+without scoring, use `python ../../scripts/infrasity-dev-gtm/render_page.py <url> --a11y-tree --json`.
 
 Surface findings as **opportunities**, not failures. The standards (WebMCP,
 agent UX heuristics) are early — don't gate audits on a sub-100 score.
@@ -187,7 +187,7 @@ If DataForSEO MCP tools are available, use `on_page_instant_pages` for real page
 
 ## Google API Integration (Optional)
 
-If Google API credentials are configured, use `python scripts/pagespeed_check.py <url> --json` for real PSI + CrUX field data (replaces lab-only CWV estimates), `python scripts/crux_history.py <url> --json` for 25-week CWV trends, and `python scripts/gsc_inspect.py <url> --json` for real indexation status per URL.
+If Google API credentials are configured, use `python ../../scripts/infrasity-dev-gtm/pagespeed_check.py <url> --json` for real PSI + CrUX field data (replaces lab-only CWV estimates), `python ../../scripts/infrasity-dev-gtm/crux_history.py <url> --json` for 25-week CWV trends, and `python ../../scripts/infrasity-dev-gtm/gsc_inspect.py <url> --json` for real indexation status per URL.
 
 ## Error Handling
 

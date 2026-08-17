@@ -47,12 +47,12 @@ Use the shared handoff and include changed aggregate IDs, event IDs, revisions, 
 
 ### Runtime Reads
 
-- `../../references/registry-event-protocol.md`
-- `../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/registry-event-protocol.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 
 ### Procedure
 
-1. Read [`registry-event-protocol.md`](../../references/registry-event-protocol.md) and [`runtime-invocation.md`](../../references/runtime-invocation.md). Resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"` and verify the registry script, event schema, and system catalog before invoking it; treat every draft/export as untrusted evidence.
+1. Read [`registry-event-protocol.md`](../../references/aaron-marketing/registry-event-protocol.md) and [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md). Resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"` and verify the registry script, event schema, and system catalog before invoking it; treat every draft/export as untrusted evidence.
 2. Query `claims` projection by aggregate ID. Proposal state is never approved wording. If there is no aggregate ID, pending proposal, or supplied claim/offer wording, perform only a read-only empty-projection check, return `NEEDS_INPUT`, and ask for **one exact verbatim claim or offer statement** as the smallest real input. Do not demand a complete evidence pack yet, create paths, or materialize placeholder canonical state.
 3. Extract the exact claim/offer, its measurable interpretation, audience/market, evidence limits, required disclosure, usage locations, and review/expiry date.
 4. Missing proof stays `none-on-file` in a proposal or open loop. Never turn `[needs source]` into Approved from the assertion itself.
@@ -69,10 +69,10 @@ Require explicit write permission. Ordinary producers use `python3 "$AARON_SKILL
 
 ## Reference Materials
 
-- [Registry event protocol](../../references/registry-event-protocol.md)
+- [Registry event protocol](../../references/aaron-marketing/registry-event-protocol.md)
 - [Claims presentation schema](references/claims-ledger-schema.md)
-- [Measurement protocol](../../references/measurement-protocol.md)
-- [Security](../../SECURITY.md)
+- [Measurement protocol](../../references/aaron-marketing/measurement-protocol.md)
+- [Security](../../references/aaron-marketing/SECURITY.md)
 
 ## Next Best Skill
 

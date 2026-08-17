@@ -1,6 +1,6 @@
 ---
 name: brand-setup
-description: "Create or update the brand profile every other skill reads — a quick 5-question or full 17-question interactive setup capturing identity, business model, industry and compliance markets, 4-dimension voice scales, channels, goals, and competitors, saved to ~/.claude-marketing/brands/{slug}/profile.json via scripts/setup.py. Triggers on \"/digital-marketing-pro:brand-setup\", \"set up a new brand\", \"onboard a new client\", \"switch to another brand\", \"update our brand voice\". Also handles brand switching (updates _active-brand.json) and field-level profile edits; run this first — all marketing skills auto-apply the resulting profile, voice samples, and compliance rules."
+description: "Create or update the brand profile every other skill reads — a quick 5-question or full 17-question interactive setup capturing identity, business model, industry and compliance markets, 4-dimension voice scales, channels, goals, and competitors, saved to ~/.claude-marketing/brands/{slug}/profile.json via ../../scripts/digital-marketing-pro/setup.py. Triggers on \"/digital-marketing-pro:brand-setup\", \"set up a new brand\", \"onboard a new client\", \"switch to another brand\", \"update our brand voice\". Also handles brand switching (updates _active-brand.json) and field-level profile edits; run this first — all marketing skills auto-apply the resulting profile, voice samples, and compliance rules."
 argument-hint: "[brand-name or --full]"
 ---
 
@@ -98,14 +98,14 @@ Ask the user one question at a time (don't overwhelm):
 
 After collecting all information:
 
-1. Run: `python "${CLAUDE_PLUGIN_ROOT}/scripts/setup.py" --create-brand "[brand name]"`
+1. Run: `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/setup.py" --create-brand "[brand name]"`
 2. Update the created profile.json with all collected data
 3. Confirm to user: "Brand profile created for [brand_name]. All marketing modules will now use this context. You can update it anytime by saying 'update my brand profile.'"
 
 ## Switching Brands
 
 When user says "switch to [brand name]":
-1. Run: `python "${CLAUDE_PLUGIN_ROOT}/scripts/setup.py" --list-brands`
+1. Run: `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/setup.py" --list-brands`
 2. Find matching brand
 3. Update `~/.claude-marketing/brands/_active-brand.json`
 4. Confirm: "Switched to [brand_name]."

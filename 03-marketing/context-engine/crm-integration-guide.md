@@ -95,10 +95,10 @@ The most common pattern. The plugin is the source of truth for marketing data an
 
 ```bash
 # 1. Prepare + field-map the record locally (validates; does NOT write to the CRM)
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action prepare-contact --data '{"email": "user@example.com", "source": "q3-webinar"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action prepare-contact --data '{"email": "user@example.com", "source": "q3-webinar"}'
 # 2. Write the returned payload via the connected CRM MCP (the MCP's create/update tool)
 # 3. Record the write so the audit trail + dedup index stay current
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "salesforce", "record_type": "contact", "crm_id": "..."}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "salesforce", "record_type": "contact", "crm_id": "..."}'
 ```
 
 ### Two-Way Sync (Plugin and CRM)
@@ -139,7 +139,7 @@ Before creating any CRM record, the plugin checks for existing matches. Rules ar
 
 **Always check dedup BEFORE creating records** (email/phone go inside `--data`, not as flags):
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action check-dedup --data '{"email": "user@example.com", "phone": "+1-555-0123"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action check-dedup --data '{"email": "user@example.com", "phone": "+1-555-0123"}'
 ```
 
 **Merge behavior:** When a match is found, the plugin updates the existing record rather than creating a duplicate. If multiple matches are found, the highest-confidence match is used and the others are flagged for manual review.
@@ -166,7 +166,7 @@ How marketing campaigns connect to CRM campaign objects for attribution and repo
 
 **Plugin tracking:** Every campaign execution logs its `crm_campaign_id` via the execution tracker (all fields go inside `--data`; there are no `--campaign-id` / `--crm-campaign-id` flags):
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand {slug} --action log-execution --data '{"campaign_id": "{id}", "crm_campaign_id": "{crm_id}", "action": "campaign-link", "result": "success"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand {slug} --action log-execution --data '{"campaign_id": "{id}", "crm_campaign_id": "{crm_id}", "action": "campaign-link", "result": "success"}'
 ```
 
 This creates a bidirectional link: the plugin knows which CRM campaign corresponds to each marketing campaign, and the CRM campaign links back to the plugin's campaign ID via a custom field.
@@ -291,9 +291,9 @@ ODOO_DB=mycompany
 ODOO_API_KEY=your-api-key-here
 
 # Prepare the record locally (validates + field-maps; does NOT write to Odoo)
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action prepare-contact --data '{"email": "user@example.com", "company": "Q3 Webinar Lead"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action prepare-contact --data '{"email": "user@example.com", "company": "Q3 Webinar Lead"}'
 # Then write the returned payload via the Odoo MCP, and record the sync:
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "odoo", "record_type": "contact", "crm_id": "..."}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "odoo", "record_type": "contact", "crm_id": "..."}'
 ```
 
 ---
@@ -330,9 +330,9 @@ FRESHSALES_DOMAIN=yourcompany
 FRESHSALES_API_KEY=your-api-key-here
 
 # Prepare the record locally (validates + field-maps; does NOT write to Freshsales)
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com"}'
 # Then write the returned payload via the Freshsales MCP, and record the sync:
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "freshsales", "record_type": "contact", "crm_id": "..."}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "freshsales", "record_type": "contact", "crm_id": "..."}'
 ```
 
 ---
@@ -367,9 +367,9 @@ python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-s
 MONDAY_API_TOKEN=your-api-token-here
 
 # Prepare the record locally (validates + field-maps; does NOT write to Monday.com)
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action prepare-contact --data '{"email": "user@example.com", "company": "Q3 Webinar Lead"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action prepare-contact --data '{"email": "user@example.com", "company": "Q3 Webinar Lead"}'
 # Then write the returned payload via the Monday.com MCP (GraphQL mutation), and record the sync:
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "monday-crm", "record_type": "contact", "crm_id": "..."}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "monday-crm", "record_type": "contact", "crm_id": "..."}'
 ```
 
 ---
@@ -409,9 +409,9 @@ DYNAMICS_CLIENT_ID=your-client-id
 DYNAMICS_CLIENT_SECRET=your-client-secret
 
 # Prepare the record locally (validates + field-maps; does NOT write to Dynamics 365)
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com", "company": "Acme Corp"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com", "company": "Acme Corp"}'
 # Then write the returned payload via the Dynamics 365 MCP, and record the sync:
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "dynamics-365", "record_type": "contact", "crm_id": "..."}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "dynamics-365", "record_type": "contact", "crm_id": "..."}'
 ```
 
 ---
@@ -448,9 +448,9 @@ COPPER_API_KEY=your-api-key-here
 COPPER_USER_EMAIL=user@yourcompany.com
 
 # Prepare the record locally (validates + field-maps; does NOT write to Copper)
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com"}'
 # Then write the returned payload via the Copper MCP, and record the sync:
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "copper", "record_type": "contact", "crm_id": "..."}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "copper", "record_type": "contact", "crm_id": "..."}'
 ```
 
 ---
@@ -489,9 +489,9 @@ python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-s
 CLOSE_API_KEY=your-api-key-here
 
 # Prepare the record locally (validates + field-maps; does NOT write to Close)
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com", "company": "Acme Corp"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com", "company": "Acme Corp"}'
 # Then write the returned payload via the Close MCP, and record the sync:
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "close-crm", "record_type": "contact", "crm_id": "..."}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "close-crm", "record_type": "contact", "crm_id": "..."}'
 ```
 
 ---
@@ -531,9 +531,9 @@ KEAP_ACCESS_TOKEN=your-access-token
 KEAP_REFRESH_TOKEN=your-refresh-token
 
 # Prepare the record locally (validates + field-maps; does NOT write to Keap)
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com"}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action prepare-contact --data '{"first_name": "Jane", "last_name": "Doe", "email": "jane@example.com"}'
 # Then write the returned payload via the Keap MCP, and record the sync:
-python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "keap", "record_type": "contact", "crm_id": "..."}'
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand {slug} --action log-synced --data '{"platform": "keap", "record_type": "contact", "crm_id": "..."}'
 ```
 
 ---

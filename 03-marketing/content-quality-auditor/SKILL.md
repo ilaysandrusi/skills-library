@@ -42,23 +42,23 @@ Use this skill for the content artifact and its source-credibility evidence. Use
 
 ### Runtime Reads
 
-- `../../../references/auditor-runbook.md`
-- `../../../references/scoring-semantics.md`
-- `../../../references/core-eeat-benchmark.md`
+- `../../references/aaron-marketing/auditor-runbook.md`
+- `../../references/aaron-marketing/scoring-semantics.md`
+- `../../references/aaron-marketing/core-eeat-benchmark.md`
 - `../../../references/framework-catalog.json`
-- `../../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 - `references/auditor-runtime.md`
 
 ### Runtime Contract
 
 At activation, read these repository files:
 
-1. `../../../references/auditor-runbook.md`
-2. `../../../references/scoring-semantics.md`
-3. `../../../references/core-eeat-benchmark.md`
+1. `../../references/aaron-marketing/auditor-runbook.md`
+2. `../../references/aaron-marketing/scoring-semantics.md`
+3. `../../references/aaron-marketing/core-eeat-benchmark.md`
 4. `../../../references/framework-catalog.json` (`CORE-EEAT` entry)
 
-For a standalone installation, read the bundled immutable `references/auditor-runtime.md` instead. Never fetch a mutable branch or continue with a guessed contract. Before deterministic calls, follow [`runtime-invocation.md`](../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If they are absent, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact. Record `schema_version: 3.0`, `runbook_version: 3.0.0`, and catalog version in the report.
+For a standalone installation, read the bundled immutable `references/auditor-runtime.md` instead. Never fetch a mutable branch or continue with a guessed contract. Before deterministic calls, follow [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If they are absent, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact. Record `schema_version: 3.0`, `runbook_version: 3.0.0`, and catalog version in the report.
 
 ### Required Setup
 
@@ -169,12 +169,12 @@ Do not claim the artifact was saved if validation fails. Do not write veto marke
 
 ## Reference Materials
 
-- [CORE-EEAT benchmark](../../../references/core-eeat-benchmark.md)
-- [Auditor runbook](../../../references/auditor-runbook.md)
-- [Scoring semantics](../../../references/scoring-semantics.md)
+- [CORE-EEAT benchmark](../../references/aaron-marketing/core-eeat-benchmark.md)
+- [Auditor runbook](../../references/aaron-marketing/auditor-runbook.md)
+- [Scoring semantics](../../references/aaron-marketing/scoring-semantics.md)
 - [Item reference](references/item-reference.md)
 - [Recursive refinement](references/recursive-refinement.md)
-- [Humanizer controls](../../../references/humanizer-slop.md)
+- [Humanizer controls](../../references/aaron-marketing/humanizer-slop.md)
 
 ## Next Best Skill
 

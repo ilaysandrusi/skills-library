@@ -46,7 +46,7 @@ Output: a tier/platform/content allocation table, projected reach + CPM/CPE, 2-3
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Cross-discipline: ad spend allocation
 
@@ -62,7 +62,7 @@ Optional connectors that sharpen the estimates when present:
 - `~~social platform analytics` — actual reach, CPM, and engagement to replace estimated projections.
 - `~~CRM` — past campaign spend and conversion data for ROI calibration.
 
-Mark any connector-derived number Measured; mark benchmark-derived numbers Estimated; mark numbers you state as User-provided. See [CONNECTORS.md](../../../CONNECTORS.md) for the keyless data recipes.
+Mark any connector-derived number Measured; mark benchmark-derived numbers Estimated; mark numbers you state as User-provided. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the keyless data recipes.
 
 ## Instructions
 
@@ -121,9 +121,9 @@ This allocation prioritizes TikTok for viral potential while using Instagram for
 ## Reference Materials
 
 - Templates, cost benchmarks, scenario A/B/C blocks, optimization tips & second example: [references/templates.md](references/templates.md)
-- Shared contract: [skill-contract.md](../../../references/skill-contract.md)
-- Shared state model: [state-model.md](../../../references/state-model.md)
-- Connector recipes: [CONNECTORS.md](../../../CONNECTORS.md)
+- Shared contract: [skill-contract.md](../../references/aaron-marketing/skill-contract.md)
+- Shared state model: [state-model.md](../../references/aaron-marketing/state-model.md)
+- Connector recipes: [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md)
 - Sibling skills:
   - [campaign-planner](../campaign-planner/SKILL.md) — the campaign plan this budget funds
   - [influencer-discovery](../influencer-discovery/SKILL.md) — find influencers in budget range

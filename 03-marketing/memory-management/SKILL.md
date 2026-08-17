@@ -29,7 +29,7 @@ Purge subject-7f42 from project memory under this confirmed erasure request.
 
 ## Skill Contract
 
-**Reads:** authorized runtime memory, registry projections/events, approved decisions, and [state-model.md](../../references/state-model.md). **Writes:** HOT/WARM/COLD notes, archives, indexes, and authorized tombstone/erase events; it never accepts registry proposals or writes canonical facts on behalf of an owner. **Done when:** the requested operation is complete, writes have explicit authorization, affected paths/events are reported, HOT is within 80 lines and 25 KB, and registry verification still passes.
+**Reads:** authorized runtime memory, registry projections/events, approved decisions, and [state-model.md](../../references/aaron-marketing/state-model.md). **Writes:** HOT/WARM/COLD notes, archives, indexes, and authorized tombstone/erase events; it never accepts registry proposals or writes canonical facts on behalf of an owner. **Done when:** the requested operation is complete, writes have explicit authorization, affected paths/events are reported, HOT is within 80 lines and 25 KB, and registry verification still passes.
 
 Operational `memory/**` is Git-ignored by default. Initialize from `memory/templates/`; never commit runtime data, event streams, projections, audits, exports, or subject records unless the user deliberately creates a separate protected data-governance process.
 
@@ -48,7 +48,7 @@ Lower layers cannot override higher ones. A conflict with registry truth becomes
 
 ### Handoff Summary
 
-Use [skill-contract.md](../../references/skill-contract.md). Include authorization status, changed paths/event IDs, registry offsets read, conflicts preserved, privacy actions, and one next skill.
+Use [skill-contract.md](../../references/aaron-marketing/skill-contract.md). Include authorization status, changed paths/event IDs, registry offsets read, conflicts preserved, privacy actions, and one next skill.
 
 ## Data Sources
 
@@ -64,12 +64,12 @@ Proceed without a new question only for read-only lookup, verification, dry-run 
 
 ### Runtime Reads
 
-- `../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 
 ### 1. Initialize
 
 1. Copy the minimal safe starters from `memory/templates/` into runtime `memory/` only after authorization.
-2. Read [`runtime-invocation.md`](../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, verify the registry script/event schema/system catalog, then run `python3 "$AARON_SKILLS_ROOT/scripts/registry-events.py" init` to create private event/projection directories with restrictive permissions. A standalone one-folder install cannot initialize or claim registry state.
+2. Read [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, verify the registry script/event schema/system catalog, then run `python3 "$AARON_SKILLS_ROOT/scripts/registry-events.py" init` to create private event/projection directories with restrictive permissions. A standalone one-folder install cannot initialize or claim registry state.
 3. Confirm `.gitignore` excludes runtime memory and `git status --ignored` shows it as ignored.
 4. Do not seed real names, contact data, credentials, or production exports into templates.
 
@@ -141,8 +141,8 @@ The user's direct request may itself authorize the named operation. Otherwise as
 
 ## Reference Materials
 
-- [State model](../../references/state-model.md)
-- [Registry event protocol](../../references/registry-event-protocol.md)
+- [State model](../../references/aaron-marketing/state-model.md)
+- [Registry event protocol](../../references/aaron-marketing/registry-event-protocol.md)
 - [Promotion and demotion rules](references/promotion-demotion-rules.md)
 - [Consolidation pass](references/consolidation-pass.md)
 - [Update triggers and integration](references/update-triggers-integration.md)

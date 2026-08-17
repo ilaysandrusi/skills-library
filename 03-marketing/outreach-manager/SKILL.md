@@ -44,7 +44,7 @@ Help me negotiate with @[influencer] who is asking for $[X] when our budget is $
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -57,7 +57,7 @@ Where a connector could speed up the work, use these `~~` placeholders:
 - `~~CRM` — sync pipeline status, last-contact dates, and next actions.
 - `~~email/DM tool` — schedule and send the follow-up cadence.
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the free/keyless recipe per category. No integration is required; when one is absent, ask the user for the inputs directly. Missing target or campaign details do not block a reversible draft: use explicit bracketed placeholders, generalize any unverified personalization, and identify the smallest inputs needed to finish it.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the free/keyless recipe per category. No integration is required; when one is absent, ask the user for the inputs directly. Missing target or campaign details do not block a reversible draft: use explicit bracketed placeholders, generalize any unverified personalization, and identify the smallest inputs needed to finish it.
 
 ## Instructions
 
@@ -95,11 +95,11 @@ Full multi-version output, follow-up cadence, negotiation guide, and pipeline tr
 
 - [references/templates.md](references/templates.md) — fill-in templates for all five steps, the full worked example, and outreach tips.
 - [references/cold-copy-rules.md](references/cold-copy-rules.md) — hard cold-outreach copy rules: first-line bans, per-step sentence caps, soft CTAs, observation framing, no link in step 1.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipe per connector category.
-- STAR benchmark scoring at [references/star-benchmark.md](../../../references/star-benchmark.md) — quality scoring reference for downstream review.
-- [expert-panel.md](../../../references/expert-panel.md) — multi-persona review method for pressure-testing outreach copy before sending.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipe per connector category.
+- STAR benchmark scoring at [references/star-benchmark.md](../../references/aaron-marketing/star-benchmark.md) — quality scoring reference for downstream review.
+- [expert-panel.md](../../references/aaron-marketing/expert-panel.md) — multi-persona review method for pressure-testing outreach copy before sending.
 - Sibling skills: [influencer-discovery](../influencer-discovery/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md), [brief-generator](../brief-generator/SKILL.md), [contract-helper](../contract-helper/SKILL.md), [creator-content-auditor](../creator-content-auditor/SKILL.md).
 
 ## Next Best Skill

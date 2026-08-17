@@ -1,6 +1,6 @@
 ---
 name: budget-tracker
-description: "Track advertising spend pacing in real time across connected ad platforms (Google Ads, Meta, LinkedIn, TikTok) — produces a budget dashboard with daily burn rates, end-of-period projections, overspend/underspend alerts, and dollar-specific reallocation recommendations backed by CPA/ROAS context. Monitors and recommends only; it never edits platform budgets. Triggers on \"/digital-marketing-pro:budget-tracker\", \"are we overspending this month\", \"how is our ad budget pacing\", \"track spend across platforms\", \"will we blow through the budget cap\". Reads budget targets from the brand profile, runs scripts/ad-budget-pacer.py, and saves snapshots for trend history; pairs with /digital-marketing-pro:budget-optimizer."
+description: "Track advertising spend pacing in real time across connected ad platforms (Google Ads, Meta, LinkedIn, TikTok) — produces a budget dashboard with daily burn rates, end-of-period projections, overspend/underspend alerts, and dollar-specific reallocation recommendations backed by CPA/ROAS context. Monitors and recommends only; it never edits platform budgets. Triggers on \"/digital-marketing-pro:budget-tracker\", \"are we overspending this month\", \"how is our ad budget pacing\", \"track spend across platforms\", \"will we blow through the budget cap\". Reads budget targets from the brand profile, runs ../../scripts/digital-marketing-pro/ad-budget-pacer.py, and saves snapshots for trend history; pairs with /digital-marketing-pro:budget-optimizer."
 ---
 
 # /digital-marketing-pro:budget-tracker
@@ -35,7 +35,7 @@ The user must provide (or will be prompted for):
 3. **Pull spend data from connected ad MCPs**: Query each connected advertising platform
    (google-ads, meta-marketing, linkedin-marketing, tiktok-ads) for current-period spend — total spend to date,
    daily spend breakdown, campaign-level spend distribution, and cost metrics (CPC, CPM, CPA per campaign).
-4. **Calculate pacing per platform**: Execute `python "${CLAUDE_PLUGIN_ROOT}/scripts/ad-budget-pacer.py" --budget {total} --period-days {N} --days-elapsed {N} --spend-to-date {amount}` with spend data
+4. **Calculate pacing per platform**: Execute `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/ad-budget-pacer.py" --budget {total} --period-days {N} --days-elapsed {N} --spend-to-date {amount}` with spend data
    and budget targets to compute days elapsed/remaining, budget consumed vs expected pacing percentage, pacing
    ratio (actual / expected), daily burn rate (7-day average), and burn rate trend (accelerating/steady/decelerating).
 5. **Project end-of-period spend**: Extrapolate current daily burn rate to end of period for each platform —
@@ -48,11 +48,11 @@ The user must provide (or will be prompted for):
    warning (<70%, increase bids or expand targeting or reallocate), underspend info (70-85%, monitor).
 8. **Pull efficiency metrics**: For each platform, retrieve CPA, ROAS, conversion volume, and cost per conversion
    so reallocation decisions are performance-informed, not just pacing-based.
-9. **Recommend reallocations**: Execute `python "${CLAUDE_PLUGIN_ROOT}/scripts/budget-optimizer.py"` with current spend
+9. **Recommend reallocations**: Execute `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/budget-optimizer.py"` with current spend
    efficiency data to suggest specific dollar-amount shifts from underspending or low-efficiency platforms to
    high-performing ones with room to scale. Include rationale for each recommended move.
 10. **Save budget snapshot**: Persist the current pacing snapshot via
-    `python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand {slug} --action save-snapshot --data '{...pacing metrics...}'`
+    `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand {slug} --action save-snapshot --data '{...pacing metrics...}'`
     for historical tracking, trend analysis, and comparison in future budget-tracker runs.
 
 ## Output

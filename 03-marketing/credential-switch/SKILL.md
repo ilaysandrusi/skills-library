@@ -16,7 +16,7 @@ Switch the active credential profile to a different brand for multi-client agenc
 1. Present the validation summary — target brand, per-platform credential status, and any warnings — as an **Execution Summary**.
 2. If validation is clean **and only one** client credential profile is configured, the switch may proceed automatically. If **more than one** client profile exists, or any warning / missing / expiring credential is present, the user must type `yes` (or an equivalent explicit approval) — ANY other input cancels.
 3. Never proceed on ambiguous input. Never auto-retry a failed switch.
-4. When confirmation is required, record it with `python "${CLAUDE_PLUGIN_ROOT}/scripts/approval-manager.py" --brand {slug} --action create-approval --data '{"risk_level":"medium","summary":"credential switch to {slug}"}'` **before** switching, then `python "${CLAUDE_PLUGIN_ROOT}/scripts/approval-manager.py" --brand {slug} --action mark-executed --id {approval_id}` after the switch verifies.
+4. When confirmation is required, record it with `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/approval-manager.py" --brand {slug} --action create-approval --data '{"risk_level":"medium","summary":"credential switch to {slug}"}'` **before** switching, then `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/approval-manager.py" --brand {slug} --action mark-executed --id {approval_id}` after the switch verifies.
 
 ## Input Required
 
@@ -43,7 +43,7 @@ The user must provide (or will be prompted for):
    - Required env vars: set or missing (with specific variable names)
    - Token expiry date if applicable
    - Last successful connection timestamp if available
-6. **Check for recent operations**: Before switching, scan `python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand {slug} --action get-history --limit 20` for recently logged executions and deliveries under the current profile that a context switch could affect. The tracker records completed runs (success/failure) — there is no live "in-progress" feed, so treat the most recent entries as potentially still settling and warn with specific operation details if any look active
+6. **Check for recent operations**: Before switching, scan `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand {slug} --action get-history --limit 20` for recently logged executions and deliveries under the current profile that a context switch could affect. The tracker records completed runs (success/failure) — there is no live "in-progress" feed, so treat the most recent entries as potentially still settling and warn with specific operation details if any look active
 7. **Confirm switch intent**: If validation passed cleanly, proceed automatically. If warnings exist (missing non-critical credentials, expiring tokens within 7 days), present the warnings and ask for confirmation. If critical credentials are missing and force is not set, abort with specific guidance on what needs to be configured
 8. **Execute credential switch**: Run `credential-manager.py --action switch-profile --id {slug}` to activate the target brand's credential profile. This updates the active profile reference and loads the corresponding environment variables for all MCP servers
 9. **Switch active brand**: Update `~/.claude-marketing/brands/_active-brand.json` to set the target brand as the active brand context — ensuring brand profile and credentials are aligned so all subsequent commands use the correct client

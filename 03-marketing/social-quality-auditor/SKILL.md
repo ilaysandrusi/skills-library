@@ -52,15 +52,15 @@ Audit the last 90 days with program-maturity-community; report outcomes separate
 
 ### Runtime Reads
 
-- `../../../references/auditor-runbook.md`
-- `../../../references/scoring-semantics.md`
-- `../../../references/echo-benchmark.md`
-- `../../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/auditor-runbook.md`
+- `../../references/aaron-marketing/scoring-semantics.md`
+- `../../references/aaron-marketing/echo-benchmark.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 - `references/auditor-runtime.md`
 
 ### Runtime and Setup
 
-Read `../../../references/auditor-runbook.md`, `scoring-semantics.md`, `echo-benchmark.md`, and the ECHO catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
+Read `../../references/aaron-marketing/auditor-runbook.md`, `scoring-semantics.md`, `echo-benchmark.md`, and the ECHO catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
 
 Declare target, profile, `assessment_mode`, `program_archetype`, channels, market, window, and observation date. Use `assessment_mode: asset` plus `program_archetype: not-applicable` for `asset-gate`; use `assessment_mode: program` plus the exact `community|b2c|founder` archetype for a maturity profile. Profile and context must match.
 
@@ -114,10 +114,10 @@ Persist only after explicit authorization to `memory/audits/social/YYYY-MM-DD-<t
 
 ## Reference Materials
 
-- [ECHO benchmark](../../../references/echo-benchmark.md)
-- [Auditor runbook](../../../references/auditor-runbook.md)
-- [Scoring semantics](../../../references/scoring-semantics.md)
-- [Measurement protocol](../../../references/measurement-protocol.md)
+- [ECHO benchmark](../../references/aaron-marketing/echo-benchmark.md)
+- [Auditor runbook](../../references/aaron-marketing/auditor-runbook.md)
+- [Scoring semantics](../../references/aaron-marketing/scoring-semantics.md)
+- [Measurement protocol](../../references/aaron-marketing/measurement-protocol.md)
 
 ## Next Best Skill
 

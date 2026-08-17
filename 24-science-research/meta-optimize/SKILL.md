@@ -150,13 +150,13 @@ Read `.aris/meta/events.jsonl` and compute:
 **Trigger-rate analysis (optional, measured — not from the event log):**
 - The event log shows which skills were USED, not which were WANTED-but-omitted
   — the omission failure mode (Claude Code passing over the right skill when the
-  installed list is long) is invisible to it. `tools/meta_opt/trigger_eval.py`
+  installed list is long) is invisible to it. `../../tools/aris/meta_opt/trigger_eval.py`
   measures it directly: `claude -p` probes with paraphrased-intent queries run
   from a neutral cwd (so the realistic long installed corpus is loaded), scored
   as trigger / confusion(→which skill) / miss.
 - Run it when a specific skill is suspected of under- or mis-triggering, or as a
   before/after check around a description edit:
-  `python3 tools/meta_opt/trigger_eval.py --eval-file tools/meta_opt/trigger_evals.sample.json --skills <name> --samples 2`
+  `python3 ../../tools/aris/meta_opt/trigger_eval.py --eval-file tools/meta_opt/trigger_evals.sample.json --skills <name> --samples 2`
 - The **confusion matrix is the signal**, not just the rate: a query that keeps
   landing on a sibling skill means the two descriptions overlap on that intent —
   the fix is disambiguation, not "make the description pushier".

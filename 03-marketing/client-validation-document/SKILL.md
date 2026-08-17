@@ -168,7 +168,7 @@ After the client provides responses, the responses are categorised into Decision
 The skill compiles the trigger list and runs:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py decision-matrix \
+python ${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/engagement-state.py decision-matrix \
   --brand {slug} --id {id} \
   --triggers "{comma-separated-trigger-list}"
 ```

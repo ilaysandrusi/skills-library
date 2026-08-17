@@ -41,16 +41,16 @@ Use `offsite-signal-analyzer` for link diagnosis without a gate, `content-qualit
 
 ### Runtime Reads
 
-- `../../../references/auditor-runbook.md`
-- `../../../references/scoring-semantics.md`
-- `../../../references/cite-domain-rating.md`
+- `../../references/aaron-marketing/auditor-runbook.md`
+- `../../references/aaron-marketing/scoring-semantics.md`
+- `../../references/aaron-marketing/cite-domain-rating.md`
 - `../../../references/framework-catalog.json`
-- `../../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 - `references/auditor-runtime.md`
 
 ### Runtime Contract
 
-Read `../../../references/auditor-runbook.md`, `scoring-semantics.md`, `cite-domain-rating.md`, and the `CITE` entry in `framework-catalog.json`. For standalone installs, use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main` or guess missing policy. Before deterministic calls, follow [`runtime-invocation.md`](../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
+Read `../../references/aaron-marketing/auditor-runbook.md`, `scoring-semantics.md`, `cite-domain-rating.md`, and the `CITE` entry in `framework-catalog.json`. For standalone installs, use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main` or guess missing policy. Before deterministic calls, follow [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
 
 ### Required Setup
 
@@ -151,9 +151,9 @@ The audit request itself does not authorize hot-cache, candidate, or registry wr
 
 ## Reference Materials
 
-- [CITE benchmark](../../../references/cite-domain-rating.md)
-- [Auditor runbook](../../../references/auditor-runbook.md)
-- [Scoring semantics](../../../references/scoring-semantics.md)
+- [CITE benchmark](../../references/aaron-marketing/cite-domain-rating.md)
+- [Auditor runbook](../../references/aaron-marketing/auditor-runbook.md)
+- [Scoring semantics](../../references/aaron-marketing/scoring-semantics.md)
 - [Offsite signal analyzer](../offsite-signal-analyzer/SKILL.md)
 
 ## Next Best Skill

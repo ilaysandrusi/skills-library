@@ -359,9 +359,9 @@ Sales collateral is only useful if reps can find it when they need it — a Noti
 
 ## Tool Integrations
 
-For partner sales enablement, see the [tools registry](../../tools/REGISTRY.md):
+For partner sales enablement, see the [tools registry](../../tools/infrasity-dev-gtm/REGISTRY.md):
 
 | Tool | What It Does | Guide |
 |------|-------------|-------|
-| **Introw** | Partner engagement tracking, deal registration, mutual action plans | [introw.md](../../tools/integrations/introw.md) |
+| **Introw** | Partner engagement tracking, deal registration, mutual action plans | [introw.md](../../tools/infrasity-dev-gtm/integrations/introw.md) |
 

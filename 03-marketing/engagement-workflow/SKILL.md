@@ -37,7 +37,7 @@ Read these references before producing output:
 This skill is invoked via the `/digital-marketing-pro:engagement` command family. The command is a thin router — **this skill is the single source of truth** for the engagement lifecycle, the checkpoint protocol, and the per-part production contract. Each subcommand maps to a specific lifecycle action. The skill calls `engagement-state.py` for persistence via:
 
 ```
-python "${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py" <subcommand> ...
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/engagement-state.py" <subcommand> ...
 ```
 
 You should never hand-edit `_engagement.json` — always go through `engagement-state.py`.
@@ -49,11 +49,11 @@ Every long engagement run is resumable. The checkpoint protocol is: **init a run
 **1. On `start`, after the brand pre-condition passes, open a checkpoint run and link it to engagement state:**
 
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/checkpoint-manager.py" init \
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/checkpoint-manager.py" init \
     --brand "{brand_slug}" --workflow engagement --topic "{engagement_id}"
 
 # Record the returned run_id into _engagement.json so resume can find it:
-python "${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py" set-checkpoint-run \
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/engagement-state.py" set-checkpoint-run \
     --brand "{brand_slug}" --id "{engagement_id}" --run-id "{run_id}"
 ```
 
@@ -62,7 +62,7 @@ python "${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py" set-checkpoint-run \
 **2. After each part completes and passes its quality gate, the orchestrator saves that part's output:**
 
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/checkpoint-manager.py" save \
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/checkpoint-manager.py" save \
     --brand "{brand}" --run-id "{run_id}" \
     --step {part_number} --content-file "{path_to_that_part_deliverable}" --extension md
 ```
@@ -81,10 +81,10 @@ If `/digital-marketing-pro:check --full` returns BLOCKED, fix the CRITICAL issue
 **4. After the final part, publish every artifact to the user-visible folder and finalize:**
 
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/output-publisher.py" publish-run \
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/output-publisher.py" publish-run \
     --brand "{brand}" --run-id "{run_id}"
 
-python "${CLAUDE_PLUGIN_ROOT}/scripts/checkpoint-manager.py" finalize \
+python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/checkpoint-manager.py" finalize \
     --brand "{brand}" --run-id "{run_id}" --status completed
 ```
 
@@ -96,14 +96,14 @@ To resume an interrupted run, use `/digital-marketing-pro:resume` — it reloads
 
 - **Validate a part's outputs against the manifest** before marking it complete:
   ```bash
-  python "${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py" validate-part \
+  python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/engagement-state.py" validate-part \
       --brand "{brand}" --id "{id}" --part {N}
   ```
   This diffs the actual files on disk against the `PART_DEFINITIONS` manifest and flags missing deliverables. Use it in `file-tree` and before `next`.
 
 - **Repair a partially-initialised engagement directory** (instead of crashing on a non-empty dir):
   ```bash
-  python "${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py" init --repair \
+  python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/engagement-state.py" init --repair \
       --brand "{brand}" --id "{id}"
   ```
   `--repair` completes the canonical directory tree and state file on a dir that holds only partial state.
@@ -119,7 +119,7 @@ To resume an interrupted run, use `/digital-marketing-pro:resume` — it reloads
 **Steps:**
 
 1. Validate that the brand profile exists at `~/.claude-marketing/brands/{brand-slug}/profile.json`. If not, instruct the user to run `/digital-marketing-pro:brand-setup` first.
-2. Run `python ${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py init --brand {brand-slug} --id {engagement-id}`.
+2. Run `python ${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/engagement-state.py init --brand {brand-slug} --id {engagement-id}`.
 3. Confirm the directory tree was created and report the next required action (Part 1 intake).
 4. Walk the user through Part 1 Stone vs Opinion intake by asking the questions one batch at a time.
 
@@ -139,7 +139,7 @@ For each Stone fact, capture:
 
 Save each via:
 ```
-python ${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py add-stone-fact --brand {slug} --id {id} --fact-json '{"category":"...","fact":"...","source":"..."}'
+python ${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/engagement-state.py add-stone-fact --brand {slug} --id {id} --fact-json '{"category":"...","fact":"...","source":"..."}'
 ```
 
 **Opinion — what the client believes:**
@@ -158,7 +158,7 @@ For each Opinion, capture:
 
 Save each via:
 ```
-python ${CLAUDE_PLUGIN_ROOT}/scripts/engagement-state.py add-opinion --brand {slug} --id {id} --hypothesis-json '{"category":"...","hypothesis":"...","client_evidence":"...","research_question":"..."}'
+python ${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/engagement-state.py add-opinion --brand {slug} --id {id} --hypothesis-json '{"category":"...","hypothesis":"...","client_evidence":"...","research_question":"..."}'
 ```
 
 **On completion of Part 1:** mark Part 1 as completed via `mark-part-completed --part 1`, advise the user to proceed to Part 2 (External Research).

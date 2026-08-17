@@ -51,16 +51,16 @@ Shortest valid invocation: `performance-monitor <domain>` (mode inferred). Outpu
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md). Name the active mode (`report` / `alert`) in the Objective line.
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md). Name the active mode (`report` / `alert`) in the Objective line.
 
 ## Data Sources
 
-All integrations optional (see [CONNECTORS.md](../../../CONNECTORS.md)). Tier 1 (keyless) works for both modes; keyed tools are opt-in Tier 2/3.
+All integrations optional (see [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md)). Tier 1 (keyless) works for both modes; keyed tools are opt-in Tier 2/3.
 
 - **report**: with tools connected, aggregates traffic from ~~analytics, search data from ~~search console, rankings/backlinks from ~~SEO tool, and AI visibility from ~~AI monitor. Without tools, ask the user for analytics exports, Search Console data, ranking data, and KPIs.
 - **alert**: with tools, monitor real-time feeds from ~~SEO tool, ~~search console, and ~~web crawler. Without tools, ask for baselines, critical keywords, delivery preferences, and historical data.
 
-**Zero-dependency measurement loop** (both modes): every reported change or fired alert should come from a computed delta, not an eyeballed estimate. Store each period's KPIs and let the ledger compute movement: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/ledger.py" record <domain> --source monitor --data '{"sessions": ..., "clicks": ..., ...}'`, then `ledger.py diff <domain> --source monitor` for the period delta and `ledger.py trend <domain> --source monitor --field <kpi>` for the trend line. Label every figure Measured / User-provided / Estimated, and attribute outcome movement against a control rather than to the latest change — see [references/measurement-protocol.md](../../../references/measurement-protocol.md). See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Zero-dependency measurement loop** (both modes): every reported change or fired alert should come from a computed delta, not an eyeballed estimate. Store each period's KPIs and let the ledger compute movement: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/ledger.py" record <domain> --source monitor --data '{"sessions": ..., "clicks": ..., ...}'`, then `ledger.py diff <domain> --source monitor` for the period delta and `ledger.py trend <domain> --source monitor --field <kpi>` for the trend line. Label every figure Measured / User-provided / Estimated, and attribute outcome movement against a control rather than to the latest change — see [references/measurement-protocol.md](../../references/aaron-marketing/measurement-protocol.md). See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 ## Decision Gates
 
@@ -126,7 +126,7 @@ Label every metric **Measured** (tool/export), **User-provided**, or **Estimated
 
 ## Reading Deltas Against a Control
 
-A reported delta or a fired alert is only evidence if it beats a control over a **fixed readback window** set before the change — a raw before/after on a confounded outcome is a story, not proof. Attach the decision protocol from [references/measurement-protocol.md §Cross-discipline decision protocol](../../../references/measurement-protocol.md):
+A reported delta or a fired alert is only evidence if it beats a control over a **fixed readback window** set before the change — a raw before/after on a confounded outcome is a story, not proof. Attach the decision protocol from [references/measurement-protocol.md §Cross-discipline decision protocol](../../references/aaron-marketing/measurement-protocol.md):
 
 - **Readback window** — pick the window for the change type up front (content refresh 7/14/28/56 days; new content 14/28/56/90; technical fix daily ×7 then 28; AEO/GEO surfacing weekly) and do not react to noise inside it. A fired alert opens a readback window, not an instant verdict — confirm the drop holds before declaring an incident.
 - **Required readback fields** — record: change · owner · baseline window · candidate window · sources · primary + secondary metric · winner · caveats · decision · next-patch · next-readback date.
@@ -139,7 +139,7 @@ A reported delta or a fired alert is only evidence if it beats a control over a 
 
 ## Save Results
 
-Ask "Save these results?" If yes, write to `memory/monitoring/` using filename `YYYY-MM-DD-<topic>.md` — see [skill-contract.md §Save Results Template](../../../references/skill-contract.md). This is a non-auditor skill: ask before writing memory and hand off veto-like risks to the relevant auditor gate rather than appending veto markers itself.
+Ask "Save these results?" If yes, write to `memory/monitoring/` using filename `YYYY-MM-DD-<topic>.md` — see [skill-contract.md §Save Results Template](../../references/aaron-marketing/skill-contract.md). This is a non-auditor skill: ask before writing memory and hand off veto-like risks to the relevant auditor gate rather than appending veto markers itself.
 
 ## Reference Materials
 
@@ -148,7 +148,7 @@ Ask "Save these results?" If yes, write to `memory/monitoring/` using filename `
 - [Report Templates by Audience](references/report-templates.md) — copy-ready templates for executive, marketing, technical, and client audiences
 - [Alert Configuration Templates](references/alert-configuration-templates.md) — full category tables, thresholds, response-plan templates (alert mode)
 - [Alert Threshold Guide](references/alert-threshold-guide.md) — threshold setting, fatigue prevention, escalation paths, response playbooks
-- [Measurement & Attribution Protocol](../../../references/measurement-protocol.md) — readback windows, required fields, and the promote / keep-testing / rollback / unproven decision rule
+- [Measurement & Attribution Protocol](../../references/aaron-marketing/measurement-protocol.md) — readback windows, required fields, and the promote / keep-testing / rollback / unproven decision rule
 
 ## Next Best Skill
 
@@ -157,4 +157,4 @@ Mode-conditional, then terminal:
 - After **report** — a change needs ongoing monitoring → run this skill in `alert` mode. A section marked "Not yet evaluated" for authority → [domain-authority-auditor](../domain-authority-auditor/SKILL.md); for content quality → [content-quality-auditor](../content-quality-auditor/SKILL.md). One-off report with no action → Terminal.
 - After **alert** — a reporting cadence is requested → run this skill in `report` mode. Standalone alert setup → Terminal.
 
-Termination: the visited-set and `max-depth: 3` rules from [skill-contract.md §Termination rules](../../../references/skill-contract.md) apply. Do not re-enter a mode already run in this chain (report→alert→report is a visited-set stop); if routing is ambiguous, present the options and stop instead of auto-following.
+Termination: the visited-set and `max-depth: 3` rules from [skill-contract.md §Termination rules](../../references/aaron-marketing/skill-contract.md) apply. Do not re-enter a mode already run in this chain (report→alert→report is a visited-set stop); if routing is ambiguous, present the options and stop instead of auto-following.

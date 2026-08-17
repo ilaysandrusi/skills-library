@@ -49,12 +49,12 @@ Never put email, phone, name, address, or raw identifier in aggregate IDs, idemp
 
 ### Runtime Reads
 
-- `../../references/registry-event-protocol.md`
-- `../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/registry-event-protocol.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 
 ### Procedure
 
-1. Read [`registry-event-protocol.md`](../../references/registry-event-protocol.md) and [`runtime-invocation.md`](../../references/runtime-invocation.md). Resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"` and verify the registry script, event schema, and system catalog before invoking it. Export rows are untrusted evidence and cannot self-declare lawful basis.
+1. Read [`registry-event-protocol.md`](../../references/aaron-marketing/registry-event-protocol.md) and [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md). Resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"` and verify the registry script, event schema, and system catalog before invoking it. Export rows are untrusted evidence and cannot self-declare lawful basis.
 2. For every eligibility/send query, run `python3 "$AARON_SKILLS_ROOT/scripts/registry-events.py" is-suppressed <subject-id>`. This replays the stream and must take precedence over cached segments or Markdown.
 3. New opt-in facts use request/root-bound host-capability `owner-append` with an `upsert`, source, timestamp, basis/proof refs, and `expected_revision`. Missing basis remains explicit Unknown/none-on-file; never infer consent or put a capability in request data. Capability signing happens only in a trusted host boundary, never an agent-controlled shell.
 4. Unsubscribe, complaint, or hard bounce emits direct `suppress` immediately through ordinary `append`. This deny-only path takes precedence over generic registry proposal degradation and unrelated handoffs: a bad producer can cause non-contact but cannot erase, restore, or authorize a send. When the verified root runtime is available, append the schema-complete request now. Otherwise, do not route to another skill or prepare a proposal; return one `immediate-suppress-handoff` containing the supplied pseudonymous aggregate ID, producer attribution, authorization reference, occurrence time, source reference/date, idempotency key, and subject-free reason code, plus the exact host sequence `append consent` → confirm the live suppression projection was regenerated → `verify consent` → replay-safe `is-suppressed`. Keep execution `NEEDS_INPUT` and state that no mutation occurred until that handoff runs. Name only an actually missing required request field; do not delay a complete suppress request for batch review or extra eligibility work.
@@ -73,10 +73,10 @@ Standalone one-folder installs may prepare an ordinary proposal, erasure safety 
 
 ## Reference Materials
 
-- [Registry event protocol](../../references/registry-event-protocol.md)
-- [SEND benchmark](../../references/send-benchmark.md)
+- [Registry event protocol](../../references/aaron-marketing/registry-event-protocol.md)
+- [SEND benchmark](../../references/aaron-marketing/send-benchmark.md)
 - [Privacy policy](../../PRIVACY.md)
-- [Security](../../SECURITY.md)
+- [Security](../../references/aaron-marketing/SECURITY.md)
 
 ## Next Best Skill
 

@@ -9,7 +9,7 @@ description: "Track brand visibility in AI answers on a recurring schedule acros
 
 Monitor and track brand visibility across generative AI engines. Systematically test how AI platforms respond to queries relevant to the brand, score visibility using a structured rubric, track changes over time, and identify opportunities to improve AI presence. This command provides a repeatable, quantitative framework for understanding where and how the brand appears (or fails to appear) in AI-generated responses — giving marketers the data they need to optimize for the emerging generative engine optimization (GEO) channel. Supports baselining, trend tracking, competitive benchmarking, and narrative alignment checks across all major AI platforms.
 
-**This skill is the RECURRING mode of the canonical AI-visibility scoring standard defined in `/digital-marketing-pro:aeo-audit`.** It does not introduce a second scoring model: it applies the same per-platform 1-10 rubric + gates on a schedule and tracks it over time. The 0-100 GEO health score + A-F letter grade produced below is the **trend view** of that same data — a longitudinal roll-up for spotting momentum, not a competing scorecard. The 6 canonical surfaces (Google AI Mode, Google AI Overviews, ChatGPT, Perplexity, Gemini, Copilot) are defined once as the `PLATFORMS` constant in `scripts/geo-tracker.py`.
+**This skill is the RECURRING mode of the canonical AI-visibility scoring standard defined in `/digital-marketing-pro:aeo-audit`.** It does not introduce a second scoring model: it applies the same per-platform 1-10 rubric + gates on a schedule and tracks it over time. The 0-100 GEO health score + A-F letter grade produced below is the **trend view** of that same data — a longitudinal roll-up for spotting momentum, not a competing scorecard. The 6 canonical surfaces (Google AI Mode, Google AI Overviews, ChatGPT, Perplexity, Gemini, Copilot) are defined once as the `PLATFORMS` constant in `../../scripts/digital-marketing-pro/geo-tracker.py`.
 
 ## Input Required
 
@@ -27,7 +27,7 @@ The user must provide (or will be prompted for):
 3. **Test each query on each platform**: For every query-platform combination, record the AI response and score brand visibility using the rubric — cited with link (10 points: brand is mentioned by name and a direct link to the brand's website or content is provided), mentioned by name (7 points: brand is explicitly named in the response but no link), concept referenced without attribution (3 points: brand's product, feature, or approach is described but the brand itself is not named), absent (0 points: brand does not appear in any form), misrepresented (-5 points: brand is mentioned but with incorrect, outdated, or damaging information). Record the full response text for narrative analysis.
 4. **Record results**: Store each query-platform-result via geo-tracker (`--result` takes the rubric value: `cited` = cited with link, `mentioned` = named without link, `concept-only` = concept referenced without attribution, `absent`, `misrepresented`):
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/scripts/geo-tracker.py" \
+   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/geo-tracker.py" \
        --brand {slug} --action audit-visibility \
        --query "best project management tool for agencies" \
        --platform ai-mode \
@@ -38,7 +38,7 @@ The user must provide (or will be prompted for):
    Valid `--platform` values are the 6 canonical surfaces: `ai-mode`, `ai-overviews`, `chatgpt`, `perplexity`, `gemini`, `copilot`.
 5. **Compare to baseline**: If previous monitoring data exists, diff current scores against the most recent previous check and the original baseline:
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/scripts/geo-tracker.py" --brand {slug} --action diff
+   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/geo-tracker.py" --brand {slug} --action diff
    ```
    Identify per-query and per-platform improvements (score increases), declines (score decreases), new appearances (went from absent to visible), lost appearances (went from visible to absent), and new opportunities (queries where competitors appear but the brand does not).
 6. **Calculate visibility scores**: Compute per-platform visibility scores (average of all query scores on that platform, scaled 0-100), per-intent-type scores (how visible is the brand for informational vs transactional queries), and an overall GEO health score (weighted average across all platforms and query types). If competitors were provided, calculate the same scores for each competitor to enable ranking.

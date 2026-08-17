@@ -19,9 +19,9 @@ The user must provide (or will be prompted for):
 
 ## Process
 
-1. **Look up connector**: Execute `python "${CLAUDE_PLUGIN_ROOT}/scripts/connector-status.py" --action setup-guide --name <connector>` to get the detailed setup guide for the requested connector. If the name doesn't match exactly, search the registry for close matches and suggest the correct name.
+1. **Look up connector**: Execute `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/connector-status.py" --action setup-guide --name <connector>` to get the detailed setup guide for the requested connector. If the name doesn't match exactly, search the registry for close matches and suggest the correct name.
 
-2. **Check current status**: Execute `python "${CLAUDE_PLUGIN_ROOT}/scripts/connector-status.py" --action check --name <connector>` to determine if the connector is already configured. If already connected, report that and show which skills it powers — ask if the user wants to verify connectivity or reconfigure.
+2. **Check current status**: Execute `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/connector-status.py" --action check --name <connector>` to determine if the connector is already configured. If already connected, report that and show which skills it powers — ask if the user wants to verify connectivity or reconfigure.
 
 3. **Present setup instructions based on transport type**:
 

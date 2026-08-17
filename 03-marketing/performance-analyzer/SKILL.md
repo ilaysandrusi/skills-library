@@ -44,7 +44,7 @@ Compare performance of these influencers from [campaign]: @handle1, @handle2, @h
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -55,11 +55,11 @@ Where a connector could speed the work, the skill marks it with a `~~` placehold
 - `~~social platform analytics` — native reach/engagement/video metrics per post.
 - `~~web analytics` — site traffic, click-through, and on-site conversion data.
 
-**Measured YouTube post-performance (free key)**: when campaign content lives on YouTube, `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/youtube.py" videos @creator --limit 20` pulls the actual per-video views/likes/comments for the campaign window — **Measured** platform metrics without waiting for the creator's screenshot export. Keep both labels honest: API numbers are Measured, creator-supplied numbers are User-provided, and the two can legitimately disagree (display rounding, timing). Free `YOUTUBE_API_KEY`. See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Measured YouTube post-performance (free key)**: when campaign content lives on YouTube, `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/youtube.py" videos @creator --limit 20` pulls the actual per-video views/likes/comments for the campaign window — **Measured** platform metrics without waiting for the creator's screenshot export. Keep both labels honest: API numbers are Measured, creator-supplied numbers are User-provided, and the two can legitimately disagree (display rounding, timing). Free `YOUTUBE_API_KEY`. See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 - `~~ecommerce / sales platform` — revenue, orders, AOV, promo-code redemptions.
 - `~~influencer database` — historical creator benchmarks for comparison.
 
-No placeholder is required to run. See [CONNECTORS.md](../../../CONNECTORS.md) for the verified free/keyless data recipe per category.
+No placeholder is required to run. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the verified free/keyless data recipe per category.
 
 ## Instructions
 
@@ -74,7 +74,7 @@ Work the steps in order. Each fill-in template lives in [references/analysis-tem
 7. **Conversion & attribution analysis** — draw the funnel, score conversion metrics vs benchmark, attribute by method (promo / UTM / direct / estimated), and table promo-code performance. Template: step 7.
 8. **Generate insights & recommendations** — write the top-5 learnings, what worked / what didn't, optimization opportunities, roster renew/drop calls, and future-campaign guidance. Template: step 8.
 
-Before naming any creator/format/platform a real winner, clear the significance bar in [measurement-protocol.md](../../../references/measurement-protocol.md) — otherwise mark it Keep-testing. When a structured score is needed, apply per-dimension STAR analysis (Suitability/Trust/Appeal/Return dimension reads) from [star-benchmark.md](../../../references/star-benchmark.md), and hand the measured inputs to [roi-calculator](../roi-calculator/SKILL.md) for the measured Return (R) evidence — this skill contributes the inputs but does not compute the SQS (the creator-content-auditor gate does).
+Before naming any creator/format/platform a real winner, clear the significance bar in [measurement-protocol.md](../../references/aaron-marketing/measurement-protocol.md) — otherwise mark it Keep-testing. When a structured score is needed, apply per-dimension STAR analysis (Suitability/Trust/Appeal/Return dimension reads) from [star-benchmark.md](../../references/aaron-marketing/star-benchmark.md), and hand the measured inputs to [roi-calculator](../roi-calculator/SKILL.md) for the measured Return (R) evidence — this skill contributes the inputs but does not compute the SQS (the creator-content-auditor gate does).
 
 ## Example
 
@@ -101,11 +101,11 @@ Before naming any creator/format/platform a real winner, clear the significance 
 ## Reference Materials
 
 - [references/analysis-templates.md](references/analysis-templates.md) — the eight fill-in step templates plus the full worked example.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and handoff format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — verified free/keyless data recipes per connector category.
-- [measurement-protocol.md](../../../references/measurement-protocol.md) — preregistered readback windows, outcome unit, alpha, practical-effect boundary, multiplicity/sequential policy, guardrails, and decision owner. Report statistical and practical flags separately; use `experiment.py` for deterministic `Calculated` evidence, and never substitute a universal p-value/lift rule or attribute a business action to the helper.
-- The STAR benchmark at [references/star-benchmark.md](../../../references/star-benchmark.md) — scoring architecture when a structured score is needed.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and handoff format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — verified free/keyless data recipes per connector category.
+- [measurement-protocol.md](../../references/aaron-marketing/measurement-protocol.md) — preregistered readback windows, outcome unit, alpha, practical-effect boundary, multiplicity/sequential policy, guardrails, and decision owner. Report statistical and practical flags separately; use `experiment.py` for deterministic `Calculated` evidence, and never substitute a universal p-value/lift rule or attribute a business action to the helper.
+- The STAR benchmark at [references/star-benchmark.md](../../references/aaron-marketing/star-benchmark.md) — scoring architecture when a structured score is needed.
 - Sibling skills: [roi-calculator](../roi-calculator/SKILL.md), [report-generator](../report-generator/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md), [campaign-planner](../campaign-planner/SKILL.md).
 
 ## Next Best Skill

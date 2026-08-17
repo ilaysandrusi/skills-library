@@ -54,15 +54,15 @@ Only this gate computes the profile-weighted SQS; every other influencer skill w
 
 ### Runtime Reads
 
-- `../../../references/auditor-runbook.md`
-- `../../../references/scoring-semantics.md`
-- `../../../references/star-benchmark.md`
-- `../../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/auditor-runbook.md`
+- `../../references/aaron-marketing/scoring-semantics.md`
+- `../../references/aaron-marketing/star-benchmark.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 - `references/auditor-runtime.md`
 
 ### Runtime and Setup
 
-Read `../../../references/auditor-runbook.md`, `scoring-semantics.md`, `star-benchmark.md`, and the STAR catalog entry. Standalone installs use the bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
+Read `../../references/aaron-marketing/auditor-runbook.md`, `scoring-semantics.md`, `star-benchmark.md`, and the STAR catalog entry. Standalone installs use the bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
 
 Declare target/version, platform, market, goal (`awareness|engagement|conversion|brand-building`), and `assessment_time`. Pre-publish is `assessment_time: forecast` (Return items `R1`–`R6` are `na` with reason); a post-campaign re-read is `actual`. Select profile `<goal>`; the profile goal must equal the typed context.
 
@@ -120,10 +120,10 @@ Ask before writing. On approval, validate the complete v3 draft with `validate-a
 
 ## Reference Materials
 
-- [STAR benchmark](../../../references/star-benchmark.md)
-- [Auditor runbook](../../../references/auditor-runbook.md)
-- [Scoring semantics](../../../references/scoring-semantics.md)
-- [Humanizer controls](../../../references/humanizer-slop.md)
+- [STAR benchmark](../../references/aaron-marketing/star-benchmark.md)
+- [Auditor runbook](../../references/aaron-marketing/auditor-runbook.md)
+- [Scoring semantics](../../references/aaron-marketing/scoring-semantics.md)
+- [Humanizer controls](../../references/aaron-marketing/humanizer-slop.md)
 
 ## Next Best Skill
 

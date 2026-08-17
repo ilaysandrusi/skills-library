@@ -103,7 +103,7 @@ and a **local Codex app-server MCP bridge** as the raster renderer.
   fi
   [ -z "$IMAGE2_HELPER" ] && {
     echo "ERROR: paper_illustration_image2.py not resolved (layer 0: \$CLAUDE_SKILL_DIR/scripts/; layers 1-4: .aris/tools/, tools/, \$ARIS_REPO/tools/, \$ARIS_REPO/tools/ via ~/.aris/repo)." >&2
-    echo "       /paper-illustration-image2 cannot proceed. Fix: rerun bash tools/install_aris.sh or smart_update.sh (refreshes ~/.aris/repo), or copy the canonical script from \$ARIS_REPO/skills/paper-illustration-image2/scripts/." >&2
+    echo "       /paper-illustration-image2 cannot proceed. Fix: rerun bash ../../tools/aris/install_aris.sh or smart_update.sh (refreshes ~/.aris/repo), or copy the canonical script from \$ARIS_REPO/skills/paper-illustration-image2/scripts/." >&2
     exit 1
   }
   ```
