@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6522
+**סה״כ סקילים:** 5980
 
 ## איך ללמוד
 
@@ -67,7 +67,6 @@
 | [Goose Agent](./21-goose-agent/) | 263 | חבילת הסקילים של gooseworks: 260+ סקילים לסוכן Goose של Block |
 | [משפטים](./22-legal/) | 238 | awesome-legal-skills: חוזים, רגולציה, ליטיגציה, קניין רוחני ותאימות |
 | [Microsoft](./23-microsoft/) | 186 | הסקילים הרשמיים של מיקרוסופט: Azure, .NET, TypeSpec, Playwright, GitHub ועוד |
-| [מדע ומחקר](./24-science-research/) | 542 | K-Dense scientific, AI-research, MedSci (מחקר רפואי קליני), סימולציות חומרים, הנדסה ומחקר אוטומטי |
 | [דאטה ובסיסי נתונים](./25-data-databases/) | 78 | MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB |
 | [מובייל ו-Apple](./26-mobile-apple/) | 135 | Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG |
 | [Web3 וקריפטו](./27-web3-crypto/) | 43 | Binance, Coinbase, Helius (Solana): ארנקים, מסחר ופיתוח בלוקצ'יין |

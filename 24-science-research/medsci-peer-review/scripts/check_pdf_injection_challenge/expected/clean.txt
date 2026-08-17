@@ -1,3 +1,0 @@
-== CLEAN ==  synthetic_clean.pdf
-findings=0 hidden_chars=0 injection_hits=0
-no hidden or injected text detected.

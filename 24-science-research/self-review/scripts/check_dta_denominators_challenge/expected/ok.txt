@@ -1,3 +1,0 @@
-== OK ==  fixture/dta_ok.md
-mismatches=0
-sens/spec denominators reconcile with the reference-standard category counts.

@@ -2,7 +2,7 @@
 
 Tool registries and per-integration documentation shared across a project's skills.
 
-**קבצים כאן:** 270 — מ-3 מקורות.
+**קבצים כאן:** 223 — מ-2 מקורות.
 
 כל מה שכאן הוא **tools ברמת הפרויקט**: במעלה הזרם זה יושב בשורש הריפו (או ברמת הפלאגין) ומשרת את כל הסקילים שלו במקביל, ולכן אי אפשר לשייך את זה לסקיל אחד ואין להכפיל את זה לכל סקיל. הסקילים מפנים לכאן בנתיב יחסי.
 
@@ -10,7 +10,6 @@ Tool registries and per-integration documentation shared across a project's skil
 
 | מקור | קבצים | ריפו במעלה הזרם | רישיון |
 |---|---|---|---|
-| [`aris/`](./aris/) | 47 | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | MIT |
 | [`coreyhaines-marketing/`](./coreyhaines-marketing/) | 161 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | MIT |
 | [`infrasity-dev-gtm/`](./infrasity-dev-gtm/) | 62 | [infrasity-labs/dev-gtm-claude-skills](https://github.com/infrasity-labs/dev-gtm-claude-skills) | MIT |
 
