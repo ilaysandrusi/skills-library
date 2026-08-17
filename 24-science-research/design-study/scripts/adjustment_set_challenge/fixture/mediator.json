@@ -1,1 +1,0 @@
-{"_comment": "Mediation: M lies on the directed X->M->Y path.", "edges": [["X","M"],["M","Y"],["X","Y"]]}
