@@ -176,7 +176,7 @@ See [phases.md](phases.md) for the complete reference.
    mkdir -p {content_root}/artists/[artist]/albums/[genre]/[album-name]/tracks
    ```
 
-2. Create album README from template (read `${CLAUDE_PLUGIN_ROOT}/templates/album.md` first)
+2. Create album README from template (read `${CLAUDE_PLUGIN_ROOT}/../../templates/ai-music/album.md` first)
 
 3. Tell user: "I've created the album folder at `{content_root}/artists/...`. We'll fill in the details as we go."
 

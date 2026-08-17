@@ -127,7 +127,7 @@ rename the existing album with /bitwize-music:rename.
 **Templates not found:**
 ```
 Error: Templates not found. Is the plugin installed correctly?
-Expected at: ${CLAUDE_PLUGIN_ROOT}/templates/
+Expected at: ${CLAUDE_PLUGIN_ROOT}/../../templates/ai-music/
 ```
 
 ---
@@ -200,7 +200,7 @@ Files created:
 # Manual mkdir, config reading, template copying
 cat ~/.bitwize-music/config.yaml
 mkdir -p ~/music-projects/artists/bitwize/albums/...
-cp templates/album.md ...
+cp ../../templates/ai-music/album.md ...
 ```
 
 **Right:**

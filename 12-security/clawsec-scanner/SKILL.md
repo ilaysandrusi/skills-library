@@ -359,7 +359,7 @@ node test/sast_engine.test.mjs
 node test/dast_harness.test.mjs
 
 # Validate skill structure
-python ../../utils/validate_skill.py .
+python ../../scripts/clawsec-utils/validate_skill.py .
 
 # Scan test fixtures (should detect known vulnerabilities)
 ./scripts/runner.sh --target test/fixtures/ --format text

@@ -6,17 +6,17 @@ Tests for the configuration system.
 
 ### TEST: config.example.yaml exists
 ```
-Glob: config/config.example.yaml
+Glob: ../../config/ai-music/config.example.yaml
 ```
 
 ### TEST: config.example.yaml is valid YAML
 Call `get_python_command()` first for `$PYTHON` (the venv interpreter — correct on every OS), then:
 ```bash
-$PYTHON -c "import yaml; yaml.safe_load(open('${CLAUDE_PLUGIN_ROOT}/config/config.example.yaml'))"
+$PYTHON -c "import yaml; yaml.safe_load(open('${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/config.example.yaml'))"
 ```
 
 ### TEST: config.example.yaml has all required sections
-Read config/config.example.yaml and verify these top-level keys exist:
+Read ../../config/ai-music/config.example.yaml and verify these top-level keys exist:
 - `artist:`
 - `paths:`
 - `urls:`
@@ -36,7 +36,7 @@ Verify these optional fields exist and are documented:
 - `paths.ideas_file` (album ideas tracking file)
 
 ### TEST: config.example.yaml has inline examples (quick win #9)
-Read config/config.example.yaml.
+Read ../../config/ai-music/config.example.yaml.
 Verify it includes commented examples for:
 - artist.name (examples of artist names)
 - artist.genres (examples of genre choices)
@@ -433,13 +433,13 @@ Glob: reference/suno/
 
 ### TEST: Required Suno reference files exist
 These must exist:
-- `reference/suno/v5-best-practices.md`
-- `reference/suno/pronunciation-guide.md`
-- `reference/suno/tips-and-tricks.md`
-- `reference/suno/structure-tags.md`
-- `reference/suno/voice-tags.md`
+- `../../references/ai-music/suno/v5-best-practices.md`
+- `../../references/ai-music/suno/pronunciation-guide.md`
+- `../../references/ai-music/suno/tips-and-tricks.md`
+- `../../references/ai-music/suno/structure-tags.md`
+- `../../references/ai-music/suno/voice-tags.md`
 - `reference/suno/instrumental-tags.md`
-- `reference/suno/genre-list.md`
+- `../../references/ai-music/suno/genre-list.md`
 
 ### TEST: /suno-engineer skill exists
 ```
@@ -452,7 +452,7 @@ Glob: skills/pronunciation-specialist/SKILL.md
 ```
 
 ### TEST: Pronunciation guide has phonetic examples
-Read reference/suno/pronunciation-guide.md.
+Read ../../references/ai-music/suno/pronunciation-guide.md.
 Verify it has examples for:
 - Names
 - Acronyms
@@ -460,41 +460,41 @@ Verify it has examples for:
 - Homographs
 
 ### TEST: Suno pronunciation guide has cross-references (quick win #10)
-Read reference/suno/pronunciation-guide.md.
+Read ../../references/ai-music/suno/pronunciation-guide.md.
 Verify "## Related Skills" section exists with:
 - /bitwize-music:pronunciation-specialist reference
 - /bitwize-music:lyric-writer reference
 - /bitwize-music:lyric-reviewer reference
 Verify "## See Also" section exists with:
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/v5-best-practices.md reference
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/structure-tags.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/v5-best-practices.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/structure-tags.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/lyric-writer/SKILL.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/pronunciation-specialist/SKILL.md reference
 
 ### TEST: Suno v5-best-practices has cross-references (quick win #10)
-Read reference/suno/v5-best-practices.md.
+Read ../../references/ai-music/suno/v5-best-practices.md.
 Verify "## Related Skills" section exists with:
 - /bitwize-music:suno-engineer reference
 - /bitwize-music:lyric-writer reference
 - /bitwize-music:lyric-reviewer reference
 Verify "## See Also" section exists with:
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/pronunciation-guide.md reference
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/structure-tags.md reference
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/genre-list.md reference
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/voice-tags.md reference
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/tips-and-tricks.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/pronunciation-guide.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/structure-tags.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/genre-list.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/voice-tags.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/tips-and-tricks.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/suno-engineer/SKILL.md reference
 
 ### TEST: Suno structure-tags has cross-references (quick win #10)
-Read reference/suno/structure-tags.md.
+Read ../../references/ai-music/suno/structure-tags.md.
 Verify "## Related Skills" section exists with:
 - /bitwize-music:lyric-writer reference
 - /bitwize-music:suno-engineer reference
 - /bitwize-music:lyric-reviewer reference
 Verify "## See Also" section exists with:
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/v5-best-practices.md reference
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/pronunciation-guide.md reference
-- ${CLAUDE_PLUGIN_ROOT}/reference/suno/voice-tags.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/v5-best-practices.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/pronunciation-guide.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/voice-tags.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/lyric-writer/SKILL.md reference
 
 ### TEST: Mastering workflow has cross-references (quick win #10)
@@ -504,7 +504,7 @@ Verify "## Related Skills" section exists with:
 - /bitwize-music:release-director reference
 Verify "## See Also" section exists with:
 - ${CLAUDE_PLUGIN_ROOT}/tools/mastering/ scripts listed
-- ${CLAUDE_PLUGIN_ROOT}/reference/workflows/release-procedures.md reference
+- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/workflows/release-procedures.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/mastering-engineer/SKILL.md reference
 
 ### TEST: Explicit content word list documented
@@ -822,13 +822,13 @@ Verify it INCLUDES artist folder (not `{audio_root}/{album}/sheet-music/`)
 CLAUDE.md's Workflow Overview line (`Concept → Research → Write ... → Master → Promo Videos (optional) → Promo Copy (optional) → Release`) does not mention sheet music at all, and there is no "Sheet Music Generation (Optional)" CLAUDE.md section or sheet-music-publisher routing rule. Sheet music's position is documented only via its own skill: verify `skills/sheet-music-publisher/SKILL.md` frontmatter `description:` states "Use after mastering when the user wants sheet music or a songbook for their album."
 
 ### TEST: Sheet music in Album Completion Checklist
-DROPPED — no current doc states this. CLAUDE.md has no "Album Completion Checklist" section, and the actual checklist content (now `reference/workflows/release-procedures.md` "### 1. Verify Completion Checklist") does not include a sheet-music line item. Sheet music is documented purely as an optional, on-request, post-mastering skill (see "Sheet music workflow position documented" above) — nothing currently claims it belongs on the release checklist.
+DROPPED — no current doc states this. CLAUDE.md has no "Album Completion Checklist" section, and the actual checklist content (now `../../references/ai-music/workflows/release-procedures.md` "### 1. Verify Completion Checklist") does not include a sheet-music line item. Sheet music is documented purely as an optional, on-request, post-mastering skill (see "Sheet music workflow position documented" above) — nothing currently claims it belongs on the release checklist.
 
 ### TEST: Sheet music skill in skills table
 CLAUDE.md has no skills table anymore. Read `docs/skills.md` "Release & Distribution" table and verify `sheet-music-publisher` is listed.
 
 ### TEST: Config has sheet_music section
-Read config/config.example.yaml.
+Read ../../config/ai-music/config.example.yaml.
 Verify `sheet_music:` section exists with:
 - `page_size:` (letter, 9x12, or 6x9)
 - `section_headers:` (boolean)
@@ -862,18 +862,18 @@ Glob: skills/release-director/SKILL.md
 ```
 
 ### TEST: Album completion checklist documented
-CLAUDE.md has no "Album Completion Checklist" section. Read `reference/workflows/release-procedures.md` "### 1. Verify Completion Checklist" and verify checklist items exist (all tracks Final with Suno Links, album art generated, audio mastered, streaming lyrics filled in).
+CLAUDE.md has no "Album Completion Checklist" section. Read `../../references/ai-music/workflows/release-procedures.md` "### 1. Verify Completion Checklist" and verify checklist items exist (all tracks Final with Suno Links, album art generated, audio mastered, streaming lyrics filled in).
 
 ### TEST: Post-release actions documented
 CLAUDE.md has no "Post-Release Immediate Actions" section. Verify instead:
-1. `reference/workflows/release-procedures.md` "### 3. Upload to Platforms" documents uploading to SoundCloud/distributor and adding platform URLs to the album README
+1. `../../references/ai-music/workflows/release-procedures.md` "### 3. Upload to Platforms" documents uploading to SoundCloud/distributor and adding platform URLs to the album README
 2. `reference/workflows/checkpoint-scripts.md` "## Post-Release Message" documents the release announcement template
 
 ### TEST: Streaming lyrics format documented
 CLAUDE.md has no "Streaming Lyrics Format" section — it moved to `reference/distribution.md`. Read `reference/distribution.md` "## Streaming Lyrics Format" / "### Format Rules" and verify format rules are documented.
 
 ### TEST: Album art workflow documented
-CLAUDE.md has no "Album Art Generation" section — it moved to `reference/workflows/release-procedures.md`. Read that file's "## Album Art Generation" section and verify it documents:
+CLAUDE.md has no "Album Art Generation" section — it moved to `../../references/ai-music/workflows/release-procedures.md`. Read that file's "## Album Art Generation" section and verify it documents:
 - When to generate ("### When to Generate Album Art")
 - Prompt location ("### Workflow" step 1, "Verify Prompt Exists" — prompt lives in the album README's "Album Art" section)
 - File naming standards ("### File Naming Standards")

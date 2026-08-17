@@ -205,7 +205,7 @@ Balance heavy and light - serious → playful → serious creates palette cleans
 
 ## Building the Album: The 7 Planning Phases
 
-See also: `${CLAUDE_PLUGIN_ROOT}/reference/workflows/album-planning-phases.md`
+See also: `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/workflows/album-planning-phases.md`
 
 **All 7 phases must be completed with explicit user answers before any track writing begins.**
 

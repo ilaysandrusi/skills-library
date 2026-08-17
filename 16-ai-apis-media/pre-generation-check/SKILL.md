@@ -93,7 +93,7 @@ Do NOT proceed with gate evaluation until the mismatch is resolved — the wrong
 
 ### Gate 6: Artist Names Cleared
 - **Check**: Style prompt does not contain real artist/band names
-- **Reference**: `${CLAUDE_PLUGIN_ROOT}/reference/suno/artist-blocklist.md`
+- **Reference**: `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/artist-blocklist.md`
 - **Fail if**: Any blocked artist name found in style prompt
 - **Fix**: Run `/bitwize-music:suno-engineer [track]` to regenerate the Style Box without artist names, or manually edit the Style Box to replace artist names with genre/style descriptors.
 - **Severity**: BLOCKING — Suno filters/blocks artist names

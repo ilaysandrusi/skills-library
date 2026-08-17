@@ -32,7 +32,7 @@ Create a task file in `.specs/tasks/draft/` with:
 Run the folder creation script to create task directories and configure gitignore:
 
 ```bash
-bash ${CLAUDE_PLUGIN_ROOT}/scripts/create-folders.sh
+bash ${CLAUDE_PLUGIN_ROOT}/../../scripts/context-engineering-kit-sdd/create-folders.sh
 ```
 
 This creates:

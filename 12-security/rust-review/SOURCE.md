@@ -14,3 +14,7 @@ structure ties them to it. The evidence for each is below.
 | `agents/` | 3 | `plugins/rust-review/agents/` | trailofbits/skills: upstream `plugins/rust-review/` contains exactly this one skill plus these agents |
 
 See [`/ARTIFACTS.md`](../../ARTIFACTS.md) for the shared artifacts that could not be tied to a single skill.
+| `scripts/` | 9 | `plugins/rust-review/scripts/` | plugin publishes exactly this one skill, and its agents read these |
+| `prompts/` | 71 | `plugins/rust-review/prompts/` | plugin publishes exactly this one skill, and its agents read these |
+
+The `scripts/` and `prompts/` layers were restored during the dependency-repair pass: the agents held here call `scripts/generate_sarif.py` and read `prompts/clusters/manifest.json`.

@@ -178,11 +178,11 @@ For the community-led, unpaid advocate end of this (badges, recognition, communi
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md).
+For implementation, see the [tools registry](../../tools/coreyhaines-marketing/REGISTRY.md).
 
 | Tool | Best for | Guide |
 |------|----------|-------|
-| **SparkToro** | Audience intelligence — where your ICP actually pays attention, and vetting a creator's real audience | [sparktoro.md](../../tools/integrations/sparktoro.md) |
+| **SparkToro** | Audience intelligence — where your ICP actually pays attention, and vetting a creator's real audience | [sparktoro.md](../../tools/coreyhaines-marketing/integrations/sparktoro.md) |
 
 Dedicated creator-discovery/CRM platforms (e.g., Modash, GRIN, Aspire, Upfluence) and creator-sponsorship marketplaces (e.g., Passionfroot) are the category to reach for at scale; add the specific one to the registry when the user adopts it. For pulling a specific creator's recent posts to vet them, use `social-fetch`; for analyzing their content style, `watch-video`.
 

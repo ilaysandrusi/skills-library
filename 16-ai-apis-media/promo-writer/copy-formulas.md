@@ -3,7 +3,7 @@
 Tactical templates for writing social media copy. Used by the promo-writer skill to generate platform-specific posts from album context.
 
 For platform character limits and hashtag rules, see [/skills/promo-reviewer/platform-rules.md](/skills/promo-reviewer/platform-rules.md).
-For broader content strategy, see [/reference/promotion/social-media-best-practices.md](/reference/promotion/social-media-best-practices.md).
+For broader content strategy, see [../../references/ai-music/promotion/social-media-best-practices.md](../../references/ai-music/promotion/social-media-best-practices.md).
 
 ---
 

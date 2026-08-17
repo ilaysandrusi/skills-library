@@ -67,7 +67,7 @@ pip install pypdf reportlab pyyaml
 - [anthemscore-reference.md](anthemscore-reference.md) - AnthemScore CLI reference, installation
 - [musescore-reference.md](musescore-reference.md) - MuseScore polish techniques
 - [publishing-guide.md](publishing-guide.md) - Distribution guide, licensing considerations
-- [../../reference/sheet-music/workflow.md](../../reference/sheet-music/workflow.md) - Complete workflow documentation
+- [../../references/ai-music/sheet-music/workflow.md](../../references/ai-music/sheet-music/workflow.md) - Complete workflow documentation
 - [workflow-detail.md](workflow-detail.md) - Detailed workflow phases, error handling, tips, tool examples
 
 ---

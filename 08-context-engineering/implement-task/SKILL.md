@@ -268,7 +268,7 @@ CRITICAL: For each sub-agent (implementation and evaluation), you need to provid
 - Step number
 - Item number (if applicable)
 - Artifact path (if applicable)
-- **Value of `${CLAUDE_PLUGIN_ROOT}` so agents can resolve paths like `@${CLAUDE_PLUGIN_ROOT}/scripts/create-scratchpad.sh`**
+- **Value of `${CLAUDE_PLUGIN_ROOT}` so agents can resolve paths like `@${CLAUDE_PLUGIN_ROOT}/../../scripts/context-engineering-kit-sdd/create-scratchpad.sh`**
 
 ### What You DO
 

@@ -1,6 +1,6 @@
 # Configure Skill - Settings Reference
 
-Quick lookup for all configuration options. Full documentation: [${CLAUDE_PLUGIN_ROOT}/config/README.md](${CLAUDE_PLUGIN_ROOT}/config/README.md).
+Quick lookup for all configuration options. Full documentation: [${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/README.md](${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/README.md).
 
 ---
 
@@ -101,7 +101,7 @@ For `/bitwize-music:cloud-uploader`:
 | `cloud.provider` | `r2` or `s3` |
 | `cloud.public_read` | Make uploads public |
 
-Provider-specific keys documented in [${CLAUDE_PLUGIN_ROOT}/reference/cloud/setup-guide.md](${CLAUDE_PLUGIN_ROOT}/reference/cloud/setup-guide.md).
+Provider-specific keys documented in [${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/cloud/setup-guide.md](${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/cloud/setup-guide.md).
 
 ---
 
@@ -139,12 +139,12 @@ paths:
 
 ### Full Config
 
-See [${CLAUDE_PLUGIN_ROOT}/config/config.example.yaml](${CLAUDE_PLUGIN_ROOT}/config/config.example.yaml) for complete example with all options.
+See [${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/config.example.yaml](${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/config.example.yaml) for complete example with all options.
 
 ---
 
 ## See Also
 
 - [SKILL.md](SKILL.md) - Full skill documentation
-- [${CLAUDE_PLUGIN_ROOT}/config/README.md](${CLAUDE_PLUGIN_ROOT}/config/README.md) - Complete config reference with examples
-- [${CLAUDE_PLUGIN_ROOT}/config/config.example.yaml](${CLAUDE_PLUGIN_ROOT}/config/config.example.yaml) - Example config file
+- [${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/README.md](${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/README.md) - Complete config reference with examples
+- [${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/config.example.yaml](${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/config.example.yaml) - Example config file

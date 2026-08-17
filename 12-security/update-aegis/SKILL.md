@@ -26,7 +26,7 @@ user asked to update Aegis.
 From the installed method-pack root, inspect the host-scoped registry:
 
 ```bash
-python scripts/aegis-update.py status --json
+python ../../scripts/aegis/aegis-update.py status --json
 ```
 
 If the registry is missing, register the current host before updating. Use the
@@ -41,7 +41,7 @@ separate editable checkouts.
 Codex example:
 
 ```bash
-python scripts/aegis-update.py register \
+python ../../scripts/aegis/aegis-update.py register \
   --host codex \
   --sync-mode junction \
   --discovery-root ~/.agents/skills/aegis \
@@ -51,7 +51,7 @@ python scripts/aegis-update.py register \
 Copy-based host example:
 
 ```bash
-python scripts/aegis-update.py register \
+python ../../scripts/aegis/aegis-update.py register \
   --host codebuddy \
   --sync-mode copy-skills \
   --discovery-root ~/.codebuddy/skills \
@@ -61,7 +61,7 @@ python scripts/aegis-update.py register \
 Prefixed direct-child host example:
 
 ```bash
-python scripts/aegis-update.py register \
+python ../../scripts/aegis/aegis-update.py register \
   --host copilot \
   --sync-mode junction \
   --discovery-shape direct-child \
@@ -86,13 +86,13 @@ follow its exact plugin-manager prompt. Then locate the managed root from
 
 ```bash
 cd <aegis-method-pack-root>
-python scripts/aegis-doctor.py --json --host-profile kimi-code-auto
+python ../../scripts/aegis/aegis-doctor.py --json --host-profile kimi-code-auto
 ```
 
 Kimi Code CLI **Explicit Compatibility Installation** example:
 
 ```bash
-python scripts/aegis-update.py register \
+python ../../scripts/aegis/aegis-update.py register \
   --host kimi-code \
   --sync-mode junction \
   --reload-hint "restart Kimi Code CLI"
@@ -108,7 +108,7 @@ Plugin-managed hosts can be registered, but the updater reports that the host
 plugin manager owns the update path:
 
 ```bash
-python scripts/aegis-update.py register \
+python ../../scripts/aegis/aegis-update.py register \
   --host opencode \
   --sync-mode plugin-managed \
   --reload-hint "restart OpenCode"
@@ -119,26 +119,26 @@ python scripts/aegis-update.py register \
 Current or explicitly selected host:
 
 ```bash
-python scripts/aegis-update.py update --host <host> --json
+python ../../scripts/aegis/aegis-update.py update --host <host> --json
 ```
 
 All registered hosts, only when the user explicitly asks for all-host update:
 
 ```bash
-python scripts/aegis-update.py update --all --json
+python ../../scripts/aegis/aegis-update.py update --all --json
 ```
 
 Preview without touching files:
 
 ```bash
-python scripts/aegis-update.py update --host <host> --dry-run --json
+python ../../scripts/aegis/aegis-update.py update --host <host> --dry-run --json
 ```
 
 If the installed checkout has local changes, do not overwrite them. Either ask
 the user how to proceed or, with explicit permission, preserve them with:
 
 ```bash
-python scripts/aegis-update.py update --host <host> --stash --json
+python ../../scripts/aegis/aegis-update.py update --host <host> --stash --json
 ```
 
 ## Completion Evidence

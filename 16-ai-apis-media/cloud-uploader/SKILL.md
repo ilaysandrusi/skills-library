@@ -67,7 +67,7 @@ cloud:
     bucket: "promo-videos"
 ```
 
-See `${CLAUDE_PLUGIN_ROOT}/reference/cloud/setup-guide.md` for detailed setup instructions.
+See `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/cloud/setup-guide.md` for detailed setup instructions.
 
 ### Required Files
 
@@ -257,7 +257,7 @@ Files are organized in the bucket as:
 
 **"Cloud uploads not enabled"**
 - Add `cloud.enabled: true` to config
-- See `${CLAUDE_PLUGIN_ROOT}/reference/cloud/setup-guide.md`
+- See `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/cloud/setup-guide.md`
 
 **"Credentials not configured"**
 - Add credentials to config file
@@ -340,7 +340,7 @@ Ready for release workflow: /bitwize-music:release-director {album}
 
 ## Related Documentation
 
-- `${CLAUDE_PLUGIN_ROOT}/reference/cloud/setup-guide.md` - Detailed setup instructions
+- `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/cloud/setup-guide.md` - Detailed setup instructions
 - `${CLAUDE_PLUGIN_ROOT}/skills/promo-director/SKILL.md` - Generate promo videos
 - `${CLAUDE_PLUGIN_ROOT}/skills/release-director/SKILL.md` - Release workflow
 

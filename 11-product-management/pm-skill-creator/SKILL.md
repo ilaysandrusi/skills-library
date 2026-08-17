@@ -229,8 +229,8 @@ After collecting answers to Q1-Q5, the agent generates a complete SKILL.md draft
 "Here's your draft SKILL.md. Before we call it done:
 
 1. **Review the draft** — Does it capture your intent?
-2. **Run validation** — `python3 scripts/check-skill-metadata.py skills/<name>/SKILL.md`
-3. **Check triggers** — `python3 scripts/check-skill-triggers.py skills/<name>/SKILL.md --show-cases`
+2. **Run validation** — `python3 ../../scripts/pm-skills/check-skill-metadata.py skills/<name>/SKILL.md`
+3. **Check triggers** — `python3 ../../scripts/pm-skills/check-skill-triggers.py skills/<name>/SKILL.md --show-cases`
 4. **Smoke test** — `./scripts/test-a-skill.sh --skill <name> --smoke`
 
 Want me to adjust anything, or are you ready to validate?"
@@ -313,8 +313,8 @@ Start with one. We can build the others after."
 ### Repo Tools
 - `scripts/build-a-skill.sh` — Terminal wizard for section-by-section skill creation
 - `scripts/add-a-skill.sh` — Content-first automated skill generator
-- `scripts/check-skill-metadata.py` — Structural validation
-- `scripts/check-skill-triggers.py` — Trigger-readiness audit
+- `../../scripts/pm-skills/check-skill-metadata.py` — Structural validation
+- `../../scripts/pm-skills/check-skill-triggers.py` — Trigger-readiness audit
 - `scripts/test-a-skill.sh` — Full quality gate
 - `scripts/find-a-skill.sh` — Check for overlapping skills before creating
 
