@@ -1,5 +1,3 @@
-<!-- Generated from helius-skills/helius/SKILL.md — do not edit -->
-
 ---
 name: helius
 version: "1.1.1"
@@ -10,6 +8,8 @@ description: >
   event notifications, analyzing wallets (balances, history, identity), or
   managing Helius API keys and plans. Requires helius-mcp MCP server.
 ---
+
+<!-- Generated from helius-skills/helius/SKILL.md — do not edit -->
 
 # Helius — Build on Solana
 

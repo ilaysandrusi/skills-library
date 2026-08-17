@@ -1,3 +1,8 @@
+---
+name: speckit-updater
+description: "This skill provides safe update capabilities for GitHub SpecKit installations, preserving customizations while applying template updates."
+---
+
 # SpecKit Safe Update
 
 This skill provides safe update capabilities for GitHub SpecKit installations, preserving customizations while applying template updates.

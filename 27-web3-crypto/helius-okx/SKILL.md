@@ -1,5 +1,3 @@
-<!-- Generated from helius-skills/helius-okx/SKILL.md — do not edit -->
-
 ---
 name: helius-okx
 version: "1.0.1"
@@ -12,6 +10,8 @@ description: >
   Sender, or building trading bots with LaserStream signals. Requires helius-mcp
   MCP server and onchainos CLI.
 ---
+
+<!-- Generated from helius-skills/helius-okx/SKILL.md — do not edit -->
 
 # Helius x OKX — Build Trading & Intelligence Apps on Solana
 

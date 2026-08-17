@@ -1,3 +1,8 @@
+---
+name: obsidian-knowledge-brain
+description: "Captures decisions and error fixes across AI coding sessions into a searchable, project-local knowledge base and evolves project rules automatically; Obsidian is optional for knowledge-graph browsing. / 自动捕获每次会话的决策和错误，构建可检索的知识库。"
+---
+
 # Obsidian Knowledge Brain v4.0 / Obsidian 知识大脑 v4.0
 
 **Schema**: 4.0 | **Lines**: ≤200 | **Load**: Always (if skill active)

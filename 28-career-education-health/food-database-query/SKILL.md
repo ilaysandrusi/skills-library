@@ -1,3 +1,8 @@
+---
+name: food-database-query
+description: "本技能提供全面的营养食物数据库查询功能,支持食物营养信息查询、比较、推荐和自动营养计算。"
+---
+
 # 食物数据库查询技能
 
 **技能名称**: Food Database Query

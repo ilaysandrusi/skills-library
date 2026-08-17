@@ -1,3 +1,8 @@
+---
+name: build-in-public
+description: "Build in public isn't marketing. It's letting people watch you work. The best posts feel like you're narrating your thought process to a friend who's also a senior engineer. No hype sludge. No \"I'm excited to announce.\" Just: here's what I built, here's why it matters, here's…"
+---
+
 # Build in Public — Best Practices
 
 ## Philosophy

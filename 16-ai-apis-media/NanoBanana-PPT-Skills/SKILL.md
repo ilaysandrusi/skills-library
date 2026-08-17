@@ -1,3 +1,8 @@
+---
+name: NanoBanana-PPT-Skills
+description: "基于 AI 自动生成高质量 PPT 图片和视频，支持智能转场和交互式播放 (AI-generated 16:9 PPT images plus Kling AI transition videos, interactive player and FFmpeg export)."
+---
+
 # PPT Generator Pro - Claude Code Skill
 
 ## 📋 元数据

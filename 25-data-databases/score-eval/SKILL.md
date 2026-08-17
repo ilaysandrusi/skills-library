@@ -1,6 +1,7 @@
 ---
 name: score-eval
 disable-model-invocation: true
+description: "Score the eval diff at $ARGUMENTS against the eval rubric."
 ---
 
 Score the eval diff at $ARGUMENTS against the eval rubric.

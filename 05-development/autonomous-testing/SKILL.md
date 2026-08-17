@@ -1,3 +1,8 @@
+---
+name: autonomous-testing
+description: "An AI-driven testing agent that auto-discovers, generates, executes, evaluates, and fixes tests for any project type. Inspired by the edubites autonomous test runner pattern, generalized for Claude Bootstrap + Maggy."
+---
+
 # Autonomous Testing Agent
 
 ## Overview

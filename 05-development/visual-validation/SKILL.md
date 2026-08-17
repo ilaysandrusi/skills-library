@@ -1,3 +1,8 @@
+---
+name: visual-validation
+description: "Every UI change should be visually verified before it ships. Peekaboo captures pixel-accurate screenshots. The system compares before/after and flags visual regressions. No manual \"looks good to me\" — the machine verifies what the machine built."
+---
+
 # Visual Validation — Autonomous Screenshot Verification
 
 ## Philosophy

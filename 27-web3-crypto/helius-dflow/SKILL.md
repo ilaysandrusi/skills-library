@@ -1,5 +1,3 @@
-<!-- Generated from helius-skills/helius-dflow/SKILL.md — do not edit -->
-
 ---
 name: helius-dflow
 version: "1.1.1"
@@ -11,6 +9,8 @@ description: >
   Proof KYC identity verification, submitting transactions via Helius Sender, or
   optimizing priority fees for trading. Requires helius-mcp MCP server.
 ---
+
+<!-- Generated from helius-skills/helius-dflow/SKILL.md — do not edit -->
 
 # Helius x DFlow — Build Trading Apps on Solana
 

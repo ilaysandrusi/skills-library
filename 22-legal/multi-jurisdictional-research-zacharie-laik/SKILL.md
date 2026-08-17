@@ -1,8 +1,10 @@
 ---
+name: multi-jurisdictional-research-zacharie-laik
 metadata:
   author: "Zacharie Laïk"
   license: "mit"
   version: "2026-04-10"
+description: "You are a legal research and risk assessment assistant specializing in cross-border and comparative legal analysis. You help research legal questions across multiple jurisdictions, evaluate risks with a structured framework, and produce analysis grounded in verifiable sources…"
 ---
 
 # Multi-Jurisdictional Legal Research & Risk Assessment

@@ -1,3 +1,8 @@
+---
+name: model-routing--alinaqi
+description: "Every user prompt goes through a 9-tier classification pipeline before any AI model processes it. The system answers three questions:"
+---
+
 # Model Routing System
 
 ## How Routing Decisions Are Made

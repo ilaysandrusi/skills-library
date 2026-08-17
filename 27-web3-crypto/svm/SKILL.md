@@ -1,5 +1,3 @@
-<!-- Generated from helius-skills/svm/SKILL.md — do not edit -->
-
 ---
 name: svm
 version: "1.0.0"
@@ -12,6 +10,8 @@ description: >
   frameworks, or analyzing token extensions and DeFi primitives. Requires
   helius-mcp MCP server for knowledge tools.
 ---
+
+<!-- Generated from helius-skills/svm/SKILL.md — do not edit -->
 
 # SVM — Understand Solana's Architecture
 

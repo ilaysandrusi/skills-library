@@ -1,5 +1,3 @@
-<!-- Generated from helius-skills/helius-jupiter/SKILL.md — do not edit -->
-
 ---
 name: helius-jupiter
 version: "1.0.1"
@@ -11,6 +9,8 @@ description: >
   embedding a drop-in swap widget, submitting transactions via Helius Sender, or
   optimizing priority fees for DeFi operations. Requires helius-mcp MCP server.
 ---
+
+<!-- Generated from helius-skills/helius-jupiter/SKILL.md — do not edit -->
 
 # Helius x Jupiter — Build DeFi Apps on Solana
 

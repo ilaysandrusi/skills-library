@@ -1,5 +1,3 @@
-<!-- Generated from helius-skills/helius-phantom/SKILL.md — do not edit -->
-
 ---
 name: helius-phantom
 version: "1.0.1"
@@ -11,6 +9,8 @@ description: >
   payments, displaying portfolio data, streaming real-time updates, or setting
   up secure API key proxying. Requires helius-mcp MCP server.
 ---
+
+<!-- Generated from helius-skills/helius-phantom/SKILL.md — do not edit -->
 
 # Helius x Phantom — Build Frontend Solana Apps
 
