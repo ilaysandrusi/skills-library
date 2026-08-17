@@ -17,7 +17,7 @@ metadata: {"author": "aaron-he-zhu", "version": "19.2.0", "discipline": "influen
 
 Designs an influencer campaign from strategy to execution plan — an actionable blueprint that ties business objectives to creative execution.
 
-**Scope edge — product launches**: this skill owns the **creator lane** of a launch. The launch itself — tier/type decision, launch calendar, press motion, community launch day, readiness gate — belongs to the launch discipline ([launch-tier-planner](../../../launch/research/launch-tier-planner/SKILL.md) and siblings), which hands this skill the creator-channel sub-plan aligned to the [launch-registry](../../../protocol/launch-registry/SKILL.md) date and stage. "Launch a product with creators" starts here; "launch a product" starts there.
+**Scope edge — product launches**: this skill owns the **creator lane** of a launch. The launch itself — tier/type decision, launch calendar, press motion, community launch day, readiness gate — belongs to the launch discipline ([launch-tier-planner](../launch-tier-planner/SKILL.md) and siblings), which hands this skill the creator-channel sub-plan aligned to the [launch-registry](../launch-registry/SKILL.md) date and stage. "Launch a product with creators" starts here; "launch a product" starts there.
 
 ## Quick Start
 
@@ -84,15 +84,15 @@ Work the nine steps in order. Each has a fill-in template in [references/templat
 - [skill-contract.md](../../../references/skill-contract.md) — shared contract and handoff schema.
 - [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
 - [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipes per connector category.
-- [audience-mapper](../../scout/audience-mapper/SKILL.md) — define the target audience this plan serves.
+- [audience-mapper](../audience-mapper/SKILL.md) — define the target audience this plan serves.
 - [brief-generator](../brief-generator/SKILL.md) — turn the plan into per-influencer briefs.
 - [budget-optimizer](../budget-optimizer/SKILL.md) — refine the budget allocation.
-- [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — find influencers matching the criteria.
+- [influencer-discovery](../influencer-discovery/SKILL.md) — find influencers matching the criteria.
 
 ## Next Best Skill
 
 - **Primary**: [brief-generator](../brief-generator/SKILL.md) — convert the approved plan into concrete influencer briefs.
 - **Alternate**: [budget-optimizer](../budget-optimizer/SKILL.md) — pressure-test and optimize the budget split before locking the plan.
-- **Alternate**: [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — build the shortlist against the selection criteria defined here.
+- **Alternate**: [influencer-discovery](../influencer-discovery/SKILL.md) — build the shortlist against the selection criteria defined here.
 
 Termination note: keep a visited-set of skills invoked this session. If the primary next skill has already run this session, stop and report the chain complete rather than re-invoking. Do not chain deeper than 3 hops from the originating request.

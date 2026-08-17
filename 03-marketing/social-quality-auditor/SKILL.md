@@ -121,7 +121,7 @@ Persist only after explicit authorization to `memory/audits/social/YYYY-MM-DD-<t
 
 ## Next Best Skill
 
-- **Channel truth:** [channel-registry](../../../protocol/channel-registry/SKILL.md)
-- **Claims:** [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md)
+- **Channel truth:** [channel-registry](../channel-registry/SKILL.md)
+- **Claims:** [offer-claims-registry](../offer-claims-registry/SKILL.md)
 - **UGC/response:** [engagement-inbox-manager](../engagement-inbox-manager/SKILL.md)
-- **Measurement:** [social-measurement-loop](../../observe/social-measurement-loop/SKILL.md)
+- **Measurement:** [social-measurement-loop](../social-measurement-loop/SKILL.md)

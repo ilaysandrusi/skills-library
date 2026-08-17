@@ -9,7 +9,7 @@ For the capability matrix, version compatibility, error taxonomy,
 observability, and safety policy these workflows assume, see
 [CAPABILITIES.md](CAPABILITIES.md). For docs, installed-DOCA layout, or
 release notes, route through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 Each verb describes the **shape of the workflow**, not a copy-paste
 recipe: walk the user through the steps in order, verifying preconditions
 before recommending the next call.
@@ -58,7 +58,7 @@ the environment is ready for pipe construction.
      `Failed to get hws cap` / `dest action ROOT … err -121`). On the host
      in this mode, STOP and route Flow work to the DPU Arm side, or change
      the card's mode through
-     [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) — do
+     [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) — do
      not proceed to pipe construction.
    - `EMBEDDED_CPU` (DPU mode), or a NIC whose opened function advertises
      a usable steering plane → placement is fine; continue.
@@ -593,7 +593,7 @@ on a BlueField in `SEPARATED_HOST` / NIC mode, and it reproduces on
 *every* device in *both* `vnf` and `switch` modes. Route back to
 [`## configure`](#configure) step 2; the fix is to run Flow on the DPU Arm
 side or change the card's mode via
-[`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) — never a
+[`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) — never a
 pipe-spec edit.
 
 Walk in this order — do not skip steps:
@@ -607,7 +607,7 @@ Walk in this order — do not skip steps:
    to determine whether the pipe itself is healthy.
 3. **What's actually programmed / verbose logs third.** To inspect what
    the hardware actually has programmed, route to the
-   [`doca-flow-tune`](../../tools/doca-flow-tune/SKILL.md) sibling skill,
+   [`doca-flow-tune`](../doca-flow-tune/SKILL.md) sibling skill,
    which owns the programmed-state surface. For verbose runtime logging
    during active debugging, build/link the trace flavor
    (`pkg-config doca-flow-trace`) and run with `--sdk-log-level 70`; the
@@ -627,7 +627,7 @@ Walk in this order — do not skip steps:
    BFB version) is owned by
    [`doca-debug ## debug`](../../doca-debug/TASKS.md#debug) Layer 2; the
    version-detection mechanics live in
-   [`doca-public-knowledge-map ## Where to find the version`](../../doca-public-knowledge-map/SKILL.md#where-to-find-the-version).
+   [`doca-public-knowledge-map ## Where to find the version`](../doca-public-knowledge-map/SKILL.md#where-to-find-the-version).
    A library upgrade between sessions is a common and easy-to-miss cause.
 6. **Escalation criteria.** If counters move correctly but observed
    behavior is still wrong AND what's programmed (step 3) matches the spec
@@ -793,7 +793,7 @@ ladder:
 
 **rollback overlay.** A CT add is a pipeline-edit-class mutation (it extends
 an already-up stateless port; it does not touch firmware or eswitch mode), so
-the [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) overlay does
+the [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) overlay does
 NOT fire — CT follows the same snapshot-first rollback discipline as
 [`## rollback`](#rollback), with a CT-specific reversal. **Snapshot before
 mutate:** record the stateless pipe scheme the agent authored (names, root
@@ -890,7 +890,7 @@ attachment, miss-pipe linkage), (b) the per-pipe counter baseline
 and (c) the device cap snapshot the edit gated on (`doca_caps --list-devs`
 + Flow cap query results). For an independent view of what is actually
 programmed, route to
-[`doca-flow-tune`](../../tools/doca-flow-tune/SKILL.md). That record IS the
+[`doca-flow-tune`](../doca-flow-tune/SKILL.md). That record IS the
 rollback target.
 
 1. **Document the reverse-edit verb in the same answer that recommends the
@@ -920,7 +920,7 @@ rollback target.
 
 Hardware changes (mode flip, SR-IOV, firmware) are NOT pipeline edits and
 route through
-[`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)'s rollback
+[`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)'s rollback
 discipline instead.
 
 ## Command appendix
@@ -935,12 +935,12 @@ binary or `pkg-config` against the installed `.pc`, not prose recall.
 | --- | --- | --- | --- |
 | Discover installed Flow version | `pkg-config --modversion doca-flow` | [`## configure`](#configure) step 1 | Matches the version pinned in other places (`doca_caps --version`, `applications/VERSION`). |
 | Discover Flow link flags (release flavor) | `pkg-config --cflags --libs doca-flow doca-common doca-dpdk-bridge libdpdk` | [`## build`](#build) | Returns the canonical `-l` list. `doca-flow` alone omits the companion DSOs → `undefined reference` / `DSO missing from command line`; pass every module the app calls. Hand-typed `-l` lines are the failure mode. |
-| Discover device + steering capabilities | `doca_caps --list-devs` | [`## configure`](#configure) step 2 + [doca-caps](../../tools/doca-caps/SKILL.md) | Lists every device DOCA sees with the active configuration and supported match / action kinds. |
+| Discover device + steering capabilities | `doca_caps --list-devs` | [`## configure`](#configure) step 2 + [doca-caps](../doca-caps/SKILL.md) | Lists every device DOCA sees with the active configuration and supported match / action kinds. |
 | Enumerate ports / representors | `devlink dev show` + the installed Flow port-enumeration sample | [`## configure`](#configure) step 3 | Shows the port and every representor the user expects to forward to. |
 | Validate a pipe spec (read-only) | `doca_flow_pipe_create` itself performs constructor-time validation; treat its `DOCA_ERROR_INVALID_VALUE` / `DOCA_ERROR_NOT_SUPPORTED` return as the validate signal. There is no separate `doca_flow_pipe_validate` public symbol in the current release. Use the dry-run / staged-entry pattern from the shipped sample for a fuller validation surface. | [`## test`](#test) step 1 | A successful return from `doca_flow_pipe_create` means the spec is internally consistent against the current device caps; an error means the spec is invalid — do not retry without changing the spec. |
 | Raise log verbosity for a Flow run | `--sdk-log-level 70` on the program command line | [`## run`](#run) + [doca-debug CAPABILITIES.md ## Observability](../../doca-debug/CAPABILITIES.md#observability) | TRACE / DEBUG lines appear in stderr; the Flow lifecycle calls are visible. |
 | Read per-entry / per-pipe counters | `doca_flow_resource_query_entry()` / `doca_flow_resource_query_pipe_miss()` | [`## debug`](#debug) step 1 | Counter for the suspected entry is non-zero under expected traffic. |
-| Inspect what's actually programmed | route to [`doca-flow-tune`](../../tools/doca-flow-tune/SKILL.md) | [`## debug`](#debug) step 3 | The programmed state matches the user's mental model of the pipe. Diff = bug. |
+| Inspect what's actually programmed | route to [`doca-flow-tune`](../doca-flow-tune/SKILL.md) | [`## debug`](#debug) step 3 | The programmed state matches the user's mental model of the pipe. Diff = bug. |
 
 Three cross-cutting rules for this appendix:
 
@@ -964,7 +964,7 @@ does not invent guidance:
 
 - **install.** Installing DOCA, choosing packages, post-install
   verification, `pkg-config` wiring — defer to
-  [doca-public-knowledge-map ## Layout of an installed DOCA package](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [doca-public-knowledge-map ## Layout of an installed DOCA package](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA is already installed.
 - **deploy.** Deploying BlueField images, provisioning DPUs at scale,
   Kubernetes operator workflows — out of scope for Phase 1 and reserved

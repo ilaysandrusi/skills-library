@@ -11,7 +11,7 @@ Read this file when the loader sent you here from
 (the verbs `configure / build / modify / run / test / debug`),
 jump to [TASKS.md](TASKS.md). For the canonical DOCA
 version-handling rules that this skill layers a GPUNetIO overlay
-on top of, see [`doca-version`](../../doca-version/SKILL.md).
+on top of, see [`doca-version`](../doca-version/SKILL.md).
 
 ## Pattern overview
 
@@ -119,7 +119,7 @@ cap-query rule.
 
 ## Version compatibility
 
-For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
+For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
 
 **The GPUNetIO-specific overlay** is:
 
@@ -189,7 +189,7 @@ the `DOCA_LOG_LEVEL` env var, the trace build flavor) see
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout, sample tree) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -207,9 +207,9 @@ GPUNetIO setup:
 
 | Precondition | What must be true | How the agent verifies | Where to fix |
 | --- | --- | --- | --- |
-| CUDA toolkit installed and matched to DOCA | The CUDA toolkit on the host is installed at a version listed as compatible with both installed DOCA package surfaces per the DOCA Compatibility Policy | `nvcc --version`; `cat /usr/local/cuda/version.txt`; compare both `pkg-config --modversion doca-gpunetio` and `pkg-config --modversion doca-common`, require those DOCA versions to agree, then cross-check CUDA against the [DOCA Compatibility Policy](https://docs.nvidia.com/doca/sdk/doca-compatibility-policy/index.html) | [`doca-setup`](../../doca-setup/SKILL.md) for the install-side; route to [`doca-version`](../../doca-version/SKILL.md) for the four-way-match check |
-| `nvidia_peermem` loaded for GPUDirect RDMA | The `nvidia_peermem` kernel module is loaded so GPUDirect RDMA between the NIC and the GPU works; without it GPU-initiated networking falls back or fails entirely | `lsmod \| grep nvidia_peermem`; missing → `sudo modprobe nvidia_peermem`; persistent via system config | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side; do not modify the program |
-| CUDA device enumerable | `cudaGetDeviceCount` returns at least 1 and `cudaGetDeviceProperties(devOrdinal)` succeeds for the device the user intends to drive | `nvidia-smi -L`; programmatic via the CUDA runtime; `cudaSetDevice(devOrdinal)` must succeed | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side; verify the NVIDIA driver is loaded |
+| CUDA toolkit installed and matched to DOCA | The CUDA toolkit on the host is installed at a version listed as compatible with both installed DOCA package surfaces per the DOCA Compatibility Policy | `nvcc --version`; `cat /usr/local/cuda/version.txt`; compare both `pkg-config --modversion doca-gpunetio` and `pkg-config --modversion doca-common`, require those DOCA versions to agree, then cross-check CUDA against the [DOCA Compatibility Policy](https://docs.nvidia.com/doca/sdk/doca-compatibility-policy/index.html) | [`doca-setup`](../doca-setup/SKILL.md) for the install-side; route to [`doca-version`](../doca-version/SKILL.md) for the four-way-match check |
+| `nvidia_peermem` loaded for GPUDirect RDMA | The `nvidia_peermem` kernel module is loaded so GPUDirect RDMA between the NIC and the GPU works; without it GPU-initiated networking falls back or fails entirely | `lsmod \| grep nvidia_peermem`; missing → `sudo modprobe nvidia_peermem`; persistent via system config | [`doca-setup`](../doca-setup/SKILL.md) for the env-side; do not modify the program |
+| CUDA device enumerable | `cudaGetDeviceCount` returns at least 1 and `cudaGetDeviceProperties(devOrdinal)` succeeds for the device the user intends to drive | `nvidia-smi -L`; programmatic via the CUDA runtime; `cudaSetDevice(devOrdinal)` must succeed | [`doca-setup`](../doca-setup/SKILL.md) for the env-side; verify the NVIDIA driver is loaded |
 | doca-eth side already up | The underlying `doca_eth_rxq` / `doca_eth_txq` exists and the doca-eth context is at the right lifecycle stage to expose the queue to the GPU | The [`doca-eth`](../doca-eth/SKILL.md) bring-up workflow is the upstream verb | Configure doca-eth first; do NOT skip ahead to `doca_gpu_*` calls |
 | CUDA buffers registered with DOCA | The GPU-side payload pool allocated via `cudaMalloc` is registered with DOCA via the `doca_buf_arr_create_*` family before `doca_ctx_start()` | Walk the registration sequence in [TASKS.md ## configure](TASKS.md#configure) step 4; a missing registration surfaces as `DOCA_ERROR_BAD_STATE` from the first device-side submit | Program-layer fix — the registration call goes in the host-side bring-up code, before the persistent kernel is launched |
 
@@ -252,11 +252,11 @@ topics the agent will get asked but should route elsewhere:
   integrate with non-CPU compute"* (see the worked example in
   [TASKS.md ## modify](TASKS.md#modify)) but should not invent
   DPA API surfaces here. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public DOCA DPA guide.
 - **DOCA Core context and progress engine internals** — owned
   by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   This skill *uses* the Core lifecycle; it does not redefine
   it.
 - **Cross-cutting `DOCA_ERROR_*` taxonomy** — owned by

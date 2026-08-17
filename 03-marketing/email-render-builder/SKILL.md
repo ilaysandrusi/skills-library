@@ -17,7 +17,7 @@ metadata: {"author": "aaron-he-zhu", "version": "19.2.0", "discipline": "email",
 
 Builds and QAs the coded HTML for a single email — a responsive table-based layout, a dark-mode + accessibility pass, a client-render matrix, image-block fallbacks with bulletproof CTAs, and a plain-text-parity check. This is the render half of SEND **Engage**: `email-creative-builder` writes the words, this skill turns them into a build that lands the same in Gmail, Outlook, Apple Mail, and on mobile. It does not write copy, and it does not score the email or run any veto — that is `email-quality-auditor`.
 
-**Scope guard**: this skill produces the HTML build + render QA + plain-text parity only. It writes no subject-line or body *copy* ([email-creative-builder](../email-creative-builder/SKILL.md) owns that), scores no SEND dimension, runs no veto, and does not compute the profile-weighted EQS — [email-quality-auditor](../../deliver/email-quality-auditor/SKILL.md) owns all four vetoes (S1/S2/N1/D1) and the EQS rollup.
+**Scope guard**: this skill produces the HTML build + render QA + plain-text parity only. It writes no subject-line or body *copy* ([email-creative-builder](../email-creative-builder/SKILL.md) owns that), scores no SEND dimension, runs no veto, and does not compute the profile-weighted EQS — [email-quality-auditor](../email-quality-auditor/SKILL.md) owns all four vetoes (S1/S2/N1/D1) and the EQS rollup.
 
 ## Quick Start
 
@@ -41,7 +41,7 @@ This renders broken in Outlook and images-off — fix the layout and add fallbac
 - **Writes**: a user-facing HTML build (the rendered **E/D** unit) plus the render-QA report and a reusable handoff summary.
 - **Promotes**: confirmed render blockers (a client that breaks the layout, an image-only block with no fallback, a dark-mode contrast failure) to `memory/hot-cache.md` and `memory/open-loops.md`; propose durable build decisions (approved template skeleton, brand-safe dark-mode palette) as pending-decision items — never write `decisions.md` directly.
 - **Done when**: the layout is a single-column responsive table that reflows on mobile, every color pair holds contrast in both light and dark mode, every image carries alt text and the email reads with images off, each CTA is a bulletproof (non-image) button, the client-render matrix names a pass/fail per target, and the plain-text alternate carries the same message and links as the HTML.
-- **Primary next skill**: [email-quality-auditor](../../deliver/email-quality-auditor/SKILL.md) — score the built unit and run the SEND vetoes; or [send-experiment-designer](../../deliver/send-experiment-designer/SKILL.md) if the build feeds an A/B render test.
+- **Primary next skill**: [email-quality-auditor](../email-quality-auditor/SKILL.md) — score the built unit and run the SEND vetoes; or [send-experiment-designer](../send-experiment-designer/SKILL.md) if the build feeds an A/B render test.
 
 ### Handoff Summary
 
@@ -90,8 +90,8 @@ On user confirmation, save to `memory/email/email-render-builder/YYYY-MM-DD-<sub
 
 ## Next Best Skill
 
-- **Primary**: [email-quality-auditor](../../deliver/email-quality-auditor/SKILL.md) — score the built unit's SEND dimensions, enforce S1/S2/N1/D1, and compute the profile-weighted EQS. This skill scores nothing and runs no veto.
+- **Primary**: [email-quality-auditor](../email-quality-auditor/SKILL.md) — score the built unit's SEND dimensions, enforce S1/S2/N1/D1, and compute the profile-weighted EQS. This skill scores nothing and runs no veto.
 - **If a render fix needs the copy changed** (subject too long to render, CTA label overflows the button): [email-creative-builder](../email-creative-builder/SKILL.md) — revise the words, then return here to rebuild.
-- **If the build feeds a render/subject A/B test**: [send-experiment-designer](../../deliver/send-experiment-designer/SKILL.md) — design the test across the built variants.
-- **If image-off or dark-mode breakage traces to a broken destination page** (message-match fails post-click): [landing-optimizer](../../../influencer/report/landing-optimizer/SKILL.md) — fix the post-click page, then return.
+- **If the build feeds a render/subject A/B test**: [send-experiment-designer](../send-experiment-designer/SKILL.md) — design the test across the built variants.
+- **If image-off or dark-mode breakage traces to a broken destination page** (message-match fails post-click): [landing-optimizer](../landing-optimizer/SKILL.md) — fix the post-click page, then return.
 - Global visited-set / max-depth (`max-depth: 3`) termination contract from [skill-contract.md](../../../references/skill-contract.md) applies; if the recommended next skill was already run this session, or routing is ambiguous, stop and report options instead of auto-following. Stop when the build passes the quality bar and is auditor-ready.

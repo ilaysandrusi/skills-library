@@ -76,7 +76,7 @@ If the host capability or verified root runtime/schema/catalog is unavailable, l
 
 ## Next Best Skill
 
-- **Plan tier/type:** [launch-tier-planner](../../launch/research/launch-tier-planner/SKILL.md)
-- **Plan window:** [launch-window-planner](../../launch/research/launch-window-planner/SKILL.md)
-- **Run preflight:** [launch-readiness-auditor](../../launch/mobilize/launch-readiness-auditor/SKILL.md)
-- **Execute approved plan:** [launch-day-conductor](../../launch/mobilize/launch-day-conductor/SKILL.md)
+- **Plan tier/type:** [launch-tier-planner](../launch-tier-planner/SKILL.md)
+- **Plan window:** [launch-window-planner](../launch-window-planner/SKILL.md)
+- **Run preflight:** [launch-readiness-auditor](../launch-readiness-auditor/SKILL.md)
+- **Execute approved plan:** [launch-day-conductor](../launch-day-conductor/SKILL.md)

@@ -5,7 +5,7 @@ into the H2 that owns the substance. For step-by-step workflows that
 *use* these capabilities (configure, build, modify, run, test, debug)
 see [TASKS.md](TASKS.md). Public-doc URLs and installed-package paths
 live in
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Pattern overview
 
@@ -44,7 +44,7 @@ configuration and feature set the device is in:
   *where Flow runs* first: the DPU Arm side (native for a separated-host
   BlueField), or — if it must run host-side — change the card's mode
   (`mlxconfig` + reboot, possibly firmware) via the
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) overlay. This
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) overlay. This
   is step 1 of [`TASKS.md ## configure`](TASKS.md#configure); being
   enumerable in `doca_caps` ≠ having a usable steering plane.
 - **Steering mode.** DOCA Flow runs **only** on hardware steering (HWS) —
@@ -304,7 +304,7 @@ host traffic** (e.g. a NIC/DPU PF that the host is currently using
 for SSH, package mirrors, or telemetry). Picking the wrong forward
 action on a live management port can disrupt the host's network
 session; getting this right is therefore part of the
-[`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) overlay,
+[`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) overlay,
 not just a doca-flow detail.
 
 **Pattern (three public API symbols):**
@@ -479,11 +479,11 @@ specific to CT, see
 
 For the DOCA version-detection chain, the four-way match rule, NGC
 container semantics, and the headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The Flow-specific overlay:
+[`doca-version`](../doca-version/SKILL.md). The Flow-specific overlay:
 
 - The `doca_flow_*` symbols available on an install are observable from the
   installed Flow headers (path in
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)).
   On an `undefined reference` for a `doca_flow_*` symbol, confirm the
   version per [`doca-version`](../../doca-version/TASKS.md#configure),
   verify the symbol exists in the installed headers, then read the Flow
@@ -509,7 +509,7 @@ next move:
 | Resource error | `DOCA_ERROR_NO_MEMORY`, `DOCA_ERROR_FULL` on entry add | Pipe entry budget exhausted or actions-memory pool depleted | Inspect counters and pipe statistics (`## Observability` below); enlarge the pool or evict entries before retrying. |
 | Lifecycle error | `DOCA_ERROR_BAD_STATE` on start/stop | Object operated on outside its allowed lifecycle window | Re-read the object's lifecycle in TASKS.md; ensure operations happen in the documented order (port started before pipe created, pipe created before entries added, etc.). |
 | Port-config-incomplete error (compiles, dies at start — the #1 first-run failure) | `doca_flow_port_start` aborts with `failed creating port - port ID is mandatory` (`engine_port.c`), `... either doca_dev or doca_dev_rep must be provided` (`engine_port.c`), or `... port representor cannot be created in VNF mode` (`engine_port.c`); or the binary exits earlier with `rte_eth_dev_count_avail`=0 / "need N ports" (`dpdk_utils.c`) | A mandatory `doca_flow_port_cfg` setter is missing, or the DPDK ports were never probed (collecting BDFs from argv ≠ probing them — the probe is what creates the DPDK port from the `doca_dev`, `samples/doca_flow/flow_common.c`) | Set **both** `doca_flow_port_cfg_set_port_id()` and `doca_flow_port_cfg_set_dev()` (a real `doca_dev` in VNF, not `dev_rep`) before `doca_flow_port_start`, and call `doca_dpdk_port_probe(dev, "dv_flow_en=2")` for **every** opened device *before* `rte_eth_dev_count_avail()`. **On count == 0, or count < expected, return non-zero from `main()` immediately — do NOT enter the keep-alive loop on an un-armed bridge** (a long-running `main()` over zero hardware ports stays alive but never forwards a packet, and the watchdog cannot distinguish it from a healthy program). See [`SKILL.md ## Port bring-up`](SKILL.md#port-bring-up-the-gate-lives-in-tasksmd) + [`TASKS.md ## configure`](TASKS.md#configure) step 6 + [`TASKS.md ## run`](TASKS.md#run) step 6. |
-| Placement / steering-plane-unavailable error | Port refuses to start — `doca_flow_port_start` (or the first switch-port `doca_flow_pipe_create`) returns `DOCA_ERROR_DRIVER` / a failed start, and the SDK log shows `Failed to query WQE based flow table capabilities` → `Failed to get hws cap` (devx `op_mod=0x37`, `BAD_PARAM_ERR`), or `failed to create dest action ROOT, flag 64, err -121` | The opened function has no usable hardware-steering plane — almost always running **host-side against a BlueField in `SEPARATED_HOST` / NIC mode**, where the steering plane belongs to the DPU Arm. Identical on every card on such a host, in BOTH `vnf` and `switch` modes. | **Do not touch the pipe spec or steering-mode string.** This is the device-placement signature: check `INTERNAL_CPU_MODEL` per [`## Capabilities and modes`](#capabilities-and-modes) device-placement bullet + [`TASKS.md ## configure`](TASKS.md#configure) step 1. Run DOCA Flow on the DPU Arm side, or change the card's mode via [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md). |
+| Placement / steering-plane-unavailable error | Port refuses to start — `doca_flow_port_start` (or the first switch-port `doca_flow_pipe_create`) returns `DOCA_ERROR_DRIVER` / a failed start, and the SDK log shows `Failed to query WQE based flow table capabilities` → `Failed to get hws cap` (devx `op_mod=0x37`, `BAD_PARAM_ERR`), or `failed to create dest action ROOT, flag 64, err -121` | The opened function has no usable hardware-steering plane — almost always running **host-side against a BlueField in `SEPARATED_HOST` / NIC mode**, where the steering plane belongs to the DPU Arm. Identical on every card on such a host, in BOTH `vnf` and `switch` modes. | **Do not touch the pipe spec or steering-mode string.** This is the device-placement signature: check `INTERNAL_CPU_MODEL` per [`## Capabilities and modes`](#capabilities-and-modes) device-placement bullet + [`TASKS.md ## configure`](TASKS.md#configure) step 1. Run DOCA Flow on the DPU Arm side, or change the card's mode via [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md). |
 | Hardware/firmware error | `DOCA_ERROR_DRIVER` and similar | The kernel driver, firmware, or PCIe path is in a state Flow cannot recover from | Stop. This is not a Flow-spec problem. Capture device state via the platform's diagnostic CLIs and escalate. |
 
 Flow does not invent error codes outside the `DOCA_ERROR_*` family;
@@ -535,7 +535,7 @@ do not fuse them:
   entries.
 - **"What is actually programmed in my pipe right now?"** — for
   programmed-state inspection, route the agent to the
-  [`doca-flow-tune`](../../tools/doca-flow-tune/SKILL.md) skill.
+  [`doca-flow-tune`](../doca-flow-tune/SKILL.md) skill.
 
 Workflow: when investigating "traffic is going to the wrong place", the
 canonical order is *per-entry counters first → pipe statistics second*.

@@ -12,7 +12,7 @@ Read this file when the loader sent you here from
 (the verbs `configure / build / modify / run / test / debug`),
 jump to [TASKS.md](TASKS.md). For the canonical DOCA
 version-handling rules that this skill layers a DPA overlay on
-top of, see [`doca-version`](../../doca-version/SKILL.md).
+top of, see [`doca-version`](../doca-version/SKILL.md).
 
 ## Pattern overview
 
@@ -67,12 +67,12 @@ code, then drill into the relevant capability-query.
 | Side | What runs there | Toolchain | What this skill covers |
 | --- | --- | --- | --- |
 | Host side | C / C++ (or any language that can FFI a C library) using `doca-dpa` to drive the DPA | Host system compiler + `pkg-config doca-dpa` | All of `## Capabilities and modes` / `## Error taxonomy` / `## Observability` / `## Safety policy` below |
-| DPA side | The kernel function bodies that run on the DPA processor; the user's source compiled by `dpacc` into the binary embedded in the host executable as a `doca_dpa_app` | `dpacc` (DPACC compiler) plus, optionally inside the kernel, the DPA device-side archives `libdoca_dpa_dev_comm.a` and `libdoca_dpa_dev_verbs.a` (part of `doca-dpa`) | This skill names the DPA side and routes via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) to the public DOCA DPA / DPACC / DPA-Comms / DPA-Verbs guides; it does not redefine the DPA-side API surface |
+| DPA side | The kernel function bodies that run on the DPA processor; the user's source compiled by `dpacc` into the binary embedded in the host executable as a `doca_dpa_app` | `dpacc` (DPACC compiler) plus, optionally inside the kernel, the DPA device-side archives `libdoca_dpa_dev_comm.a` and `libdoca_dpa_dev_verbs.a` (part of `doca-dpa`) | This skill names the DPA side and routes via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) to the public DOCA DPA / DPACC / DPA-Comms / DPA-Verbs guides; it does not redefine the DPA-side API surface |
 
 The agent's rule: when the user asks *"how do I write the DPA
 kernel"*, that is the DPA-side question — route to the public
 DPA / DPACC guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 When the user asks *"how do I load my DPA kernel from the host
 and launch it"*, that is this skill's scope. Two distinct
 questions; two distinct surfaces.
@@ -104,7 +104,7 @@ user marked as DPA kernels in the DPA-side source that `dpacc`
 compiled. If the user is *"trying to launch a kernel that's
 not in the image"*, that is a build-side question — go back to
 [`## build`](#capabilities-and-modes) and to the DPACC guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
 not a host-side launch-call fix.
 
 **The DPA execution context (`doca_dpa_thread`) — one DPA
@@ -192,7 +192,7 @@ the agent must NOT quote symbol
 names from memory and must route the user to the on-disk samples
 at `/opt/mellanox/doca/samples/doca_dpa/` plus the public
 *DOCA DPA Comms* guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 The family-level shape is stable enough to teach:
 
 | Family | Right shape for | Wrong shape for |
@@ -230,7 +230,7 @@ overlay in [`## Error taxonomy`](#error-taxonomy):
 
 | Error (as observed on host completion) | DPA-Comms-specific cause |
 | --- | --- |
-| `DOCA_ERROR_AGAIN` | DPA-side comms queue is full. **The DPA kernel must yield** — return from the launch and let the host drain via `doca_pe_progress` per [`doca-programming-guide`](../../doca-programming-guide/SKILL.md), then re-submit on the next launch. A tight in-kernel retry pins the DPA processor and starves the host's drain |
+| `DOCA_ERROR_AGAIN` | DPA-side comms queue is full. **The DPA kernel must yield** — return from the launch and let the host drain via `doca_pe_progress` per [`doca-programming-guide`](../doca-programming-guide/SKILL.md), then re-submit on the next launch. A tight in-kernel retry pins the DPA processor and starves the host's drain |
 | `DOCA_ERROR_NOT_SUPPORTED` | The primitive the kernel called is not on this BlueField generation OR not in this matched DOCA + DPACC install. Confirm the DPA itself is exposed via `doca_dpa_cap_is_supported`, then re-check `doca_dpa_dev_comch_msgq.h` and the shipped sample for the primitive; do NOT retry on the same device |
 | `DOCA_ERROR_BAD_STATE` | DPA-side initialization-order violation INSIDE the kernel — distinct from the parent's host-side `_BAD_STATE`. Both exist; both surface on the host completion; the agent must tell them apart. Walk the kernel-side initialization order in the shipped sample at `/opt/mellanox/doca/samples/doca_dpa/` BEFORE adjusting kernel code |
 | `DOCA_ERROR_INVALID_VALUE` | Bad endpoint handle (commonly an out-of-scope handle from a different `doca_dpa` instance), payload past the per-primitive size limit, or the DPA-side function signature drifted from the host's launch-argument shape. Per the parent's *do not partial-rebuild one side* rule, rebuild BOTH sides via `dpacc` + host build |
@@ -311,7 +311,7 @@ install-bound (they live in `doca_dpa_dev_verbs.h`); the agent
 must NOT quote them from memory and must
 route the user to `/opt/mellanox/doca/samples/doca_dpa/`
 plus the public *DOCA DPA Verbs* guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 **Capability discovery — no per-verb cap family.** There is NO
 `doca_dpa_verbs_cap_*` host cap family. The only DPA host-side
@@ -356,7 +356,7 @@ specific to DPA-Verbs, see [TASKS.md ## verbs](TASKS.md#verbs).
 
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-docs
-rule, see [`doca-version`](../../doca-version/SKILL.md). The body
+rule, see [`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The DPA-specific overlay** is:
@@ -393,7 +393,7 @@ observability surface (per-launch completions delivered through
 `doca_dpa_completion`, the DOCA logger, cap-query snapshots)
 AND a DPA-side observability surface (the DPA developer tools
 documented in the public *DPA Tools* umbrella reachable via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 — the DPA debugger, the DPA process-state inspector, and the
 DPA statistics tool). The agent must reach for both, not just
 one — a hung DPA kernel that produces no host-side completion
@@ -421,7 +421,7 @@ Three primary signals the agent should reach for:
    runtime call later returns `DOCA_ERROR_NOT_SUPPORTED` the
    diff against this baseline is the bug.
 3. **DPA-side developer tools (route via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).**
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).**
    When the host-side completion never arrives and the host
    side is healthy, the DPA-side kernel is running but stuck.
    The public *DPA Tools* umbrella names the DPA debugger
@@ -436,7 +436,7 @@ the `DOCA_LOG_LEVEL` env var, the trace build flavor) see
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout, sample tree) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -457,9 +457,9 @@ new host-side DPA setup:
 
 | Precondition | What must be true | How the agent verifies | Where to fix |
 | --- | --- | --- | --- |
-| BlueField with a DPA processor visible to the host | The host's `doca_dev` enumeration includes a BlueField whose generation carries a DPA processor and whose mode exposes that DPA to the host | `doca_dpa_cap_*` against the active `doca_devinfo`; cross-check with `doca_caps --list-devs`; confirm BlueField mode via the env-side BlueField checks | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side BlueField mode; this is **not** a code fix in the host-side DPA program |
-| DOCA install paired with a matching DPACC compiler | `pkg-config --modversion doca-dpa` and the installed `dpacc` are at versions the DOCA Compatibility Policy lists as compatible | `pkg-config --modversion doca-dpa`; check the installed `dpacc` version; cross-check against the [DOCA Compatibility Policy](https://docs.nvidia.com/doca/sdk/doca-compatibility-policy/index.html) | [`doca-setup`](../../doca-setup/SKILL.md) for the install-side; route to [`doca-version`](../../doca-version/SKILL.md) for the four-way-match check |
-| Standard DOCA `doca_dev` access | The user / process can open the target `doca_dev` for the BlueField — same baseline DOCA access rule as every other DOCA library; on the BlueField with a DPA, the BlueField must be in the right mode for the DPA to be exposed (not all BlueField modes expose the DPA equally) | The DOCA `doca_dev` enumeration succeeds for the target device; if it does not, that is an env-side problem | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side; do **not** modify the program |
+| BlueField with a DPA processor visible to the host | The host's `doca_dev` enumeration includes a BlueField whose generation carries a DPA processor and whose mode exposes that DPA to the host | `doca_dpa_cap_*` against the active `doca_devinfo`; cross-check with `doca_caps --list-devs`; confirm BlueField mode via the env-side BlueField checks | [`doca-setup`](../doca-setup/SKILL.md) for the env-side BlueField mode; this is **not** a code fix in the host-side DPA program |
+| DOCA install paired with a matching DPACC compiler | `pkg-config --modversion doca-dpa` and the installed `dpacc` are at versions the DOCA Compatibility Policy lists as compatible | `pkg-config --modversion doca-dpa`; check the installed `dpacc` version; cross-check against the [DOCA Compatibility Policy](https://docs.nvidia.com/doca/sdk/doca-compatibility-policy/index.html) | [`doca-setup`](../doca-setup/SKILL.md) for the install-side; route to [`doca-version`](../doca-version/SKILL.md) for the four-way-match check |
+| Standard DOCA `doca_dev` access | The user / process can open the target `doca_dev` for the BlueField — same baseline DOCA access rule as every other DOCA library; on the BlueField with a DPA, the BlueField must be in the right mode for the DPA to be exposed (not all BlueField modes expose the DPA equally) | The DOCA `doca_dev` enumeration succeeds for the target device; if it does not, that is an env-side problem | [`doca-setup`](../doca-setup/SKILL.md) for the env-side; do **not** modify the program |
 | Host launch call signature matches DPA-side kernel signature | The host-side `doca_dpa_kernel_launch_update_*` call passes arguments whose count, sizes, and types match the function `dpacc` compiled into the loaded `doca_dpa_app` | Re-read the DPA-side source and compare with the host launch call; if the DPA-side source changed, rebuild the DPA-side image via `dpacc` AND rebuild the host executable that embeds it | Program-layer fix on the two sides together; do **not** patch only one side |
 | Single-kernel-launch smoke succeeded before scaling | A trivial DPA kernel (no-op, or counter increment) launches and completes end-to-end on this exact host + this exact image before any larger workload is attempted | Walk the smoke step in [TASKS.md ## test](TASKS.md#test) step 1; a smoke that fails identifies *env-side* or *two-side-program* gaps cheaply | Diagnose the smoke failure first; do NOT scale a broken smoke into a high-throughput design |
 
@@ -494,7 +494,7 @@ elsewhere:
   model; DPA-side allocation; intrinsics) — outside this
   skill. Route to the public *DOCA DPA* programming guide and
   the *DPACC* compiler guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md);
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md);
   this skill assumes the user has the DPA-side kernel and is
   asking *how to load and launch it from the host*.
 - **DPA device-side comm component `libdoca_dpa_dev_comm.a`**
@@ -502,7 +502,7 @@ elsewhere:
   `doca_dpa_dev_comch_msgq.h`) — a DPA-side archive shipped
   within `doca-dpa` (NOT a separate pkg-config module), with its
   own public guide. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public *DOCA DPA Comms* guide. Treating its DPA-side
   surface as host-side `doca-dpa` is the most common DPA
   library-selection error.
@@ -511,7 +511,7 @@ elsewhere:
   `doca_dpa_dev_verbs.h`) — a DPA-side archive shipped within
   `doca-dpa` (NOT a separate pkg-config module), with its own
   public guide. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public *DOCA DPA Verbs* guide. Do not redefine its
   surface here.
 - **DPA developer tools** (the DPA debugger, the DPA
@@ -519,14 +519,14 @@ elsewhere:
   [`## Observability`](#observability) for routing, but the
   per-tool surface lives in the public *DPA Tools* umbrella
   via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **DPACC compiler internals** (flags, target options, how the
   host + DPA split-build is wired) — out of scope. Route to
   the public *DOCA DPACC Compiler* guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **DOCA Core context and progress engine internals** — owned
   by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   This skill *uses* the Core lifecycle; it does not redefine
   it.
 - **Cross-cutting `DOCA_ERROR_*` taxonomy** — owned by

@@ -11,7 +11,7 @@ in the public DOCA Argus Service Guide. Treat it as a *map of what
 is documented*, not a substitute for reading the live page when
 configuring a real deployment. For the public URL itself, route
 through
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services)
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services)
 — this skill does not duplicate the URL routing.
 
 ## Pattern overview
@@ -23,7 +23,7 @@ consumer.
 
 | Argus pattern | Class shape | Where the substance lives |
 | --- | --- | --- |
-| 1. Decide Argus (packaged) vs App Shield library vs nothing | Production security workflow as a packaged product → Argus; custom DPU-side security tooling → the DOCA App Shield library (not covered by this bundle — route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)); no security posture concern → neither | [`## Safety policy`](#safety-policy) path-selection rule |
+| 1. Decide Argus (packaged) vs App Shield library vs nothing | Production security workflow as a packaged product → Argus; custom DPU-side security tooling → the DOCA App Shield library (not covered by this bundle — route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)); no security posture concern → neither | [`## Safety policy`](#safety-policy) path-selection rule |
 | 2. Pick the four configuration axes | Detection policy + forwarding destination + sampling / sensitivity + host coverage — every axis is a deployment hazard if wrong | [`## Capabilities and modes`](#capabilities-and-modes) four-axis table |
 | 3. Wire the END-TO-END security pipeline | Argus container emits findings; the forwarder ships them to the SIEM (Splunk / ELK / …); the security ops team reviews; the Argus side and the SIEM side are independent moving parts | [`## Safety policy`](#safety-policy) END-TO-END rule + [`## Capabilities and modes`](#capabilities-and-modes) deployment shape |
 | 4. Pair with a SIEM consumer | Splunk / ELK / Sentinel / generic syslog — each pairs with Argus in the same shape (Argus = finding emitter; SIEM = finding consumer) | [`## Capabilities and modes`](#capabilities-and-modes) pairing table |
@@ -80,14 +80,14 @@ Three architectural properties the operator must hold throughout:
   the DOCA App Shield library — the lower-level library that custom
   security tooling builds on, which is **not covered by this
   bundle** (policy-excluded from the public release; route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 - **Findings are the primary output, not metrics.** Argus's
   surface is "did something security-relevant happen on this
   BlueField + host pair, and what is it" — not "what is the CPU
   utilization right now". An operator looking for general
   observability / metrics is asking the wrong service; route
   them to the DOCA Telemetry Service via
-  [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+  [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 
 ## Deployment shape
 
@@ -98,7 +98,7 @@ under the documented runtime (the BlueField OS's container manager
 per the public Container Deployment Guide). For the canonical
 container-deployment recipe shared with the other DOCA service
 containers, route through
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 
 Two deployment-shape rules:
 
@@ -180,7 +180,7 @@ calibration-period rule in [`## Safety policy`](#safety-policy).
 
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-docs
-rule, see [`doca-version`](../../doca-version/SKILL.md). The body
+rule, see [`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The Argus-specific overlay** is:
@@ -219,7 +219,7 @@ clearing the layer above.
 
 | Layer | Symptom | Root cause class | Where to fix |
 | --- | --- | --- | --- |
-| 1. Container runtime | Container fails to start, restart-loops, exits immediately, image pull fails | Image tag wrong, registry credentials missing, BlueField runtime not configured to run this container, config file mount path wrong | BlueField container runtime + the public Container Deployment Guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) |
+| 1. Container runtime | Container fails to start, restart-loops, exits immediately, image pull fails | Image tag wrong, registry credentials missing, BlueField runtime not configured to run this container, config file mount path wrong | BlueField container runtime + the public Container Deployment Guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) |
 | 2. Detection policy | Container green, no findings ever arrive (false-negative posture); or container green, the SIEM channel is buried in findings (false-positive flood) | Detection policy too lenient for the workload pattern (nothing the user cares about will trip the configured detectors); or detection policy too strict for the workload pattern (every benign behavior trips a detector). This is the layer the calibration period in [`## Safety policy`](#safety-policy) exists to tune | The detection-policy config in the public Argus Service Guide — not the container, not the forwarder, not the sampling knob |
 | 3. Forwarding destination | Findings are generated (visible in the container's local log / finding feed) but the SIEM channel stays empty | The forwarder is misconfigured (wrong endpoint, wrong protocol), the SIEM endpoint is unreachable from the BlueField (network reachability), or the auth between forwarder and SIEM is mismatched (wrong token / wrong cert) | The forwarder config in the Argus container + the SIEM-side ingest config — the network reachability and auth boundary between them is the most common cause |
 | 4. Sampling / performance | Argus is healthy, finding emission is correct, the SIEM is receiving — but the host workload's performance is noticeably impacted (CPU / latency) since Argus started | Sampling rate too high for the production workload. Argus's observation surface costs something; production sampling is a different posture from lab sampling | The sampling knob in the Argus config per the public guide. Do NOT respond to performance impact by silently disabling detector classes — re-tune sampling first, then re-tune detection policy if needed |
@@ -311,14 +311,14 @@ silent.
       CPU, SIEM channel — for nothing); when the user actually
       wants observability / metrics rather than security (route
       to the DOCA Telemetry Service via
-      [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md));
+      [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md));
       or when the user is genuinely building a custom security
       product of their own that needs to ship its own decision
       logic (that is the DOCA App Shield library — same shape of
       BlueField-side observation, different shape of operator
       effort — which is not covered by this bundle; route to the
       public docs via
-      [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+      [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 - **END-TO-END discipline (load-bearing).** Argus emits findings.
   The forwarder ships them to the SIEM. The SIEM ingests, stores,
   and presents them. The security ops team reviews. An Argus
@@ -383,7 +383,7 @@ silent.
 
 The single canonical public source for Argus is the **DOCA Argus
 Service Guide**, reachable through
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 Verify that the version of the guide matches the Argus container
 tag pulled on the BlueField — Argus's config surface, supported
 detector classes, forwarder formats, and observability output are

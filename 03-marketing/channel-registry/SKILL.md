@@ -77,7 +77,7 @@ Standalone one-folder installs may prepare proposals only; they cannot append/pr
 
 ## Next Best Skill
 
-- **Portfolio decision:** [channel-portfolio-planner](../../social/explore/channel-portfolio-planner/SKILL.md)
-- **Warmup:** [participation-warmup-planner](../../social/explore/participation-warmup-planner/SKILL.md)
-- **UGC permission work:** [engagement-inbox-manager](../../social/host/engagement-inbox-manager/SKILL.md)
-- **Asset/program gate:** [social-quality-auditor](../../social/host/social-quality-auditor/SKILL.md)
+- **Portfolio decision:** [channel-portfolio-planner](../channel-portfolio-planner/SKILL.md)
+- **Warmup:** [participation-warmup-planner](../participation-warmup-planner/SKILL.md)
+- **UGC permission work:** [engagement-inbox-manager](../engagement-inbox-manager/SKILL.md)
+- **Asset/program gate:** [social-quality-auditor](../social-quality-auditor/SKILL.md)

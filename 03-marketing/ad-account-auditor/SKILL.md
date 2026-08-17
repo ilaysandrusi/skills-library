@@ -48,7 +48,7 @@ For a pre-launch account-audit request, use the narrow route `conversion-signal-
 | Outcome truth | Deduplicated order/lead IDs from ecommerce, analytics, or CRM |
 | Economics | Currency, margin/contribution, CAC/payback constraint |
 | Attribution | Platform + own-data timestamps/IDs, normalized windows and lag |
-| Safety/claims | Placement report, rendered ad/landing, approved claim/disclosure state from [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md) (the paid claims SSOT) |
+| Safety/claims | Placement report, rendered ad/landing, approved claim/disclosure state from [offer-claims-registry](../offer-claims-registry/SKILL.md) (the paid claims SSOT) |
 | Incrementality | Holdout/geo split/causal test, otherwise explicitly labeled proxy |
 
 ## Instructions
@@ -127,7 +127,7 @@ Persist only after explicit authorization to `memory/audits/ad/YYYY-MM-DD-<topic
 ## Next Best Skill
 
 - **Tracking:** [conversion-signal-qa](../conversion-signal-qa/SKILL.md)
-- **Claims/disclosures:** [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md) — the approved claim/disclosure state behind `ROAS-O1`
-- **Attribution:** [attribution-reconciler](../../scale/attribution-reconciler/SKILL.md)
-- **Structure/audience:** [campaign-architect](../../research/campaign-architect/SKILL.md)
-- **Pacing:** [budget-pacing-monitor](../../scale/budget-pacing-monitor/SKILL.md)
+- **Claims/disclosures:** [offer-claims-registry](../offer-claims-registry/SKILL.md) — the approved claim/disclosure state behind `ROAS-O1`
+- **Attribution:** [attribution-reconciler](../attribution-reconciler/SKILL.md)
+- **Structure/audience:** [campaign-architect](../campaign-architect/SKILL.md)
+- **Pacing:** [budget-pacing-monitor](../budget-pacing-monitor/SKILL.md)

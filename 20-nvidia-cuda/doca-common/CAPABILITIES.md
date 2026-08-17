@@ -16,7 +16,7 @@ Read this file when the loader sent you here from
 capabilities (configure / build / modify / run / test / debug / use /
 log) see [TASKS.md](TASKS.md). For where the underlying public
 documentation and installed package paths live, defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
 do not duplicate URLs or install paths in this file.
 
 ## Pattern overview
@@ -347,7 +347,7 @@ and [TASKS.md ## debug](TASKS.md#debug).
 
 For the canonical DOCA version-detection chain, the four-way match
 rule, NGC container semantics, and the headers-win-over-docs rule,
-see [`doca-version`](../../doca-version/SKILL.md). The body lives
+see [`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The doca-common-specific overlay** is:
@@ -360,11 +360,11 @@ there; this skill does not duplicate it.
   `cat /opt/mellanox/doca/applications/VERSION`, and the BFB anchor
   (where applicable). When the `pkg-config` query for doca-common
   fails, the install is broken — that is a
-  [`doca-setup`](../../doca-setup/SKILL.md) concern, not a Common
+  [`doca-setup`](../doca-setup/SKILL.md) concern, not a Common
   concern.
 - **The set of `doca_*` symbols available is observable from the
   Common header set.** Per the headers-win-over-docs rule in
-  [`doca-version`](../../doca-version/SKILL.md), the headers under
+  [`doca-version`](../doca-version/SKILL.md), the headers under
   $(pkg-config --variable=includedir doca-common) (`doca_buf.h`,
   `doca_ctx.h`, `doca_dev.h`, `doca_pe.h`, `doca_log.h`,
   `doca_mmap.h`, …) are the authoritative truth for what the built
@@ -448,7 +448,7 @@ consumers can read them.
 
 **Downstream consumers.** DOCA Log output is the input to the DOCA
 Log Service and the DOCA Telemetry Service (per
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)):
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)):
 when the user pipes / forwards their app's `stderr` (or routes
 through a custom backend), those services can consume the lines
 without any in-app wiring. This is part of *why* DOCA Log is

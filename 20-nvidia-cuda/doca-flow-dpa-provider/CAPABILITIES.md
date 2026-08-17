@@ -15,7 +15,7 @@ pattern (the verbs `install / configure / build / modify /
 run / test / debug / use`), jump to [TASKS.md](TASKS.md).
 For the canonical DOCA version-handling rules that this
 skill layers a provider overlay on top of, see
-[`doca-version`](../../doca-version/SKILL.md). For the
+[`doca-version`](../doca-version/SKILL.md). For the
 host-side Flow surface this library exports, see
 [`doca-flow`](../doca-flow/SKILL.md). For the host-side DPA
 lifecycle and the two-side-program rule this library
@@ -82,12 +82,12 @@ into the relevant capability surface.
 | --- | --- | --- | --- |
 | Host (Flow) | C / C++ (or any language that can FFI a C library) using `doca-flow` to bring up the port and construct the pipe spec | Host system compiler + `pkg-config doca-flow` | This skill *consumes* the result; the build-up of the pipe is owned by [`doca-flow`](../doca-flow/SKILL.md). The agent surfaces that the pipe is the same pipe in both libraries — the provider does NOT create its own pipe object |
 | Host (DPA / DPACC) | C / C++ using `doca-flow-dpa-provider` (this skill) + the host-side DPA execution surface (`doca-dpa` and the underlying FlexIO process) to allocate queues, run the export handshake, and hand the device address to the DPA kernel | Host system compiler + `pkg-config doca-flow-dpa-provider` + the DPACC compiler for the DPA-side translation unit | All of `## Capabilities and modes` / `## Error taxonomy` / `## Observability` / `## Safety policy` below |
-| DPA side | The kernel function body that runs on the DPA processor; consumes the `doca_flow_dpa_addr` device pointer and calls the DPA-side device API (`doca_flow_pipe_hash_*`, `doca_flow_external_resource_*`, `doca_flow_queue_poll_completion`) | DPACC (DPA-side compiler) plus the device-side library that is linked when the kernel includes `doca_flow_dpa_provider_dev.h` | This skill names the DPA-side surface and routes via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) to the public DOCA DPA / DPACC guides for the kernel-writing mechanics; it does not redefine those surfaces |
+| DPA side | The kernel function body that runs on the DPA processor; consumes the `doca_flow_dpa_addr` device pointer and calls the DPA-side device API (`doca_flow_pipe_hash_*`, `doca_flow_external_resource_*`, `doca_flow_queue_poll_completion`) | DPACC (DPA-side compiler) plus the device-side library that is linked when the kernel includes `doca_flow_dpa_provider_dev.h` | This skill names the DPA-side surface and routes via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) to the public DOCA DPA / DPACC guides for the kernel-writing mechanics; it does not redefine those surfaces |
 
 The agent's rule: when the user asks *"how do I write the DPA
 kernel itself"*, that is the DPA-side question — route to
 the public DPA / DPACC guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 When the user asks *"how do I export my host-side Flow pipe
 so a DPA kernel can read its counters and modify its
 entries"*, that is this skill's scope.
@@ -210,7 +210,7 @@ that ride on top of the queue-type rule.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The provider-specific overlay** is:
@@ -255,7 +255,7 @@ there; this skill does not duplicate it.
   <https://docs.nvidia.com/doca/sdk/doca-flow/index.html> and
   <https://docs.nvidia.com/doca/sdk/doca-dpa/index.html>
   since the library sits between the two. Route to
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for the canonical URL list rather than quoting a specific
   URL from memory.
 
@@ -336,7 +336,7 @@ Four primary signals the agent should reach for:
    [`doca-dpa CAPABILITIES.md ## Observability`](../doca-dpa/CAPABILITIES.md#observability)
    (the DPA debugger, the DPA process-state inspector, the
    DPA statistics tool — all routed via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md))
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md))
    are the right surface when the DPA-side kernel is
    running but not making forward progress on the exported
    handles. Stuck-DPA cases are inherited from `doca-dpa`,
@@ -348,7 +348,7 @@ build flavor) see
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout, sample tree) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 

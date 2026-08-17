@@ -90,11 +90,11 @@ not assume legacy generic-CLI flags work.
 
 ## Version compatibility
 
-For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
+For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
 
 **The doca_caps-specific overlay** is:
 
-- **`doca_caps` is available since DOCA 2.6.0.** On older installs the binary is not present; the right answer for *"I can't find doca_caps"* is to confirm the installed version per [`doca-version TASKS.md ## configure`](../../doca-version/TASKS.md#configure) and, if `< 2.6.0`, route to [`doca-setup`](../../doca-setup/SKILL.md) for an upgrade rather than recommending alternative tools.
+- **`doca_caps` is available since DOCA 2.6.0.** On older installs the binary is not present; the right answer for *"I can't find doca_caps"* is to confirm the installed version per [`doca-version TASKS.md ## configure`](../../doca-version/TASKS.md#configure) and, if `< 2.6.0`, route to [`doca-setup`](../doca-setup/SKILL.md) for an upgrade rather than recommending alternative tools.
 - **Where it runs:** on the x86 / Arm host that has DOCA installed, *or* on the BlueField Arm side. Same binary, same flags; the set of devices it sees differs by execution context.
 - **Output format stability:** the documented capability families (the five listed in [`## Capabilities and modes`](#capabilities-and-modes)) are stable across the recent DOCA train. The exact textual / column layout of the output is **not** contractually frozen — agents that need to consume the output programmatically should prefer the structured `doca-capability-snapshot` helper per [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md#schemas) when present, and re-verify the textual layout against the user's installed version when absent.
 - **Per-OS library support:** capability family 3 ("DOCA library list") explicitly varies with the OS the install runs on; do not copy a library-availability claim from one host to another.

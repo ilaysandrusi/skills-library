@@ -250,19 +250,19 @@ companion files:
   workload moves.
 - Per-artifact `## Safety policy` anchors in each in-bundle
   service / library / tool skill — e.g. the firmware-slot
-  precondition in [`doca-argus`](../services/doca-argus/SKILL.md),
-  [`doca-dms`](../services/doca-dms/SKILL.md),
-  [`doca-firefly`](../services/doca-firefly/SKILL.md),
-  [`doca-urom-svc`](../services/doca-urom-svc/SKILL.md); the
+  precondition in [`doca-argus`](../doca-argus/SKILL.md),
+  [`doca-dms`](../doca-dms/SKILL.md),
+  [`doca-firefly`](../doca-firefly/SKILL.md),
+  [`doca-urom-svc`](../doca-urom-svc/SKILL.md); the
   device-touching libraries
-  ([`doca-flow`](../libs/doca-flow/SKILL.md),
-  [`doca-rdma`](../libs/doca-rdma/SKILL.md),
-  [`doca-eth`](../libs/doca-eth/SKILL.md),
-  [`doca-pcc`](../libs/doca-pcc/SKILL.md),
-  [`doca-rmax`](../libs/doca-rmax/SKILL.md)); and the
+  ([`doca-flow`](../doca-flow/SKILL.md),
+  [`doca-rdma`](../doca-rdma/SKILL.md),
+  [`doca-eth`](../doca-eth/SKILL.md),
+  [`doca-pcc`](../doca-pcc/SKILL.md),
+  [`doca-rmax`](../doca-rmax/SKILL.md)); and the
   hardware-touching tools (e.g.
-  [`doca-spcx-cc`](../tools/doca-spcx-cc/SKILL.md),
-  [`doca-pcc-counters`](../tools/doca-pcc-counters/SKILL.md)).
+  [`doca-spcx-cc`](../doca-spcx-cc/SKILL.md),
+  [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md)).
   Every in-bundle artifact skill's `## Safety policy` overlays
   this meta-policy with artifact-specific safety. The cross-link is
   intentionally bidirectional: per-artifact skills link here for

@@ -58,7 +58,7 @@ If no mode is given, infer it: link/anchor/toxic/referring-domain wording → `b
 
 ## Scope Guard
 
-This skill does **not**: score CITE or run vetoes (that is the [domain-authority-auditor](../domain-authority-auditor/SKILL.md) gate — this skill only supplies the off-site inputs); analyze internal link structure ([site-structure-optimizer](../../tune/site-structure-optimizer/SKILL.md)); report keyword positions ([rank-tracker](../rank-tracker/SKILL.md)); or assemble the multi-metric stakeholder report ([performance-monitor](../performance-monitor/SKILL.md)). It works one lever — off-site signal — and hands off.
+This skill does **not**: score CITE or run vetoes (that is the [domain-authority-auditor](../domain-authority-auditor/SKILL.md) gate — this skill only supplies the off-site inputs); analyze internal link structure ([site-structure-optimizer](../site-structure-optimizer/SKILL.md)); report keyword positions ([rank-tracker](../rank-tracker/SKILL.md)); or assemble the multi-metric stakeholder report ([performance-monitor](../performance-monitor/SKILL.md)). It works one lever — off-site signal — and hands off.
 
 ## Data Sources
 

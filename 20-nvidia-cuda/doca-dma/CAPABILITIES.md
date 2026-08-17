@@ -11,7 +11,7 @@ Read this file when the loader sent you here from
 verbs `configure / build / modify / run / test / debug`), jump to
 [TASKS.md](TASKS.md). For the canonical DOCA version-handling
 rules that this skill layers a DMA overlay on top of, see
-[`doca-version`](../../doca-version/SKILL.md).
+[`doca-version`](../doca-version/SKILL.md).
 
 ## Pattern overview
 
@@ -93,13 +93,13 @@ DOCA Core surface; defaults come from the library and the active
 
 ## Version compatibility
 
-For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
+For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
 
 **The DMA-specific overlay** is:
 
 - **Use the `doca_dma_cap_task_memcpy_*` query family at runtime.** Per the cross-cutting rule in [`doca-version CAPABILITIES.md ## Observability`](../../doca-version/CAPABILITIES.md#observability), the cap-query is the runtime authority for *"is the memcpy task supported on this device + this DOCA version, and how big a buffer can it move"*. The version-matrix is the *promise*; the cap query is the *reality*. Use `pkg-config --modversion doca-dma` as the build-time anchor (per [`doca-version TASKS.md ## configure`](../../doca-version/TASKS.md#configure)) when the user asks which DMA features ship on this install.
 - **`doca-dma.pc` plus `doca-common.pc` must both match `doca_caps --version`** at the four-way-match check (per [`doca-version CAPABILITIES.md ## Version compatibility`](../../doca-version/CAPABILITIES.md#version-compatibility)). A common partial-install pattern after a DOCA upgrade is that `doca-dma.pc` lingers from the previous release; route to [`doca-version TASKS.md ## debug`](../../doca-version/TASKS.md#debug) ladder step 2 before any DMA-layer diagnosis.
-- **Headers in $(pkg-config --variable=includedir doca-common) win over public docs.** Per the headers-win-over-docs rule in [`doca-version`](../../doca-version/SKILL.md), if a public DMA doc page mentions a `doca_dma_*` symbol that is not in the installed `doca_dma.h`, the headers describe what *this* install can call; the docs describe what *some* release shipped. The agent must quote the headers, not the docs URL, when the two disagree.
+- **Headers in $(pkg-config --variable=includedir doca-common) win over public docs.** Per the headers-win-over-docs rule in [`doca-version`](../doca-version/SKILL.md), if a public DMA doc page mentions a `doca_dma_*` symbol that is not in the installed `doca_dma.h`, the headers describe what *this* install can call; the docs describe what *some* release shipped. The agent must quote the headers, not the docs URL, when the two disagree.
 
 ## Error taxonomy
 
@@ -158,7 +158,7 @@ For the cross-cutting observability primitives
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -202,10 +202,10 @@ the agent will get asked but should route elsewhere:
   per-channel scheduling, hardware-side error counters) — outside
   this skill. Route to the public DOCA DMA guide reachable
   through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **DOCA Core context, progress engine, and `doca_mmap`
   internals** — owned by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   This skill *uses* the Core context lifecycle and the
   `doca_mmap` permission flags; it does not redefine them.
 - **Cross-network copies** — owned by

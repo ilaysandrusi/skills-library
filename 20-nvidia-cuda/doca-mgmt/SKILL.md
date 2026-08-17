@@ -45,7 +45,7 @@ the management context model, the raw-command scope ladder, the
 sub-domain surfaces (caps-general, cc-global-status, diagnostics-
 data, icm-quota), version compatibility, and the safety overlay.
 If the user has not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first.
+[`doca-setup`](../doca-setup/SKILL.md) first.
 
 ## Example questions this skill answers well
 
@@ -98,8 +98,8 @@ single instance.
   in [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md) and to
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+  [`doca-debug`](../doca-debug/SKILL.md) and to
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   when the cause is a device-state change.
 
 ## Audience
@@ -116,7 +116,7 @@ BlueField in a data center and applies a desired-state diff. This
 skill is *not* for NVIDIA developers contributing to DOCA
 Management itself, and it is not the right surface for live
 performance benchmarking or stream-based observability — those
-belong to [`doca-bench`](../../tools/doca-bench/SKILL.md),
+belong to [`doca-bench`](../doca-bench/SKILL.md),
 [`doca-telemetry`](../doca-telemetry/SKILL.md), and
 [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md).
 
@@ -171,9 +171,9 @@ Concretely:
 Do **not** load this skill for general DOCA orientation, install
 of DOCA itself, live performance benchmarking, or stream-based
 telemetry. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-setup`](../../doca-setup/SKILL.md),
-[`doca-bench`](../../tools/doca-bench/SKILL.md), and
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-setup`](../doca-setup/SKILL.md),
+[`doca-bench`](../doca-bench/SKILL.md), and
 [`doca-telemetry`](../doca-telemetry/SKILL.md) respectively.
 
 ## What this skill provides
@@ -207,7 +207,7 @@ privileges their public install profile expects (management-
 plane operations typically require root or an equivalent
 device-administration capability). It does not cover installing
 DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -225,7 +225,7 @@ contain — and pull requests should not add:
   installed package set are the canonical worked examples) and
   to prescribe a minimum-diff modification via the universal
   modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 - **Standalone build manifests** parked inside the skill. The
   agent constructs the build manifest *in the user's project
   directory* against the user's installed DOCA, where
@@ -236,7 +236,7 @@ contain — and pull requests should not add:
   *discipline* the agent applies (pre-state capture, scope
   ladder, rollback path) but it does NOT enumerate opcodes —
   those are vendor / device documentation and looked up via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **A `samples/`, `bindings/`, or `reference/` subtree** of any
   kind. A mock or incomplete artifact in this skill's tree,
   even one labeled "reference", is misleading: users will read
@@ -255,14 +255,14 @@ contain — and pull requests should not add:
    modify, run, test, debug, use — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other and to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or
 the installed package layout" rather than "mgmt-specific
 guidance".
 
 ## Related skills
 
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the bundle-wide hardware-safety meta-policy. Because
   doca-mgmt is the surface through which agents most commonly
   *modify* device state programmatically, the safety overlay
@@ -275,41 +275,41 @@ guidance".
   device. Use those when the user wants live metrics; use
   doca-mgmt when the user wants point-in-time programmatic
   query or modification.
-- [`doca-caps`](../../tools/doca-caps/SKILL.md) — the
+- [`doca-caps`](../doca-caps/SKILL.md) — the
   read-only CLI for inspecting device capabilities. Use the
   tool when the user wants an interactive snapshot; use
   doca-mgmt when the user wants the same information through
   the C API in a fleet tool.
-- [`doca-bench`](../../tools/doca-bench/SKILL.md) — the
+- [`doca-bench`](../doca-bench/SKILL.md) — the
   live-performance benchmarking tool. Out of scope for
   doca-mgmt; the skill names the boundary.
 - [`doca-pcc`](../doca-pcc/SKILL.md) and
-  [`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md) —
+  [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md) —
   programmable congestion control. doca-mgmt's
   `doca_mgmt_cc_global_status_*` surface is the *global
   enable/disable + protocol selection* control plane that
   layers on the deeper programmable-CC surface owned by
   doca-pcc.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) — the
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) — the
   routing table for every public DOCA documentation source and
   the on-disk layout of an installed DOCA package.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, and the *I have no install yet* path
   with the public NGC DOCA container.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library:
   the canonical `pkg-config` + meson build pattern, the
   universal modify-a-shipped-sample first-app workflow, the
   cross-library `DOCA_ERROR_*` taxonomy. This skill layers
   management-plane specifics on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder. Management-specific debug overlays on top of
   it.
-- [`doca-version`](../../doca-version/SKILL.md) — the version
+- [`doca-version`](../doca-version/SKILL.md) — the version
   detection / four-way match rule every per-artifact `##
   Version compatibility` anchor builds on. This skill quotes
   the management-specific overlay only.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the JSON-schema contracts for the agent-preferred structured
   helpers; the `## Command appendix` in `TASKS.md` defers to
   them before falling back to the manual chain.

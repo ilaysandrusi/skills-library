@@ -90,15 +90,15 @@ Disclosure and usage rights must be stated explicitly — never leave them as pl
 - Sibling skills:
   - [campaign-planner](../campaign-planner/SKILL.md) - Create the campaign this brief supports
   - [budget-optimizer](../budget-optimizer/SKILL.md) - Allocate spend across the briefed creators
-  - [creator-content-auditor](../../activate/creator-content-auditor/SKILL.md) - Review submitted content
-  - [outreach-manager](../../activate/outreach-manager/SKILL.md) - Deliver briefs to influencers
-  - [contract-helper](../../activate/contract-helper/SKILL.md) - Include legal terms
+  - [creator-content-auditor](../creator-content-auditor/SKILL.md) - Review submitted content
+  - [outreach-manager](../outreach-manager/SKILL.md) - Deliver briefs to influencers
+  - [contract-helper](../contract-helper/SKILL.md) - Include legal terms
 
 ## Next Best Skill
 
 - **Primary**: [budget-optimizer](../budget-optimizer/SKILL.md) - Once the brief defines deliverables, set how spend is split across creators and platforms.
 - **Alternates (same Target family)**:
   - [campaign-planner](../campaign-planner/SKILL.md) - Re-plan campaign scope if the brief surfaces new deliverable needs.
-  - [outreach-manager](../../activate/outreach-manager/SKILL.md) - Send the finished brief to selected creators.
+  - [outreach-manager](../outreach-manager/SKILL.md) - Send the finished brief to selected creators.
 
 **Termination note**: Maintain a visited-set. If a recommended skill was already invoked this session, stop and report chain-complete instead of re-running it. Cap any handoff chain at max-depth 3.

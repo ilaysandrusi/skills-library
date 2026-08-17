@@ -14,7 +14,7 @@ schema*, *its three documented invocation classes*,
 *the property-dimension model counters carry*, *the
 optional per-device capability probe*, *the version
 overlay against the developer-side
-[`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+[`doca-telemetry`](../doca-telemetry/SKILL.md)
 library*, *the layered error and observability surfaces*,
 *and the safety posture* (the tool is read-only;
 operator mistakes show up downstream as silent metric
@@ -37,7 +37,7 @@ just one.
 | 3. Reverse-resolve Data ID → name + properties | Translate a captured Data ID from a downstream consumer back to its counter name + properties, for correlation against the public DOCA Telemetry guide or against the exporter's source-of-truth config. | [`## Capabilities and modes`](#capabilities-and-modes) invocation-class table + [TASKS.md ## run](TASKS.md#run) step 3 |
 | 4. Validate per-device support | Run the resolved counter against a specific device's capability surface (`<device PCI> <name> [properties]`) before committing it to an exporter config. A counter that resolves cleanly but is not supported on the target device produces no metric. | [`## Capabilities and modes`](#capabilities-and-modes) per-device-probe rule + [TASKS.md ## test](TASKS.md#test) validation gate |
 | 5. Diagnose a silent metric drop | A downstream consumer reports a metric missing; the exporter says it's emitting. Walk the schema-mismatch / unsupported-counter error taxonomy in [`## Error taxonomy`](#error-taxonomy) before suspecting the collector or network path. | [`## Error taxonomy`](#error-taxonomy) + [TASKS.md ## debug](TASKS.md#debug) |
-| 6. Bake a validated exporter config | The hand-off into the developer-side pipeline. Each counter the operator wants in the exporter config is first run through name → ID → per-device probe; the resulting validated tuple is the artifact the exporter config references. | [TASKS.md ## use](TASKS.md#use) hand-off + [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md) for the consumer side |
+| 6. Bake a validated exporter config | The hand-off into the developer-side pipeline. Each counter the operator wants in the exporter config is first run through name → ID → per-device probe; the resulting validated tuple is the artifact the exporter config references. | [TASKS.md ## use](TASKS.md#use) hand-off + [`doca-telemetry`](../doca-telemetry/SKILL.md) for the consumer side |
 
 Two cross-cutting rules that apply to *every* pattern
 above:
@@ -156,7 +156,7 @@ exporter configuration, not DTS deployment, not
 metric shipping. Once the operator has the validated
 Data ID for each counter, the hand-off is into the
 developer-side
-[`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+[`doca-telemetry`](../doca-telemetry/SKILL.md)
 collector or the exporter library that consumes the
 IDs.
 
@@ -165,7 +165,7 @@ IDs.
 For the canonical DOCA version-detection chain, the
 four-way match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body
+[`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The `doca_telemetry_utils`-specific overlay** is:
@@ -174,7 +174,7 @@ lives there; this skill does not duplicate it.
   resolves names ↔ Data IDs against the
   `doca_telemetry_diag` schema the host-side DOCA
   install carries; the developer-side
-  [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+  [`doca-telemetry`](../doca-telemetry/SKILL.md)
   library consumes those Data IDs. The two must come
   from the same DOCA release band per the
   [`doca-version CAPABILITIES.md ## Version compatibility`](../../doca-version/CAPABILITIES.md#version-compatibility)
@@ -273,7 +273,7 @@ time on the wrong fix.
    [`doca-version CAPABILITIES.md ## Version compatibility`](../../doca-version/CAPABILITIES.md#version-compatibility).
    Symptoms: the tool's reported counter set
    disagrees with the developer-side
-   [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+   [`doca-telemetry`](../doca-telemetry/SKILL.md)
    library version's schema. Routing: walk
    [`doca-version TASKS.md ## debug`](../../doca-version/TASKS.md#debug)
    end-to-end.
@@ -284,7 +284,7 @@ time on the wrong fix.
    telemetry-utils tool. Routing: hand off to
    [`doca-telemetry TASKS.md ## debug`](../../libs/doca-telemetry/TASKS.md#debug)
    for the collector-side ladder, plus
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md)
+   [`doca-debug ## debug`](../doca-debug/SKILL.md)
    for the cross-cutting layers (driver, firmware,
    network).
 
@@ -320,7 +320,7 @@ is no file output, no daemon, no live-streaming mode.
   live guide and write the parser against their
   installed version, or use the structured helper
   per the
-  [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+  [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
   preamble when present.
 - **Captured-evidence tuple.** The minimum metadata
   to attach to a validated counter committed to an

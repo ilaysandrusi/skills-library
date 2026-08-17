@@ -17,7 +17,7 @@ taxonomy, observability, and safety / path-selection policy, see
 patterns layered under everything below (the universal lifecycle,
 the cross-library `DOCA_ERROR_*` taxonomy, the
 modify-a-shipped-sample workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -43,7 +43,7 @@ Steps the agent should walk the user through:
    Compress diagnosis.
 2. **Discover the device capability surface for Compress.** Run
    `doca_caps --list-devs` (per
-   [`doca-caps`](../../tools/doca-caps/SKILL.md)) to see which
+   [`doca-caps`](../doca-caps/SKILL.md)) to see which
    devices are visible, then run the per-`doca_devinfo`
    `doca_compress_cap_*` queries against the candidate device.
    Record the support and maximum-source-size result for every
@@ -190,7 +190,7 @@ Steps the agent should walk the user through:
    (opening a NIC without the requested Compress task on its
    accelerator) returns `DOCA_ERROR_NOT_SUPPORTED` at task
    submit, not at open. Re-quote the output of `doca_caps
-   --list-devs` ([`doca-caps`](../../tools/doca-caps/SKILL.md))
+   --list-devs` ([`doca-caps`](../doca-caps/SKILL.md))
    and confirm the device the binary opens is the same one the
    cap-query ran against.
 2. **Run the round-trip (or decompress-known-fixture) smoke
@@ -471,7 +471,7 @@ so the agent does not invent guidance:
 
 - **install.** Installing DOCA, choosing packages, post-install
   verification, `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
   [doca-public-knowledge-map ## Layout of an installed DOCA package](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA is already installed.
@@ -524,7 +524,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

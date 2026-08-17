@@ -128,7 +128,7 @@ Routing for nearby "build" questions:
   for the cross-library build pattern and the matching
   `libs/<library>` skill (e.g.
   [`doca-comch ## build`](../../libs/doca-comch/TASKS.md#build),
-  [`doca-compress`](../../libs/doca-compress/SKILL.md)) for
+  [`doca-compress`](../doca-compress/SKILL.md)) for
   the library-specific build overlay. The bench is the
   shipped harness; the user's bespoke harness is a
   different artifact.
@@ -178,7 +178,7 @@ Routing for nearby "modify" questions:
   max-bandwidth saturation ceiling. If the question is genuinely outside
   bench's surface (e.g. application-level end-to-end timing),
   route to
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md)
   and the matching `libs/<library>` skill — the user's own
   program is the right place to measure end-to-end.
 
@@ -301,10 +301,10 @@ predeclared workload tolerance** for the selected metric. Record
 both values and the tolerance. If two consecutive stable runs
 cannot be obtained after the bounded re-run above, do not report
 a stable benchmark; escalate the captured four-tuples and
-variance to [`doca-debug ## debug`](../../doca-debug/SKILL.md)
+variance to [`doca-debug ## debug`](../doca-debug/SKILL.md)
 or the workload owner. Escalate cross-version or cross-host comparisons to
 [`doca-version TASKS.md ## test`](../../doca-version/TASKS.md#test)
-or [`doca-debug ## debug`](../../doca-debug/SKILL.md) with the
+or [`doca-debug ## debug`](../doca-debug/SKILL.md) with the
 captured four-tuples as evidence.
 
 This skill does **not** ship a "test fixture" or pre-recorded
@@ -347,7 +347,7 @@ layers in order. The shape of the diagnosis:
    walk the per-library skill for library-internal
    capability rules (e.g.
    [`doca-comch CAPABILITIES.md ## Capabilities and modes`](../../libs/doca-comch/CAPABILITIES.md#capabilities-and-modes),
-   [`doca-compress`](../../libs/doca-compress/SKILL.md) for
+   [`doca-compress`](../doca-compress/SKILL.md) for
    compress-specific capability boundaries).
 4. **Workload-precondition.** Library exercisable; the
    workload shape is invalid. Re-walk axis 2 of the
@@ -369,7 +369,7 @@ layers in order. The shape of the diagnosis:
    companion-app version that does not match the bench host
    version.
 7. **Cross-cutting.** Cause is below DOCA. Hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) for
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) for
    the cross-cutting debug ladder and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug)
    for the env-side layers (driver / firmware / hugepages /
@@ -402,7 +402,7 @@ name.
   end-to-end measurement, or a library-internal performance
   counter the bench does not expose) ⇒ the matching
   `libs/<library>` skill plus
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   Bench is a uniform harness; library-internal performance
   questions go to the library.
 - **streaming telemetry / live metrics from a production
@@ -443,7 +443,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose (class) | Invocation (shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -468,7 +468,7 @@ Three cross-cutting rules for this appendix:
 - **Cross-link instead of duplicate.** Cross-cutting commands
   (`pkg-config --modversion`, `doca_caps --list-devs`,
   `dmesg`, `mlxconfig -d <bdf> q`, `numactl --hardware`) live
-  in [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+  in [`doca-debug ## debug`](../doca-debug/SKILL.md) and
   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug);
   this appendix names only `doca_bench`-specific invocation
   classes.
@@ -498,5 +498,5 @@ in [`SKILL.md`](SKILL.md):
   version). If the install is in doubt, route to
   [`doca-version TASKS.md ## configure`](../../doca-version/TASKS.md#configure)
   and
-  [`doca-setup`](../../doca-setup/SKILL.md) before running
+  [`doca-setup`](../doca-setup/SKILL.md) before running
   anything else here.

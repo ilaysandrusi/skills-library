@@ -49,7 +49,7 @@ modify / run / test / debug); open
 [`CAPABILITIES.md`](CAPABILITIES.md) when the question is
 *what can the provider express* on this version + this
 BlueField generation. If the user has not installed DOCA yet,
-route to [`doca-setup`](../../doca-setup/SKILL.md) first; if
+route to [`doca-setup`](../doca-setup/SKILL.md) first; if
 the user has not stood up a host-side Flow pipe yet, route to
 [`doca-flow`](../doca-flow/SKILL.md) first; if the user has
 not stood up host-side DPA execution yet, route to
@@ -98,7 +98,7 @@ example is a single instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 - **"Why did my pipe export *succeed* but my DPA kernel never
   sees entries?"** — worked example: *"I called
   `doca_flow_dpa_pipe_export_prepare` AFTER adding entries to
@@ -115,7 +115,7 @@ example is a single instance.
   in
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility)
   which cross-links the canonical detection chain in
-  [`doca-version`](../../doca-version/SKILL.md) and adds the
+  [`doca-version`](../doca-version/SKILL.md) and adds the
   provider-specific overlay inherited from
   [`doca-dpa`](../doca-dpa/SKILL.md).
 
@@ -150,7 +150,7 @@ precondition, and error-taxonomy guidance language-neutral on
 the host side, and points all DPA-side kernel-writing
 questions at the public DOCA DPA and DOCA Flow programming
 guides via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## When to load this skill
 
@@ -190,7 +190,7 @@ Do **not** load this skill for general DOCA Flow programming
 (use [`doca-flow`](../doca-flow/SKILL.md)), generic host-side
 DPA work (use [`doca-dpa`](../doca-dpa/SKILL.md)), or DPA-
 side kernel-writing itself (route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 to the public DOCA DPA / DPACC / Flow programming guides).
 
 ## What this skill provides
@@ -246,12 +246,12 @@ contain — and pull requests should not add:
   code or DPA-side kernel source, in any language.** The
   verified provider source is the shipped C + DPA-side
   samples under the installed DOCA samples tree (route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for the per-install sample tree path). The agent's job is
   to route the user to those files and prescribe a
   minimum-diff modification on them via the universal
   modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the provider-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **Standalone build manifests** (`meson.build`,
@@ -275,7 +275,7 @@ contain — and pull requests should not add:
   kernel, intrinsics, DPA-side libraries like
   `doca-dpa-comms` and `doca-dpa-verbs` — out of scope. Route
   to the public DOCA DPA / DPACC guides via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Loading order
 
@@ -297,11 +297,11 @@ Both companion files cross-link to each other,
 [`doca-flow`](../doca-flow/SKILL.md) and
 [`doca-dpa`](../doca-dpa/SKILL.md) for the host-side
 surfaces this library bridges,
-[`doca-version`](../../doca-version/SKILL.md) for the
+[`doca-version`](../doca-version/SKILL.md) for the
 canonical DOCA version-handling rules (with the
 DOCA-and-DPACC overlay inherited from
 [`doca-dpa`](../doca-dpa/SKILL.md)), and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public DOCA
 Flow / DOCA DPA / DPACC programming guides, or in the on-disk
 install layout" rather than "provider-specific guidance".
@@ -320,7 +320,7 @@ install layout" rather than "provider-specific guidance".
   inherits the two-side-program model, the DPACC-and-DOCA
   version-match rule, and the env-precondition matrix from
   there.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   routing table for every public DOCA documentation source
   (DOCA Flow guide at
   <https://docs.nvidia.com/doca/sdk/doca-flow/index.html>;
@@ -329,37 +329,37 @@ install layout" rather than "provider-specific guidance".
   DPACC compiler guide and DPA Tools umbrella reachable from
   the same routing table) and the on-disk layout of an
   installed DOCA package.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, DPACC compiler install /
   verification, and the *I have no install yet* path with
   the public NGC DOCA container. This skill assumes its
   preconditions are satisfied AND that DPACC is installed at
   a version that matches DOCA.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. This skill's `## Version
   compatibility` cross-links the four-way match rule and adds
   the provider-specific *DOCA-and-DPACC must match* overlay
   per the DOCA Compatibility Policy (inherited from
   [`doca-dpa`](../doca-dpa/SKILL.md)).
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect /
   prefer / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns: the canonical
   `pkg-config` + meson build pattern, the universal
   modify-a-shipped-sample first-app workflow, the universal
   Core-context lifecycle, the cross-library `DOCA_ERROR_*`
   taxonomy, and the program-side debug order. This skill
   layers provider specifics on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). Provider-specific debug (lifecycle-
   ordering between Flow pipe creation, queue creation, export
   prepare, entry add, export; queue-full on DPA-side polling;
   pipe device address handed to a kernel that targets a
   different `doca_flow_dpa_ctx`) overlays on top.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   cross-cutting hardware-safety meta-policy that this
   skill's `## Safety policy` overlays. Because the exported
   pipe is mutated inline by DPA-side kernel code, the

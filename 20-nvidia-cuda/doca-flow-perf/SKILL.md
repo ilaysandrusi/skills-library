@@ -48,7 +48,7 @@ interpret the per-iteration CPU-cycle output*, or *how it
 differs from `doca-flow-tune` (measurement vs. optimization)
 and `doca-flow-dpa-perf` (host / DPU-CPU vs. DPA-offloaded
 path)*. If DOCA is not installed, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the
+[`doca-setup`](../doca-setup/SKILL.md) first; if the
 target measurement is the DPA-offloaded path, route to
 [`doca-flow-dpa-perf`](../doca-flow-dpa-perf/SKILL.md)
 instead; if the goal is to optimize an already-deployed Flow
@@ -123,7 +123,7 @@ This skill is NOT for:
 - operators measuring end-to-end dataplane throughput or
   latency — that is the application's responsibility,
   layered on
-  [`doca-flow`](../../libs/doca-flow/SKILL.md);
+  [`doca-flow`](../doca-flow/SKILL.md);
 - contributors authoring or modifying the tool itself.
 
 ## Language scope
@@ -165,7 +165,7 @@ Load `doca-flow-perf` when ANY of the following is true:
 
 Co-load this skill with:
 
-- [`doca-flow`](../../libs/doca-flow/SKILL.md) (the
+- [`doca-flow`](../doca-flow/SKILL.md) (the
   underlying library; flow-perf programs the same
   matchers / actions / pipes the library exposes);
 - [`doca-flow-tune`](../doca-flow-tune/SKILL.md) (the
@@ -174,11 +174,11 @@ Co-load this skill with:
 - [`doca-flow-dpa-perf`](../doca-flow-dpa-perf/SKILL.md)
   (the host-vs-DPA-path distinction is the second most
   common confusion);
-- [`doca-version`](../../doca-version/SKILL.md) (the
+- [`doca-version`](../doca-version/SKILL.md) (the
   four-way version match every reported flow-perf number
   must carry);
-- [`doca-debug`](../../doca-debug/SKILL.md) and
-  [`doca-setup`](../../doca-setup/SKILL.md) for the
+- [`doca-debug`](../doca-debug/SKILL.md) and
+  [`doca-setup`](../doca-setup/SKILL.md) for the
   env-side debug ladder.
 
 Do NOT load this skill when the user wants to optimize a live
@@ -223,7 +223,7 @@ right neighbouring skill.
   per-entry query timing. It does NOT measure how fast
   packets traverse the resulting rules in the dataplane.
   That is the application's responsibility, layered on
-  [`doca-flow`](../../libs/doca-flow/SKILL.md). The agent
+  [`doca-flow`](../doca-flow/SKILL.md). The agent
   must say this explicitly when the operator asks for "Flow
   throughput".
 - **DPA-offloaded Flow path measurement.** Route to
@@ -245,7 +245,7 @@ right neighbouring skill.
   the public DOCA Flow Perf guide.
 - **Library-internal `doca-flow` API explanations.** The
   underlying matchers and actions belong to
-  [`doca-flow`](../../libs/doca-flow/SKILL.md); this skill
+  [`doca-flow`](../doca-flow/SKILL.md); this skill
   references them but does not duplicate the library's API
   documentation.
 - **Cross-tool benchmarking apples-to-apples claims** when
@@ -260,7 +260,7 @@ When a `doca_flow_perf` question arrives:
 
 1. Confirm DOCA is installed and the binary plus the
    `configs/` JSON library are reachable — if not, route to
-   [`doca-setup`](../../doca-setup/SKILL.md);
+   [`doca-setup`](../doca-setup/SKILL.md);
 2. Confirm the underlying `doca-flow` library is healthy on
    the device — if not, route to
    [`doca-flow TASKS.md ## test`](../../libs/doca-flow/TASKS.md#test);
@@ -283,7 +283,7 @@ When a `doca_flow_perf` question arrives:
 Cross-link conventions follow the bundle's relative path
 contract from `tools/<X>/`:
 
-- [`doca-flow`](../../libs/doca-flow/SKILL.md) — the
+- [`doca-flow`](../doca-flow/SKILL.md) — the
   underlying library. flow-perf programs Flow pipes, entries,
   matchers, and actions; the library is the source of truth
   for the API surface flow-perf exercises.
@@ -296,15 +296,15 @@ contract from `tools/<X>/`:
   DPU-CPU vs. DPA path boundary** lives here. Ask: "am I
   measuring the path that executes on the CPU, or the path
   that executes on the DPA processor?"
-- [`doca-version`](../../doca-version/SKILL.md) — every
+- [`doca-version`](../doca-version/SKILL.md) — every
   reported flow-perf number must come with the four-way
   match (host package, kernel module, firmware, target
   application's linked `doca-flow` version) and the BlueField
   / ConnectX generation. flow-perf overlays this rule, not
   contradicts it.
-- [`doca-setup`](../../doca-setup/SKILL.md) — DOCA install
+- [`doca-setup`](../doca-setup/SKILL.md) — DOCA install
   posture; routing for "is the binary even here?" questions.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the
+- [`doca-debug`](../doca-debug/SKILL.md) — the
   cross-cutting debug ladder for env-side issues (driver,
   firmware, BlueField mode, kernel module).
 - [`doca-bench`](../doca-bench/SKILL.md) — a peer
@@ -312,16 +312,16 @@ contract from `tools/<X>/`:
   primitives, not just Flow). flow-perf is the Flow-specific
   microbenchmark; doca-bench is the broader workload
   benchmark.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — routing to the public `docs.nvidia.com` DOCA Flow Perf
   page, release notes, and forums for release-specific
   published numbers and reproducibility notes.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
   — the agent's detect → prefer → fall back → report contract
   for the structured helpers (`doca-env --json`,
   `doca-capability-snapshot`, `version-matrix.json`)
   flow-perf preconditions rely on.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   — the canonical hardware-safety meta-policy that
   [`CAPABILITIES.md ## Safety policy`](CAPABILITIES.md#safety-policy)
   overlays.

@@ -76,7 +76,7 @@ Require explicit write permission. Ordinary producers use `python3 "$AARON_SKILL
 
 ## Next Best Skill
 
-- **Paid use audit:** [ad-account-auditor](../../ad/activate/ad-account-auditor/SKILL.md)
-- **Creator asset audit:** [creator-content-auditor](../../influencer/activate/creator-content-auditor/SKILL.md)
-- **Narrative proof:** [proof-point-packager](../../narrative/land/proof-point-packager/SKILL.md)
+- **Paid use audit:** [ad-account-auditor](../ad-account-auditor/SKILL.md)
+- **Creator asset audit:** [creator-content-auditor](../creator-content-auditor/SKILL.md)
+- **Narrative proof:** [proof-point-packager](../proof-point-packager/SKILL.md)
 - **Archive/erase:** [memory-management](../memory-management/SKILL.md)

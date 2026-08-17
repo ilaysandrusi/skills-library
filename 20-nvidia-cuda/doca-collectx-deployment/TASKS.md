@@ -6,7 +6,7 @@ run → test → debug`. For collector deployment, `build` is a
 build inside this skill (the collector ships with DOCA; a *source
 program* that feeds the collector is built per
 [`doca-programming-guide`](../doca-programming-guide/SKILL.md) +
-[`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md)).
+[`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md)).
 The `## test` verb is an iterative end-to-end smoke loop, not a
 one-shot pass.
 
@@ -33,9 +33,9 @@ smoke-before-bulk postures are established.
    guidance, surface the four-surface decomposition per
    [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes):
    the clx collection mechanism (this skill), the reader library
-   [`doca-telemetry`](../libs/doca-telemetry/SKILL.md), the
+   [`doca-telemetry`](../doca-telemetry/SKILL.md), the
    publisher library
-   [`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md),
+   [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md),
    and the productized DTS container (Non-goal #7 → public docs).
    If the operator actually wants the productized DTS service,
    STOP and route per the
@@ -53,7 +53,7 @@ smoke-before-bulk postures are established.
    Telemetry / DTS guide and the live collector config — the agent
    does NOT supply them from memory. If a source is the operator's
    own DOCA program, that source side is the publisher library
-   ([`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md)),
+   ([`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md)),
    not this skill.
    Resolve and record the expected sample cadence for each enabled
    provider from the live collector config/help and matching public
@@ -65,7 +65,7 @@ smoke-before-bulk postures are established.
    [`CAPABILITIES.md ## Safety policy`](CAPABILITIES.md#safety-policy),
    probe that THIS device actually exposes each counter under the
    chosen property dimensions (the same discipline
-   [`doca-telemetry-utils`](../tools/doca-telemetry-utils/SKILL.md)
+   [`doca-telemetry-utils`](../doca-telemetry-utils/SKILL.md)
    owns for the exporter-config case). A counter the device does
    not expose is the canonical silently-dropped metric — gate it
    before the config commits, not after.
@@ -284,7 +284,7 @@ do not skip down without clearing the layer above.
 
 Library-level `DOCA_ERROR_*` codes raised by a *source* program
 that feeds the collector are owned by the matching library skill
-([`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md)
+([`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md)
 for the publisher) plus the cross-library taxonomy in
 [`doca-programming-guide CAPABILITIES.md ## Error taxonomy`](../doca-programming-guide/CAPABILITIES.md#error-taxonomy),
 not by this skill.
@@ -297,10 +297,10 @@ conversation. Route them so the agent does not invent guidance:
 - **The hardware-counter reader API** (open a per-domain
   `doca_telemetry_<domain>` context, read a counter snapshot off a
   `doca_dev`) — route to
-  [`doca-telemetry`](../libs/doca-telemetry/SKILL.md).
+  [`doca-telemetry`](../doca-telemetry/SKILL.md).
 - **The application-side publisher API** (define a schema, create
   sources, emit counters / events from a DOCA program) — route to
-  [`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md).
+  [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md).
 - **Operate the productized DTS container** (its packaged config
   schema, built-in provider set, kubelet manifest, NGC image) —
   externally productized (Non-goal #7); route to the

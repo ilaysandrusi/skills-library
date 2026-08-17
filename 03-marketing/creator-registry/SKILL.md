@@ -81,7 +81,7 @@ Standalone one-folder installs may prepare proposals only; they cannot append/pr
 
 ## Next Best Skill
 
-- **New fit decision:** [fit-scorer](../../influencer/scout/fit-scorer/SKILL.md)
-- **Terms/rights:** [contract-helper](../../influencer/activate/contract-helper/SKILL.md)
-- **Re-engagement:** [outreach-manager](../../influencer/activate/outreach-manager/SKILL.md)
+- **New fit decision:** [fit-scorer](../fit-scorer/SKILL.md)
+- **Terms/rights:** [contract-helper](../contract-helper/SKILL.md)
+- **Re-engagement:** [outreach-manager](../outreach-manager/SKILL.md)
 - **Archive/erase:** [memory-management](../memory-management/SKILL.md)

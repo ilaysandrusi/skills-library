@@ -96,7 +96,7 @@ Steps the agent should walk the user through, in order:
    extension is GPU-side: the CUDA toolkit version
    compatible with the running DOCA / driver, the GPU
    architecture flags, the GPUNetIO preconditions per
-   [`doca-gpunetio`](../../libs/doca-gpunetio/SKILL.md).
+   [`doca-gpunetio`](../doca-gpunetio/SKILL.md).
    When the extension is non-GPU: the relevant
    primitive's preconditions.
 7. **Capture the version stack.** Per
@@ -222,11 +222,11 @@ Recurring rules for the modification:
   smoke.
 - **Cross-link to the right neighbouring skill for the
   workload domain.** GPUNetIO workloads route to
-  [`doca-gpunetio`](../../libs/doca-gpunetio/SKILL.md);
+  [`doca-gpunetio`](../doca-gpunetio/SKILL.md);
   Flow workloads route to
-  [`doca-flow`](../../libs/doca-flow/SKILL.md); Comch
+  [`doca-flow`](../doca-flow/SKILL.md); Comch
   workloads route to
-  [`doca-comch`](../../libs/doca-comch/SKILL.md). The
+  [`doca-comch`](../doca-comch/SKILL.md). The
   extension's BODY uses the underlying primitive's API;
   this skill does not duplicate that semantics.
 
@@ -374,7 +374,7 @@ layers in order:
 3. **Load-failed.** Run `ldd` on the built library, check
    `LD_LIBRARY_PATH`, check `SONAME` matches the running
    DOCA `so_version`. Route the dynamic-linker side to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md).
+   [`doca-debug ## debug`](../doca-debug/SKILL.md).
 4. **Registration-mismatch.** Cross-check the
    extension's exported symbols (`nm -D` on the library)
    against the shipped reference's
@@ -395,7 +395,7 @@ layers in order:
    CUDA toolkit version doesn't match the driver; the
    firmware doesn't expose what the extension assumes.
 7. **Cross-cutting.** Hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug)
    for env-side layers (driver, firmware, CUDA driver,
    PCIe, dynamic linker).
@@ -451,15 +451,15 @@ under this skill's name.
   Toolkit documentation on `docs.nvidia.com`. The
   bench-extension framework does not duplicate it.
 - **DOCA GPUNetIO programming semantics** ⇒
-  [`doca-gpunetio`](../../libs/doca-gpunetio/SKILL.md).
+  [`doca-gpunetio`](../doca-gpunetio/SKILL.md).
   The extension's kernel BODY uses GPUNetIO; this skill
   describes the wrapper, not the underlying API.
 - **DOCA Flow programming semantics** ⇒
-  [`doca-flow`](../../libs/doca-flow/SKILL.md) when the
+  [`doca-flow`](../doca-flow/SKILL.md) when the
   extension drives a Flow workload.
 - **firmware / driver upgrade** ⇒
-  [`doca-version`](../../doca-version/SKILL.md) +
-  [`doca-setup`](../../doca-setup/SKILL.md). The
+  [`doca-version`](../doca-version/SKILL.md) +
+  [`doca-setup`](../doca-setup/SKILL.md). The
   bench-extension framework has no opinion beyond the
   rebuild-on-DOCA-upgrade rule.
 - **contributor work on the in-tree extensions** ⇒ out
@@ -492,7 +492,7 @@ the agent should:
 4. The schemas the structured tools emit are defined in
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose (class) | Invocation (shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -503,7 +503,7 @@ the agent should:
 | Confirm the extension exports the expected entry points | `nm -D <library>.so` cross-referenced against the `DOCA_EXPERIMENTAL`-marked surface in the shipped `doca_bench_cuda.h` | [`## debug`](#debug) layer 4 | The exported symbols match the surface shape (and the *spelling* matches what the parent expects per the public DOCA Bench documentation). |
 | Run the no-op smoke through the parent | `doca-bench` invocation that points at the extension and invokes its no-op kernel (the reference's `doca_bench_cuda_start_nop_kernel` family is the example; the exact CLI surface the parent exposes lives in the parent's documentation) | [`## run`](#run) step 2 + [`## test`](#test) step 1 | Exit 0; parent logs show the extension loaded; the no-op entry returned `DOCA_SUCCESS`. |
 | Run the minimal-workload smoke through the parent | `doca-bench` invocation that points at the extension and invokes the smallest non-no-op workload kernel | [`## run`](#run) step 4 + [`## test`](#test) step 3 | Exit 0; parent's accounting consumed the extension's stats struct; `jobs_processed > 0`; `stop_flag` discipline held (kernel terminated when the parent set the flag). |
-| Save a session snapshot for debug | Capture (a) the parent's invocation + logs, (b) the extension's logs, (c) `ldd` and `nm -D` output for the library, (d) the version stack (DOCA, firmware, CUDA, parent `doca-bench`, extension `SONAME`) | [`## test`](#test) capture step + [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug) | The saved bundle is consumed by the cross-cutting debug ladder. |
+| Save a session snapshot for debug | Capture (a) the parent's invocation + logs, (b) the extension's logs, (c) `ldd` and `nm -D` output for the library, (d) the version stack (DOCA, firmware, CUDA, parent `doca-bench`, extension `SONAME`) | [`## test`](#test) capture step + [`doca-debug TASKS.md ## debug`](../doca-debug/TASKS.md#debug) | The saved bundle is consumed by the cross-cutting debug ladder. |
 
 Three cross-cutting rules for this appendix:
 
@@ -522,12 +522,12 @@ Three cross-cutting rules for this appendix:
 - **Cross-link instead of duplicate.** Cross-cutting
   commands (`pkg-config`, `dmesg`, `ldd`, `nm`, `readelf`)
   live in
-  [`doca-debug TASKS.md ## Command appendix`](../../doca-debug/TASKS.md);
+  [`doca-debug TASKS.md ## Command appendix`](../doca-debug/TASKS.md);
   parent-tool commands (the `doca-bench` CLI itself) live
   in
   [`doca-bench TASKS.md ## Command appendix`](../doca-bench/TASKS.md);
   GPUNetIO-specific commands live in
-  [`doca-gpunetio`](../../libs/doca-gpunetio/SKILL.md);
+  [`doca-gpunetio`](../doca-gpunetio/SKILL.md);
   this appendix names only bench-extension-specific
   invocations on top.
 

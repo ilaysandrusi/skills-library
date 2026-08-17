@@ -47,17 +47,17 @@ open [`CAPABILITIES.md`](CAPABILITIES.md) when the question is
 *what can the host-side PCC API express* on this version + this
 BlueField generation + this firmware. If the user has not
 installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the user is
+[`doca-setup`](../doca-setup/SKILL.md) first; if the user is
 asking how to *write* the DPA-side congestion-control algorithm
 itself (the code that runs on the DPA processor, compiled by
 `dpacc`), that is a different scope — route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 to the public DOCA PCC programming guide and to
 [`doca-dpa`](../doca-dpa/SKILL.md) for the host-side DPA
 lifecycle this skill builds on. If the user only wants to
 *inspect* PCC counters at runtime without writing a custom
 algorithm, that is the `pcc_counters` CLI tool — route via
-[`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools);
+[`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools);
 this skill is for *custom* algorithms only.
 
 ## Example questions this skill answers well
@@ -103,7 +103,7 @@ instance.
   + the deferred-topic boundaries in
   [`CAPABILITIES.md ## Deferred topic boundaries`](CAPABILITIES.md#deferred-topic-boundaries)
   which route to
-  [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools)
+  [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools)
   for the counter tool.
 - **"Is the host-side PCC API I'm reading about on my installed
   DOCA?"** — worked example: *"is the host-side load helper I
@@ -111,7 +111,7 @@ instance.
   this host?"*. Answered by the version-compatibility overlay in
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility)
   which cross-links the canonical detection chain in
-  [`doca-version`](../../doca-version/SKILL.md) and adds the
+  [`doca-version`](../doca-version/SKILL.md) and adds the
   PCC-specific *DOCA must match DPACC* overlay inherited from
   [`doca-dpa`](../doca-dpa/SKILL.md).
 - **"What does this `DOCA_ERROR_*` from a `doca_pcc_*` call mean
@@ -123,7 +123,7 @@ instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -140,7 +140,7 @@ DOCA PCC itself, nor is it the place to learn how to *write*
 the DPA-side congestion-control algorithm itself (that path
 goes through the public DOCA PCC programming guide and the
 companion DOCA DPA / DPACC guides via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 
 **Language scope.** DOCA PCC ships as a host-side C library
 with `pkg-config` module name `doca-pcc`. The host-side API is
@@ -196,9 +196,9 @@ runs on the DPA), questions about the default factory PCC
 algorithm shipped in ConnectX firmware (no host-side `doca-pcc`
 code needed — that path is firmware-only configuration), or
 questions about the `pcc_counters` diagnostic CLI (route via
-[`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools)).
+[`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools)).
 For all of those, route through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 to the matching upstream guide.
 
 ## What this skill provides
@@ -235,7 +235,7 @@ DOCA Compatibility Policy, and the user already knows how
 algorithm that `dpacc` will compile. It does not cover
 installing DOCA, installing the DPACC compiler, or flipping
 firmware-level configuration — those paths go through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -250,7 +250,7 @@ contain — and pull requests should not add:
   route the user to those files and prescribe a minimum-diff
   modification on them via the universal modify-a-sample
   workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the PCC-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **A specific congestion control algorithm.** This library
@@ -273,7 +273,7 @@ contain — and pull requests should not add:
 - **`pcc_counters` tool surface.** That CLI is a *separate
   artifact* (the real tool is the `pcc_counters.sh` script under
   `tools/pcc_counters/`) with its own public page; routing for it lives in
-  [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools).
+  [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools).
   Conflating it with the `doca-pcc` library is the single most
   common PCC first-app design error.
 
@@ -292,10 +292,10 @@ contain — and pull requests should not add:
    run, test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 DOCA version-handling rules (with the PCC overlay that DOCA
 must match the DPACC compiler), and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public DOCA
 PCC programming guide, the public DPA / DPACC guides, the
 `pcc_counters` tool guide, or in the on-disk install
@@ -303,7 +303,7 @@ layout" rather than "PCC host-side-specific guidance".
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation
   source and the on-disk layout of an installed DOCA package.
   The PCC public guide is at
@@ -326,7 +326,7 @@ layout" rather than "PCC host-side-specific guidance".
   traffic on that port, there is nothing for the algorithm to
   act on, and `doca-rdma` is the skill that brings that
   traffic up.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, DPACC compiler install / verification,
   BlueField firmware configuration (including the custom-PCC
   slot enable), and the *I have no install yet* path with the
@@ -334,24 +334,24 @@ layout" rather than "PCC host-side-specific guidance".
   preconditions are satisfied AND that DPACC is installed at a
   version that matches DOCA AND that the firmware-level
   custom-PCC slot is enabled.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. This skill's `## Version
   compatibility` cross-links the four-way match rule and adds
   the PCC-specific *DOCA-and-DPACC must match* overlay per the
   DOCA Compatibility Policy (inherited from
   [`doca-dpa`](../doca-dpa/SKILL.md)).
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect /
   prefer / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library:
   the canonical `pkg-config` + meson build pattern, the
   universal modify-a-shipped-sample first-app workflow, the
   universal Core-context lifecycle, the cross-library
   `DOCA_ERROR_*` taxonomy, and the program-side debug order.
   This skill layers PCC specifics on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). PCC-specific debug (custom-PCC slot not
   enabled in firmware, DPACC + DOCA version skew, algorithm

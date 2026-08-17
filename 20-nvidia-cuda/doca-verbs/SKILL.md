@@ -62,7 +62,7 @@ boundary with vanilla libibverbs*; open [`TASKS.md`](TASKS.md) when
 the user has *already confirmed* they need raw verbs and wants the
 configure / build / modify / run / test / debug workflow for them.
 If the user has not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first.
+[`doca-setup`](../doca-setup/SKILL.md) first.
 
 ## The decision this skill exists to gate
 
@@ -180,7 +180,7 @@ infrastructure tree
 (`$(pkg-config --variable=includedir doca-common) doca_verbs.h` and the
 adjacent `doca_verbs_*.h` family); per the
 headers-win-over-docs rule in
-[`doca-version`](../../doca-version/SKILL.md), the headers on the
+[`doca-version`](../doca-version/SKILL.md), the headers on the
 user's install are the authoritative truth for the live symbol
 surface. C and C++ consumers are the canonical case; the worked
 examples in `TASKS.md` assume that path. Other-language consumers
@@ -223,11 +223,11 @@ media / data-over-IP streaming (use
 [`doca-rmax`](../doca-rmax/SKILL.md)); use cases a different
 higher-level DOCA library covers ([`doca-flow`](../doca-flow/SKILL.md)
 for steering, the storage-transport library for NVMe-oF — routed via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md));
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md));
 install of DOCA itself (use
-[`doca-setup`](../../doca-setup/SKILL.md)); or general DOCA
+[`doca-setup`](../doca-setup/SKILL.md)); or general DOCA
 orientation (use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 
 ## What this skill provides
 
@@ -260,7 +260,7 @@ their public install profile expects (the RDMA stack on host with
 proper module loads, same as
 [`doca-rdma`](../doca-rdma/SKILL.md)). It does not cover
 installing DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -274,7 +274,7 @@ contain — and pull requests should not add:
   /opt/mellanox/doca/samples/`); the agent's job is to route the
   user to those files and prescribe a minimum-diff modification on
   them via the universal modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the verbs-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **Standalone build manifests** (`meson.build`, `CMakeLists.txt`,
@@ -310,9 +310,9 @@ higher-level libraries
 [`doca-common`](../doca-common/SKILL.md) for the foundation
 primitives every verbs context rests on (`doca_dev` /
 `doca_pe` / `doca_ctx`),
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 version-handling rules, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or the
 installed package layout" rather than "verbs-specific guidance".
 
@@ -342,35 +342,35 @@ installed package layout" rather than "verbs-specific guidance".
   capability-query rule against the active `doca_devinfo`, and
   the lifecycle are owned there; this skill layers verbs-specific
   patterns on top.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source
   and the on-disk layout of an installed DOCA package. The DOCA
   Verbs public guide is listed there; this skill does not
   duplicate the URL.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, and the *I have no install yet* path
   with the public NGC DOCA container. This skill assumes its
   preconditions are satisfied.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical DOCA
+- [`doca-version`](../doca-version/SKILL.md) — canonical DOCA
   version-handling rules. This skill's `## Version compatibility`
   cross-links the four-way match rule (with `doca-verbs.pc` joining
   the match set) and the cap-query-is-runtime-authority rule.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect / prefer /
   fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library: the
   canonical `pkg-config` + meson build pattern, the universal
   modify-a-shipped-sample first-app workflow, the universal
   lifecycle, the cross-library `DOCA_ERROR_*` taxonomy, and the
   program-side debug order. This skill layers raw-verbs specifics
   on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). Raw-verbs-specific debug (completion-entry
   inspection, no-mixing-with-libibverbs, lifecycle in verbs terms)
   overlays on top of that ladder.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the cross-cutting hardware-safety meta-policy this skill's
   `## Safety policy` overlays.

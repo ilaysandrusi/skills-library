@@ -80,7 +80,7 @@ Standalone one-folder installs may prepare an ordinary proposal, erasure safety 
 
 ## Next Best Skill
 
-- **Apply exclusions:** [list-segment-builder](../../email/setup/list-segment-builder/SKILL.md)
-- **Audit SEND:** [email-quality-auditor](../../email/deliver/email-quality-auditor/SKILL.md)
-- **Deliverability incident:** [deliverability-qa](../../email/setup/deliverability-qa/SKILL.md)
+- **Apply exclusions:** [list-segment-builder](../list-segment-builder/SKILL.md)
+- **Audit SEND:** [email-quality-auditor](../email-quality-auditor/SKILL.md)
+- **Deliverability incident:** [deliverability-qa](../deliverability-qa/SKILL.md)
 - **Erase/archive:** [memory-management](../memory-management/SKILL.md)

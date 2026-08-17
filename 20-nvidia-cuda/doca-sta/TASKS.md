@@ -18,7 +18,7 @@ policy, see [CAPABILITIES.md](CAPABILITIES.md). For the
 cross-library DOCA patterns layered under everything below (the
 universal Core lifecycle, the cross-library `DOCA_ERROR_*`
 taxonomy, the modify-a-shipped-sample workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 For the RDMA substrate that NVMe-over-RDMA transport lands on,
 see [`doca-rdma`](../doca-rdma/SKILL.md). For the steering
 side that decides which NVMe-oF packets reach STA-managed
@@ -48,7 +48,7 @@ Steps the agent should walk the user through:
    installed and consistent — `pkg-config --modversion doca-sta`
    resolves and matches `doca_caps --version` per the four-way
    match rule owned by
-   [`doca-version`](../../doca-version/SKILL.md); (b) for the
+   [`doca-version`](../doca-version/SKILL.md); (b) for the
    RDMA transport (STA's only transport),
    `pkg-config --modversion doca-rdma`
    resolves AND `doca_rdma_cap_*` on the chosen device reports a
@@ -462,9 +462,9 @@ so the agent does not invent guidance:
 
 - **install.** Installing DOCA, choosing packages, post-install
   verification, `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the install-tree
+  [`doca-setup`](../doca-setup/SKILL.md) and to the install-tree
   layout in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA is already installed.
 - **deploy.** Deploying NVMe-oF-using applications at scale
   across many hosts / DPUs, multi-tenant subsystem fan-out,
@@ -481,7 +481,7 @@ so the agent does not invent guidance:
   and this skill does not ship initiator glue.
   Route the user to the upstream project's own integration
   documentation reachable via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **Initiator-side NVMe host semantics.** Host-side controller
   configuration, host block-layer semantics, and host multipath
   policy are owned by the remote initiator's NVMe stack, not by
@@ -527,7 +527,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

@@ -15,7 +15,7 @@ metadata: {"author": "aaron-he-zhu", "version": "19.2.0", "discipline": "influen
 
 # Outreach Manager
 
-Craft personal, professional, persistent outreach; manage negotiations; track relationship progress. Home discipline is influencer (creator outreach), and the same mechanics engine — personalization, multi-touch cadence, negotiation scripts, pipeline tracking — serves media/analyst and launch-partner targets when [press-media-relations](../../../launch/mobilize/press-media-relations/SKILL.md) hands over its media list, angles, and embargo terms, and social-selling / advocate-recruitment targets when [social-selling-planner](../../../social/host/social-selling-planner/SKILL.md) or [advocacy-program-designer](../../../social/craft/advocacy-program-designer/SKILL.md) hands over a warm 1:1. The list, the angle, and the embargo stay with the handing-off skill; this skill owns the pitch execution.
+Craft personal, professional, persistent outreach; manage negotiations; track relationship progress. Home discipline is influencer (creator outreach), and the same mechanics engine — personalization, multi-touch cadence, negotiation scripts, pipeline tracking — serves media/analyst and launch-partner targets when [press-media-relations](../press-media-relations/SKILL.md) hands over its media list, angles, and embargo terms, and social-selling / advocate-recruitment targets when [social-selling-planner](../social-selling-planner/SKILL.md) or [advocacy-program-designer](../advocacy-program-designer/SKILL.md) hands over a warm 1:1. The list, the angle, and the embargo stay with the handing-off skill; this skill owns the pitch execution.
 
 ## Quick Start
 
@@ -33,7 +33,7 @@ Help me negotiate with @[influencer] who is asking for $[X] when our budget is $
 
 ## Skill Contract
 
-- **Reads**: target influencer handle(s), platform, follower count, niche; campaign and product context; compensation type and budget; deliverables and timeline; any prior contact history supplied by the user or loaded from memory. Before any outreach, check `memory/creators/<handle-slug>.md` — the [creator-registry](../../../protocol/creator-registry/SKILL.md) roster record — for the confirmed contact path, last agreed rate, and negotiation/response history.
+- **Reads**: target influencer handle(s), platform, follower count, niche; campaign and product context; compensation type and budget; deliverables and timeline; any prior contact history supplied by the user or loaded from memory. Before any outreach, check `memory/creators/<handle-slug>.md` — the [creator-registry](../creator-registry/SKILL.md) roster record — for the confirmed contact path, last agreed rate, and negotiation/response history.
 - **Writes**: outreach artifact (pitches, follow-up sequence, negotiation guide, pipeline tracker) to `memory/influencer/outreach-manager/YYYY-MM-DD-<topic>.md`. When a cycle closes, the closed outcome (final agreed rate, response history, confirmed contact path) goes as a one-line update to `memory/events/creators.ndjson` via an authorized `operation: propose` request to `registry-events.py` — only `creator-registry` writes canonical roster records.
 - **Promotes**: durable facts (confirmed partners, agreed rates, top objection patterns, response-rate baselines) to `memory/hot-cache.md`.
 - **Done when**:
@@ -69,7 +69,7 @@ When a user requests outreach help, run these steps. Each step has a fill-in tem
 2. **Create personalized outreach** — list personalization points (recent content, style, audience, values, past partners), then write the primary message plus a DM-friendly short version and a formal email/management version. Template: [Step 2](references/templates.md#step-2--personalized-outreach). *Media/analyst/hunter targets*: personalize on beat and recent coverage, lead with the story angle (not a compensation offer), carry the embargo terms verbatim from the press-media-relations artifact, and never invent quotes or data — claims come from the approved message house.
 3. **Create follow-up sequence** — build a 4-touch cadence (Day 0 / 3-4 / 7-8 / 14, then archive at Day 21), each touch adding new value and getting shorter. Cap at 3-4 follow-ups; make it easy to say no. Template: [Step 3](references/templates.md#step-3--follow-up-sequence).
 4. **Provide negotiation support** — map the ask/budget gap, then apply value-exchange, scope-adjustment, or future-value strategies with ready scripts and an objection/response table. Template: [Step 4](references/templates.md#step-4--negotiation-guide).
-5. **Track outreach pipeline** — record stage counts and conversion rates, a per-creator detailed pipeline, today's prioritized actions, and pipeline health (response rate, confirmation rate, time-to-confirm, top objection). Template: [Step 5](references/templates.md#step-5--outreach-pipeline-tracker). Active-cycle tracking lives here; when a cycle closes (confirmed or archived), submit the closed outcome as a one-line update to `memory/events/creators.ndjson` via an authorized `operation: propose` request to `registry-events.py` for [creator-registry](../../../protocol/creator-registry/SKILL.md) to reconcile.
+5. **Track outreach pipeline** — record stage counts and conversion rates, a per-creator detailed pipeline, today's prioritized actions, and pipeline health (response rate, confirmation rate, time-to-confirm, top objection). Template: [Step 5](references/templates.md#step-5--outreach-pipeline-tracker). Active-cycle tracking lives here; when a cycle closes (confirmed or archived), submit the closed outcome as a one-line update to `memory/events/creators.ndjson` via an authorized `operation: propose` request to `registry-events.py` for [creator-registry](../creator-registry/SKILL.md) to reconcile.
 
 ## Example
 
@@ -100,19 +100,19 @@ Full multi-version output, follow-up cadence, negotiation guide, and pipeline tr
 - [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipe per connector category.
 - STAR benchmark scoring at [references/star-benchmark.md](../../../references/star-benchmark.md) — quality scoring reference for downstream review.
 - [expert-panel.md](../../../references/expert-panel.md) — multi-persona review method for pressure-testing outreach copy before sending.
-- Sibling skills: [influencer-discovery](../../scout/influencer-discovery/SKILL.md), [fit-scorer](../../scout/fit-scorer/SKILL.md), [brief-generator](../../target/brief-generator/SKILL.md), [contract-helper](../contract-helper/SKILL.md), [creator-content-auditor](../creator-content-auditor/SKILL.md).
+- Sibling skills: [influencer-discovery](../influencer-discovery/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md), [brief-generator](../brief-generator/SKILL.md), [contract-helper](../contract-helper/SKILL.md), [creator-content-auditor](../creator-content-auditor/SKILL.md).
 
 ## Next Best Skill
 
 - **Primary**: [creator-content-auditor](../creator-content-auditor/SKILL.md) — once a partner is confirmed and creates content, review the draft against the brief before it ships.
 - **Alternate**: [contract-helper](../contract-helper/SKILL.md) — finalize agreed terms into a partnership agreement.
-- **Alternate**: [brief-generator](../../target/brief-generator/SKILL.md) — send a full campaign brief to a creator who asked for more detail.
+- **Alternate**: [brief-generator](../brief-generator/SKILL.md) — send a full campaign brief to a creator who asked for more detail.
 
 Termination note: keep a visited-set. If a skill in this chain was already invoked this session, stop and report chain-complete rather than re-running it. Max handoff depth is 3.
 
 ## Related Skills
 
-- [influencer-discovery](../../scout/influencer-discovery/SKILL.md) - Find influencers to reach out to
-- [fit-scorer](../../scout/fit-scorer/SKILL.md) - Prioritize who to contact first
-- [brief-generator](../../target/brief-generator/SKILL.md) - Send briefs to confirmed partners
+- [influencer-discovery](../influencer-discovery/SKILL.md) - Find influencers to reach out to
+- [fit-scorer](../fit-scorer/SKILL.md) - Prioritize who to contact first
+- [brief-generator](../brief-generator/SKILL.md) - Send briefs to confirmed partners
 - [contract-helper](../contract-helper/SKILL.md) - Finalize agreements

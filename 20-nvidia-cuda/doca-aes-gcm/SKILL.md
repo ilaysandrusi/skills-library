@@ -43,7 +43,7 @@ the user wants to *do* something (configure / build / modify / run /
 test / debug); open [`CAPABILITIES.md`](CAPABILITIES.md) when the
 question is *what can DOCA AES-GCM express* on this version. If the
 user has not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user is
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user is
 asking *"should I even use the accelerator for this encryption?"*,
 the path-selection rule in
 [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
@@ -102,7 +102,7 @@ the load-bearing piece — the worked example is a single instance.
   overlay in
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility),
   which cross-links the canonical detection chain in
-  [`doca-version`](../../doca-version/SKILL.md) and adds the
+  [`doca-version`](../doca-version/SKILL.md) and adds the
   AES-GCM-specific *"discover key sizes via cap query"* bullets.
 - **"What does this `DOCA_ERROR_*` from an AES-GCM call mean and
   which layer caused it?"** — worked example: *"`DOCA_ERROR_IO_FAILED`
@@ -112,7 +112,7 @@ the load-bearing piece — the worked example is a single instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -192,7 +192,7 @@ not in this library and CPU + OpenSSL is the right answer), SHA
 hashing on the same accelerator family (use
 [`doca-sha`](../doca-sha/SKILL.md)), or other DOCA libraries. For
 those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -224,7 +224,7 @@ The skill assumes a host or BlueField where DOCA is already
 installed at the standard location and the user has the privileges
 their public install profile expects. It does not cover installing
 DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -238,7 +238,7 @@ contain — and pull requests should not add:
   job is to route the user to those files and prescribe a
   minimum-diff modification on them via the universal
   modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the AES-GCM-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **Pre-computed AES-GCM test vectors.** The skill tells the agent
@@ -273,35 +273,35 @@ contain — and pull requests should not add:
    test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 version-handling rules, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or the
 installed package layout" rather than "AES-GCM-specific guidance".
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source and
   the on-disk layout of an installed DOCA package. The DOCA AES-GCM
   page lives at `docs.nvidia.com/doca/sdk/DOCA-AES-GCM/`; it is a
   member of the DOCA Crypto Acceleration family alongside
   [`doca-sha`](../doca-sha/SKILL.md).
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, and the *I have no install yet* path with
   the public NGC DOCA container. This skill assumes its
   preconditions are satisfied.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical DOCA
+- [`doca-version`](../doca-version/SKILL.md) — canonical DOCA
   version-handling rules. This skill's
   [`## Version compatibility`](CAPABILITIES.md#version-compatibility)
   cross-links the four-way match rule and adds only the
   AES-GCM-specific *"discover key sizes + task presence via cap
   query"* overlay.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect / prefer /
   fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library: the
   canonical `pkg-config` + meson build pattern, the universal
   modify-a-shipped-sample first-app workflow, the universal
@@ -314,7 +314,7 @@ installed package layout" rather than "AES-GCM-specific guidance".
   authenticated-encryption *with a separate keyed hash* (rare —
   AES-GCM already provides authentication via its tag) or when the
   user is comparing offload paths between the two.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). AES-GCM-specific debug (key-size-not-supported,
   oversized input, tag-verification failure on decrypt) overlays on

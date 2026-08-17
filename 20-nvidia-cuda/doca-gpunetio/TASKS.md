@@ -17,7 +17,7 @@ surface, and the safety policy, see
 patterns layered under everything below (the universal lifecycle,
 the cross-library `DOCA_ERROR_*` taxonomy, the modify-a-shipped-
 sample workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -463,9 +463,9 @@ so the agent does not invent guidance:
 - **install.** Installing DOCA, installing the CUDA toolkit,
   choosing matched versions, post-install verification,
   `pkg-config` wiring, loading `nvidia_peermem` — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA + CUDA are already installed and
   matched.
 - **deploy.** Deploying GPUNetIO-using applications at scale
@@ -479,7 +479,7 @@ so the agent does not invent guidance:
   warp-level optimization, shared memory layout inside the
   persistent kernel — out of scope. Route to the upstream CUDA
   toolkit documentation via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md);
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md);
   this skill prescribes that the user *uses* the persistent-kernel
   pattern, not how to tune it.
 - **DOCA Ethernet queue setup.** Bringing up the underlying
@@ -514,7 +514,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

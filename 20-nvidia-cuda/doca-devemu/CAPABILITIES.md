@@ -13,10 +13,10 @@ Read this file when the loader sent you here from
 jump to [TASKS.md](TASKS.md). For the canonical DOCA
 version-handling rules that this skill layers a Device
 Emulation overlay on top of, see
-[`doca-version`](../../doca-version/SKILL.md). For the
+[`doca-version`](../doca-version/SKILL.md). For the
 host-side kernel driver layer that consumes the emulated PCIe
 device, route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 to the upstream Linux kernel virtio / PCIe documentation — the
 host kernel driver layer is *not* part of DOCA and is not
 re-explained here.
@@ -81,7 +81,7 @@ deployment looks like.**
 The agent's rule: when the user asks *"what backend should I
 write"*, that is a domain question (storage / networking /
 filesystem design), NOT an API question — route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 to the public DOCA Device Emulation umbrella guide and the
 per-sub-library guides linked from it, plus the user's own
 domain expertise. When the user asks *"how do I expose an
@@ -93,7 +93,7 @@ Before any code is written, the agent must pin the sub-library
 the user needs. Different sub-libraries have different APIs,
 different `pkg-config` modules (per the per-sub-library guides
 reachable via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)),
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)),
 and different firmware-level enablement axes.
 
 | User intent | Sub-library | Why this sub-library is the answer |
@@ -101,8 +101,8 @@ and different firmware-level enablement axes.
 | Build a custom emulated PCIe device whose interface does not match any standard virtio class (e.g. a custom PCIe peripheral for prototyping, a security-isolated device with a custom PCIe surface, a research device with bespoke registers) | PCI Generic — raw PCIe device emulation | Gives the user direct control over the PCIe surface the host sees; the host binds its generic PCIe driver model rather than a class-specific virtio driver. The user owns the entire register / interrupt / BAR / configuration-space contract |
 | Expose a virtio network device to the host backed by custom DPU-side packet processing (e.g. a custom packet-forwarding logic the user wants the host to see as a standard virtio NIC) | virtio-net — emulated virtio network device | The host sees a standard virtio-net device and binds its upstream `virtio_net` kernel driver; the user only writes the DPU-side backend. The virtio framing + feature-negotiation is handled by the sub-library |
 | Expose a virtio filesystem to the host backed by custom DPU-side filesystem logic (e.g. a network-attached or specialized filesystem the host should see as a standard virtio-fs device) | virtio-fs — emulated virtio filesystem device | The host sees a standard virtio-fs device and binds its upstream `virtio_fs` kernel driver; the user only writes the DPU-side backend. The virtio-fs request shape is handled by the sub-library |
-| Want a packaged NVMe / virtio-blk storage backend without writing the backend code yourself | None of this skill — DOCA SNAP Service; route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) | SNAP is a packaged storage service built on top of Device Emulation; the user does not implement the backend. This skill is the *building block* the service uses; the service is a *separate artifact* |
-| Want a packaged virtio-net daemon without writing the backend code yourself | None of this skill — DOCA Virtio-net Service; route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) | Virtio-net Service is a packaged virtio-net daemon built on top of this library's virtio-net sub-library; the user does not implement the backend. The library is the building block; the service is the packaged solution |
+| Want a packaged NVMe / virtio-blk storage backend without writing the backend code yourself | None of this skill — DOCA SNAP Service; route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) | SNAP is a packaged storage service built on top of Device Emulation; the user does not implement the backend. This skill is the *building block* the service uses; the service is a *separate artifact* |
+| Want a packaged virtio-net daemon without writing the backend code yourself | None of this skill — DOCA Virtio-net Service; route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) | Virtio-net Service is a packaged virtio-net daemon built on top of this library's virtio-net sub-library; the user does not implement the backend. The library is the building block; the service is the packaged solution |
 | Want standard NIC behavior on the BlueField (no new emulated device class; just shape the data plane on the existing NIC) | None of this skill — use [`doca-flow`](../doca-flow/SKILL.md) + [`doca-eth`](../doca-eth/SKILL.md) | Device Emulation is for *new* emulated PCIe devices the host did not previously see. The BlueField's built-in NIC personality is shaped by Flow + Eth, not by this library |
 
 If the user does not yet know which sub-library they need,
@@ -173,7 +173,7 @@ per-device user-data) ride on top of the same cap-query rule.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The Device Emulation-specific overlay** is:
@@ -187,7 +187,7 @@ there; this skill does not duplicate it.
   exact per-sub-library module name lives in the public
   Device Emulation umbrella guide and the per-sub-library
   guides linked from it, reachable via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md);
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md);
   the agent should *route the user there to read it off the
   guide and off their own `pkg-config` install* rather than
   hardcoding a module name from memory.
@@ -206,7 +206,7 @@ there; this skill does not duplicate it.
   installed but a sub-library is not.
 - **Headers in $(pkg-config --variable=includedir doca-common)
   win over docs.** Per the headers-win-over-docs rule in
-  [`doca-version`](../../doca-version/SKILL.md), if a public
+  [`doca-version`](../doca-version/SKILL.md), if a public
   Device Emulation doc page mentions a `doca_devemu_*` symbol
   that is not in the installed headers, the headers describe
   what *this* install can call. The agent must quote the
@@ -227,7 +227,7 @@ cross-library response.
 | --- | --- | --- |
 | `DOCA_ERROR_BAD_STATE` | Any `doca_devemu_<sub>_*` call before `doca_ctx_start()` on the per-sub-library context, or after `doca_ctx_stop()`; tearing down the per-sub-library context while the host kernel driver is still attached | Lifecycle violation. Walk the call sequence against the lifecycle in [`doca-programming-guide CAPABILITIES.md ## Capabilities and modes`](../../doca-programming-guide/CAPABILITIES.md#capabilities-and-modes); the most common case is destroying the per-sub-library context before the host kernel driver has been unbound or the emulated device removed |
 | `DOCA_ERROR_NOT_SUPPORTED` | Per-sub-library context create / start; the matching installed capability getter returning *not supported*; first feature-negotiation call (virtio-net / virtio-fs) | A false capability result establishes only that this active `doca_devinfo` cannot use that requested surface in the observed state. It does **not** by itself prove the firmware slot is disabled. Separately verify installed headers / module, BlueField generation support, and read-only current / next-boot firmware configuration before assigning the cause; then stop or route on the axis that failed |
-| `DOCA_ERROR_NOT_PERMITTED` | Per-sub-library context create / start; first doorbell registration | Disambiguate all evidence axes before changing anything: (1) confirm the process identity and the install's documented privilege / device-access policy; (2) run the read-only `mlxconfig -d <bdf> q` current / next-boot configuration probe for the selected emulation class (use `VIRTIO_NET_EMULATION_ENABLE` only for virtio-net and only when that field is present in the installed MFT / matching public guide); (3) confirm whether a pending next-boot value requires the documented reset; and (4) confirm the exact installed capability getter against the intended `doca_devinfo`. Missing privilege, disabled current/next-boot configuration, pending activation, and unsupported hardware/install are distinct outcomes. Do not infer one from the API error alone, and route any configuration mutation through [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) |
+| `DOCA_ERROR_NOT_PERMITTED` | Per-sub-library context create / start; first doorbell registration | Disambiguate all evidence axes before changing anything: (1) confirm the process identity and the install's documented privilege / device-access policy; (2) run the read-only `mlxconfig -d <bdf> q` current / next-boot configuration probe for the selected emulation class (use `VIRTIO_NET_EMULATION_ENABLE` only for virtio-net and only when that field is present in the installed MFT / matching public guide); (3) confirm whether a pending next-boot value requires the documented reset; and (4) confirm the exact installed capability getter against the intended `doca_devinfo`. Missing privilege, disabled current/next-boot configuration, pending activation, and unsupported hardware/install are distinct outcomes. Do not infer one from the API error alone, and route any configuration mutation through [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) |
 | `DOCA_ERROR_INVALID_VALUE` | Per-sub-library configuration calls — device descriptor / device identity values, virtio feature-bit negotiation mismatches, queue sizing past the cap | The per-device descriptor the user supplied is malformed for the chosen sub-library, OR (virtio-net / virtio-fs) the host kernel driver and the emulated device disagreed at feature negotiation, OR a sizing parameter exceeds what the per-sub-library cap-query advertised. Re-read the cap-query baseline; for the virtio cases, re-check the feature set the user opted in to against what the cap-query reports as supported on this combo |
 | `DOCA_ERROR_IO_FAILED` | Host ↔ DPU interaction after start — host kernel driver reads, writes, kicks; DMA primitives moving payload | The host-side driver interaction failed below the DOCA layer. Most common cause is the host's kernel driver did not bind cleanly to the emulated device (e.g. the host kernel does not ship the matching virtio driver, or the host's `lspci` does see the device but the driver bind failed); second most common is a host-side mmap / DMA address that the DPU-side DMA primitive could not resolve. Inspect the host-side `dmesg` and `lspci` for the emulated device; the fix is typically host-side rather than DPU-side |
 
@@ -294,7 +294,7 @@ build flavor) see
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout, sample tree) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -318,9 +318,9 @@ new Device Emulation setup:
 
 | Precondition | What must be true | How the agent verifies | Where to fix |
 | --- | --- | --- | --- |
-| BlueField generation supports the chosen sub-library | The BlueField generation actually carries support for the emulation type the user picked (PCI Generic / virtio-net / virtio-fs); not every BlueField generation supports every sub-library | The matching `doca_devemu_<sub>_cap_*` against the active `doca_devinfo` returns supported; the BlueField hardware generation is on the public umbrella's *supported BlueField generations* list (route to [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) for the per-sub-library guide) | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side BlueField identification; this is **not** a code fix — if the hardware does not support the sub-library, the answer is *use a different sub-library or different hardware*, not a code change |
-| BlueField firmware has the matching emulation type enabled | Device emulation requires firmware configuration for the selected emulation type; this is **not a casual setting** and not flipped during normal BlueField operation | Run read-only `mlxconfig -d <bdf> q` and inspect both current and next-boot values using the exact field documented by the installed MFT / matching public guide. `VIRTIO_NET_EMULATION_ENABLE` may be used only for virtio-net and only when documented / present. A false library capability is not proof that configuration is disabled; independently check hardware support, installed headers / module, and firmware configuration | Read via [`doca-setup`](../../doca-setup/SKILL.md); any write or reset routes through [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md). If the exact field cannot be verified, stop rather than inventing one |
-| DPU-side process privileges | The DPU-side process running the user's `doca_devemu_<sub>_*` code can perform PCIe-level emulation; this is privileged and typically requires sudo on the DPU side (the DPU-side baseline is stricter than host-side `doca_dev` access because exposing a PCIe device is a privileged operation) | The DPU-side process can open the target `doca_dev`; the user is either running with sudo on the DPU or is a member of the DPU-side group the public install profile grants the privilege to | [`doca-setup`](../../doca-setup/SKILL.md) for the DPU-side privilege; do **not** modify the program to silence the failure |
+| BlueField generation supports the chosen sub-library | The BlueField generation actually carries support for the emulation type the user picked (PCI Generic / virtio-net / virtio-fs); not every BlueField generation supports every sub-library | The matching `doca_devemu_<sub>_cap_*` against the active `doca_devinfo` returns supported; the BlueField hardware generation is on the public umbrella's *supported BlueField generations* list (route to [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) for the per-sub-library guide) | [`doca-setup`](../doca-setup/SKILL.md) for the env-side BlueField identification; this is **not** a code fix — if the hardware does not support the sub-library, the answer is *use a different sub-library or different hardware*, not a code change |
+| BlueField firmware has the matching emulation type enabled | Device emulation requires firmware configuration for the selected emulation type; this is **not a casual setting** and not flipped during normal BlueField operation | Run read-only `mlxconfig -d <bdf> q` and inspect both current and next-boot values using the exact field documented by the installed MFT / matching public guide. `VIRTIO_NET_EMULATION_ENABLE` may be used only for virtio-net and only when documented / present. A false library capability is not proof that configuration is disabled; independently check hardware support, installed headers / module, and firmware configuration | Read via [`doca-setup`](../doca-setup/SKILL.md); any write or reset routes through [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md). If the exact field cannot be verified, stop rather than inventing one |
+| DPU-side process privileges | The DPU-side process running the user's `doca_devemu_<sub>_*` code can perform PCIe-level emulation; this is privileged and typically requires sudo on the DPU side (the DPU-side baseline is stricter than host-side `doca_dev` access because exposing a PCIe device is a privileged operation) | The DPU-side process can open the target `doca_dev`; the user is either running with sudo on the DPU or is a member of the DPU-side group the public install profile grants the privilege to | [`doca-setup`](../doca-setup/SKILL.md) for the DPU-side privilege; do **not** modify the program to silence the failure |
 | Host kernel ships the standard driver for the emulated device class | The host kernel must include the standard kernel driver for the emulated device class the user picked: the upstream virtio-net driver for a virtio-net emulation, the upstream virtio-fs driver for a virtio-fs emulation, the host's generic PCIe driver model for a PCI Generic emulation | After the DPU-side context is started, `lspci` on the host shows the emulated device; the matching kernel driver's sysfs entry shows the driver bound. Host-side `dmesg` around the moment the DPU started the context is the cheapest place to see the bind succeed or fail | Host-side fix: the user's host kernel must ship (or load via a module) the matching standard driver. This is **not a DOCA-side fix** — the host kernel ships the driver, the DPU does not provide it. If the user is on a stripped host kernel without the matching driver, the answer is to load the matching kernel module, not to modify the DPU-side program |
 | Single-emulated-device smoke succeeded before scaling | A trivial emulated-device setup (one device, one queue if applicable, one DPU-side context, one host-side driver bind, basic operation working) before any sophisticated backend or multi-device deployment is attempted | Walk the smoke step in [TASKS.md ## test](TASKS.md#test) step 1; a smoke that fails identifies env-side / firmware-side / sub-library-selection / host-driver gaps cheaply, before any backend design effort is wasted | Diagnose the smoke failure first; do NOT scale a broken smoke into a complex multi-device deployment |
 
@@ -358,7 +358,7 @@ filesystem. When the user asks *"what backend should I
 write"*, the agent must refuse to invent backend bodies and
 must route the user to the public DOCA Device Emulation
 umbrella guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 and to the user's own domain expertise.
 
 ## Deferred topic boundaries
@@ -369,14 +369,14 @@ get asked but should route elsewhere:
 
 - **DOCA SNAP Service** — packaged NVMe / virtio-blk storage
   daemon built on top of this library. Out of scope; route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the DOCA SNAP Services guide. The library is the
   building block; the service is the packaged solution and is
   a different artifact than what this skill covers.
 - **DOCA Virtio-net Service** — packaged virtio-net daemon
   built on top of this library's virtio-net sub-library. Out
   of scope; route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the DOCA Virtio-net Service guide. Same library-vs-service
   distinction as SNAP above.
 - **Host kernel drivers for the emulated device class**
@@ -387,7 +387,7 @@ get asked but should route elsewhere:
 - **Designing the backend itself** (the storage backend body,
   the packet-forwarding logic, the filesystem implementation)
   — outside this skill. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public DOCA Device Emulation umbrella guide and the
   per-sub-library guides for sub-library-specific guidance;
   the backend body itself is the user's domain expertise.
@@ -411,7 +411,7 @@ get asked but should route elsewhere:
   device that uses the host's standard driver path.
 - **DOCA Core context and progress engine internals** —
   owned by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   This skill *uses* the Core lifecycle; it does not redefine
   it.
 - **Cross-cutting `DOCA_ERROR_*` taxonomy** — owned by

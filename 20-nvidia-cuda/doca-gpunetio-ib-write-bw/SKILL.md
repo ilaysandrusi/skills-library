@@ -48,7 +48,7 @@ decomposes (GPU occupancy vs NIC issue rate vs link
 saturation)*, or *how the result reads against the GPI
 sister tool and the upstream CPU-initiated `perftest`
 `ib_write_bw`*. If DOCA is not installed yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the
+[`doca-setup`](../doca-setup/SKILL.md) first; if the
 user is still deciding between the GPI and GPUNetIO
 programming surfaces, the picture in
 [`../../libs/doca-gpunetio/CAPABILITIES.md#capabilities-and-modes`](../../libs/doca-gpunetio/CAPABILITIES.md#capabilities-and-modes)
@@ -114,7 +114,7 @@ instance.
   Answered by the version overlay in
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility)
   which cross-links the canonical detection chain in
-  [`doca-version`](../../doca-version/SKILL.md).
+  [`doca-version`](../doca-version/SKILL.md).
 
 ## Audience
 
@@ -143,7 +143,7 @@ and GPU-NIC pair. Concretely:
 
 It is **not** for users debugging the `doca-gpunetio`
 library itself (route to
-[`../../libs/doca-gpunetio/SKILL.md`](../../libs/doca-gpunetio/SKILL.md)),
+[`../doca-gpunetio/SKILL.md`](../doca-gpunetio/SKILL.md)),
 and **not** a substitute for the `perftest` upstream
 `ib_write_bw` (which measures CPU-initiated WRITE BW).
 
@@ -178,7 +178,7 @@ host's PCIe topology. Concretely:
   DPU) with the GPUNetIO surface.
 - Deciding whether the GPUNetIO path is the right runtime
   surface for a class of workload vs the GPI programming
-  surface (the [`doca-gpi`](../../libs/doca-gpi/SKILL.md)
+  surface (the [`doca-gpi`](../doca-gpi/SKILL.md)
   library — `doca/tools/` ships no GPI benchmark binary) or
   the classic CPU-initiated `perftest` path.
 - Capturing a documented baseline (build + invocation +
@@ -190,9 +190,9 @@ host's PCIe topology. Concretely:
 
 Do **not** load this skill for general DOCA orientation,
 library API work, or installation. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`../../libs/doca-gpunetio/SKILL.md`](../../libs/doca-gpunetio/SKILL.md),
-or [`doca-setup`](../../doca-setup/SKILL.md). Do not load
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`../doca-gpunetio/SKILL.md`](../doca-gpunetio/SKILL.md),
+or [`doca-setup`](../doca-setup/SKILL.md). Do not load
 it for *application-level* end-to-end throughput either —
 this benchmark measures the WR-submission path through
 GPUNetIO, not the user's full pipeline.
@@ -264,7 +264,7 @@ not contain — and pull requests should not add:
   route the user there and prescribe minimum-diff
   modification per the universal modify-a-sample workflow
   in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 - **Wrappers, parsers, or scripts** in any language that
   consume the tool's stdout. The output format is small
   and documented in
@@ -296,7 +296,7 @@ not contain — and pull requests should not add:
 
 ## Related skills
 
-- [`../../libs/doca-gpunetio/SKILL.md`](../../libs/doca-gpunetio/SKILL.md) —
+- [`../doca-gpunetio/SKILL.md`](../doca-gpunetio/SKILL.md) —
   the library this tool wraps. The per-GPU `doca_gpu`
   context, the GPU-visible `doca_gpu_eth_*` and RDMA-side
   handles, the CUDA-side persistent-kernel pattern, the
@@ -304,13 +304,13 @@ not contain — and pull requests should not add:
   `cudaGetDeviceProperties`), and the env preconditions
   (`nvidia_peermem` loaded, CUDA buffers registered with
   DOCA) live there.
-- [`../../libs/doca-rdma/SKILL.md`](../../libs/doca-rdma/SKILL.md) —
+- [`../doca-rdma/SKILL.md`](../doca-rdma/SKILL.md) —
   the underlying RDMA library. The RDMA queue this tool
   binds is created and connected via `doca-rdma`; the
   queue lifecycle, transport type (RC vs UC vs UD),
   permission matrix, and connection method are owned
   there.
-- [`../../libs/doca-verbs/SKILL.md`](../../libs/doca-verbs/SKILL.md) —
+- [`../doca-verbs/SKILL.md`](../doca-verbs/SKILL.md) —
   the raw-verbs escape hatch beneath `doca-rdma` /
   `doca-gpunetio`. This tool stays on the higher-level
   surfaces; `doca-verbs` is the right place only if the
@@ -321,7 +321,7 @@ not contain — and pull requests should not add:
   operation; same runtime framework; different metric
   class (BW vs latency). The two together carry the
   full GPUNetIO-side throughput / latency picture.
-- [`doca-gpi`](../../libs/doca-gpi/SKILL.md) — the GPI
+- [`doca-gpi`](../doca-gpi/SKILL.md) — the GPI
   programming surface (CUDA-kernel-initiated RDMA), the
   alternative runtime framework for the same physical
   operation. `doca/tools/` ships no GPI `ib_write_lat` /
@@ -330,24 +330,24 @@ not contain — and pull requests should not add:
   selection rule in
   [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
   is the decision aid.
-- [`doca-version`](../../doca-version/SKILL.md) — the
+- [`doca-version`](../doca-version/SKILL.md) — the
   canonical version-detection chain, four-way match rule,
   NGC container semantics, and headers-win-over-docs
   rule. The `## Version compatibility` section in this
   skill is a thin overlay; the body lives there.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env
+- [`doca-setup`](../doca-setup/SKILL.md) — env
   preparation, install verification, GPU + CUDA Toolkit
   pairing, `nvidia_peermem` load, hugepages, NUMA, and
   the *I have no install yet* path with the public NGC
   DOCA container.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   routing to the public DOCA documentation set (DOCA GPU
   NetIO, DOCA RDMA pages on `docs.nvidia.com`) and the
   `docs.nvidia.com/cuda/` pointer for the CUDA Toolkit.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the
+- [`doca-debug`](../doca-debug/SKILL.md) — the
   cross-cutting debug ladder. The tool surfaces its own
   error taxonomy; when the cause is below DOCA, the
   taxonomy hands off here.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the bundle-wide hardware-safety meta-policy. The
   `## Safety policy` overlay cross-links it.

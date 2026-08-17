@@ -60,7 +60,7 @@ with one worked example.
   — does that mean unsupported?"* Answered by the
   tool-vs-capability decision tree in
   [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
-  + cross-link to [doca-caps](../tools/doca-caps/SKILL.md).
+  + cross-link to [doca-caps](../doca-caps/SKILL.md).
 - **"I'm debugging inside the NGC container — what's
   observable?"** — worked example: *"`hugepages` is empty inside the
   container; is that a real problem or a container thing?"*
@@ -116,4 +116,4 @@ The two companion files cross-link to each other and to [`doca-public-knowledge-
 - [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) — public DOCA documentation routing and the on-disk layout of an installed DOCA package. This skill defers all *"where is X documented"*, *"where on disk is Y"*, and *"how do I check the installed version"* questions to the knowledge-map.
 - [`doca-setup`](../doca-setup/SKILL.md) — env-class debug (install / build prerequisites): `pkg-config` failures, missing hugepages, representors not visible, header-vs-runtime version mismatches. `doca-setup ## debug` is the env-class layered ladder; this skill is the cross-cutting debug ladder both env and program ladders escalate to.
 - [`doca-programming-guide`](../doca-programming-guide/SKILL.md) — program-class debug (lifecycle order, `DOCA_ERROR_*` interpretation, `doca_error_get_descr()` use, the validate-before-commit rule). `doca-programming-guide ## debug` is the program-class layered ladder; this skill picks up where it leaves off when the symptom involves cross-library tooling (`gdb`, `valgrind`, container introspection, core dumps).
-- Library skills (e.g. [`doca-flow`](../libs/doca-flow/SKILL.md), [`doca-dms`](../services/doca-dms/SKILL.md), [`doca-caps`](../tools/doca-caps/SKILL.md)) — library-specific debug overlays. Each library's `## debug` builds on the cross-cutting ladder defined here, then adds its own counters, traces, and inspector tools.
+- Library skills (e.g. [`doca-flow`](../doca-flow/SKILL.md), [`doca-dms`](../doca-dms/SKILL.md), [`doca-caps`](../doca-caps/SKILL.md)) — library-specific debug overlays. Each library's `## debug` builds on the cross-cutting ladder defined here, then adds its own counters, traces, and inspector tools.

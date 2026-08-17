@@ -31,7 +31,7 @@ rule and the `AGAIN`-means-snapshot-not-ready rule),
 observability, and safety policy, see
 [CAPABILITIES.md](CAPABILITIES.md). For where to find docs, the
 installed DOCA layout, or release notes, route through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -408,9 +408,9 @@ so the agent does not invent guidance:
 
 - **install.** Installing DOCA, choosing packages, post-install
   verification, `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
-  [doca-public-knowledge-map ## Layout of an installed DOCA package](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [doca-public-knowledge-map ## Layout of an installed DOCA package](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA is already installed and a `doca_dev`
   is open.
 - **publish / export telemetry.** Wiring up the application-side
@@ -422,7 +422,7 @@ so the agent does not invent guidance:
 - **operate the DOCA Telemetry Service (DTS) itself.** DTS is a
   separate, externally-productized DOCA service with its own
   public guide and is out of scope for this bundle; reach it via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   non-goals.
 - **stand up a NetFlow / IPFIX / socket collector.** The
   per-domain reader libraries do not expose a collector /
@@ -441,7 +441,7 @@ so the agent does not invent guidance:
   fix is via the env-side skill:
   [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug) layer
   5, then upstream documentation reachable through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Command appendix
 
@@ -474,7 +474,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

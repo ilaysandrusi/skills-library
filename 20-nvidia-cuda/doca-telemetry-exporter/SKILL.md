@@ -38,7 +38,7 @@ DOCA-using program to an external consumer. Open
 / build / modify + rebuild / run / test / debug); open
 [`CAPABILITIES.md`](CAPABILITIES.md) when the question is *what can
 the exporter express* on this install. If the user has not installed
-DOCA yet, route to [`doca-setup`](../../doca-setup/SKILL.md) first.
+DOCA yet, route to [`doca-setup`](../doca-setup/SKILL.md) first.
 If the user is confused about whether they want this library or the
 DOCA Telemetry Service (the receiver) — read the
 exporter-vs-service rule in
@@ -109,7 +109,7 @@ instance.
   the version-compatibility overlay in
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility)
   (cross-linking the detection chain in
-  [`doca-version`](../../doca-version/SKILL.md)) plus the honest
+  [`doca-version`](../doca-version/SKILL.md)) plus the honest
   introspection rule in
   [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
   (`doca_telemetry_exporter_check_ipc_status`, not a device
@@ -127,7 +127,7 @@ developers contributing to DOCA Telemetry Exporter itself, and it
 is *not* for users building the receiving / aggregating telemetry
 service (the DOCA Telemetry Service is a separate DOCA service with
 its own public guide, reached via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 
 **Language scope.** DOCA Telemetry Exporter ships as a C library
 with `pkg-config` module name `doca-telemetry-exporter`. The
@@ -183,9 +183,9 @@ Exporter work, in any language. Concretely:
 Do **not** load this skill for general DOCA orientation, install
 of DOCA itself, the receiving telemetry service (the DOCA
 Telemetry Service has its own public guide reachable through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)),
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)),
 or non-exporter library questions. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -220,7 +220,7 @@ standard location, the application runs as a user that can write
 to the telemetry transport the exporter is configured for, and a
 receiving telemetry consumer is reachable and started before the
 exporter. It does not cover installing DOCA — that path goes
-through [`doca-setup`](../../doca-setup/SKILL.md) — and it does
+through [`doca-setup`](../doca-setup/SKILL.md) — and it does
 not cover configuring / operating the receiving telemetry service,
 which is a separate DOCA service with its own public guide.
 
@@ -237,13 +237,13 @@ contain — and pull requests should not add:
   agent's job is to route the user to those files and prescribe a
   minimum-diff modification on them via the universal
   modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the exporter-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **A telemetry consumer / collector / receiving service.** The
   DOCA Telemetry Service is a separate DOCA service with its own
   public guide; routing to it goes through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
   This skill is about the publisher side only.
 - **Standalone build manifests** (`meson.build`, `CMakeLists.txt`,
   `Cargo.toml`, …) parked inside the skill. The agent constructs
@@ -269,16 +269,16 @@ contain — and pull requests should not add:
    rebuild, run, test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 version-handling rules, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or
 the installed package layout" rather than "exporter-specific
 guidance".
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source
   and the on-disk layout of an installed DOCA package. The
   exporter's public guide URL is
@@ -287,21 +287,21 @@ guidance".
   `/opt/mellanox/doca/samples/doca_telemetry_exporter/`. The
   DOCA Telemetry Service (the *receiver*, out of scope here) is
   a separate guide reachable through that same routing table.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, transport-side reachability checks, and
   the *I have no install yet* path with the public NGC DOCA
   container. This skill assumes its preconditions are satisfied
   (in particular, the application user can write to the
   telemetry transport).
-- [`doca-version`](../../doca-version/SKILL.md) — canonical DOCA
+- [`doca-version`](../doca-version/SKILL.md) — canonical DOCA
   version-handling rules. This skill's `## Version compatibility`
   cross-links the four-way match rule + detection chain and adds
   the exporter-specific overlay rules.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect / prefer
   / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library: the
   canonical `pkg-config` + meson build pattern, the universal
   modify-a-shipped-sample first-app workflow, the universal
@@ -314,7 +314,7 @@ guidance".
   exporter is publish-only / one-way; this skill's
   path-selection rule routes there when subscription is the
   actual requirement.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). Exporter-specific debug (receiver not up,
   lifecycle-order `BAD_STATE`, type/label `INVALID_VALUE`,

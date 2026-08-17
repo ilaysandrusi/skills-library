@@ -38,7 +38,7 @@ Iterate on these losing headlines: [paste]. Keep the winners, replace the rest, 
 - **Reads**: the offer, destination URL, platform/format, audience/intent, existing variants, `memory/projections/narrative.json`, and `memory/projections/claims.json` at named offsets.
 - **Writes**: a user-facing creative set and, with permission, a WARM artifact; unresolved claims become authorized `operation: propose` events through `registry-events.py`.
 - **Done when**: every unit fits current format limits, maps to an accepted destination-page claim, contains no unsupported/policy-prohibited wording, covers at least two angles, and reports the full Narrative/claims dependency tuple.
-- **Primary next skill**: [ad-account-auditor](../../activate/ad-account-auditor/SKILL.md) — scores the units against ROAS, including O1 (claim integrity) and O2 (policy pre-checks).
+- **Primary next skill**: [ad-account-auditor](../ad-account-auditor/SKILL.md) — scores the units against ROAS, including O1 (claim integrity) and O2 (policy pre-checks).
 
 ### Handoff Summary
 
@@ -80,7 +80,7 @@ On user confirmation, save to `memory/ad/ad-creative-builder/YYYY-MM-DD-<offer>.
 
 ## Next Best Skill
 
-- **Primary**: [ad-account-auditor](../../activate/ad-account-auditor/SKILL.md) — score the creative against ROAS (O1/O2 veto checks) once a set is ready.
-- **If units carry `[needs source]` flags or unregistered claims**: [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md) — register the claims with evidence provenance and approved wording, then swap the resolved wording back into the flagged units.
-- **If the destination URL is weak or missing** (NEEDS_INPUT): [landing-optimizer](../../../influencer/report/landing-optimizer/SKILL.md) — fix the post-click page so message-match is achievable, then return here.
+- **Primary**: [ad-account-auditor](../ad-account-auditor/SKILL.md) — score the creative against ROAS (O1/O2 veto checks) once a set is ready.
+- **If units carry `[needs source]` flags or unregistered claims**: [offer-claims-registry](../offer-claims-registry/SKILL.md) — register the claims with evidence provenance and approved wording, then swap the resolved wording back into the flagged units.
+- **If the destination URL is weak or missing** (NEEDS_INPUT): [landing-optimizer](../landing-optimizer/SKILL.md) — fix the post-click page so message-match is achievable, then return here.
 - Global visited-set / max-depth termination contract from [skill-contract.md](../../../references/skill-contract.md) applies; stop when the creative set is auditor-ready.

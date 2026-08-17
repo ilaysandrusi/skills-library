@@ -42,7 +42,7 @@ the question is *what does Common express* on this install; open
 [`TASKS.md`](TASKS.md) when the user wants to *do* something
 (configure / build / modify / run / test / debug). If the user has
 not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user is
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user is
 already past the foundation and asking a library-specific question
 (e.g. *"how do I program a Flow pipe"*), load the matching per-library
 skill alongside this one — they cross-link back here for the shared
@@ -101,7 +101,7 @@ the load-bearing piece — the worked example is a single instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -166,8 +166,8 @@ Comch, DMA, Rmax, … questions in isolation — load the matching
 per-library skill alongside this one. Do **not** load this skill for
 general DOCA orientation, install of DOCA itself, or
 *"where do I find docs"*. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
-or [`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
+or [`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill provides
 
@@ -195,7 +195,7 @@ The skill assumes a host or BlueField where DOCA is already
 installed at the standard location and the user has the privileges
 their public install profile expects. It does not cover installing
 DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -210,7 +210,7 @@ contain — and pull requests should not add:
   is to route the user to those files and prescribe a minimum-diff
   modification on them via the universal modify-a-sample workflow
   in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 - **Standalone build manifests** (`meson.build`,
   `CMakeLists.txt`, `Cargo.toml`, `setup.py`, `go.mod`, …) parked
   inside the skill. The agent constructs the build manifest *in
@@ -234,55 +234,55 @@ contain — and pull requests should not add:
    test, debug, use, log — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 version-handling rules,
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md)
 for the universal modify-a-shipped-sample workflow and the
 cross-library `DOCA_ERROR_*` taxonomy,
-[`doca-debug`](../../doca-debug/SKILL.md) for the cross-cutting
+[`doca-debug`](../doca-debug/SKILL.md) for the cross-cutting
 debug ladder, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or the
 installed package layout" rather than "Common-specific guidance".
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source and
   the on-disk layout of an installed DOCA package. Always available
   alongside this skill; this skill expects to be able to defer
   documentation-finding and install-layout questions there instead
   of duplicating them.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, and the *I have no install yet* path with
   the public NGC DOCA container (`nvcr.io/nvidia/doca/doca`) as the
   universal Stage-1 fallback. This skill assumes its preconditions
   are satisfied.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical DOCA
+- [`doca-version`](../doca-version/SKILL.md) — canonical DOCA
   version-handling rules (four-way match, NGC semantics,
   headers-win-over-docs). `pkg-config --modversion doca-common` is
   the build-time anchor *every* DOCA install carries; this skill's
   `## Version compatibility` overlays the Common-specific notes on
   top.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library: the
   canonical `pkg-config` + meson build pattern, the universal
   modify-a-shipped-sample first-app workflow, the universal
   lifecycle, the cross-library `DOCA_ERROR_*` taxonomy, and the
   program-side debug order. This skill is the *primitives* layer
   the programming-guide patterns rest on.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver) and the verbosity-escalation surface. DOCA Log
   is the foundation `doca-debug` builds its runtime-debug story on;
   this skill is where the two-tier log model and the universal
   lifecycle errors first surface, and `doca-debug` cross-links here
   for both.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect / prefer /
   fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the cross-cutting hardware-safety meta-policy this skill's
   `## Safety policy` overlays.
 - Per-library skills (`doca-flow`, `doca-rdma`, `doca-eth`,

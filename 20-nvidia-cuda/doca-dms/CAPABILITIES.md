@@ -190,7 +190,7 @@ that are not in the documented list.
 
 ## Version compatibility
 
-For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
+For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
 
 **The DMS-specific overlay** is:
 
@@ -254,7 +254,7 @@ in `gnxi/gnmi/server.go`; `POLL` and `Aggregation` MODES are
 Unimplemented. For the
 externally-productized **DOCA Telemetry Service (DTS)** — turnkey
 aggregator that is OUT OF SCOPE for this bundle — route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 non-goals; DTS is the right answer when the user wants a productized
 telemetry-aggregation surface separate from DMS's own gNMI Subscribe.
 
@@ -304,7 +304,7 @@ posture:
 
 The single canonical public source for DMS is the **DOCA Management
 Service Guide** on `docs.nvidia.com`, reachable through
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 Verify that the version of the guide matches the DOCA install on the
 target — DMS surface is documented to evolve, so paths and flags can
 change between releases.

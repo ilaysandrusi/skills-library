@@ -101,8 +101,8 @@ Standalone one-folder installs may prepare a bounded proposal only; without the 
 
 ## Next Best Skill
 
-- **Schema implementation:** [serp-markup-builder](../../seo-geo/implement/serp-markup-builder/SKILL.md)
-- **AI-citable page work:** [geo-content-optimizer](../../seo-geo/implement/geo-content-optimizer/SKILL.md)
-- **New page:** [content-writer](../../seo-geo/implement/content-writer/SKILL.md)
+- **Schema implementation:** [serp-markup-builder](../serp-markup-builder/SKILL.md)
+- **AI-citable page work:** [geo-content-optimizer](../geo-content-optimizer/SKILL.md)
+- **New page:** [content-writer](../content-writer/SKILL.md)
 - **Canon conflict:** [narrative-registry](../narrative-registry/SKILL.md)
 - **Archive/erase:** [memory-management](../memory-management/SKILL.md)

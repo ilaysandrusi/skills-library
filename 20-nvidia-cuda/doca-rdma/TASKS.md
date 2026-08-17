@@ -13,7 +13,7 @@ compatibility, error taxonomy, observability surface, and safety
 policy that these workflows assume, see
 [CAPABILITIES.md](CAPABILITIES.md). For where to find docs, the
 installed DOCA layout, or release notes, route through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through the
@@ -32,7 +32,7 @@ Steps the agent should walk the user through:
    Quote the version observed (`pkg-config --modversion doca`,
    then `doca_caps --version`); do not assume "latest".
 2. **Discover the device capability surface for RDMA.** Run
-   `doca_caps --list-devs` ([`doca-caps`](../../tools/doca-caps/SKILL.md))
+   `doca_caps --list-devs` ([`doca-caps`](../doca-caps/SKILL.md))
    to see which devices have RDMA capability, then run the
    per-`doca_devinfo` `doca_rdma_cap_*` queries against the candidate
    device. Record the link layer the active port already exposes
@@ -336,9 +336,9 @@ does not invent guidance:
 
 - **install.** Installing DOCA, choosing packages, post-install
   verification, `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the install-tree
+  [`doca-setup`](../doca-setup/SKILL.md) and to the install-tree
   layout in
-  [doca-public-knowledge-map ## Layout of an installed DOCA package](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [doca-public-knowledge-map ## Layout of an installed DOCA package](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA is already installed.
 - **deploy.** Deploying RDMA-using applications at scale across
   many hosts / DPUs, Kubernetes operator workflows for RDMA
@@ -359,7 +359,7 @@ does not invent guidance:
   skill. Route to [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug)
   layer 5 (driver), then to the upstream MLNX OFED / firmware
   documentation reachable through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Command appendix
 
@@ -387,7 +387,7 @@ the agent should:
 4. The schemas the structured tools emit are defined in
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC, headers-win)
-   are owned by [`doca-version`](../../doca-version/SKILL.md).
+   are owned by [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

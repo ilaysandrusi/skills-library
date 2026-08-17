@@ -11,7 +11,7 @@ schema → per-device probe → exporter ship → collector
 receive), `## debug` (layered diagnosis), and `## use`
 (hand the validated counter set off to the
 developer-side
-[`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+[`doca-telemetry`](../doca-telemetry/SKILL.md)
 collector / exporter pipeline). The two routing-stub
 verbs (`build`, `modify`) are kept because the agent's
 task-verb contract is uniform across the bundle and
@@ -47,7 +47,7 @@ The operator-side install path:
    requires the device to be visible to DOCA on the
    PCI address the operator passes.
 3. **Confirm the developer-side
-   [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+   [`doca-telemetry`](../doca-telemetry/SKILL.md)
    library is installed at the matching DOCA
    version** if the operator intends to consume the
    resolved Data IDs from a collector application on
@@ -202,7 +202,7 @@ Routing for nearby "modify" questions:
 - *"I want a JSON output from the tool."* → not
   supported on the documented surface; route
   through the
-  [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+  [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
   preamble when a structured helper is present, or
   write a parser against the documented text
   output on the installed version per
@@ -300,7 +300,7 @@ collector config is rolled forward).**
    resolved Data IDs.** The exporter ships Data
    IDs, not names. Per the developer-side library
    ownership in
-   [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md),
+   [`doca-telemetry`](../doca-telemetry/SKILL.md),
    the exporter side is owned by the publisher
    library + the user's exporter code, not by
    this tool.
@@ -398,7 +398,7 @@ in order. The shape of the diagnosis:
 7. **Version.** Walk
    [`doca-version TASKS.md ## debug`](../../doca-version/TASKS.md#debug)
    end-to-end; the tool ↔
-   [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+   [`doca-telemetry`](../doca-telemetry/SKILL.md)
    library schema-version pairing is the common
    mismatch failure.
 8. **Cross-cutting (downstream).** If the tool
@@ -408,7 +408,7 @@ in order. The shape of the diagnosis:
    off to
    [`doca-telemetry TASKS.md ## debug`](../../libs/doca-telemetry/TASKS.md#debug)
    and
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md).
+   [`doca-debug ## debug`](../doca-debug/SKILL.md).
 
 In every case: **quote what the tool reported.** Do
 not paraphrase the resolved tuple, do not invent a
@@ -424,7 +424,7 @@ The agent's hand-off:
 1. **Author / update the exporter config with the
    resolved Data IDs**, per the developer-side
    ownership in
-   [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+   [`doca-telemetry`](../doca-telemetry/SKILL.md)
    (collector) plus the publisher-side library
    that emits the IDs.
 2. **Stand up the collector** per
@@ -448,7 +448,7 @@ The agent's hand-off:
 
 The agent's rule: this tool produces the validated
 counter set; the
-[`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+[`doca-telemetry`](../doca-telemetry/SKILL.md)
 library (and the publisher-side library) consumes
 it. Conflating the two surfaces is the most common
 telemetry first-touch error.
@@ -461,10 +461,10 @@ of them under this skill's name.
 
 - **Developer-side collector / exporter
   programming** →
-  [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+  [`doca-telemetry`](../doca-telemetry/SKILL.md)
   (collector library) + the publisher-library
   skill referenced from
-  [`doca-telemetry ## Related skills`](../../libs/doca-telemetry/SKILL.md#related-skills).
+  [`doca-telemetry ## Related skills`](../doca-telemetry/SKILL.md#related-skills).
   This tool informs those skills; it does not
   redefine them.
 - **DTS deployment / configuration** → separate
@@ -493,7 +493,7 @@ and the public DOCA Telemetry page.
 **Infra-aware preamble (every row below).** Per
 the bundle's detect → prefer → fall back → report
 contract documented in
-[`doca-structured-tools-contract ## The agent behavior contract`](../../doca-structured-tools-contract/SKILL.md#the-agent-behavior-contract),
+[`doca-structured-tools-contract ## The agent behavior contract`](../doca-structured-tools-contract/SKILL.md#the-agent-behavior-contract),
 the agent should:
 
 1. Probe for the matching structured helper FIRST
@@ -509,7 +509,7 @@ the agent should:
    command in the row.
 4. The schemas the structured tools emit are
    defined in
-   [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas).
+   [`doca-structured-tools-contract ## Schemas`](../doca-structured-tools-contract/SKILL.md#schemas).
 
 | Purpose (class) | Invocation (shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -535,7 +535,7 @@ Three cross-cutting rules for this appendix:
   cutting commands (`pkg-config --modversion
   doca-telemetry`, `doca_caps --list-devs`,
   `lspci` for the BlueField PCI address) live in
-  [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+  [`doca-debug ## debug`](../doca-debug/SKILL.md) and
   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug);
   this appendix names only
   `doca_telemetry_utils`-specific invocation
@@ -573,5 +573,5 @@ point of action and not buried in
 - This skill **assumes a healthy DOCA install**
   with the Telemetry component and a BlueField
   visible to DOCA. If either is in doubt, route
-  to [`doca-setup`](../../doca-setup/SKILL.md)
+  to [`doca-setup`](../doca-setup/SKILL.md)
   before running anything else here.

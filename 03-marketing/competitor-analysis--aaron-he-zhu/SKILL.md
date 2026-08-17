@@ -120,4 +120,4 @@ Write path: `memory/research/competitor-analysis/YYYY-MM-DD-<topic>.md`; promote
 
 ## Next Best Skill
 
-Primary: [content-gap-analysis](../content-gap-analysis/SKILL.md). Also: [serp-analysis](../serp-analysis/SKILL.md) and [offsite-signal-analyzer](../../evaluate/offsite-signal-analyzer/SKILL.md). If the goal is a head-to-head "us vs them" page, hand the vetted competitor set to [page-play-builder](../../implement/page-play-builder/SKILL.md).
+Primary: [content-gap-analysis](../content-gap-analysis/SKILL.md). Also: [serp-analysis](../serp-analysis/SKILL.md) and [offsite-signal-analyzer](../offsite-signal-analyzer/SKILL.md). If the goal is a head-to-head "us vs them" page, hand the vetted competitor set to [page-play-builder](../page-play-builder/SKILL.md).

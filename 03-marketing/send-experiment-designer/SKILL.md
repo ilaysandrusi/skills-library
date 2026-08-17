@@ -28,7 +28,7 @@ Designs email experiments across four modes and reads them out: a falsifiable hy
 
 Default the mode from the request when it is unambiguous (e.g. "test two subject lines" → `a-b`, "best hour to send" → `send-time`, "measure incremental revenue" → `hold-out`); state the picked mode back and proceed.
 
-**Scope guard:** this skill owns email **experiment design + the significance read** only. It scores the SEND **E (Engagement)** lever as a test signal — it does **not** compute the profile-weighted **EQS** or run the `S1/S2/N1/D1` vetoes ([email-quality-auditor](../email-quality-auditor/SKILL.md) does), and it does **not** write the subject/preheader/body/CTA under test ([email-creative-builder](../../engage/email-creative-builder/SKILL.md) does). Design here, produce there, gate there.
+**Scope guard:** this skill owns email **experiment design + the significance read** only. It scores the SEND **E (Engagement)** lever as a test signal — it does **not** compute the profile-weighted **EQS** or run the `S1/S2/N1/D1` vetoes ([email-quality-auditor](../email-quality-auditor/SKILL.md) does), and it does **not** write the subject/preheader/body/CTA under test ([email-creative-builder](../email-creative-builder/SKILL.md) does). Design here, produce there, gate there.
 
 ## Quick Start
 
@@ -53,7 +53,7 @@ Output: a test-design doc (mode, hypothesis, variant matrix, primary/secondary/g
 - **Writes**: a user-facing test-design or read-out doc plus a `### Handoff Summary`.
 - **Promotes**: the chosen mode, hypothesis, design parameters, calculated read-out, and any explicitly owner-approved action (ask before writing memory).
 - **Done when**: mode/unit/profile and design parameters are stated; the matrix isolates one variable per cell and keeps a control; and a read-out reports effect/interval/statistical/practical flags with `Calculated` provenance. Without a precommitted action rule and owner, return `decision: UNDECIDED`.
-- **Primary next skill**: [performance-analyzer](../../../influencer/report/performance-analyzer/SKILL.md) (read results back over the window) or [email-quality-auditor](../email-quality-auditor/SKILL.md) (gate the program before scaling a winner).
+- **Primary next skill**: [performance-analyzer](../performance-analyzer/SKILL.md) (read results back over the window) or [email-quality-auditor](../email-quality-auditor/SKILL.md) (gate the program before scaling a winner).
 
 ### Handoff Summary
 
@@ -132,6 +132,6 @@ After delivering, ask "Save this test design / read-out for future sessions?" If
 
 ## Next Best Skill
 
-Primary: [performance-analyzer](../../../influencer/report/performance-analyzer/SKILL.md) after the decision owner approves a shipped direction, or [email-quality-auditor](../email-quality-auditor/SKILL.md) to gate the program before scale. Reuse [roi-calculator](../../../influencer/report/roi-calculator/SKILL.md) for revenue/list-value math and [report-generator](../../../influencer/report/report-generator/SKILL.md) to package the read-out.
+Primary: [performance-analyzer](../performance-analyzer/SKILL.md) after the decision owner approves a shipped direction, or [email-quality-auditor](../email-quality-auditor/SKILL.md) to gate the program before scale. Reuse [roi-calculator](../roi-calculator/SKILL.md) for revenue/list-value math and [report-generator](../report-generator/SKILL.md) to package the read-out.
 
 **Termination**: global rules apply per [skill-contract.md](../../../references/skill-contract.md). If the owner/action rule is missing or the planned read is incomplete, stop with `decision: UNDECIDED`; do not auto-chain or manufacture a winner.

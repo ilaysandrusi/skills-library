@@ -36,7 +36,7 @@ What does it take to rank for [keyword]?
 - **Writes**: a user-facing analysis and reusable summary.
 - **Promotes**: durable keyword priorities, competitor facts, and pending strategy decisions to `memory/hot-cache.md`, `memory/open-loops.md`, and `memory/research/`.
 - **Done when**: the SERP composition and top-result ranking factors are documented from a verified live/provided SERP; dominant intent is named with evidence; and a True Difficulty score (0-100, weighted inputs per the template) plus per-site-stage fit is stated.
-- **Primary next skill**: [content-writer](../../implement/content-writer/SKILL.md) when the user is ready to build against the observed SERP.
+- **Primary next skill**: [content-writer](../content-writer/SKILL.md) when the user is ready to build against the observed SERP.
 
 ### Handoff Summary
 
@@ -124,4 +124,4 @@ Write path: `memory/research/serp-analysis/YYYY-MM-DD-<topic>.md`; promote durab
 
 ## Next Best Skill
 
-Primary: [content-writer](../../implement/content-writer/SKILL.md).
+Primary: [content-writer](../content-writer/SKILL.md).

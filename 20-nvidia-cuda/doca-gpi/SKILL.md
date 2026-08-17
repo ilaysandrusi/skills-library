@@ -43,7 +43,7 @@ question is *what can GPI express on this version* — the domain +
 channel object model, the GPU-side handle handoff, the relationship
 to doca-gpunetio and doca-verbs, the attribute objects, and the
 safety overlay. If the user has not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first.
+[`doca-setup`](../doca-setup/SKILL.md) first.
 
 ## Example questions this skill answers well
 
@@ -98,7 +98,7 @@ load-bearing piece — the worked example is a single instance.
   on the cross-library taxonomy in
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in [`TASKS.md ## debug`](TASKS.md#debug)
-  that escalates to [`doca-debug`](../../doca-debug/SKILL.md).
+  that escalates to [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -166,8 +166,8 @@ GPU. Concretely:
 Do **not** load this skill for general DOCA orientation, install
 of DOCA itself, host-CPU-initiated RDMA, or the higher-level GPU
 NetIO Send/Receive Ethernet-shaped API. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-setup`](../../doca-setup/SKILL.md),
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-setup`](../doca-setup/SKILL.md),
 [`doca-rdma`](../doca-rdma/SKILL.md), and
 [`doca-gpunetio`](../doca-gpunetio/SKILL.md) respectively.
 When one question spans the GPI channel lifecycle and CUDA-side
@@ -205,7 +205,7 @@ The skill assumes a host where DOCA is already installed at the
 standard location, a CUDA Toolkit compatible with the installed
 DOCA is present, and the user has the privileges their public
 install profile expects. It does not cover installing DOCA — that
-path goes through [`doca-setup`](../../doca-setup/SKILL.md).
+path goes through [`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -219,7 +219,7 @@ contain — and pull requests should not add:
   installed package set are the canonical worked examples for the
   GPU-side handoff) and to prescribe a minimum-diff modification
   via the universal modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   Because every GPI symbol is tagged `DOCA_EXPERIMENTAL`
   in the public header, the skill refuses to author GPI
   source from documentation prose.
@@ -251,7 +251,7 @@ contain — and pull requests should not add:
    modify, run, test, debug, use — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other and to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or
 the installed package layout" rather than "GPI-specific
 guidance".
@@ -280,30 +280,30 @@ guidance".
   initiator surface. Both GPI and RDMI exist for "drive RDMA
   initiation from an accelerator without the host CPU on the
   data path"; GPI is the GPU case, RDMI is the DPA case.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) — the
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) — the
   routing table for every public DOCA documentation source and
   the on-disk layout of an installed DOCA package.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, and the *I have no install yet* path
   with the public NGC DOCA container.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library: the
   canonical `pkg-config` + meson build pattern, the universal
   modify-a-shipped-sample first-app workflow, the universal
   Core-context lifecycle, the cross-library `DOCA_ERROR_*`
   taxonomy. This skill layers GPI specifics on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). GPI-specific debug overlays on top of it.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the bundle-wide hardware-safety meta-policy. The `## Safety
   policy` overlay in `CAPABILITIES.md` cross-links it.
-- [`doca-version`](../../doca-version/SKILL.md) — the version
+- [`doca-version`](../doca-version/SKILL.md) — the version
   detection / four-way match rule every per-artifact `##
   Version compatibility` anchor builds on. This skill quotes
   the GPI-specific overlay only (DOCA-side `.pc` PLUS the CUDA
   Toolkit axis).
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the JSON-schema contracts for the agent-preferred structured
   helpers; the `## Command appendix` in `TASKS.md` defers to
   them before falling back to the manual chain.

@@ -19,7 +19,7 @@ One monitor skill, two modes. **`report`** builds a stakeholder-facing multi-met
 
 **Mode set:** `report` (multi-metric snapshot) · `alert` (forward thresholds/anomalies). Default when unstated: infer from verb tense (see Decision Gates).
 
-**Scope guard — what this skill does NOT do:** it does not compute the CORE-EEAT content score or run its vetoes (T04/C01/R10) — that gate is [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md); it does not compute the CITE domain score or run its vetoes (T03/T05/T09) — that gate is [domain-authority-auditor](../domain-authority-auditor/SKILL.md). This skill *reports* those scores when a gate has already produced them and *watches* them for change; it never scores. Raw position-by-position ranking deltas belong to [rank-tracker](../rank-tracker/SKILL.md).
+**Scope guard — what this skill does NOT do:** it does not compute the CORE-EEAT content score or run its vetoes (T04/C01/R10) — that gate is [content-quality-auditor](../content-quality-auditor/SKILL.md); it does not compute the CITE domain score or run its vetoes (T03/T05/T09) — that gate is [domain-authority-auditor](../domain-authority-auditor/SKILL.md). This skill *reports* those scores when a gate has already produced them and *watches* them for change; it never scores. Raw position-by-position ranking deltas belong to [rank-tracker](../rank-tracker/SKILL.md).
 
 ## Quick Start
 
@@ -154,7 +154,7 @@ Ask "Save these results?" If yes, write to `memory/monitoring/` using filename `
 
 Mode-conditional, then terminal:
 
-- After **report** — a change needs ongoing monitoring → run this skill in `alert` mode. A section marked "Not yet evaluated" for authority → [domain-authority-auditor](../domain-authority-auditor/SKILL.md); for content quality → [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md). One-off report with no action → Terminal.
+- After **report** — a change needs ongoing monitoring → run this skill in `alert` mode. A section marked "Not yet evaluated" for authority → [domain-authority-auditor](../domain-authority-auditor/SKILL.md); for content quality → [content-quality-auditor](../content-quality-auditor/SKILL.md). One-off report with no action → Terminal.
 - After **alert** — a reporting cadence is requested → run this skill in `report` mode. Standalone alert setup → Terminal.
 
 Termination: the visited-set and `max-depth: 3` rules from [skill-contract.md §Termination rules](../../../references/skill-contract.md) apply. Do not re-enter a mode already run in this chain (report→alert→report is a visited-set stop); if routing is ambiguous, present the options and stop instead of auto-following.

@@ -68,7 +68,7 @@ For the canonical DOCA version-detection chain, the four-way match rule, NGC con
 
 | Debug surface | First DOCA version it shipped in | Verification |
 | --- | --- | --- |
-| `doca_caps` CLI (capability snapshot, side-effect-free) | DOCA 2.6.0. | `which doca_caps` and `doca_caps --version`. Older trains: capability discovery had to go through the per-library API. See [`doca-caps`](../tools/doca-caps/SKILL.md). |
+| `doca_caps` CLI (capability snapshot, side-effect-free) | DOCA 2.6.0. | `which doca_caps` and `doca_caps --version`. Older trains: capability discovery had to go through the per-library API. See [`doca-caps`](../doca-caps/SKILL.md). |
 | `doca-flow-trace` `pkg-config` module (trace build flavor of Flow) | Available across recent DOCA trains; the runtime location of the trace `*.so` is documented in [`doca-setup CAPABILITIES.md ## Capabilities and modes`](../doca-setup/CAPABILITIES.md#capabilities-and-modes). | `pkg-config --exists doca-flow-trace`. Per-library trace flavors follow the same `doca-<library>-trace` pattern when they exist. |
 | Flow Inspector Service (Flow-specific mirrored-flow debug surface) | **Not covered by this bundle** — the Flow Inspector Service is policy-excluded from this public release; documented per the public Flow Inspector Service guide. | Route to the public docs via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md). |
 | `doca-flow-tune` tool (Flow visibility / analysis) | Alpha at the time of the public guide; may rev. | Listed in [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools); verify on the user's install with `which doca-flow-tune` (or whatever the binary name is on their train). |
@@ -111,7 +111,7 @@ For a side-effect-free smoke-test entry point (when the agent wants to confirm D
 
 **The trace build flavor.** Linking a library against `pkg-config doca-<library>-trace` (instead of `doca-<library>`) selects the trace flavor of that library, which adds runtime input-sanitation and emits additional log lines at `DEBUG` / `TRACE` level. The release flavor does not emit those lines no matter how high you set `--sdk-log-level`, because the additional checks aren't compiled in. Use the trace flavor during development and any debug session; switch to release for performance measurements (see [`## Safety policy`](#safety-policy)).
 
-**Capability snapshots.** `doca_caps` (the CLI tool, see [`doca-caps`](../tools/doca-caps/SKILL.md)) is a side-effect-free snapshot of "what DOCA sees on this host right now." Capture it at the start of any debug session — capabilities can change between runs (firmware reflash, eswitch mode change, kernel-module reload), and a stale capability picture is a leading cause of *"it worked yesterday."*
+**Capability snapshots.** `doca_caps` (the CLI tool, see [`doca-caps`](../doca-caps/SKILL.md)) is a side-effect-free snapshot of "what DOCA sees on this host right now." Capture it at the start of any debug session — capabilities can change between runs (firmware reflash, eswitch mode change, kernel-module reload), and a stale capability picture is a leading cause of *"it worked yesterday."*
 
 **Library-specific surfaces.** Pipe counters (Flow), queue-pair statistics (RDMA), channel send/recv counters (Comch), tracing dumps (per library), and inspector tools (`doca-flow-tune`) are owned by the matching library skill. The library skill names the call (e.g. `doca_flow_resource_query_entry`) and the right cadence to query it.
 

@@ -21,7 +21,7 @@ host-side Flow surface this library exports, see
 lifecycle, see [`doca-dpa`](../doca-dpa/SKILL.md). For the
 cross-library DOCA patterns layered under everything below,
 see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not
 a copy-paste recipe. The agent's job is to walk the user
@@ -41,7 +41,7 @@ not orchestration. Defer the full install workflow (package
 selection, NGC container fallback, post-install verification)
 to [`doca-setup TASKS.md ## install`](../../doca-setup/TASKS.md#configure)
 and the install-tree layout to
-[`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+[`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
 
 Verification gates the agent must walk for this skill:
 
@@ -63,7 +63,7 @@ Verification gates the agent must walk for this skill:
    <https://docs.nvidia.com/doca/sdk/doca-compatibility-policy/index.html>.
    Missing or mismatched `dpacc` is a hard blocker — the
    DPA-side translation unit cannot be built. Route to
-   [`doca-setup`](../../doca-setup/SKILL.md).
+   [`doca-setup`](../doca-setup/SKILL.md).
 4. **The four `.pc` versions agree.** The four numbers above
    (provider, flow, dpa, dpacc) must be consistent per the
    four-way match rule in
@@ -102,7 +102,7 @@ Steps the agent should walk the user through:
    API). Surface this model EXPLICITLY before any
    `doca_flow_dpa_*` call is drafted. If the user is asking
    *"how do I write the DPA-side kernel itself"*, route via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    to the public DOCA DPA / DPACC guides.
 3. **Stand up the host-side `doca-flow` port and `flexio_process`
    FIRST.** Per
@@ -186,7 +186,7 @@ This skill carries only the provider-specific overlay:
 | Companion pkg-config modules | `doca-flow`, `doca-dpa` (and transitively `doca-common`) | The provider is a bridge — the host program links against all three; missing any one is a build error |
 | DPA-side toolchain | `dpacc` (DPACC compiler), installed alongside DOCA | Compiles the DPA-side translation unit that includes `doca_flow_dpa_provider_dev.h`; the host system compiler is NOT a substitute |
 | Host-side include flags | `pkg-config --cflags doca-flow-dpa-provider doca-flow doca-dpa` | Resolves the provider headers (`doca_flow_dpa_provider.h`) plus the Flow and DPA headers that the provider header includes (`doca_flow.h`, `doca_error.h`, `doca_compat.h`) |
-| DPA-side include path | The DPACC-prescribed include path that resolves `doca_flow_dpa_provider_dev.h` plus the DPA-side base headers (`dpaintrin.h`, `doca_error.h`) — route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) for the per-install layout | The DPA-side translation unit must define `DOCA_DPA_DEVICE` before including the DPA-side header, per the documented contract on `doca_flow_dpa_provider_dev.h` |
+| DPA-side include path | The DPACC-prescribed include path that resolves `doca_flow_dpa_provider_dev.h` plus the DPA-side base headers (`dpaintrin.h`, `doca_error.h`) — route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) for the per-install layout | The DPA-side translation unit must define `DOCA_DPA_DEVICE` before including the DPA-side header, per the documented contract on `doca_flow_dpa_provider_dev.h` |
 | Host-side link flags | `pkg-config --libs doca-flow-dpa-provider doca-flow doca-dpa` | Pulls in the provider, Flow, and DPA host-side libraries. No mention of the DPA-side device library on the host link line; that goes through `dpacc` |
 | DPA-side link / embed step | The DPACC-prescribed embed step that bakes the DPA-side binary (which links the DPA-side device library that backs `doca_flow_dpa_provider_dev.h`) into the host executable as a DPA application image | Without this step the host has no DPA application image to load at runtime, and the device address handoff has nowhere to land |
 | Minimum DOCA version (and DPACC version) | Query with `pkg-config --modversion doca-flow-dpa-provider` plus the matching `doca-flow`, `doca-dpa`, and `dpacc` versions; cross-check against the DOCA Compatibility Policy | The provider's working set is the joint cross-product; never hardcode |
@@ -212,7 +212,7 @@ this skill provides the provider-specific slot fill.
 
 | Slot | What the agent asks the user | Provider-specific consideration |
 | --- | --- | --- |
-| 1. Starting sample | Which sample under the installed DOCA samples tree that exercises the provider (route to [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) for the per-install path; do not hardcode the directory)? | Pick a sample whose **shape** matches the user's intent: same Flow pipe type (hash vs basic), same external-resource set (none vs index-selector vs memory), same queue mix. Provider samples are three-side programs; the sample's DPA-side translation unit is the third half of the verified base |
+| 1. Starting sample | Which sample under the installed DOCA samples tree that exercises the provider (route to [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) for the per-install path; do not hardcode the directory)? | Pick a sample whose **shape** matches the user's intent: same Flow pipe type (hash vs basic), same external-resource set (none vs index-selector vs memory), same queue mix. Provider samples are three-side programs; the sample's DPA-side translation unit is the third half of the verified base |
 | 2. Flow pipe spec | What pipe shape is being exported, and what is changing? | Per the validate-before-commit rule in [`doca-flow CAPABILITIES.md ## Safety policy`](../doca-flow/CAPABILITIES.md#safety-policy), the modified pipe spec must validate in `doca-flow` BEFORE the provider's export prepare step. A pipe shape that does not support export will fail `_export_prepare` with `DOCA_ERROR_NOT_SUPPORTED` |
 | 3. Queue config | Which queue types and what depths does the modified DPA kernel need? | Per the queue-types table in [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes), the queue-config array passed to `doca_flow_dpa_queues_create` must list the queue types the kernel will call against; a kernel that adds a memory read where the original sample only did entry control needs a new `RESOURCES_READ` entry in the array |
 | 4. DPA-side kernel body | What does the DPA kernel actually do with the exported handle? Is it new behavior or a tweak on the sample's behavior? | The DPA-side translation unit is the in-place edit point. The agent's anti-pattern alert: do NOT propose moving the per-entry decision to the host side to "simplify" — that defeats the entire reason to use this library (host round-trip per entry is exactly what the export was meant to avoid) |
@@ -513,7 +513,7 @@ follows so the agent does not invent guidance:
   the DPA-side function body, DPA-side memory layout,
   DPACC compile flags, DPA-side debugging from inside the
   kernel — out of scope. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public *DOCA DPA*, *DOCA DPACC Compiler*, and
   *DOCA Flow* guides plus the *DPA Tools* umbrella.
 - **Host-side Flow pipe spec design.** Owned by
@@ -553,7 +553,7 @@ the agent should:
 4. The schemas the structured tools emit are defined in
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |
@@ -562,8 +562,8 @@ the agent should:
 | `which dpacc && dpacc --version` | `## install` step 3; `## build` minimum-DPACC slot | Is the DPACC compiler installed and at what version? | A version string the agent compares against the DOCA Compatibility Policy linked from [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility). Missing `dpacc` = the DPA-side translation unit cannot be built |
 | `doca_caps --list-devs` | `## configure` step 3 | Which DOCA devices does the host see, and which expose a DPA processor (the hardware substrate the exported handle is consumed on)? | One entry per `doca_dev` with the BlueField identity and the per-library capability flags including the DPA support axis and the Flow support axis. No DPA-capable entry = the BlueField is not present, not in the right mode, or not on a generation that exposes the DPA |
 | `DOCA_LOG_LEVEL=trace ./<binary>` | `## run` step 5 | What did the structured DOCA logger emit for the first failing host-side provider call? | A trace-level line on every host-side lifecycle transition (`doca_flow_dpa_init`, `_queues_create`, `_pipe_export_prepare`, `_pipe_export`, `_pipe_get_device_addr`). Silence after `_pipe_export` while the DPA-side kernel is launched = either host PE not progressed OR the DPA kernel is running but stuck — reach for the DPA-side tooling next |
-| (route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)) DPA-side developer tools — DPA debugger, DPA process-state inspector, DPA statistics tool | `## debug` layer 5; `## debug` layer 6 | What is the DPA processor itself doing right now, from the DPA side (for cases where the kernel is suspected to be stuck or to be polling the wrong queue type)? | The public *DPA Tools* umbrella documents the per-tool output; the agent's job is to NAME the existence of these tools and route the user there, not to redefine their surface |
-| `ls` against the installed DOCA samples tree (route via [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)) | `## modify` slot 1 | Which provider samples ship in this install, and which is the closest starting point? | A list of sample directories that each contain BOTH host-side and DPA-side source plus a `meson.build` that wires `dpacc` and `pkg-config doca-flow-dpa-provider doca-flow doca-dpa` together |
+| (route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)) DPA-side developer tools — DPA debugger, DPA process-state inspector, DPA statistics tool | `## debug` layer 5; `## debug` layer 6 | What is the DPA processor itself doing right now, from the DPA side (for cases where the kernel is suspected to be stuck or to be polling the wrong queue type)? | The public *DPA Tools* umbrella documents the per-tool output; the agent's job is to NAME the existence of these tools and route the user there, not to redefine their surface |
+| `ls` against the installed DOCA samples tree (route via [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)) | `## modify` slot 1 | Which provider samples ship in this install, and which is the closest starting point? | A list of sample directories that each contain BOTH host-side and DPA-side source plus a `meson.build` that wires `dpacc` and `pkg-config doca-flow-dpa-provider doca-flow doca-dpa` together |
 
 For commands shared across libraries (`pkg-config
 --modversion`, `doca_caps`, `cat

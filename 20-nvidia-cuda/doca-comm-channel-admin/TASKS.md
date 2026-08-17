@@ -19,7 +19,7 @@ the six task verbs every artifact in this bundle exposes
 (`configure / build / modify / run / test / debug`), explicitly
 defers task verbs that do not belong here, and ends with the
 `Command appendix` honoring the bundle's
-[`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+[`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
 preamble.
 
 For the Comm Channel Admin Tool, the verbs that carry real workflow
@@ -33,7 +33,7 @@ question really belongs.
 
 The Comm Channel Admin Tool takes **no configuration of its own**.
 It is a flag-driven CLI that operates against the channels the
-[`doca-comch`](../../libs/doca-comch/SKILL.md) library has already
+[`doca-comch`](../doca-comch/SKILL.md) library has already
 created; there are no admin-tool config files, no daemons, no
 environment knobs the public guide documents as required for the
 tool itself.
@@ -77,7 +77,7 @@ Routing for nearby "build" questions:
   [`doca-setup ## no-install`](../../doca-setup/TASKS.md#no-install).
 - *"I want to build my own admin tool that talks to comch channels
   programmatically"* → not an admin-tool question. Route to
-  [`doca-comch`](../../libs/doca-comch/SKILL.md); the library's
+  [`doca-comch`](../doca-comch/SKILL.md); the library's
   own capability-query family is the right programmatic surface,
   and the admin tool is a thin CLI wrapper around documented
   channel state, not a replacement for the library.
@@ -104,7 +104,7 @@ Routing for nearby "modify" questions:
   version"* — and even the parser is out of scope per
   [`SKILL.md ## What this skill deliberately does not ship`](SKILL.md#what-this-skill-deliberately-does-not-ship).
 - *"I need different *information* than the admin tool reports"* →
-  route to [`doca-comch`](../../libs/doca-comch/SKILL.md) — the
+  route to [`doca-comch`](../doca-comch/SKILL.md) — the
   programmatic comch capability and state surface is broader than
   what the CLI exposes for routine operation.
 - *"Can I patch the tool to add a flag?"* → out of scope; this
@@ -139,7 +139,7 @@ zero-application-argument scan-and-print.
    on the other side.
 
 When recording the run for downstream consumers, write down: the
-DOCA version (per [`doca-version`](../../doca-version/SKILL.md)),
+DOCA version (per [`doca-version`](../doca-version/SKILL.md)),
 the side the tool was run on (host vs BlueField Arm), the exact
 zero-argument command line, exit status, stdout tables, and stderr.
 The downstream `## test` and `## debug` workflows depend on all
@@ -233,14 +233,14 @@ skill's name.
   the public NGC DOCA container path). The admin tool is shipped
   by the install; this skill does not own the install workflow.
 - **write a Comch program** (any language) ⇒
-  [`doca-comch`](../../libs/doca-comch/SKILL.md), layered on
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-comch`](../doca-comch/SKILL.md), layered on
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   The admin tool inspects channels the library created; it is not
   a template for creating them.
 - **library-internal capability or state check** (e.g. per-message
   task-completion-callback semantics, producer / consumer queue
   sizing) ⇒
-  [`doca-comch`](../../libs/doca-comch/SKILL.md). The admin tool
+  [`doca-comch`](../doca-comch/SKILL.md). The admin tool
   only exposes the documented channel-state surface; deeper
   per-API state belongs to the library.
 - **streaming telemetry / live metrics** ⇒ not an admin-tool
@@ -254,7 +254,7 @@ The tool has exactly one application invocation class.
 
 **Infra-aware preamble (every row below).** Per the bundle's
 detect → prefer → fall back → report contract documented in
-[`doca-structured-tools-contract ## The agent behavior contract`](../../doca-structured-tools-contract/SKILL.md#the-agent-behavior-contract),
+[`doca-structured-tools-contract ## The agent behavior contract`](../doca-structured-tools-contract/SKILL.md#the-agent-behavior-contract),
 the agent should:
 
 1. Probe for the matching structured helper FIRST (`doca-env --json`
@@ -268,10 +268,10 @@ the agent should:
 3. If the probe fails, fall back to the manual command in the
    row. Report *"falling back to manual chain"*.
 4. The schemas the structured tools emit are defined in
-   [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
+   [`doca-structured-tools-contract ## Schemas`](../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose (class) | Invocation (shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -307,7 +307,7 @@ here so they are visible at the point of action and not buried in
 - This skill **assumes a healthy DOCA install** (or the public
   NGC DOCA container) at both endpoints of the host ↔ DPU pair.
   If the install is in doubt, route to
-  [`doca-setup`](../../doca-setup/SKILL.md) before running
+  [`doca-setup`](../doca-setup/SKILL.md) before running
   anything else here. For the comch programming surface that
   created the channel, see
-  [`doca-comch`](../../libs/doca-comch/SKILL.md).
+  [`doca-comch`](../doca-comch/SKILL.md).

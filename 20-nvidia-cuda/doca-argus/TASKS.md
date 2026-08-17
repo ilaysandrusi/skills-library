@@ -11,7 +11,7 @@ These verbs cover the in-scope Argus operational workflows for an
 external operator deploying the Argus container on BlueField.
 Every step assumes the operator has consulted the live public
 DOCA Argus Service Guide (reachable through
-[doca-public-knowledge-map ## DOCA services](../../doca-public-knowledge-map/SKILL.md#doca-services))
+[doca-public-knowledge-map ## DOCA services](../doca-public-knowledge-map/SKILL.md#doca-services))
 and is using it as the authoritative reference; this file
 prescribes the *order* and *what to look up where*, not a
 copy-paste runbook.
@@ -39,10 +39,10 @@ review) before the container starts.
       operator effort — which is **not covered by this bundle**
       (policy-excluded from the public release); route them to the
       public docs via
-      [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+      [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
     - Does the user actually want observability / metrics rather
       than security? Route to the DOCA Telemetry Service via
-      [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+      [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
     - Is there no security-posture concern at all? Stop here
       honestly — Argus has operational cost (container, sampling
       CPU, SIEM channel) and deploying it for nothing is not a
@@ -125,8 +125,8 @@ public release):
   / module / library / thread snapshots, integrity verification),
   the build is the App Shield library's build — route the user to
   the public docs via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
-  and to [`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
+  and to [`doca-programming-guide`](../doca-programming-guide/SKILL.md)
   for the canonical build pattern.
 - For applications that **consume Argus's findings** (an internal
   dashboard, a custom enrichment pipeline that sits between
@@ -140,7 +140,7 @@ If the user is instead asking how to build the **Argus container
 itself** from source, that is *not* an external-operator workflow
 — the container ships pre-built from NGC and rebuilding it is
 out of scope for this skill. Route to the public DOCA Argus
-Service Guide via [doca-public-knowledge-map ## DOCA services](../../doca-public-knowledge-map/SKILL.md#doca-services).
+Service Guide via [doca-public-knowledge-map ## DOCA services](../doca-public-knowledge-map/SKILL.md#doca-services).
 
 ## modify
 
@@ -207,7 +207,7 @@ flowing, BEFORE enabling any production alerting on top.
    (e.g. `docker run` / `crictl` / BlueField container manager)
    is documented in the Container Deployment Guide reachable
    through
-   [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+   [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 3. **Confirm the container is running, not restart-looping.** A
    restart loop is a layer-1 symptom per
    [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
@@ -446,7 +446,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose | Command (class shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -503,13 +503,13 @@ Three cross-cutting rules for this appendix:
   question. That is the DOCA App Shield library, which is **not
   covered by this bundle** (policy-excluded from the public
   release); route the user to the public docs via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   plus
   [`doca-programming-guide ## build`](../../doca-programming-guide/TASKS.md#build)
   for the canonical build pattern.
 - **Other DOCA services** (DMS / DTS / Firefly / BlueMan /
   HBN / …) — not Argus. Route to
-  [doca-public-knowledge-map ## DOCA services](../../doca-public-knowledge-map/SKILL.md#doca-services)
+  [doca-public-knowledge-map ## DOCA services](../doca-public-knowledge-map/SKILL.md#doca-services)
   for the routing table and the matching `services/<service>`
   skill when it exists (e.g.
   [`doca-dms ## configure`](../../services/doca-dms/TASKS.md#configure)
@@ -548,4 +548,4 @@ Three cross-cutting rules for this appendix:
   enabled on the channel.
 - For URL routing to the Argus guide and other public DOCA
   documentation, see
-  [doca-public-knowledge-map ## DOCA services](../../doca-public-knowledge-map/SKILL.md#doca-services).
+  [doca-public-knowledge-map ## DOCA services](../doca-public-knowledge-map/SKILL.md#doca-services).

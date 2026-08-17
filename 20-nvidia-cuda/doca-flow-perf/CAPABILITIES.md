@@ -7,7 +7,7 @@ class questions. Pick the pattern first, then drill into the
 H2 that owns the substance. For the *how* of executing each
 pattern, jump to [TASKS.md](TASKS.md). For the `doca-flow`
 API surface behind the pipeline this tool drives, see
-[`doca-flow CAPABILITIES.md`](../../libs/doca-flow/CAPABILITIES.md);
+[`doca-flow CAPABILITIES.md`](../doca-flow/CAPABILITIES.md);
 for the DPA-offloaded path measurement, see
 [`doca-flow-dpa-perf CAPABILITIES.md`](../doca-flow-dpa-perf/CAPABILITIES.md);
 for the optimization-vs-measurement boundary, see
@@ -213,7 +213,7 @@ separate cadence. Specifically:
 
 This skill **does NOT** maintain its own version-handling
 rules in parallel with
-[`doca-version`](../../doca-version/SKILL.md). The agent
+[`doca-version`](../doca-version/SKILL.md). The agent
 treats `doca-version` as the source of truth for:
 
 - the four-way DOCA install match (host package, kernel
@@ -233,7 +233,7 @@ The flow-perf-specific overlay on top of that:
   count are first-class methodology variables; changing any
   of them across runs invalidates the comparison.
 - **Report the BlueField mode and firmware version.** Per
-  [`doca-version`](../../doca-version/SKILL.md), the device
+  [`doca-version`](../doca-version/SKILL.md), the device
   mode and firmware are load-bearing.
 
 Concretely the agent applies this rule in
@@ -290,7 +290,7 @@ order; this section names them so the agent can route fast.
    from one DOCA release with a number from another (which
    the four-tuple capture rule prevents).
 7. **Cross-cutting.** Hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug)
    for the env-side layers (driver loaded, PCIe state,
    hugepages, IOMMU, ulimits, kernel module).
@@ -315,7 +315,7 @@ expected to read each:
   during the run — pipe creation success / failure, port
   state, counter values. The `doca-flow` library exposes
   this programmatically per
-  [`doca-flow CAPABILITIES.md`](../../libs/doca-flow/CAPABILITIES.md);
+  [`doca-flow CAPABILITIES.md`](../doca-flow/CAPABILITIES.md);
   flow-perf's measurement is more meaningful when the
   operator cross-checks against the library's own view
   (e.g. via the application's inspector). flow-perf does
@@ -330,7 +330,7 @@ expected to read each:
 
 For the cross-cutting host / device observability surfaces
 (driver, firmware, BlueField mode, PCIe), route to
-[`doca-debug ## Observability`](../../doca-debug/SKILL.md)
+[`doca-debug ## Observability`](../doca-debug/SKILL.md)
 and [`doca-setup TASKS.md ## test`](../../doca-setup/TASKS.md#test).
 
 The skill explicitly does NOT add streaming-telemetry export
@@ -406,6 +406,6 @@ The full procedural application of the safety overlay (when
 to abort, when to escalate, what to capture) lives in
 [`TASKS.md ## debug`](TASKS.md#debug) and
 [`TASKS.md ## test`](TASKS.md#test) plus the
-[`doca-debug`](../../doca-debug/SKILL.md) cross-cutting debug
+[`doca-debug`](../doca-debug/SKILL.md) cross-cutting debug
 ladder. This section names the rules that constrain those
 verbs for flow-perf specifically.

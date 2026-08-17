@@ -56,7 +56,7 @@ substrate before the container starts.
    live public DOCA UROM Service Guide whose version matches
    the host library — NOT to memorize a tag. Route any
    version-mismatch ambiguity to
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 4. **Confirm the underlying RDMA transport substrate.** This
    service consumes the BlueField's `doca-rdma` substrate to
    actually move bytes. Walk the substrate bring-up per
@@ -110,7 +110,7 @@ substrate before the container starts.
    author or place on the filesystem.
 7. **Verify the access boundary before container start.**
    Use the documented read-only
-   [`doca-comm-channel-admin`](../../tools/doca-comm-channel-admin/SKILL.md)
+   [`doca-comm-channel-admin`](../doca-comm-channel-admin/SKILL.md)
    scan and the program-side
    [`doca-comch TASKS.md ## test`](../../libs/doca-comch/TASKS.md#test)
    view to confirm the Comch mapping contains only the intended
@@ -470,7 +470,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose | Command (class shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -478,7 +478,7 @@ the agent should:
 | Container logs | The BlueField container manager's log-stream command for the service container | [`## debug`](#debug) layers 1-2 + 4 | Service-ready line on startup; no queue-saturation / handler-stuck lines repeating; no paired-version warnings. |
 | Container tag in use | The BlueField container manager's image-inspect command for the running service container | [`## run`](#run) step 1; [`## debug`](#debug) layer 4 | Tag matches what the public DOCA UROM Service Guide names for the paired host library version. |
 | Host-library version (on paired host) | `pkg-config --modversion doca-urom` on the host | [`## configure`](#configure) step 3; [`## debug`](#debug) layer 4 | A semver string the DOCA Compatibility Policy lists as compatible with this service's container tag. |
-| BlueField DOCA version | `doca_caps --version` on the BlueField | [`## configure`](#configure) step 2; [`## debug`](#debug) layer 4 | A semver string matching the BlueField's `pkg-config --modversion doca-common`; disagreement = partial install per [`doca-version`](../../doca-version/SKILL.md). |
+| BlueField DOCA version | `doca_caps --version` on the BlueField | [`## configure`](#configure) step 2; [`## debug`](#debug) layer 4 | A semver string matching the BlueField's `pkg-config --modversion doca-common`; disagreement = partial install per [`doca-version`](../doca-version/SKILL.md). |
 | Host-side cap-query agreement | A `doca_urom_cap_*` query from a paired host against the active `doca_devinfo`, then compare to the service's exposed surface | [`## test`](#test) step 2; [`## debug`](#debug) layer 4 | The host's cap-query result is a subset of (or equal to) the service's exposed UCX-component / collective surface. |
 | Substrate port check | `ibv_devinfo` (sudo) for the BlueField port the service is using; OR the substrate-side checks from [`doca-rdma TASKS.md ## debug`](../../libs/doca-rdma/TASKS.md#debug) | [`## configure`](#configure) step 4; [`## debug`](#debug) layer 3 | `PORT_ACTIVE` with a sane MTU; substrate counters not error-spiking. |
 | Single-operation smoke | A single put or get from one paired host through `doca-urom` to a peer, with the service's logs observed in parallel | [`## run`](#run) step 6; [`## test`](#test) step 1 | Service logs show the enqueue received; host's progress engine fires the completion. |

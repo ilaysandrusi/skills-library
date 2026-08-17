@@ -37,7 +37,7 @@ the user wants to *do* something (configure / modify / build / run
 / test / debug); open [`CAPABILITIES.md`](CAPABILITIES.md) when the
 question is *what can DOCA STA express* on this version. If the
 user has not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user is
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user is
 asking *"is this an NVMe-oF initiator/host transport?"*, the
 answer is no — doca-sta accelerates the **target** side: it presents
 NVMe-oF `doca_sta_subsystem` targets backed by local NVMe-PCI
@@ -93,7 +93,7 @@ instance.
   overlay in
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility),
   which cross-links the canonical detection chain in
-  [`doca-version`](../../doca-version/SKILL.md) and adds the
+  [`doca-version`](../doca-version/SKILL.md) and adds the
   STA-specific cap-query rule (`pkg-config --modversion doca-sta`
   is the build-time anchor; the runtime `doca_sta_cap_is_supported`
   query is the truth).
@@ -104,7 +104,7 @@ instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -174,7 +174,7 @@ flow-rule programming (use [`doca-flow`](../doca-flow/SKILL.md)),
 or initiator/host-side NVMe stack development
 (SPDK or kernel-nvme own that, not this skill). For DOCA
 documentation orientation, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -207,7 +207,7 @@ the fabric to connect into the accelerated target, and one or
 more local NVMe-PCI disks to back the target's namespaces. It
 does not cover installing
 DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md). It does not cover
+[`doca-setup`](../doca-setup/SKILL.md). It does not cover
 initiator/host-side NVMe stacks (SPDK `bdev_nvme`, kernel `nvme`
 host) or NVMe protocol semantics above the accelerated target
 data path — those are out of scope.
@@ -253,39 +253,39 @@ contain — and pull requests should not add:
    run, test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 version-handling rules,
 [`doca-rdma`](../doca-rdma/SKILL.md) for the RDMA substrate
 that NVMe-over-RDMA transport lands on,
 [`doca-flow`](../doca-flow/SKILL.md) for the steering rules
 that direct NVMe traffic to STA-managed queues, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or
 the installed package layout" rather than "STA-specific
 guidance".
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source
   and the on-disk layout of an installed DOCA package. The
   STA URL slug is `DOCA-STA`.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, BlueField mode checks, and the
   permission / group-membership requirements for opening a
   `doca_dev`. This skill assumes its preconditions are
   satisfied.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. This skill's `## Version
   compatibility` cross-links the four-way match rule and adds
   only the STA-specific overlay (STA target-acceleration
   availability windows, NVMe-oF feature-set device-conditional
   support).
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect /
   prefer / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library:
   the canonical `pkg-config` + meson build pattern, the
   universal modify-a-shipped-sample first-app workflow, the
@@ -308,7 +308,7 @@ guidance".
   STA-managed queue. DOCA STA does *not* program steering
   itself; an NVMe-oF target whose connections never come up
   is often a missing or wrong Flow rule, not a STA bug.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the
+- [`doca-debug`](../doca-debug/SKILL.md) — the
   cross-cutting debug ladder (install / version / build /
   link / runtime / program / driver). STA-specific debug
   (transport-type mismatches, queue-depth oversize,

@@ -17,7 +17,7 @@ task verbs every artifact in this bundle exposes
 (`configure / build / modify / run / test / debug`), then explicitly
 defers task verbs that do not belong here, and ends with the
 `Command appendix` honoring the bundle's
-[`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+[`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
 preamble.
 
 For the Socket Relay, the verbs that carry real workflow content are
@@ -152,17 +152,17 @@ Routing for nearby "build" questions:
   for the cross-library build pattern and the matching `libs/<library>`
   skill ([`doca-comch ## build`](../../libs/doca-comch/TASKS.md#build)
   for the control-plane rewrite,
-  [`doca-eth`](../../libs/doca-eth/SKILL.md) for the line-rate
+  [`doca-eth`](../doca-eth/SKILL.md) for the line-rate
   packet-I/O rewrite) for the library-specific overlay. The relay
   carries socket-shaped bytes today; the per-library build is what
   retires it later.
 - *"I want to build a custom DPU-side terminator that talks to the
   relay's far half."* → not a relay-build question. The DPU-side peer
   is either a documented BlueField service container (route to
-  [`doca-container-deployment`](../../doca-container-deployment/SKILL.md))
+  [`doca-container-deployment`](../doca-container-deployment/SKILL.md))
   or a program written against the matching DOCA library
-  ([`doca-comch`](../../libs/doca-comch/SKILL.md) for control-plane
-  bridging, [`doca-eth`](../../libs/doca-eth/SKILL.md) for line-rate
+  ([`doca-comch`](../doca-comch/SKILL.md) for control-plane
+  bridging, [`doca-eth`](../doca-eth/SKILL.md) for line-rate
   data); route accordingly.
 - *"I want to extend the relay with a new transport / scenario."* →
   out of scope here; this skill is for external operators consuming the
@@ -230,8 +230,8 @@ Routing for nearby "modify" questions:
   re-examine axis 1 of the design space: the relay is one half of the
   host ↔ DPU bridging picture, and the right answer may be a per-
   library rewrite via
-  [`doca-comch`](../../libs/doca-comch/SKILL.md) (control plane) or
-  [`doca-eth`](../../libs/doca-eth/SKILL.md) (line-rate data plane)
+  [`doca-comch`](../doca-comch/SKILL.md) (control plane) or
+  [`doca-eth`](../doca-eth/SKILL.md) (line-rate data plane)
   rather than a relay re-configuration.
 - *"Can I patch the relay to add a feature?"* → out of scope; this
   skill is for consumers of the shipped relay, not contributors to it.
@@ -514,9 +514,9 @@ does not invent guidance:
 - **Writing a custom DPU-side terminator from scratch** ⇒ not a
   relay-tool question. The DPU-side peer the relay forwards to is
   *its own program*, written against the matching DOCA library —
-  [`doca-comch`](../../libs/doca-comch/SKILL.md) when the operator
+  [`doca-comch`](../doca-comch/SKILL.md) when the operator
   wants programmatic control over the host ↔ DPU bridge, or
-  [`doca-eth`](../../libs/doca-eth/SKILL.md) when the operator needs
+  [`doca-eth`](../doca-eth/SKILL.md) when the operator needs
   line-rate raw packet I/O. The relay carries the bytes; the
   per-library skill is where the terminator's program-side lifecycle
   lives.
@@ -524,7 +524,7 @@ does not invent guidance:
   static-pod authoring)** ⇒ out of scope here. The container-shape
   deployment of the relay rides on the shared BlueField service
   container runtime documented in
-  [`doca-container-deployment`](../../doca-container-deployment/SKILL.md);
+  [`doca-container-deployment`](../doca-container-deployment/SKILL.md);
   the pod-spec shape, image-pull procedure, static-pod manifests
   directory, and per-service config-file mount are owned by that skill.
   This skill names *that* the container shape is one of the three
@@ -537,7 +537,7 @@ does not invent guidance:
   the install; this skill does not own the install workflow.
 - **General host ↔ DPU control-plane programming** ⇒ not a relay-tool
   question. Route to
-  [`doca-comch`](../../libs/doca-comch/SKILL.md) and to
+  [`doca-comch`](../doca-comch/SKILL.md) and to
   [`doca-comm-channel-admin`](../doca-comm-channel-admin/SKILL.md) for
   the operator-side admin pattern on the comch side.
 
@@ -553,7 +553,7 @@ load-bearing piece.
 
 **Infra-aware preamble (every row below).** Per the bundle's
 detect → prefer → fall back → report contract documented in
-[`doca-structured-tools-contract ## The agent behavior contract`](../../doca-structured-tools-contract/SKILL.md#the-agent-behavior-contract),
+[`doca-structured-tools-contract ## The agent behavior contract`](../doca-structured-tools-contract/SKILL.md#the-agent-behavior-contract),
 the agent should:
 
 1. Probe for the matching structured helper FIRST (`doca-env --json`
@@ -567,10 +567,10 @@ the agent should:
 3. If the probe fails, fall back to the manual command in the
    row. Report *"falling back to manual chain"*.
 4. The schemas the structured tools emit are defined in
-   [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
+   [`doca-structured-tools-contract ## Schemas`](../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose (class) | Invocation (shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -636,9 +636,9 @@ so they are visible at the point of action and not buried in
   runs (or the public NGC DOCA container) and whatever privileges the
   public guide names for the chosen deployment shape. If the install
   is in doubt, route to
-  [`doca-setup`](../../doca-setup/SKILL.md) before running anything
+  [`doca-setup`](../doca-setup/SKILL.md) before running anything
   else here. For the host ↔ DPU control-plane sibling whose channels
   coordinate the endpoints the relay carries traffic between, see
-  [`doca-comch`](../../libs/doca-comch/SKILL.md) and its operator-side
+  [`doca-comch`](../doca-comch/SKILL.md) and its operator-side
   admin counterpart
   [`doca-comm-channel-admin`](../doca-comm-channel-admin/SKILL.md).

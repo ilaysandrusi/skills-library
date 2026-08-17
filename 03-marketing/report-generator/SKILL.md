@@ -42,7 +42,7 @@ Generate an executive summary for our Q3 influencer campaigns
   1. The report matches the requested audience template (executive, client, team, or board).
   2. Every metric is paired with context (target, benchmark, or prior period).
   3. The report ends with concrete recommendations and, where relevant, action items.
-- **Primary next skill**: [content-quality-auditor](../../../seo-geo/tune/content-quality-auditor/SKILL.md)
+- **Primary next skill**: [content-quality-auditor](../content-quality-auditor/SKILL.md)
 
 ### Handoff Summary
 
@@ -107,13 +107,13 @@ Increase Q1 influencer budget by 25%, focused on TikTok micro-influencers and pr
 - [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipes per connector category
 - [performance-analyzer](../performance-analyzer/SKILL.md) — generates the metrics this report consumes
 - [roi-calculator](../roi-calculator/SKILL.md) — supplies ROI/ROAS figures
-- [campaign-planner](../../target/campaign-planner/SKILL.md) — original plan to compare results against
-- [content-amplifier](../../activate/content-amplifier/SKILL.md) — amplification results to report on
-- [content-quality-auditor](../../../seo-geo/tune/content-quality-auditor/SKILL.md) — quality gate for the report itself
+- [campaign-planner](../campaign-planner/SKILL.md) — original plan to compare results against
+- [content-amplifier](../content-amplifier/SKILL.md) — amplification results to report on
+- [content-quality-auditor](../content-quality-auditor/SKILL.md) — quality gate for the report itself
 
 ## Next Best Skill
 
-**Primary**: [content-quality-auditor](../../../seo-geo/tune/content-quality-auditor/SKILL.md) — run the finished report through the publish-readiness gate before it goes to a stakeholder.
+**Primary**: [content-quality-auditor](../content-quality-auditor/SKILL.md) — run the finished report through the publish-readiness gate before it goes to a stakeholder.
 
 **Alternates (same report phase / influencer family)**:
 

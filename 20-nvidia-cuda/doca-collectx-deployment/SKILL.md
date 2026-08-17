@@ -71,10 +71,10 @@ it up front:
   consume the collector.
 - **Routed to the DOCA telemetry libraries:** the
   hardware-counter **reader** API is owned by
-  [`doca-telemetry`](../libs/doca-telemetry/SKILL.md); the
+  [`doca-telemetry`](../doca-telemetry/SKILL.md); the
   application-side **publisher** API (emit counters / events from
   a DOCA program) is owned by
-  [`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md).
+  [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md).
   This skill does not re-document either API surface.
 - **Routed to public docs (Non-goal #7):** the productized
   **DTS container** — its packaged config schema, its built-in
@@ -113,9 +113,9 @@ administer — people who already have:
 It is **not** for:
 
 - developers writing the hardware-counter reader API (route to
-  [`doca-telemetry`](../libs/doca-telemetry/SKILL.md)) or the
+  [`doca-telemetry`](../doca-telemetry/SKILL.md)) or the
   publisher API (route to
-  [`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md)),
+  [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md)),
 - operators deploying / configuring the **productized DTS
   container** as a turnkey service — that is externally
   productized (Non-goal #7); route to the public DTS guide,
@@ -142,7 +142,7 @@ Concretely:
 - Wiring a provider / counter family into the collector and
   confirming the device actually exposes it before the config
   commits (the gate-before-commit rule, shared with
-  [`doca-telemetry-utils`](../tools/doca-telemetry-utils/SKILL.md)).
+  [`doca-telemetry-utils`](../doca-telemetry-utils/SKILL.md)).
 - Turning on / shaping an exporter so the metrics actually leave
   the box, and confirming the downstream consumer receives them
   end-to-end (not just "the daemon is running").
@@ -156,9 +156,9 @@ Concretely:
   of the collection mechanism this skill owns.
 
 Do **not** load this skill for: the hardware-counter reader API
-(use [`doca-telemetry`](../libs/doca-telemetry/SKILL.md)); the
+(use [`doca-telemetry`](../doca-telemetry/SKILL.md)); the
 publisher API (use
-[`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md));
+[`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md));
 operating the productized DTS container (route via
 [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 Non-goal #7); installing DOCA or preparing the env (use

@@ -97,6 +97,6 @@ On user confirmation, save to `memory/content/YYYY-MM-DD-<topic>.md` — see [Sk
 
 ## Next Best Skill
 
-- **Primary**: [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md) — verify the optimized content is strong enough to ship and cite.
+- **Primary**: [content-quality-auditor](../content-quality-auditor/SKILL.md) — verify the optimized content is strong enough to ship and cite.
 
 **Termination note**: keep a visited-set this session; if the recommended skill was already invoked, stop and report the chain complete rather than re-running it. Honor a max handoff depth of 3 to avoid loops (per [skill-contract.md §Termination rules](../../../references/skill-contract.md)).

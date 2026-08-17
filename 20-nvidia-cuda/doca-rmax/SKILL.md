@@ -44,10 +44,10 @@ confusion (DOCA does *not* bundle Rivermax; it wraps it). Open
 [`CAPABILITIES.md`](CAPABILITIES.md) when the question is *what
 can DOCA Rivermax express* on this version + this Rivermax
 install. If the user has not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; for the Rivermax
+[`doca-setup`](../doca-setup/SKILL.md) first; for the Rivermax
 SDK + license install itself, route to the public DOCA Rivermax
 guide (slug `DOCA-Rivermax`) via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 If the user is asking *"how do I get packets to land on my
 Rivermax input stream at all"*, the answer is layered:
 `doca-rmax` is the *Rivermax integration* surface,
@@ -71,7 +71,7 @@ single instance.
   [`TASKS.md ## configure`](TASKS.md#configure) step 1, which
   routes the install-side question to the public Rivermax guide
   via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   and refuses to recommend a fallback to `doca-eth` alone that
   would silently lose the timing properties.
 - **"How do I set up a SMPTE ST 2110 video receive stream?"** —
@@ -110,7 +110,7 @@ single instance.
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility),
   which adds the *Rivermax-side version is a second axis* rule
   on top of the canonical DOCA version-handling chain in
-  [`doca-version`](../../doca-version/SKILL.md).
+  [`doca-version`](../doca-version/SKILL.md).
 - **"What does this `DOCA_ERROR_*` from a Rivermax call mean and
   which layer caused it?"** — worked example:
   *"`DOCA_ERROR_NOT_SUPPORTED` from `doca_rmax_init()`"*.
@@ -119,7 +119,7 @@ single instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md), and which preserves
+  [`doca-debug`](../doca-debug/SKILL.md), and which preserves
   the installed header's call-specific mapping: init-time
   `_NOT_SUPPORTED` routes first to Rivermax SDK / license checks;
   later errors are interpreted from the exact failing call rather
@@ -189,7 +189,7 @@ work, in any language. Concretely:
   real-time priority for sub-microsecond jitter; the canonical
   scheduling guidance lives in the Rivermax SDK docs reachable
   through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 - Debugging a `DOCA_ERROR_*` returned from a Rivermax call
   (lifecycle vs. license / permission vs. capability vs.
   driver-below) where the cause may live in the DOCA-side
@@ -204,12 +204,12 @@ Do **not** load this skill for general DOCA orientation, for
 installing DOCA itself, for installing the Rivermax SDK or
 managing the Rivermax license file (those live in the public
 Rivermax SDK guide reachable through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)),
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)),
 for best-effort packet I/O without timing requirements (use
 [`doca-eth`](../doca-eth/SKILL.md) directly), or for pure
 host-side data processing without networking. For DOCA
 documentation orientation, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -244,10 +244,10 @@ the user has the privileges their public install profile
 expects (typically sudo or `mlnx`-group membership to open a
 `doca_dev` against a port). It does not cover installing DOCA —
 that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md). It does not cover
+[`doca-setup`](../doca-setup/SKILL.md). It does not cover
 installing Rivermax or its license — that path goes through the
 public Rivermax SDK guide reachable through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -261,7 +261,7 @@ contain — and pull requests should not add:
   The agent's job is to route the user to those files and
   prescribe a minimum-diff modification on them via the
   universal modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the Rivermax-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **Standalone build manifests** (`meson.build`,
@@ -296,45 +296,45 @@ contain — and pull requests should not add:
    run, test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 DOCA version-handling rules (Rivermax adds a Rivermax-SDK-
 version axis on top),
 [`doca-eth`](../doca-eth/SKILL.md) for the queue surface
 that carries the packets,
 [`doca-flow`](../doca-flow/SKILL.md) for the steering side
 that decides which packets land on which queue, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is *"look it up in the public
 Rivermax SDK guide or the installed package layout"* rather
 than *"Rivermax-integration-specific guidance"*.
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source
   and the on-disk layout of an installed DOCA package. The
   Rivermax URL slug is `DOCA-Rivermax`; the public Rivermax SDK
   guide (separate product) is reachable from the same routing
   table when the user asks how to install Rivermax or its
   license.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, port-state checks (`devlink dev show`,
   `ip link`), permission and group-membership requirements for
   opening a `doca_dev`. This skill assumes its preconditions
   are satisfied; the Rivermax-SDK + license preconditions are
   layered on top.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. This skill's `## Version
   compatibility` cross-links the four-way match rule and adds
   the Rivermax-specific overlay (Rivermax SDK version is a
   second axis; the capability set on this host is the
   intersection of DOCA-side cap-query results and
   Rivermax-side capabilities).
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect /
   prefer / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library:
   the canonical `pkg-config` + meson build pattern, the
   universal modify-a-shipped-sample first-app workflow, the
@@ -352,7 +352,7 @@ than *"Rivermax-integration-specific guidance"*.
   Rivermax input stream almost always means a missing or wrong
   Flow rule (or a missing Rivermax license), not a Rivermax
   bug.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the
+- [`doca-debug`](../doca-debug/SKILL.md) — the
   cross-cutting debug ladder (install / version / build /
   link / runtime / program / driver). Rivermax-specific debug
   (license precondition gaps, stream-type / packet-rate

@@ -50,7 +50,7 @@ Steps the agent should walk the user through, in order:
    [`doca-setup ## test`](../../doca-setup/TASKS.md#test);
    then confirm the surrounding `doca-flow` library is
    healthy on the device per
-   [`doca-flow TASKS.md ## test`](../../libs/doca-flow/TASKS.md#test).
+   [`doca-flow TASKS.md ## test`](../doca-flow/TASKS.md#test).
    flow-perf is a microbenchmark of `doca-flow`; if the
    library is not healthy, the measurement is meaningless.
 2. **Commit to the three-axis decision.** Per
@@ -89,7 +89,7 @@ Steps the agent should walk the user through, in order:
    values for the policy shape, not for a specific number
    of workers — that is always operator-specified.
 6. **Pick the BlueField mode and confirm preconditions.**
-   Per [`doca-version`](../../doca-version/SKILL.md), the
+   Per [`doca-version`](../doca-version/SKILL.md), the
    device mode is load-bearing for which matchers / actions
    the underlying Flow library exposes. The agent
    cross-checks the JSON policy against the device-mode
@@ -178,7 +178,7 @@ Routing for nearby "modify" questions:
   deployed."* → out of scope here; route to
   [`doca-flow-tune`](../doca-flow-tune/SKILL.md) for the
   optimization workflow, or
-  [`doca-flow TASKS.md ## modify`](../../libs/doca-flow/TASKS.md#modify)
+  [`doca-flow TASKS.md ## modify`](../doca-flow/TASKS.md#modify)
   for the library-level modification workflow.
 - *"Switch the workload from rule-install measurement to
   packet throughput measurement."* → out of scope of
@@ -285,7 +285,7 @@ measurement, not just one):
 | 2 → ## debug | `num_failed > 0` during the smoke; walk the insertion-rate layer, then re-run step 1 with a smaller entry count or a fixed-pattern policy | [`## debug`](#debug) layer 4 |
 | 3 → ## debug | Library view disagrees with the tool's view; walk the cross-cutting / version layer first | [`## debug`](#debug) layers 6-7 |
 | 5 → step 6 | Per-iteration variance is high; the printed Kops/sec is a misleading average | [`## debug`](#debug) layer 5 |
-| 6 → host stabilize → 1 | After CPU pinning / interrupt routing changes, re-run the smoke; the prior smoke is stale | [`doca-debug`](../../doca-debug/SKILL.md) |
+| 6 → host stabilize → 1 | After CPU pinning / interrupt routing changes, re-run the smoke; the prior smoke is stale | [`doca-debug`](../doca-debug/SKILL.md) |
 | any → JSON edit → 1 | After ANY JSON edit, re-run the smoke; the prior smoke is stale | [`## modify`](#modify) |
 
 The agent's rule: every state-changing action on the JSON,
@@ -318,7 +318,7 @@ layers in order:
 3. **Pipeline-creation-failed.** The JSON parsed but the
    underlying `doca-flow` library refused the pipe. Route
    the diagnosis to
-   [`doca-flow TASKS.md ## debug`](../../libs/doca-flow/TASKS.md#debug);
+   [`doca-flow TASKS.md ## debug`](../doca-flow/TASKS.md#debug);
    common flow-perf-specific causes: matcher / action
    unsupported on the device mode, table-size limit
    exceeded, BlueField mode wrong.
@@ -342,7 +342,7 @@ layers in order:
    asks for; BlueField is in the wrong mode; the comparison
    target is from a different DOCA release.
 7. **Cross-cutting.** Hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug)
    for the env-side layers (driver, firmware, BlueField
    mode, PCIe, hugepages, IOMMU).
@@ -389,8 +389,8 @@ skill's name.
   [`doca-setup ## configure`](../../doca-setup/TASKS.md#configure)
   and [`## no-install`](../../doca-setup/TASKS.md#no-install).
 - **write or modify a doca-flow application** ⇒
-  [`doca-flow`](../../libs/doca-flow/SKILL.md), layered on
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-flow`](../doca-flow/SKILL.md), layered on
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   flow-perf measures its own synthetic pipeline; it does
   not produce or modify application code.
 - **optimize a live doca-flow application** ⇒
@@ -402,17 +402,17 @@ skill's name.
   flow-perf measures the host or DPU-CPU path; flow-dpa-perf
   measures the DPA-offloaded path.
 - **library-internal pipe / counter / inspector deep dive**
-  ⇒ [`doca-flow`](../../libs/doca-flow/SKILL.md). The
+  ⇒ [`doca-flow`](../doca-flow/SKILL.md). The
   deeper per-pipe semantics belong to the library.
 - **end-to-end dataplane packet throughput / latency
   measurement** ⇒ NOT a flow-perf task per
   [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
   (What is NOT measured). That is the application's
   responsibility, layered on
-  [`doca-flow`](../../libs/doca-flow/SKILL.md).
+  [`doca-flow`](../doca-flow/SKILL.md).
 - **firmware / driver upgrade** ⇒ route to
-  [`doca-version`](../../doca-version/SKILL.md) +
-  [`doca-setup`](../../doca-setup/SKILL.md). flow-perf has
+  [`doca-version`](../doca-version/SKILL.md) +
+  [`doca-setup`](../doca-setup/SKILL.md). flow-perf has
   no opinion on the firmware upgrade path beyond requiring
   that the four-tuple capture identifies the firmware
   version used.
@@ -440,7 +440,7 @@ the agent should:
 4. The schemas the structured tools emit are defined in
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose (class) | Invocation (shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -451,7 +451,7 @@ the agent should:
 | Run the single-iteration smoke (low entry count, single iteration) | `doca_flow_perf` with the chosen JSON policy at a small `num_inserted_entries` and iteration count (per the binary's `--help` for the exact flag spelling) | [`## run`](#run) step 2 + [`## test`](#test) step 1 | Exit 0; printed iteration summary present; `num_failed == 0`; cross-check against `doca-flow` library view matches. |
 | Run the scaled measurement (operator's chosen workload size, N iterations) | `doca_flow_perf` with the chosen JSON policy at full workload size + N iterations (per the binary's `--help`) | [`## run`](#run) step 4 + [`## test`](#test) step 5 | Exit 0; per-iteration cycles captured; variance computable; `num_pushed == num_inserted_entries` per iteration. |
 | Compute / report variance across iterations | Capture the per-iteration cycles for each of the N runs; compute mean + std-dev OFF-line. The agent does NOT invent a flow-perf-built-in variance flag. | [`## test`](#test) steps 5-6 | Std-dev across iterations is small enough that the reported number is defensible; if not, [`## debug`](#debug) layer 5. |
-| Save a session snapshot for debug | Capture (a) the JSON policy verbatim, (b) the full command line, (c) the per-iteration cycles + counters verbatim, (d) the four-tuple (DOCA version, BlueField generation, firmware version, BlueField mode), (e) the backend choice (DPDK or DOCA) | [`## test`](#test) capture step + [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug) | The saved bundle is consumed by the cross-cutting debug ladder. |
+| Save a session snapshot for debug | Capture (a) the JSON policy verbatim, (b) the full command line, (c) the per-iteration cycles + counters verbatim, (d) the four-tuple (DOCA version, BlueField generation, firmware version, BlueField mode), (e) the backend choice (DPDK or DOCA) | [`## test`](#test) capture step + [`doca-debug TASKS.md ## debug`](../doca-debug/TASKS.md#debug) | The saved bundle is consumed by the cross-cutting debug ladder. |
 
 Three cross-cutting rules for this appendix:
 
@@ -469,10 +469,10 @@ Three cross-cutting rules for this appendix:
 - **Cross-link instead of duplicate.** Cross-cutting
   commands (`pkg-config --modversion`, `dmesg`, `lspci`,
   `ethtool`) live in
-  [`doca-debug TASKS.md ## Command appendix`](../../doca-debug/TASKS.md);
+  [`doca-debug TASKS.md ## Command appendix`](../doca-debug/TASKS.md);
   the `doca-flow` application build / port / pipe commands
   live in
-  [`doca-flow TASKS.md ## Command appendix`](../../libs/doca-flow/TASKS.md);
+  [`doca-flow TASKS.md ## Command appendix`](../doca-flow/TASKS.md);
   this appendix names only flow-perf-specific invocations
   on top.
 
@@ -502,8 +502,8 @@ A few rules that apply across every verb in this file:
   worker / queue / burst / iteration configuration.
 - This skill **assumes a healthy DOCA install** (or the
   public NGC DOCA container) and a healthy underlying
-  [`doca-flow`](../../libs/doca-flow/SKILL.md) library on
+  [`doca-flow`](../doca-flow/SKILL.md) library on
   the target device. If either is in doubt, route to
-  [`doca-setup`](../../doca-setup/SKILL.md) and
-  [`doca-flow`](../../libs/doca-flow/SKILL.md) before
+  [`doca-setup`](../doca-setup/SKILL.md) and
+  [`doca-flow`](../doca-flow/SKILL.md) before
   running anything else here.

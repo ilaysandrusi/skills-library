@@ -10,7 +10,7 @@ Read this file when the loader sent you here from
 (the verbs `configure / build / modify / run / test / debug`),
 jump to [TASKS.md](TASKS.md). For the canonical DOCA
 version-handling rules that this skill layers a Compress overlay
-on top of, see [`doca-version`](../../doca-version/SKILL.md).
+on top of, see [`doca-version`](../doca-version/SKILL.md).
 
 ## Pattern overview
 
@@ -150,7 +150,7 @@ coming from the library; query the active capability values via
 
 For the canonical DOCA version-detection chain, the four-way match
 rule, NGC container semantics, and the headers-win-over-docs rule,
-see [`doca-version`](../../doca-version/SKILL.md). The body lives
+see [`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The Compress-specific overlay** is:
@@ -179,7 +179,7 @@ there; this skill does not duplicate it.
   matching `version-matrix.json` row records the *promise*. If
   the two disagree, the cap-query value wins, per the
   headers-win-over-docs rule in
-  [`doca-version`](../../doca-version/SKILL.md).
+  [`doca-version`](../doca-version/SKILL.md).
 
 ## Error taxonomy
 
@@ -243,7 +243,7 @@ var) see
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -318,7 +318,7 @@ topics the agent will get asked but should route elsewhere:
   skill assumes the user already knows they want DEFLATE and is
   asking *how to express it through the DOCA Compress API*.
 - **DOCA Core context and progress engine internals** — owned by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   This skill *uses* the Core context lifecycle; it does not
   redefine it.
 - **Cross-cutting `DOCA_ERROR_*` taxonomy** — owned by
@@ -334,7 +334,7 @@ topics the agent will get asked but should route elsewhere:
   them; the deep per-library substance lives in the matching
   skill.
 - **Cross-library `doca_caps` invocation patterns** — owned by
-  the cross-library [`doca-caps`](../../tools/doca-caps/SKILL.md)
+  the cross-library [`doca-caps`](../doca-caps/SKILL.md)
   tool skill. This skill references the *Compress capability
   query family* (`doca_compress_cap_*`), which is per-library;
   the *cross-library capability snapshot tool* (`doca_caps

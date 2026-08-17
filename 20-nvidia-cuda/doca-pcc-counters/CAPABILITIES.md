@@ -105,7 +105,7 @@ script (which this skill forbids — see
 
 For the canonical DOCA version-detection chain and NGC
 container semantics, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The `pcc_counters.sh`-specific overlay** is:
@@ -115,14 +115,14 @@ there; this skill does not duplicate it.
   directory by `install_data` in
   `tools/pcc_counters/meson.build` (and only when the build is
   not an internal-tool build). If the script is absent, route
-  to [`doca-setup`](../../doca-setup/SKILL.md); do NOT
+  to [`doca-setup`](../doca-setup/SKILL.md); do NOT
   re-implement the script or quote counter values from memory.
 - **mst / MFT and debugfs are the real preconditions.** The
   script depends on `mst status -v` resolving the device and
   on `/sys/kernel/debug/mlx5/<pci>/diag_cnt/` being present
   (debugfs mounted, mlx5 driver loaded). These are
   environment facts, not DOCA-version facts; confirm them per
-  [`doca-setup`](../../doca-setup/SKILL.md).
+  [`doca-setup`](../doca-setup/SKILL.md).
 - **The counter set is fixed in the script.** Counter names
   do not vary by flag or version at the script level — they
   are the constant case-statement above. What CAN vary is
@@ -174,8 +174,8 @@ order:
    readable, but the user's question is really about the
    custom `doca-pcc` algorithm, firmware PCC configuration,
    BlueField mode, or driver / firmware behaviour. Route to
-   [`doca-pcc`](../../libs/doca-pcc/SKILL.md),
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
+   [`doca-pcc`](../doca-pcc/SKILL.md),
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
    or [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug).
 
 ## Observability
@@ -240,9 +240,9 @@ might derive from a reading are high-stakes.
 The canonical public source for device PCC behaviour and the
 firmware congestion-control surface is the DOCA / PCC
 documentation on `docs.nvidia.com`, reachable through
-[`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools).
+[`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools).
 The authoritative source for the script's exact behaviour is
 the script itself (`tools/pcc_counters/pcc_counters.sh`) on the
 user's install. For the `doca-pcc` library that loads custom
 congestion-control kernels (a separate surface), see
-[`doca-pcc`](../../libs/doca-pcc/SKILL.md).
+[`doca-pcc`](../doca-pcc/SKILL.md).

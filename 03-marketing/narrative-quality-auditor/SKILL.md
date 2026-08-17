@@ -124,7 +124,7 @@ Persist only after explicit authorization to `memory/audits/narrative/YYYY-MM-DD
 
 ## Next Best Skill
 
-- **Truth repair:** [positioning-truth-tracer](../../trace/positioning-truth-tracer/SKILL.md)
-- **Architecture repair:** [message-system-architect](../../architect/message-system-architect/SKILL.md)
-- **Landing repair:** [narrative-cascade-planner](../../land/narrative-cascade-planner/SKILL.md)
+- **Truth repair:** [positioning-truth-tracer](../positioning-truth-tracer/SKILL.md)
+- **Architecture repair:** [message-system-architect](../message-system-architect/SKILL.md)
+- **Landing repair:** [narrative-cascade-planner](../narrative-cascade-planner/SKILL.md)
 - **Effectiveness evidence:** [message-test-designer](../message-test-designer/SKILL.md)

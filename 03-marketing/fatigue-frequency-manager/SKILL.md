@@ -79,15 +79,15 @@ Ask "Save these results?" If yes, write to `memory/ad/fatigue-frequency-manager/
 - [ROAS Benchmark](../../../references/roas-benchmark.md) — the paid-ads scoring framework; this skill works the **S** (CTR/CVR/frequency decay under spend-efficiency) and **R** (return-protection) levers; the Return vetoes R1/R2 govern whether a CVR-based read is trustworthy. Only `ad-account-auditor` computes the RQS or runs vetoes.
 - [Measurement & Attribution Protocol](../../../references/measurement-protocol.md) — baseline windows, conversion-lag handling, and frequency-ceiling guidance by objective.
 - [scripts/connectors/README.md](../../../scripts/connectors/README.md) — `ledger.py` record / trend reference for the decay slope.
-- [ad-creative-builder](../../orchestrate/ad-creative-builder/SKILL.md) — builds the replacement creative when a Rotate-creative trigger fires (this skill diagnoses; it does not produce the ad).
+- [ad-creative-builder](../ad-creative-builder/SKILL.md) — builds the replacement creative when a Rotate-creative trigger fires (this skill diagnoses; it does not produce the ad).
 
 ## Next Best Skill
 
 Verdict-conditional:
 
-- **Rotate-creative fired** → [ad-creative-builder](../../orchestrate/ad-creative-builder/SKILL.md) to produce the fresh ad unit (ad↔LP message-match + claim/policy checks live there).
-- **Widen-audience fired** → [audience-segment-builder](../../research/audience-segment-builder/SKILL.md) to expand seed/lookalike segments from the user's own data.
-- **A measurement-signal risk was flagged (ROAS-R1/R2)** → stop and route to [ad-account-auditor](../../activate/ad-account-auditor/SKILL.md) — the gate scores the RQS and runs the vetoes; do not act on a fatigue read built on untrusted conversion data.
+- **Rotate-creative fired** → [ad-creative-builder](../ad-creative-builder/SKILL.md) to produce the fresh ad unit (ad↔LP message-match + claim/policy checks live there).
+- **Widen-audience fired** → [audience-segment-builder](../audience-segment-builder/SKILL.md) to expand seed/lookalike segments from the user's own data.
+- **A measurement-signal risk was flagged (ROAS-R1/R2)** → stop and route to [ad-account-auditor](../ad-account-auditor/SKILL.md) — the gate scores the RQS and runs the vetoes; do not act on a fatigue read built on untrusted conversion data.
 - **Hold** → terminal; report chain-complete.
 
 Visited-set and `max-depth: 3` termination rules apply per [Skill Contract](../../../references/skill-contract.md); if the recommended target was already run this chain, STOP and report chain-complete.

@@ -17,7 +17,7 @@ metadata: {"author": "aaron-he-zhu", "version": "19.2.0", "discipline": "seo-geo
 
 Writes and updates SEO/GEO content across two modes: **new** drafts net-new pages against a target keyword and search intent; **refresh** diagnoses decay on an existing page, prioritizes the update, and produces a republish plan. Both modes apply the same CORE-EEAT constraints so a draft and a refresh clear the same quality bar before the auditor gate.
 
-**This skill does NOT compute the CORE-EEAT score or run vetoes** — that is the publish-gate role of [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md). This skill works the writing/updating lever and hands off. It also does not score AI-citation/GEO readiness in isolation ([geo-content-optimizer](../geo-content-optimizer/SKILL.md)) or produce meta tags/schema as standalone artifacts ([serp-markup-builder](../serp-markup-builder/SKILL.md)).
+**This skill does NOT compute the CORE-EEAT score or run vetoes** — that is the publish-gate role of [content-quality-auditor](../content-quality-auditor/SKILL.md). This skill works the writing/updating lever and hands off. It also does not score AI-citation/GEO readiness in isolation ([geo-content-optimizer](../geo-content-optimizer/SKILL.md)) or produce meta tags/schema as standalone artifacts ([serp-markup-builder](../serp-markup-builder/SKILL.md)).
 
 ## Mode Selector
 
@@ -50,7 +50,7 @@ Update this content to outrank [competitor URL]: [your URL]
 - **Reads**: the brief, target keywords, page intent, entity inputs, `memory/projections/narrative.json`, and `memory/projections/claims.json` (new); those same truth projections plus candidate URL/content, traffic/ranking history, publish/update dates, and competitor examples (refresh).
 - **Writes**: a user-facing content deliverable and, with permission, a dated artifact under `memory/content/content-writer/`; unresolved durable claims are submitted through `registry-events.py` as authorized `operation: propose` events.
 - **Done when**: (new) the draft satisfies target intent with natural keyword use, H1/H2 structure, meta description, one snippet-targetable block, and evidence-safe claims; (refresh) decay drivers and concrete updates are documented; both modes report `narrative_canon_id`, `narrative_canon_version`, `claims_projection_offset`, and `dependency_status`.
-- **Primary next skill**: [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md) to gate the draft or refreshed page before publishing.
+- **Primary next skill**: [content-quality-auditor](../content-quality-auditor/SKILL.md) to gate the draft or refreshed page before publishing.
 
 ### Handoff Summary
 
@@ -88,7 +88,7 @@ Both modes apply the 16 high-weight CORE-EEAT items in [references/instructions-
 
 ### Mode: refresh — nine steps
 
-1. **CORE-EEAT Quick Score** — estimate all 8 dimensions, prioritize red/yellow areas, and hand full scoring to [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md) when needed.
+1. **CORE-EEAT Quick Score** — estimate all 8 dimensions, prioritize red/yellow areas, and hand full scoring to [content-quality-auditor](../content-quality-auditor/SKILL.md) when needed.
 2. **Identify Refresh Candidates** — use age, dated claims, declining traffic, lost rankings, broken links, SERP shifts, and missing topics. **Numeric decline trigger**: flag a page when organic traffic drops more than 30% against its trailing baseline (the page's own median over the prior comparable window — e.g., last 28 days vs the 28 before, or YoY for seasonal pages). Mark the drop Measured from analytics, Estimated otherwise. See [references/content-decay-signals.md](references/content-decay-signals.md) for the severity thresholds and composite decay score.
 3. **Analyze Page-Level Decay** — compare 6-month-old vs current performance, keyword deltas, SERP intent, competitor updates, and the why-refresh rationale.
 4. **Define Updates Needed** — capture outdated elements, competitor/PAA gaps, SEO updates, GEO updates, links, images, sources, and dates.
@@ -130,7 +130,7 @@ Ask "Save these results for future sessions?" On yes, write a dated summary to `
 
 ## Next Best Skill
 
-- **Primary**: [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md) — gate the draft (new) or re-score the refreshed page (refresh) before publishing.
+- **Primary**: [content-quality-auditor](../content-quality-auditor/SKILL.md) — gate the draft (new) or re-score the refreshed page (refresh) before publishing.
 - **Conditional**: [geo-content-optimizer](../geo-content-optimizer/SKILL.md) when the draft is ready but AI-citation/GEO readiness is the open question.
 
 **Termination**: apply the global rules from [skill-contract.md §Termination rules](../../../references/skill-contract.md) — visited-set (if the recommended target already ran in this chain, STOP and report chain-complete), `max-depth: 3`, and ambiguity-stop (present options instead of auto-following). The chain terminates at the auditor's verdict: SHIP → stop; FIX → return here for edits; BLOCK → stop and surface the veto.

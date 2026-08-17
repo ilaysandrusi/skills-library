@@ -185,16 +185,16 @@ Co-load this skill with:
 - [`doca-bench`](../doca-bench/SKILL.md) (the parent tool —
   ALWAYS co-loaded; extensions only have value as
   plug-ins into `doca-bench`);
-- [`doca-version`](../../doca-version/SKILL.md) (the
+- [`doca-version`](../doca-version/SKILL.md) (the
   `DOCA_EXPERIMENTAL` surface is versioned with DOCA; the
   extension's `soversion` is the DOCA `soversion`; the
   four-way version match applies);
-- [`doca-gpunetio`](../../libs/doca-gpunetio/SKILL.md) when
+- [`doca-gpunetio`](../doca-gpunetio/SKILL.md) when
   the extension is GPU-side and uses GPUNetIO RX / TX
   queues like the reference exemplar (route the GPUNetIO
   semantics there, not here);
-- [`doca-debug`](../../doca-debug/SKILL.md) and
-  [`doca-setup`](../../doca-setup/SKILL.md) for the
+- [`doca-debug`](../doca-debug/SKILL.md) and
+  [`doca-setup`](../doca-setup/SKILL.md) for the
   env-side debug ladder (driver, firmware, CUDA toolkit,
   dynamic linker).
 
@@ -264,7 +264,7 @@ failures when it does not.
 - **DOCA GPUNetIO programming details.** When the
   extension is GPU-side (as the reference exemplar is),
   the GPUNetIO RX / TX queue semantics live in
-  [`doca-gpunetio`](../../libs/doca-gpunetio/SKILL.md);
+  [`doca-gpunetio`](../doca-gpunetio/SKILL.md);
   this skill cross-links rather than duplicates.
 - **CUDA toolchain installation guidance.** Route to the
   public NVIDIA CUDA Toolkit documentation on
@@ -280,7 +280,7 @@ When a `doca-bench-extension` question arrives:
 
 1. Confirm DOCA is installed AND `doca-bench` is reachable
    on the user's install — if not, route to
-   [`doca-setup`](../../doca-setup/SKILL.md);
+   [`doca-setup`](../doca-setup/SKILL.md);
 2. **Confirm none of `doca-bench`'s built-in modes covers
    the workload class** — if any of them does, route back
    to [`doca-bench TASKS.md ## configure`](../doca-bench/TASKS.md#configure)
@@ -305,35 +305,35 @@ contract from `tools/<X>/`:
   standalone CLI, they do not measure anything without the
   parent invoking them. Every question on this skill
   presupposes the parent.
-- [`doca-version`](../../doca-version/SKILL.md) — the
+- [`doca-version`](../doca-version/SKILL.md) — the
   `DOCA_EXPERIMENTAL` surface is versioned with DOCA; the
   extension's `soversion` matches the DOCA release per
   the shipped `meson.build`. The four-way version match
   applies; rebuilding the extension across DOCA upgrades
   is the rule, not the exception.
-- [`doca-gpunetio`](../../libs/doca-gpunetio/SKILL.md) —
+- [`doca-gpunetio`](../doca-gpunetio/SKILL.md) —
   when the extension is GPU-side and uses GPUNetIO RX /
   TX queues like the reference `doca_bench_cuda`. Route
   the GPUNetIO semantics there.
-- [`doca-setup`](../../doca-setup/SKILL.md) — DOCA install
+- [`doca-setup`](../doca-setup/SKILL.md) — DOCA install
   posture (does `doca-bench` exist? does the
   `doca_bench_cuda_impl` reference library exist? is the
   CUDA toolchain installed when needed?).
-- [`doca-debug`](../../doca-debug/SKILL.md) — the
+- [`doca-debug`](../doca-debug/SKILL.md) — the
   cross-cutting debug ladder for env-side issues (dynamic
   linker, library search path, CUDA driver / toolkit,
   firmware).
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — routing to the public DOCA Bench / DOCA GPUNetIO pages
   on `docs.nvidia.com` and the release notes for the
   documented extension lifecycle / discovery mechanism.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
   — the agent's detect → prefer → fall back → report
   contract for the structured helpers
   (`doca-env --json`, `doca-capability-snapshot`,
   `version-matrix.json`) the build / load preconditions
   rely on.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   — the canonical hardware-safety meta-policy that
   [`CAPABILITIES.md ## Safety policy`](CAPABILITIES.md#safety-policy)
   overlays. Extensions are external code loaded into

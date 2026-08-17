@@ -178,7 +178,7 @@ Do not claim the artifact was saved if validation fails. Do not write veto marke
 
 ## Next Best Skill
 
-- **FIX content:** [content-writer](../../implement/content-writer/SKILL.md)
-- **FIX technical evidence:** [technical-seo-checker](../../tune/technical-seo-checker/SKILL.md)
-- **Resolve claims:** [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md)
-- **Add domain context:** [domain-authority-auditor](../../evaluate/domain-authority-auditor/SKILL.md)
+- **FIX content:** [content-writer](../content-writer/SKILL.md)
+- **FIX technical evidence:** [technical-seo-checker](../technical-seo-checker/SKILL.md)
+- **Resolve claims:** [offer-claims-registry](../offer-claims-registry/SKILL.md)
+- **Add domain context:** [domain-authority-auditor](../domain-authority-auditor/SKILL.md)

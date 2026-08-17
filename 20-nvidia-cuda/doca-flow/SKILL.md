@@ -62,7 +62,7 @@ Flow express* on this version. **You MUST open
 [`TASKS.md ## configure`](TASKS.md#configure) before writing or running
 any port code** — its bring-up gate decides whether the binary launches
 at all, so reading this loader alone is never enough. If DOCA is not
-installed yet, route to [`doca-setup`](../../doca-setup/SKILL.md) first.
+installed yet, route to [`doca-setup`](../doca-setup/SKILL.md) first.
 
 ## Ground rule: verify every API name against the installed header
 
@@ -197,7 +197,7 @@ any language:
 
 Do **not** load for general DOCA orientation, "where do I find docs",
 install-layout, or non-Flow library questions — use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -219,7 +219,7 @@ files:
 
 The skill assumes DOCA is installed at `/opt/mellanox/doca` and the user can
 open a `doca_dev`. Installing DOCA, hugepages setup, and the EAL `dv_flow_en`
-devargs prep go through [`doca-setup`](../../doca-setup/SKILL.md); the
+devargs prep go through [`doca-setup`](../doca-setup/SKILL.md); the
 hugepages / devargs runtime prerequisites a binary needs *before* a Flow port
 starts are pinned in [`TASKS.md ## configure`](TASKS.md#configure) step 5.
 
@@ -232,7 +232,7 @@ source is the shipped C sample at
 `/opt/mellanox/doca/samples/doca_flow/<name>/` — the agent routes the
 user there and prescribes a minimum-diff edit via the modify-a-sample
 workflow in
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md) plus
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md) plus
 the Flow overrides in [`TASKS.md ## build`](TASKS.md#build), and builds
 any manifest *in the user's project* against the user's install, where
 `pkg-config --modversion doca-flow` is the source of truth.
@@ -247,23 +247,23 @@ any manifest *in the user's project* against the user's install, where
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   routing table for public DOCA docs and the on-disk layout of an
   installed package.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env prep, install
+- [`doca-setup`](../doca-setup/SKILL.md) — env prep, install
   verification, and the *no install yet* path via the NGC DOCA
   container.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA patterns shared by every library: the `pkg-config` +
   meson build pattern, the modify-a-shipped-sample first-app workflow,
   the universal lifecycle, the cross-library `DOCA_ERROR_*` taxonomy,
   and the program-side debug order. This skill layers Flow specifics
   on top.
-- [`doca-flow-tune`](../../tools/doca-flow-tune/SKILL.md) —
+- [`doca-flow-tune`](../doca-flow-tune/SKILL.md) —
   programmed-state inspection (read-only).
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   required overlay for card-mode flips (e.g. `mlxconfig` change from
   `SEPARATED_HOST` to `EMBEDDED_CPU`).
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting debug
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting debug
   ladder (install / version / build / link / runtime / program /
   driver).

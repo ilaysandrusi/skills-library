@@ -41,11 +41,11 @@ debug); open [`CAPABILITIES.md`](CAPABILITIES.md) when the
 question is *what can the host-side UROM API express* on this
 version + this BlueField + this UROM Service version. If the
 user has not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the user is
+[`doca-setup`](../doca-setup/SKILL.md) first; if the user is
 asking about the **DPU-side UROM Service** itself (deployment,
 container, operation lifecycle on the DPU side), that is a
 DIFFERENT artifact — route via
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services)
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services)
 to the public *DOCA UROM Service* guide. This skill is the
 **host-side library**; the UROM Service is the **DPU-side
 executor**, and they are a paired contract.
@@ -75,7 +75,7 @@ instance.
   + the service-deployed-and-running check in
   [`TASKS.md ## configure`](TASKS.md#configure) step 1, which
   routes service-side env questions to
-  [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+  [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 - **"Is this UROM operation type / atomic / collective supported
   on my device + this DOCA install + this UROM Service
   version?"** — worked example: *"does my BlueField support
@@ -103,7 +103,7 @@ instance.
   `doca_urom_service_get_plugins_list` on DOCA 3.x"*. Answered by the version-compatibility overlay in
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility),
   which cross-links the canonical detection chain in
-  [`doca-version`](../../doca-version/SKILL.md) and adds the
+  [`doca-version`](../doca-version/SKILL.md) and adds the
   UROM-specific *host library and DPU service versions must
   match* overlay.
 - **"What does this `DOCA_ERROR_*` from a `doca_urom_*` call
@@ -114,7 +114,7 @@ instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -129,7 +129,7 @@ the host CPU. It is *not* for NVIDIA developers contributing to
 DOCA UROM itself, nor is it the place to learn how to **deploy /
 operate the DOCA UROM Service** on the DPU side — that goes
 through the public *DOCA UROM Service* guide via
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 
 **Language scope.** DOCA UROM ships as a host-side C library
 with `pkg-config` module name `doca-urom`. The shipped samples
@@ -185,9 +185,9 @@ Do **not** load this skill for general DOCA orientation, install
 of DOCA itself, deployment / operation of the DOCA UROM Service
 on the DPU side (a separate artifact, with its own public guide
 reachable via
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services)),
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services)),
 or non-UROM library questions. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -227,7 +227,7 @@ they want to offload. It does not cover installing DOCA,
 deploying the UROM Service container on the BlueField, or
 bringing up RDMA / RoCE / IB transport between host and
 BlueField — those paths go through
-[`doca-setup`](../../doca-setup/SKILL.md), the public *DOCA
+[`doca-setup`](../doca-setup/SKILL.md), the public *DOCA
 UROM Service* guide, and [`doca-rdma`](../doca-rdma/SKILL.md)
 respectively.
 
@@ -243,7 +243,7 @@ contain — and pull requests should not add:
   agent's job is to route the user to those files and prescribe
   a minimum-diff modification on them via the universal
   modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the UROM-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **An MPI / UCX algorithm or collective implementation.** This
@@ -267,7 +267,7 @@ contain — and pull requests should not add:
 - **The DOCA UROM Service surface.** That service is a
   *separate artifact* with its own public guide; routing for
   its deployment / operation lives in
-  [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+  [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
   Conflating the library (this skill, host-side enqueue) with
   the service (DPU-side executor) is the single most common
   UROM first-app design error.
@@ -287,12 +287,12 @@ contain — and pull requests should not add:
    run, test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 DOCA version-handling rules (with the UROM overlay that the
 host library version and the DPU service version must match),
 [`doca-rdma`](../doca-rdma/SKILL.md) for the underlying RDMA
 transport substrate UROM offloads ride on top of, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public DOCA
 UROM library guide, the public DOCA UROM Service guide, or in
 the on-disk install layout" rather than "UROM
@@ -300,7 +300,7 @@ host-side-specific guidance".
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source
   and the on-disk layout of an installed DOCA package. The
   DOCA UROM library public guide is at
@@ -317,29 +317,29 @@ host-side-specific guidance".
   the right tool is `doca-rdma` directly — UROM adds the
   service-side contract that isn't worth its overhead for that
   case.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, BlueField setup, and the *I have no
   install yet* path with the public NGC DOCA container. This
   skill assumes its preconditions are satisfied AND that the
   DPU-side UROM Service is deployed and running on the
   BlueField.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. This skill's `## Version
   compatibility` cross-links the four-way match rule and adds
   the UROM-specific *host library and DPU service must agree on
   version* overlay.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect /
   prefer / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library:
   the canonical `pkg-config` + meson build pattern, the
   universal modify-a-shipped-sample first-app workflow, the
   universal Core-context lifecycle, the cross-library
   `DOCA_ERROR_*` taxonomy, and the program-side debug order.
   This skill layers UROM specifics on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). UROM-specific debug (DPU-side UROM
   Service not running / not reachable, host library + DPU
@@ -350,7 +350,7 @@ host-side-specific guidance".
 The **DOCA UROM Service** that runs on the DPU side is
 deliberately **not in scope** for this skill — it is a separate
 artifact with its own public guide, reachable through
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 Conflating the library and the service is the single most
 common UROM first-app design error: the agent must surface the
 library / service split explicitly whenever the question

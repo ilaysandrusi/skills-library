@@ -10,7 +10,7 @@ Read this file when the loader sent you here from
 capabilities (install, configure, build, modify, run, test, debug,
 use) see [TASKS.md](TASKS.md). For where the underlying public
 documentation and installed package paths live, defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) — do
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) — do
 not duplicate URLs or install paths in this file.
 
 ## Pattern overview
@@ -66,8 +66,8 @@ They are NOT interchangeable; pick one before writing any code:
 | --- | --- | --- |
 | `doca-mgmt` (this skill) | Programmatic point-in-time C API for *querying and modifying* device-level state | The fleet tool needs to read or write device-level state through code; the operation is request/response, not streaming |
 | [`doca-telemetry`](../doca-telemetry/SKILL.md) + [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md) | Streaming telemetry producer + exporter for continuous device metrics | The fleet tool needs continuous time-series metrics (counters, gauges, histograms) rather than a one-off query |
-| [`doca-caps`](../../tools/doca-caps/SKILL.md) | Read-only CLI snapshot of device capabilities | The operator wants an interactive look at what a device supports, not a programmatic interface in a fleet agent |
-| [`doca-bench`](../../tools/doca-bench/SKILL.md) | Live performance benchmark for DOCA workloads | The user wants to measure throughput / latency of a DOCA workload, not query or modify device state |
+| [`doca-caps`](../doca-caps/SKILL.md) | Read-only CLI snapshot of device capabilities | The operator wants an interactive look at what a device supports, not a programmatic interface in a fleet agent |
+| [`doca-bench`](../doca-bench/SKILL.md) | Live performance benchmark for DOCA workloads | The user wants to measure throughput / latency of a DOCA workload, not query or modify device state |
 
 **Decision rule for the agent.** If the user's intent is *"my
 fleet agent needs to programmatically read or write device-level
@@ -144,7 +144,7 @@ fields; the handle's `_destroy` is the final teardown.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-
 docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The doca-mgmt-specific overlay** is:
@@ -180,7 +180,7 @@ there; this skill does not duplicate it.
   from agent memory; instead it routes to the
   [DOCA SDK index](https://docs.nvidia.com/doca/sdk/) and
   through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for the up-to-date URL pattern. Where a *DOCA Management*
   page is published, it is the authoritative source for
   current opcodes, scopes, and supported sub-domains; until
@@ -206,7 +206,7 @@ indicate:
 | `DOCA_ERROR_IN_USE` | A sub-domain `_set` was called against a representor context that is already initialized for the same surface | Re-read the surface's documented re-init rule; some sub-domains require a destroy-then-recreate cycle on the representor context to change fields |
 | `DOCA_ERROR_EMPTY` | A field accessor `_get_*` was called on a handle whose field was never set or whose value the device has not yet returned | The agent surfaces this as a *not-yet-queried* condition, not as an error — call the matching `_get` against the context first |
 | `DOCA_ERROR_OPERATING_SYSTEM` | The underlying `fwctl` RPC `ioctl` failed on the host side | The host kernel's `fwctl` interface is not available, or the user does not have permission to issue it. Confirm root privileges; route to [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug) layer 5 (driver) for `fwctl`-side issues |
-| `DOCA_ERROR_IO_FAILED` | The `fwctl` RPC reached the firmware but the firmware rejected the command | The firmware version, the device state, or the command opcode is wrong. Re-confirm the four-way version match per [`## Version compatibility`](#version-compatibility); confirm the opcode against the vendor docs; if both check out, route through [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) for the device-state investigation |
+| `DOCA_ERROR_IO_FAILED` | The `fwctl` RPC reached the firmware but the firmware rejected the command | The firmware version, the device state, or the command opcode is wrong. Re-confirm the four-way version match per [`## Version compatibility`](#version-compatibility); confirm the opcode against the vendor docs; if both check out, route through [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) for the device-state investigation |
 | `DOCA_ERROR_NO_MEMORY` | The library could not allocate internal state during `_create` | Inspect host-side resource limits; this is rarely an application bug |
 | `DOCA_ERROR_DRIVER` | The layer below DOCA (mlx5 driver, firmware path the management plane traverses) reported a failure | Stop. This is not an API-spec problem. Capture `dmesg | tail` and `mlxconfig -d <pcie> q`; route to [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug) layer 7 |
 
@@ -251,7 +251,7 @@ see
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -297,7 +297,7 @@ For changes that touch hardware state below the doca-mgmt
 library itself — `mlxconfig`-class writes that bypass DOCA,
 NIC firmware burns, BlueField BFB reflash, host kernel boot
 parameter changes — the cross-cutting meta-policy in
-[`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+[`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
 applies without modification. The agent walks the
 hardware-safety ladder first whenever the recommended change
 falls into any of those classes, then the doca-mgmt overlay
@@ -313,18 +313,18 @@ elsewhere:
   the DOCA API** — out of scope. The doca-mgmt surface and
   `mlxconfig` partially overlap (both can affect device
   configuration); for `mlxconfig` proper, route to the
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   meta-policy and to the public Mellanox / NVIDIA firmware
   tools documentation reachable through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **Live telemetry streaming** — owned by
   [`doca-telemetry`](../doca-telemetry/SKILL.md) and
   [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md).
 - **Read-only capability snapshots from a CLI** — owned by
-  [`doca-caps`](../../tools/doca-caps/SKILL.md).
+  [`doca-caps`](../doca-caps/SKILL.md).
 - **Programmable congestion control** — owned by
   [`doca-pcc`](../doca-pcc/SKILL.md) and
-  [`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md).
+  [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md).
   doca-mgmt's `doca_mgmt_cc_global_status_*` surface is the
   *global enable/disable + protocol selection* control plane
   that *layers on* the deeper programmable-CC surface owned by
@@ -333,6 +333,6 @@ elsewhere:
   [`doca-programming-guide CAPABILITIES.md ## Error taxonomy`](../../doca-programming-guide/CAPABILITIES.md#error-taxonomy).
   This skill adds the mgmt overlay, not the taxonomy itself.
 - **Cross-cutting hardware-state change discipline** — owned
-  by [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md).
+  by [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md).
   This skill's safety overlay cross-links the meta-policy;
   it does not redefine the rules.

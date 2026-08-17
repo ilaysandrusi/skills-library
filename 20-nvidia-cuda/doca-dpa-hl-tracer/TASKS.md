@@ -7,7 +7,7 @@ window), `## run` (the capture → decode → render
 pipeline), `## test` (iterative tuning of mode / window /
 overhead), `## debug` (layered diagnosis), and `## use`
 (hand the captured trace back to the
-[`doca-dpa`](../../libs/doca-dpa/SKILL.md) debug loop). The
+[`doca-dpa`](../doca-dpa/SKILL.md) debug loop). The
 two routing-stub verbs (`build`, `modify`) are kept because
 the agent's task-verb contract is uniform across the
 bundle, and each carries a meaningful pointer to where the
@@ -17,7 +17,7 @@ This file is loaded by [`SKILL.md`](SKILL.md) after
 [`CAPABILITIES.md`](CAPABILITIES.md). It walks the agent
 through the documented invocations of `doca_dpa_hl_tracer`,
 the capture → decode → render workflow, and the hand-off
-back to the [`doca-dpa`](../../libs/doca-dpa/SKILL.md)
+back to the [`doca-dpa`](../doca-dpa/SKILL.md)
 debug ladder.
 
 ## install
@@ -35,7 +35,7 @@ operator-side install path:
    [`doca-version TASKS.md ## configure`](../../doca-version/TASKS.md#configure).
 2. **Confirm the DPACC compiler is installed and
    version-matched to the DOCA install.** Per the
-   [`doca-dpa`](../../libs/doca-dpa/SKILL.md) overlay,
+   [`doca-dpa`](../doca-dpa/SKILL.md) overlay,
    DPA-side images are built by DPACC and the host-side
    `doca-dpa` library is paired with a matching DPACC
    version; the tracer decodes against ELFs produced by
@@ -50,7 +50,7 @@ operator-side install path:
 4. **Confirm a DPA-side application image exists on
    disk.** The tracer decodes against the same ELF the
    host-side
-   [`doca-dpa`](../../libs/doca-dpa/SKILL.md) lifecycle
+   [`doca-dpa`](../doca-dpa/SKILL.md) lifecycle
    loaded into the `doca_dpa_app` context. The user must
    know where their DPA-side ELF lives (the build that
    DPACC produced).
@@ -158,7 +158,7 @@ Routing for nearby "build" questions:
   [`doca-dpa TASKS.md ## build`](../../libs/doca-dpa/TASKS.md#build)
   for the cross-side build pattern + the public DPACC
   guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for the DPACC-side build flags that enable the
   tracer-instrumentation hooks.
 - *"I want to extend the tracer with new event classes."* →
@@ -197,7 +197,7 @@ Routing for nearby "modify" questions:
   taxonomy itself is too coarse / too fine, the answer
   is *"this is the documented surface; for other
   granularity, use the raw cycle profiler"* — route via
-  [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools).
+  [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools).
 - *"Can I change the trace output format?"* → no; the
   binary trace format is documented and the human-
   readable log is its decoded view. If the user needs a
@@ -372,7 +372,7 @@ in order. The shape of the diagnosis:
    image's DPACC build flags enabled the
    tracer-instrumentation hooks per the public DPACC
    guide via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 4. **Capture-window.** Confirm the capture window
    actually overlapped the workload phase under
    investigation and that the workload had not already
@@ -396,7 +396,7 @@ in order. The shape of the diagnosis:
    triple is the common version mismatch failure.
 8. **Cross-cutting.** Cause is below DOCA — driver,
    firmware, BlueField mode, IOMMU, NUMA. Hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md)
+   [`doca-debug ## debug`](../doca-debug/SKILL.md)
    and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug).
 
@@ -421,7 +421,7 @@ debug session. The agent's hand-off:
    happened on the DPA"* signal.
 3. **Cross-reference with the cross-cutting debug
    ladder** in
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) when
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) when
    the captured events point at a layer below DOCA
    (driver, firmware, NUMA).
 4. **Retain the captured artifact set** for later
@@ -429,7 +429,7 @@ debug session. The agent's hand-off:
    tuple is unreplicable.
 
 The agent's rule: the tracer captures; the
-[`doca-dpa`](../../libs/doca-dpa/SKILL.md) library skill
+[`doca-dpa`](../doca-dpa/SKILL.md) library skill
 acts. Conflating the two is the most common DPA-debug
 first-touch error.
 
@@ -442,19 +442,19 @@ under this skill's name.
 - **DPA-side programming** (writing the DPA kernel,
   using `doca-dpa-comms`, using `doca-dpa-verbs`) →
   route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public DOCA DPA, DPACC, DPA-Comms, and
   DPA-Verbs guides + the shipped DPA samples. This
   tool traces those events; it does not redefine them.
 - **Raw cycle profiling of the DPA processor** →
   different surface, different tool. Route via
-  [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools).
+  [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools).
 - **Host-side `doca-dpa` API debugging** →
   [`doca-dpa TASKS.md ## debug`](../../libs/doca-dpa/TASKS.md#debug).
   The tracer's host-side error surface routes back here
   when the cause is host-side, not DPA-side.
 - **Production observability of DPA workloads** →
-  [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md).
+  [`doca-telemetry`](../doca-telemetry/SKILL.md).
   The tracer is a diagnostic capture surface, not a
   continuous production observability surface.
 
@@ -504,7 +504,7 @@ Three cross-cutting rules for this appendix:
   commands (`pkg-config --modversion doca-dpa`,
   `doca_caps --list-devs`, `dmesg`, `mlxconfig -d
   <bdf> q`) live in
-  [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+  [`doca-debug ## debug`](../doca-debug/SKILL.md) and
   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug);
   this appendix names only `doca_dpa_hl_tracer`-specific
   invocation classes.
@@ -521,7 +521,7 @@ and not buried in [`SKILL.md`](SKILL.md):
   actual run.
 - **Tracing is observation, not workload.** The DPA
   workload must already be up via
-  [`doca-dpa`](../../libs/doca-dpa/SKILL.md); the tracer
+  [`doca-dpa`](../doca-dpa/SKILL.md); the tracer
   does not drive the kernel.
 - **Capture is bounded.** Pick the file-size limit
   policy explicitly; the two failure modes
@@ -532,9 +532,9 @@ and not buried in [`SKILL.md`](SKILL.md):
 - This skill **assumes a healthy DOCA install** with
   the DPA Tools component, a paired DPACC, a BlueField
   with a visible DPA, and the
-  [`doca-dpa`](../../libs/doca-dpa/SKILL.md) host-side
+  [`doca-dpa`](../doca-dpa/SKILL.md) host-side
   lifecycle already started. If any of those is in
   doubt, route to
-  [`doca-setup`](../../doca-setup/SKILL.md) or
-  [`doca-dpa`](../../libs/doca-dpa/SKILL.md) before
+  [`doca-setup`](../doca-setup/SKILL.md) or
+  [`doca-dpa`](../doca-dpa/SKILL.md) before
   running anything else here.

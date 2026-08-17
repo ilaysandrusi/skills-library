@@ -76,9 +76,9 @@ server / client roles fit inside the single artifact*, *which DOCA
 version the tool ships in*, or *how to interpret the dumper / monitor
 / analyze / visualize outputs without fooling yourself*. If DOCA is
 not installed, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the user has
+[`doca-setup`](../doca-setup/SKILL.md) first; if the user has
 no running `doca-flow` application yet, route to
-[`doca-flow`](../../libs/doca-flow/SKILL.md) — flow-tune does not
+[`doca-flow`](../doca-flow/SKILL.md) — flow-tune does not
 create pipes, it observes and recommends on top of pipes the
 library already created.
 
@@ -164,7 +164,7 @@ It is **not** for users debugging the `doca_flow_tune` source code,
 **not** a substitute for the live public DOCA Flow Tune guide on
 `docs.nvidia.com`, **not** the right place to learn the
 `doca-flow` API (that audience belongs in
-[`doca-flow`](../../libs/doca-flow/SKILL.md)), and **not** the
+[`doca-flow`](../doca-flow/SKILL.md)), and **not** the
 right place for baseline *measurement* methodology — that belongs
 to [`doca-flow-perf`](../doca-flow-perf/SKILL.md).
 
@@ -188,9 +188,9 @@ tool is *configure JSON, run, read the outputs, propose minimum-
 diff changes to the surrounding `doca-flow` program in the
 program's own language*. For the `doca-flow` API the
 recommendations route back into, see
-[`doca-flow CAPABILITIES.md`](../../libs/doca-flow/CAPABILITIES.md);
+[`doca-flow CAPABILITIES.md`](../doca-flow/CAPABILITIES.md);
 for cross-language application patterns, see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 
 ## When to load this skill
 
@@ -225,9 +225,9 @@ Concretely:
 Do **not** load this skill for general DOCA orientation, Flow
 program API work, install, or pure measurement methodology.
 For those, route to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-flow`](../../libs/doca-flow/SKILL.md),
-[`doca-setup`](../../doca-setup/SKILL.md), or
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-flow`](../doca-flow/SKILL.md),
+[`doca-setup`](../doca-setup/SKILL.md), or
 [`doca-flow-perf`](../doca-flow-perf/SKILL.md).
 
 ## What this skill provides
@@ -245,7 +245,7 @@ companion files:
   software-only variants), the dumper / monitor / analyze /
   visualize output surfaces, the version overlay (this tool rides
   the `doca-flow` library version it observes; the canonical
-  rules live in [`doca-version`](../../doca-version/SKILL.md)),
+  rules live in [`doca-version`](../doca-version/SKILL.md)),
   the layered error taxonomy
   (config-syntax / attach-failed / pipe-not-found /
   measurement-unsound / recommendation-unactionable / version /
@@ -268,7 +268,7 @@ companion files:
 The skill assumes a host where DOCA is already installed (or the
 public NGC DOCA container is running) and a `doca-flow`
 application is already created and validated per the
-[`doca-flow`](../../libs/doca-flow/SKILL.md) skill. Without those
+[`doca-flow`](../doca-flow/SKILL.md) skill. Without those
 preconditions, the tune session has nothing to observe.
 
 ## What this skill deliberately does not ship
@@ -280,7 +280,7 @@ and pull requests should not add:
 - **Verbatim flag inventories, subcommand names, JSON config field
   names, or default endpoint paths quoted as the contract.** The
   public DOCA Flow Tune guide on `docs.nvidia.com` (reached via
-  [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools))
+  [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools))
   and the installed `--help` on the user's version are the joint
   source of truth; the shipped `flow_tune_cfg*.json` templates on
   the user's install are the second source for the JSON schema.
@@ -324,7 +324,7 @@ and pull requests should not add:
 
 ## Related skills
 
-- [`doca-flow`](../../libs/doca-flow/SKILL.md) — the **base
+- [`doca-flow`](../doca-flow/SKILL.md) — the **base
   library** whose pipeline this tool observes and tunes. The
   pipe / entry / rule surface flow-tune reports on is created by
   `doca-flow` program code; recommendations route back into that
@@ -345,24 +345,24 @@ and pull requests should not add:
   Flow rule management lives there; flow-tune's recommendations
   may be applied through that surface when the operator's
   control plane is remote.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — routing to the public DOCA Flow Tune page on `docs.nvidia.com`
   and the rest of the public DOCA documentation set.
-- [`doca-version`](../../doca-version/SKILL.md) — the canonical
+- [`doca-version`](../doca-version/SKILL.md) — the canonical
   version-detection chain, four-way match, NGC semantics, and
   headers-win-over-docs rule. The
   [`## Version compatibility`](CAPABILITIES.md#version-compatibility)
   overlay in this skill is a thin extension on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder. Flow-tune surfaces *its own* error taxonomy; when
   the cause turns out to be below DOCA (driver, firmware, NUMA),
   the tune taxonomy hands off to `doca-debug`.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
   — the bundle's detect → prefer → fall back → report contract.
   The Command appendix in [`TASKS.md`](TASKS.md) honors it.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, hugepages, NUMA, and the *I have no
   install yet* path with the public NGC DOCA container.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the cross-cutting hardware-safety meta-policy this skill's
   `## Safety policy` overlays.

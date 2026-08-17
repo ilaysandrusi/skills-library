@@ -6,7 +6,7 @@ names the recurring `doca_flow_dpa_perf`-class questions. Pick the
 pattern first, then drill into the H2 that owns the substance. For
 the *how* of executing each pattern, jump to [TASKS.md](TASKS.md).
 For the `doca-flow` API behind the pipeline this tool drives, see
-[`doca-flow CAPABILITIES.md`](../../libs/doca-flow/CAPABILITIES.md);
+[`doca-flow CAPABILITIES.md`](../doca-flow/CAPABILITIES.md);
 for the DPA programming model behind the device-side execution
 engine, see
 `doca-dpa CAPABILITIES.md`.
@@ -152,7 +152,7 @@ not invent one from prose.
 
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-
-docs rule, see [`doca-version`](../../doca-version/SKILL.md).
+docs rule, see [`doca-version`](../doca-version/SKILL.md).
 The body lives there; this skill does not duplicate it.
 
 **The `doca_flow_dpa_perf`-specific overlay** is:
@@ -267,7 +267,7 @@ agent should distinguish, in escalating order:
    before any further investigation.
 8. **Cross-cutting.** The cause is below DOCA — driver,
    firmware, NUMA, BlueField mode, hugepages. Routing:
-   hand off to [`doca-debug ## debug`](../../doca-debug/SKILL.md)
+   hand off to [`doca-debug ## debug`](../doca-debug/SKILL.md)
    and [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug);
    the tool's surface has reached its limit.
 
@@ -367,6 +367,6 @@ names beyond what those pages document — and re-verify against
 support means the *available* surface is install-specific
 within the *documented* surface. For the Flow library behind
 the pipeline this tool drives, see
-[`doca-flow`](../../libs/doca-flow/SKILL.md); for the DPA
+[`doca-flow`](../doca-flow/SKILL.md); for the DPA
 programming model behind the execution engine, see
 `doca-dpa`.

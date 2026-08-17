@@ -108,9 +108,9 @@ question:
 - For applications that **read the BlueField PHC directly** via a
   DOCA library (e.g. a Rivermax-based SMPTE workload), the build is
   the DOCA library's build — route to
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md)
   and the matching `libs/<library>` skill (e.g.
-  [`doca-rmax`](../../libs/doca-rmax/SKILL.md) for SMPTE).
+  [`doca-rmax`](../doca-rmax/SKILL.md) for SMPTE).
 - For applications that **read the OS system clock** that the
   host-side follower is disciplining, no DOCA-specific build is
   needed — the application uses standard `clock_gettime(2)` against
@@ -381,7 +381,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose | Command (class shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |

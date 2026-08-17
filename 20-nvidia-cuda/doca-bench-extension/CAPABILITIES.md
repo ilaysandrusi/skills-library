@@ -197,7 +197,7 @@ on a separate cadence. Specifically:
 
 This skill **does NOT** maintain its own version-handling
 rules in parallel with
-[`doca-version`](../../doca-version/SKILL.md). The agent
+[`doca-version`](../doca-version/SKILL.md). The agent
 treats `doca-version` as the source of truth for:
 
 - the four-way DOCA install match (host package, kernel
@@ -255,7 +255,7 @@ order; this section names them so the agent can route fast.
    architecture / ABI mismatch, missing CUDA runtime when
    the extension is GPU-side. Route the `ldd` /
    `LD_LIBRARY_PATH` / dynamic-linker side to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md).
+   [`doca-debug ## debug`](../doca-debug/SKILL.md).
 4. **Registration-mismatch.** The library loaded, but the
    parent cannot find the extension's expected entry
    points / version handshake. The agent's response is to
@@ -281,7 +281,7 @@ order; this section names them so the agent can route fast.
    was missed; the CUDA toolkit version is wrong; the
    firmware doesn't expose what the extension assumes.
 7. **Cross-cutting.** Hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug)
    for the env-side layers (driver, firmware, CUDA driver,
    GPU PCIe state, dynamic linker).
@@ -317,7 +317,7 @@ agent is expected to read each:
 
 For the cross-cutting host / device observability surfaces
 (dynamic linker, CUDA driver, PCIe, firmware), route to
-[`doca-debug ## Observability`](../../doca-debug/SKILL.md)
+[`doca-debug ## Observability`](../doca-debug/SKILL.md)
 and [`doca-setup TASKS.md ## test`](../../doca-setup/TASKS.md#test).
 
 The skill explicitly does NOT add a streaming-telemetry
@@ -401,7 +401,7 @@ The full procedural application of the safety overlay
 (when to abort, when to escalate, what to capture) lives
 in [`TASKS.md ## debug`](TASKS.md#debug) and
 [`TASKS.md ## test`](TASKS.md#test) plus the
-[`doca-debug`](../../doca-debug/SKILL.md) cross-cutting
+[`doca-debug`](../doca-debug/SKILL.md) cross-cutting
 debug ladder. This section names the rules that constrain
 those verbs for the bench-extension framework
 specifically.

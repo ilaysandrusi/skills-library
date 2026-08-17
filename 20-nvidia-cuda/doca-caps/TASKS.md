@@ -91,7 +91,7 @@ Routing for nearby "modify" questions:
   not contributors to it.
 - *"I need different *information* than `doca_caps` reports"* →
   route to the matching `libs/<library>` skill or to
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md)
   — the right answer is to call the underlying library API
   programmatically, not to modify the CLI wrapper.
 
@@ -130,7 +130,7 @@ sees"*:
    the source of truth, see
    [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
    for the documented capability families and
-   [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools)
+   [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools)
    for the public guide URL.
 
 When recording the run for downstream consumers (the *capability
@@ -232,7 +232,7 @@ layers in order. The shape of the diagnosis:
      confirm the scope is not the cause; check the install version
      against the device's first-supported DOCA release in the
      public release notes (route through
-     [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+     [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 4. **Library-capability mismatch.** Tool runs, capabilities printed,
    but the user's library question (*"why does library X say it
    doesn't support Y on my device?"*) goes beyond what
@@ -242,7 +242,7 @@ layers in order. The shape of the diagnosis:
 5. **Output schema confusion.** The user is reading the capability
    snapshot and a field name does not look right. Re-fetch the
    public **DOCA Capabilities Print Tool** page (via
-   [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools))
+   [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools))
    on the user's installed DOCA version and quote it; the field
    inventory in
    [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
@@ -304,7 +304,7 @@ out before the agent does any of them under this skill's name.
 - **streaming telemetry / live metrics** ⇒ not a `doca_caps`
   feature. The DOCA Telemetry Service (DTS) is the documented
   telemetry surface; routing belongs in
-  [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+  [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 
 ## Cross-cutting
 
@@ -325,5 +325,5 @@ here so they are visible at the point of action and not buried in
 - This skill **assumes a healthy DOCA install** (or the public NGC
   DOCA container) at the management endpoint. If the install is in
   doubt, route to
-  [`doca-setup`](../../doca-setup/SKILL.md) before running anything
+  [`doca-setup`](../doca-setup/SKILL.md) before running anything
   else here.

@@ -142,4 +142,4 @@ Ask to save results; if yes, write `memory/seo-geo/tune/on-page-seo-checker/YYYY
 
 ## Next Best Skill
 
-Primary: [content-writer](../../implement/content-writer/SKILL.md). Also consider [technical-seo-checker](../technical-seo-checker/SKILL.md), [serp-markup-builder](../../implement/serp-markup-builder/SKILL.md), or [site-structure-optimizer](../site-structure-optimizer/SKILL.md) by finding dimension.
+Primary: [content-writer](../content-writer/SKILL.md). Also consider [technical-seo-checker](../technical-seo-checker/SKILL.md), [serp-markup-builder](../serp-markup-builder/SKILL.md), or [site-structure-optimizer](../site-structure-optimizer/SKILL.md) by finding dimension.

@@ -127,7 +127,7 @@ Ask before writing. On approval, validate the complete v3 draft with `validate-a
 
 ## Next Best Skill
 
-- **Brief mismatch:** [brief-generator](../../target/brief-generator/SKILL.md)
-- **Claim fix:** [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md)
+- **Brief mismatch:** [brief-generator](../brief-generator/SKILL.md)
+- **Claim fix:** [offer-claims-registry](../offer-claims-registry/SKILL.md)
 - **Rights/terms:** [contract-helper](../contract-helper/SKILL.md)
 - **Approved asset amplification:** [content-amplifier](../content-amplifier/SKILL.md)

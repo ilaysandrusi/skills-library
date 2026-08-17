@@ -126,7 +126,7 @@ Persist only after explicit authorization to `memory/audits/email/YYYY-MM-DD-<to
 
 ## Next Best Skill
 
-- **Authentication/placement:** [deliverability-qa](../../setup/deliverability-qa/SKILL.md)
-- **Consent/suppression:** [consent-registry](../../../protocol/consent-registry/SKILL.md)
-- **Lifecycle:** [email-sequence-designer](../../nurture/email-sequence-designer/SKILL.md)
+- **Authentication/placement:** [deliverability-qa](../deliverability-qa/SKILL.md)
+- **Consent/suppression:** [consent-registry](../consent-registry/SKILL.md)
+- **Lifecycle:** [email-sequence-designer](../email-sequence-designer/SKILL.md)
 - **Experiment:** [send-experiment-designer](../send-experiment-designer/SKILL.md)

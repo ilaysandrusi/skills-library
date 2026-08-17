@@ -10,7 +10,7 @@ Read this file when the loader sent you here from
 verbs `configure / build / modify / run / test / debug`), jump to
 [TASKS.md](TASKS.md). For the canonical DOCA version-handling rules
 that this skill layers a Comch overlay on top of, see
-[`doca-version`](../../doca-version/SKILL.md).
+[`doca-version`](../doca-version/SKILL.md).
 
 ## Pattern overview
 
@@ -90,11 +90,11 @@ capability.
 
 ## Version compatibility
 
-For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
+For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
 
 **The Comch-specific overlay** is:
 
-- **The library was renamed in DOCA 2.5.** Old name: *DOCA Comm Channel*, `pkg-config` module `doca-comm-channel`. New name: *DOCA Comch*, `pkg-config` module `doca-comch`, URL slug `DOCA-Comch`. On installs ≥ 2.5 the agent must use the new name; on installs < 2.5 the agent must say so explicitly when the user's installed version (per [`doca-version TASKS.md ## configure`](../../doca-version/TASKS.md#configure)) predates the rename, and route the user to the legacy Comm Channel guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+- **The library was renamed in DOCA 2.5.** Old name: *DOCA Comm Channel*, `pkg-config` module `doca-comm-channel`. New name: *DOCA Comch*, `pkg-config` module `doca-comch`, URL slug `DOCA-Comch`. On installs ≥ 2.5 the agent must use the new name; on installs < 2.5 the agent must say so explicitly when the user's installed version (per [`doca-version TASKS.md ## configure`](../../doca-version/TASKS.md#configure)) predates the rename, and route the user to the legacy Comm Channel guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **`doca_comch_producer` / `doca_comch_consumer` are newer than the slow-path.** When the user reports *"the API I'm reading about isn't on my install"*, the first hypothesis is that the install pre-dates the fast-path. Confirm via `doca_comch_consumer_cap_is_supported(devinfo)` / `doca_comch_producer_cap_is_supported(devinfo)` per the cross-cutting cap-query rule in [`doca-version CAPABILITIES.md ## Observability`](../../doca-version/CAPABILITIES.md#observability).
 - **`doca-comch.pc` and `doca-common.pc` must both match `doca_caps --version`** at the four-way-match check (per [`doca-version CAPABILITIES.md ## Version compatibility`](../../doca-version/CAPABILITIES.md#version-compatibility)). A common partial-install pattern after a 2.4 → 2.5 upgrade is that `doca-comm-channel.pc` lingers alongside the new `doca-comch.pc`; the agent must surface that as a partial-install hazard, not as a *"both APIs are usable"* convenience.
 
@@ -175,8 +175,8 @@ setup:
 
 | Side | What must be true before `doca_comch_<role>_create` | How the agent verifies | Where to fix |
 | --- | --- | --- | --- |
-| DPU (server) | The host representor for the target PF / VF / SF is visible to the DPU process (`/sys/class/net/<rep>` exists, owned by a user the process can access; user must typically be in the `mlnx` group or run with sudo) | `ls /sys/class/net/`; `id` to confirm group membership | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side; do not modify the program |
-| Host (client) | The PCIe address of the BlueField is enumerable from the host (`lspci | grep Mellanox`) and the corresponding `doca_dev_rep` is opened against it | `lspci | grep Mellanox`; programmatic via `doca_dev_rep_list_create` + the per-device filter | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side; do not modify the program |
+| DPU (server) | The host representor for the target PF / VF / SF is visible to the DPU process (`/sys/class/net/<rep>` exists, owned by a user the process can access; user must typically be in the `mlnx` group or run with sudo) | `ls /sys/class/net/`; `id` to confirm group membership | [`doca-setup`](../doca-setup/SKILL.md) for the env-side; do not modify the program |
+| Host (client) | The PCIe address of the BlueField is enumerable from the host (`lspci | grep Mellanox`) and the corresponding `doca_dev_rep` is opened against it | `lspci | grep Mellanox`; programmatic via `doca_dev_rep_list_create` + the per-device filter | [`doca-setup`](../doca-setup/SKILL.md) for the env-side; do not modify the program |
 | Both | The DPU is in the correct mode for the host ↔ DPU pair the user expects (SmartNIC vs DPU vs switch) | `mlxconfig -d <pcie> q INTERNAL_CPU_MODEL` (sudo) | [`doca-setup CAPABILITIES.md ## Capabilities and modes`](../../doca-setup/CAPABILITIES.md#capabilities-and-modes) runtime-modes table |
 
 **Do not invent a "fallback transport" for Comch.** The Comch

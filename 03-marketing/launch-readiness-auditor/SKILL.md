@@ -121,7 +121,7 @@ Persist only after explicit authorization to `memory/audits/launch/YYYY-MM-DD-<t
 
 ## Next Best Skill
 
-- **Stage/commitment facts:** [launch-registry](../../../protocol/launch-registry/SKILL.md)
-- **Asset/technical fixes:** [launch-asset-packager](../../assemble/launch-asset-packager/SKILL.md)
+- **Stage/commitment facts:** [launch-registry](../launch-registry/SKILL.md)
+- **Asset/technical fixes:** [launch-asset-packager](../launch-asset-packager/SKILL.md)
 - **Execute approved plan:** [launch-day-conductor](../launch-day-conductor/SKILL.md)
-- **Outcome monitoring:** [launch-monitor](../../prove/launch-monitor/SKILL.md)
+- **Outcome monitoring:** [launch-monitor](../launch-monitor/SKILL.md)

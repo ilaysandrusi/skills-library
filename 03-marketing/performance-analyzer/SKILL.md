@@ -17,7 +17,7 @@ metadata: {"author": "aaron-he-zhu", "version": "19.2.0", "discipline": "influen
 
 Analyze influencer campaign performance past surface metrics — score results vs target/benchmark, rank platforms/creators/content, read engagement quality and sentiment, attribute conversions, and write ranked learnings.
 
-> **Cross-discipline (paid ads):** this is also the cross-channel **paid-ads** scorecard/anomaly lens — account-wide metric rollups vs target/benchmark that feed [ad-test-designer](../../../ad/orchestrate/ad-test-designer/SKILL.md) (what to test) and [paid-measurement-loop](../../../ad/scale/paid-measurement-loop/SKILL.md) (what to read back). Save paid runs under `memory/ad/performance-analyzer/`.
+> **Cross-discipline (paid ads):** this is also the cross-channel **paid-ads** scorecard/anomaly lens — account-wide metric rollups vs target/benchmark that feed [ad-test-designer](../ad-test-designer/SKILL.md) (what to test) and [paid-measurement-loop](../paid-measurement-loop/SKILL.md) (what to read back). Save paid runs under `memory/ad/performance-analyzer/`.
 
 ## Quick Start
 
@@ -33,7 +33,7 @@ Compare performance of these influencers from [campaign]: @handle1, @handle2, @h
 
 ## Skill Contract
 
-- **Reads**: campaign name and date range; native platform analytics (reach, views, engagement); influencer-supplied reports or screenshots; website/GA traffic and conversion data; sales and promo-code redemption data; targets and benchmarks if the user has them; per-creator performance baselines from `memory/creators/<handle-slug>.md` ([creator-registry](../../../protocol/creator-registry/SKILL.md) roster records) when present.
+- **Reads**: campaign name and date range; native platform analytics (reach, views, engagement); influencer-supplied reports or screenshots; website/GA traffic and conversion data; sales and promo-code redemption data; targets and benchmarks if the user has them; per-creator performance baselines from `memory/creators/<handle-slug>.md` ([creator-registry](../creator-registry/SKILL.md) roster records) when present.
 - **Writes**: a performance analysis to `memory/influencer/performance-analyzer/YYYY-MM-DD-<campaign>.md` covering core-metric scorecards, platform/influencer/content rankings, engagement-quality and sentiment reads, conversion attribution, and ranked learnings.
 - **Promotes**: durable facts (top-performing creators, winning formats, platform ROI splits, roster renew/drop calls) to `memory/hot-cache.md`.
 - **Done when**:
@@ -106,7 +106,7 @@ Before naming any creator/format/platform a real winner, clear the significance 
 - [CONNECTORS.md](../../../CONNECTORS.md) — verified free/keyless data recipes per connector category.
 - [measurement-protocol.md](../../../references/measurement-protocol.md) — preregistered readback windows, outcome unit, alpha, practical-effect boundary, multiplicity/sequential policy, guardrails, and decision owner. Report statistical and practical flags separately; use `experiment.py` for deterministic `Calculated` evidence, and never substitute a universal p-value/lift rule or attribute a business action to the helper.
 - The STAR benchmark at [references/star-benchmark.md](../../../references/star-benchmark.md) — scoring architecture when a structured score is needed.
-- Sibling skills: [roi-calculator](../roi-calculator/SKILL.md), [report-generator](../report-generator/SKILL.md), [fit-scorer](../../scout/fit-scorer/SKILL.md), [campaign-planner](../../target/campaign-planner/SKILL.md).
+- Sibling skills: [roi-calculator](../roi-calculator/SKILL.md), [report-generator](../report-generator/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md), [campaign-planner](../campaign-planner/SKILL.md).
 
 ## Next Best Skill
 
@@ -115,6 +115,6 @@ Before naming any creator/format/platform a real winner, clear the significance 
 **Alternates** (same Report family):
 
 - [report-generator](../report-generator/SKILL.md) — package the analysis into a formal stakeholder report.
-- [fit-scorer](../../scout/fit-scorer/SKILL.md) — feed proven performers back into creator scoring for the next round.
+- [fit-scorer](../fit-scorer/SKILL.md) — feed proven performers back into creator scoring for the next round.
 
 **Termination note**: Maintain a visited-set. If a skill has already been invoked this session, stop and report chain-complete rather than re-running it. Cap the chain at max-depth 3 hops; if results are inconclusive after that, surface the open loops to the user instead of continuing.

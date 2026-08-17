@@ -159,6 +159,6 @@ The audit request itself does not authorize hot-cache, candidate, or registry wr
 ## Next Best Skill
 
 - **Investigate links:** [offsite-signal-analyzer](../offsite-signal-analyzer/SKILL.md)
-- **Repair entity state:** [entity-registry](../../../protocol/entity-registry/SKILL.md)
-- **Verify technical/index state:** [technical-seo-checker](../../tune/technical-seo-checker/SKILL.md)
-- **Audit representative content:** [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md)
+- **Repair entity state:** [entity-registry](../entity-registry/SKILL.md)
+- **Verify technical/index state:** [technical-seo-checker](../technical-seo-checker/SKILL.md)
+- **Audit representative content:** [content-quality-auditor](../content-quality-auditor/SKILL.md)

@@ -35,11 +35,11 @@ Ads point at [URL] but the landing-page-experience rating is "below average" —
 
 **Expected output**: an ad↔page continuity punch list — each of the five checks (message-match, above-the-fold, speed, form friction, mobile) marked Pass / Partial / Fix with the specific gap and the one lever to hand off, plus the standard handoff summary for `memory/ad/landing-experience-checker/`.
 
-- **Reads**: the destination URL (or its pasted copy), the ad headlines/hooks that point at it, the promised offer/claim, ROAS profile (`direct-response|prospecting|incremental-profit`), and any `~~page speed` (PageSpeed/CrUX) read the user can run; accepted offer wording from the claims projection owned by [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md), when present, to check the page still honors the live offer.
+- **Reads**: the destination URL (or its pasted copy), the ad headlines/hooks that point at it, the promised offer/claim, ROAS profile (`direct-response|prospecting|incremental-profit`), and any `~~page speed` (PageSpeed/CrUX) read the user can run; accepted offer wording from the claims projection owned by [offer-claims-registry](../offer-claims-registry/SKILL.md), when present, to check the page still honors the live offer.
 - **Writes**: a user-facing continuity report (the five-check punch list) and a reusable handoff summary.
 - **Promotes**: confirmed message-match breaks and any page-experience blocker to `memory/hot-cache.md` and `memory/open-loops.md`; propose durable page-fix items as pending-decision, never as approved decisions.
 - **Done when**: all five checks are run and marked Pass / Partial / Fix, every Fix names the specific gap (not "improve the page"), and each failing check routes to the one sibling that owns the repair.
-- **Primary next skill**: [ad-account-auditor](../../activate/ad-account-auditor/SKILL.md) — the ROAS gate that scores the account and runs the launch go/no-go once the page is preflighted.
+- **Primary next skill**: [ad-account-auditor](../ad-account-auditor/SKILL.md) — the ROAS gate that scores the account and runs the launch go/no-go once the page is preflighted.
 
 ### Handoff Summary
 
@@ -74,14 +74,14 @@ On user confirmation, save to `memory/ad/landing-experience-checker/YYYY-MM-DD-<
 
 ## Reference Materials
 
-- [ROAS Benchmark](../../../references/roas-benchmark.md) — the framework; this skill preflights the **O (Offer)** message-match / Quality-Score relevance lever that [ad-account-auditor](../../activate/ad-account-auditor/SKILL.md) scores and O1/O2 gate
+- [ROAS Benchmark](../../../references/roas-benchmark.md) — the framework; this skill preflights the **O (Offer)** message-match / Quality-Score relevance lever that [ad-account-auditor](../ad-account-auditor/SKILL.md) scores and O1/O2 gate
 - [CONNECTORS.md](../../../CONNECTORS.md) — the keyless `~~page speed` (PageSpeed/CrUX) and `~~ad platform` recipes
 - [skill-contract.md](../../../references/skill-contract.md) — shared contract, handoff format, and Output Voice
 
 ## Next Best Skill
 
-- **Primary**: [ad-account-auditor](../../activate/ad-account-auditor/SKILL.md) — once the page passes preflight, score the account against ROAS and run the launch go/no-go (it computes the RQS and the O1/O2 vetoes; this skill does not).
-- **If a check is marked Fix (page copy, layout, or form)**: [landing-optimizer](../../../influencer/report/landing-optimizer/SKILL.md) — it owns the actual page repair; return here to re-preflight after the fix.
-- **If the live-offer wording on the page drifted from the registered offer**: [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md) — reconcile the canonical offer terms, then re-run the message-match check.
+- **Primary**: [ad-account-auditor](../ad-account-auditor/SKILL.md) — once the page passes preflight, score the account against ROAS and run the launch go/no-go (it computes the RQS and the O1/O2 vetoes; this skill does not).
+- **If a check is marked Fix (page copy, layout, or form)**: [landing-optimizer](../landing-optimizer/SKILL.md) — it owns the actual page repair; return here to re-preflight after the fix.
+- **If the live-offer wording on the page drifted from the registered offer**: [offer-claims-registry](../offer-claims-registry/SKILL.md) — reconcile the canonical offer terms, then re-run the message-match check.
 - **If neither ad copy nor page copy is available** (NEEDS_INPUT): stop and ask for the destination URL and the ad headlines; do not fabricate a continuity verdict.
 - Global visited-set / `max-depth: 3` termination contract from [skill-contract.md](../../../references/skill-contract.md) applies; stop once the page is auditor-ready or a Fix has been routed to its owner.

@@ -35,7 +35,7 @@ What content am I missing compared to my top 3 competitors?
 - **Writes**: a user-facing analysis and reusable summary.
 - **Promotes**: durable keyword priorities, competitor facts, and pending strategy decisions to `memory/hot-cache.md`, `memory/open-loops.md`, and `memory/research/`.
 - **Done when**: each prioritized gap names the competitor(s) that cover it and you don't; gaps are bucketed into Quick Wins / Strategic Builds / Long-term; and the deliverable includes a dated content calendar entry per Quick Win.
-- **Primary next skill**: [content-writer](../../implement/content-writer/SKILL.md) when the prioritized gap list is approved.
+- **Primary next skill**: [content-writer](../content-writer/SKILL.md) when the prioritized gap list is approved.
 
 ### Handoff Summary
 
@@ -114,4 +114,4 @@ Write path: `memory/research/content-gap-analysis/YYYY-MM-DD-<topic>.md`; promot
 
 ## Next Best Skill
 
-Primary: [content-writer](../../implement/content-writer/SKILL.md).
+Primary: [content-writer](../content-writer/SKILL.md).

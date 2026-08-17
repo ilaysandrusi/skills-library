@@ -30,7 +30,7 @@ based in [location], engagement above 4%, who have worked with brands like [bran
 
 ## Skill Contract
 
-- **Reads**: brand/product, niche or category, target platforms, follower range, engagement floor, location/language, audience demographics, exclusions; prior `entity-registry` brand profile and any `audience-mapper` output if present in memory; existing roster records under `memory/creators/` (dedupe the candidate pool against creators already rostered by [creator-registry](../../../protocol/creator-registry/SKILL.md)).
+- **Reads**: brand/product, niche or category, target platforms, follower range, engagement floor, location/language, audience demographics, exclusions; prior `entity-registry` brand profile and any `audience-mapper` output if present in memory; existing roster records under `memory/creators/` (dedupe the candidate pool against creators already rostered by [creator-registry](../creator-registry/SKILL.md)).
 - **Writes**: only with separate exact authorization, discovery results to `memory/influencer/influencer-discovery/YYYY-MM-DD-<topic>.md` — search criteria, candidate pool stats, per-influencer profiles, tiered shortlist with preliminary triage signals. Roster-worthy shortlisted creators (verified handles, contact path, audience stats) go as one-line updates to `memory/events/creators.ndjson` only via a separately authorized `operation: propose` request to `registry-events.py` — only `creator-registry` writes canonical records under `memory/creators/`.
 - **Promotes**: only with separate exact authorization, durable facts (top-tier handles, confirmed niche/platform mix, competitor-saturated creators) to `memory/hot-cache.md`.
 - **Done when**:
@@ -72,7 +72,7 @@ Each step has a fill-in block in [references/templates.md](references/templates.
 5. **Compile the discovery report.** Roll profiles into summary stats, by-platform and by-tier breakdowns, the three-tier shortlist, mix recommendation, and next steps. Step 5 template.
 6. **Add insights.** Note niche content trends, the competitive picture, and recommendations for future searches. Step 6 template.
 
-Return the discovery report inline. Saving the report, caching the shortlist, and submitting each roster-worthy creator as `operation: propose` are three separate operations and each requires exact authorization; without it, offer the eligible path and write nothing. After a vetted shortlist exists, hand it with dated evidence to [fit-scorer](../fit-scorer/SKILL.md). `fit-scorer` records the S1-S10 evidence read; [creator-content-auditor](../../activate/creator-content-auditor/SKILL.md) alone determines verified STAR vetoes and renders the gate verdict.
+Return the discovery report inline. Saving the report, caching the shortlist, and submitting each roster-worthy creator as `operation: propose` are three separate operations and each requires exact authorization; without it, offer the eligible path and write nothing. After a vetted shortlist exists, hand it with dated evidence to [fit-scorer](../fit-scorer/SKILL.md). `fit-scorer` records the S1-S10 evidence read; [creator-content-auditor](../creator-content-auditor/SKILL.md) alone determines verified STAR vetoes and renders the gate verdict.
 
 ## Compact Example
 
@@ -96,7 +96,7 @@ Return the discovery report inline. Saving the report, caching the shortlist, an
 **Primary**: [fit-scorer](../fit-scorer/SKILL.md) — score and rank the discovered candidates with weighted criteria before outreach.
 
 **Alternates (same influencer family)**:
-- [competitor-tracker](../../target/competitor-tracker/SKILL.md) — when discovery surfaced competitor-saturated creators and you want to map the competitive field first.
+- [competitor-tracker](../competitor-tracker/SKILL.md) — when discovery surfaced competitor-saturated creators and you want to map the competitive field first.
 - [audience-mapper](../audience-mapper/SKILL.md) — when the target audience is still fuzzy and criteria need sharpening before a re-search.
 
 **Termination**: Maintain a visited-set. If a skill has already been invoked this session, stop and report chain-complete rather than re-invoking it. Max chain depth is 3 hops from the originating request; stop and summarize when reached.
@@ -105,5 +105,5 @@ Return the discovery report inline. Saving the report, caching the shortlist, an
 
 - [audience-mapper](../audience-mapper/SKILL.md) - Define who to reach
 - [fit-scorer](../fit-scorer/SKILL.md) - Score and rank discovered influencers
-- [competitor-tracker](../../target/competitor-tracker/SKILL.md) - Find competitor influencers
-- [outreach-manager](../../activate/outreach-manager/SKILL.md) - Contact discovered influencers
+- [competitor-tracker](../competitor-tracker/SKILL.md) - Find competitor influencers
+- [outreach-manager](../outreach-manager/SKILL.md) - Contact discovered influencers

@@ -48,12 +48,12 @@ differs from the GPI sister tool on the same physical
 operation*, or *how to interpret the half-iter / full-iter
 / CUDA-side usec output and the median / p99 / jitter
 characterization*. If DOCA is not installed yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the
+[`doca-setup`](../doca-setup/SKILL.md) first; if the
 user is still deciding between GPUNetIO and GPI as a
 programming surface, the picture in
 [`../../libs/doca-gpunetio/CAPABILITIES.md#capabilities-and-modes`](../../libs/doca-gpunetio/CAPABILITIES.md#capabilities-and-modes)
 and
-[`../../libs/doca-gpi/CAPABILITIES.md#capabilities-and-modes`](../../libs/doca-gpi/CAPABILITIES.md#capabilities-and-modes)
+[`../doca-gpi/CAPABILITIES.md#capabilities-and-modes`](../doca-gpi/CAPABILITIES.md#capabilities-and-modes)
 is the first stop.
 
 ## Example questions this skill answers well
@@ -82,7 +82,7 @@ instance.
   rule in
   [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
   + the cross-link to the GPI library skill
-  [`../../libs/doca-gpi/CAPABILITIES.md`](../../libs/doca-gpi/CAPABILITIES.md)
+  [`../doca-gpi/CAPABILITIES.md`](../doca-gpi/CAPABILITIES.md)
   (note: `doca/tools/` ships no GPI `ib_write_lat`
   benchmark binary — GPI is a programming surface, not a
   shipped benchmark tool).
@@ -143,7 +143,7 @@ install and GPU-NIC pair. Concretely:
 
 It is **not** for users debugging the `doca-gpunetio`
 library itself (route to
-[`../../libs/doca-gpunetio/SKILL.md`](../../libs/doca-gpunetio/SKILL.md)),
+[`../doca-gpunetio/SKILL.md`](../doca-gpunetio/SKILL.md)),
 and **not** a substitute for the `perftest` upstream
 `ib_write_lat` (which measures CPU-initiated WRITE
 latency).
@@ -180,7 +180,7 @@ pair on each host's PCIe topology. Concretely:
   for a real-time / control-loop workload class.
 - Deciding whether the GPUNetIO path is the right runtime
   surface for a class of workload vs the GPI programming
-  surface (the [`doca-gpi`](../../libs/doca-gpi/SKILL.md)
+  surface (the [`doca-gpi`](../doca-gpi/SKILL.md)
   library — `doca/tools/` ships no GPI benchmark binary)
   or the classic CPU-initiated `perftest` path.
 - Capturing a documented baseline (build + invocation +
@@ -192,9 +192,9 @@ pair on each host's PCIe topology. Concretely:
 
 Do **not** load this skill for general DOCA orientation,
 library API work, or installation. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`../../libs/doca-gpunetio/SKILL.md`](../../libs/doca-gpunetio/SKILL.md),
-or [`doca-setup`](../../doca-setup/SKILL.md). Do not load
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`../doca-gpunetio/SKILL.md`](../doca-gpunetio/SKILL.md),
+or [`doca-setup`](../doca-setup/SKILL.md). Do not load
 it for *application-level* real-time deadline analysis —
 this benchmark measures the WR latency through GPUNetIO,
 not the user's full pipeline.
@@ -274,7 +274,7 @@ pull requests should not add:
 
 ## Related skills
 
-- [`../../libs/doca-gpunetio/SKILL.md`](../../libs/doca-gpunetio/SKILL.md) —
+- [`../doca-gpunetio/SKILL.md`](../doca-gpunetio/SKILL.md) —
   the library this tool wraps. The per-GPU `doca_gpu`
   context, the GPU-visible RDMA handles, the CUDA-side
   persistent-kernel pattern, the dual capability-
@@ -282,13 +282,13 @@ pull requests should not add:
   `cudaGetDeviceProperties`), and the env preconditions
   (`nvidia_peermem` loaded, CUDA buffers registered
   with DOCA) live there.
-- [`../../libs/doca-rdma/SKILL.md`](../../libs/doca-rdma/SKILL.md) —
+- [`../doca-rdma/SKILL.md`](../doca-rdma/SKILL.md) —
   the underlying RDMA library. The RDMA queue this tool
   binds is created and connected via `doca-rdma`; the
   queue lifecycle, the transport type (RC vs UC vs UD),
   the permission matrix, and the connection method are
   owned there.
-- [`../../libs/doca-verbs/SKILL.md`](../../libs/doca-verbs/SKILL.md) —
+- [`../doca-verbs/SKILL.md`](../doca-verbs/SKILL.md) —
   the raw-verbs escape hatch beneath `doca-rdma` /
   `doca-gpunetio`. This tool stays on the higher-level
   surfaces.
@@ -297,7 +297,7 @@ pull requests should not add:
   framework. Same physical operation; different metric
   class (latency vs BW). The two together carry the full
   GPUNetIO-side latency / throughput picture.
-- [`doca-gpi`](../../libs/doca-gpi/SKILL.md) — the GPI
+- [`doca-gpi`](../doca-gpi/SKILL.md) — the GPI
   programming surface (CUDA-kernel-initiated RDMA). The
   alternative runtime framework for the same physical
   operation; `doca/tools/` ships no GPI `ib_write_lat`
@@ -307,18 +307,18 @@ pull requests should not add:
   [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
   is the decision aid; the agent's job is to teach when
   to pick which.
-- [`doca-version`](../../doca-version/SKILL.md) — the
+- [`doca-version`](../doca-version/SKILL.md) — the
   canonical version-detection chain, four-way match
   rule. The `## Version compatibility` section here is a
   thin overlay.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env
+- [`doca-setup`](../doca-setup/SKILL.md) — env
   preparation, install verification, GPU + CUDA Toolkit
   pairing, `nvidia_peermem` load, hugepages, NUMA, and
   the NGC DOCA container path.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   routing to the public DOCA documentation set and the
   CUDA Toolkit pointer.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the
+- [`doca-debug`](../doca-debug/SKILL.md) — the
   cross-cutting debug ladder.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the bundle-wide hardware-safety meta-policy.

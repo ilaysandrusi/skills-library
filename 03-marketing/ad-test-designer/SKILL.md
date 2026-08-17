@@ -36,7 +36,7 @@ Here's my finished test results CSV (variant, sessions, conversions). Is the win
 - **Writes**: a user-facing test-design or read-out doc plus a `### Handoff Summary`.
 - **Promotes**: the chosen hypothesis, design parameters, calculated read-out, and any explicitly owner-approved action (ask before writing memory).
 - **Done when**: a falsifiable hypothesis is stated; the matrix isolates one variable per variant; baseline, MDE, alpha, power, multiplicity/sequential policy, duration, and guardrails are declared; and a read-out reports effect/interval/statistical/practical flags with `Calculated` provenance. Without a precommitted action rule and owner, return `decision: UNDECIDED`.
-- **Primary next skill**: [ad-creative-builder](../ad-creative-builder/SKILL.md) (to produce the winning direction) or [paid-measurement-loop](../../scale/paid-measurement-loop/SKILL.md).
+- **Primary next skill**: [ad-creative-builder](../ad-creative-builder/SKILL.md) (to produce the winning direction) or [paid-measurement-loop](../paid-measurement-loop/SKILL.md).
 
 ### Handoff Summary
 
@@ -87,4 +87,4 @@ After delivering, ask "Save this test design / read-out for future sessions?" If
 
 ## Next Best Skill
 
-Primary: [ad-creative-builder](../ad-creative-builder/SKILL.md) after the decision owner approves a direction, or [paid-measurement-loop](../../scale/paid-measurement-loop/SKILL.md) to read an approved shipped change over a fixed window. If the action rule or owner is missing, stop with `decision: UNDECIDED`; do not silently convert statistical flags into an action.
+Primary: [ad-creative-builder](../ad-creative-builder/SKILL.md) after the decision owner approves a direction, or [paid-measurement-loop](../paid-measurement-loop/SKILL.md) to read an approved shipped change over a fixed window. If the action rule or owner is missing, stop with `decision: UNDECIDED`; do not silently convert statistical flags into an action.

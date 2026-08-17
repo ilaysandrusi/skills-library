@@ -29,7 +29,7 @@ Pick the mode from the request; run both in sequence when the user wants the ful
 
 Default when unstated: infer from the noun in the request (title/description/OG → `meta`; JSON-LD/rich result → `schema`). If both are named, run `meta` then `schema`. This skill computes no framework score and runs no vetoes — only the `content-quality-auditor` gate does that.
 
-**Scope guard** — this skill does NOT: write body copy or on-page content (→ [content-writer](../content-writer/SKILL.md)); diagnose crawl, index, canonicalization conflicts, or Core Web Vitals (→ [technical-seo-checker](../../tune/technical-seo-checker/SKILL.md)); or produce the publish-readiness verdict/score (→ [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md)).
+**Scope guard** — this skill does NOT: write body copy or on-page content (→ [content-writer](../content-writer/SKILL.md)); diagnose crawl, index, canonicalization conflicts, or Core Web Vitals (→ [technical-seo-checker](../technical-seo-checker/SKILL.md)); or produce the publish-readiness verdict/score (→ [content-quality-auditor](../content-quality-auditor/SKILL.md)).
 
 ## Quick Start
 
@@ -52,7 +52,7 @@ Output expectation: `meta` returns three title and three description options plu
 - **Promotes**: approved angles, messaging choices, chosen schema types, missing evidence, and publish blockers to `memory/hot-cache.md` and `memory/open-loops.md`; propose durable decisions as `pending-decision` items (never write `decisions.md` directly).
 - **Done when** (mode `meta`): three titles and three descriptions are within character limits with the keyword front-loaded, a complete OG/Twitter/canonical/robots block is included, and C01 (Intent Alignment) + C02 (Direct Answer) both pass.
 - **Done when** (mode `schema`): the JSON-LD carries all required properties for the chosen type and validates with no errors, every property maps to visible page content (or is a labeled placeholder), and placement + a validation step are stated.
-- **Primary next skill**: [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md) once the head markup is ready for the publish-readiness gate.
+- **Primary next skill**: [content-quality-auditor](../content-quality-auditor/SKILL.md) once the head markup is ready for the publish-readiness gate.
 
 ### Handoff Summary
 
@@ -125,5 +125,5 @@ On user confirmation, save to `memory/content/YYYY-MM-DD-<topic>.md` — see [Sk
 
 Global termination applies (visited-set, `max-depth: 3`, ambiguity-stop). Recommend one primary move, then stop.
 
-- **Primary**: [content-quality-auditor](../../tune/content-quality-auditor/SKILL.md) — run the publish-readiness gate on the finished head markup.
+- **Primary**: [content-quality-auditor](../content-quality-auditor/SKILL.md) — run the publish-readiness gate on the finished head markup.
 - **Conditional**: if only one mode ran and the user wants the full SERP package, run the sibling mode (`meta`↔`schema`) in this same skill, then hand off to the auditor. If the auditor was already visited in this chain, STOP and report chain-complete rather than re-invoking it.

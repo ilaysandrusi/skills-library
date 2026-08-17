@@ -93,10 +93,10 @@ container, open [`TASKS.md`](TASKS.md) and start at
 of service is Firefly and what PTP roles / profiles does it speak*,
 start at [`CAPABILITIES.md`](CAPABILITIES.md). If DOCA is not installed
 on the BlueField yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user's
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user's
 real question is *"I have a Rivermax SMPTE workload and the docs say I
 need PTP"*, the right pairing is this skill **plus**
-[`doca-rmax`](../../libs/doca-rmax/SKILL.md) — Firefly disciplines
+[`doca-rmax`](../doca-rmax/SKILL.md) — Firefly disciplines
 the PHC; Rivermax reads the disciplined time.
 
 ## Example questions this skill answers well
@@ -140,7 +140,7 @@ worked example is one instance.
   + the pairing step in
   [`TASKS.md ## configure`](TASKS.md#configure), which routes the
   Rivermax side to
-  [`doca-rmax`](../../libs/doca-rmax/SKILL.md) and refuses to
+  [`doca-rmax`](../doca-rmax/SKILL.md) and refuses to
   collapse the two services into one.
 - **"My Firefly container starts but PTP never reaches
   `SLAVE` / `MASTER` state — was it role, domain, profile, or
@@ -167,7 +167,7 @@ database workload that depends on it.
 It is **not** for NVIDIA developers contributing to Firefly itself,
 and it is **not** a programming guide for *building applications on
 top of* DOCA libraries (that is
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md)
 plus the matching `libs/<library>` skill). Firefly is a **service**,
 not a library: the operator runs a container and configures PTP via
 the documented config surface; they do not link against a
@@ -223,8 +223,8 @@ work** on a BlueField where DOCA is already installed. Concretely:
 Do **not** load this skill for general DOCA orientation, install of
 DOCA itself, library-API questions, or non-PTP time topics. For
 those, route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-setup`](../../doca-setup/SKILL.md), or the matching
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-setup`](../doca-setup/SKILL.md), or the matching
 `libs/<library>` skill.
 
 ## What this skill provides
@@ -251,7 +251,7 @@ The skill assumes a BlueField where DOCA is already installed and
 the operator has the privileges the public Firefly Service Guide
 expects to pull, run, and configure containers on BlueField Arm.
 It does not cover installing DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -271,7 +271,7 @@ and pull requests should not add:
 - **Container image names, tags, or registry paths.** The
   authoritative image source is the public DOCA Firefly Service
   Guide reachable through
-  [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services);
+  [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services);
   Firefly's image tag is version-bound and changes between DOCA
   releases. Inventing or memorizing a tag is the canonical
   hallucination failure mode for a service skill.
@@ -300,32 +300,32 @@ and pull requests should not add:
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — the routing table to the public DOCA Firefly Service Guide and
   the rest of the public DOCA documentation set. The Firefly URL is
   listed under
-  [`## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation and
+  [`## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation and
   install verification on the BlueField where the Firefly container
   will run, including the *I have no install yet* path via the
   public NGC DOCA container. This skill assumes its preconditions
   are satisfied on BlueField Arm.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical DOCA
+- [`doca-version`](../doca-version/SKILL.md) — canonical DOCA
   version-handling rules. Firefly's container tag is version-bound;
   this skill's `## Version compatibility` cross-links the four-way
   match rule and adds the container-tag-lags-host-package overlay.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect / prefer /
   fall back / report). The Command appendix in [TASKS.md](TASKS.md)
   honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md)
   — general DOCA patterns. Firefly is service-shaped not library-
   shaped, so the build / modify / first-app pattern there does not
   apply directly, but the cross-library debug discipline (frontend-
   before-backend, env-before-program) remains useful when Firefly
   reports an error that originated in the container runtime or in
   a DOCA library it called.
-- [`doca-rmax`](../../libs/doca-rmax/SKILL.md) — the canonical
+- [`doca-rmax`](../doca-rmax/SKILL.md) — the canonical
   paired workload. SMPTE ST 2110 Rivermax streams depend on a
   Firefly-disciplined PHC; Firefly is the time-source side and
   Rivermax is the timing-precise data-plane side. The two skills
@@ -338,7 +338,7 @@ and pull requests should not add:
   env preconditions, config schema) layered on top of a different
   per-service domain (DMS = device management via gNMI / gNOI;
   Firefly = time synchronization via PTP).
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). Firefly-specific debug (PTP not syncing,
   host clock not following, jitter past spec) overlays on top of

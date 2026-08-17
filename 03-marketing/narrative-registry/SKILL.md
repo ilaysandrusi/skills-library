@@ -81,7 +81,7 @@ Capability values never enter request JSON/files/logs. If host capability or the
 
 ## Next Best Skill
 
-- **Author system:** [message-system-architect](../../narrative/architect/message-system-architect/SKILL.md)
-- **Verify truth:** [positioning-truth-tracer](../../narrative/trace/positioning-truth-tracer/SKILL.md)
-- **Cascade:** [narrative-cascade-planner](../../narrative/land/narrative-cascade-planner/SKILL.md)
-- **Audit profile:** [narrative-quality-auditor](../../narrative/evaluate/narrative-quality-auditor/SKILL.md)
+- **Author system:** [message-system-architect](../message-system-architect/SKILL.md)
+- **Verify truth:** [positioning-truth-tracer](../positioning-truth-tracer/SKILL.md)
+- **Cascade:** [narrative-cascade-planner](../narrative-cascade-planner/SKILL.md)
+- **Audit profile:** [narrative-quality-auditor](../narrative-quality-auditor/SKILL.md)

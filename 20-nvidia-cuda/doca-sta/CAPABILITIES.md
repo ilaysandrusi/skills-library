@@ -11,7 +11,7 @@ Read this file when the loader sent you here from
 verbs `configure / modify / build / run / test / debug`), jump to
 [TASKS.md](TASKS.md). For the canonical DOCA version-handling
 rules that this skill layers a STA overlay on top of, see
-[`doca-version`](../../doca-version/SKILL.md). For the RDMA
+[`doca-version`](../doca-version/SKILL.md). For the RDMA
 substrate that NVMe-over-RDMA transport lands on, see
 [`doca-rdma`](../doca-rdma/SKILL.md). For the steering side
 that decides which NVMe-oF packets land on which STA-managed
@@ -117,7 +117,7 @@ The agent SHOULD verify the exact spelling of these
 shipped on the user's install
 (`$(pkg-config --variable=includedir doca-common) doca_sta*.h`)
 or in the public DOCA STA guide reachable via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 Do **not** invent a multi-query `doca_sta_cap_*` family — only
 `doca_sta_cap_is_supported` exists; everything else is a
 `doca_sta_get_max_*` getter.
@@ -137,7 +137,7 @@ values.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The STA-specific overlay** is:
@@ -257,8 +257,8 @@ DOCA STA setup:
 
 | Precondition | What must be true before `doca_ctx_start()` | How the agent verifies | Where to fix |
 | --- | --- | --- | --- |
-| Substrate library present | STA's transport is RDMA-only: `doca-rdma.pc` resolves and `doca_rdma_cap_*` reports a non-empty surface on the chosen device | `pkg-config --modversion doca-rdma`; the matching cap-query call as documented in [`doca-rdma CAPABILITIES.md ## Capabilities and modes`](../doca-rdma/CAPABILITIES.md#capabilities-and-modes); `mlxconfig -d <pcie> q` for the firmware view | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side; do not modify the program |
-| Device access | The `doca_dev` was opened against a BlueField PF / SF the user has permission to use (typically requires sudo or the appropriate group membership) | `id` for group membership; the open call failing with `DOCA_ERROR_NOT_PERMITTED` is the runtime symptom | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side; do not modify the program |
+| Substrate library present | STA's transport is RDMA-only: `doca-rdma.pc` resolves and `doca_rdma_cap_*` reports a non-empty surface on the chosen device | `pkg-config --modversion doca-rdma`; the matching cap-query call as documented in [`doca-rdma CAPABILITIES.md ## Capabilities and modes`](../doca-rdma/CAPABILITIES.md#capabilities-and-modes); `mlxconfig -d <pcie> q` for the firmware view | [`doca-setup`](../doca-setup/SKILL.md) for the env-side; do not modify the program |
+| Device access | The `doca_dev` was opened against a BlueField PF / SF the user has permission to use (typically requires sudo or the appropriate group membership) | `id` for group membership; the open call failing with `DOCA_ERROR_NOT_PERMITTED` is the runtime symptom | [`doca-setup`](../doca-setup/SKILL.md) for the env-side; do not modify the program |
 | NVMe-oF traffic actually reaches the STA-managed queue | Either a DOCA Flow rule (or the env-side equivalent) steers matching NVMe-oF 5-tuples to this STA instance's queues | Inspect the Flow rule programmed for this NVMe-oF connection (or the absence of one); confirm via the steering-rule listing on the user's setup | [`doca-flow`](../doca-flow/SKILL.md) for the steering side; do not invent a `doca_sta_*` steering call |
 
 **The initiator side is out of scope.** The agent must surface —
