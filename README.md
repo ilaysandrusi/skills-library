@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6247
+**סה״כ סקילים:** 6252
 
 ## איך ללמוד
 
@@ -17,13 +17,13 @@
 | קטגוריה | סקילים | תיאור |
 |---|---|---|
 | [כתיבה וניקוי טקסט](./01-copy-writing/) | 99 | עצירת סלופ AI, קופי, הנחיות כתיבה |
-| [עיצוב וממשק](./02-design-ui/) | 109 | UI/UX, פרונט, נגישות, גלילה |
+| [עיצוב וממשק](./02-design-ui/) | 117 | UI/UX, פרונט, נגישות, גלילה |
 | [שיווק ותוכן](./03-marketing/) | 537 | חבילת Corey Haines וסקילים שיווקיים |
 | [Remotion (וידאו מקוד)](./04-remotion/) | 12 | יצירת וידאו עם React / Remotion |
 | [פיתוח ודיבאג](./05-development/) | 432 | Superpowers, בדיקות, תוכניות עבודה |
 | [מסמכים](./06-documents/) | 34 | PDF, Word, PowerPoint, Excel |
 | [Supabase / Postgres](./07-supabase/) | 2 | עבודה עם מסדי נתונים של Supabase |
-| [Context Engineering](./08-context-engineering/) | 160 | ניהול קונטקסט, סוכני משנה, חשיבה |
+| [Context Engineering](./08-context-engineering/) | 157 | ניהול קונטקסט, סוכני משנה, חשיבה |
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 4 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 146 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |

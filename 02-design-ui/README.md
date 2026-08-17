@@ -2,7 +2,7 @@
 
 UI/UX, פרונט, נגישות, גלילה
 
-**מספר סקילים:** 109
+**מספר סקילים:** 117
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -72,6 +72,14 @@ UI/UX, פרונט, נגישות, גלילה
 | [`motion-lexicon`](./motion-lexicon/SKILL.md) | Design, build, compose, implement, review, and contribute polished product interfaces with Motion Lexicon components and motion primitives. Use this skill when a user asks for a complete React page, landing page, dashboard, settings screen, or product surface in the Motion Lexicon visual language; |
 | [`output-skill`](./output-skill/SKILL.md) | Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output. |
 | [`performance`](./performance/SKILL.md) | Optimize web performance for faster loading and better user experience. Use when asked to "speed up my site", "optimize performance", "reduce load time", "fix slow loading", "improve page speed", or "performance audit". |
+| [`platform-design-android`](./platform-design-android/SKILL.md) | Material Design 3 and Android platform guidelines. Use when building Android apps with Jetpack Compose or XML layouts, implementing Material You, navigation, or accessibility. Triggers on tasks involving Android UI, Compose components, dynamic color, or Material Design compliance. |
+| [`platform-design-ios`](./platform-design-ios/SKILL.md) | Apple Human Interface Guidelines for iPhone. Use when building, reviewing, or refactoring SwiftUI/UIKit interfaces for iOS. Triggers on tasks involving iPhone UI, iOS components, accessibility, Dynamic Type, Dark Mode, or HIG compliance. |
+| [`platform-design-ipados`](./platform-design-ipados/SKILL.md) | Apple Human Interface Guidelines for iPad. Use when building iPad-optimized interfaces, implementing multitasking, pointer support, keyboard shortcuts, or responsive layouts. Triggers on tasks involving iPad, Split View, Stage Manager, sidebar navigation, or trackpad support. |
+| [`platform-design-macos`](./platform-design-macos/SKILL.md) | Apple Human Interface Guidelines for Mac. Use when building macOS apps with SwiftUI or AppKit, implementing menu bars, toolbars, window management, or keyboard shortcuts. Triggers on tasks involving Mac UI, desktop apps, or Mac Catalyst. |
+| [`platform-design-tvos`](./platform-design-tvos/SKILL.md) | Apple Human Interface Guidelines for Apple TV. Use when building tvOS apps with focus-based navigation, Siri Remote input, or living room viewing experiences. Triggers on tasks involving Apple TV, tvOS, 10-foot UI, or media playback. |
+| [`platform-design-visionos`](./platform-design-visionos/SKILL.md) | Apple Human Interface Guidelines for Apple Vision Pro. Use when building spatial computing apps, implementing eye/hand input, or designing immersive experiences. Triggers on tasks involving visionOS, RealityKit, spatial UI, or mixed reality. |
+| [`platform-design-watchos`](./platform-design-watchos/SKILL.md) | Apple Human Interface Guidelines for Apple Watch. Use when building watchOS apps, complications, or workout features. Triggers on tasks involving Watch UI, Digital Crown, glanceable interfaces, or wrist-based interactions. |
+| [`platform-design-web`](./platform-design-web/SKILL.md) | Web platform design and accessibility guidelines. Use when building web interfaces, auditing accessibility, implementing responsive layouts, or reviewing web UI code. Triggers on tasks involving HTML, CSS, web components, WCAG compliance, responsive design, or web performance. |
 | [`react-components`](./react-components/SKILL.md) | Converts Stitch designs into modular Vite and React components, or syncs/updates existing React components to align with the latest Stitch designs, using system-level networking and AST-based validation. |
 | [`react-native--google-labs-code`](./react-native--google-labs-code/SKILL.md) | Convert Stitch HTML designs to React Native components, or syncs/updates existing native components to align with the latest Stitch designs, using StyleSheet. |
 | [`react-vite-dashboard`](./react-vite-dashboard/SKILL.md) | Convert Stitch designs into production React + Vite dashboards with TanStack Query, accessible tokens from DESIGN.md, and Web3-ready patterns (ethers/viem). |

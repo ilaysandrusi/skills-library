@@ -1,5 +1,5 @@
 {
-  "total": 6247,
+  "total": 6252,
   "categories": [
     {
       "id": "01-copy-writing",
@@ -672,6 +672,38 @@
         {
           "name": "performance",
           "description": "Optimize web performance for faster loading and better user experience. Use when asked to \"speed up my site\", \"optimize performance\", \"reduce load time\", \"fix slow loading\", \"improve page speed\", or \"performance audit\"."
+        },
+        {
+          "name": "android-design-guidelines",
+          "description": "Material Design 3 and Android platform guidelines. Use when building Android apps with Jetpack Compose or XML layouts, implementing Material You, navigation, or accessibility. Triggers on tasks involving Android UI, Compose components, dynamic color, or Material Design compliance."
+        },
+        {
+          "name": "ios-design-guidelines",
+          "description": "Apple Human Interface Guidelines for iPhone. Use when building, reviewing, or refactoring SwiftUI/UIKit interfaces for iOS. Triggers on tasks involving iPhone UI, iOS components, accessibility, Dynamic Type, Dark Mode, or HIG compliance."
+        },
+        {
+          "name": "ipados-design-guidelines",
+          "description": "Apple Human Interface Guidelines for iPad. Use when building iPad-optimized interfaces, implementing multitasking, pointer support, keyboard shortcuts, or responsive layouts. Triggers on tasks involving iPad, Split View, Stage Manager, sidebar navigation, or trackpad support."
+        },
+        {
+          "name": "macos-design-guidelines",
+          "description": "Apple Human Interface Guidelines for Mac. Use when building macOS apps with SwiftUI or AppKit, implementing menu bars, toolbars, window management, or keyboard shortcuts. Triggers on tasks involving Mac UI, desktop apps, or Mac Catalyst."
+        },
+        {
+          "name": "tvos-design-guidelines",
+          "description": "Apple Human Interface Guidelines for Apple TV. Use when building tvOS apps with focus-based navigation, Siri Remote input, or living room viewing experiences. Triggers on tasks involving Apple TV, tvOS, 10-foot UI, or media playback."
+        },
+        {
+          "name": "visionos-design-guidelines",
+          "description": "Apple Human Interface Guidelines for Apple Vision Pro. Use when building spatial computing apps, implementing eye/hand input, or designing immersive experiences. Triggers on tasks involving visionOS, RealityKit, spatial UI, or mixed reality."
+        },
+        {
+          "name": "watchos-design-guidelines",
+          "description": "Apple Human Interface Guidelines for Apple Watch. Use when building watchOS apps, complications, or workout features. Triggers on tasks involving Watch UI, Digital Crown, glanceable interfaces, or wrist-based interactions."
+        },
+        {
+          "name": "web-design-guidelines",
+          "description": "Web platform design and accessibility guidelines. Use when building web interfaces, auditing accessibility, implementing responsive layouts, or reviewing web UI code. Triggers on tasks involving HTML, CSS, web components, WCAG compliance, responsive design, or web performance."
         },
         {
           "name": "stitch::react-components",
@@ -5116,6 +5148,10 @@
           "description": "Guide for creating effective skills. This command should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations. Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulletproof against rationalization"
         },
         {
+          "name": "create-voltagent",
+          "description": "Skill for creating AI agent projects using the VoltAgent framework. Guide for CLI setup and manual bootstrapping."
+        },
+        {
           "name": "create-workflow-command",
           "description": "Create a workflow command that orchestrates multi-step execution through sub-agents with file-based task prompts"
         },
@@ -5332,30 +5368,6 @@
           "description": "Automatically activates when over-engineering patterns are detected: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers (class, interface, factory, wrapper) without being asked (3) Adding comments, documentation, JSDoc, or type annotations without being asked (4) Introducing new dependencies without being asked (5) Rewriting entire files instead of making minimal edits (6) Diff scope significantly exceeding the user's request (7) User"
         },
         {
-          "name": "moyu-en",
-          "description": "Automatically activates when over-engineering patterns are detected: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers (class, interface, factory, wrapper) without being asked (3) Adding comments, documentation, JSDoc, or type annotations without being asked (4) Introducing new dependencies without being asked (5) Rewriting entire files instead of making minimal edits (6) Diff scope significantly exceeding the user's request (7) User"
-        },
-        {
-          "name": "moyu-fr",
-          "description": "S'active automatiquement lorsque des patterns de sur-ingénierie sont détectés : (1) Modifier du code ou des fichiers que l'utilisateur n'a pas explicitement demandé de changer (2) Créer de nouvelles couches d'abstraction (class, interface, factory, wrapper) sans demande (3) Ajouter des commentaires, de la documentation, JSDoc ou des annotations de type sans demande (4) Introduire de nouvelles dépendances sans demande (5) Réécrire des fichiers entiers au lieu de faire des modifications minimales"
-        },
-        {
-          "name": "moyu-ja",
-          "description": "過剰エンジニアリングのパターンが検出された場合に自動的に発動します： (1) ユーザーが明示的に変更を求めていないコードやファイルを修正する (2) 要求されていない新しい抽象レイヤー（class、interface、factory、wrapper）を作成する (3) 要求されていないコメント、ドキュメント、JSDoc、型注釈を追加する (4) 要求されていない新しい依存パッケージを導入する (5) 最小限の編集ではなくファイル全体を書き直す (6) diff の範囲がユーザーの要求を明らかに超えている (7) ユーザーが「やりすぎ」「そこは変えないで」「Xだけ変えて」「シンプルに」「やめて」と言う (8) 起こり得ないシナリオに対するエラーハンドリング、バリデーション、防御的コードを追加する (9) 要求されていないテスト、設定のスキャフォールディング、ドキュメントを生成する"
-        },
-        {
-          "name": "moyu-ko",
-          "description": "과잉 엔지니어링 패턴이 감지되면 자동으로 활성화됩니다: (1) 사용자가 명시적으로 변경을 요청하지 않은 코드나 파일을 수정하는 경우 (2) 요청되지 않은 새로운 추상화 레이어(class, interface, factory, wrapper)를 생성하는 경우 (3) 요청되지 않은 주석, 문서, JSDoc, 타입 어노테이션을 추가하는 경우 (4) 요청되지 않은 새로운 의존성을 도입하는 경우 (5) 최소한의 편집 대신 파일 전체를 다시 작성하는 경우 (6) diff 범위가 사용자의 요청을 명백히 초과하는 경우 (7) 사용자가 \"너무 많아\", \"거기는 건드리지 마\", \"X만 변경해\", \"간단하게\", \"그만\" 등의 신호를 보내는 경우 (8) 발생할 수 없는 시나리오에 대한 에러 처리, 유효성 검사, 방어적 코드를 추가하는 경우 (9) 요청되지 않은 테스트, 설정 스캐폴딩, 문서를 생성하는 경우"
-        },
-        {
-          "name": "moyu-lite",
-          "description": "Lightweight anti-over-engineering guard. Activates when: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers without being asked (3) Rewriting entire files instead of making minimal edits (4) Diff scope significantly exceeding the user's request (5) User signals like \"too much\", \"only change X\", \"keep it simple\" 轻量级反过度工程守卫。当检测到以下模式时激活： (1) 修改用户未明确要求改动的代码或文件 (2) 创建用户未要求的新抽象层 (3) 重写整个文件而非做最小编辑 (4) diff 范围明显超出用户请求 (5) 用户说\"太多了\"、\"只改 X\"、\"简单点\""
-        },
-        {
-          "name": "moyu-strict",
-          "description": "Strict anti-over-engineering enforcement. Activates on ANY code change to verify scope: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers (class, interface, factory, wrapper) without being asked (3) Adding comments, documentation, JSDoc, or type annotations without being asked (4) Introducing new dependencies without being asked (5) Rewriting entire files instead of making minimal edits (6) Diff scope significantly exceeding the user's"
-        },
-        {
           "name": "multi-agent-patterns",
           "description": "Design multi-agent architectures for complex tasks. Use when single-agent context limits are exceeded, when tasks decompose naturally into subtasks, or when specializing agents improves quality."
         },
@@ -5508,6 +5520,10 @@
           "description": "Launch RSVP speed reader for text"
         },
         {
+          "name": "speed",
+          "description": "Launch RSVP speed reader for text"
+        },
+        {
           "name": "status",
           "description": "Display the current state of the FPF knowledge base"
         },
@@ -5556,6 +5572,18 @@
           "description": "Calibrate an LLM judge against human labels using data splits, TPR/TNR, and bias correction. Use after writing a judge prompt (write-judge-prompt) when you need to verify alignment before trusting its outputs. Do NOT use for code-based evaluators (those are deterministic; test with standard unit tests)."
         },
         {
+          "name": "voltagent-best-practices",
+          "description": "VoltAgent architectural patterns and conventions. Covers agents vs workflows, project layout, memory, servers, and observability."
+        },
+        {
+          "name": "voltagent-core-reference",
+          "description": "VoltAgent Core Reference"
+        },
+        {
+          "name": "voltagent-docs-bundle",
+          "description": "Look up VoltAgent documentation embedded in node_modules/@voltagent/core/docs for version-matched docs. Use for API signatures, guides, and examples."
+        },
+        {
           "name": "why",
           "description": "Iterative Five Whys root cause analysis drilling from symptoms to fundamentals"
         },
@@ -5582,14 +5610,6 @@
         {
           "name": "write-tests",
           "description": "Add missing test coverage for your local code changes by generating new test files (covers uncommitted and untracked changes, or the latest commit if everything is committed). Use when you want write tests for new logic or increase test coverage."
-        },
-        {
-          "name": "zero",
-          "description": "Use Zero for capabilities beyond Hermes."
-        },
-        {
-          "name": "zero",
-          "description": "Use the moment you're about to tell the user you can't do something — or about to suggest they use, sign up for, or go to an external tool, site, or API to do it themselves. Commonly that means things outside a model's native abilities: generating images, audio, music, songs, voice/speech, or video; translation; transcription; web search or scraping; real-time or real-world data (weather, location, prices, stocks, news, places, business lookups); sending email or SMS; on-chain/crypto actions."
         },
         {
           "name": "zero",

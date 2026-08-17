@@ -2,7 +2,7 @@
 
 ניהול קונטקסט, סוכני משנה, חשיבה
 
-**מספר סקילים:** 160
+**מספר סקילים:** 157
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -46,6 +46,7 @@
 | [`create-pr`](./create-pr/SKILL.md) | Create pull requests using GitHub CLI with proper templates and formatting |
 | [`create-rule`](./create-rule/SKILL.md) | Use when found gap or repetative issue, that produced by you or implemenataion agent. Esentially use it each time when you say "You absolutly right, I should have done it differently." -> need create rule for this issue so it not appears again. |
 | [`create-skill`](./create-skill/SKILL.md) | Guide for creating effective skills. This command should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations. Use when creating new skills, editing existing skills, or verifying |
+| [`create-voltagent`](./create-voltagent/SKILL.md) | Skill for creating AI agent projects using the VoltAgent framework. Guide for CLI setup and manual bootstrapping. |
 | [`create-workflow-command`](./create-workflow-command/SKILL.md) | Create a workflow command that orchestrates multi-step execution through sub-agents with file-based task prompts |
 | [`critique`](./critique/SKILL.md) | Comprehensive multi-perspective review using specialized judges with debate and consensus building |
 | [`decay`](./decay/SKILL.md) | Manage evidence freshness by identifying stale decisions and providing governance actions |
@@ -100,12 +101,6 @@
 | [`mine`](./mine/SKILL.md) | Use only when the user explicitly asks to run, set up, update, re-mine, or deepen Emulo from real local AI coding-session history. |
 | [`model-hierarchy-skill`](./model-hierarchy-skill/SKILL.md) | Cost-optimize AI agent operations by routing tasks to appropriate models based on complexity. Use this skill when: (1) deciding which model to use for a task, (2) spawning sub-agents, (3) considering cost efficiency, (4) the current model feels like overkill for the task. Triggers: "model routing", |
 | [`moyu`](./moyu/SKILL.md) | Automatically activates when over-engineering patterns are detected: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers (class, interface, factory, wrapper) without being asked (3) Adding comments, documentation, JSDoc, or type annotations |
-| [`moyu-en`](./moyu-en/SKILL.md) | Automatically activates when over-engineering patterns are detected: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers (class, interface, factory, wrapper) without being asked (3) Adding comments, documentation, JSDoc, or type annotations |
-| [`moyu-fr`](./moyu-fr/SKILL.md) | S'active automatiquement lorsque des patterns de sur-ingénierie sont détectés : (1) Modifier du code ou des fichiers que l'utilisateur n'a pas explicitement demandé de changer (2) Créer de nouvelles couches d'abstraction (class, interface, factory, wrapper) sans demande (3) Ajouter des |
-| [`moyu-ja`](./moyu-ja/SKILL.md) | 過剰エンジニアリングのパターンが検出された場合に自動的に発動します： (1) ユーザーが明示的に変更を求めていないコードやファイルを修正する (2) 要求されていない新しい抽象レイヤー（class、interface、factory、wrapper）を作成する (3) 要求されていないコメント、ドキュメント、JSDoc、型注釈を追加する (4) 要求されていない新しい依存パッケージを導入する (5) 最小限の編集ではなくファイル全体を書き直す (6) diff の範囲がユーザーの要求を明らかに超えている (7) |
-| [`moyu-ko`](./moyu-ko/SKILL.md) | 과잉 엔지니어링 패턴이 감지되면 자동으로 활성화됩니다: (1) 사용자가 명시적으로 변경을 요청하지 않은 코드나 파일을 수정하는 경우 (2) 요청되지 않은 새로운 추상화 레이어(class, interface, factory, wrapper)를 생성하는 경우 (3) 요청되지 않은 주석, 문서, JSDoc, 타입 어노테이션을 추가하는 경우 (4) 요청되지 않은 새로운 의존성을 도입하는 경우 (5) 최소한의 편집 대신 파일 전체를 다시 작성하는 경우 (6) diff 범위가 사용자의 요청을 명백히 초과하는 경우 (7) 사용자가 "너무 |
-| [`moyu-lite`](./moyu-lite/SKILL.md) | Lightweight anti-over-engineering guard. Activates when: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers without being asked (3) Rewriting entire files instead of making minimal edits (4) Diff scope significantly exceeding the user's request |
-| [`moyu-strict`](./moyu-strict/SKILL.md) | Strict anti-over-engineering enforcement. Activates on ANY code change to verify scope: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers (class, interface, factory, wrapper) without being asked (3) Adding comments, documentation, JSDoc, or |
 | [`multi-agent-patterns`](./multi-agent-patterns/SKILL.md) | Design multi-agent architectures for complex tasks. Use when single-agent context limits are exceeded, when tasks decompose naturally into subtasks, or when specializing agents improves quality. |
 | [`notebooklm-skill`](./notebooklm-skill/SKILL.md) | Use this skill to query your Google NotebookLM notebooks directly from Claude Code for source-grounded, citation-backed answers from Gemini. Browser automation, library management, persistent auth. Drastically reduced hallucinations through document-only responses. |
 | [`notfair-upgrade-skill`](./notfair-upgrade-skill/SKILL.md) | Upgrade the NotFair plugin to the latest version. Updates the marketplace repo, installs the new version to the plugin cache, and updates installed_plugins.json. Use when asked to "upgrade notfair", "update notfair", or "get latest version". Also handles inline upgrade prompts when a skill detects |
@@ -144,6 +139,7 @@
 | [`skill-personalizer`](./skill-personalizer/SKILL.md) | Use when auditing or adapting newly created, downloaded, forked, installed, or community Agent Skills to the user's tools, habits, directories, session history, and preferred workflows, especially when triggers feel wrong, noisy, or too generic. |
 | [`skill-seekers`](./skill-seekers/SKILL.md) | Automatically detect source types and build AI skills using Skill Seekers. Use when the user wants to create skills from documentation, repos, PDFs, videos, or other knowledge sources. |
 | [`speed`](./speed/SKILL.md) | Launch RSVP speed reader for text |
+| [`speed-reader`](./speed-reader/SKILL.md) | Launch RSVP speed reader for text |
 | [`status`](./status/SKILL.md) | Display the current state of the FPF knowledge base |
 | [`subagent-driven-development--neolabhq`](./subagent-driven-development--neolabhq/SKILL.md) | Use when executing implementation plans with independent tasks in the current session or facing 3+ independent issues that can be investigated without shared state or dependencies - dispatches fresh subagent for each task with code review between tasks, enabling fast iteration with quality gates |
 | [`test-coverage`](./test-coverage/SKILL.md) | Use after writing tests to assess coverage quality across structural, mutation, requirements, and API/integration dimensions; organized knowledge for choosing and interpreting coverage analyses. |
@@ -156,6 +152,9 @@
 | [`update-docs`](./update-docs/SKILL.md) | Update and maintain project documentation for local code changes using multi-agent workflow with tech-writer agents. Covers docs/, READMEs, JSDoc, and API documentation. |
 | [`using-agent-skills`](./using-agent-skills/SKILL.md) | Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked. |
 | [`validate-evaluator`](./validate-evaluator/SKILL.md) | Calibrate an LLM judge against human labels using data splits, TPR/TNR, and bias correction. Use after writing a judge prompt (write-judge-prompt) when you need to verify alignment before trusting its outputs. Do NOT use for code-based evaluators (those are deterministic; test with standard unit |
+| [`voltagent-best-practices`](./voltagent-best-practices/SKILL.md) | VoltAgent architectural patterns and conventions. Covers agents vs workflows, project layout, memory, servers, and observability. |
+| [`voltagent-core-reference`](./voltagent-core-reference/SKILL.md) | VoltAgent Core Reference |
+| [`voltagent-docs-bundle`](./voltagent-docs-bundle/SKILL.md) | Look up VoltAgent documentation embedded in node_modules/@voltagent/core/docs for version-matched docs. Use for API signatures, guides, and examples. |
 | [`why`](./why/SKILL.md) | Iterative Five Whys root cause analysis drilling from symptoms to fundamentals |
 | [`wiki`](./wiki/SKILL.md) | The wiki CLI and the node's two knowledge bases -- project wiki and memory. |
 | [`word`](./word/SKILL.md) | Use when testing the word golden build |
@@ -163,6 +162,4 @@
 | [`write`](./write/SKILL.md) | Use for marketing, social, replies, product copy, launch copy, and writing in the user's voice when their Emulo writing profile should guide the task. Do not use for unrelated execution or UI/UX design alone. |
 | [`write-judge-prompt`](./write-judge-prompt/SKILL.md) | Design LLM-as-Judge evaluators for subjective criteria that code-based checks cannot handle. Use when a failure mode requires interpretation (tone, faithfulness, relevance, completeness). Do NOT use when the failure mode can be checked with code (regex, schema validation, execution tests). Do NOT |
 | [`write-tests`](./write-tests/SKILL.md) | Add missing test coverage for your local code changes by generating new test files (covers uncommitted and untracked changes, or the latest commit if everything is committed). Use when you want write tests for new logic or increase test coverage. |
-| [`zero`](./zero/SKILL.md) | Use Zero for capabilities beyond Hermes. |
-| [`zero--officialzeroxyz`](./zero--officialzeroxyz/SKILL.md) | Use the moment you're about to tell the user you can't do something — or about to suggest they use, sign up for, or go to an external tool, site, or API to do it themselves. Commonly that means things outside a model's native abilities: generating images, audio, music, songs, voice/speech, or |
-| [`zero--officialzeroxyz-2`](./zero--officialzeroxyz-2/SKILL.md) | Use the moment you're about to tell the user you can't do something — or about to suggest they use, sign up for, sign in to, or go to an external tool, site, or API to do it themselves. Commonly that means things outside a model's native abilities: generating images, audio, music, songs, |
+| [`zero`](./zero/SKILL.md) | Use the moment you're about to tell the user you can't do something — or about to suggest they use, sign up for, sign in to, or go to an external tool, site, or API to do it themselves. Commonly that means things outside a model's native abilities: generating images, audio, music, songs, |

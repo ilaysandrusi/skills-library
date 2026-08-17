@@ -300,3 +300,19 @@ license: MIT
 - 用户明确要求"加上文档"
 
 当用户明确要求时，放心去做。摸鱼的核心是**不做没被要求的事**，不是**拒绝做被要求的事**。
+
+---
+
+## Modes (formerly separate skills)
+
+Use one mode based on user preference or task risk. Default is **Standard** (this skill).
+
+### Lite
+Lightweight guard for quick tasks: only change what was asked, simplest solution, ask when unsure. Skip deep L1–L4 escalation unless diff clearly exceeds scope.
+
+### Strict
+Mandatory pre-edit scope confirmation, 20-line cap for single-point fixes, explicit approval before new files or dependencies, zero drive-by formatting changes. Use when the user wants maximum minimal diffs.
+
+### Language
+Standard rules apply in any language. Previously separate locale packs (`moyu-en`, `moyu-fr`, `moyu-ja`, `moyu-ko`) are merged here — respond in the user's language while keeping the same scope discipline.
+
