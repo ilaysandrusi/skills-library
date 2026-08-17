@@ -1,6 +1,17 @@
 # ECC (Everything Claude Code)
 
-חבילת affaan-m/ECC — harness לסוכנים: skills, agents, commands, hooks, rules והתקנה
+חבילת [affaan-m/ECC](https://github.com/affaan-m/ECC) — harness מלא לסוכנים.
+
+## Harness (לא רק skills)
+
+| רכיב | נתיב | כמות |
+|---|---|---:|
+| Skills | תיקיות עם `SKILL.md` למטה | 285 |
+| Agents | [`agents/`](./agents/) | 68 |
+| Rules | [`rules/`](./rules/) | 23 |
+| Hooks | [`hooks/`](./hooks/) | runtime config + memory |
+
+פרטים: [`HARNESS.md`](./HARNESS.md) · התחלה: [`ecc-guide`](./ecc-guide/SKILL.md)
 
 **מספר סקילים:** 285
 
