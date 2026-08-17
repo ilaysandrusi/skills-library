@@ -1,12 +1,14 @@
-# Rules
+# Rules (משותפים)
 
 Always-on instruction files. Loaded as standing constraints for a language, framework or house style rather than invoked on demand.
 
-**Total files:** 170 — from 15 source projects.
+**קבצים כאן:** 163 — מ-13 מקורות.
 
-Every source folder carries a `SOURCE.md` with the upstream repository, path, pinned commit and license.
+כל מה שנמצא בתיקייה הזאת הוא **rules ברמת הריפו** — במעלה הזרם הוא משרת כמה סקילים במקביל, ולכן אי אפשר לשייך אותו לסקיל אחד. ארטיפקטים שכן שייכים לסקיל ספציפי הועברו לתוך תיקיית הסקיל עצמו (`<category>/<skill>/rules/`).
 
-| Source folder | Files | Upstream repository | License |
+בכל תיקיית מקור יש `SOURCE.md` עם הריפו במעלה הזרם, הנתיב, ה-commit והרישיון.
+
+| מקור | קבצים | ריפו במעלה הזרם | רישיון |
 |---|---|---|---|
 | [`addyosmani/`](./addyosmani/) | 1 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | MIT |
 | [`callstack/`](./callstack/) | 2 | [callstackincubator/agent-skills](https://github.com/callstackincubator/agent-skills) | MIT |
@@ -18,10 +20,8 @@ Every source folder carries a `SOURCE.md` with the upstream repository, path, pi
 | [`go-agent-skills/`](./go-agent-skills/) | 1 | [eduardo-sl/go-agent-skills](https://github.com/eduardo-sl/go-agent-skills) | MIT |
 | [`kicad-happy/`](./kicad-happy/) | 1 | [aklofas/kicad-happy](https://github.com/aklofas/kicad-happy) | MIT |
 | [`kreuzberg/`](./kreuzberg/) | 1 | [kreuzberg-dev/kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) | MIT |
-| [`moyu/`](./moyu/) | 2 | [uucz/moyu](https://github.com/uucz/moyu) | MIT |
 | [`unslop/`](./unslop/) | 2 | [MohamedAbdallah-14/unslop](https://github.com/MohamedAbdallah-14/unslop) | MIT |
-| [`vibe-skills/`](./vibe-skills/) | 5 | [foryourhealth111-pixel/Vibe-Skills](https://github.com/foryourhealth111-pixel/Vibe-Skills) | Apache-2.0 |
 | [`voltagent/`](./voltagent/) | 1 | [VoltAgent/voltagent](https://github.com/VoltAgent/voltagent) | MIT |
 | [`zapier/`](./zapier/) | 1 | [zapier/zapier-mcp](https://github.com/zapier/zapier-mcp) | MIT |
 
-> These are **not** skills. They are kept separate on purpose: an agent loads skills on demand, while rules are always on, commands are invoked explicitly, hooks run on runtime events and agents are delegated to. See [`../ARTIFACTS.md`](../ARTIFACTS.md).
+> אלה **לא** סקילים. ראה [`../ARTIFACTS.md`](../ARTIFACTS.md).
