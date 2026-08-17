@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6252
+**סה״כ סקילים:** 6537
 
 ## איך ללמוד
 
@@ -44,4 +44,5 @@
 | [מובייל ו-Apple](./26-mobile-apple/) | 135 | Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG |
 | [Web3 וקריפטו](./27-web3-crypto/) | 43 | Binance, Coinbase, Helius (Solana): ארנקים, מסחר ופיתוח בלוקצ'יין |
 | [קריירה, חינוך ובריאות](./28-career-education-health/) | 45 | קורות חיים, ניהול קריירה, חונכות לימודית ובריאות אישית |
+| [ECC (Everything Claude Code)](./29-ecc/) | 285 | חבילת affaan-m/ECC — harness לסוכנים: skills, agents, commands, hooks, rules והתקנה |
 | [אחר](./99-other/) | 0 | סקילים שלא סווגו לקטגוריה ברורה |
