@@ -1,8 +1,20 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6523,
- "traced_to_source_repo": 6509,
+ "skills": 6522,
+ "traced_to_source_repo": 6508,
  "distinct_source_repos": 224,
+ "non_skill_directories": {
+  "14-testing-qa/shared": {
+   "skill": "14-testing-qa/shared",
+   "sources": [
+    "LambdaTest/agent-skills"
+   ],
+   "method": "documented-in-import-commit",
+   "added_in": "ae4a58b7",
+   "import_note": "Cloudflare / Next.js / TestMu packs",
+   "note": "support directory shared by the TestMu testing skills: scripts and a reference doc, no SKILL.md of its own, so it is not a skill and does not appear in catalog.json"
+  }
+ },
  "source_repo_skill_counts": {
   "mukul975/Anthropic-Cybersecurity-Skills": 817,
   "openaccountants/openaccountants": 781,
@@ -24,7 +36,7 @@
   "googleworkspace/skills": 96,
   "deanpeters/Product-Manager-Skills": 84,
   "trailofbits/skills": 78,
-  "LambdaTest/agent-skills": 74,
+  "LambdaTest/agent-skills": 73,
   "alinaqi/claude-bootstrap": 72,
   "JasonColapietro/suede-creator-skills": 71,
   "phuryn/pm-skills": 69,
@@ -49142,15 +49154,6 @@
    "method": "exact-name-match",
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "14-testing-qa/shared": {
-   "skill": "14-testing-qa/shared",
-   "sources": [
-    "LambdaTest/agent-skills"
-   ],
-   "method": "documented-in-import-commit",
-   "added_in": "ae4a58b7",
-   "import_note": "Cloudflare / Next.js / TestMu packs"
   },
   "12-security/sharp-edges": {
    "skill": "12-security/sharp-edges",
