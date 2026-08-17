@@ -17,21 +17,21 @@
 | קטגוריה | סקילים | תיאור |
 |---|---|---|
 | [כתיבה וניקוי טקסט](./01-copy-writing/) | 99 | עצירת סלופ AI, קופי, הנחיות כתיבה |
-| [עיצוב וממשק](./02-design-ui/) | 107 | UI/UX, פרונט, נגישות, גלילה |
-| [שיווק ותוכן](./03-marketing/) | 496 | חבילת Corey Haines וסקילים שיווקיים |
+| [עיצוב וממשק](./02-design-ui/) | 109 | UI/UX, פרונט, נגישות, גלילה |
+| [שיווק ותוכן](./03-marketing/) | 537 | חבילת Corey Haines וסקילים שיווקיים |
 | [Remotion (וידאו מקוד)](./04-remotion/) | 12 | יצירת וידאו עם React / Remotion |
-| [פיתוח ודיבאג](./05-development/) | 411 | Superpowers, בדיקות, תוכניות עבודה |
+| [פיתוח ודיבאג](./05-development/) | 432 | Superpowers, בדיקות, תוכניות עבודה |
 | [מסמכים](./06-documents/) | 34 | PDF, Word, PowerPoint, Excel |
 | [Supabase / Postgres](./07-supabase/) | 2 | עבודה עם מסדי נתונים של Supabase |
-| [Context Engineering](./08-context-engineering/) | 137 | ניהול קונטקסט, סוכני משנה, חשיבה |
+| [Context Engineering](./08-context-engineering/) | 160 | ניהול קונטקסט, סוכני משנה, חשיבה |
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 4 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 146 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |
 | [אבטחה וביקורת קוד](./12-security/) | 145 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
 | [ענן ופריסה](./13-cloud-deploy/) | 97 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
 | [בדיקות ואוטומציה](./14-testing-qa/) | 197 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
-| [אינטגרציות ושירותים](./15-integrations/) | 235 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
-| [AI APIs ומדיה](./16-ai-apis-media/) | 211 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
+| [אינטגרציות ושירותים](./15-integrations/) | 251 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
+| [AI APIs ומדיה](./16-ai-apis-media/) | 220 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
 | [חבילת סייבר ענקית](./17-cybersecurity-pack/) | 817 | אנציקלופדיית סקילי סייבר (800+): פורנזיקה, תגובה לאירועים, מודיעין איומים, פנטסטינג והקשחה |
 | [פיננסים וחשבונאות](./18-finance-accounting/) | 788 | openaccountants (780+), CFO, ניתוח מניות ודוחות: הנהלת חשבונות, מס, ביקורת ותכנון פיננסי |
 | [מכירות, GTM וסטארטאפ](./19-sales-gtm-startup/) | 299 | Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארטאפים בשלב מוקדם |
@@ -40,8 +40,8 @@
 | [משפטים](./22-legal/) | 238 | awesome-legal-skills: חוזים, רגולציה, ליטיגציה, קניין רוחני ותאימות |
 | [Microsoft](./23-microsoft/) | 186 | הסקילים הרשמיים של מיקרוסופט: Azure, .NET, TypeSpec, Playwright, GitHub ועוד |
 | [מדע ומחקר](./24-science-research/) | 542 | K-Dense scientific, AI-research, MedSci (מחקר רפואי קליני), סימולציות חומרים, הנדסה ומחקר אוטומטי |
-| [דאטה ובסיסי נתונים](./25-data-databases/) | 74 | MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB |
+| [דאטה ובסיסי נתונים](./25-data-databases/) | 78 | MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB |
 | [מובייל ו-Apple](./26-mobile-apple/) | 135 | Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG |
 | [Web3 וקריפטו](./27-web3-crypto/) | 43 | Binance, Coinbase, Helius (Solana): ארנקים, מסחר ופיתוח בלוקצ'יין |
 | [קריירה, חינוך ובריאות](./28-career-education-health/) | 45 | קורות חיים, ניהול קריירה, חונכות לימודית ובריאות אישית |
-| [אחר](./99-other/) | 116 | סקילים שלא סווגו לקטגוריה ברורה |
+| [אחר](./99-other/) | 0 | סקילים שלא סווגו לקטגוריה ברורה |
