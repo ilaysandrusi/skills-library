@@ -1,0 +1,17 @@
+{
+  "description": "Bootstraps the claude-ecom Python backend on session start",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}\"/bin/ecom --bootstrap-only",
+            "timeout": 300
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,14 +1,19 @@
-# ECC Harness (agents + rules + hooks)
+# ECC (Everything Claude Code) — היכן נמצא כל חלק
 
-This folder bundles the full ECC harness alongside the 285 skills.
+הקטגוריה הזאת מחזיקה את **הסקילים** של `affaan-m/ECC`. שאר חלקי ה-harness עברו
+לתיקיות הארטיפקטים ברמה העליונה, כדי שכל סוג ארטיפקט יישב במקום אחד לכל המקורות.
 
-| Path | Contents |
-|---|---|
-| [`agents/`](./agents/) | 68 delegated subagent role prompts |
-| [`rules/`](./rules/) | Language/framework always-on rules |
-| [`hooks/`](./hooks/) | Runtime hooks (`hooks.json`, memory persistence) |
-| [`../`](./) | 285 skills as sibling folders with `SKILL.md` |
+| חלק | מיקום | קבצים |
+|---|---|---|
+| skills | [`./`](./) — 285 תיקיות עם `SKILL.md` | 285 |
+| agents | [`../agents/ecc/`](../agents/ecc/) | 68 |
+| rules | [`../rules/ecc/`](../rules/ecc/) | 122 |
+| hooks | [`../hooks/ecc/`](../hooks/ecc/) | 22 |
+| commands | [`../commands/ecc/`](../commands/ecc/) | 97 |
 
-Source: https://github.com/affaan-m/ECC
+ה-`commands` וההוקים של Cursor (`../hooks/ecc/`) התווספו בסבב ההשלמה והתיקון —
+הייבוא הראשון תפס רק skills, agents, rules וקובצי `hooks.json` בשורש.
 
-Start with skill [`ecc-guide`](./ecc-guide/SKILL.md) for navigation.
+מקור: https://github.com/affaan-m/ECC (MIT)
+
+להתמצאות התחל בסקיל [`ecc-guide`](./ecc-guide/SKILL.md).
