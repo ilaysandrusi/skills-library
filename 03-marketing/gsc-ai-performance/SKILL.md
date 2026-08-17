@@ -82,7 +82,7 @@ If the brand isn't in the UK rollout yet, the gate framework still applies but `
 2. **Locate the report** — Search Console → left nav → **Performance** → switch tab to **Search results** → look for the new **AI Overviews & AI Mode** tab (the tab title may vary slightly during rollout; Google's working name during testing was "Search Generative AI"). On rollouts pre-tab, the data may also surface under the existing Performance report with an AI Features filter.
 3. **Run baseline export** — set the date range to "last 28 days" (or maximum available since rollout), export to CSV/Sheets via Search Console's export button. Capture: impressions, pages, country mix, device mix, top queries (if available in your cohort). Then parse and archive it with the helper script:
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/gsc-ai-performance.py" \
+   python "${CLAUDE_PLUGIN_ROOT}/scripts/gsc-ai-performance.py" \
        --brand {slug} \
        --csv "${CLAUDE_PLUGIN_DATA}/{brand}/seo/gsc-ai-performance/{date}/02-export.csv" \
        --format json \

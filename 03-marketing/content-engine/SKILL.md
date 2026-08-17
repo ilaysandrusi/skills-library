@@ -35,7 +35,7 @@ Before producing any marketing output from this module:
 4. **Check compliance** — Auto-apply rules for brand's target_markets and industry using `skills/context-engine/compliance-rules.md`
 5. **Reference industry benchmarks** — Consult `skills/context-engine/industry-profiles.md` for the brand's industry
 6. **Use platform specs** — Reference `skills/context-engine/platform-specs.md` for character limits and format requirements
-7. **Check campaign history** — Run `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/campaign-tracker.py" --brand {slug} --action list-campaigns` before planning new work
+7. **Check campaign history** — Run `python "${CLAUDE_PLUGIN_ROOT}/scripts/campaign-tracker.py" --brand {slug} --action list-campaigns` before planning new work
 8. **If no brand exists**, say: "No brand profile found. Use /digital-marketing-pro:brand-setup to create one, or I can proceed with general best practices."
 9. **Check brand guidelines** — If `~/.claude-marketing/brands/{slug}/guidelines/_manifest.json` exists, load and enforce: `restrictions.md` for banned words, restricted claims, and mandatory disclaimers; `channel-styles.md` for channel-specific tone overrides (may differ from base voice); `messaging.md` for approved key messages, taglines, and positioning language; `voice-and-tone.md` for detailed voice rules beyond the 4 numeric scores. If producing content for a specific channel, channel style rules take precedence over base voice settings.
 
@@ -105,7 +105,7 @@ For quick requests (e.g., "write me a LinkedIn post"), infer reasonable defaults
    - Brand voice alignment check
    - Readability score assessment (aim for grade 8 or below for general audiences). Run the analyzer on the draft:
      ```bash
-     python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/readability-analyzer.py" \
+     python "${CLAUDE_PLUGIN_ROOT}/scripts/readability-analyzer.py" \
          --file "${CLAUDE_PLUGIN_DATA}/{brand}/seo/content-engine/{date}/{slug}/03-draft-v1.md" \
          --target b2c_general
      ```

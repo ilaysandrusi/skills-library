@@ -53,7 +53,7 @@ All outputs go to `${CLAUDE_PLUGIN_DATA}/{brand}/seo/backlink-gap/{YYYY-MM-DD}/`
 4. **`03-comp-{competitor}.csv`** — one CSV per competitor (raw)
 5. **`04-gap-run.json`** — run the script:
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/backlink_gap.py" \
+   python "${CLAUDE_PLUGIN_ROOT}/scripts/backlink_gap.py" \
        --ours "${CLAUDE_PLUGIN_DATA}/{brand}/seo/backlink-gap/{date}/02-ours.csv" \
        --competitors \
          "${CLAUDE_PLUGIN_DATA}/{brand}/seo/backlink-gap/{date}/03-comp-competitor1.csv" \

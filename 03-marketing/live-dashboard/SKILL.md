@@ -18,7 +18,7 @@ By default this skill produces a dashboard **specification** for review. It must
 1. Present the full spec — data sources, connected accounts, sharing scope, refresh cadence — as an **Execution Summary**.
 2. The user must type `yes` (or an equivalent explicit approval) before any external dashboard is created or shared. ANY other input — ambiguous, implied, partial, or absent approval — cancels; the spec is saved but nothing is created externally.
 3. Never proceed on ambiguous input. Never auto-retry a failed creation.
-4. Record the approval with `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/approval-manager.py" --brand {slug} --action create-approval --data '{"risk_level":"medium","summary":"..."}'` **before** creating, then `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/approval-manager.py" --brand {slug} --action mark-executed --id {approval_id}` after it verifies.
+4. Record the approval with `python "${CLAUDE_PLUGIN_ROOT}/scripts/approval-manager.py" --brand {slug} --action create-approval --data '{"risk_level":"medium","summary":"..."}'` **before** creating, then `python "${CLAUDE_PLUGIN_ROOT}/scripts/approval-manager.py" --brand {slug} --action mark-executed --id {approval_id}` after it verifies.
 
 ## Input Required
 

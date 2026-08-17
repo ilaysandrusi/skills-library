@@ -26,7 +26,7 @@ plugins/<plugin-name>/
 │   └── <workflow>.md          # Lean orchestrator (~50-100 tokens per step)
 ├── agents/                     # Optional: reusable executor agents
 │   └── step-executor.md       # Custom agent with specific tools/behavior
-└── ../../tasks/context-engineering-kit-fpf/                      # All task instructions directly here
+└── tasks/                      # All task instructions directly here
     ├── step-1-<name>.md       # Full instructions (~500+ tokens each)
     ├── step-2-<name>.md
     ├── step-3-<name>.md
@@ -63,7 +63,7 @@ Sub-agents spawned via Task tool:
 Use `${CLAUDE_PLUGIN_ROOT}` for portable paths within plugin:
 
 ```markdown
-Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-1-workflow-name.md and execute.
+Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1-workflow-name.md and execute.
 ```
 
 Sub-agent will use Read tool to fetch the file content.
@@ -94,7 +94,7 @@ mkdir -p ${CLAUDE_PLUGIN_ROOT}/tasks
 mkdir -p ${CLAUDE_PLUGIN_ROOT}/agents
 ```
 
-**Note**: All task files (both workflow-specific steps and shared context) are placed directly in `../../tasks/context-engineering-kit-fpf/` without subdirectories.
+**Note**: All task files (both workflow-specific steps and shared context) are placed directly in `tasks/` without subdirectories.
 
 ### Step 3: Create Task Files
 
@@ -157,7 +157,7 @@ Launch general-purpose agent:
 - **Description**: "<3-5 word summary>"
 - **Prompt**:
   \`\`\`
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-1-<workflow>-<name>.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1-<workflow>-<name>.md and execute.
 
   Context:
   - TARGET: $1
@@ -172,7 +172,7 @@ Launch general-purpose agent:
 - **Description**: "<3-5 word summary>"
 - **Prompt**:
   \`\`\`
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-2-<workflow>-<name>.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-2-<workflow>-<name>.md and execute.
 
   Context from Step 1:
   - <Key data from previous step>
@@ -229,9 +229,9 @@ Steps can run concurrently:
 ### Analysis Phase (Parallel)
 
 Launch 3 agents simultaneously:
-1. Agent 1: Security analysis → Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-1a-security.md
-2. Agent 2: Performance analysis → Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-1b-performance.md
-3. Agent 3: Code quality analysis → Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-1c-quality.md
+1. Agent 1: Security analysis → Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1a-security.md
+2. Agent 2: Performance analysis → Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1b-performance.md
+3. Agent 3: Code quality analysis → Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1c-quality.md
 
 **Wait for all**, then consolidate results.
 
@@ -280,7 +280,7 @@ Launch general-purpose agent:
 - **Description**: "Research feature requirements"
 - **Prompt**:
   \`\`\`
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-1-feature-impl-research.md
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1-feature-impl-research.md
 
   Feature: $ARGUMENTS
   \`\`\`
@@ -293,7 +293,7 @@ Launch general-purpose agent:
 - **Description**: "Design feature architecture"
 - **Prompt**:
   \`\`\`
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-2-feature-impl-architecture.md
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-2-feature-impl-architecture.md
 
   Feature: $ARGUMENTS
   Research findings: <summary from Phase 1>
@@ -307,7 +307,7 @@ Launch developer agent:
 - **Description**: "Implement feature code"
 - **Prompt**:
   \`\`\`
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/step-3-feature-impl-implement.md
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-3-feature-impl-implement.md
 
   Architecture: <summary from Phase 2>
   \`\`\`
@@ -417,13 +417,13 @@ Before finalizing workflow command:
 Based on user input, create:
 
 1. **Directories**:
-   - `${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/` - All task files directly here
+   - `${CLAUDE_PLUGIN_ROOT}/tasks/` - All task files directly here
    - `${CLAUDE_PLUGIN_ROOT}/agents/` - (Optional) Custom agent definitions
 
-2. **Task files**: Create in `../../tasks/context-engineering-kit-fpf/` directory with naming pattern `step-N-<workflow>-<name>.md`
+2. **Task files**: Create in `tasks/` directory with naming pattern `step-N-<workflow>-<name>.md`
    - Example: `step-1-feature-impl-research.md`
    - Example: `step-2-feature-impl-architecture.md`
-   - Shared context: `common-context.md` directly in `../../tasks/context-engineering-kit-fpf/`
+   - Shared context: `common-context.md` directly in `tasks/`
 
 3. **Orchestrator command**: Lean dispatch logic in `commands/<workflow-name>.md`
 

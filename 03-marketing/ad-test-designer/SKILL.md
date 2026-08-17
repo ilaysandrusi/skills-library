@@ -46,7 +46,7 @@ Here's my finished test results CSV (variant, sessions, conversions). Is the win
 
 > See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for tool category placeholders. Every input is the user's **own data, manually exported**. Keyed ad-platform APIs (Google Ads SDK, Meta Marketing API) are an optional Tier-2/3 MCP convenience — never required to design a test or read one out.
 
-> **Statistical facts (keyless):** `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/experiment.py" proportion --control <conv> <n> --variant <conv> <n> --alpha <alpha> --min-lift <relative-bar>` returns rates, effect size, intervals, p-value, and separate statistical/practical flags. Revenue/AOV-style samples use `continuous`; prospective sizing uses `samplesize`. Every derived value is `Calculated`; the helper deliberately returns no winner, promote, rollback, or kill action.
+> **Statistical facts (keyless):** `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/experiment.py" proportion --control <conv> <n> --variant <conv> <n> --alpha <alpha> --min-lift <relative-bar>` returns rates, effect size, intervals, p-value, and separate statistical/practical flags. Revenue/AOV-style samples use `continuous`; prospective sizing uses `samplesize`. Every derived value is `Calculated`; the helper deliberately returns no winner, promote, rollback, or kill action.
 
 | Need | Source export (own data) | Category |
 |------|--------------------------|----------|

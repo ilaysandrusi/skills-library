@@ -289,15 +289,15 @@ dataLayer.push({
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/infrasity-dev-gtm/REGISTRY.md). Key analytics tools:
+For implementation, see the [tools registry](../../tools/coreyhaines-marketing/REGISTRY.md). Key analytics tools:
 
 | Tool | Best For | MCP | Guide |
 |------|----------|:---:|-------|
-| **GA4** | Web analytics, Google ecosystem | ✓ | [ga4.md](../../tools/infrasity-dev-gtm/integrations/ga4.md) |
-| **Mixpanel** | Product analytics, event tracking | - | [mixpanel.md](../../tools/infrasity-dev-gtm/integrations/mixpanel.md) |
-| **Amplitude** | Product analytics, cohort analysis | - | [amplitude.md](../../tools/infrasity-dev-gtm/integrations/amplitude.md) |
-| **PostHog** | Open-source analytics, session replay | - | [posthog.md](../../tools/infrasity-dev-gtm/integrations/posthog.md) |
-| **Segment** | Customer data platform, routing | - | [segment.md](../../tools/infrasity-dev-gtm/integrations/segment.md) |
+| **GA4** | Web analytics, Google ecosystem | ✓ | [ga4.md](../../tools/coreyhaines-marketing/integrations/ga4.md) |
+| **Mixpanel** | Product analytics, event tracking | - | [mixpanel.md](../../tools/coreyhaines-marketing/integrations/mixpanel.md) |
+| **Amplitude** | Product analytics, cohort analysis | - | [amplitude.md](../../tools/coreyhaines-marketing/integrations/amplitude.md) |
+| **PostHog** | Open-source analytics, session replay | - | [posthog.md](../../tools/coreyhaines-marketing/integrations/posthog.md) |
+| **Segment** | Customer data platform, routing | - | [segment.md](../../tools/coreyhaines-marketing/integrations/segment.md) |
 
 ---
 

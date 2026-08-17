@@ -164,7 +164,7 @@ The skill follows this flow:
 3. **Build the eval-runner command.** Choose action: `run-quick` (default), `run-full` (with `--full`), `run-compliance` (with `--compliance`).
 4. **Execute via Bash.**
    ```
-   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/eval-runner.py" --action run-quick --file <input> [--brand <slug>] [--evidence <path>] [--schema <name>]
+   python "${CLAUDE_PLUGIN_ROOT}/scripts/eval-runner.py" --action run-quick --file <input> [--brand <slug>] [--evidence <path>] [--schema <name>]
    ```
 5. **Parse the JSON output.** Extract composite score, grade, dimension scores, alerts, auto-reject decision.
 6. **Format for the user.** Present the human-readable report shown above. Lead with the decision (PASS / WARN / BLOCKED).
@@ -192,7 +192,7 @@ User: /digital-marketing-pro:check drafts/q2-launch-blog.md
 
 Skill:
 1. Read drafts/q2-launch-blog.md
-2. Run python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/eval-runner.py" --action run-quick --file drafts/q2-launch-blog.md
+2. Run python "${CLAUDE_PLUGIN_ROOT}/scripts/eval-runner.py" --action run-quick --file drafts/q2-launch-blog.md
 3. Parse JSON output:
    composite_score: 81.2, grade: B+, auto_rejected: false
    hallucination: 92/100 pass, content_quality: 76/100 pass, readability: 84/100 pass
@@ -224,7 +224,7 @@ User: /digital-marketing-pro:check drafts/healthcare-ad.md --full --brand health
 
 Skill:
 1. Read drafts/healthcare-ad.md
-2. Run python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/eval-runner.py" --action run-full --file drafts/healthcare-ad.md --brand healthfirst --evidence facts/q2-claims.json --schema ad_copy
+2. Run python "${CLAUDE_PLUGIN_ROOT}/scripts/eval-runner.py" --action run-full --file drafts/healthcare-ad.md --brand healthfirst --evidence facts/q2-claims.json --schema ad_copy
 3. Parse JSON output. Composite: 58.4, grade: D+, auto_rejected: true
 4. Format report with CRITICAL issues highlighted
 5. Decision: BLOCKED. Two unattributed health claims need substantiation before this can publish.
@@ -237,7 +237,7 @@ User: /digital-marketing-pro:check drafts/financial-services-landing.md --compli
 
 Skill:
 1. Read content
-2. Run python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/eval-runner.py" --action run-compliance --file drafts/financial-services-landing.md --brand finadvisor --evidence facts/finra-disclosures.json
+2. Run python "${CLAUDE_PLUGIN_ROOT}/scripts/eval-runner.py" --action run-compliance --file drafts/financial-services-landing.md --brand finadvisor --evidence facts/finra-disclosures.json
 3. Output prioritises hallucination + claim verification + brand voice + structure
 4. Returns decision with FINRA-relevant issues highlighted
 ```

@@ -74,33 +74,33 @@ For each in-scope channel, call the relevant data-pull script with `--read-only`
 
 ```bash
 # Paid search
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand "{brand}" \
     --channel google_ads --action inventory --read-only
 
 # Paid social
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand "{brand}" \
     --channel meta_ads --action inventory --read-only
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand "{brand}" \
     --channel linkedin_ads --action inventory --read-only
 
 # Email
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand "{brand}" \
     --channel email --action automations --read-only
 
 # Organic + SEO
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/seo-executor.py" --brand "{brand}" --action audit-current
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/seo-executor.py" --brand "{brand}" --action audit-current
+python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand "{brand}" \
     --channel organic_social --action cadence
 
 # AEO / GEO (skip for a fast audit)
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/ai-visibility-checker.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/ai-visibility-checker.py" --brand "{brand}" \
     --mode api --competitors "{auto-from-profile or --competitors arg}"
 
 # CRM + automation health
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand "{brand}" --action audit-workflows
+python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand "{brand}" --action audit-workflows
 
 # Web analytics health
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand "{brand}" \
     --channel ga4_health --action diagnostic
 ```
 
@@ -259,4 +259,4 @@ In the conversation, print:
 - [`performance-check`](../performance-check/SKILL.md) — lighter metrics-only snapshot
 - [`competitor-analysis`](../competitor-analysis/SKILL.md) — pairs naturally with the AEO/GEO section
 - [`aeo-audit`](../aeo-audit/SKILL.md) — deeper AI-engine visibility audit if Section 5 raises concerns
-- `${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py` — underlying data pulls
+- `${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py` — underlying data pulls

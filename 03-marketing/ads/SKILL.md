@@ -463,16 +463,16 @@ When the user requests Google Ads RSAs, load [references/rsa-output-spec.md](ref
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/infrasity-dev-gtm/REGISTRY.md). Key advertising platforms:
+For implementation, see the [tools registry](../../tools/coreyhaines-marketing/REGISTRY.md). Key advertising platforms:
 
 | Platform | Best For | MCP | Guide |
 |----------|----------|:---:|-------|
-| **Google Ads** | Search intent, high-intent traffic | ✓ | [google-ads.md](../../tools/infrasity-dev-gtm/integrations/google-ads.md) |
-| **Meta Ads** | Demand gen, visual products, B2C | - | [meta-ads.md](../../tools/infrasity-dev-gtm/integrations/meta-ads.md) |
-| **LinkedIn Ads** | B2B, job title targeting | - | [linkedin-ads.md](../../tools/infrasity-dev-gtm/integrations/linkedin-ads.md) |
-| **TikTok Ads** | Younger demographics, video | - | [tiktok-ads.md](../../tools/infrasity-dev-gtm/integrations/tiktok-ads.md) |
+| **Google Ads** | Search intent, high-intent traffic | ✓ | [google-ads.md](../../tools/coreyhaines-marketing/integrations/google-ads.md) |
+| **Meta Ads** | Demand gen, visual products, B2C | - | [meta-ads.md](../../tools/coreyhaines-marketing/integrations/meta-ads.md) |
+| **LinkedIn Ads** | B2B, job title targeting | - | [linkedin-ads.md](../../tools/coreyhaines-marketing/integrations/linkedin-ads.md) |
+| **TikTok Ads** | Younger demographics, video | - | [tiktok-ads.md](../../tools/coreyhaines-marketing/integrations/tiktok-ads.md) |
 
-For tracking setup, see [references/conversion-tracking.md](references/conversion-tracking.md), [ga4.md](../../tools/infrasity-dev-gtm/integrations/ga4.md), [segment.md](../../tools/infrasity-dev-gtm/integrations/segment.md)
+For tracking setup, see [references/conversion-tracking.md](references/conversion-tracking.md), [ga4.md](../../tools/coreyhaines-marketing/integrations/ga4.md), [segment.md](../../tools/coreyhaines-marketing/integrations/segment.md)
 
 ---
 

@@ -65,8 +65,8 @@ Optimize anchor text across the site
 Uses ~~web crawler, ~~SEO tool, and ~~analytics when connected; otherwise asks the user for site type, page inventory or sitemap, key page URLs, content categories, and existing URLs. Every step works manually from a provided page list. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) and [SECURITY.md §Scraping Boundaries](../../references/aaron-marketing/SECURITY.md).
 
 **Zero-dependency local helper** (no tool needed):
-- Architecture / seed inventory: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/crawl.py" <url>` returns the live page list and link graph.
-- Linking metrics: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/crawl.py" <url> | python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/linkgraph.py" -` computes orphans, click-depth, and internal PageRank.
+- Architecture / seed inventory: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/crawl.py" <url>` returns the live page list and link graph.
+- Linking metrics: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/crawl.py" <url> | python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/linkgraph.py" -` computes orphans, click-depth, and internal PageRank.
 
 See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 

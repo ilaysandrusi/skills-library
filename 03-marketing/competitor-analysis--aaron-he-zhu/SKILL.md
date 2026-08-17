@@ -45,7 +45,7 @@ Compare my site [URL] against [competitor 1], [competitor 2], [competitor 3]
 
 Optional integrations: ~~SEO tool, ~~analytics, ~~AI monitor. Without tools, ask for competitor URLs, your site metrics, and industry context. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md).
 
-**Zero-dependency competitor fetch (keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/firecrawl.py" scrape <competitor-url>` returns the rendered page as LLM-ready markdown (JavaScript-heavy pages included), `firecrawl.py map <competitor-domain> --limit 500` inventories their URL surface fast, and `firecrawl.py search "<brand or topic>" --tbs qdr:m` finds their fresh coverage — all on Firecrawl's keyless free tier (~1,000 credits/mo). The connector pre-flights the target's robots.txt locally and refuses on a Disallow per [SECURITY.md §Scraping Boundaries](../../references/aaron-marketing/SECURITY.md). See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
+**Zero-dependency competitor fetch (keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/firecrawl.py" scrape <competitor-url>` returns the rendered page as LLM-ready markdown (JavaScript-heavy pages included), `firecrawl.py map <competitor-domain> --limit 500` inventories their URL surface fast, and `firecrawl.py search "<brand or topic>" --tbs qdr:m` finds their fresh coverage — all on Firecrawl's keyless free tier (~1,000 credits/mo). The connector pre-flights the target's robots.txt locally and refuses on a Disallow per [SECURITY.md §Scraping Boundaries](../../references/aaron-marketing/SECURITY.md). See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 ## Decision Gates
 

@@ -460,7 +460,7 @@ For tactical guidance on SaaS product pages, blog content, comparison/alternativ
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/infrasity-dev-gtm/REGISTRY.md).
+For implementation, see the [tools registry](../../tools/coreyhaines-marketing/REGISTRY.md).
 
 | Tool | Use For |
 |------|---------|

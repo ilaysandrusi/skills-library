@@ -12,7 +12,7 @@ Glob: ../../config/ai-music/config.example.yaml
 ### TEST: config.example.yaml is valid YAML
 Call `get_python_command()` first for `$PYTHON` (the venv interpreter — correct on every OS), then:
 ```bash
-$PYTHON -c "import yaml; yaml.safe_load(open('${CLAUDE_PLUGIN_ROOT}/../../config/ai-music/config.example.yaml'))"
+$PYTHON -c "import yaml; yaml.safe_load(open('${CLAUDE_PLUGIN_ROOT}/config/config.example.yaml'))"
 ```
 
 ### TEST: config.example.yaml has all required sections
@@ -466,8 +466,8 @@ Verify "## Related Skills" section exists with:
 - /bitwize-music:lyric-writer reference
 - /bitwize-music:lyric-reviewer reference
 Verify "## See Also" section exists with:
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/v5-best-practices.md reference
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/structure-tags.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/v5-best-practices.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/structure-tags.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/lyric-writer/SKILL.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/pronunciation-specialist/SKILL.md reference
 
@@ -478,11 +478,11 @@ Verify "## Related Skills" section exists with:
 - /bitwize-music:lyric-writer reference
 - /bitwize-music:lyric-reviewer reference
 Verify "## See Also" section exists with:
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/pronunciation-guide.md reference
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/structure-tags.md reference
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/genre-list.md reference
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/voice-tags.md reference
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/tips-and-tricks.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/pronunciation-guide.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/structure-tags.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/genre-list.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/voice-tags.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/tips-and-tricks.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/suno-engineer/SKILL.md reference
 
 ### TEST: Suno structure-tags has cross-references (quick win #10)
@@ -492,9 +492,9 @@ Verify "## Related Skills" section exists with:
 - /bitwize-music:suno-engineer reference
 - /bitwize-music:lyric-reviewer reference
 Verify "## See Also" section exists with:
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/v5-best-practices.md reference
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/pronunciation-guide.md reference
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/voice-tags.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/v5-best-practices.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/pronunciation-guide.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/suno/voice-tags.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/lyric-writer/SKILL.md reference
 
 ### TEST: Mastering workflow has cross-references (quick win #10)
@@ -504,7 +504,7 @@ Verify "## Related Skills" section exists with:
 - /bitwize-music:release-director reference
 Verify "## See Also" section exists with:
 - ${CLAUDE_PLUGIN_ROOT}/tools/mastering/ scripts listed
-- ${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/workflows/release-procedures.md reference
+- ${CLAUDE_PLUGIN_ROOT}/reference/workflows/release-procedures.md reference
 - ${CLAUDE_PLUGIN_ROOT}/skills/mastering-engineer/SKILL.md reference
 
 ### TEST: Explicit content word list documented

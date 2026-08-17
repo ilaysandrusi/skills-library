@@ -63,7 +63,7 @@ Output: a test-design doc (mode, hypothesis, variant matrix, primary/secondary/g
 
 > See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for tool category placeholders. Every input is the user's **own data, manually exported**. Keyed ESP APIs (Klaviyo, Mailchimp, HubSpot, Customer.io) are an optional Tier-2/3 MCP convenience — never required to design a test or read one out.
 
-> **Statistical facts (keyless):** `python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/experiment.py" proportion --control <events> <n> --variant <events> <n> --alpha <alpha> --min-lift <relative-bar>` returns rates, effect size, intervals, p-value, and separate statistical/practical flags. Revenue-per-recipient samples use `continuous`; prospective sizing uses `samplesize`. Every derived value is `Calculated`; the helper emits no winner or business action.
+> **Statistical facts (keyless):** `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/experiment.py" proportion --control <events> <n> --variant <events> <n> --alpha <alpha> --min-lift <relative-bar>` returns rates, effect size, intervals, p-value, and separate statistical/practical flags. Revenue-per-recipient samples use `continuous`; prospective sizing uses `samplesize`. Every derived value is `Calculated`; the helper emits no winner or business action.
 
 | Need | Source export (own data) | Category |
 |------|--------------------------|----------|

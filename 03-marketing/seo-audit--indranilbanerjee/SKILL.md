@@ -40,7 +40,7 @@ The user must provide (or will be prompted for):
 5. **Local SEO** (if applicable): Google Business Profile, NAP consistency, local schema, reviews, local link profile
 6. **Link profile**: Domain authority, backlink quality, toxic links, anchor text distribution, link velocity, competitor link gap. Score the own-domain profile with the analyzer (feeds `05-link-profile.md`):
    ```bash
-   python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/link-profile-analyzer.py" \
+   python "${CLAUDE_PLUGIN_ROOT}/scripts/link-profile-analyzer.py" \
        --file "${CLAUDE_PLUGIN_DATA}/{brand}/seo/seo-audit/{date}/links-export.json" \
        --brand-domain {brand-domain}
    ```

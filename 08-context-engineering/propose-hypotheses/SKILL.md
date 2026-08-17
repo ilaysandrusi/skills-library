@@ -36,7 +36,7 @@ Launch fpf-agent with sonnet[1m] model:
 - **Description**: "Initialize FPF context"
 - **Prompt**:
   ```
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/init-context.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/init-context.md and execute.
 
   Problem Statement: $ARGUMENTS
 
@@ -51,7 +51,7 @@ Launch fpf-agent with sonnet[1m] model:
 - **Description**: "Generate L0 hypotheses"
 - **Prompt**:
   ```
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/generate-hypotheses.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/generate-hypotheses.md and execute.
 
   Problem Statement: $ARGUMENTS
   Context: <summary from Step 1b>
@@ -83,7 +83,7 @@ Launch fpf-agent with sonnet[1m] model:
 - **Description**: "Add user hypothesis"
 - **Prompt**:
   ```
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/add-user-hypothesis.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/add-user-hypothesis.md and execute.
 
   User Hypothesis Description: <get from user>
 
@@ -104,7 +104,7 @@ For EACH L0 hypothesis file in `.fpf/knowledge/L0/`, launch parallel fpf-agent w
 - **Description**: "Verify hypothesis: <hypothesis-id>"
 - **Prompt**:
   ```
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/verify-logic.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/verify-logic.md and execute.
 
   Hypothesis ID: <hypothesis-id>
   Hypothesis File: .fpf/knowledge/L0/<hypothesis-id>.md
@@ -122,7 +122,7 @@ For EACH L1 hypothesis file in `.fpf/knowledge/L1/`, launch parallel fpf-agent w
 - **Description**: "Validate hypothesis: <hypothesis-id>"
 - **Prompt**:
   ```
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/validate-evidence.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/validate-evidence.md and execute.
 
   Hypothesis ID: <hypothesis-id>
   Hypothesis File: .fpf/knowledge/L1/<hypothesis-id>.md
@@ -140,7 +140,7 @@ For EACH L2 hypothesis file in `.fpf/knowledge/L2/`, launch parallel fpf-agent w
 - **Description**: "Audit trust: <hypothesis-id>"
 - **Prompt**:
   ```
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/audit-trust.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/audit-trust.md and execute.
 
   Hypothesis ID: <hypothesis-id>
   Hypothesis File: .fpf/knowledge/L2/<hypothesis-id>.md
@@ -160,7 +160,7 @@ Launch fpf-agent with sonnet[1m] model:
 - **Description**: "Create decision record"
 - **Prompt**:
   ```
-  Read ${CLAUDE_PLUGIN_ROOT}/../../tasks/context-engineering-kit-fpf/decide.md and execute.
+  Read ${CLAUDE_PLUGIN_ROOT}/tasks/decide.md and execute.
 
   Problem Statement: $ARGUMENTS
   L2 Hypotheses Directory: .fpf/knowledge/L2/

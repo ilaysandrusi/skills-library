@@ -21,7 +21,7 @@ Versions and counts in this plugin used to be baked into this skill body as lite
 Run **first**, every time this skill is invoked (any argument or none):
 
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/plugin-metadata.py" --section all-with-environment
+python "${CLAUDE_PLUGIN_ROOT}/scripts/plugin-metadata.py" --section all-with-environment
 ```
 
 This returns JSON with:

@@ -42,8 +42,8 @@ This skill REFUSES to proceed unless ALL of these pass. Print the failing items,
 2. A campaign plan exists at `~/.claude-marketing/brands/{slug}/campaigns/{campaign_id}/plan.json` (or the user provides `--plan-path`).
 3. The plan's `status` field is `approved` (not `draft` / `in_review` / `rejected`).
 4. Every asset referenced in the plan exists at the path the plan claims it does (creative files, landing-page URLs respond 200, email templates exist in the email platform).
-5. Every connector required by the channels in scope is reachable — re-run a fast probe: `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/connector-status.py" --brand {slug} --action status --probe-only --connectors {comma-separated channel connectors}`.
-6. Conversion tracking is verified for every channel in scope — GA4 events configured AND test-fired in the last 7 days: `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand {slug} --action diagnostic --channel ga4_health`.
+5. Every connector required by the channels in scope is reachable — re-run a fast probe: `python "${CLAUDE_PLUGIN_ROOT}/scripts/connector-status.py" --brand {slug} --action status --probe-only --connectors {comma-separated channel connectors}`.
+6. Conversion tracking is verified for every channel in scope — GA4 events configured AND test-fired in the last 7 days: `python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand {slug} --action diagnostic --channel ga4_health`.
 7. If any AI-generated visual / video / audio is in the asset list AND the campaign targets EU markets, every such asset has been signed via C2PA (`/digital-marketing-pro:c2pa-metadata` workflow — `embed-c2pa.py --ai-disclosure` under the hood). Article 50 compliance is non-negotiable for EU launches as of 2 Aug 2026.
 
 If any of these fail, print the punch list with the literal next command for each item, and exit.
@@ -105,39 +105,39 @@ Each platform action is dispatched via the relevant script:
 
 ```bash
 # CRM Campaign object
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/crm-sync.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/crm-sync.py" --brand "{brand}" \
     --action create-campaign --plan ~/.claude-marketing/brands/{slug}/campaigns/{campaign_id}/plan.json
 
 # Landing page check
 curl -sS -o /dev/null -w "%{http_code}" "{landing_url}"
 
 # Email automation enable (idempotent — skips if already enabled)
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand "{brand}" \
     --action enable-automation --automation-id "{id}" --platform "{klaviyo|hubspot|...}"
 
 # Paid-ads activation (delegates to launch-ad-campaign for the paid-only subset)
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand "{brand}" \
     --action launch-ads --plan ~/.claude-marketing/brands/{slug}/campaigns/{campaign_id}/plan.json
 # (this internally calls the launch-ad-campaign workflow for Google/Meta/LinkedIn/TikTok)
 
 # Organic social scheduling
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand "{brand}" \
     --action schedule-posts --plan ~/.claude-marketing/brands/{slug}/campaigns/{campaign_id}/plan.json
 
 # Influencer notification
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand "{brand}" \
     --action notify-influencers --plan ~/.claude-marketing/brands/{slug}/campaigns/{campaign_id}/plan.json
 
 # PR send
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand "{brand}" \
     --action pr-send --plan ~/.claude-marketing/brands/{slug}/campaigns/{campaign_id}/plan.json
 
 # Internal kickoff
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand "{brand}" \
     --action internal-kickoff --plan ~/.claude-marketing/brands/{slug}/campaigns/{campaign_id}/plan.json
 
 # Day-1 monitoring
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py" --brand "{brand}" \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py" --brand "{brand}" \
     --action arm-watchdog --campaign-id "{campaign_id}" --kpis "{kpi list}"
 ```
 
@@ -146,7 +146,7 @@ If any action fails:
 1. Update `launch-state.json` with `status: paused_at_step_{N}` and the error.
 2. Do NOT proceed to subsequent steps. Subsequent steps depend on this one.
 3. Print the failure with a literal remediation command and the exact resume command:
-   `python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/execution-tracker.py" --brand "{brand}" --action resume-launch --data '{"campaign_id":"{campaign_id}","from_step":{N}}'`
+   `python "${CLAUDE_PLUGIN_ROOT}/scripts/execution-tracker.py" --brand "{brand}" --action resume-launch --data '{"campaign_id":"{campaign_id}","from_step":{N}}'`
 4. Do NOT auto-retry. Day-1 failures often mean a misconfiguration that retries will only amplify (duplicate campaigns, doubled emails, etc.). Human decision required.
 
 ### Step 4 — Write the launch record
@@ -215,6 +215,6 @@ Print the launch summary in the conversation:
 - [`campaign-plan`](../campaign-plan/SKILL.md) — produces the plan this skill consumes
 - [`launch-ad-campaign`](../launch-ad-campaign/SKILL.md) — the paid-ads-only subset this skill delegates to during Step 3 (paid-ads activation)
 - [`performance-check`](../performance-check/SKILL.md) — day-1 check-in skill mentioned in the success message
-- `performance-monitor.py` (`${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/performance-monitor.py`) — arms the day-1 watchdog
+- `performance-monitor.py` (`${CLAUDE_PLUGIN_ROOT}/scripts/performance-monitor.py`) — arms the day-1 watchdog
 - [`crm-sync`](../crm-sync/SKILL.md) — creates the CRM Campaign object
 - [`c2pa-metadata`](../c2pa-metadata/SKILL.md) — signs AI assets for EU launches (mandatory per Step 0)

@@ -92,7 +92,7 @@ Print only the requested section. Useful when you only need one piece of state.
 
 2. **Execute the script.**
    ```
-   python ${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/dm-status.py [--brand <slug>] [--json] [--quiet] [--section <name>]
+   python ${CLAUDE_PLUGIN_ROOT}/scripts/dm-status.py [--brand <slug>] [--json] [--quiet] [--section <name>]
    ```
 
 3. **Pass through the formatted output to the user.** The script does the heavy lifting; the skill is a thin orchestration layer.
@@ -106,7 +106,7 @@ Print only the requested section. Useful when you only need one piece of state.
 ```
 User: /digital-marketing-pro:status
 
-Skill runs: python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/dm-status.py"
+Skill runs: python "${CLAUDE_PLUGIN_ROOT}/scripts/dm-status.py"
 Output:
 
 ============================================================

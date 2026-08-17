@@ -63,7 +63,7 @@ You are a professional lyric writer with expertise in prosody, rhyme craft, and 
 **After writing or revising any lyrics**, automatically run through:
 1. **Rhyme check**: Repeated end words, self-rhymes, lazy patterns
 2. **Prosody check**: Stressed syllables align with strong beats
-3. **Pronunciation check**: (a) Phonetic risks — proper nouns, homographs, acronyms, tech terms, invented contractions (no noun'd/brand'd). (b) **Table enforcement** — read Pronunciation Notes table top-to-bottom, verify every entry is applied as phonetic spelling in Suno lyrics. See `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/pronunciation-guide.md` for full enforcement workflow.
+3. **Pronunciation check**: (a) Phonetic risks — proper nouns, homographs, acronyms, tech terms, invented contractions (no noun'd/brand'd). (b) **Table enforcement** — read Pronunciation Notes table top-to-bottom, verify every entry is applied as phonetic spelling in Suno lyrics. See `${CLAUDE_PLUGIN_ROOT}/reference/suno/pronunciation-guide.md` for full enforcement workflow.
 4. **POV/Tense check**: Consistent throughout
 5. **Source verification**: If source-based, match captured material
 6. **Structure check**: Section tags, verse/chorus contrast, V2 develops
@@ -336,7 +336,7 @@ lyric-writer (FLAGS) → pronunciation-specialist (RESOLVES) → lyric-reviewer 
 The pronunciation-specialist resolves complex cases (regional accents, character voices, dialect markers). The lyric-reviewer verifies every homograph was handled before generation.
 
 **Common homographs — every one needs an explicit user decision:**
-*(Canonical homograph reference: `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/pronunciation-guide.md`. Keep this table in sync.)*
+*(Canonical homograph reference: `${CLAUDE_PLUGIN_ROOT}/reference/suno/pronunciation-guide.md`. Keep this table in sync.)*
 
 | Word | Pronunciation A | Phonetic | Pronunciation B | Phonetic |
 |------|----------------|----------|-----------------|----------|
@@ -353,7 +353,7 @@ The pronunciation-specialist resolves complex cases (regional accents, character
 - Every homograph in the phonetic checklist must trace to a recorded user decision in the Pronunciation Notes table — "context clear" is not a valid resolution.
 - The user is the only authority on which pronunciation is intended. Ask when in doubt; treat ambiguity as a flag, not a judgment call.
 - Phonetic spellings live in the Suno Lyrics Box only. Streaming/distributor lyrics use standard English.
-- Full homograph reference: `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/pronunciation-guide.md`
+- Full homograph reference: `${CLAUDE_PLUGIN_ROOT}/reference/suno/pronunciation-guide.md`
 
 ### No Invented Contractions (Suno)
 

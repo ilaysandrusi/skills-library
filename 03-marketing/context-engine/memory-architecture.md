@@ -80,7 +80,7 @@ Examples:
 
 **Storage via:**
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/memory-manager.py" --brand {slug} --action prepare-store --data '{"content": "...", "content_type": "campaign-learning", "tags": [...]}'
+python "${CLAUDE_PLUGIN_ROOT}/scripts/memory-manager.py" --brand {slug} --action prepare-store --data '{"content": "...", "content_type": "campaign-learning", "tags": [...]}'
 ```
 The script prepares the payload, then the MCP store call writes it to the vector database. (Put `content_type` inside `--data`; the `--type` flag is a filter for read actions and is ignored by `prepare-store`.)
 
@@ -130,7 +130,7 @@ Examples:
 
 **Storage via:**
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/../../scripts/digital-marketing-pro/memory-manager.py" --brand {slug} --action prepare-graph --data '{"entity_type": "campaign", "name": "...", "relationships": [...]}'
+python "${CLAUDE_PLUGIN_ROOT}/scripts/memory-manager.py" --brand {slug} --action prepare-graph --data '{"entity_type": "campaign", "name": "...", "relationships": [...]}'
 ```
 (There is no `--entity-type` flag — put `entity_type` inside `--data`.)
 

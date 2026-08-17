@@ -133,10 +133,10 @@ Display this help information to the user in a clear, organized format.
 
 - **CLAUDE.md** - Main workflow instructions
 - **README.md** - Project overview
-- `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/suno/` - Suno V5 guides, pronunciation, tips
-- `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/workflows/` - Detailed workflow procedures
-- `${CLAUDE_PLUGIN_ROOT}/../../references/ai-music/mastering/` - Audio mastering documentation
-- `${CLAUDE_PLUGIN_ROOT}/../../templates/ai-music/` - Templates for new content
+- `${CLAUDE_PLUGIN_ROOT}/reference/suno/` - Suno V5 guides, pronunciation, tips
+- `${CLAUDE_PLUGIN_ROOT}/reference/workflows/` - Detailed workflow procedures
+- `${CLAUDE_PLUGIN_ROOT}/reference/mastering/` - Audio mastering documentation
+- `${CLAUDE_PLUGIN_ROOT}/templates/` - Templates for new content
 - `${CLAUDE_PLUGIN_ROOT}/skills/[skill-name]/SKILL.md` - Individual skill documentation
 
 ---

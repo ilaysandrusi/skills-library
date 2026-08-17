@@ -48,10 +48,10 @@ Use [skill-contract.md](../../references/aaron-marketing/skill-contract.md). Inc
 Prefer primary organization pages, structured data, verified platform profiles, Wikidata statements with references, and dated user-provided observations. Keyless helpers may support reconciliation:
 
 ```bash
-python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/kg.py" reconcile "<entity>"
-python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/kg.py" entity "<QID>"
-python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/pageviews.py" "<Article_Title>" --months 12
-python3 "${CLAUDE_PLUGIN_ROOT}/../../scripts/aaron-marketing/connectors/gdelt.py" '"<entity>"' --days 30
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/kg.py" reconcile "<entity>"
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/kg.py" entity "<QID>"
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/pageviews.py" "<Article_Title>" --months 12
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/gdelt.py" '"<entity>"' --days 30
 ```
 
 Pageviews and mention counts are recognition proxies, not authority scores. Tool refusal or an unobserved engine is **Unknown**, never Partial or Fail.

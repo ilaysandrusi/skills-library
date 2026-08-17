@@ -322,7 +322,7 @@ Before starting workflow:
    Run the folder creation script to create task directories and configure gitignore:
 
    ```bash
-   bash ${CLAUDE_PLUGIN_ROOT}/../../scripts/context-engineering-kit-sdd/create-folders.sh
+   bash ${CLAUDE_PLUGIN_ROOT}/scripts/create-folders.sh
    ```
 
    This creates:
@@ -452,7 +452,7 @@ You MUST launch for each step a separate agent, instead of performing all steps 
 
 1. Use the **Agent** type specified in the phase, and the **Model** tier resolved per the [Model Selection Policy](#model-selection-policy)
 2. Provide the task file path and user input as context
-3. **Provide the value of `${CLAUDE_PLUGIN_ROOT}` so agents can resolve paths like `@${CLAUDE_PLUGIN_ROOT}/../../scripts/context-engineering-kit-sdd/create-scratchpad.sh`**
+3. **Provide the value of `${CLAUDE_PLUGIN_ROOT}` so agents can resolve paths like `@${CLAUDE_PLUGIN_ROOT}/scripts/create-scratchpad.sh`**
 4. Require agent to implement exactly that step, not more, not less
 5. After each sub-phase, launch a judge agent to validate quality before proceeding
 
@@ -634,7 +634,7 @@ Launch judge:
   ```
   CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}
 
-  Read @${CLAUDE_PLUGIN_ROOT}/../../prompts/context-engineering-kit-sdd/judge.md for evaluation methodology and execute.
+  Read @${CLAUDE_PLUGIN_ROOT}/prompts/judge.md for evaluation methodology and execute.
 
   ### Artifact Path
   {path to skill file from Phase 2a}
@@ -692,7 +692,7 @@ Launch judge:
   ```
   CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}
 
-  Read @${CLAUDE_PLUGIN_ROOT}/../../prompts/context-engineering-kit-sdd/judge.md for evaluation methodology and execute.
+  Read @${CLAUDE_PLUGIN_ROOT}/prompts/judge.md for evaluation methodology and execute.
 
   ### Artifact Path
   {path to analysis file from Phase 2b}
@@ -746,7 +746,7 @@ Launch judge:
   ```
   CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}
 
-  Read @${CLAUDE_PLUGIN_ROOT}/../../prompts/context-engineering-kit-sdd/judge.md for evaluation methodology and execute.
+  Read @${CLAUDE_PLUGIN_ROOT}/prompts/judge.md for evaluation methodology and execute.
 
   ### Artifact Path
   {path to task file from Phase 2c}
@@ -839,7 +839,7 @@ Launch judge:
   ```
   CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}
 
-  Read @${CLAUDE_PLUGIN_ROOT}/../../prompts/context-engineering-kit-sdd/judge.md for evaluation methodology and execute.
+  Read @${CLAUDE_PLUGIN_ROOT}/prompts/judge.md for evaluation methodology and execute.
 
   ### Artifact Path
   {path to task file after Phase 3}
@@ -929,7 +929,7 @@ Launch judge:
   ```
   CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}
 
-  Read @${CLAUDE_PLUGIN_ROOT}/../../prompts/context-engineering-kit-sdd/judge.md for evaluation methodology and execute.
+  Read @${CLAUDE_PLUGIN_ROOT}/prompts/judge.md for evaluation methodology and execute.
 
   ### Artifact Path
   {path to task file after Phase 4}
@@ -1026,7 +1026,7 @@ Launch judge:
   ```
   CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}
 
-  Read @${CLAUDE_PLUGIN_ROOT}/../../prompts/context-engineering-kit-sdd/judge.md for evaluation methodology and execute.
+  Read @${CLAUDE_PLUGIN_ROOT}/prompts/judge.md for evaluation methodology and execute.
 
   ### Artifact Path
   {path to parallelized task file from Phase 5}
@@ -1118,7 +1118,7 @@ Launch judge:
   ```
   CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}
 
-  Read @${CLAUDE_PLUGIN_ROOT}/../../prompts/context-engineering-kit-sdd/judge.md for evaluation methodology and execute.
+  Read @${CLAUDE_PLUGIN_ROOT}/prompts/judge.md for evaluation methodology and execute.
 
   ### Artifact Path
   {path to task file with verifications from Phase 6}
