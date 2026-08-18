@@ -42,6 +42,7 @@
 | [`hooks/`](./hooks/) | 89 | הוקים של זמן ריצה (`hooks.json` וסקריפטים) |
 
 הסבר מלא, כולל למה משהו נשאר משותף: [`ARTIFACTS.md`](./ARTIFACTS.md).
+מדיניות ייבוא ושמירת חבילות מלאות: [`ARCHIVE_POLICY.md`](./ARCHIVE_POLICY.md).
 שיוך מקור לכל סקיל: [`SOURCES.json`](./SOURCES.json).
 
 ## קטגוריות
@@ -84,6 +85,7 @@
 
 ```bash
 node tools/validate-catalog.mjs
+node tools/validate-catalog.mjs --strict-source-files
 ```
 
 חיפוש והתקנת סקיל מתוך הספרייה אל תיקיית ה-skills האישית של Codex:

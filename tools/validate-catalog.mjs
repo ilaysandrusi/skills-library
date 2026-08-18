@@ -5,6 +5,7 @@ import { execFileSync } from "node:child_process";
 
 const root = process.cwd();
 const strict = process.argv.includes("--strict");
+const strictSourceFiles = process.argv.includes("--strict-source-files");
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
@@ -50,6 +51,7 @@ const expectedSkillFiles = new Set();
 const expectedSkillDirs = new Set();
 const errors = [];
 const warnings = [];
+const missingSourceFiles = [];
 
 let computedTotal = 0;
 for (const category of catalog.categories) {
@@ -87,6 +89,10 @@ for (const category of catalog.categories) {
 
     if (!sources.attribution?.[dir]) {
       warnings.push(`catalog skill has no source attribution: ${dir}`);
+    }
+
+    if (!fs.existsSync(path.join(root, dir, "SOURCE.md"))) {
+      missingSourceFiles.push(dir);
     }
   }
 }
@@ -126,6 +132,8 @@ const report = {
   missingSourceAttribution: warnings.filter((warning) =>
     warning.includes("has no source attribution"),
   ).length,
+  missingSourceFiles: missingSourceFiles.length,
+  missingSourceFilesSample: missingSourceFiles.slice(0, 25),
   invalidNestedFrontmatter: badExtraFrontmatter.length,
   errors,
   warnings: strict ? warnings : warnings.slice(0, 25),
@@ -133,6 +141,6 @@ const report = {
 
 console.log(JSON.stringify(report, null, 2));
 
-if (errors.length > 0 || (strict && warnings.length > 0)) {
+if (errors.length > 0 || (strict && warnings.length > 0) || (strictSourceFiles && missingSourceFiles.length > 0)) {
   process.exit(1);
 }
