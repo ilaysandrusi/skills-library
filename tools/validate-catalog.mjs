@@ -43,6 +43,27 @@ function hasFrontmatter(file) {
   return /^name:\s*/m.test(match[1]) && /^description:\s*/m.test(match[1]);
 }
 
+function nearestCatalogSkillDir(file) {
+  const normalized = file.replaceAll("\\", "/");
+  const ancestors = [...expectedSkillDirs].filter((dir) => normalized.startsWith(`${dir}/`));
+  return ancestors.sort((a, b) => b.length - a.length)[0] ?? null;
+}
+
+function isNestedWorkflowSkillFile(file) {
+  const parentDir = nearestCatalogSkillDir(file);
+  if (!parentDir) return false;
+
+  const relative = file.slice(parentDir.length + 1);
+  if (!relative.includes("/")) return false;
+
+  const text = fs.readFileSync(path.join(root, file), "utf8");
+  return (
+    /\|\s*Parent\s*\|/i.test(text) ||
+    /Invoked by the `[^`]+` orchestrator/i.test(text) ||
+    /Not directly user-routable/i.test(text)
+  );
+}
+
 const catalog = readJson("catalog.json");
 const sources = readJson("SOURCES.json");
 const readme = fs.readFileSync(path.join(root, "README.md"), "utf8");
@@ -107,7 +128,12 @@ if (sources.skills !== catalog.total) {
 
 const allSkillFiles = gitFiles("*SKILL.md");
 const extraSkillFiles = allSkillFiles.filter((file) => !expectedSkillFiles.has(file));
-const badExtraFrontmatter = extraSkillFiles.filter((file) => !hasFrontmatter(file));
+const nestedWorkflowSkillFiles = extraSkillFiles.filter(
+  (file) => !hasFrontmatter(file) && isNestedWorkflowSkillFile(file),
+);
+const badExtraFrontmatter = extraSkillFiles.filter(
+  (file) => !hasFrontmatter(file) && !nestedWorkflowSkillFiles.includes(file),
+);
 for (const file of badExtraFrontmatter) {
   warnings.push(`nested/non-catalog SKILL.md has invalid frontmatter: ${file}`);
 }
@@ -128,6 +154,8 @@ const report = {
   gitSkillFiles: allSkillFiles.length,
   catalogSkillFiles: expectedSkillFiles.size,
   nestedOrNonCatalogSkillFiles: extraSkillFiles.length,
+  nestedWorkflowSkillFiles: nestedWorkflowSkillFiles.length,
+  nestedWorkflowSkillFilesSample: nestedWorkflowSkillFiles.slice(0, 25),
   duplicateCatalogNameGroups: duplicateNameGroups.length,
   missingSourceAttribution: warnings.filter((warning) =>
     warning.includes("has no source attribution"),
