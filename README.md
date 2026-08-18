@@ -46,7 +46,7 @@
 |---|---|---|
 | [כתיבה וניקוי טקסט](./01-copy-writing/) | 99 | עצירת סלופ AI, קופי, הנחיות כתיבה |
 | [עיצוב וממשק](./02-design-ui/) | 109 | UI/UX, פרונט, נגישות, גלילה |
-| [שיווק ותוכן](./03-marketing/) | 537 | חבילת Corey Haines וסקילים שיווקיים |
+| [שיווק ותוכן](./03-marketing/) | 536 | חבילת Corey Haines וסקילים שיווקיים |
 | [Remotion (וידאו מקוד)](./04-remotion/) | 12 | יצירת וידאו עם React / Remotion |
 | [פיתוח ודיבאג](./05-development/) | 432 | Superpowers, בדיקות, תוכניות עבודה |
 | [מסמכים](./06-documents/) | 34 | PDF, Word, PowerPoint, Excel |
@@ -58,7 +58,7 @@
 | [אבטחה וביקורת קוד](./12-security/) | 145 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
 | [ענן ופריסה](./13-cloud-deploy/) | 97 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
 | [בדיקות ואוטומציה](./14-testing-qa/) | 197 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
-| [אינטגרציות ושירותים](./15-integrations/) | 251 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
+| [אינטגרציות ושירותים](./15-integrations/) | 252 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
 | [AI APIs ומדיה](./16-ai-apis-media/) | 220 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
 | [חבילת סייבר ענקית](./17-cybersecurity-pack/) | 817 | אנציקלופדיית סקילי סייבר (800+): פורנזיקה, תגובה לאירועים, מודיעין איומים, פנטסטינג והקשחה |
 | [פיננסים וחשבונאות](./18-finance-accounting/) | 788 | openaccountants (780+), CFO, ניתוח מניות ודוחות: הנהלת חשבונות, מס, ביקורת ותכנון פיננסי |
@@ -73,3 +73,18 @@
 | [קריירה, חינוך ובריאות](./28-career-education-health/) | 45 | קורות חיים, ניהול קריירה, חונכות לימודית ובריאות אישית |
 | [ECC (Everything Claude Code)](./29-ecc/) | 285 | חבילת affaan-m/ECC — 285 סקילים; ה-agents/rules/hooks/commands שלה בתיקיות הארטיפקטים |
 | [אחר](./99-other/) | 0 | סקילים שלא סווגו לקטגוריה ברורה |
+
+## כלי תחזוקה
+
+בדיקת עקביות בין `catalog.json`, קבצי README, שיוך מקורות וקבצי `SKILL.md` בפועל:
+
+```bash
+node tools/validate-catalog.mjs
+```
+
+חיפוש והתקנת סקיל מתוך הספרייה אל תיקיית ה-skills האישית של Codex:
+
+```bash
+node tools/install-skill.mjs --list outreach
+node tools/install-skill.mjs 15-integrations/agent-reach
+```
