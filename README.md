@@ -94,3 +94,12 @@ node tools/validate-catalog.mjs --strict-source-files
 node tools/install-skill.mjs --list outreach
 node tools/install-skill.mjs 15-integrations/agent-reach
 ```
+
+רישום סקילים חדשים שהועתקו לספרייה בכל האינדקסים (`catalog.json`, README של הקטגוריה,
+README ראשי ו-`SOURCES.json`). הקובץ מקבל רשימת `{"category","slug"}` ומוסיף רק את מה
+שחסר — שורות קיימות מועתקות כמו שהן, כי חלק מהתיאורים הישנים לא ניתנים לשחזור מה-frontmatter:
+
+```bash
+python3 tools/index-skills.py new-skills.json \
+  --source owner/repo --note "daily maintenance" --check
+```
