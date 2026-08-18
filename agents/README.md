@@ -2,7 +2,7 @@
 
 Delegated sub-agent role prompts. Each file defines one specialist (reviewer, architect, analyst, …) that a coding agent can hand a task to.
 
-**קבצים כאן:** 228 — מ-19 מקורות.
+**קבצים כאן:** 370 — מ-20 מקורות.
 
 כל מה שנמצא בתיקייה הזאת הוא **agents ברמת הריפו** — במעלה הזרם הוא משרת כמה סקילים במקביל, ולכן אי אפשר לשייך אותו לסקיל אחד. ארטיפקטים שכן שייכים לסקיל ספציפי הועברו לתוך תיקיית הסקיל עצמו (`<category>/<skill>/agents/`).
 
@@ -28,6 +28,7 @@ Delegated sub-agent role prompts. Each file defines one specialist (reviewer, ar
 | [`trailofbits/`](./trailofbits/) | 1 | [trailofbits/skills](https://github.com/trailofbits/skills) | CC-BY-SA-4.0 |
 | [`ui-ux-pro-max/`](./ui-ux-pro-max/) | 1 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | MIT |
 | [`understand-anything/`](./understand-anything/) | 10 | [Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything) | MIT |
+| [`wshobson/`](./wshobson/) | 142 | [wshobson/agents](https://github.com/wshobson/agents) | MIT |
 | [`zapier/`](./zapier/) | 1 | [zapier/zapier-mcp](https://github.com/zapier/zapier-mcp) | MIT |
 
 > אלה **לא** סקילים. ראה [`../ARTIFACTS.md`](../ARTIFACTS.md).

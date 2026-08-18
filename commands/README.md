@@ -2,7 +2,7 @@
 
 Slash-command definitions. Each file is one invocable workflow (`/review`, `/plan`, …) with its own prompt and arguments.
 
-**קבצים כאן:** 311 — מ-19 מקורות.
+**קבצים כאן:** 408 — מ-20 מקורות.
 
 כל מה שנמצא בתיקייה הזאת הוא **commands ברמת הריפו** — במעלה הזרם הוא משרת כמה סקילים במקביל, ולכן אי אפשר לשייך אותו לסקיל אחד. ארטיפקטים שכן שייכים לסקיל ספציפי הועברו לתוך תיקיית הסקיל עצמו (`<category>/<skill>/commands/`).
 
@@ -28,6 +28,7 @@ Slash-command definitions. Each file is one invocable workflow (`/review`, `/pla
 | [`openaccountants/`](./openaccountants/) | 1 | [openaccountants/openaccountants](https://github.com/openaccountants/openaccountants) | AGPL-3.0 |
 | [`trailofbits/`](./trailofbits/) | 1 | [trailofbits/skills](https://github.com/trailofbits/skills) | CC-BY-SA-4.0 |
 | [`ui-ux-pro-max/`](./ui-ux-pro-max/) | 2 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | MIT |
+| [`wshobson/`](./wshobson/) | 97 | [wshobson/agents](https://github.com/wshobson/agents) | MIT |
 | [`x-twitter-scraper/`](./x-twitter-scraper/) | 4 | [Xquik-dev/x-twitter-scraper](https://github.com/Xquik-dev/x-twitter-scraper) | MIT |
 
 > אלה **לא** סקילים. ראה [`../ARTIFACTS.md`](../ARTIFACTS.md).

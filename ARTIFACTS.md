@@ -65,10 +65,10 @@ CLI של npm לתיקיית הבית שלך.
 
 | סוג | תיקיות | קבצים |
 |---|---|---|
-| rules | 37 | 475 |
-| agents | 390 | 455 |
-| commands | 22 | 101 |
-| hooks | 24 | 86 |
+| rules | 38 | 483 |
+| agents | 391 | 456 |
+| commands | 22 | 98 |
+| hooks | 25 | 88 |
 
 הגדולות שבהן: `05-development/vercel-react-best-practices/rules` (72),
 `16-ai-apis-media/vercel-react-best-practices--charlie85270/rules` (57),
