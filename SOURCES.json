@@ -45002,15 +45002,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "03-marketing/skill": {
-   "skill": "03-marketing/skill",
-   "sources": [
-    "Panniantong/Agent-Reach"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "11-product-management/skill-authoring-workflow": {
    "skill": "11-product-management/skill-authoring-workflow",
    "sources": [
@@ -54183,6 +54174,15 @@
    "skill": "23-microsoft/zustand-store-ts",
    "sources": [
     "microsoft/skills"
+   ],
+   "method": "exact-name-match",
+   "added_in": "e7e832a4",
+   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
+  },
+  "15-integrations/agent-reach": {
+   "skill": "15-integrations/agent-reach",
+   "sources": [
+    "Panniantong/Agent-Reach"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",

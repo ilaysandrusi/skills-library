@@ -2,7 +2,7 @@
 
 חבילת Corey Haines וסקילים שיווקיים
 
-**מספר סקילים:** 537
+**מספר סקילים:** 536
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -483,7 +483,6 @@
 | [`site-structure-optimizer`](./site-structure-optimizer/SKILL.md) | Use when the user asks to "plan my site structure", "design the page hierarchy / navigation / URL taxonomy", "fix internal linking", or "find orphan pages"; runs two modes — architecture (hierarchy, nav, URL patterns, hub/spoke clusters, Mermaid site maps) and linking (link graph, authority flow… |
 | [`sitemap-audit`](./sitemap-audit/SKILL.md) | XML sitemap audit — find and fix the sitemap problems that quietly waste crawl budget and slow indexing. Discovers the sitemap (robots.txt, /sitemap.xml, sitemap index), validates structure and size limits, and cross-checks the URLs it lists against reality: non-200 / redirected / noindex /… |
 | [`sitemap-manager`](./sitemap-manager/SKILL.md) | Audit an existing XML sitemap — URL counts vs protocol limits, lastmod validity, sampled URL status codes, robots.txt and noindex conflicts, missing pages, compression — or generate a new sitemap (plan or valid XML with index splitting) from industry templates for SaaS, ecommerce, local, publisher… |
-| [`skill`](./skill/SKILL.md) | MUST USE when user wants to 调研/research/搜索/search/查/找/look up anything on the internet — e.g. 全网调研 X / 帮我调研一下 X / 查一下 X / 搜搜 X / 看看大家怎么评价 X / X 上有什么讨论 / research this topic。 Also MUST USE when user mentions any platform or shares any URL/链接: 小红书/xiaohongshu/xhs, Twitter/推特/X, B站/bilibili, Reddit… |
 | [`social-calendar-builder`](./social-calendar-builder/SKILL.md) | Use when the user asks to "build our social posting calendar", "set weekly slots and queue depth per channel", or "plan the evergreen recycle rotation"; produces the always-on brand calendar — pillar allocation with hero/hub/help balance and give:ask targets (all labeled Estimated starting… |
 | [`social-card-gen`](./social-card-gen/SKILL.md) | Generate platform-specific social post variants (Twitter/X, LinkedIn, Reddit) from one source input. Works with or without Node.js script. Includes platform reasoning, quality review, and guardrails against cross-posting spam. |
 | [`social-creative-builder`](./social-creative-builder/SKILL.md) | Use when the user asks to "turn this idea into posts for every platform", "write the X thread / LinkedIn post / 小红书 note", or "spec the carousel slides"; turns one idea into N platform-native ready-to-paste packages — post/thread, caption, Threads text, 小红书 note, link post with first-comment… |

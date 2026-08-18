@@ -2,11 +2,12 @@
 
 Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד
 
-**מספר סקילים:** 251
+**מספר סקילים:** 252
 
 | סקיל | מה הוא עושה |
 |---|---|
 | [`agent-email-inbox`](./agent-email-inbox/SKILL.md) | Use when building any system where email content triggers actions — AI agent inboxes, automated support handlers, email-to-task pipelines, or any workflow processing untrusted inbound email. Always use this skill when the user wants to receive emails and act on them programmatically, even if they… |
+| [`agent-reach`](./agent-reach/SKILL.md) | MUST USE when user wants to 调研/research/搜索/search/查/找/look up anything on the internet — e.g. 全网调研 X / 帮我调研一下 X / 查一下 X / 搜搜 X / 看看大家怎么评价 X / X 上有什么讨论 / research this topic。 Also MUST USE when user mentions any platform or shares any URL/链接: 小红书/xiaohongshu/xhs, Twitter/推特/X, B站/bilibili, Reddit, Facebook, Instagram, V2EX, LinkedIn/领英/招聘/求职/jobs, YouTube, GitHub code search, 小宇宙播客, 雪球/股票行情, RSS feeds, or any web URL. 15 platforms, multi-backend routing (OpenCLI / per-platform CLIs / APIs). Zero… |
 | [`answers`](./answers/SKILL.md) | USE FOR AI-grounded answers via OpenAI-compatible /chat/completions. Two modes: single-search (fast) or deep research (enable_research=true, thorough multi-search). Streaming/blocking. Citations. |
 | [`apple-container`](./apple-container/SKILL.md) | Apple's open-source `container` CLI to build, run, and manage OCI/Linux containers as lightweight per-container VMs on Apple-silicon macOS — no Docker daemon required. Use when the user mentions the `container` CLI, "apple container", running or building containers on macOS without Docker/Podman… |
 | [`atlassian`](./atlassian/SKILL.md) | Manage Jira issues and Confluence wiki pages in Atlassian Cloud. Use when: (1) searching/creating/updating Jira issues with JQL, (2) searching/reading/creating Confluence pages with CQL, (3) managing Jira workflows, transitions, and comments, (4) browsing Confluence spaces and page hierarchies.… |

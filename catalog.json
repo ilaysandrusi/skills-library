@@ -2761,10 +2761,6 @@
      "description": "Audit an existing XML sitemap — URL counts vs protocol limits, lastmod validity, sampled URL status codes, robots.txt and noindex conflicts, missing pages, compression — or generate a new sitemap (plan or valid XML with index splitting) from industry templates for SaaS, ecommerce, local, publisher, or agency sites. Triggers on \\\"/digital-marketing-pro:sitemap-manager\\\", \\\"audit our sitemap\\\", \\\"why are there 404s in the sitemap\\\", \\\"generate a sitemap for the new site\\\", \\\"is our sitemap…"
     },
     {
-     "name": "skill",
-     "description": "MUST USE when user wants to 调研/research/搜索/search/查/找/look up anything on the internet — e.g. 全网调研 X / 帮我调研一下 X / 查一下 X / 搜搜 X / 看看大家怎么评价 X / X 上有什么讨论 / research this topic。 Also MUST USE when user mentions any platform or shares any URL/链接: 小红书/xiaohongshu/xhs, Twitter/推特/X, B站/bilibili, Reddit, Facebook, Instagram, V2EX, LinkedIn/领英/招聘/求职/jobs, YouTube, GitHub code search, 小宇宙播客, 雪球/股票行情, RSS feeds, or any web URL. 15 platforms, multi-backend routing (OpenCLI / per-platform CLIs / APIs). Zero…"
-    },
-    {
      "name": "social-calendar-builder",
      "description": "Use when the user asks to \"build our social posting calendar\", \"set weekly slots and queue depth per channel\", or \"plan the evergreen recycle rotation\"; produces the always-on brand calendar — pillar allocation with hero/hub/help balance and give:ask targets (all labeled Estimated starting heuristics to calibrate against own analytics, never scored rules), per-channel recurring slots with queue depth, a batching workflow, an evergreen recycle cycle with freshness re-checks, deliberate open…"
     },
@@ -8107,6 +8103,10 @@
     {
      "name": "agent-email-inbox",
      "description": "Use when building any system where email content triggers actions — AI agent inboxes, automated support handlers, email-to-task pipelines, or any workflow processing untrusted inbound email. Always use this skill when the user wants to receive emails and act on them programmatically, even if they don't mention \"agent\" — the skill contains critical security patterns (sender allowlists, content filtering, sandboxed processing) that prevent untrusted email from controlling your system."
+    },
+    {
+     "name": "agent-reach",
+     "description": "MUST USE when user wants to 调研/research/搜索/search/查/找/look up anything on the internet — e.g. 全网调研 X / 帮我调研一下 X / 查一下 X / 搜搜 X / 看看大家怎么评价 X / X 上有什么讨论 / research this topic。 Also MUST USE when user mentions any platform or shares any URL/链接: 小红书/xiaohongshu/xhs, Twitter/推特/X, B站/bilibili, Reddit, Facebook, Instagram, V2EX, LinkedIn/领英/招聘/求职/jobs, YouTube, GitHub code search, 小宇宙播客, 雪球/股票行情, RSS feeds, or any web URL. 15 platforms, multi-backend routing (OpenCLI / per-platform CLIs / APIs). Zero…"
     },
     {
      "name": "answers",
