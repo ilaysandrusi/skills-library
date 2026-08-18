@@ -2,7 +2,7 @@
 
 Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד
 
-**מספר סקילים:** 252
+**מספר סקילים:** 254
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -139,6 +139,8 @@ Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Work
 | [`persona-researcher`](./persona-researcher/SKILL.md) | Organize research — manage references, notes, and collaboration. |
 | [`persona-sales-ops`](./persona-sales-ops/SKILL.md) | Manage sales workflows — track deals, schedule calls, client comms. |
 | [`persona-team-lead`](./persona-team-lead/SKILL.md) | Lead a team — run standups, coordinate tasks, and communicate. |
+| [`polar-billing`](./polar-billing/SKILL.md) | This skill should be used when working on Polar billing system, Stripe integration, subscription lifecycle, checkout flows, or benefit provisioning. |
+| [`polar-local-environment`](./polar-local-environment/SKILL.md) | This skill should be used when setting up or managing Polar local development environment with Docker. |
 | [`portable-text-conversion`](./portable-text-conversion/SKILL.md) | Convert HTML and Markdown content into Portable Text blocks for Sanity. Use when migrating content from legacy CMSs, importing HTML or Markdown into Sanity, building content pipelines that ingest external content, converting rich text between formats, or programmatically creating Portable Text… |
 | [`portable-text-serialization`](./portable-text-serialization/SKILL.md) | Render and serialize Portable Text to React, Svelte, Vue, Astro, HTML, Markdown, and plain text. Use when implementing Portable Text rendering in any frontend framework, building custom serializers for non-standard block types, converting Portable Text to HTML strings server-side, converting… |
 | [`postiz-agent`](./postiz-agent/SKILL.md) | Postiz is a tool to schedule social media and chat posts to 28+ channels X, LinkedIn, LinkedIn Page, Reddit, Instagram, Facebook Page, Threads, YouTube, Google My Business, TikTok, Pinterest, Dribbble, Discord, Slack, Kick, Twitch, Mastodon, Bluesky, Lemmy, Farcaster, Telegram, Nostr, VK, Medium… |

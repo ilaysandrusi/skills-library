@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6067
+**סה״כ סקילים:** 6085
 
 ## איך ללמוד
 
@@ -36,10 +36,10 @@
 
 | תיקייה | קבצים | מה זה |
 |---|---|---|
-| [`agents/`](./agents/) | 224 | סוכני משנה שהסוכן הראשי מאציל להם משימות |
+| [`agents/`](./agents/) | 228 | סוכני משנה שהסוכן הראשי מאציל להם משימות |
 | [`commands/`](./commands/) | 311 | פקודות סלאש שמופעלות במפורש |
 | [`rules/`](./rules/) | 164 | חוקים תמידיים לשפה, פריימוורק או סטייל |
-| [`hooks/`](./hooks/) | 91 | הוקים של זמן ריצה (`hooks.json` וסקריפטים) |
+| [`hooks/`](./hooks/) | 99 | הוקים של זמן ריצה (`hooks.json` וסקריפטים) |
 
 הסבר מלא, כולל למה משהו נשאר משותף: [`ARTIFACTS.md`](./ARTIFACTS.md).
 מדיניות ייבוא ושמירת חבילות מלאות: [`ARCHIVE_POLICY.md`](./ARCHIVE_POLICY.md).
@@ -53,18 +53,18 @@
 | [עיצוב וממשק](./02-design-ui/) | 109 | UI/UX, פרונט, נגישות, גלילה |
 | [שיווק ותוכן](./03-marketing/) | 536 | חבילת Corey Haines וסקילים שיווקיים |
 | [Remotion (וידאו מקוד)](./04-remotion/) | 12 | יצירת וידאו עם React / Remotion |
-| [פיתוח ודיבאג](./05-development/) | 432 | Superpowers, בדיקות, תוכניות עבודה |
+| [פיתוח ודיבאג](./05-development/) | 436 | Superpowers, בדיקות, תוכניות עבודה |
 | [מסמכים](./06-documents/) | 34 | PDF, Word, PowerPoint, Excel |
-| [Supabase / Postgres](./07-supabase/) | 2 | עבודה עם מסדי נתונים של Supabase |
-| [Context Engineering](./08-context-engineering/) | 156 | ניהול קונטקסט, סוכני משנה, חשיבה |
+| [Supabase / Postgres](./07-supabase/) | 4 | עבודה עם מסדי נתונים של Supabase |
+| [Context Engineering](./08-context-engineering/) | 158 | ניהול קונטקסט, סוכני משנה, חשיבה |
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 4 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 146 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |
 | [אבטחה וביקורת קוד](./12-security/) | 152 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
-| [ענן ופריסה](./13-cloud-deploy/) | 147 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
-| [בדיקות ואוטומציה](./14-testing-qa/) | 199 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
-| [אינטגרציות ושירותים](./15-integrations/) | 252 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
-| [AI APIs ומדיה](./16-ai-apis-media/) | 220 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
+| [ענן ופריסה](./13-cloud-deploy/) | 150 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
+| [בדיקות ואוטומציה](./14-testing-qa/) | 201 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
+| [אינטגרציות ושירותים](./15-integrations/) | 254 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
+| [AI APIs ומדיה](./16-ai-apis-media/) | 223 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
 | [חבילת סייבר ענקית](./17-cybersecurity-pack/) | 817 | אנציקלופדיית סקילי סייבר (800+): פורנזיקה, תגובה לאירועים, מודיעין איומים, פנטסטינג והקשחה |
 | [פיננסים וחשבונאות](./18-finance-accounting/) | 788 | openaccountants (780+), CFO, ניתוח מניות ודוחות: הנהלת חשבונות, מס, ביקורת ותכנון פיננסי |
 | [מכירות, GTM וסטארטאפ](./19-sales-gtm-startup/) | 293 | Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארטאפים בשלב מוקדם |

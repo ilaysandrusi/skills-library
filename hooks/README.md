@@ -4,7 +4,7 @@ Runtime event handlers plus their `hooks.json` wiring — scripts that fire on s
 
 > **זהירות:** הוקים הם קוד שסוכן קוד מריץ אוטומטית. תקרא הוק לפני שאתה מחבר אותו. `zero/zero-gemini/hooks.json` ובמיוחד הוקים שמורידים ריצת-זמן — בדוק לפני הפעלה.
 
-**קבצים כאן:** 91 — מ-20 מקורות.
+**קבצים כאן:** 99 — מ-21 מקורות.
 
 כל מה שנמצא בתיקייה הזאת הוא **hooks ברמת הריפו** — במעלה הזרם הוא משרת כמה סקילים במקביל, ולכן אי אפשר לשייך אותו לסקיל אחד. ארטיפקטים שכן שייכים לסקיל ספציפי הועברו לתוך תיקיית הסקיל עצמו (`<category>/<skill>/hooks/`).
 
@@ -18,6 +18,7 @@ Runtime event handlers plus their `hooks.json` wiring — scripts that fire on s
 | [`ai-music-skills/`](./ai-music-skills/) | 3 | [bitwize-music-studio/claude-ai-music-skills](https://github.com/bitwize-music-studio/claude-ai-music-skills) | CC0-1.0 |
 | [`aws-core/`](./aws-core/) | 2 | [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | Apache-2.0 |
 | [`claude-bootstrap/`](./claude-bootstrap/) | 5 | [alinaqi/claude-bootstrap](https://github.com/alinaqi/claude-bootstrap) | MIT |
+| [`claude-codex-settings/`](./claude-codex-settings/) | 7 | [fcakyon/claude-codex-settings](https://github.com/fcakyon/claude-codex-settings) | Apache-2.0 |
 | [`claude-memory-kit/`](./claude-memory-kit/) | 5 | [awrshift/claude-memory-kit](https://github.com/awrshift/claude-memory-kit) | MIT |
 | [`claude-seo/`](./claude-seo/) | 3 | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | MIT |
 | [`context-engineering-kit/`](./context-engineering-kit/) | 6 | [NeoLabHQ/context-engineering-kit](https://github.com/NeoLabHQ/context-engineering-kit) | GPL-3.0 |

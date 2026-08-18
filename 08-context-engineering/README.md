@@ -2,7 +2,7 @@
 
 ניהול קונטקסט, סוכני משנה, חשיבה
 
-**מספר סקילים:** 156
+**מספר סקילים:** 158
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -34,6 +34,7 @@
 | [`clarity-gate--frmoretto-2`](./clarity-gate--frmoretto-2/SKILL.md) | Pre-ingestion verification for epistemic quality in RAG systems. Ensures documents are properly qualified before entering knowledge bases. Produces CGD (Clarity-Gated Documents) and validates SOT (Source of Truth) files. |
 | [`claude-memory-kit`](./claude-memory-kit/SKILL.md) | Persistent memory for Claude Code agents with an agent-audit-ritual architecture. User only talks; the agent captures, audits, proposes promotions, and writes. Memory lives in layers — a hot cache (MEMORY.md) held under three size caps, per-session handoffs (context/handoffs/), topical knowledge… |
 | [`clawhub`](./clawhub/SKILL.md) | Load the user's Emulo profile, mined from their local Claude Code, Codex, and OpenCode session logs, so you work like them instead of a cold start. Use before working on their task. |
+| [`codex-advisor`](./codex-advisor/SKILL.md) | This skill should be used when the user asks for a "GPT second opinion", wants a "cross-model review", needs to "check a plan before committing", wants another view after repeated failures, or explicitly invokes "codex-advisor". |
 | [`codex-fable5`](./codex-fable5/SKILL.md) | Apply a Claude Fable 5 inspired operating style inside Codex. Use when the user asks to make Codex act like Fable, Fable5, fablize, or Value-for-Fable/VFF; convert Anthropic or Claude system-prompt/tool instructions to Codex; set up a Fable-style tool-first workflow with goal gates, investigation… |
 | [`commit`](./commit/SKILL.md) | Create well-formatted commits with conventional commit messages and emoji |
 | [`context-audit`](./context-audit/SKILL.md) | Audit the instructions an agent already carries — CLAUDE.md, AGENTS.md, skills, tool descriptions — for contradictions, over-constraint, and duplication, then propose a cut list. Use when an agent ignores its own instructions, when a CLAUDE.md has grown bloated, or when the user asks to audit or… |
@@ -61,6 +62,7 @@
 | [`error-analysis`](./error-analysis/SKILL.md) | Help the user systematically identify and categorize failure modes in an LLM pipeline by reading traces. Use when starting a new eval project, after significant pipeline changes (new features, model switches, prompt rewrites), when production metrics drop, or after incidents. |
 | [`eval-audit`](./eval-audit/SKILL.md) | Audit an LLM eval pipeline and surface problems: missing error analysis, unvalidated judges, vanity metrics, etc. Use when inheriting an eval system, when unsure whether evals are trustworthy, or as a starting point when no eval infrastructure exists. Do NOT use when the goal is to build a new… |
 | [`evaluate-rag`](./evaluate-rag/SKILL.md) | Guides evaluation of RAG pipeline retrieval and generation quality. Use when evaluating a retrieval-augmented generation system, measuring retrieval quality, assessing generation faithfulness or relevance, generating synthetic QA pairs for retrieval testing, or optimizing chunking strategies. |
+| [`fable-advisor`](./fable-advisor/SKILL.md) | This skill should be used when the user asks for a "Fable second opinion", wants to "check a plan before committing", needs another view after repeated failures, or explicitly invokes "fable-advisor". |
 | [`fractal`](./fractal/SKILL.md) | Spawn and manage child nodes -- recursive autonomous agent loops. |
 | [`fractal--plasma-ai`](./fractal--plasma-ai/SKILL.md) | Hierarchical agent loops with recursive self-organization. |
 | [`generate-synthetic-data`](./generate-synthetic-data/SKILL.md) | Create diverse synthetic test inputs for LLM pipeline evaluation using dimension-based tuple generation. Use when bootstrapping an eval dataset, when real user data is sparse, or when stress-testing specific failure hypotheses. Do NOT use when you already have 100+ representative real traces (use… |

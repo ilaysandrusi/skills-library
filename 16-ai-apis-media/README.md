@@ -2,7 +2,7 @@
 
 OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה
 
-**מספר סקילים:** 220
+**מספר סקילים:** 223
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -90,6 +90,7 @@ OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידא
 | [`import-track`](./import-track/SKILL.md) | Moves track markdown files to the correct album location. Use when the user has track files in Downloads or other locations that need to be placed in an album. |
 | [`ios-application-dev`](./ios-application-dev/SKILL.md) | iOS application development guide covering UIKit, SnapKit, and SwiftUI. Includes touch targets, safe areas, navigation patterns, Dynamic Type, Dark Mode, accessibility, collection views, common UI components, and SwiftUI design guidelines. For detailed references on specific topics, see the… |
 | [`jules`](./jules/SKILL.md) | Delegate coding tasks to Google Jules AI agent for asynchronous execution. Use when user says: 'have Jules fix', 'delegate to Jules', 'send to Jules', 'ask Jules to', 'check Jules sessions', 'pull Jules results', 'jules add tests', 'jules add docs', 'jules review pr'. Handles: bug fixes… |
+| [`livekit-skills`](./livekit-skills/SKILL.md) | Build voice AI agents with LiveKit Agents SDK. Use when the user asks to "build a voice agent", "create a LiveKit agent", "add voice AI", "implement handoffs", "structure agent workflows", or is working with LiveKit Agents SDK. Covers both LiveKit Cloud and self-hosted deployments using lk CLI. |
 | [`lyric-refiner`](./lyric-refiner/SKILL.md) | Autonomous multi-pass lyric refinement for tightening, cohesion, and album unity. Use after lyrics are written to polish a track or entire album through iterative passes. |
 | [`lyric-reviewer`](./lyric-reviewer/SKILL.md) | Reviews lyrics against a quality checklist before Suno generation. Use before generating tracks to catch rhyme, prosody, pronunciation, and structural issues. |
 | [`lyric-writer`](./lyric-writer/SKILL.md) | Writes or reviews lyrics with professional prosody, rhyme craft, and quality checks. Use when writing new lyrics, revising existing lyrics, or when the user says 'let's work on a track.' |
@@ -184,6 +185,7 @@ OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידא
 | [`tts`](./tts/SKILL.md) | Use this skill whenever the user wants to convert text into speech, generate audio from text, or produce voiceovers. Triggers include: any mention of 'TTS', 'text to speech', 'speak', 'say', 'voice', 'read aloud', 'audio narration', 'voiceover', 'dubbing', or requests to turn written content into… |
 | [`tutorial`](./tutorial/SKILL.md) | Provides interactive guided album creation for new users. Use when the user is new to the plugin or asks for a walkthrough of the album creation process. |
 | [`ugc`](./ugc/SKILL.md) | Plan and run UGC-style creator ads and social proof videos with genmedia. Use this for direct-to-camera creator scripts, talking-head ads, product demos, testimonials, founder clips, unboxing, reaction, before-after, faceless voiceover, and short vertical social videos. |
+| [`ultralytics-platform`](./ultralytics-platform/SKILL.md) | This skill should be used when user asks to "upload my model to Ultralytics Platform", "push this run to the platform", "upload a dataset to platform", "download a dataset from platform", "search platform datasets", "start cloud training", "train on platform GPUs", "export a model on platform"… |
 | [`understand`](./understand/SKILL.md) | Analyze a codebase to produce an interactive knowledge graph for understanding architecture, components, and relationships |
 | [`understand-chat`](./understand-chat/SKILL.md) | Use when you need to ask questions about a codebase or understand code using a knowledge graph |
 | [`understand-dashboard`](./understand-dashboard/SKILL.md) | Launch the interactive web dashboard to visualize a codebase's knowledge graph |
@@ -225,4 +227,5 @@ OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידא
 | [`voice-checker`](./voice-checker/SKILL.md) | Reviews lyrics and prose for AI-written patterns (abstract noun stacking, over-explained metaphors, cliche escalation, missing idiosyncrasy, prose AI tells). Advisory Warning/Info severity — flags issues, does not block or rewrite. Use when reviewing lyrics for authenticity or before generation to… |
 | [`wonda-cli`](./wonda-cli/SKILL.md) | Using the Wonda CLI to generate images, videos, music, and audio from the terminal — plus LinkedIn, Reddit, and X/Twitter research and automation |
 | [`world-builder`](./world-builder/SKILL.md) | Create and manage generative game zones for Dorothy's Pokemon-style world. Use this skill when creating, updating, or designing game worlds via MCP tools. |
+| [`yolo-training`](./yolo-training/SKILL.md) | This skill should be used when user asks to "improve my mAP", "why is my model overfitting", "my training is diverging", "read my results.csv", "interpret my training curves", "my AP50 is good but AP50-95 is bad", "my recall is low", "how do I pick learning rate", "which augmentations should I… |
 | [`Youtube-clipper-skill`](./Youtube-clipper-skill/SKILL.md) | YouTube 视频智能剪辑工具。下载视频和字幕，AI 分析生成精细章节（几分钟级别）， 用户选择片段后自动剪辑、翻译字幕为中英双语、烧录字幕到视频，并生成总结文案。 使用场景：当用户需要剪辑 YouTube 视频、生成短视频片段、制作双语字幕版本时。 关键词：视频剪辑、YouTube、字幕翻译、双语字幕、视频下载、clip video |

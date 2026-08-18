@@ -2,7 +2,7 @@
 
 Delegated sub-agent role prompts. Each file defines one specialist (reviewer, architect, analyst, …) that a coding agent can hand a task to.
 
-**קבצים כאן:** 224 — מ-18 מקורות.
+**קבצים כאן:** 228 — מ-19 מקורות.
 
 כל מה שנמצא בתיקייה הזאת הוא **agents ברמת הריפו** — במעלה הזרם הוא משרת כמה סקילים במקביל, ולכן אי אפשר לשייך אותו לסקיל אחד. ארטיפקטים שכן שייכים לסקיל ספציפי הועברו לתוך תיקיית הסקיל עצמו (`<category>/<skill>/agents/`).
 
@@ -14,6 +14,7 @@ Delegated sub-agent role prompts. Each file defines one specialist (reviewer, ar
 | [`alirezarezvani/`](./alirezarezvani/) | 33 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | MIT |
 | [`auto-research-in-sleep/`](./auto-research-in-sleep/) | 2 | [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | MIT |
 | [`claude-bootstrap/`](./claude-bootstrap/) | 1 | [alinaqi/claude-bootstrap](https://github.com/alinaqi/claude-bootstrap) | MIT |
+| [`claude-codex-settings/`](./claude-codex-settings/) | 4 | [fcakyon/claude-codex-settings](https://github.com/fcakyon/claude-codex-settings) | Apache-2.0 |
 | [`claude-seo/`](./claude-seo/) | 18 | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | MIT |
 | [`coderabbit/`](./coderabbit/) | 1 | [coderabbitai/skills](https://github.com/coderabbitai/skills) | MIT |
 | [`context-engineering-kit/`](./context-engineering-kit/) | 23 | [NeoLabHQ/context-engineering-kit](https://github.com/NeoLabHQ/context-engineering-kit) | GPL-3.0 |

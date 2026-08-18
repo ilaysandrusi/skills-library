@@ -2,7 +2,7 @@
 
 Superpowers, בדיקות, תוכניות עבודה
 
-**מספר סקילים:** 432
+**מספר סקילים:** 436
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -62,6 +62,7 @@ Superpowers, בדיקות, תוכניות עבודה
 | [`ci-cd-and-automation`](./ci-cd-and-automation/SKILL.md) | Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies. |
 | [`claude-api`](./claude-api/SKILL.md) | Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it "looks like a one-liner" — whenever: the prompt names Claude/Anthropic in any… |
 | [`claude-handoff`](./claude-handoff/SKILL.md) | Hand the current conversation off to a fresh background agent that picks up the work immediately. |
+| [`clean-gone-branches`](./clean-gone-branches/SKILL.md) | This skill should be used when user asks to "clean gone branches", "remove deleted local branches", "prune branches removed from remote", or explicitly invokes "clean-gone-branches". |
 | [`cli-creator`](./cli-creator/SKILL.md) | Build a composable CLI for Codex from API docs, an OpenAPI spec, existing curl examples, an SDK, a web app, an admin tool, or a local script. Use when the user wants Codex to create a command-line tool that can run from any repo, expose composable read/write commands, return stable JSON, manage… |
 | [`cloud-logging-configuration-basics`](./cloud-logging-configuration-basics/SKILL.md) | Configure single-project Google Cloud Logging: regional log buckets, log sinks, log views, restricting or hiding sensitive logs in the default view (_Default) filter, IAM permissions for views (Logs View Accessor, IAM conditions), logs-based metrics, log exclusions, and sampling. Don't use for… |
 | [`cloud-logging-cross-project-configuration`](./cloud-logging-cross-project-configuration/SKILL.md) | Configure and troubleshoot Google Cloud cross-project centralized logging and read-time aggregation. Use when: - Setting up log routing from multiple projects/folders/organizations to a central log bucket. - Creating cross-project log sinks and configuring central log buckets. - Troubleshooting… |
@@ -84,6 +85,7 @@ Superpowers, בדיקות, תוכניות עבודה
 | [`codex-collab`](./codex-collab/SKILL.md) | Use when the user asks to invoke, delegate to, or collaborate with Codex on any task. Also use PROACTIVELY when an independent, non-Claude perspective from Codex would add value — second opinions on code, plans, architecture, or design decisions. |
 | [`codex-review`](./codex-review/SKILL.md) | OpenAI Codex CLI code review with GPT-5.2-Codex, CI/CD integration |
 | [`commit-hygiene`](./commit-hygiene/SKILL.md) | Atomic commits, PR size limits, commit thresholds, stacked PRs |
+| [`commit-staged`](./commit-staged/SKILL.md) | This skill should be used when user asks to "commit these changes", "write commit message", "stage and commit", "create a commit", "commit staged files", or explicitly invokes "commit-staged". |
 | [`context-item-creation`](./context-item-creation/SKILL.md) | Guides you through creating context items — instructions, skills, knowledge pointers, and memory events — that give the AI analyst persistent knowledge about your organization. Covers when to create each type, naming conventions, folder organization, and the hard boundary between context (rules and… |
 | [`conversation-review`](./conversation-review/SKILL.md) | Use when a semantic/context layer curator wants to review past analysis conversations in bulk, categorize user feedback into actionable improvement areas, and apply targeted changes to the semantic model or context layer. Covers the full workflow from collecting conversations and classifying… |
 | [`council-review`](./council-review/SKILL.md) | Multi-model validation council — auto-validate plans, architecture changes, and PRs via validate-plan/review before executing |
@@ -357,6 +359,7 @@ Superpowers, בדיקות, תוכניות עבודה
 | [`render-deploy`](./render-deploy/SKILL.md) | Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform. |
 | [`requesting-code-review`](./requesting-code-review/SKILL.md) | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
 | [`research`](./research/SKILL.md) | Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent. |
+| [`resolve-pr-comments`](./resolve-pr-comments/SKILL.md) | This skill should be used when user asks to "address PR comments", "resolve PR feedback", "handle review comments", "fix PR issues", "respond to PR review", or explicitly invokes "resolve-pr-comments". |
 | [`resolving-merge-conflicts`](./resolving-merge-conflicts/SKILL.md) | Use when you need to resolve an in-progress git merge/rebase conflict. |
 | [`rover`](./rover/SKILL.md) | Guide for using Apollo Rover CLI to manage GraphQL schemas and federation. Use this skill when: (1) publishing or fetching subgraph/graph schemas, (2) composing supergraph schemas locally or via GraphOS, (3) running local supergraph development with rover dev, (4) validating schemas with check and… |
 | [`rust-best-practices`](./rust-best-practices/SKILL.md) | Guide for writing idiomatic Rust code based on Apollo GraphQL's best practices handbook. Use this skill when: (1) writing new Rust code or functions, (2) reviewing or refactoring existing Rust code, (3) deciding between borrowing vs cloning or ownership patterns, (4) implementing error handling… |
@@ -403,6 +406,7 @@ Superpowers, בדיקות, תוכניות עבודה
 | [`ui-mobile`](./ui-mobile/SKILL.md) | Mobile UI patterns - React Native, iOS/Android, touch targets |
 | [`ui-testing`](./ui-testing/SKILL.md) | Visual testing - catch invisible buttons, broken layouts, contrast |
 | [`ui-web`](./ui-web/SKILL.md) | Web UI - glassmorphism, Tailwind, dark mode, accessibility |
+| [`update-pr-summary`](./update-pr-summary/SKILL.md) | This skill should be used when user asks to "update PR summary", "update PR description", "rewrite PR body", "refresh PR title and body", or explicitly invokes "update-pr-summary". |
 | [`user-journeys`](./user-journeys/SKILL.md) | User experience flows - journey mapping, UX validation, error recovery |
 | [`using-git-worktrees`](./using-git-worktrees/SKILL.md) | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback |
 | [`using-git-worktrees--obra`](./using-git-worktrees--obra/SKILL.md) | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback |

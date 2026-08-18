@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6067,
- "traced_to_source_repo": 6053,
- "distinct_source_repos": 220,
+ "skills": 6085,
+ "traced_to_source_repo": 6071,
+ "distinct_source_repos": 221,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -74,6 +74,7 @@
   "Sendmux/skills": 18,
   "anthropics/skills": 18,
   "binance/binance-skills-hub": 18,
+  "fcakyon/claude-codex-settings": 18,
   "browserbase/skills": 17,
   "fal-ai-community/skills": 17,
   "google-labs-code/stitch-skills": 17,
@@ -54971,6 +54972,168 @@
    "method": "direct-import",
    "added_in": "2026-08-18",
    "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "14-testing-qa/agent-browser": {
+   "skill": "14-testing-qa/agent-browser",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "05-development/clean-gone-branches": {
+   "skill": "05-development/clean-gone-branches",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "08-context-engineering/codex-advisor": {
+   "skill": "08-context-engineering/codex-advisor",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "05-development/commit-staged": {
+   "skill": "05-development/commit-staged",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/dokploy-deploy": {
+   "skill": "13-cloud-deploy/dokploy-deploy",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "14-testing-qa/electron": {
+   "skill": "14-testing-qa/electron",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "08-context-engineering/fable-advisor": {
+   "skill": "08-context-engineering/fable-advisor",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/hetzner-deploy": {
+   "skill": "13-cloud-deploy/hetzner-deploy",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "16-ai-apis-media/livekit-skills": {
+   "skill": "16-ai-apis-media/livekit-skills",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/openobserve-api": {
+   "skill": "13-cloud-deploy/openobserve-api",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "15-integrations/polar-billing": {
+   "skill": "15-integrations/polar-billing",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "15-integrations/polar-local-environment": {
+   "skill": "15-integrations/polar-local-environment",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "05-development/resolve-pr-comments": {
+   "skill": "05-development/resolve-pr-comments",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "07-supabase/supabase-cli": {
+   "skill": "07-supabase/supabase-cli",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "07-supabase/supabase-js": {
+   "skill": "07-supabase/supabase-js",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "16-ai-apis-media/ultralytics-platform": {
+   "skill": "16-ai-apis-media/ultralytics-platform",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "05-development/update-pr-summary": {
+   "skill": "05-development/update-pr-summary",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "16-ai-apis-media/yolo-training": {
+   "skill": "16-ai-apis-media/yolo-training",
+   "sources": [
+    "fcakyon/claude-codex-settings"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
   }
  }
 }

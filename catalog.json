@@ -1,5 +1,5 @@
 {
- "total": 6067,
+ "total": 6085,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -3283,6 +3283,10 @@
      "description": "Hand the current conversation off to a fresh background agent that picks up the work immediately."
     },
     {
+     "name": "clean-gone-branches",
+     "description": "This skill should be used when user asks to \"clean gone branches\", \"remove deleted local branches\", \"prune branches removed from remote\", or explicitly invokes \"clean-gone-branches\"."
+    },
+    {
      "name": "cli-creator",
      "description": "Build a composable CLI for Codex from API docs, an OpenAPI spec, existing curl examples, an SDK, a web app, an admin tool, or a local script. Use when the user wants Codex to create a command-line tool that can run from any repo, expose composable read/write commands, return stable JSON, manage auth, and pair with a companion skill."
     },
@@ -3369,6 +3373,10 @@
     {
      "name": "commit-hygiene",
      "description": "Atomic commits, PR size limits, commit thresholds, stacked PRs"
+    },
+    {
+     "name": "commit-staged",
+     "description": "This skill should be used when user asks to \"commit these changes\", \"write commit message\", \"stage and commit\", \"create a commit\", \"commit staged files\", or explicitly invokes \"commit-staged\"."
     },
     {
      "name": "context-item-creation",
@@ -4463,6 +4471,10 @@
      "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent."
     },
     {
+     "name": "resolve-pr-comments",
+     "description": "This skill should be used when user asks to \"address PR comments\", \"resolve PR feedback\", \"handle review comments\", \"fix PR issues\", \"respond to PR review\", or explicitly invokes \"resolve-pr-comments\"."
+    },
+    {
      "name": "resolving-merge-conflicts",
      "description": "Use when you need to resolve an in-progress git merge/rebase conflict."
     },
@@ -4645,6 +4657,10 @@
     {
      "name": "ui-web",
      "description": "Web UI - glassmorphism, Tailwind, dark mode, accessibility"
+    },
+    {
+     "name": "update-pr-summary",
+     "description": "This skill should be used when user asks to \"update PR summary\", \"update PR description\", \"rewrite PR body\", \"refresh PR title and body\", or explicitly invokes \"update-pr-summary\"."
     },
     {
      "name": "user-journeys",
@@ -4941,6 +4957,14 @@
      "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, declarative schemas, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector)…"
     },
     {
+     "name": "supabase-cli",
+     "description": "This skill should be used when user asks to \"use supabase CLI\", \"supabase init\", \"supabase start\", \"run migrations\", \"deploy edge functions\", \"manage Supabase project\", or works with the supabase command-line tool for local development and project management."
+    },
+    {
+     "name": "supabase-js",
+     "description": "This skill should be used when user asks to \"use supabase-js\", \"query Supabase database\", \"supabase auth\", \"supabase storage\", \"supabase realtime\", \"supabase edge functions\", or works with the @supabase/supabase-js JavaScript/TypeScript SDK."
+    },
+    {
      "name": "supabase-postgres-best-practices",
      "description": "Postgres best practices maintained by Supabase, for Postgres running anywhere. Load this skill BEFORE writing or changing anything that lives in a Postgres database: creating or altering tables and columns (including choosing column types), schema design, migrations and declarative schema files, RLS policies and the tests that verify them, indexes, triggers, database functions, queues and scheduled jobs (pg_cron, pgmq), vector/semantic search (pgvector), and restoring dumps (pg_restore) or…"
     }
@@ -5064,6 +5088,10 @@
      "description": "Load the user's Emulo profile, mined from their local Claude Code, Codex, and OpenCode session logs, so you work like them instead of a cold start. Use before working on their task."
     },
     {
+     "name": "codex-advisor",
+     "description": "This skill should be used when the user asks for a \"GPT second opinion\", wants a \"cross-model review\", needs to \"check a plan before committing\", wants another view after repeated failures, or explicitly invokes \"codex-advisor\"."
+    },
+    {
      "name": "codex-fable5",
      "description": "Apply a Claude Fable 5 inspired operating style inside Codex. Use when the user asks to make Codex act like Fable, Fable5, fablize, or Value-for-Fable/VFF; convert Anthropic or Claude system-prompt/tool instructions to Codex; set up a Fable-style tool-first workflow with goal gates, investigation, verification grounding, cost-aware routing, or 2-pass review; create Codex AGENTS.md guidance from Fable-like behavior; or connect Codex to an authorized Fable-compatible provider through an…"
     },
@@ -5170,6 +5198,10 @@
     {
      "name": "evaluate-rag",
      "description": "Guides evaluation of RAG pipeline retrieval and generation quality. Use when evaluating a retrieval-augmented generation system, measuring retrieval quality, assessing generation faithfulness or relevance, generating synthetic QA pairs for retrieval testing, or optimizing chunking strategies."
+    },
+    {
+     "name": "fable-advisor",
+     "description": "This skill should be used when the user asks for a \"Fable second opinion\", wants to \"check a plan before committing\", needs another view after repeated failures, or explicitly invokes \"fable-advisor\"."
     },
     {
      "name": "fractal",
@@ -7183,6 +7215,10 @@
      "description": "Handles the full DMS Schema Conversion lifecycle including creating migration projects, converting database schemas to a target engine, running compatibility assessments, navigating metadata trees, exporting converted DDL to S3, applying schema changes to a target database, and converting SQL statements between database engines. Applies when migrating database schemas between heterogeneous engines using AWS DMS Schema Conversion."
     },
     {
+     "name": "dokploy-deploy",
+     "description": "This skill should be used when user asks to \"deploy with Dokploy\", \"use Dokploy Cloud\", \"manage self-hosted Dokploy\", \"deploy Docker Compose on Dokploy\", \"manage Dokploy databases\", \"configure Dokploy domains\", or \"look up Dokploy CLI commands\"."
+    },
+    {
      "name": "durable-objects",
      "description": "Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO code for best practices. Covers Workers integration, wrangler config, and testing with Vitest. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
     },
@@ -7237,6 +7273,10 @@
     {
      "name": "firebase-security-rules-auditor",
      "description": "Audits Firebase (Firestore, Cloud Storage) security rules for vulnerabilities, privilege escalation, role bypasses, create vs update inconsistencies, resource exhaustion, type safety, size limits, and hasOnly ownership checks. Use when auditing/reviewing rules, running red-team rule assessments, or scoring against auditor checklists. Don't use for Firebase CLI (login, deploy), Auth, Crashlytics, Remote Config, or database queries."
+    },
+    {
+     "name": "hetzner-deploy",
+     "description": "This skill should be used when user asks to \"deploy to Hetzner\", \"create Hetzner server\", \"manage Hetzner Cloud\", \"hcloud CLI\", or works with Hetzner Cloud infrastructure including servers, networks, firewalls, load balancers, DNS zones, and volumes."
     },
     {
      "name": "home-assistant-manager",
@@ -7333,6 +7373,10 @@
     {
      "name": "next-partial-prefetching-adoption",
      "description": "Turn on Partial Prefetching in a Next.js app and work through the insights it surfaces. Use when the user wants to enable or adopt Partial Prefetching, flip the `partialPrefetching` flag, opt routes in with `export const prefetch = 'partial'`, audit `<Link prefetch={true}>` calls, or resolve the link-prefetch-partial and instant-shell-url-data insights."
+    },
+    {
+     "name": "openobserve-api",
+     "description": "This skill should be used when user asks to \"query OpenObserve\", \"create OpenObserve dashboard\", \"edit OpenObserve panel\", \"fetch OpenObserve logs\", \"run OpenObserve search\", \"list OpenObserve streams\", \"ingest into OpenObserve\", or works with OpenObserve Cloud / self-hosted via REST API. Covers auth, search/SQL, streams, dashboards (CRUD + per-panel ops), the v8 panel JSON schema, and known pitfalls (re-aggregation, hash concurrency, microsecond timestamps)."
     },
     {
      "name": "processing-s3-uploads-with-step-functions",
@@ -7540,6 +7584,10 @@
     {
      "name": "accessibility-skill",
      "description": "Adds automated accessibility (a11y) testing to test suites on TestMu AI cloud by enabling WCAG scans through driver capabilities. Framework-agnostic, works with Selenium, Playwright, and Cypress. Use when user mentions \"accessibility\", \"a11y\", \"WCAG\", \"accessibility scan\", \"accessibility testing\". Triggers on: \"accessibility testing\", \"a11y scan\", \"WCAG compliance\", \"accessibility audit LambdaTest\", \"is my page accessible\"."
+    },
+    {
+     "name": "agent-browser",
+     "description": "Agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extracting text and data, taking screenshots, managing tabs, handling forms and auth, waiting for content, running multiple browser sessions in parallel, and troubleshooting common failures. Use when the user asks to interact with a website, fill a form, click something, extract data, take a screenshot, log into a site, test a web app, or automate any browser task."
     },
     {
      "name": "agent-experience",
@@ -7788,6 +7836,10 @@
     {
      "name": "ecommerce-seller-info",
      "description": "Extract seller or merchant profile data from marketplace platform seller pages. Returns seller name, rating, review count, positive feedback percentage, joined date, and return policy. Works on Amazon seller pages, eBay seller pages, and any e-commerce site with seller profiles. Use when: seller information, merchant profile, seller rating, marketplace seller data, seller details, vendor profile, store information, seller feedback, merchant rating, seller review count, get seller info, ebay…"
+    },
+    {
+     "name": "electron",
+     "description": "Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, automate a desktop app, connect to a running app, control a native app, or test an Electron application. Triggers include \"automate Slack app\", \"control VS Code\", \"interact with Discord app\", \"test this Electron app\", \"connect to desktop app\", or any task requiring automation of a native Electron application."
     },
     {
      "name": "espresso-skill",
@@ -8869,6 +8921,14 @@
      "description": "Lead a team — run standups, coordinate tasks, and communicate."
     },
     {
+     "name": "polar-billing",
+     "description": "This skill should be used when working on Polar billing system, Stripe integration, subscription lifecycle, checkout flows, or benefit provisioning."
+    },
+    {
+     "name": "polar-local-environment",
+     "description": "This skill should be used when setting up or managing Polar local development environment with Docker."
+    },
+    {
      "name": "portable-text-conversion",
      "description": "Convert HTML and Markdown content into Portable Text blocks for Sanity. Use when migrating content from legacy CMSs, importing HTML or Markdown into Sanity, building content pipelines that ingest external content, converting rich text between formats, or programmatically creating Portable Text documents. Covers @portabletext/markdown (markdownToPortableText), @portabletext/block-tools (htmlToBlocks), custom deserializers, and the Portable Text specification for manual block construction."
     },
@@ -9688,6 +9748,10 @@
      "description": "Delegate coding tasks to Google Jules AI agent for asynchronous execution. Use when user says: 'have Jules fix', 'delegate to Jules', 'send to Jules', 'ask Jules to', 'check Jules sessions', 'pull Jules results', 'jules add tests', 'jules add docs', 'jules review pr'. Handles: bug fixes, documentation, features, tests, refactoring, code reviews. Works with GitHub repos, creates PRs."
     },
     {
+     "name": "livekit-skills",
+     "description": "Build voice AI agents with LiveKit Agents SDK. Use when the user asks to \"build a voice agent\", \"create a LiveKit agent\", \"add voice AI\", \"implement handoffs\", \"structure agent workflows\", or is working with LiveKit Agents SDK. Covers both LiveKit Cloud and self-hosted deployments using lk CLI."
+    },
+    {
      "name": "lyric-refiner",
      "description": "Autonomous multi-pass lyric refinement for tightening, cohesion, and album unity. Use after lyrics are written to polish a track or entire album through iterative passes."
     },
@@ -10064,6 +10128,10 @@
      "description": "Plan and run UGC-style creator ads and social proof videos with genmedia. Use this for direct-to-camera creator scripts, talking-head ads, product demos, testimonials, founder clips, unboxing, reaction, before-after, faceless voiceover, and short vertical social videos."
     },
     {
+     "name": "ultralytics-platform",
+     "description": "This skill should be used when user asks to \"upload my model to Ultralytics Platform\", \"push this run to the platform\", \"upload a dataset to platform\", \"download a dataset from platform\", \"search platform datasets\", \"start cloud training\", \"train on platform GPUs\", \"export a model on platform\", \"deploy a model endpoint\", \"why is my run not showing on platform\", or mentions platform.ultralytics.com, ul:// URIs, or ULTRALYTICS_API_KEY."
+    },
+    {
      "name": "understand",
      "description": "Analyze a codebase to produce an interactive knowledge graph for understanding architecture, components, and relationships"
     },
@@ -10226,6 +10294,10 @@
     {
      "name": "world-builder",
      "description": "Create and manage generative game zones for Dorothy's Pokemon-style world. Use this skill when creating, updating, or designing game worlds via MCP tools."
+    },
+    {
+     "name": "yolo-training",
+     "description": "This skill should be used when user asks to \"improve my mAP\", \"why is my model overfitting\", \"my training is diverging\", \"read my results.csv\", \"interpret my training curves\", \"my AP50 is good but AP50-95 is bad\", \"my recall is low\", \"how do I pick learning rate\", \"which augmentations should I use\", \"should I use a bigger model\", \"tune hyperparameters\", or asks how to train YOLO26 for detection, instance or semantic segmentation, pose, OBB, classification, or depth."
     },
     {
      "name": "Youtube-clipper-skill",
