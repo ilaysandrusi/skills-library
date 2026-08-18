@@ -2,7 +2,7 @@
 
 Always-on instruction files. Loaded as standing constraints for a language, framework or house style rather than invoked on demand.
 
-**קבצים כאן:** 163 — מ-13 מקורות.
+**קבצים כאן:** 164 — מ-14 מקורות.
 
 כל מה שנמצא בתיקייה הזאת הוא **rules ברמת הריפו** — במעלה הזרם הוא משרת כמה סקילים במקביל, ולכן אי אפשר לשייך אותו לסקיל אחד. ארטיפקטים שכן שייכים לסקיל ספציפי הועברו לתוך תיקיית הסקיל עצמו (`<category>/<skill>/rules/`).
 
@@ -11,6 +11,7 @@ Always-on instruction files. Loaded as standing constraints for a language, fram
 | מקור | קבצים | ריפו במעלה הזרם | רישיון |
 |---|---|---|---|
 | [`addyosmani/`](./addyosmani/) | 1 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | MIT |
+| [`aws/`](./aws/) | 1 | [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | Apache-2.0 |
 | [`callstack/`](./callstack/) | 2 | [callstackincubator/agent-skills](https://github.com/callstackincubator/agent-skills) | MIT |
 | [`claude-bootstrap/`](./claude-bootstrap/) | 8 | [alinaqi/claude-bootstrap](https://github.com/alinaqi/claude-bootstrap) | MIT |
 | [`cloudflare/`](./cloudflare/) | 1 | [cloudflare/skills](https://github.com/cloudflare/skills) | Apache-2.0 |

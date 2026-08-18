@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6055
+**סה״כ סקילים:** 6067
 
 ## איך ללמוד
 
@@ -37,9 +37,9 @@
 | תיקייה | קבצים | מה זה |
 |---|---|---|
 | [`agents/`](./agents/) | 224 | סוכני משנה שהסוכן הראשי מאציל להם משימות |
-| [`commands/`](./commands/) | 303 | פקודות סלאש שמופעלות במפורש |
-| [`rules/`](./rules/) | 163 | חוקים תמידיים לשפה, פריימוורק או סטייל |
-| [`hooks/`](./hooks/) | 89 | הוקים של זמן ריצה (`hooks.json` וסקריפטים) |
+| [`commands/`](./commands/) | 311 | פקודות סלאש שמופעלות במפורש |
+| [`rules/`](./rules/) | 164 | חוקים תמידיים לשפה, פריימוורק או סטייל |
+| [`hooks/`](./hooks/) | 91 | הוקים של זמן ריצה (`hooks.json` וסקריפטים) |
 
 הסבר מלא, כולל למה משהו נשאר משותף: [`ARTIFACTS.md`](./ARTIFACTS.md).
 מדיניות ייבוא ושמירת חבילות מלאות: [`ARCHIVE_POLICY.md`](./ARCHIVE_POLICY.md).
@@ -60,9 +60,9 @@
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 4 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 146 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |
-| [אבטחה וביקורת קוד](./12-security/) | 146 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
-| [ענן ופריסה](./13-cloud-deploy/) | 143 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
-| [בדיקות ואוטומציה](./14-testing-qa/) | 197 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
+| [אבטחה וביקורת קוד](./12-security/) | 152 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
+| [ענן ופריסה](./13-cloud-deploy/) | 147 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
+| [בדיקות ואוטומציה](./14-testing-qa/) | 199 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
 | [אינטגרציות ושירותים](./15-integrations/) | 252 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
 | [AI APIs ומדיה](./16-ai-apis-media/) | 220 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
 | [חבילת סייבר ענקית](./17-cybersecurity-pack/) | 817 | אנציקלופדיית סקילי סייבר (800+): פורנזיקה, תגובה לאירועים, מודיעין איומים, פנטסטינג והקשחה |

@@ -1,5 +1,5 @@
 {
- "total": 6055,
+ "total": 6067,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -6476,6 +6476,10 @@
      "description": "Generates Mermaid diagrams from Trailmark code graphs. Produces call graphs, class hierarchies, module dependency maps, containment diagrams, complexity heatmaps, and attack surface data flow visualizations. Use when visualizing code architecture, drawing call graphs, generating class diagrams, creating dependency maps, producing complexity heatmaps, or visualizing data flow and attack surface paths as Mermaid diagrams."
     },
     {
+     "name": "diff-scanning-with-aws-security-agent",
+     "description": "Run a fast AWS Security Agent diff scan on only the changed code since a git ref. Use when the user asks to scan changes, run a diff scan, check what changed for security issues, scan before committing, scan before PR, or any pre-commit/pre-push security check."
+    },
+    {
      "name": "differential-review",
      "description": "Performs security-focused differential review of code changes (PRs, commits, diffs). Adapts analysis depth to codebase size, uses git history for context, calculates blast radius, checks test coverage, and generates comprehensive markdown reports. Automatically detects and prevents security regressions."
     },
@@ -6652,6 +6656,10 @@
      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale."
     },
     {
+     "name": "pentesting-with-aws-security-agent",
+     "description": "Run an AWS Security Agent penetration test against a live web application — registers and verifies the target domain, exercises the supplied endpoints with the managed Security Agent service, and returns verified runtime findings. Use when the user asks to pentest, run a penetration test, test their app's attack surface, find runtime vulnerabilities, register or verify a target domain, or check pentest status / findings."
+    },
+    {
      "name": "picoclaw-security-guardian",
      "description": "Picoclaw security posture skill with advisory awareness, configuration drift detection, and supply-chain verification guidance."
     },
@@ -6680,6 +6688,10 @@
      "description": "Use when the user asks to create, write, update, amend, supersede, or evaluate an ADR, architecture decision record, durable architecture decision, decision log, or baseline sync after architecture-changing work."
     },
     {
+     "name": "remediating-with-aws-security-agent",
+     "description": "Pull AWS Security Agent findings (penetration tests and code reviews) and drive remediation. Use this whenever the user mentions Security Agent, security findings, pentest or penetration test results, code review findings, vulnerabilities found in their AWS account, \"what did the security scan find\", remediating or triaging security risks, or wants to start fixing reported vulnerabilities — even if they don't name the service explicitly. Trigger it for phrases like \"get my security findings\", \"what vulnerabilities do we have\", \"let's fix the pentest results\", or \"triage the security report\". The skill discovers scans, exports findings to a gitignored local directory (so sensitive exploit detail is never committed), produces a prioritized triage summary, and offers to start fixing the highest-risk issues."
+    },
+    {
      "name": "requesting-code-review--ganyuanran",
      "description": "Use when requesting independent code review, after implementation slices, before merging high-risk work, or when verification exposes evidence, baseline, architecture, compatibility, or retirement uncertainty."
     },
@@ -6694,6 +6706,10 @@
     {
      "name": "sarif-parsing",
      "description": "Parses and processes SARIF files from static analysis tools like CodeQL, Semgrep, or other scanners. Triggers on \"parse sarif\", \"read scan results\", \"aggregate findings\", \"deduplicate alerts\", or \"process sarif output\". Handles filtering, deduplication, format conversion, and CI/CD integration of SARIF data. Does NOT run scans — use the Semgrep or CodeQL skills for that."
+    },
+    {
+     "name": "scanning-with-aws-security-agent",
+     "description": "Run an AWS Security Agent scan on the workspace — uploads the source to AWS, scans it with the managed Security Agent service, and returns ranked, verified findings with code locations and remediations. Use when the user asks to scan code, find vulnerabilities, run a security scan or review, check security issues, check scan status, show findings, list recent scans, or stop a scan."
     },
     {
      "name": "second-opinion",
@@ -6734,6 +6750,10 @@
     {
      "name": "semgrep-rule-variant-creator",
      "description": "Creates language variants of existing Semgrep rules. Use when porting a Semgrep rule to specified target languages. Takes an existing rule and target languages as input, produces independent rule+test directories for each language."
+    },
+    {
+     "name": "setup-security-agent",
+     "description": "Configure AWS Security Agent for the current workspace — provision or reuse an agent space, IAM service role, and S3 bucket. Use when the user asks to \"set up security agent\", \"configure security scanner\", \"is security agent configured\", or on first-time use before any scan or pentest."
     },
     {
      "name": "sharp-edges",
@@ -6806,6 +6826,10 @@
     {
      "name": "theme-factory--snyk",
      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly."
+    },
+    {
+     "name": "threat-modeling-with-aws-security-agent",
+     "description": "Run an AWS Security Agent threat model review on spec/design documents. Use when the user asks to review a spec for security, run a threat model, check if a design introduces security risks, review requirements.md or design.md for security posture changes, or STRIDE analysis."
     },
     {
      "name": "token-integration-analyzer",
@@ -7083,6 +7107,10 @@
      "description": "Azure Verified Modules (AVM) requirements and best practices for developing certified Azure Terraform modules. Use when creating or reviewing Azure modules that need AVM certification."
     },
     {
+     "name": "chatting-with-aws-devops-agent",
+     "description": "Have a fast, conversational analysis with the AWS DevOps Agent. Use for cost optimization, architecture review, topology mapping, knowledge / runbook discovery, security audits, dependency questions, and quick diagnostics — anything that needs a 5-30 second answer rather than a 5-8 minute deep investigation. Trigger words include cost, optimize, review, architecture, topology, what runbooks, show me, compare, audit, what if."
+    },
+    {
      "name": "cloudflare",
      "description": "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
     },
@@ -7117,6 +7145,10 @@
     {
      "name": "connecting-vpcs-with-peering",
      "description": "Establishes VPC peering connections between two VPCs for direct private network connectivity. Always use this skill when creating or managing VPC peering — it validates CIDR overlap, updates all route tables in both VPCs, configures DNS resolution, and provides security group guidance that are critical for correct connectivity."
+    },
+    {
+     "name": "coordinating-multi-space-devops-agent",
+     "description": "Coordinate the AWS DevOps Agent across multiple AgentSpaces from one Claude Code session — route questions to the right space (prod vs staging vs knowledge), query several spaces in parallel and synthesize, or compare findings across accounts. Use whenever the user has more than one AgentSpace configured, mentions multiple AWS accounts, or asks something like \"check both prod and staging\", \"compare across accounts\", or \"ask the knowledge space\"."
     },
     {
      "name": "creating-api-gateway-stage",
@@ -7209,6 +7241,10 @@
     {
      "name": "home-assistant-manager",
      "description": "Manage Home Assistant configuration safely and fast — edit and deploy YAML (automations, blueprints, scripts, scenes, templates, MQTT), validate with ha core check, deploy via git or rapid scp, reload-vs-restart correctly, verify changes from logs, traces and entity state, and build Lovelace dashboards. Use for any Home Assistant config, automation, template, or dashboard work over SSH/hass-cli/MCP."
+    },
+    {
+     "name": "investigating-incidents-with-aws-devops-agent",
+     "description": "Run a deep root-cause investigation on the AWS DevOps Agent. Use when the user describes an incident, alarm, outage, or unexplained behavior — keywords like \"5xx\", \"503\", \"OOM\", \"latency spike\", \"deployment failure\", \"rollback\", \"sev1\", \"investigate\", \"root cause\", \"debug\", \"alarm fired\", \"service down\". Polls and streams progress, then surfaces recommendations."
     },
     {
      "name": "launch-with-aws",
@@ -7399,6 +7435,10 @@
      "description": "Configures EC2 instances to securely call AWS services by creating and attaching IAM roles via instance profiles, eliminating hardcoded credentials. Use when an EC2 instance needs permissions to access AWS services like S3, DynamoDB, SQS, or CloudWatch through temporary credentials."
     },
     {
+     "name": "setup-devops-agent",
+     "description": "Setup and diagnostics for the AWS DevOps Agent MCP connection. Triggers when aws-devops-agent is missing from .mcp.json, when the connection is broken, or when the user says \"set up devops agent\" / \"configure agent\". Does NOT trigger if the MCP is already connected and working."
+    },
+    {
      "name": "shieldadvanced",
      "description": "Configures AWS Shield Advanced for enhanced Distributed Denial of Service (DDoS) protection: subscribing accounts and adding resource protections, enabling automatic application layer (layer 7) mitigation through AWS WAF, configuring health-based detection with Route 53 health checks, setting up Shield Response Team (SRT) access and proactive engagement, reviewing DDoS events and requesting cost protection credits, and aggregating resources into protection groups. Applicable when the user wants stronger DDoS protection for internet-facing resources (CloudFront, Application or Network Load Balancers, Elastic IP addresses, Global Accelerator, or Route 53 hosted zones), wants expert help during an attack, or wants to recover attack-driven scaling charges. Routes to the right per-task procedure in references. Not applicable for authoring AWS WAF rules (waf skill), creating Route 53 health checks (route53 skill), or org-wide Shield Advanced rollout with Firewall Manager (firewallmanager skill)."
     },
@@ -7564,6 +7604,10 @@
     {
      "name": "amazon-search-listing",
      "description": "Amazon search and category listing scraper: extract product listings from any Amazon search results page, keyword search URL, or category browse page and return per-item cards (asin, title, url, image, price, listPrice, stars, reviewCount, badges, isAmazonChoice, isBestSeller, isSponsored, delivery, boughtInPast, positionIndex) plus pagination state (currentPage, hasNextPage, nextPageUrl, totalResultsApprox). Works across all Amazon regional TLDs (amazon.com, amazon.co.uk, amazon.de…"
+    },
+    {
+     "name": "analyzing-release-readiness",
+     "description": "Trigger a pre-merge release readiness review on a GitHub PR, GitLab MR, or local branch. Use when the user wants to analyze code changes for risk, correctness, and potential rollback issues before merging. Trigger words include release readiness, analyze PR, analyze MR, review PR, risk analysis, pre-merge, safe to ship, ready to merge, ready to commit, any risks, before merging, validate changes, release management."
     },
     {
      "name": "api-analyzer",
@@ -8024,6 +8068,10 @@
     {
      "name": "rspec-skill",
      "description": "Generates RSpec tests in Ruby with describe/context/it blocks, matchers, let/before hooks, and mocking. Use when user mentions \"RSpec\", \"describe do\", \"expect().to\", \"Ruby test\". Triggers on: \"RSpec\", \"expect().to eq()\", \"describe do\", \"Ruby test\", \"spec file\"."
+    },
+    {
+     "name": "running-release-tests",
+     "description": "Run automated release testing (UI or API) via the AWS DevOps Agent using a pre-configured test profile. Use when the user wants to validate multi-step workflows, verify features, check for regressions, or test API endpoints. Trigger words include run tests, UAT, test my app, test profile, UI test, API test, automated testing, regression test, QA, end-to-end test, run the QA agent."
     },
     {
      "name": "safe-browser",

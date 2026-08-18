@@ -2,7 +2,7 @@
 
 Slash-command definitions. Each file is one invocable workflow (`/review`, `/plan`, …) with its own prompt and arguments.
 
-**קבצים כאן:** 303 — מ-18 מקורות.
+**קבצים כאן:** 311 — מ-19 מקורות.
 
 כל מה שנמצא בתיקייה הזאת הוא **commands ברמת הריפו** — במעלה הזרם הוא משרת כמה סקילים במקביל, ולכן אי אפשר לשייך אותו לסקיל אחד. ארטיפקטים שכן שייכים לסקיל ספציפי הועברו לתוך תיקיית הסקיל עצמו (`<category>/<skill>/commands/`).
 
@@ -14,6 +14,7 @@ Slash-command definitions. Each file is one invocable workflow (`/review`, `/pla
 | [`addyosmani/`](./addyosmani/) | 8 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | MIT |
 | [`aegis/`](./aegis/) | 3 | [GanyuanRan/Aegis](https://github.com/GanyuanRan/Aegis) | MIT |
 | [`alirezarezvani/`](./alirezarezvani/) | 49 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | MIT |
+| [`aws-devsecops/`](./aws-devsecops/) | 8 | [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | Apache-2.0 |
 | [`claude-ally-health/`](./claude-ally-health/) | 59 | [huifer/Claude-Ally-Health](https://github.com/huifer/Claude-Ally-Health) | MIT |
 | [`claude-bootstrap/`](./claude-bootstrap/) | 25 | [alinaqi/claude-bootstrap](https://github.com/alinaqi/claude-bootstrap) | MIT |
 | [`cloudflare/`](./cloudflare/) | 2 | [cloudflare/skills](https://github.com/cloudflare/skills) | Apache-2.0 |

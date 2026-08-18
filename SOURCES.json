@@ -1,7 +1,7 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6055,
- "traced_to_source_repo": 6041,
+ "skills": 6067,
+ "traced_to_source_repo": 6053,
  "distinct_source_repos": 220,
  "non_skill_directories": {
   "14-testing-qa/shared": {
@@ -29,9 +29,9 @@
   "google/skills": 110,
   "browser-act/skills": 102,
   "googleworkspace/skills": 96,
+  "aws/agent-toolkit-for-aws": 87,
   "deanpeters/Product-Manager-Skills": 84,
   "trailofbits/skills": 78,
-  "aws/agent-toolkit-for-aws": 75,
   "LambdaTest/agent-skills": 73,
   "alinaqi/claude-bootstrap": 72,
   "JasonColapietro/suede-creator-skills": 71,
@@ -54863,6 +54863,114 @@
    "method": "direct-import",
    "added_in": "2026-08-18",
    "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "14-testing-qa/analyzing-release-readiness": {
+   "skill": "14-testing-qa/analyzing-release-readiness",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/chatting-with-aws-devops-agent": {
+   "skill": "13-cloud-deploy/chatting-with-aws-devops-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/coordinating-multi-space-devops-agent": {
+   "skill": "13-cloud-deploy/coordinating-multi-space-devops-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "12-security/diff-scanning-with-aws-security-agent": {
+   "skill": "12-security/diff-scanning-with-aws-security-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/investigating-incidents-with-aws-devops-agent": {
+   "skill": "13-cloud-deploy/investigating-incidents-with-aws-devops-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "12-security/pentesting-with-aws-security-agent": {
+   "skill": "12-security/pentesting-with-aws-security-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "12-security/remediating-with-aws-security-agent": {
+   "skill": "12-security/remediating-with-aws-security-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "14-testing-qa/running-release-tests": {
+   "skill": "14-testing-qa/running-release-tests",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "12-security/scanning-with-aws-security-agent": {
+   "skill": "12-security/scanning-with-aws-security-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/setup-devops-agent": {
+   "skill": "13-cloud-deploy/setup-devops-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "12-security/setup-security-agent": {
+   "skill": "12-security/setup-security-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
+  },
+  "12-security/threat-modeling-with-aws-security-agent": {
+   "skill": "12-security/threat-modeling-with-aws-security-agent",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "aws-agents-for-devsecops plugin import, 2026-08-18 daily maintenance"
   }
  }
 }
