@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 5980,
- "traced_to_source_repo": 5966,
- "distinct_source_repos": 219,
+ "skills": 6055,
+ "traced_to_source_repo": 6041,
+ "distinct_source_repos": 220,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -31,210 +31,211 @@
   "googleworkspace/skills": 96,
   "deanpeters/Product-Manager-Skills": 84,
   "trailofbits/skills": 78,
+  "aws/agent-toolkit-for-aws": 75,
   "LambdaTest/agent-skills": 73,
   "alinaqi/claude-bootstrap": 72,
   "JasonColapietro/suede-creator-skills": 71,
-  "phuryn/pm-skills": 69,
   "NeoLabHQ/context-engineering-kit": 69,
+  "phuryn/pm-skills": 69,
   "alirezarezvani/claude-skills": 65,
   "nowork-studio/NotFair": 56,
   "openai/skills": 54,
   "bitwize-music-studio/claude-ai-music-skills": 53,
   "coreyhaines31/marketingskills": 50,
   "Eronred/aso-skills": 42,
-  "getsentry/skills": 40,
   "dembrandt/dembrandt-skills": 40,
+  "getsentry/skills": 40,
   "flutter/skills": 38,
   "foryourhealth111-pixel/Vibe-Skills": 38,
   "mattpocock/skills": 37,
-  "snyk/agent-scan": 36,
   "AgriciDaniel/claude-seo": 36,
+  "snyk/agent-scan": 36,
   "GanyuanRan/Aegis": 35,
   "hyperfx-ai/marketing-skills": 31,
   "addyosmani/agent-skills": 28,
-  "yusufkaraaslan/Skill_Seekers": 28,
   "eduardo-sl/go-agent-skills": 28,
+  "yusufkaraaslan/Skill_Seekers": 28,
   "sanjay3290/ai-skills": 27,
-  "kreuzberg-dev/kreuzberg": 26,
   "huggingface/skills": 26,
-  "rudrankriyam/app-store-connect-cli-skills": 24,
+  "kreuzberg-dev/kreuzberg": 26,
   "helius-labs/core-ai": 24,
-  "Paramchoudhary/ResumeSkills": 23,
+  "rudrankriyam/app-store-connect-cli-skills": 24,
   "BrianRWagner/ai-marketing-skills": 23,
   "MiniMax-AI/skills": 23,
+  "Paramchoudhary/ResumeSkills": 23,
   "expo/skills": 23,
   "hashicorp/agent-skills": 21,
   "veniceai/skills": 21,
   "WordPress/agent-skills": 20,
-  "huifer/Claude-Ally-Health": 19,
-  "awslabs/mcp + AWS official skills": 19,
   "Joannis/claude-skills": 19,
+  "awslabs/mcp + AWS official skills": 19,
+  "huifer/Claude-Ally-Health": 19,
   "AIDevGTM/gtm-cofounder": 18,
+  "Sendmux/skills": 18,
   "anthropics/skills": 18,
   "binance/binance-skills-hub": 18,
-  "Sendmux/skills": 18,
   "browserbase/skills": 17,
-  "redis/agent-skills": 17,
-  "ognjengt/founder-skills": 17,
   "fal-ai-community/skills": 17,
   "google-labs-code/stitch-skills": 17,
+  "ognjengt/founder-skills": 17,
+  "redis/agent-skills": 17,
   "prompt-security/clawsec": 16,
-  "apollographql/skills": 15,
-  "obra/superpowers": 15,
   "Orkas-AI/Orkas-VideoStudio": 15,
+  "apollographql/skills": 15,
   "czlonkowski/n8n-skills": 15,
+  "obra/superpowers": 15,
+  "ZhangHanDong/makepad-skills": 14,
   "callstackincubator/agent-skills": 14,
   "honeydew-ai/honeydew-ai-coding-agents-plugins": 14,
-  "raintree-technology/apple-hig-skills": 14,
-  "ZhangHanDong/makepad-skills": 14,
   "netlify/skills": 14,
-  "cloudflare/skills": 13,
-  "brave/brave-search-skills": 13,
+  "raintree-technology/apple-hig-skills": 14,
   "Leonxlnx/taste-skill": 13,
-  "transloadit/skills": 13,
+  "brave/brave-search-skills": 13,
+  "cloudflare/skills": 13,
   "qdrant/skills": 13,
-  "realkimbarrett/advertising-skills": 12,
+  "transloadit/skills": 13,
   "ClickHouse/agent-skills": 12,
-  "nextlevelbuilder/ui-ux-pro-max-skill": 12,
   "firebase/skills": 12,
+  "nextlevelbuilder/ui-ux-pro-max-skill": 12,
+  "realkimbarrett/advertising-skills": 12,
   "remotion-dev/skills": 12,
   "Neeeophytee/finding-unknowns-skills": 11,
-  "vercel-labs/skills": 11,
-  "mcollina/skills": 11,
   "Simon-He95/markstream-vue": 11,
-  "neondatabase/agent-skills": 10,
-  "duckdb/duckdb-skills": 10,
+  "mcollina/skills": 11,
+  "vercel-labs/skills": 11,
   "CloudAI-X/threejs-skills": 10,
-  "mongodb/agent-skills": 9,
-  "zxkane/aws-skills": 9,
-  "ohad6k/emulo": 9,
-  "metalbear-co/skills": 9,
+  "duckdb/duckdb-skills": 10,
+  "neondatabase/agent-skills": 10,
   "Lum1104/Understand-Anything": 9,
   "MohamedAbdallah-14/unslop": 9,
+  "metalbear-co/skills": 9,
+  "mongodb/agent-skills": 9,
+  "ohad6k/emulo": 9,
+  "zxkane/aws-skills": 9,
+  "NoizAI/skills": 8,
   "addyosmani/web-quality-skills": 8,
   "better-auth/skills": 8,
-  "NoizAI/skills": 8,
+  "ehmo/platform-design-skills": 8,
   "figma/skills": 8,
   "greensock/gsap-skills": 8,
-  "ehmo/platform-design-skills": 8,
+  "firecrawl/skills": 7,
+  "fvadicamo/dev-agent-skills": 7,
   "ibelick/ui-skills": 7,
   "replicate/skills": 7,
   "sanity-io/skills": 7,
-  "fvadicamo/dev-agent-skills": 7,
-  "firecrawl/skills": 7,
   "stjbrown/agent-knowledge": 7,
-  "zilliztech/mfs": 6,
   "khendzel/skills-janitor": 6,
   "makenotion/claude-code-notion-plugin": 6,
   "makenotion/notion-cookbook": 6,
   "stripe/skills": 6,
-  "shouldnotappearcalm/a-share-skill": 5,
-  "resend/resend-skills": 5,
+  "zilliztech/mfs": 6,
   "Charlie85270/Dorothy": 5,
-  "rameerez/claude-code-startup-skills": 5,
   "K-Dense-AI/claude-scientific-skills": 5,
   "plasma-ai/fractal": 5,
+  "rameerez/claude-code-startup-skills": 5,
+  "resend/resend-skills": 5,
+  "shouldnotappearcalm/a-share-skill": 5,
   "gokapso/agent-skills": 4,
-  "talkstream/ru-text": 4,
-  "voltagent/skills": 4,
-  "obra/superpowers-lab": 4,
   "google-gemini/gemini-skills": 4,
+  "obra/superpowers-lab": 4,
+  "talkstream/ru-text": 4,
   "tinybirdco/tinybird-agent-skills": 4,
+  "voltagent/skills": 4,
   "zapier/zapier-mcp": 4,
-  "auth0/agent-skills": 3,
-  "supabase/agent-skills": 3,
+  "Linked-API/linkedin-skills": 3,
   "angular/skills": 3,
+  "auth0/agent-skills": 3,
   "coderabbitai/skills": 3,
-  "frmoretto/clarity-gate": 3,
   "composiohq/skills": 3,
   "cypress-io/ai-toolkit": 3,
-  "Linked-API/linkedin-skills": 3,
+  "frmoretto/clarity-gate": 3,
   "hqhq1025/skill-optimizer": 3,
-  "typefully/agent-skills": 2,
-  "muratcankoylan/Agent-Skills-for-Context-Engineering": 2,
-  "squirrelscan/squirrelscan": 2,
-  "santifer/career-ops": 2,
-  "awrshift/claude-memory-kit": 2,
-  "VoltAgent/voltagent": 2,
-  "zarazhangrui/frontend-slides": 2,
-  "mvanhorn/last30days-skill": 2,
-  "sergebulaev/linkedin-skills": 2,
-  "PSPDFKit-labs/nutrient-agent-skill": 2,
-  "testdino-hq/playwright-skill": 2,
-  "lackeyjb/playwright-skill": 2,
-  "video-db/skills": 2,
-  "ReScienceLab/opc-skills": 2,
+  "supabase/agent-skills": 3,
   "AvdLee/SwiftUI-Agent-Skill": 2,
+  "PSPDFKit-labs/nutrient-agent-skill": 2,
+  "ReScienceLab/opc-skills": 2,
   "RoundTable02/tutor-skills": 2,
+  "VoltAgent/voltagent": 2,
   "Xquik-dev/x-twitter-scraper": 2,
-  "taisly/agent": 1,
-  "datadog-labs/agent-skills": 1,
-  "pattern-ai-labs/agentcall": 1,
-  "coinbase/agentic-wallet-skills": 1,
-  "Ericyoung-183/alpha-insights": 1,
-  "truongduy2611/app-store-preflight-skills": 1,
-  "more-io/claude-apple-bridges": 1,
-  "VoltAgent/awesome-agent-skills": 1,
-  "SHADOWPR0/beautiful_prose": 1,
+  "awrshift/claude-memory-kit": 2,
+  "lackeyjb/playwright-skill": 2,
+  "muratcankoylan/Agent-Skills-for-Context-Engineering": 2,
+  "mvanhorn/last30days-skill": 2,
+  "santifer/career-ops": 2,
+  "sergebulaev/linkedin-skills": 2,
+  "squirrelscan/squirrelscan": 2,
+  "testdino-hq/playwright-skill": 2,
+  "typefully/agent-skills": 2,
+  "video-db/skills": 2,
+  "zarazhangrui/frontend-slides": 2,
   "AVGVSTVS96/better-github-skill": 1,
-  "reliefeai/browser-relay": 1,
+  "Alisa0808/vibe-creating-skill": 1,
+  "Aperivue/medsci-skills": 1,
+  "BehiSecc/VibeSec-Skill": 1,
+  "Bomx/distribb-skill": 1,
+  "CosmoBlk/email-marketing-bible": 1,
+  "Digidai/product-manager-skills": 1,
+  "Ericyoung-183/alpha-insights": 1,
   "EveryInc/charlie-cfo-skill": 1,
   "Kevin7Qi/codex-collab": 1,
-  "baskduf/FableCodex": 1,
-  "trycourier/courier-skills": 1,
-  "smixs/creative-director-skill": 1,
-  "csthink/dashmotion": 1,
-  "k-kolomeitsev/data-structure-protocol": 1,
-  "Bomx/distribb-skill": 1,
-  "takechanman1228/claude-ecom": 1,
-  "CosmoBlk/email-marketing-bible": 1,
-  "wanshuiyin/Auto-claude-code-research-in-sleep": 1,
-  "jthack/ffuf_claude_skill": 1,
-  "drogers0/gh-image": 1,
-  "garrytan/skills": 1,
-  "muthuishere/hand-drawn-diagrams": 1,
-  "komal-SkyNET/claude-skill-homeassistant": 1,
-  "blader/humanizer": 1,
-  "Vladimir-Human/humanizer-ru": 1,
-  "conorluddy/ios-simulator-skill": 1,
-  "oliver-zehentleitner/keep-the-why": 1,
-  "wrsmith108/linear-claude-skill": 1,
-  "sametbrr/llm-wiki-manager": 1,
-  "zscole/model-hierarchy-skill": 1,
-  "Ryan-yang125/motion-lexicon": 1,
-  "uucz/moyu": 1,
-  "op7418/NanoBanana-PPT-Skills": 1,
-  "PleasePrompto/notebooklm-skill": 1,
-  "makenotion/skills": 1,
-  "Tubo2333/obsidian-knowledge-brain": 1,
-  "Optim-Agent/optim-agent": 1,
-  "gitroomhq/postiz-agent": 1,
-  "Digidai/product-manager-skills": 1,
-  "Aperivue/medsci-skills": 1,
-  "omkamal/pypict-claude-skill": 1,
-  "ethos-link/rails-conventions": 1,
-  "massimodeluisa/recursive-decomposition-skill": 1,
-  "SHADOWPR0/security-bluebook-builder": 1,
-  "Panniantong/Agent-Reach": 1,
-  "robzolkos/skill-rails-upgrade": 1,
-  "meodai/skill.color-expert": 1,
   "NotMyself/claude-win11-speckit-update-skill": 1,
+  "Optim-Agent/optim-agent": 1,
+  "Panniantong/Agent-Reach": 1,
+  "PleasePrompto/notebooklm-skill": 1,
+  "Ryan-yang125/motion-lexicon": 1,
+  "SHADOWPR0/beautiful_prose": 1,
+  "SHADOWPR0/security-bluebook-builder": 1,
   "SeanZoR/claude-speed-reader": 1,
-  "superdesigndev/superdesign-skill": 1,
-  "efremidze/swift-patterns-skill": 1,
-  "ramzesenok/iOS-Accessibility-Audit-Skill": 1,
-  "antonbabenko/terraform-skill": 1,
-  "deusyu/translate-book": 1,
+  "Tubo2333/obsidian-knowledge-brain": 1,
+  "Vladimir-Human/humanizer-ru": 1,
+  "VoltAgent/awesome-agent-skills": 1,
   "Xquik-dev/tweetclaw": 1,
-  "wrsmith108/varlock-claude-skill": 1,
-  "scarletkc/vexor": 1,
-  "Alisa0808/vibe-creating-skill": 1,
-  "BehiSecc/VibeSec-Skill": 1,
-  "zw008/VMware-AIops": 1,
+  "antonbabenko/terraform-skill": 1,
+  "baskduf/FableCodex": 1,
+  "blader/humanizer": 1,
+  "coinbase/agentic-wallet-skills": 1,
+  "conorluddy/ios-simulator-skill": 1,
+  "csthink/dashmotion": 1,
+  "datadog-labs/agent-skills": 1,
   "degausai/wonda": 1,
-  "wshuyi/x-article-publisher-skill": 1,
+  "deusyu/translate-book": 1,
+  "drogers0/gh-image": 1,
+  "efremidze/swift-patterns-skill": 1,
+  "ethos-link/rails-conventions": 1,
+  "garrytan/skills": 1,
+  "gitroomhq/postiz-agent": 1,
+  "jthack/ffuf_claude_skill": 1,
+  "k-kolomeitsev/data-structure-protocol": 1,
+  "komal-SkyNET/claude-skill-homeassistant": 1,
+  "makenotion/skills": 1,
+  "massimodeluisa/recursive-decomposition-skill": 1,
+  "meodai/skill.color-expert": 1,
+  "more-io/claude-apple-bridges": 1,
+  "muthuishere/hand-drawn-diagrams": 1,
+  "officialzeroxyz/zero-plugins": 1,
+  "oliver-zehentleitner/keep-the-why": 1,
+  "omkamal/pypict-claude-skill": 1,
+  "op7418/NanoBanana-PPT-Skills": 1,
   "op7418/Youtube-clipper-skill": 1,
-  "officialzeroxyz/zero-plugins": 1
+  "pattern-ai-labs/agentcall": 1,
+  "ramzesenok/iOS-Accessibility-Audit-Skill": 1,
+  "reliefeai/browser-relay": 1,
+  "robzolkos/skill-rails-upgrade": 1,
+  "sametbrr/llm-wiki-manager": 1,
+  "scarletkc/vexor": 1,
+  "smixs/creative-director-skill": 1,
+  "superdesigndev/superdesign-skill": 1,
+  "taisly/agent": 1,
+  "takechanman1228/claude-ecom": 1,
+  "truongduy2611/app-store-preflight-skills": 1,
+  "trycourier/courier-skills": 1,
+  "uucz/moyu": 1,
+  "wanshuiyin/Auto-claude-code-research-in-sleep": 1,
+  "wrsmith108/linear-claude-skill": 1,
+  "wrsmith108/varlock-claude-skill": 1,
+  "wshuyi/x-article-publisher-skill": 1,
+  "zscole/model-hierarchy-skill": 1,
+  "zw008/VMware-AIops": 1
  },
  "attribution": {
   "19-sales-gtm-startup/00-start-here": {
@@ -54187,6 +54188,681 @@
    "method": "exact-name-match",
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
+  },
+  "25-data-databases/amazon-opensearch-service": {
+   "skill": "25-data-databases/amazon-opensearch-service",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/aws-cleanrooms": {
+   "skill": "25-data-databases/aws-cleanrooms",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/connecting-to-data-source": {
+   "skill": "25-data-databases/connecting-to-data-source",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/developing-applications-on-managed-service-for-apache-flink": {
+   "skill": "25-data-databases/developing-applications-on-managed-service-for-apache-flink",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/exploring-data-catalog": {
+   "skill": "25-data-databases/exploring-data-catalog",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/finding-data-lake-assets": {
+   "skill": "25-data-databases/finding-data-lake-assets",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/ingesting-into-data-lake": {
+   "skill": "25-data-databases/ingesting-into-data-lake",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/managing-amazon-msk": {
+   "skill": "25-data-databases/managing-amazon-msk",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/migrate-to-msk": {
+   "skill": "25-data-databases/migrate-to-msk",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/migrating-to-amazon-redshift": {
+   "skill": "25-data-databases/migrating-to-amazon-redshift",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/querying-data-lake": {
+   "skill": "25-data-databases/querying-data-lake",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/redshift-guide": {
+   "skill": "25-data-databases/redshift-guide",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/amazon-aurora-mysql": {
+   "skill": "25-data-databases/amazon-aurora-mysql",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/amazon-aurora-postgresql": {
+   "skill": "25-data-databases/amazon-aurora-postgresql",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/amazon-documentdb": {
+   "skill": "25-data-databases/amazon-documentdb",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/amazon-dynamodb": {
+   "skill": "25-data-databases/amazon-dynamodb",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/amazon-elasticache": {
+   "skill": "25-data-databases/amazon-elasticache",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/amazon-keyspaces": {
+   "skill": "25-data-databases/amazon-keyspaces",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/aurora-dsql": {
+   "skill": "25-data-databases/aurora-dsql",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/creating-amazon-aurora-db-cluster-with-instances": {
+   "skill": "25-data-databases/creating-amazon-aurora-db-cluster-with-instances",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/exporting-rds-to-s3": {
+   "skill": "25-data-databases/exporting-rds-to-s3",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/rds-oracle": {
+   "skill": "25-data-databases/rds-oracle",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/rds-oss": {
+   "skill": "25-data-databases/rds-oss",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/rds-sqlserver": {
+   "skill": "25-data-databases/rds-sqlserver",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/timestream-influxdb": {
+   "skill": "25-data-databases/timestream-influxdb",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/creating-ec2-image-builder-pipeline": {
+   "skill": "13-cloud-deploy/creating-ec2-image-builder-pipeline",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/launching-ec2-instance-with-best-practices": {
+   "skill": "13-cloud-deploy/launching-ec2-instance-with-best-practices",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/setting-up-ec2-instance-profiles": {
+   "skill": "13-cloud-deploy/setting-up-ec2-instance-profiles",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/amazon-ses": {
+   "skill": "13-cloud-deploy/amazon-ses",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-social-messaging": {
+   "skill": "13-cloud-deploy/aws-social-messaging",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-transform": {
+   "skill": "13-cloud-deploy/aws-transform",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/dms-schema-conversion": {
+   "skill": "13-cloud-deploy/dms-schema-conversion",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/cloudfront": {
+   "skill": "13-cloud-deploy/cloudfront",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/configuring-vpc-endpoints-for-private-aws-service-access": {
+   "skill": "13-cloud-deploy/configuring-vpc-endpoints-for-private-aws-service-access",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/connecting-vpcs-with-peering": {
+   "skill": "13-cloud-deploy/connecting-vpcs-with-peering",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/creating-production-vpc-multi-az": {
+   "skill": "13-cloud-deploy/creating-production-vpc-multi-az",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/directconnect": {
+   "skill": "13-cloud-deploy/directconnect",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/enabling-lambda-vpc-internet-access": {
+   "skill": "13-cloud-deploy/enabling-lambda-vpc-internet-access",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/route53": {
+   "skill": "13-cloud-deploy/route53",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/routing-traffic-with-route53-and-cloudfront": {
+   "skill": "13-cloud-deploy/routing-traffic-with-route53-and-cloudfront",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/shieldadvanced": {
+   "skill": "13-cloud-deploy/shieldadvanced",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/sitetositevpn": {
+   "skill": "13-cloud-deploy/sitetositevpn",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/transitgateway": {
+   "skill": "13-cloud-deploy/transitgateway",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/waf": {
+   "skill": "13-cloud-deploy/waf",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-network-monitoring": {
+   "skill": "13-cloud-deploy/aws-network-monitoring",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/setting-up-cloudtrail-multi-region": {
+   "skill": "13-cloud-deploy/setting-up-cloudtrail-multi-region",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/setting-up-cloudwatch-alarm-notifications": {
+   "skill": "13-cloud-deploy/setting-up-cloudwatch-alarm-notifications",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/troubleshooting-application-failures": {
+   "skill": "13-cloud-deploy/troubleshooting-application-failures",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/arc-region-switch": {
+   "skill": "13-cloud-deploy/arc-region-switch",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-resilience-lifecycle": {
+   "skill": "13-cloud-deploy/aws-resilience-lifecycle",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/recovery-controller-setup": {
+   "skill": "13-cloud-deploy/recovery-controller-setup",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/resilience-hub-failure-mode-assessment": {
+   "skill": "13-cloud-deploy/resilience-hub-failure-mode-assessment",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/resilience-hub-getting-started": {
+   "skill": "13-cloud-deploy/resilience-hub-getting-started",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/resilience-hub-multi-account": {
+   "skill": "13-cloud-deploy/resilience-hub-multi-account",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/resilience-program-design": {
+   "skill": "13-cloud-deploy/resilience-program-design",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "12-security/creating-secrets-using-best-practices": {
+   "skill": "12-security/creating-secrets-using-best-practices",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-lambda-durable-functions": {
+   "skill": "13-cloud-deploy/aws-lambda-durable-functions",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-lambda-managed-instances": {
+   "skill": "13-cloud-deploy/aws-lambda-managed-instances",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-lambda-microvms": {
+   "skill": "13-cloud-deploy/aws-lambda-microvms",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-step-functions": {
+   "skill": "13-cloud-deploy/aws-step-functions",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/connecting-lambda-to-api-gateway": {
+   "skill": "13-cloud-deploy/connecting-lambda-to-api-gateway",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/connecting-lambda-to-dynamodb": {
+   "skill": "13-cloud-deploy/connecting-lambda-to-dynamodb",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/creating-api-gateway-stage": {
+   "skill": "13-cloud-deploy/creating-api-gateway-stage",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/debugging-lambda-timeouts": {
+   "skill": "13-cloud-deploy/debugging-lambda-timeouts",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/deploying-custom-domain-rest-api": {
+   "skill": "13-cloud-deploy/deploying-custom-domain-rest-api",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/processing-s3-uploads-with-step-functions": {
+   "skill": "13-cloud-deploy/processing-s3-uploads-with-step-functions",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/creating-data-lake-table": {
+   "skill": "13-cloud-deploy/creating-data-lake-table",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/securing-s3-buckets": {
+   "skill": "13-cloud-deploy/securing-s3-buckets",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/storing-and-querying-vectors": {
+   "skill": "13-cloud-deploy/storing-and-querying-vectors",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/troubleshooting-efs": {
+   "skill": "13-cloud-deploy/troubleshooting-efs",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/troubleshooting-s3-files": {
+   "skill": "13-cloud-deploy/troubleshooting-s3-files",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/querying-aws-cloudwatch": {
+   "skill": "25-data-databases/querying-aws-cloudwatch",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/querying-aws-s3": {
+   "skill": "25-data-databases/querying-aws-s3",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "25-data-databases/querying-aws-sagemaker-catalog": {
+   "skill": "25-data-databases/querying-aws-sagemaker-catalog",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
+  },
+  "13-cloud-deploy/aws-amplify": {
+   "skill": "13-cloud-deploy/aws-amplify",
+   "sources": [
+    "aws/agent-toolkit-for-aws"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-18",
+   "import_note": "specialized-skills import, 2026-08-18 daily maintenance"
   }
  }
 }

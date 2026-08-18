@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 5980
+**סה״כ סקילים:** 6055
 
 ## איך ללמוד
 
@@ -60,8 +60,8 @@
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 4 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 146 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |
-| [אבטחה וביקורת קוד](./12-security/) | 145 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
-| [ענן ופריסה](./13-cloud-deploy/) | 97 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
+| [אבטחה וביקורת קוד](./12-security/) | 146 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
+| [ענן ופריסה](./13-cloud-deploy/) | 143 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
 | [בדיקות ואוטומציה](./14-testing-qa/) | 197 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
 | [אינטגרציות ושירותים](./15-integrations/) | 252 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
 | [AI APIs ומדיה](./16-ai-apis-media/) | 220 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
@@ -72,7 +72,7 @@
 | [Goose Agent](./21-goose-agent/) | 263 | חבילת הסקילים של gooseworks: 260+ סקילים לסוכן Goose של Block |
 | [משפטים](./22-legal/) | 238 | awesome-legal-skills: חוזים, רגולציה, ליטיגציה, קניין רוחני ותאימות |
 | [Microsoft](./23-microsoft/) | 186 | הסקילים הרשמיים של מיקרוסופט: Azure, .NET, TypeSpec, Playwright, GitHub ועוד |
-| [דאטה ובסיסי נתונים](./25-data-databases/) | 78 | MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB |
+| [דאטה ובסיסי נתונים](./25-data-databases/) | 106 | MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB |
 | [מובייל ו-Apple](./26-mobile-apple/) | 135 | Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG |
 | [Web3 וקריפטו](./27-web3-crypto/) | 43 | Binance, Coinbase, Helius (Solana): ארנקים, מסחר ופיתוח בלוקצ'יין |
 | [קריירה, חינוך ובריאות](./28-career-education-health/) | 45 | קורות חיים, ניהול קריירה, חונכות לימודית ובריאות אישית |

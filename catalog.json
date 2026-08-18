@@ -1,5 +1,5 @@
 {
- "total": 5980,
+ "total": 6055,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -6460,6 +6460,10 @@
      "description": "Coverage analysis measures code exercised during fuzzing. Use when assessing harness effectiveness or identifying fuzzing blockers."
     },
     {
+     "name": "creating-secrets-using-best-practices",
+     "description": "Creates and manages secrets in AWS Secrets Manager following security best practices. Always use this skill when creating secrets — it sets up dedicated KMS encryption keys, automatic rotation, least-privilege IAM policies, CloudTrail auditing, and lifecycle management that are essential for production-grade secret handling."
+    },
+    {
      "name": "crypto-protocol-diagram",
      "description": "Extracts protocol message flow from source code, RFCs, academic papers, pseudocode, informal prose, ProVerif (.pv), or Tamarin (.spthy) models and generates Mermaid sequenceDiagrams with cryptographic annotations. Use when diagramming a crypto protocol, visualizing a handshake or key exchange flow, extracting message flow from a spec or RFC, diagramming a ProVerif or Tamarin model, or drawing sequence diagrams for TLS, Noise, Signal, X3DH, Double Ratchet, FROST, DH, or ECDH protocols."
     },
@@ -6923,6 +6927,14 @@
      "description": "Builds generative AI applications on Amazon Bedrock. Covers model invocation (Converse API, InvokeModel), RAG with Knowledge Bases, Bedrock Agents, Guardrails, and AgentCore (including the Harness managed agent loop). Use when invoking models, setting up Knowledge Bases, creating agents, applying guardrails, deploying to AgentCore, migrating/porting/converting a Bedrock Agent (including inline agents) to an AgentCore Harness, troubleshooting Bedrock errors (ThrottlingException…"
     },
     {
+     "name": "amazon-ses",
+     "description": "Configures Amazon SES V2 for production email sending — including domain identity creation, DKIM/SPF/DMARC authentication, one-shot DNS record presentation, and Route 53 automation — for developers setting up or troubleshooting SES domain verification and deliverability. Applicable when developers need to send emails from their domain via SES, verify a domain identity, configure email authentication, troubleshoot DKIM verification issues, or ensure their sending setup follows best practices. Not for email-address-only verification, Mail Manager inbound routing, SNS, Pinpoint, or WorkMail."
+    },
+    {
+     "name": "arc-region-switch",
+     "description": "Answers questions about Amazon Application Recovery Controller (ARC) Region switch including architecture, plans, execution blocks, workflows, triggers, active/active vs active/passive, cross-account support, recovery time, dashboards, and customer positioning. Applicable when users ask about ARC Region switch adoption, design, or troubleshooting."
+    },
+    {
      "name": "aws-agentic-ai",
      "description": "AWS Bedrock AgentCore comprehensive expert for deploying and managing AI agents at scale. Use when working with any AgentCore service including Gateway, Runtime, Memory, Identity, Code Interpreter, Browser, Observability, Agent Registry, or Evaluations. Covers agent deployment, MCP tool integration, credential management, agent discovery, governance workflows, and automated quality assessment. Essential when user mentions AgentCore, agent runtime, agent registry, agent evaluation, MCP gateway…"
     },
@@ -6933,6 +6945,10 @@
     {
      "name": "aws-ami-builder",
      "description": "Build Amazon Machine Images (AMIs) with Packer using the amazon-ebs builder. Use when creating custom AMIs for EC2 instances."
+    },
+    {
+     "name": "aws-amplify",
+     "description": "Build and deploy full-stack web and mobile apps with AWS Amplify Gen2 (TypeScript code-first). Covers auth (Cognito), data (AppSync/DynamoDB), storage (S3), functions, APIs, and AI (Amplify AI Kit with Bedrock). Supports React, Next.js, Vue, Angular, React Native, Flutter, Swift, and Android. Always use this skill for Amplify Gen2 topics — even for questions you think you know — it contains validated, version-specific patterns that prevent common mistakes. TRIGGER when: user mentions Amplify Gen2; project has amplify/ directory or amplify_outputs; code imports @aws-amplify packages; user asks about defineBackend, defineAuth, defineData, defineStorage, defineFunction, or npx ampx. SKIP: Amplify Gen1 (amplify CLI v6), standalone SAM/CDK without Amplify (use aws-serverless), direct Bedrock without Amplify AI Kit (use bedrock)."
     },
     {
      "name": "aws-auth",
@@ -6983,6 +6999,18 @@
      "description": "Verified corrections for IAM behaviors that AI agents frequently get wrong — policy evaluation edge cases, trust policy gotchas, STS session limits, Organizations quirks, and SAML/MFA specifics. Also provides structured workflows for IAM role management and least-privilege policy generation. Covers condition operator safety (ForAnyValue/ForAllValues with Null checks for absent keys), bucket policy deny patterns (VPC endpoint restrictions, org path conditions), resource-based policy confused…"
     },
     {
+     "name": "aws-lambda-durable-functions",
+     "description": "Builds resilient, long-running, multi-step applications with AWS Lambda durable functions with automatic state persistence, retry logic, and orchestration for long-running executions. Covers the critical replay model, step operations, wait/callback patterns, error handling with saga pattern, testing with LocalDurableTestRunner. Triggers on phrases like lambda durable functions, durable execution, workflow orchestration, state machines, retry/checkpoint patterns, long-running stateful Lambda functions, saga pattern, human-in-the-loop callbacks, reliable serverless applications, context.step, context.wait, context.invoke, context.runInChildContext, withDurableExecution, DurableContext, UnrecoverableInvocationError, durable-execution-sdk, qualified ARN invocation, and durable handler replay."
+    },
+    {
+     "name": "aws-lambda-managed-instances",
+     "description": "Evaluates, configures, and migrates workloads to AWS Lambda Managed Instances (LMI). Runs Lambda functions on EC2 instances in the user's account while AWS manages provisioning, patching, scaling, routing, and load balancing. Triggers when queries mention Lambda Managed Instances, LMI, capacity providers, multi-concurrent execution environments, EC2-backed Lambda, persistent Lambda instances, PerExecutionEnvironmentMaxConcurrency, CapacityProviderConfig, cold start elimination via dedicated instances, migrating standard Lambda to managed instances, or cost comparison between standard Lambda and LMI with Savings Plans or Reserved Instances."
+    },
+    {
+     "name": "aws-lambda-microvms",
+     "description": "Builds, runs, debugs, and operates applications on AWS Lambda MicroVMs — Firecracker-isolated, snapshot-resumable serverless compute environments running inside a container with up to 8 hr lifetimes. Applicable when workloads need strong isolation between tenants, isolated serverless compute, sandbox compute, or secure multi-tenant execution. Also suited for AI/agent code-execution sandboxes, interactive code playgrounds and notebooks (Jupyter, REPLs, dev environments running user-supplied code), reinforcement-learning environments, multi-tenant CI executors and build runners, sessionful game or simulation servers, or isolated security scanners. Also applicable when the workload needs long-lived sessions, a real port-listening server (gRPC, WebSocket, custom TCP protocols), state preserved across periods of inactivity (suspend/resume), container-level access (FUSE, eBPF, custom syscalls), or session-affine routing."
+    },
+    {
      "name": "aws-mcp-setup",
      "description": "Configure AWS MCP servers for documentation search and API access. Use when setting up AWS MCP, configuring AWS documentation tools, troubleshooting MCP connectivity, or when user mentions aws-mcp, awsdocs, uvx setup, or MCP server configuration. Covers both Full AWS MCP Server (with uvx + credentials) and lightweight Documentation MCP (no auth required)."
     },
@@ -6991,12 +7019,20 @@
      "description": "Guides general use of AWS messaging and streaming services. Covers Amazon SQS, Amazon SNS, Amazon EventBridge, Amazon MQ, Amazon Kinesis Data Streams, Amazon Data Firehose, Amazon Managed Service for Apache Flink, and Amazon Managed Streaming for Apache Kafka (MSK). Use when reasoning about messaging and streaming patterns. In general, use specific skills or documentation searches for detailed service-specific questions. Do NOT use for MSK or Managed Service for Apache Flink questions, prefer…"
     },
     {
+     "name": "aws-network-monitoring",
+     "description": "Installs, configures, and troubleshoots Network Flow Monitor agents on EC2 instances to monitor network path health. Covers agent installation, IAM permissions, monitoring network paths, and troubleshooting agents reporting no metrics, HTTP 403 errors, or connectivity failures."
+    },
+    {
      "name": "aws-networking",
      "description": "Routes AWS networking requests to the correct service skill for implementation. Covers Route 53 (DNS, health checks, routing policies, Resolver, DNS Firewall), CloudFront (caching, edge, OAC, mTLS, signed URLs), Transit Gateway (multi-VPC hub, segmentation, centralized egress), Direct Connect (hybrid link, DX Gateway, MACsec), Site-to-Site VPN (IPsec tunnels, static or BGP), WAF (web ACLs, AWS Managed Rules, rate-based rules, Bot and Fraud Control), and Shield Advanced (L3/L4 DDoS). Applicable…"
     },
     {
      "name": "aws-observability",
      "description": "Builds, configures, debugs, and optimizes AWS observability with CloudWatch (Log Insights, Metrics, Alarms, Dashboards, EMF), X-Ray, CloudTrail, and ADOT (AWS Distro for OpenTelemetry), AND enables/onboards services to Application Signals using ADOT auto-instrumentation SDKs. Covers Log Insights queries, alarms (metric, composite, anomaly), dashboards, custom metrics/EMF, X-Ray tracing and sampling, ADOT collector config, CloudTrail auditing, and end-to-end Application Signals enablement via…"
+    },
+    {
+     "name": "aws-resilience-lifecycle",
+     "description": "Guides the end-to-end AWS resilience lifecycle integrating Resilience Hub v2, Fault Injection Service, and Application Recovery Controller. Covers the Define → Test → Operate workflow: from policy creation through failure mode assessment, to FIS experiment validation, to ARC operational controls. Applicable when the user wants a complete resilience strategy, needs to connect findings to experiments to controls, or is planning a resilience program. Also applicable for the meta question of whether marking NGRH findings as resolved is enough, whether they are \"done\" after resolving findings, or how to validate findings before resolving them. Not applicable for resolving or remediating a specific individual finding (see resilience-hub-failure-mode-assessment), or when a single service is explicitly named (e.g. \"what FIS experiment should I run\")."
     },
     {
      "name": "aws-sdk-js-v3-usage",
@@ -7023,8 +7059,20 @@
      "description": "AWS serverless and event-driven architecture expert based on Well-Architected Framework. Use when building serverless APIs, Lambda functions, REST APIs, microservices, or async workflows. Covers Lambda with TypeScript/Python, API Gateway (REST/HTTP), DynamoDB, Step Functions, EventBridge, SQS, SNS, and serverless patterns. Essential when user mentions serverless, Lambda, API Gateway, event-driven, async processing, queues, pub/sub, or wants to build scalable serverless applications with AWS…"
     },
     {
+     "name": "aws-social-messaging",
+     "description": "Manages WhatsApp messaging through AWS End User Messaging Social. Covers managing templates (create, update, delete, library), sending messages (utility/marketing/auth templates and freeform), uploading and managing media, configuring event destinations for delivery tracking, and troubleshooting delivery failures. Applicable when a user needs to send WhatsApp messages, create or manage templates, upload media, configure delivery notifications, or diagnose messaging issues."
+    },
+    {
      "name": "aws-sst-development",
      "description": "SST v4 (Ion) expert for managing AWS resources as code with the Pulumi-backed framework. Use when writing or editing sst.config.ts, building infra/ modules (sst.aws.Function/Bucket/Dynamo/Cron/Service/Router, sst.Secret, sst.Linkable, raw aws.* Pulumi resources), wiring resource links, scoping IAM, or running sst deploy/dev/diff/remove. Essential when the user mentions SST, sst.config.ts, $config, $transform, $interpolate, sst.aws.*, sst.Secret, Pulumi/Ion, \"sst deploy\", a failed SST deploy…"
+    },
+    {
+     "name": "aws-step-functions",
+     "description": "Authors and edits AWS Step Functions state machines: writes Amazon States Language (ASL) in JSONata, and chooses and structures state types (Task, Choice, Map, Parallel, Pass, Wait, Succeed, Fail). Covers ASL syntax, JSONata data transformation and variables, Retry/Catch error handling, service integrations (.sync, waitForTaskToken callbacks), Distributed Map for large-scale S3/CSV processing, saga/compensation patterns, Standard vs Express workflow choice, TestState API unit testing, and migrating state machines from JSONPath to JSONata. Use when the user is building, authoring, debugging, or migrating a Step Functions state machine or ASL definition, or orchestrating multi-step workflows with branching, retries, or human-approval callbacks, even if they don't say 'Step Functions.' Do NOT use for general Lambda function code, API Gateway, EventBridge wiring, or SAM/CDK application packaging."
+    },
+    {
+     "name": "aws-transform",
+     "description": "Performs code upgrades, migrations, and transformations using the AWS Transform (ATX) CLI. Use when upgrading language versions, migrating AWS SDKs, migrating frameworks (Angular, Vue.js, Spring Boot, React), upgrading libraries, optimizing performance, migrating x86 to Graviton, analyzing codebases / generating documentation, or defining custom transformations with natural language. Runs locally on a few repositories or at scale across hundreds via AWS Batch/Fargate."
     },
     {
      "name": "azure-image-builder",
@@ -7051,8 +7099,64 @@
      "description": "Plans migrations from Zscaler ZIA/ZPA, Palo Alto, legacy VPN, SWG, or SASE stacks to Cloudflare One. Use for migration assessments, policy mapping, rollout plans, and parity/gap analysis."
     },
     {
+     "name": "cloudfront",
+     "description": "Configures Amazon CloudFront content delivery across six workflows: when to use CloudFront and how it fits with AWS WAF, Shield, CloudFront Functions, Lambda@Edge, Route 53, and origins (creating a distribution, caching, and Flat Rate Pricing (FRP) versus pay-as-you-go pricing); managing custom-domain TLS certificates (ACM in us-east-1); configuring multi-tenant distributions; protecting origins with origin access control (OAC), VPC origins, and origin mutual TLS (mTLS); securing content with signed URLs and cookies, geographic restrictions, viewer mutual TLS, and edge token validation; and observing traffic with standard and real-time logs. Applicable when the customer wants to put CloudFront in front of content, choose pricing, lock an origin, restrict who can view content, or analyze logs. Not applicable for the Route 53 DNS side of a CloudFront custom domain or failover between distributions (see the route53-cloudfront skill), or for pure-Route 53 DNS work (see the route53 skill)."
+    },
+    {
+     "name": "configuring-vpc-endpoints-for-private-aws-service-access",
+     "description": "Configures VPC endpoints (interface and gateway) for private AWS service access using AWS PrivateLink. Use when setting up secure private connectivity to S3, DynamoDB, and other AWS services without internet gateway, NAT device, or public IP addresses. Covers endpoint creation, security groups, route tables, and DNS configuration."
+    },
+    {
+     "name": "connecting-lambda-to-api-gateway",
+     "description": "Connects an existing AWS Lambda function to Amazon API Gateway by creating a REST or HTTP API with resource/method setup, Lambda proxy integration, permissions, and deployment. Always use this skill when connecting Lambda to API Gateway — it handles CORS, throttling, access logging, and production security hardening that are easy to miss."
+    },
+    {
+     "name": "connecting-lambda-to-dynamodb",
+     "description": "Connects an AWS Lambda function to DynamoDB with IAM roles, stream event source mapping, and read/write permissions. Use when setting up Lambda-DynamoDB integration, processing DynamoDB stream events, or deploying serverless event-driven architectures."
+    },
+    {
+     "name": "connecting-vpcs-with-peering",
+     "description": "Establishes VPC peering connections between two VPCs for direct private network connectivity. Always use this skill when creating or managing VPC peering — it validates CIDR overlap, updates all route tables in both VPCs, configures DNS resolution, and provides security group guidance that are critical for correct connectivity."
+    },
+    {
+     "name": "creating-api-gateway-stage",
+     "description": "Creates an API Gateway stage with CloudWatch logging, X-Ray tracing, throttling, WAF integration, and IAM roles following AWS best practices. Use when deploying a REST API to different environments such as dev, test, or production."
+    },
+    {
+     "name": "creating-data-lake-table",
+     "description": "Create managed Iceberg tables using Amazon S3 Tables (s3tables API namespace) with automatic compaction and snapshot management. Sets up table bucket, namespace, table, schema, Glue catalog registration, partitioning, IAM access control. Triggers on: create table, data lake table, analytics table, structured data storage, S3 Tables, Iceberg, Athena table, partitioning strategy, access permissions. Do NOT use for: importing files (use ingesting-into-data-lake), vector storage (use storing-and-querying-vectors), querying existing tables (use querying-data-lake), or locating existing table (use finding-data-lake-assets)."
+    },
+    {
+     "name": "creating-ec2-image-builder-pipeline",
+     "description": "Creates a complete EC2 Image Builder pipeline that builds a custom AMI with pre-installed software, distributes it to target regions, executes the pipeline, and creates a launch template. Use when setting up automated AMI creation with IAM roles, build components, image recipes, and infrastructure configuration."
+    },
+    {
+     "name": "creating-production-vpc-multi-az",
+     "description": "Creates a production-ready VPC with public and private subnets across multiple Availability Zones, including internet gateway, NAT gateways, route tables, and security groups following AWS Well-Architected principles. Use when deploying multi-AZ VPC infrastructure with automatic CIDR planning and DNS resolution."
+    },
+    {
+     "name": "debugging-lambda-timeouts",
+     "description": "Debugs AWS Lambda function timeout failures by systematically analyzing function configuration, CloudWatch logs and metrics, VPC/networking, cold starts, memory constraints, and downstream dependencies to identify root causes with actionable fixes. Use when a Lambda function is timing out or approaching its timeout limit."
+    },
+    {
+     "name": "deploying-custom-domain-rest-api",
+     "description": "Deploys a Regional REST API with a custom domain name, a Lambda backend function, and a request-based Lambda authorizer using AWS CLI. Covers ACM certificate provisioning, API Gateway REST API creation, Lambda function deployment, request authorizer setup, custom domain configuration, base path mapping, and Route 53 DNS record creation. Trigger keywords: custom domain, REST API, Lambda, Route 53, API Gateway, regional endpoint, request authorizer, base path mapping."
+    },
+    {
+     "name": "directconnect",
+     "description": "Configures AWS Direct Connect: choosing a connection model (dedicated, hosted, or a link aggregation group) and completing the cross connect; creating private, public, and transit virtual interfaces and bringing up BGP; reaching many VPCs through a Direct Connect gateway including cross-account transit gateway associations; encrypting traffic with MACsec or a private IP Site-to-Site VPN; making the connection resilient and tuning failover; managing link aggregation groups; SiteLink; and migrating from a virtual private gateway to a transit gateway. Use when the user wants a private, consistent network link between a data center and AWS, or operates an existing Direct Connect setup and needs to extend, encrypt, or harden it. Routes to the right per-task procedure in references. Do NOT use for transit gateway route tables and attachments (transitgateway skill), Site-to-Site VPN without Direct Connect (sitetositevpn skill), or Route 53 DNS routing (route53 skill)."
+    },
+    {
+     "name": "dms-schema-conversion",
+     "description": "Handles the full DMS Schema Conversion lifecycle including creating migration projects, converting database schemas to a target engine, running compatibility assessments, navigating metadata trees, exporting converted DDL to S3, applying schema changes to a target database, and converting SQL statements between database engines. Applies when migrating database schemas between heterogeneous engines using AWS DMS Schema Conversion."
+    },
+    {
      "name": "durable-objects",
      "description": "Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO code for best practices. Covers Workers integration, wrangler config, and testing with Vitest. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+    },
+    {
+     "name": "enabling-lambda-vpc-internet-access",
+     "description": "Enables internet access for AWS Lambda functions deployed in VPC subnets by creating NAT Gateway infrastructure, configuring public/private subnet routing, and updating security groups. Use when a VPC-attached Lambda function cannot reach the internet."
     },
     {
      "name": "extension-to-functions-codebase",
@@ -7109,6 +7213,10 @@
     {
      "name": "launch-with-aws",
      "description": "Migrates vibe-coded web applications to AWS. Handles the full workflow from analysis through migration to deployment, producing deployable AWS Blocks infrastructure code. Supports full-stack apps built with vibe-coding platforms (Lovable, Bolt.new, Replit) and frontend web applications and websites: React, Vue, Angular, Next.js, Nuxt, Astro, SvelteKit, Gatsby, Vite, Svelte, Solid, Docusaurus, and others (static sites, SPAs, and SSR frameworks with static export). Triggers on: launch with AWS…"
+    },
+    {
+     "name": "launching-ec2-instance-with-best-practices",
+     "description": "Launches an EC2 instance with secure, cost-efficient defaults including AMI selection, burstable instance sizing, least-privilege IAM roles, hardened security groups, encrypted EBS volumes, and comprehensive tagging. Use when deploying new EC2 instances following AWS best practices for security and cost optimization."
     },
     {
      "name": "netlify-access-control",
@@ -7191,6 +7299,10 @@
      "description": "Turn on Partial Prefetching in a Next.js app and work through the insights it surfaces. Use when the user wants to enable or adopt Partial Prefetching, flip the `partialPrefetching` flag, opt routes in with `export const prefetch = 'partial'`, audit `<Link prefetch={true}>` calls, or resolve the link-prefetch-partial and instant-shell-url-data insights."
     },
     {
+     "name": "processing-s3-uploads-with-step-functions",
+     "description": "Deploy an event-driven workflow that routes S3 uploads to either Lambda or Fargate via Step Functions based on file size. Uses EventBridge to trigger a Step Functions state machine when objects are uploaded to S3. Small files are processed by Lambda, large files by a Fargate task. Includes VPC, ECR repository, ECS cluster, and scoped IAM roles. Trigger keywords: Step Functions, Fargate, Lambda, S3 event, EventBridge, ECS, ECR, file processing, workflow orchestration, serverless."
+    },
+    {
      "name": "provider-actions",
      "description": "Implement Terraform Provider actions using the Plugin Framework. Use when developing imperative operations that execute at lifecycle events (before/after create, update, destroy)."
     },
@@ -7223,8 +7335,36 @@
      "description": "Push Packer build metadata to HCP Packer registry for tracking and managing image lifecycle. Use when integrating Packer builds with HCP Packer for version control and governance."
     },
     {
+     "name": "recovery-controller-setup",
+     "description": "Configures AWS Application Recovery Controller (ARC) for operational resilience: routing controls with safety rules for cross-Region failover, and zonal shift / zonal autoshift for AZ-impairment recovery. Applies when setting up failover routing, configuring safety rules, enabling zonal shift, or configuring zonal autoshift with practice runs. Also applies when shifting traffic out of a specific Availability Zone (AZ) for an ALB/NLB or other resource. For a broader \"an AZ is impaired, what is my response across services\" question, see aws-resilience-lifecycle. Does not apply to Resilience Hub setup or FIS experiments."
+    },
+    {
      "name": "refactor-module",
      "description": "Transform monolithic Terraform configurations into reusable, maintainable modules following HashiCorp's module design principles and community best practices."
+    },
+    {
+     "name": "resilience-hub-failure-mode-assessment",
+     "description": "Runs and interprets AWS Resilience Hub v2 failure mode assessments. Covers starting assessments, understanding findings (severity, categories, recommendations), triaging by achievability, working with AI-generated service functions, and resolving findings. Applies when the user wants to run an assessment, review findings, or understand failure modes, or has a specific finding and asks how to resolve, remediate, or fix it. Does not apply to initial setup (use resilience-hub-getting-started) or FIS experiments."
+    },
+    {
+     "name": "resilience-hub-getting-started",
+     "description": "Sets up AWS Resilience Hub v2 from scratch: creates resilience policies with SLO targets, registers systems and user journeys, onboards services with input sources, and runs a first failure mode assessment. Applies when the user wants to get started with Resilience Hub v2, create a policy, onboard a service, or run an assessment — including creating one concrete policy with specific availability/RTO/RPO targets and a DR approach for a single service (even a tier-1 one). Does not apply to FIS experiments or ARC routing controls."
+    },
+    {
+     "name": "resilience-hub-multi-account",
+     "description": "Configures AWS Resilience Hub v2 for multi-account resilience management across an AWS Organization. Covers the per-service cross-account permission model, cross-account IAM roles, and centralized assessment from a single account. Applies when the user wants to set up org-wide resilience or assess workloads that span multiple AWS accounts."
+    },
+    {
+     "name": "resilience-program-design",
+     "description": "Designs a resilience program: how to structure and standardize resilience policies across an organization, team, or portfolio (tiered policy model with availability/RTO/RPO targets and DR approach selection), and how often to run resilience activities (operational cadence). Applies when the user asks how to structure policies org-wide, what tiers/targets to set, which DR approach fits a tier, or how frequently to run assessments, FIS experiments, GameDays, or autoshift practice. Does not apply to creating or configuring a specific policy or resource for a single workload (use resilience-hub-getting-started), to step-by-step lifecycle execution (see aws-resilience-lifecycle), or to service-specific setup."
+    },
+    {
+     "name": "route53",
+     "description": "Configures Amazon Route 53 DNS: public and private records, traffic-steering routing policies, health checks, DNS Firewall, Route 53 Profiles, VPC Resolver (also known as Route 53 Resolver) for hybrid and Outposts networks, and Global Resolver. Applicable when the customer wants to point a hostname at a target, split or fail over traffic across endpoints, monitor an endpoint, block malicious domains, centralize DNS across accounts, or resolve private DNS across a hybrid network. Routes to the right per-task procedure in references. Does not cover CloudFront-specific setup (see the route53-cloudfront skill) or non-DNS networking."
+    },
+    {
+     "name": "routing-traffic-with-route53-and-cloudfront",
+     "description": "Configures Amazon Route 53 to route traffic to a CloudFront distribution using a custom domain. Use when setting up DNS alias records, alternate domain names (CNAMEs), ACM certificates for HTTPS, and IPv6 support for CloudFront."
     },
     {
      "name": "run-acceptance-tests",
@@ -7243,8 +7383,36 @@
      "description": "Use when building or changing Cloudflare Sandbox apps on the current stable @cloudflare/sandbox package (default npm tag)—commands, sessions, files, ports, tunnels, terminals, bridge, production, or deprecated-API cleanup while staying on stable. Not for @cloudflare/sandbox@next (use sandbox-next) or for porting to 1.0 (use sandbox-migrate-to-next)."
     },
     {
+     "name": "securing-s3-buckets",
+     "description": "Create and secure S3 buckets following AWS best practices for access control, encryption, monitoring, and remediation of misconfigurations. Use when the user wants to secure a new bucket, audit an existing bucket, fix a security finding, configure encryption, or enable logging and monitoring. Do NOT use for general S3 data operations, S3 Tables setup, or discovering existing data assets."
+    },
+    {
+     "name": "setting-up-cloudtrail-multi-region",
+     "description": "Enables a multi-region AWS CloudTrail trail with S3 log storage, CloudWatch Logs integration, and CloudWatch Logs Insights queries for security monitoring and compliance auditing. Use when setting up centralized API activity logging across all AWS regions."
+    },
+    {
+     "name": "setting-up-cloudwatch-alarm-notifications",
+     "description": "Sets up notification channels for CloudWatch alarms using SNS topics and subscriptions. Always use this skill when configuring alarm notifications — it creates encrypted SNS topics, configures topic policies for CloudWatch access, sets up email/SMS/webhook subscriptions, and links alarms to notification actions with proper security controls."
+    },
+    {
+     "name": "setting-up-ec2-instance-profiles",
+     "description": "Configures EC2 instances to securely call AWS services by creating and attaching IAM roles via instance profiles, eliminating hardcoded credentials. Use when an EC2 instance needs permissions to access AWS services like S3, DynamoDB, SQS, or CloudWatch through temporary credentials."
+    },
+    {
+     "name": "shieldadvanced",
+     "description": "Configures AWS Shield Advanced for enhanced Distributed Denial of Service (DDoS) protection: subscribing accounts and adding resource protections, enabling automatic application layer (layer 7) mitigation through AWS WAF, configuring health-based detection with Route 53 health checks, setting up Shield Response Team (SRT) access and proactive engagement, reviewing DDoS events and requesting cost protection credits, and aggregating resources into protection groups. Applicable when the user wants stronger DDoS protection for internet-facing resources (CloudFront, Application or Network Load Balancers, Elastic IP addresses, Global Accelerator, or Route 53 hosted zones), wants expert help during an attack, or wants to recover attack-driven scaling charges. Routes to the right per-task procedure in references. Not applicable for authoring AWS WAF rules (waf skill), creating Route 53 health checks (route53 skill), or org-wide Shield Advanced rollout with Firewall Manager (firewallmanager skill)."
+    },
+    {
      "name": "signing-in-to-aws",
      "description": "Gets AWS credentials for CLI/SDK access via `aws login`. Activates when a developer needs to authenticate to AWS for local development, when an AWS operation fails due to missing or expired credentials, or when someone asks about setting up AWS access. Triggers: \"set up AWS\", \"configure AWS\", \"aws login\", \"get credentials\", \"authenticate\", \"session expired\", \"token expired\", \"no credentials\", \"AccessDeniedException\" with no configured credentials."
+    },
+    {
+     "name": "sitetositevpn",
+     "description": "Configures AWS Site-to-Site VPN: creating an IPsec VPN connection between an on-premises network and a VPC, choosing the target gateway (virtual private gateway, transit gateway, or AWS Cloud WAN), choosing static or dynamic (BGP) routing, sizing tunnel bandwidth (Standard 1.25 Gbps or Large 5 Gbps), connecting many sites through a VPN Concentrator, applying the customer gateway device configuration, making a connection highly available, and monitoring tunnels with CloudWatch. Applicable when the user wants to connect a data center or branch office to AWS over an encrypted tunnel, choose how routes are exchanged, scale throughput, consolidate sites, or diagnose a down tunnel. Routes to the right per-task procedure in references. Not for AWS Direct Connect (its own service), Client VPN for individual remote users, the transit gateway side of a VPN attachment (transitgateway skill), or Route 53 DNS work."
+    },
+    {
+     "name": "storing-and-querying-vectors",
+     "description": "Store and query vector embeddings using Amazon S3 Vectors, a cost-effective long-term vector storage service with its own API namespace (s3vectors). Triggers on: create S3 vector bucket, vector index, store embeddings, semantic search, RAG vector storage, similarity search, vector database, migrate from other vector databases. Do NOT use for: querying tabular data (use querying-data-lake), S3 object storage, or hundreds/thousands of sustained QPS (use OpenSearch)."
     },
     {
      "name": "terraform-policy",
@@ -7271,12 +7439,32 @@
      "description": "Comprehensive guide for writing and running Terraform tests. Use when creating test files (.tftest.hcl), writing test scenarios with run blocks, validating infrastructure behavior with assertions, mocking providers and data sources, testing module outputs and resource configurations, or troubleshooting Terraform test syntax and execution."
     },
     {
+     "name": "transitgateway",
+     "description": "Configures AWS Transit Gateway: creating a hub and attaching VPCs, segmenting traffic with route tables, centralizing egress and inspection through a hub (appliances or a Gateway Load Balancer endpoint), forcing east-west traffic between VPCs through AWS Network Firewall, connecting on-premises networks over the transit-gateway side of a Site-to-Site VPN or Direct Connect attachment (including ECMP to aggregate bandwidth across multiple VPN tunnels), peering transit gateways across Regions, migrating from a VPC peering mesh, and routing IP multicast. Applicable when connecting many VPCs through one router, isolating environments, forcing VPC-to-VPC traffic through a central Network Firewall, reaching on-premises over the hub, linking Regions, or moving off a peering mesh. Not applicable for single-VPC routing, VPC peering between two VPCs (vpcpeering skill), Direct Connect gateway or virtual interface setup (directconnect skill), or Route 53 DNS work."
+    },
+    {
+     "name": "troubleshooting-application-failures",
+     "description": "Troubleshoots failing applications by discovering and analyzing CloudWatch log groups to identify error patterns, root causes, and actionable solutions. Use when an application is experiencing failures and log-based diagnosis is needed."
+    },
+    {
+     "name": "troubleshooting-efs",
+     "description": "Diagnoses and resolves Amazon EFS issues including mount failures, NFS timeouts, permission errors, throughput problems, and burst credit exhaustion. Use when the user has an EFS file system that is not mounting, returning errors, performing slowly, or showing access denied."
+    },
+    {
+     "name": "troubleshooting-s3-files",
+     "description": "Diagnoses and resolves Amazon S3 Files issues including mount failures, permission errors, synchronization problems, and performance issues. Use when the user has an S3 file system that is not mounting, returning access denied, not syncing changes to S3, showing files in lost+found, or performing slower than expected."
+    },
+    {
      "name": "turnstile-spin",
      "description": "Set up Cloudflare Turnstile end-to-end in a project. Scan the codebase, create the widget via the Cloudflare API, embed it where user requests need bot verification (form submissions, SPA actions, API endpoints, download links, comment or vote submissions, etc.), wire canonical server-side siteverify in the customer's existing backend, validate, and persist the skill. Load this when a user asks to add Turnstile, set up CAPTCHA, protect a form or endpoint from bots, or fix a Turnstile…"
     },
     {
      "name": "vmware-aiops",
      "description": "Use this skill whenever the user needs to manage VMs in VMware/vSphere/ESXi — it's the entry point for all VM operations. Directly handles: power on/off, clone, snapshot, migrate, deploy from OVA or templates, run commands inside VMs, batch operations, cluster management, vCenter alarm acknowledgment, a one-glance cluster-health triage (\"is anything on fire?\"), and VM/host/datastore investigation drill-downs. Always use this skill for any \"power on\", \"clone\", \"deploy\", \"migrate\", \"batch\"…"
+    },
+    {
+     "name": "waf",
+     "description": "Configures AWS WAF to filter web traffic: creating web access control lists (web ACLs) on CloudFront, Application Load Balancers, API Gateway, and AppSync; AWS Managed Rules tuned in Count mode; rate-based rules for HTTP floods; IP set and geographic match rules; Bot Control (Common and Targeted); turning bot labels into a confidence signal; stripping spoofed inbound x-amzn-waf-* headers; recovering the real client IP behind a CDN; Fraud Control (account takeover and account creation fraud prevention); and logging and request sampling. Use when the user wants to protect a web application or API from common exploits, bots, credential stuffing, fake-account creation, or HTTP floods at the application layer (layer 7). Routes to the right per-task procedure in references. Do NOT use for L3/L4 DDoS protection (shieldadvanced skill), multi-account WAF rollout (firewallmanager skill), CloudFront configuration (cloudfront skill), or Route 53 health checks or records (route53 skill)."
     },
     {
      "name": "web-perf",
@@ -21744,8 +21932,44 @@
    "description": "MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB",
    "skills": [
     {
+     "name": "amazon-aurora-mysql",
+     "description": "Amazon Aurora MySQL — creates, modifies, and advises on Aurora MySQL clusters specifically (MySQL-compatible engine, Aurora serverless, parallel query). Trigger for Aurora MySQL cluster operations, ACU sizing, I/O-Optimized storage, commitment pricing, or MySQL upgrade planning. Aurora MySQL uses full (VPC-based) configuration — express configuration is PostgreSQL-only. For Aurora PostgreSQL, use amazon-aurora-postgresql instead. Contains safety guardrails and response templates that override defaults."
+    },
+    {
+     "name": "amazon-aurora-postgresql",
+     "description": "Amazon Aurora PostgreSQL — creates, modifies, and advises on Aurora PostgreSQL clusters specifically (PostgreSQL-compatible engine, Aurora serverless, express configuration, pgvector, Babelfish). Trigger for Aurora PostgreSQL cluster operations, express-configuration quick-start, ACU sizing, I/O-Optimized storage, commitment pricing, or PostgreSQL upgrade planning. For Aurora MySQL, use amazon-aurora-mysql instead. Contains safety guardrails, express-first routing, and response templates that override defaults."
+    },
+    {
+     "name": "amazon-documentdb",
+     "description": "Manages Amazon DocumentDB end-to-end — serverless-on-8.0 cluster setup, TLS/VPC/driver config, flexible-schema and vector-search data modeling, MongoDB compatibility assessment, DMS-based migration, slow-query diagnosis, major version upgrades (4.0→5.0→8.0), Well-Architected reviews (41-check wa_review.py), cost estimation, and security hardening. Retrieve for every DocumentDB question and when the user asks to set up or migrate MongoDB to AWS — DocumentDB is AWS's MongoDB-compatible managed database. Triggers: JSON document store, document database, MongoDB on AWS, Nested fields, Lambda cannot connect, TLS handshake, VPC port 27017, IAM auth, Secrets Manager, encryption at rest, $graphLookup, flexible schema, COLLSCAN, compound index, DMS migration, CDC cutover, $vectorSearch, RAG, Global Clusters, DR replication, cost sizing, audit, health check, production-readiness."
+    },
+    {
+     "name": "amazon-dynamodb",
+     "description": "Designs, reviews, and debugs DynamoDB data layers from design axioms — enumerates access patterns, chooses partition/sort keys and GSIs, decides single-table vs. multi-table, configures Streams, Global Tables, TTL, and zero-ETL integrations to OpenSearch/Redshift/SageMaker Lakehouse, and produces a defensible data-layer design with a monthly cost estimate and optional live validation. Applies whenever a user is designing, reviewing, or refactoring anything backed by DynamoDB — schemas, access patterns, GSIs, single- vs. multi-table choices, Streams consumers, transactional outboxes, Global Tables, zero-ETL pipelines — even when they don't say \"axioms\" or \"design review.\" Also applies when debugging hot partitions, throttling, unbounded Scans, LWW conflicts, or surprise bills on DynamoDB workloads."
+    },
+    {
+     "name": "amazon-elasticache",
+     "description": "Activate when developers have latent caching needs: slow API responses, database read bottlenecks, DynamoDB throttling or cost, RDS/Aurora scaling pressure, Bedrock latency or cost, or adding a cache; activate when working with Redis, Valkey, Memcached, or any in-memory data store, cache-aside patterns, session stores, rate limiting, leaderboards, counters, streams, queues, pub/sub, distributed locks, feature flags, shopping carts, or other caching strategies. Activate for GenAI and ML retrieval: vector similarity search for low-latency retrieval, semantic caching, RAG, LLM response caching, embedding stores, AI agent memory, recommendation, personalization. Activate for ElastiCache lifecycle: provisioning (serverless or node-based), engine selection, CloudFormation/CDK/Terraform IaC, VPC connectivity, TLS, RBAC, IAM auth, Global Datastore, monitoring, troubleshooting, cost optimization, and migration from self-managed Redis. Do not trigger for browser caches, CDN/CloudFront, HTTP Cache-Control, CPU caches."
+    },
+    {
+     "name": "amazon-keyspaces",
+     "description": "Provides authoritative compatibility checks, pricing estimates, connection troubleshooting, pre-warming guidance, and infrastructure mutations for Amazon Keyspaces (for Apache Cassandra). Covers LWT/batch operations, secondary indexes, materialized views, capacity modes, TTL, PITR, CDC, auto-scaling, multi-region keyspaces, UDTs, nodetool diagnostics parsing, SQL-to-Cassandra migration, and Cassandra-to-Keyspaces migration scenarios. Agents frequently produce incomplete or incorrect answers about Keyspaces feature support without this skill loaded."
+    },
+    {
+     "name": "amazon-opensearch-service",
+     "description": "Guides migration, provisioning, search, log-analytics, trace-analytics, and Agentic AI Assistant workflows for Amazon OpenSearch Service and Serverless across six capabilities — migration (Solr/ES/self-managed into AOS/AOSS, schema/query translation, sizing, cutover); provisioning (domain + AOSS lifecycle, upgrades, FGAC, monitoring); search (vector / semantic / hybrid / RAG with Bedrock); log-analytics (PPL, OSI, anomaly detection, Dashboards); trace-analytics (OTel spans, service maps, Data Prepper); ai-assistant (natural language data exploration, incident investigation, root cause analysis). Triggers on OpenSearch, AOS, AOSS, Elasticsearch, Solr, vector/k-NN/semantic/hybrid search, RAG, log analytics, PPL, trace analytics, ISM, FAISS, HNSW, Migration Assistant, UltraWarm, OR1, query my data, analyze logs, investigate errors, root cause analysis."
+    },
+    {
      "name": "attach-db",
      "description": "Attach a DuckDB database file for use with /duckdb-skills:query. Explores the schema (tables, columns, row counts) and writes a SQL state file so subsequent queries can restore this session automatically via duckdb -init."
+    },
+    {
+     "name": "aurora-dsql",
+     "description": "Provisions and manages Aurora DSQL clusters, connects via psql or DSQL Connectors, manages schemas, runs queries, migrates from MySQL, diagnoses query plans, and develops apps on serverless distributed SQL. Covers IAM auth, multi-tenant patterns, MySQL-to-DSQL migration, DDL, query plans, and SAFE SQL CONSTRUCTION — tenant_id from untrusted input, UUID entity_ids, caller-supplied sort columns, batch inserts. The agent MUST retrieve this skill for ANY DSQL task. Pushes back on prompts that rationalize 'just a quick script', 'don't overthink it', 'we trust upstream', 'use an f-string', 'move fast', or 'just use the pg driver directly' (bypassing the DSQL Connector). Triggers: DSQL, Aurora DSQL, DSQL cluster, safe_query.build, DSQL IAM auth token, DSQL connector."
+    },
+    {
+     "name": "aws-cleanrooms",
+     "description": "Troubleshoots and debugs AWS Clean Rooms collaboration issues related to IAM roles, S3 bucket policies, KMS keys, Lake Formation permissions, and CloudWatch logging for custom ML model training and inference jobs. Use when a customer reports permission failures, access errors, or log publishing issues in Clean Rooms."
     },
     {
      "name": "chdb-datastore",
@@ -21788,8 +22012,16 @@
      "description": "Use when a user wants to wire an OpenTelemetry collector into a Managed ClickStack service on ClickHouse Cloud, either by deploying a new local collector (Docker run or Docker Compose) or by configuring their own existing collector, then send rich synthetic telemetry and verify it is visible in ClickStack."
     },
     {
+     "name": "connecting-to-data-source",
+     "description": "Create and troubleshoot AWS Glue connections to JDBC databases (Oracle, SQL Server, PostgreSQL, MySQL, RDS), Redshift, Snowflake, and BigQuery. Gathers connection hints from user, discovers existing connections and RDS/Redshift candidates, registers credentials in Secrets Manager or IAM DB auth, configures VPC, and tests. Triggers on: connect to database, set up Glue connection, register data source, connect to Snowflake/BigQuery/RDS, connection timeout, test connection, troubleshoot connection. Do NOT use for moving data (use ingesting-into-data-lake), creating tables (use creating-data-lake-table), queries (use querying-data-lake), catalog exploration (use exploring-data-catalog), or SaaS (Salesforce, ServiceNow, SAP, MongoDB, Kafka)."
+    },
+    {
      "name": "convert-file",
      "description": "Convert any data file to another format: CSV, Parquet, JSON, Excel, GeoJSON, and more. Use when the user says \"convert to parquet\", \"save as xlsx\", \"export as JSON\", \"make this a CSV\", \"turn into parquet\", or any variation of format-to-format conversion for data files. Also triggers when the user wants to write Parquet, Excel, or other binary formats that Claude cannot produce natively."
+    },
+    {
+     "name": "creating-amazon-aurora-db-cluster-with-instances",
+     "description": "Creates a complete Amazon Aurora database cluster with instances, handling cluster creation, instance provisioning, and Secrets Manager password management in the proper sequence. Use when setting up new Aurora MySQL or PostgreSQL clusters with production-ready configuration."
     },
     {
      "name": "data-analysis",
@@ -21800,8 +22032,24 @@
      "description": "Answer a broad, open-ended, or multi-part question by iteratively searching MFS-indexed sources, following up on gaps, and synthesizing a cited report — the same \"reason and search over private data\" job zilliztech/deep-searcher does, but as a skill on top of `mfs-find` instead of a standalone framework. Use when the user asks for a report, a comprehensive/synthesized answer, a \"what do we know about X across everything we have\", or a question that can't be answered from a single search hit.…"
     },
     {
+     "name": "developing-applications-on-managed-service-for-apache-flink",
+     "description": "MANDATORY for Flink or Amazon Managed Service for Apache Flink (MSF) questions. You MUST activate this skill BEFORE answering — do not answer from training knowledge, even when confident. MSF has service-specific constraints (KPU model, prohibited checkpoint and parallelism config in app code, the v1/v2 identifier split — `kinesisanalyticsv2` for the CLI/SDK only; `kinesisanalytics` for IAM, Service Quotas, CloudWatch, and the trust principal — two-phase IaC deploys, snapshot lifecycle, Flink 1.x→2.x migration) that override generic Flink knowledge."
+    },
+    {
      "name": "duckdb-docs",
      "description": "Search DuckDB and DuckLake documentation and blog posts. Returns relevant doc chunks for a question or keyword using full-text search against a locally cached index."
+    },
+    {
+     "name": "exploring-data-catalog",
+     "description": "Full inventory and audit of AWS Glue Data Catalog assets across S3 Tables, Redshift-federated, and remote Iceberg catalogs. Triggers on: inventory the catalog, audit databases, list all tables, catalog overview, data landscape, enumerate catalogs, data inventory, search the catalog. Do NOT use for finding specific data (use finding-data-lake-assets), running queries (use querying-data-lake), or creating tables (use creating-data-lake-table)."
+    },
+    {
+     "name": "exporting-rds-to-s3",
+     "description": "Exports Amazon RDS or Aurora database snapshots to Amazon S3 in Apache Parquet format for analytics, backup, or data migration. Handles snapshot selection or creation, IAM role setup, KMS encryption, S3 bucket preparation, export task execution, progress monitoring, and data verification. Use when exporting RDS/Aurora data to S3 for Athena, Glue, or Redshift Spectrum consumption."
+    },
+    {
+     "name": "finding-data-lake-assets",
+     "description": "Resolve data lake and lakehouse asset references across Glue Data Catalog, S3, S3 Tables, and Redshift. Triggers on: find the table, where is our data, which table has, locate dataset, find data for, search catalog, what tables match, Redshift table, lakehouse table, data lake table, warehouse table, reverse lookup S3 path. Do NOT use for: full catalog audits (use exploring-data-catalog), running queries (use querying-data-lake), creating tables (use creating-data-lake-table)."
     },
     {
      "name": "infra-clickhouse",
@@ -21810,6 +22058,10 @@
     {
      "name": "infra-postgres",
      "description": "Sets up and manages Postgres using the clickhousectl CLI — runs a local Docker-backed Postgres for development, and creates and operates managed ClickHouse Cloud Postgres services (connections, TLS, runtime config, read replicas, failover, point-in-time restore). Use when the user wants a Postgres or PostgreSQL database for their application, a local Postgres dev environment, psql access, or a managed/production Postgres in ClickHouse Cloud, or mentions moving a local Postgres to production."
+    },
+    {
+     "name": "ingesting-into-data-lake",
+     "description": "Import data into the AWS data lake from S3 files, local uploads, JDBC databases (Oracle, SQL Server, PostgreSQL, MySQL, RDS, Aurora), Amazon Redshift, Snowflake, BigQuery, DynamoDB, or existing Glue catalog tables (migration). Default target is S3 Tables; standard Iceberg on a general purpose bucket is supported where S3 Tables is not adopted. Handles one-time loads, recurring pipelines, migrations. Triggers on: import data, load data, ingest, sync database, migrate table, move data to AWS, set up pipeline, ETL, pull from Snowflake, query BigQuery into S3, export DynamoDB, CTAS, convert to Iceberg. Do NOT use for setting up or troubleshooting Glue connections (use connecting-to-data-source), creating empty tables (use creating-data-lake-table), running queries (use querying-data-lake), finding tables by fuzzy name (use finding-data-lake-assets), catalog audit (use exploring-data-catalog), or SaaS platforms like Salesforce, ServiceNow, SAP, MongoDB, Kafka."
     },
     {
      "name": "install-duckdb",
@@ -21824,12 +22076,24 @@
      "description": "Iris is Redis's umbrella for AI-focused products. Use this skill when integrating with the Iris Redis Agent Memory (RAM) data plane on Redis Cloud — recording session events for an AI agent, creating or searching long-term memories, configuring a memory store, or tuning background memory promotion. Code examples use the official `redis-agent-memory` (Python) and `@redis-iris/agent-memory` (TypeScript) SDKs."
     },
     {
+     "name": "managing-amazon-msk",
+     "description": "Operates Amazon MSK Provisioned clusters (Standard and Express brokers). Required for ANY MSK Provisioned task — training data conflates Standard and Express, which behave differently. Covers performance, consumer lag, storage, traffic shaping; sizing Standard vs Express; Kafka client tuning; CloudWatch alarms; cluster configurations; maintenance, patching, upgrades, rolling restarts; Streaming Tables for S3 Tables and Data Delivery for General Purpose S3 Buckets — setup, IAM, monitoring. Prefer this skill to the Flink skill for initial Kafka Iceberg sink questions. Triggers: MSK Provisioned (Express/Standard), Kafka, kafka.*or express.* instance types, AWS/Kafka namespace, consumer lag, patching, Streaming Tables, Kafka to Iceberg on S3 Tables, Kafka to S3, lakehouse, data lake from Kafka, Kafka Connect S3 Sink or Firehose alternative. DO NOT USE for MSK Connect or Replicator — search documentation instead. Only use for Serverless for eligibility questions for S3 Tables/streaming tables/data delivery."
+    },
+    {
      "name": "mfs-find",
      "description": "Search, grep, browse, and read across registered MFS data sources via the `mfs` CLI — codebases, docs, PDFs, web crawls, databases (postgres/mysql/mongo/snowflake/bigquery), issue trackers (jira/linear/github), CRMs (hubspot), chat (slack/discord/gmail/feishu), object stores (s3/gdrive). Use whenever the user asks to find, locate, look up, look across, or read something out of an already-configured MFS index. Trigger phrases include \"search the codebase for\", \"find anywhere about\", \"where is X…"
     },
     {
      "name": "mfs-ingest",
      "description": "Register, update, or re-sync data sources for MFS so they become searchable — postgres / mysql / mongo / snowflake / bigquery, github / jira / linear / notion / hubspot / zendesk, slack / discord / gmail / feishu, s3 / gdrive / web / file. Use whenever the user wants to ADD a new data source to MFS, change an existing connector's config, re-ingest / re-index a source, list registered connectors, or troubleshoot a sync that's not picking up data. Trigger phrases include \"add X to MFS\", \"ingest…"
+    },
+    {
+     "name": "migrate-to-msk",
+     "description": "Helps migrate self-managed Apache Kafka workloads to Amazon MSK Express. Inventories the source cluster (from IaC files, Kafka CLI output, or manual input), assesses MSK Express compatibility across topology, Kafka version, configs, auth, and quotas, produces a target Express specification (instance type, broker count, monthly cost) by filling the AWS-published MSK Sizing/Pricing workbook, and guides migration execution using MSK Replicator. Applicable when the user mentions migrating Kafka, MSK, MSK Express, Kafka migration, analyzing Kafka infrastructure, moving to MSK, moving streaming platform to MSK, streaming migration, moving streaming workloads to AWS, MSK workload compatibility, choosing an MSK cluster type, or MSK Replicator. Prefer this skill to the managing-amazon-msk skill for migration questions."
+    },
+    {
+     "name": "migrating-to-amazon-redshift",
+     "description": "Guides an end-to-end data-warehouse migration to Amazon Redshift — discovery, schema/SQL/stored-procedure/macro/script conversion, data migration, validation, performance comparison, and reporting. Source-routed via `references/<source>/`; Teradata (Vantage) is the supported source; additional sources are added as their own `references/<source>/` sets. Text-only knowledge (no executable code) — the AI generates all execution at runtime. Applies when a user wants to migrate Teradata to Amazon Redshift, convert Teradata DDL/SQL/stored procedures/macros/BTEQ to Redshift/RSQL, or assess Teradata-to-Redshift migration complexity. Applies only to migrations targeting Amazon Redshift; migrations to other platforms (Snowflake, BigQuery, Databricks, etc.) are out of scope regardless of source. Does not cover general Redshift administration, performance tuning, or troubleshooting of existing Redshift clusters (no migration involved), or sources not listed under references/."
     },
     {
      "name": "mongodb-atlas-stream-processing",
@@ -21960,6 +22224,34 @@
      "description": "Run SQL queries against the attached DuckDB database or ad-hoc against files. Accepts raw SQL or natural language questions. Uses DuckDB Friendly SQL idioms."
     },
     {
+     "name": "querying-aws-cloudwatch",
+     "description": "Runs SQL queries on CloudWatch Logs data exported as Apache Iceberg tables in S3 Tables. Covers VPC Flow Logs, WAF logs, CloudFront access logs, Route 53 resolver logs, Network Firewall logs, EKS audit logs, Verified Access logs, SES logs, VPC Lattice logs, Step Functions logs, NLB access logs, and 20+ other AWS vended data sources. Applies when analyzing network traffic, investigating security incidents, querying exported logs with SQL, enabling S3 Tables integration, configuring log export, correlating logs with other data, or running Athena queries on the aws-cloudwatch table bucket. Trigger phrases: query logs with SQL, analyze logs in Athena, SQL on VPC flow logs, investigate network traffic, run SQL on exported logs, enable S3 Tables for CloudWatch, correlate logs, historical log analysis, set up log querying."
+    },
+    {
+     "name": "querying-aws-s3",
+     "description": "Queries S3 object metadata, tracks bucket activity, audits object changes, searches annotations, and analyzes storage metrics using S3 Metadata system tables (journal, inventory, annotation) and S3 Storage Lens tables via Athena SQL. Applies when counting objects, finding recent uploads or deletions, identifying who wrote to a prefix, breaking down storage classes, finding objects by tag, searching annotation content, analyzing storage lens metrics, or enabling S3 Metadata tracking. Prefers system tables over raw S3 APIs (list-objects-v2, head-object) at scale. Trigger phrases: bucket activity, object count, who uploaded, track deletions, storage class breakdown, find by tag, search annotations, storage lens metrics, audit bucket changes."
+    },
+    {
+     "name": "querying-aws-sagemaker-catalog",
+     "description": "Runs SQL analytics on SageMaker Catalog asset metadata tables exported as Apache Iceberg in S3 Tables. Covers governance queries, asset growth tracking, ownership audits, time-travel over catalog state, and metadata quality analysis. Applies when querying catalog inventory, finding assets without descriptions, comparing catalog snapshots, or auditing data ownership. Trigger phrases: catalog inventory SQL, how many assets, assets without descriptions, asset growth over time, who owns this data, catalog governance, data quality audit, catalog analytics."
+    },
+    {
+     "name": "querying-data-lake",
+     "description": "Execute and manage Athena SQL queries across default and federated catalogs (Glue, S3 Tables, Redshift). Triggers on phrases like: query data, run SQL, athena query, analyze table, SQL query, workgroup status, profile table, query Redshift catalog, query S3 Tables. Do NOT use for finding specific data assets (use finding-data-lake-assets), full catalog audits (use exploring-data-catalog), importing data (use ingesting-into-data-lake)."
+    },
+    {
+     "name": "rds-oracle",
+     "description": "Diagnoses and resolves Amazon RDS for Oracle connectivity, authentication, networking, and driver troubleshooting. Applicable to any RDS-for-Oracle question including connecting a Python Lambda to RDS Oracle in a VPC with pooling and cold-start optimization, EKS pods to RDS Oracle via the Secrets Manager CSI driver with IRSA and SecretProviderClass, ORA-12170 cross-VPC timeouts from EC2, DPI-1047 cannot-locate-64-bit-Oracle-Client errors, and Oracle Connection Manager (CMAN) on EC2 as a proxy with HA across two AZs. Covers python-oracledb thin vs thick mode, init_oracle_client, RDS Proxy does NOT support RDS Oracle, port 1521, VPC peering, Transit Gateway, Kerberos with AWS Managed Microsoft AD, SSL/TLS/NNE, SSM port forwarding, EC2/ECS Fargate/EKS/Lambda, SQL Developer/DBeaver/Toad/SQLcl, and Secrets Manager."
+    },
+    {
+     "name": "rds-oss",
+     "description": "Advises on Amazon RDS open-source engines (MySQL, MariaDB, PostgreSQL) for instance creation, upgrade planning, commitment pricing, proxy evaluation, and Blue/Green deployments. Handles any RDS MySQL, MariaDB, or PostgreSQL question, including create a production-ready RDS MySQL instance, provision an RDS PostgreSQL database, run the RDS upgrade advisor for my RDS MySQL instance, what are my upgrade options, upgrade RDS MariaDB from 10.6 to the latest version, should I buy reserved instances or a savings plan for db.r7g.2xlarge RDS MySQL, change a VARCHAR to INT column on RDS MySQL 8.0 with Blue/Green, and does RDS Proxy help when PgBouncer already runs in transaction mode. Covers instance creation with production best practices, describe-db-instances and describe-db-engine-versions upgrade-target workflow, live prechecks via SSM or direct connection, RI versus DSP commitment pricing, RDS Proxy versus PgBouncer, and Blue/Green lifecycle with binlog replay compatibility."
+    },
+    {
+     "name": "rds-sqlserver",
+     "description": "Provides connectivity, authentication, and troubleshooting guidance for Amazon RDS for SQL Server. Applicable when users ask about SSMS times out connecting from EC2, Cannot generate SSPI context with Windows auth, connect RDS SQL Server from Lambda with pymssql, auth_scheme shows NTLM instead of KERBEROS on ECS Fargate, SSM tunnel to RDS SQL Server from laptop, port 1433 security group, TrustServerCertificate=True for localhost tunnels, SPN MSSQLSvc, AWS Managed Microsoft AD, CNAME not RDS endpoint for Kerberos, tds_version='7.4', encryption='require', port-as-string for pymssql, Secrets Manager credential caching in Lambda, error 18456 login failed. Covers Python (pymssql, pyodbc), .NET (Microsoft.Data.SqlClient), Java (JDBC mssql-jdbc), Node.js (tedious), IAM auth via RDS Proxy, and VPC/ECS/EKS/Lambda deployment."
+    },
+    {
      "name": "read-file",
      "description": "Read any data file (CSV, JSON, Parquet, Avro, Excel, spatial, SQLite) or remote URL (S3, HTTPS). Use when user references a data file, asks \"what's in this file\", or wants to preview/profile a dataset. Not for source code."
     },
@@ -22024,6 +22316,10 @@
      "description": "Redis LangCache guidance for semantic caching of LLM responses on Redis Cloud — calling search/set via the SDK or REST API, tuning the similarity threshold, separating caches per task type, and filtering with custom attributes. Use when caching LLM completions or RAG answers to cut API cost and latency, building a cache-aside layer in front of OpenAI / Anthropic / etc., tuning hit rate vs precision, or splitting one app's LLM workloads into multiple LangCache caches."
     },
     {
+     "name": "redshift-guide",
+     "description": "Amazon Redshift is NOT PostgreSQL — corrects PostgreSQL-derived LLM mistakes; covers Redshift-specific SQL, DDL, COPY/UNLOAD, system views, metadata discovery, and operational patterns. Applies ONLY when the task is about Redshift itself (cluster, Serverless workgroup, or Redshift SQL). Pushes back on: CREATE INDEX, string_agg, pg_catalog, text type, SERIAL, stl_query, LATERAL, RETURNING. Triggers on: Redshift SQL, Redshift CREATE TABLE, Redshift COPY/UNLOAD, slow Redshift query, Redshift permission denied, Redshift disk full, Redshift system views, QUALIFY, PIVOT, MERGE, Redshift Data API, Redshift WLM, concurrency scaling, Redshift resize, Redshift Spectrum external tables. Does NOT apply to (defer to that service's own skill): Amazon S3 storage/bucket policies, Athena or Glue queries/catalogs, data-lake or Iceberg work outside Redshift, Aurora, RDS, or DynamoDB — but S3/Glue ARE in scope for Redshift COPY, UNLOAD, or data-lake queries (external schemas/tables on S3)."
+    },
+    {
      "name": "review-skill",
      "description": "Review a proposed Agent Skill for structural validity and content quality before publishing. Runs the skill-validator CLI to check for structural issues, scores the skill with an LLM judge, and interprets results to advise SMEs on what to address. Use when a user wants to review, validate, or quality-check an Agent Skill."
     },
@@ -22038,6 +22334,10 @@
     {
      "name": "spatial",
      "description": "Answer questions about spatial data using DuckDB. Use when the user mentions locations, coordinates, lat/lng, distances, maps, addresses, \"near\", \"within\", \"closest\", geographic names, or spatial file formats (GeoJSON, Shapefile, GeoPackage, GPX, GeoParquet). Also triggers when the user wants to find places, buildings, or roads — Overture Maps provides free global data on S3 with zero API keys. Handles spatial joins, distance calculations, containment checks, density analysis, and format…"
+    },
+    {
+     "name": "timestream-influxdb",
+     "description": "Retrieves authoritative guidance on Amazon Timestream for InfluxDB (managed InfluxDB 2, InfluxDB 2 Read Replica Clusters, InfluxDB 3 Core and Enterprise). Applicable to any InfluxDB-on-AWS request including engine selection, provisioning (Marketplace + AmazonTimestreamInfluxDBFullAccess/ConsoleFullAccess IAM), schema design (tags vs fields, cardinality, HTTP/sensor/metric data modeling), migration from LiveAnalytics, Processing Engine plugins, connectivity (port 8086 V2, port 8181 V3, VPC-only by default), and write/query errors."
     },
     {
      "name": "tinybird-best-practices",

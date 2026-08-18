@@ -2,7 +2,7 @@
 
 Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים
 
-**מספר סקילים:** 145
+**מספר סקילים:** 146
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -40,6 +40,7 @@ Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סט�
 | [`constant-time-testing`](./constant-time-testing/SKILL.md) | Constant-time testing detects timing side channels in cryptographic code. Use when auditing crypto implementations for timing vulnerabilities. |
 | [`cosmos-vulnerability-scanner`](./cosmos-vulnerability-scanner/SKILL.md) | Scans Cosmos SDK blockchain modules and CosmWasm contracts for consensus-critical vulnerabilities — chain halts, fund loss, state divergence. 25 core + 16 IBC + 10 EVM + 3 CosmWasm patterns. Use when auditing custom x/ modules, reviewing IBC integrations, or assessing pre-launch chain security.… |
 | [`coverage-analysis`](./coverage-analysis/SKILL.md) | Coverage analysis measures code exercised during fuzzing. Use when assessing harness effectiveness or identifying fuzzing blockers. |
+| [`creating-secrets-using-best-practices`](./creating-secrets-using-best-practices/SKILL.md) | Creates and manages secrets in AWS Secrets Manager following security best practices. Always use this skill when creating secrets — it sets up dedicated KMS encryption keys, automatic rotation, least-privilege IAM policies, CloudTrail auditing, and lifecycle management that are essential for… |
 | [`crypto-protocol-diagram`](./crypto-protocol-diagram/SKILL.md) | Extracts protocol message flow from source code, RFCs, academic papers, pseudocode, informal prose, ProVerif (.pv), or Tamarin (.spthy) models and generates Mermaid sequenceDiagrams with cryptographic annotations. Use when diagramming a crypto protocol, visualizing a handshake or key exchange flow… |
 | [`devcontainer-setup`](./devcontainer-setup/SKILL.md) | Creates devcontainers with Claude Code, language-specific tooling (Python/Node/Rust/Go), and persistent volumes. Use when adding devcontainer support to a project, setting up isolated development environments, or configuring sandboxed Claude Code workspaces. |
 | [`diagramming-code`](./diagramming-code/SKILL.md) | Generates Mermaid diagrams from Trailmark code graphs. Produces call graphs, class hierarchies, module dependency maps, containment diagrams, complexity heatmaps, and attack surface data flow visualizations. Use when visualizing code architecture, drawing call graphs, generating class diagrams… |
