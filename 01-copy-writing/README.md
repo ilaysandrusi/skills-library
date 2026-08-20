@@ -2,12 +2,13 @@
 
 עצירת סלופ AI, קופי, הנחיות כתיבה
 
-**מספר סקילים:** 99
+**מספר סקילים:** 100
 
 | סקיל | מה הוא עושה |
 |---|---|
 | [`amazon-returns-recovery`](./amazon-returns-recovery/SKILL.md) | Use when the user wants to audit Amazon returns or Amazon-billed subscriptions, mentions a restocking fee, short or denied refund, forgotten Prime Video Channel, Audible, Kindle Unlimited, or Prime charge, or asks whether Amazon still owes or bills them. Read order, refund, and subscription… |
 | [`android-app-factory`](./android-app-factory/SKILL.md) | Plan, build, test, and release a production-grade native Android app from a product idea through Google Play. Use for requests to create, ship, submit, monetize, or modernize an Android app. Covers Kotlin and Jetpack Compose architecture, API-level policy verification, accessibility, privacy and… |
+| [`avoid-ai-writing`](./avoid-ai-writing/SKILL.md) | Audit and rewrite prose so it stops reading as machine-generated. Use this skill when asked to remove AI-isms, clean up AI writing, edit a draft for AI tells, audit a README, changelog, release note, PR description, or blog post for machine-sounding prose, or make text sound less like AI. Supports… |
 | [`beautiful_prose`](./beautiful_prose/SKILL.md) | A hard-edged writing style contract for timeless, forceful English prose without modern AI tics. Use when users ask for prose or rewrites that must be clean, exact, concrete, and free of AI cadence, filler, or therapeutic tone. |
 | [`cold-email`](./cold-email/SKILL.md) | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions "cold outreach," "prospecting email," "outbound email," "email to… |
 | [`content-humanizer`](./content-humanizer/SKILL.md) | Makes AI-generated content sound genuinely human — not just cleaned up, but alive. Use when content feels robotic, uses too many AI clichés, lacks personality, or reads like it was written by committee. Triggers: 'this sounds like AI', 'make it more human', 'add personality', 'it feels generic'… |

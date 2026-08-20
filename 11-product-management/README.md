@@ -2,7 +2,7 @@
 
 חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM
 
-**מספר סקילים:** 146
+**מספר סקילים:** 149
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -17,6 +17,7 @@
 | [`autonomous-investigation`](./autonomous-investigation/SKILL.md) | The protocol behind every investigation skill. Use when AI research must proceed without you: search-plan gate, Fact/Inference/Assumption labels, confidence stacking, diffable outputs. |
 | [`battle-card-builder`](./battle-card-builder/SKILL.md) | Research and draft a competitive battle card from public evidence — every claim labeled and sourced. Use when a rep needs a field-action card, not a research report. |
 | [`beachhead-segment`](./beachhead-segment/SKILL.md) | Identify the first beachhead market segment for a product launch. Evaluates segments against burning pain, willingness to pay, winnable market share, and referral potential. Use when choosing a first market, targeting an initial customer segment, or planning market entry strategy. |
+| [`before-you-build`](./before-you-build/SKILL.md) | Pre-build product and feature risk review for founders, product managers, and AI-assisted builders. Use this skill when the user is about to build a landing page, MVP, SaaS product, internal tool, agent workflow, or major feature and needs to check demand, positioning, monetization, retention… |
 | [`brainstorm-experiments-existing`](./brainstorm-experiments-existing/SKILL.md) | Design experiments to test assumptions for an existing product — prototypes, A/B tests, spikes, and other low-effort validation methods. Use when validating assumptions, testing feature ideas cheaply, or planning product experiments. |
 | [`brainstorm-experiments-new`](./brainstorm-experiments-new/SKILL.md) | Design lean startup experiments (pretotypes) for a new product. Creates XYZ hypotheses and suggests low-effort validation methods like landing pages, explainer videos, and pre-orders. Use when validating a new product idea, creating pretotypes, or testing market demand. |
 | [`brainstorm-ideas-existing`](./brainstorm-ideas-existing/SKILL.md) | Brainstorm product ideas for an existing product using multi-perspective ideation from PM, Designer, and Engineer viewpoints. Use when generating new feature ideas, brainstorming solutions for an identified opportunity, or ideating with a product trio. |
@@ -37,6 +38,7 @@
 | [`customer-journey-map`](./customer-journey-map/SKILL.md) | Create an end-to-end customer journey map with stages, touchpoints, emotions, pain points, and opportunities. Use when mapping the customer experience, identifying friction points, improving onboarding, or visualizing the user journey. |
 | [`customer-journey-map--deanpeters`](./customer-journey-map--deanpeters/SKILL.md) | Create a customer journey map across stages, touchpoints, actions, emotions, and metrics. Use when diagnosing a broken experience or aligning a team on the full customer flow. |
 | [`customer-journey-mapping-workshop`](./customer-journey-mapping-workshop/SKILL.md) | Run a customer journey mapping workshop with adaptive questions and outputs. Use when you need to map stages, actions, emotions, pain points, and opportunities for a persona and scenario. |
+| [`data-storytelling`](./data-storytelling/SKILL.md) | Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data reports, or building executive presentations. |
 | [`derisk-measurement-advisor`](./derisk-measurement-advisor/SKILL.md) | Identify what to measure, test, or track to de-risk a product or AI idea. Use when stress-testing an idea across internal (DUFV) and external (PESTEL) dimensions. |
 | [`director-readiness-advisor`](./director-readiness-advisor/SKILL.md) | Guide the PM-to-Director transition across preparing, interviewing, landing, and recalibrating. Use when leadership scope is changing and you need practical coaching. |
 | [`discovery-interview-prep`](./discovery-interview-prep/SKILL.md) | Plan customer discovery interviews with the right goal, segment, constraints, and method. Use when preparing interviews for problem validation, churn research, or new product ideas. |
@@ -69,6 +71,7 @@
 | [`interview-script`](./interview-script/SKILL.md) | Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles — no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview guides, or planning… |
 | [`job-stories`](./job-stories/SKILL.md) | Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations. |
 | [`jobs-to-be-done`](./jobs-to-be-done/SKILL.md) | Uncover customer jobs, pains, and gains in a structured JTBD format. Use when clarifying unmet needs, repositioning a product, or improving discovery and messaging. |
+| [`kpi-dashboard-design`](./kpi-dashboard-design/SKILL.md) | Design effective KPI dashboards with metrics selection, visualization best practices, and real-time monitoring patterns. Use this skill when building an executive SaaS metrics dashboard tracking MRR, churn, and LTV/CAC ratios; designing an operations center with live service health and request… |
 | [`lean-canvas`](./lean-canvas/SKILL.md) | Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue. Use when exploring a lean startup canvas, testing a business hypothesis, or modeling a new venture. |
 | [`lean-ux-canvas`](./lean-ux-canvas/SKILL.md) | Guide teams through Lean UX Canvas v2. Use when framing a business problem, surfacing assumptions, and defining what to learn next. |
 | [`lifecycle-play-advisor`](./lifecycle-play-advisor/SKILL.md) | Diagnose where a product sits in its lifecycle and which play fits — extend, replace, or retire. Use when a product is fading and you need the call, not just the worry. |

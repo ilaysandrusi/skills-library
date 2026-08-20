@@ -2,7 +2,7 @@
 
 PDF, Word, PowerPoint, Excel
 
-**מספר סקילים:** 34
+**מספר סקילים:** 40
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -26,6 +26,7 @@ PDF, Word, PowerPoint, Excel
 | [`extraction-pipeline-patterns`](./extraction-pipeline-patterns/SKILL.md) | Document extraction pipeline architecture and patterns |
 | [`feature-flag-policy`](./feature-flag-policy/SKILL.md) | Cargo feature flags for crates/xberg — ORT-incompatible targets (WASM, Android x86_64 emulator), type-only and tract inference companion features, WASM/Android-safe variants, PDF backend, mutually-exclusive ORT variants, platform-conditional deps, aggregate feature sets, and build profiles. Load… |
 | [`format-specific-extraction`](./format-specific-extraction/SKILL.md) | Format-specific document extraction workflows |
+| [`hads`](./hads/SKILL.md) | Use when writing technical documentation that needs to be readable by both humans and AI models, converting existing docs to HADS format, validating a HADS document, or optimizing documentation for token-efficient AI consumption. |
 | [`internal-comms`](./internal-comms/SKILL.md) | A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident… |
 | [`mime-detection-routing`](./mime-detection-routing/SKILL.md) | MIME type detection and extractor routing in core/mime.rs and core/extractor/bytes.rs — the extension→EXT_TO_MIME→validate→registry→extractor flow, key detection functions, the 115 case-insensitive extension map, priority-based registry selection, wildcard MIME families, and how to add a new MIME… |
 | [`notion-knowledge-capture`](./notion-knowledge-capture/SKILL.md) | Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking. |
@@ -35,6 +36,11 @@ PDF, Word, PowerPoint, Excel
 | [`picking-a-format--kreuzberg-dev`](./picking-a-format--kreuzberg-dev/SKILL.md) | Use when choosing an output format for extracted documents — text, markdown, djot, html, or JSON. Maps consumer (LLM, parser, archive) to the right `--format` / `--content-format` pair. |
 | [`plugin-architecture-patterns`](./plugin-architecture-patterns/SKILL.md) | Plugin architecture, registration, and trait patterns |
 | [`pptx`](./pptx/SKILL.md) | Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an… |
+| [`pptx-deck-context`](./pptx-deck-context/SKILL.md) | Use when preparing the narrative, sources, and design context for a new editable PPTX deck. |
+| [`pptx-quality-gates`](./pptx-quality-gates/SKILL.md) | Use when validating or repairing an editable PPTX deck for geometry, accessibility, native editability, source lineage, and OOXML package integrity. |
+| [`pptx-reference-deck-analysis`](./pptx-reference-deck-analysis/SKILL.md) | Use when analyzing a reference PPTX for read-only structure, theme, typography, layout rhythm, diagnostics, derived template catalogs, or safe OOXML package inspection. |
+| [`pptx-slide-specification`](./pptx-slide-specification/SKILL.md) | Use when authoring or repairing a coordinate-explicit JSON specification for an editable PPTX deck. |
+| [`pptx-visual-assets`](./pptx-visual-assets/SKILL.md) | Use when selecting and placing approved supporting icons, images, SVGs, diagrams, or infographics in an editable PPTX deck. |
 | [`release-versioning`](./release-versioning/SKILL.md) | How xberg versions are synced and released — Cargo.toml is the single source of truth, `task version:sync` propagates it to alef-managed binding manifests AND the integrations under integrations/, which are versioned and published in lockstep with core (including -rc.N). Load before bumping a… |
 | [`wasm-constraints`](./wasm-constraints/SKILL.md) | WASM build constraints for the crates/xberg-wasm crate — the wasm-target feature set, no-tokio sync-only internal APIs, the mandatory SyncExtractor trait for WASM-compatible extractors, the 2 MB HTML size limit, size-optimized build config (opt-level="z"), and the async-wrapper/sync-internal API… |
 | [`xberg`](./xberg/SKILL.md) | Extract text, tables, metadata, and images from 101 document formats (PDF, Office, images, HTML, email, archives, academic) using Xberg. Use when writing code that calls Xberg APIs in Python, Node.js/TypeScript, Rust, or CLI. Covers installation, extraction (sync/async), configuration (OCR… |

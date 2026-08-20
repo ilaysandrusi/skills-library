@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6085,
- "traced_to_source_repo": 6071,
- "distinct_source_repos": 221,
+ "skills": 6259,
+ "traced_to_source_repo": 6245,
+ "distinct_source_repos": 222,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -25,6 +25,7 @@
   "lawvable/awesome-legal-skills": 238,
   "microsoft/skills": 188,
   "indranilbanerjee/digital-marketing-pro": 178,
+  "wshobson/agents": 174,
   "aaron-he-zhu/aaron-marketing-skills": 122,
   "google/skills": 110,
   "browser-act/skills": 102,
@@ -55134,6 +55135,1572 @@
    "method": "direct-import",
    "added_in": "2026-08-18",
    "import_note": "claude-codex-settings selective import, 2026-08-18 daily maintenance"
+  },
+  "14-testing-qa/screen-reader-testing": {
+   "skill": "14-testing-qa/screen-reader-testing",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/wcag-audit-patterns": {
+   "skill": "02-design-ui/wcag-audit-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/multi-reviewer-patterns": {
+   "skill": "08-context-engineering/multi-reviewer-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/parallel-debugging": {
+   "skill": "08-context-engineering/parallel-debugging",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/parallel-feature-development": {
+   "skill": "08-context-engineering/parallel-feature-development",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/task-coordination-strategies": {
+   "skill": "08-context-engineering/task-coordination-strategies",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/team-communication-protocols": {
+   "skill": "08-context-engineering/team-communication-protocols",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/team-composition-patterns": {
+   "skill": "08-context-engineering/team-composition-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/fastapi-templates": {
+   "skill": "05-development/fastapi-templates",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "01-copy-writing/avoid-ai-writing": {
+   "skill": "01-copy-writing/avoid-ai-writing",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/api-design-principles": {
+   "skill": "05-development/api-design-principles",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/architecture-patterns": {
+   "skill": "05-development/architecture-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/cqrs-implementation": {
+   "skill": "05-development/cqrs-implementation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/event-store-design": {
+   "skill": "05-development/event-store-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/microservices-patterns": {
+   "skill": "05-development/microservices-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/projection-patterns": {
+   "skill": "05-development/projection-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/saga-orchestration": {
+   "skill": "05-development/saga-orchestration",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/temporal-python-testing": {
+   "skill": "05-development/temporal-python-testing",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/workflow-orchestration-patterns": {
+   "skill": "05-development/workflow-orchestration-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "11-product-management/before-you-build": {
+   "skill": "11-product-management/before-you-build",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/block-no-verify-hook": {
+   "skill": "05-development/block-no-verify-hook",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "27-web3-crypto/defi-protocol-templates": {
+   "skill": "27-web3-crypto/defi-protocol-templates",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "27-web3-crypto/nft-standards": {
+   "skill": "27-web3-crypto/nft-standards",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "27-web3-crypto/solidity-security": {
+   "skill": "27-web3-crypto/solidity-security",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "27-web3-crypto/web3-testing": {
+   "skill": "27-web3-crypto/web3-testing",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/brand-landingpage": {
+   "skill": "02-design-ui/brand-landingpage",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "11-product-management/data-storytelling": {
+   "skill": "11-product-management/data-storytelling",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "11-product-management/kpi-dashboard-design": {
+   "skill": "11-product-management/kpi-dashboard-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/deployment-pipeline-design": {
+   "skill": "13-cloud-deploy/deployment-pipeline-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/github-actions-templates": {
+   "skill": "13-cloud-deploy/github-actions-templates",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/gitlab-ci-patterns": {
+   "skill": "13-cloud-deploy/gitlab-ci-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/secrets-management": {
+   "skill": "12-security/secrets-management",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/cost-optimization": {
+   "skill": "13-cloud-deploy/cost-optimization",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/hybrid-cloud-networking": {
+   "skill": "13-cloud-deploy/hybrid-cloud-networking",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/istio-traffic-management": {
+   "skill": "13-cloud-deploy/istio-traffic-management",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/linkerd-patterns": {
+   "skill": "13-cloud-deploy/linkerd-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/mtls-configuration": {
+   "skill": "13-cloud-deploy/mtls-configuration",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/multi-cloud-architecture": {
+   "skill": "13-cloud-deploy/multi-cloud-architecture",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/service-mesh-observability": {
+   "skill": "13-cloud-deploy/service-mesh-observability",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/terraform-module-library": {
+   "skill": "13-cloud-deploy/terraform-module-library",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/context-driven-development": {
+   "skill": "08-context-engineering/context-driven-development",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/track-management": {
+   "skill": "08-context-engineering/track-management",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/workflow-patterns": {
+   "skill": "08-context-engineering/workflow-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "25-data-databases/airflow-dag-patterns": {
+   "skill": "25-data-databases/airflow-dag-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "25-data-databases/data-quality-frameworks": {
+   "skill": "25-data-databases/data-quality-frameworks",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "25-data-databases/dbt-transformation-patterns": {
+   "skill": "25-data-databases/dbt-transformation-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "25-data-databases/spark-optimization": {
+   "skill": "25-data-databases/spark-optimization",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "25-data-databases/postgresql-table-design": {
+   "skill": "25-data-databases/postgresql-table-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/auth-implementation-patterns": {
+   "skill": "05-development/auth-implementation-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/bazel-build-optimization": {
+   "skill": "05-development/bazel-build-optimization",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/code-review-excellence": {
+   "skill": "05-development/code-review-excellence",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/debugging-strategies": {
+   "skill": "05-development/debugging-strategies",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "14-testing-qa/e2e-testing-patterns": {
+   "skill": "14-testing-qa/e2e-testing-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/error-handling-patterns": {
+   "skill": "05-development/error-handling-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/git-advanced-workflows": {
+   "skill": "05-development/git-advanced-workflows",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/monorepo-management": {
+   "skill": "05-development/monorepo-management",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/nx-workspace-patterns": {
+   "skill": "05-development/nx-workspace-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "25-data-databases/sql-optimization-patterns": {
+   "skill": "25-data-databases/sql-optimization-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/turborepo-caching": {
+   "skill": "05-development/turborepo-caching",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "20-nvidia-cuda/spark-environment-setup": {
+   "skill": "20-nvidia-cuda/spark-environment-setup",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "20-nvidia-cuda/spark-memory-thermal-ops": {
+   "skill": "20-nvidia-cuda/spark-memory-thermal-ops",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "20-nvidia-cuda/spark-training-gotchas": {
+   "skill": "20-nvidia-cuda/spark-training-gotchas",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/changelog-automation": {
+   "skill": "05-development/changelog-automation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/openapi-spec-generation": {
+   "skill": "05-development/openapi-spec-generation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "06-documents/hads": {
+   "skill": "06-documents/hads",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "23-microsoft/dotnet-backend-patterns": {
+   "skill": "23-microsoft/dotnet-backend-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/angular-migration": {
+   "skill": "05-development/angular-migration",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "25-data-databases/database-migration": {
+   "skill": "25-data-databases/database-migration",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/dependency-upgrade": {
+   "skill": "05-development/dependency-upgrade",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/react-modernization": {
+   "skill": "05-development/react-modernization",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/nextjs-app-router-patterns": {
+   "skill": "05-development/nextjs-app-router-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "26-mobile-apple/react-native-architecture": {
+   "skill": "26-mobile-apple/react-native-architecture",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/react-state-management": {
+   "skill": "05-development/react-state-management",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/tailwind-design-system": {
+   "skill": "02-design-ui/tailwind-design-system",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/godot-gdscript-patterns": {
+   "skill": "05-development/godot-gdscript-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/unity-ecs-patterns": {
+   "skill": "05-development/unity-ecs-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "15-integrations/hermes-tweet": {
+   "skill": "15-integrations/hermes-tweet",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "22-legal/employment-contract-templates": {
+   "skill": "22-legal/employment-contract-templates",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/gdpr-data-handling": {
+   "skill": "12-security/gdpr-data-handling",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/incident-runbook-templates": {
+   "skill": "13-cloud-deploy/incident-runbook-templates",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/on-call-handoff-patterns": {
+   "skill": "13-cloud-deploy/on-call-handoff-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/postmortem-writing": {
+   "skill": "13-cloud-deploy/postmortem-writing",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/javascript-testing-patterns": {
+   "skill": "05-development/javascript-testing-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/modern-javascript-patterns": {
+   "skill": "05-development/modern-javascript-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/nodejs-backend-patterns": {
+   "skill": "05-development/nodejs-backend-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/typescript-advanced-types": {
+   "skill": "05-development/typescript-advanced-types",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/gitops-workflow": {
+   "skill": "13-cloud-deploy/gitops-workflow",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/helm-chart-scaffolding": {
+   "skill": "13-cloud-deploy/helm-chart-scaffolding",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/k8s-manifest-generator": {
+   "skill": "13-cloud-deploy/k8s-manifest-generator",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/k8s-security-policies": {
+   "skill": "12-security/k8s-security-policies",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/embedding-strategies": {
+   "skill": "16-ai-apis-media/embedding-strategies",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/hybrid-search-implementation": {
+   "skill": "16-ai-apis-media/hybrid-search-implementation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/langchain-architecture": {
+   "skill": "16-ai-apis-media/langchain-architecture",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/llm-evaluation": {
+   "skill": "16-ai-apis-media/llm-evaluation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/prompt-engineering-patterns": {
+   "skill": "08-context-engineering/prompt-engineering-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/rag-implementation": {
+   "skill": "16-ai-apis-media/rag-implementation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/similarity-search-patterns": {
+   "skill": "16-ai-apis-media/similarity-search-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/vector-index-tuning": {
+   "skill": "16-ai-apis-media/vector-index-tuning",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/checkpoint-promotion": {
+   "skill": "16-ai-apis-media/checkpoint-promotion",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/dataset-curation": {
+   "skill": "16-ai-apis-media/dataset-curation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/eval-harness-first": {
+   "skill": "16-ai-apis-media/eval-harness-first",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/finetuning-method-selection": {
+   "skill": "16-ai-apis-media/finetuning-method-selection",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/grpo-rlvr-training": {
+   "skill": "16-ai-apis-media/grpo-rlvr-training",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/lora-qlora-recipes": {
+   "skill": "16-ai-apis-media/lora-qlora-recipes",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/preference-optimization": {
+   "skill": "16-ai-apis-media/preference-optimization",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/quantized-export": {
+   "skill": "16-ai-apis-media/quantized-export",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/trace-to-training-data": {
+   "skill": "16-ai-apis-media/trace-to-training-data",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/vision-sft": {
+   "skill": "16-ai-apis-media/vision-sft",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "16-ai-apis-media/ml-pipeline-workflow": {
+   "skill": "16-ai-apis-media/ml-pipeline-workflow",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/distributed-tracing": {
+   "skill": "13-cloud-deploy/distributed-tracing",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/grafana-dashboards": {
+   "skill": "13-cloud-deploy/grafana-dashboards",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/prometheus-configuration": {
+   "skill": "13-cloud-deploy/prometheus-configuration",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "13-cloud-deploy/slo-implementation": {
+   "skill": "13-cloud-deploy/slo-implementation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "18-finance-accounting/billing-automation": {
+   "skill": "18-finance-accounting/billing-automation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/pci-compliance": {
+   "skill": "12-security/pci-compliance",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "09-anthropic-tools/evaluation-methodology": {
+   "skill": "09-anthropic-tools/evaluation-methodology",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "06-documents/pptx-deck-context": {
+   "skill": "06-documents/pptx-deck-context",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "06-documents/pptx-quality-gates": {
+   "skill": "06-documents/pptx-quality-gates",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "06-documents/pptx-reference-deck-analysis": {
+   "skill": "06-documents/pptx-reference-deck-analysis",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "06-documents/pptx-slide-specification": {
+   "skill": "06-documents/pptx-slide-specification",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "06-documents/pptx-visual-assets": {
+   "skill": "06-documents/pptx-visual-assets",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/async-python-patterns": {
+   "skill": "05-development/async-python-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-anti-patterns": {
+   "skill": "05-development/python-anti-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-background-jobs": {
+   "skill": "05-development/python-background-jobs",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-code-style": {
+   "skill": "05-development/python-code-style",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-configuration": {
+   "skill": "05-development/python-configuration",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-design-patterns": {
+   "skill": "05-development/python-design-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-error-handling": {
+   "skill": "05-development/python-error-handling",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-observability": {
+   "skill": "05-development/python-observability",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-packaging": {
+   "skill": "05-development/python-packaging",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-performance-optimization": {
+   "skill": "05-development/python-performance-optimization",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-project-structure": {
+   "skill": "05-development/python-project-structure",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-resilience": {
+   "skill": "05-development/python-resilience",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-resource-management": {
+   "skill": "05-development/python-resource-management",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-testing-patterns": {
+   "skill": "05-development/python-testing-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/python-type-safety": {
+   "skill": "05-development/python-type-safety",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/uv-package-manager": {
+   "skill": "05-development/uv-package-manager",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "18-finance-accounting/backtesting-frameworks": {
+   "skill": "18-finance-accounting/backtesting-frameworks",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "18-finance-accounting/risk-metrics-calculation": {
+   "skill": "18-finance-accounting/risk-metrics-calculation",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "17-cybersecurity-pack/anti-reversing-techniques": {
+   "skill": "17-cybersecurity-pack/anti-reversing-techniques",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "17-cybersecurity-pack/binary-analysis-patterns": {
+   "skill": "17-cybersecurity-pack/binary-analysis-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "17-cybersecurity-pack/memory-forensics": {
+   "skill": "17-cybersecurity-pack/memory-forensics",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "17-cybersecurity-pack/protocol-reverse-engineering": {
+   "skill": "17-cybersecurity-pack/protocol-reverse-engineering",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/attack-tree-construction": {
+   "skill": "12-security/attack-tree-construction",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/sast-configuration": {
+   "skill": "12-security/sast-configuration",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/security-requirement-extraction": {
+   "skill": "12-security/security-requirement-extraction",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/stride-analysis-patterns": {
+   "skill": "12-security/stride-analysis-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/threat-mitigation-mapping": {
+   "skill": "12-security/threat-mitigation-mapping",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/bash-defensive-patterns": {
+   "skill": "05-development/bash-defensive-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "14-testing-qa/bats-testing-patterns": {
+   "skill": "14-testing-qa/bats-testing-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/shellcheck-configuration": {
+   "skill": "05-development/shellcheck-configuration",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/ship-mate-scan": {
+   "skill": "05-development/ship-mate-scan",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "12-security/signed-audit-trails-recipe": {
+   "skill": "12-security/signed-audit-trails-recipe",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/ai-debt-detector": {
+   "skill": "08-context-engineering/ai-debt-detector",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "08-context-engineering/session-guard": {
+   "skill": "08-context-engineering/session-guard",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/visual-edit-precision": {
+   "skill": "02-design-ui/visual-edit-precision",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "15-integrations/social-publishing": {
+   "skill": "15-integrations/social-publishing",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "19-sales-gtm-startup/competitive-landscape": {
+   "skill": "19-sales-gtm-startup/competitive-landscape",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "19-sales-gtm-startup/market-sizing-analysis": {
+   "skill": "19-sales-gtm-startup/market-sizing-analysis",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "19-sales-gtm-startup/startup-financial-modeling": {
+   "skill": "19-sales-gtm-startup/startup-financial-modeling",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "19-sales-gtm-startup/startup-metrics-framework": {
+   "skill": "19-sales-gtm-startup/startup-metrics-framework",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "19-sales-gtm-startup/team-composition-analysis": {
+   "skill": "19-sales-gtm-startup/team-composition-analysis",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/go-concurrency-patterns": {
+   "skill": "05-development/go-concurrency-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/memory-safety-patterns": {
+   "skill": "05-development/memory-safety-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/rust-async-patterns": {
+   "skill": "05-development/rust-async-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/accessibility-compliance": {
+   "skill": "02-design-ui/accessibility-compliance",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/design-system-patterns": {
+   "skill": "02-design-ui/design-system-patterns",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/interaction-design": {
+   "skill": "02-design-ui/interaction-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/mobile-android-design": {
+   "skill": "02-design-ui/mobile-android-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/mobile-ios-design": {
+   "skill": "02-design-ui/mobile-ios-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/react-native-design": {
+   "skill": "02-design-ui/react-native-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/responsive-design": {
+   "skill": "02-design-ui/responsive-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/visual-design-foundations": {
+   "skill": "02-design-ui/visual-design-foundations",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "02-design-ui/web-component-design": {
+   "skill": "02-design-ui/web-component-design",
+   "sources": [
+    "wshobson/agents"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
   }
  }
 }

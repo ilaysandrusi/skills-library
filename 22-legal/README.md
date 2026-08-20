@@ -2,7 +2,7 @@
 
 awesome-legal-skills: חוזים, רגולציה, ליטיגציה, קניין רוחני ותאימות
 
-**מספר סקילים:** 238
+**מספר סקילים:** 239
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -61,6 +61,7 @@ awesome-legal-skills: חוזים, רגולציה, ליטיגציה, קניין �
 | [`due-diligence-gate-adrian-lerer`](./due-diligence-gate-adrian-lerer/SKILL.md) | Use for due diligence, legal-financial risk review, investment or business transaction checklists, and preliminary screening where facts, documents, assumptions, legal uncertainty, debt/equity, assets/liabilities, contracts, tax, regulatory, compliance, technology/product, and financial-model… |
 | [`ear-tanaji-hemant-naik`](./ear-tanaji-hemant-naik/SKILL.md) | Export Administration Regulations (EAR, 15 CFR Parts 730-774) compliance advisor — ECCN classification across all 10 CCL categories and 5 product groups (A-E), EAR99 determination, jurisdiction analysis (EAR vs ITAR order of review), license requirement analysis via Country Chart, all license… |
 | [`eccc-khmer-rouge-tribunal-jeanne-sulzer`](./eccc-khmer-rouge-tribunal-jeanne-sulzer/SKILL.md) | Verification-first methodology for the ECCC (Khmer Rouge Tribunal). Every citation is verified against eccc.gov.kh, the ECCC archive or legal-tools.org. Covers Case File numbering, the 001/002/002-01/002-02 structure, the genocide findings against the Cham and the Vietnamese, and the Internal Rules… |
+| [`employment-contract-templates`](./employment-contract-templates/SKILL.md) | Create employment contracts, offer letters, and HR policy documents following legal best practices. Use when drafting employment agreements, creating HR policies, or standardizing employment documentation. |
 | [`employment-law-research-yue-deng-wu`](./employment-law-research-yue-deng-wu/SKILL.md) | Research a US employment law topic across federal, state, and city jurisdictions and produce structured research notes with proper source attribution. Use this skill any time the user asks about US employment laws, regulations, or pending legislation - from a single jurisdiction question to a… |
 | [`en-uk-legal-translation-wouter-van-den-berg`](./en-uk-legal-translation-wouter-van-den-berg/SKILL.md) | Translate legal documents from any language into English while preserving .docx formatting and translating track changes and headers/footers. Use this skill whenever the user asks to translate a legal document, contract, deed, agreement, or any formal legal text into English. Also trigger when the… |
 | [`en-us-legal-translation-wouter-van-den-berg`](./en-us-legal-translation-wouter-van-den-berg/SKILL.md) | Translate legal documents from any language into English while preserving .docx formatting and translating track changes and headers/footers. Use this skill whenever the user asks to translate a legal document, contract, deed, agreement, or any formal legal text into English. Also trigger when the… |

@@ -2,7 +2,7 @@
 
 הסקילים הרשמיים של מיקרוסופט: Azure, .NET, TypeSpec, Playwright, GitHub ועוד
 
-**מספר סקילים:** 186
+**מספר סקילים:** 187
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -157,6 +157,7 @@
 | [`copilot-sdk`](./copilot-sdk/SKILL.md) | Build applications powered by GitHub Copilot using the Copilot SDK. Use when creating programmatic integrations with Copilot across Node.js/TypeScript, Python, Go, or .NET. Covers session management, custom tools, streaming, hooks, MCP servers, BYOK providers, session persistence, custom agents… |
 | [`debugview`](./debugview/SKILL.md) | Sysinternals DebugView CLI (DbgViewCli) for capturing and analyzing usermode and kernel-mode Windows debug output from the command line. USE FOR: capturing OutputDebugString output, kernel DbgPrint/KdPrint capture, boot-time debug logging, remote debug monitoring, filtering debug output by PID or… |
 | [`declarative-agent-developer`](./declarative-agent-developer/SKILL.md) | Create, build, deploy, and localize declarative agents for M365 Copilot and Teams. USE THIS SKILL for ANY task involving a declarative agent — including localization, scaffolding, editing manifests, adding capabilities, and deploying. Localization requires tokenized manifests and language files… |
+| [`dotnet-backend-patterns`](./dotnet-backend-patterns/SKILL.md) | Master C#/.NET backend development patterns for building robust APIs, MCP servers, and enterprise applications. Covers async/await, dependency injection, Entity Framework Core, Dapper, configuration, caching, and testing with xUnit. Use when developing .NET backends, reviewing C# code, or designing… |
 | [`entra-agent-id`](./entra-agent-id/SKILL.md) | Provision Microsoft Entra Agent Identity Blueprints, BlueprintPrincipals, and per-instance Agent Identities via Microsoft Graph, and configure OAuth 2.0 token exchange (fmi_path, OBO, cross-tenant) including the Microsoft Entra SDK for AgentID sidecar. USE FOR: Agent Identity Blueprint… |
 | [`entra-agent-id--microsoft`](./entra-agent-id--microsoft/SKILL.md) | Microsoft Entra Agent ID (preview) for creating OAuth2-capable AI agent identities via Microsoft Graph beta API. Covers Agent Identity Blueprints, BlueprintPrincipals, Agent Identities, required permissions, sponsors, and Workload Identity Federation. Includes Microsoft Entra SDK for AgentID… |
 | [`entra-app-registration`](./entra-app-registration/SKILL.md) | Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration. USE FOR: create app registration, register Azure AD app, configure OAuth, set up authentication, add API permissions, generate service principal, MSAL example, console app auth, Entra ID setup, Azure AD… |

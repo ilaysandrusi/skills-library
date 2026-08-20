@@ -2,7 +2,7 @@
 
 Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד
 
-**מספר סקילים:** 254
+**מספר סקילים:** 256
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -98,6 +98,7 @@ Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Work
 | [`gws-workflow-meeting-prep`](./gws-workflow-meeting-prep/SKILL.md) | Google Workflow: Prepare for your next meeting: agenda, attendees, and linked docs. |
 | [`gws-workflow-standup-report`](./gws-workflow-standup-report/SKILL.md) | Google Workflow: Today's meetings + open tasks as a standup summary. |
 | [`gws-workflow-weekly-digest`](./gws-workflow-weekly-digest/SKILL.md) | Google Workflow: Weekly summary: this week's meetings + unread email count. |
+| [`hermes-tweet`](./hermes-tweet/SKILL.md) | Install and operate Hermes Tweet, a Hermes Agent plugin for X/Twitter research, timeline reading, tweet analysis, and approval-gated tweet actions. Use this skill when installing Hermes Tweet, researching X/Twitter accounts, monitoring launch signals, investigating mentions, auditing giveaways, or… |
 | [`images-search`](./images-search/SKILL.md) | USE FOR image search. Returns images with title, source URL, thumbnail. Supports SafeSearch filter. Up to 200 results. |
 | [`integrate-asset-delivery-with-transloadit-smartcdn-in-nextjs`](./integrate-asset-delivery-with-transloadit-smartcdn-in-nextjs/SKILL.md) | Add Transloadit Smart CDN URL signing to a Next.js App Router project (server-side signing route + optional client demo page). |
 | [`integrate-uppy-transloadit-s3-uploading-to-nextjs`](./integrate-uppy-transloadit-s3-uploading-to-nextjs/SKILL.md) | Add Uppy Dashboard + Transloadit uploads to a Next.js (App Router) app, with server-side signature generation and optional /s3/store export. |
@@ -207,6 +208,7 @@ Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Work
 | [`skill-creator--composiohq`](./skill-creator--composiohq/SKILL.md) | Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations. |
 | [`skill-scanner`](./skill-scanner/SKILL.md) | Scan agent skills for security issues. Use when asked to "scan a skill", "audit a skill", "review skill security", "check skill for injection", "validate SKILL.md", or assess whether an agent skill is safe to install. Checks for prompt injection, malicious scripts, excessive permissions, secret… |
 | [`skill-writer`](./skill-writer/SKILL.md) | Create, synthesize, and iteratively improve agent skills following the Agent Skills specification. Use when asked to "create a skill", "write a skill", "synthesize sources into a skill", "improve a skill from positive/negative examples", "update a skill", or "maintain skill docs and registration".… |
+| [`social-publishing`](./social-publishing/SKILL.md) | Schedule and publish social media posts across 13 platforms (X, LinkedIn, Instagram, Facebook Pages, TikTok, Discord, Telegram, YouTube, Reddit, WordPress, Pinterest) via the SocialClaw API. Use when the user wants to publish, schedule, or manage social media content programmatically. Requires… |
 | [`spec-to-implementation`](./spec-to-implementation/SKILL.md) | Turns product or tech specs into concrete Notion tasks that Claude code can implement. Breaks down spec pages into detailed implementation plans with clear tasks, acceptance criteria, and progress tracking to guide development from requirements to completion. |
 | [`spec-to-implementation--makenotion`](./spec-to-implementation--makenotion/SKILL.md) | Turns product or tech specs into concrete Notion tasks that Claude code can implement. Breaks down spec pages into detailed implementation plans with clear tasks, acceptance criteria, and progress tracking to guide development from requirements to completion. |
 | [`spellcheck`](./spellcheck/SKILL.md) | USE FOR spell correction. Returns corrected query if misspelled. Most search endpoints have spellcheck built-in; use this only for pre-search query cleanup or "Did you mean?" UI. |

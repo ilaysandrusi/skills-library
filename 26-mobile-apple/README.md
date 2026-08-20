@@ -2,7 +2,7 @@
 
 Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG
 
-**מספר סקילים:** 135
+**מספר סקילים:** 136
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -115,6 +115,7 @@ Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG
 | [`linear`](./linear/SKILL.md) | Linear CLI for issue tracking and project management. Use when developers mention: (1) Linear issues or tickets, (2) issue tracking or task management, (3) WDY team issues, (4) closing, updating, or triaging tickets, (5) linking PRs to issues, (6) issue states (triage, backlog, started, completed). |
 | [`natural-writing`](./natural-writing/SKILL.md) | Contains well-defined rules for creating natural, accurate, and readable writing. Use whenever authoring longer text, like analysis documents, PR or CL descriptions, or documentation. |
 | [`postgres-nio`](./postgres-nio/SKILL.md) | Expert guidance on using PostgreSQL with Swift. Use when developers mention: (1) PostgreSQL or Postgres in Swift, (2) postgres-nio library, (3) SQL queries in Swift, (4) PostgreSQL connection pooling, (5) prepared statements, (6) type-safe database access, (7) bulk loading or COPY FROM, (8)… |
+| [`react-native-architecture`](./react-native-architecture/SKILL.md) | Build production React Native apps with Expo, navigation, native modules, offline sync, and cross-platform patterns. Use when developing mobile apps, implementing native integrations, or architecting React Native projects. |
 | [`react-native-best-practices`](./react-native-best-practices/SKILL.md) | Provides React Native performance optimization guidelines for FPS, TTI, bundle size, memory leaks, re-renders, and animations. Applies to tasks involving Hermes optimization, JS thread blocking, bridge overhead, FlashList, native modules, or debugging jank and frame drops. |
 | [`react-native-brownfield-migration`](./react-native-brownfield-migration/SKILL.md) | Implements an accepted incremental brownfield migration from native iOS or Android to React Native or Expo using @callstack/react-native-brownfield. Use after the brownfield path has been selected, when setting up the integration, packaging XCFramework or AAR artifacts, or adding React Native… |
 | [`react-native-testing`](./react-native-testing/SKILL.md) | Write tests using React Native Testing Library (RNTL) v13 and v14 (`@testing-library/react-native`). Use when writing, reviewing, or fixing React Native component tests. Covers: render, screen, queries (getBy/getAllBy/queryBy/findBy), Jest matchers, userEvent, fireEvent, waitFor, and async… |

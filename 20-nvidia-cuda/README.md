@@ -2,7 +2,7 @@
 
 הסקילים הרשמיים של NVIDIA: CUDA, GPU, ביצועים, רשתות עצביות ותשתית AI
 
-**מספר סקילים:** 338
+**מספר סקילים:** 341
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -262,6 +262,9 @@
 | [`rtvi-cv-scaffold-vss-service`](./rtvi-cv-scaffold-vss-service/SKILL.md) | Scaffold a standalone RTVI CV microservice that plugs into VSS Search and Alerts profiles via Kafka mdx-raw. The shipped scaffold script is a YOLO26 reference implementation (ONNX, labels, custom parser required). Use when building a new perception microservice repo, validating the VSS integration… |
 | [`rtvi-vlm-customize-model`](./rtvi-vlm-customize-model/SKILL.md) | How to swap the VLM in the VSS Alerts Blueprint — covers RTVI-VLM microservice deployment methods, all three VLM consumers (rtvi-vlm, vlm-as-verifier, vss-agent), and health checks. |
 | [`skill-card-generator`](./skill-card-generator/SKILL.md) | Use only to generate or update a governance skill card for a specified existing agent skill directory. Do not use for explaining, listing, comparing, or discussing skill capabilities. |
+| [`spark-environment-setup`](./spark-environment-setup/SKILL.md) | Set up a working ML training/inference environment on NVIDIA DGX Spark (GB10, aarch64, CUDA 13). Use when installing PyTorch/Unsloth/TRL/vLLM on DGX Spark, hitting libcudart or wheel-ABI errors on aarch64, or choosing between NGC containers and bare pip installs. |
+| [`spark-memory-thermal-ops`](./spark-memory-thermal-ops/SKILL.md) | Manage unified memory and thermals during long-running ML jobs on NVIDIA DGX Spark. Use when planning memory headroom for a training run on GB10, when a job OOMs on unified memory, or when monitoring temperature and power during multi-hour training. |
+| [`spark-training-gotchas`](./spark-training-gotchas/SKILL.md) | Preflight and diagnose the ten known failure modes for ML training on NVIDIA DGX Spark. Use when a training run on DGX Spark fails to start, OOMs below the 128GB limit, slows down mid-run, or before any multi-hour training job on GB10. |
 | [`tao-analyze-changenet-rca`](./tao-analyze-changenet-rca/SKILL.md) | Performs deep Root Cause Analysis (RCA) on NVIDIA TAO Visual ChangeNet classification experiments with image-evidence-driven investigation. Use when analyzing ChangeNet model failures, investigating poor recall / FAR / PASS-NO_PASS metrics, auditing visual inspection pipeline quality, or running an… |
 | [`tao-analyze-gaps-visual-changenet`](./tao-analyze-gaps-visual-changenet/SKILL.md) | Performs gap analysis on NVIDIA TAO VCN Classify (Visual Component Net) experiments by invoking the data-services container (`tao_toolkit.data_services` from `versions.yaml`) directly via `docker run … gap_analysis vcn_aoi …` — picks the optimal decision threshold, ranks per-sample weakness, and… |
 | [`tao-analyze-gaps-vlm-bcq`](./tao-analyze-gaps-vlm-bcq/SKILL.md) | Extract false-positive and false-negative gaps from VLM binary-classification-question (BCQ, yes/no) predictions. Use when the user asks to "analyze VLM BCQ gaps", "extract VLM false positives and false negatives", or identify failure cases from a predictions JSON for DEFT root-cause analysis on a… |

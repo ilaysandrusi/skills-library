@@ -2,7 +2,7 @@
 
 ניהול קונטקסט, סוכני משנה, חשיבה
 
-**מספר סקילים:** 158
+**מספר סקילים:** 170
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -13,6 +13,7 @@
 | [`agent-interface-design`](./agent-interface-design/SKILL.md) | Design tools, scripts, and CLIs that an agent will call, so the interface teaches its own use instead of a wall of prose and examples. Use when building an MCP server or tool definition, writing an agent-facing script, or when an agent keeps misusing a tool it already has. |
 | [`Agent-Skills-for-Context-Engineering`](./Agent-Skills-for-Context-Engineering/SKILL.md) | A comprehensive collection of Agent Skills for context engineering, harness engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, evaluating, or debugging agent systems that require effective context management and reliable operating loops. |
 | [`agentcall`](./agentcall/SKILL.md) | AgentCall (agentcall.dev) — Join a video meeting (Google Meet, Teams, Zoom) as an AI bot with voice and visual presence. Supports audio-only mode with voice intelligence (barge-in, interruptions), text-to-speech mode, and webpage modes for custom UI. Use when asked to join a call, attend a meeting… |
+| [`ai-debt-detector`](./ai-debt-detector/SKILL.md) | Use after generating code, after accepting AI suggestions, or when reviewing AI-written modules. Also use when code works but feels brittle, when error handling seems thin, when orphaned resources or missing cleanup are suspected, or when the agent claims done but hidden debt may exist. Catches the… |
 | [`analyse`](./analyse/SKILL.md) | Auto-selects best Kaizen method (Gemba Walk, Value Stream, or Muda) for target |
 | [`analyse-problem`](./analyse-problem/SKILL.md) | Comprehensive A3 one-page problem analysis with root cause and action plan |
 | [`analyze-issue`](./analyze-issue/SKILL.md) | Analyze a GitHub issue and create a detailed technical specification |
@@ -38,6 +39,7 @@
 | [`codex-fable5`](./codex-fable5/SKILL.md) | Apply a Claude Fable 5 inspired operating style inside Codex. Use when the user asks to make Codex act like Fable, Fable5, fablize, or Value-for-Fable/VFF; convert Anthropic or Claude system-prompt/tool instructions to Codex; set up a Fable-style tool-first workflow with goal gates, investigation… |
 | [`commit`](./commit/SKILL.md) | Create well-formatted commits with conventional commit messages and emoji |
 | [`context-audit`](./context-audit/SKILL.md) | Audit the instructions an agent already carries — CLAUDE.md, AGENTS.md, skills, tool descriptions — for contradictions, over-constraint, and duplication, then propose a cut list. Use when an agent ignores its own instructions, when a CLAUDE.md has grown bloated, or when the user asks to audit or… |
+| [`context-driven-development`](./context-driven-development/SKILL.md) | Creates and maintains project context artifacts (product.md, tech-stack.md, workflow.md, tracks.md) in a `conductor/` directory. Scaffolds new projects from scratch, extracts context from existing codebases, validates artifact consistency before implementation, and synchronizes documents as the… |
 | [`context-engineering`](./context-engineering/SKILL.md) | Understand the components, mechanics, and constraints of context in agent systems. Use when writing, editing, or optimizing commands, skills, or sub-agents prompts. |
 | [`context-engineering--addyosmani`](./context-engineering--addyosmani/SKILL.md) | Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project. |
 | [`create-agent`](./create-agent/SKILL.md) | Comprehensive guide for creating Claude Code agents with proper structure, triggering conditions, system prompts, and validation - combines official Anthropic best practices with proven patterns |
@@ -104,10 +106,13 @@
 | [`model-hierarchy-skill`](./model-hierarchy-skill/SKILL.md) | Cost-optimize AI agent operations by routing tasks to appropriate models based on complexity. Use this skill when: (1) deciding which model to use for a task, (2) spawning sub-agents, (3) considering cost efficiency, (4) the current model feels like overkill for the task. Triggers: "model routing"… |
 | [`moyu`](./moyu/SKILL.md) | Automatically activates when over-engineering patterns are detected: (1) Modifying code or files the user did not explicitly ask to change (2) Creating new abstraction layers (class, interface, factory, wrapper) without being asked (3) Adding comments, documentation, JSDoc, or type annotations… |
 | [`multi-agent-patterns`](./multi-agent-patterns/SKILL.md) | Design multi-agent architectures for complex tasks. Use when single-agent context limits are exceeded, when tasks decompose naturally into subtasks, or when specializing agents improves quality. |
+| [`multi-reviewer-patterns`](./multi-reviewer-patterns/SKILL.md) | Coordinate parallel code reviews across multiple quality dimensions with finding deduplication, severity calibration, and consolidated reporting. Use this skill when organizing multi-reviewer code reviews, calibrating finding severity, or consolidating review results. |
 | [`notebooklm-skill`](./notebooklm-skill/SKILL.md) | Use this skill to query your Google NotebookLM notebooks directly from Claude Code for source-grounded, citation-backed answers from Gemini. Browser automation, library management, persistent auth. Drastically reduced hallucinations through document-only responses. |
 | [`notfair-upgrade-skill`](./notfair-upgrade-skill/SKILL.md) | Upgrade the NotFair plugin to the latest version. Updates the marketplace repo, installs the new version to the plugin cache, and updates installed_plugins.json. Use when asked to "upgrade notfair", "update notfair", or "get latest version". Also handles inline upgrade prompts when a skill detects… |
 | [`obsidian-knowledge-brain`](./obsidian-knowledge-brain/SKILL.md) | Captures decisions and error fixes across AI coding sessions into a searchable, project-local knowledge base and evolves project rules automatically; Obsidian is optional for knowledge-graph browsing. / 自动捕获每次会话的决策和错误，构建可检索的知识库。 |
 | [`optim-agent`](./optim-agent/SKILL.md) | Use when the user wants to optimize configurable system parameters against a measurable scalar objective, especially for model training, inference, quantitative strategies, reinforcement learning, scientific workflows, or other expensive black-box evaluations where reading the project can improve… |
+| [`parallel-debugging`](./parallel-debugging/SKILL.md) | Debug complex issues using competing hypotheses with parallel investigation, evidence collection, and root cause arbitration. Use this skill when debugging bugs with multiple potential causes, performing root cause analysis, or organizing parallel investigation workflows. |
+| [`parallel-feature-development`](./parallel-feature-development/SKILL.md) | Coordinate parallel feature development with file ownership strategies, conflict avoidance rules, and integration patterns for multi-agent implementation. Use this skill when decomposing a large feature into independent work streams, when two or more agents need to implement different layers of the… |
 | [`pdf--yusufkaraaslan`](./pdf--yusufkaraaslan/SKILL.md) | Use when testing the pdf golden build |
 | [`pdf_chapters`](./pdf_chapters/SKILL.md) | Use when testing chapter categorization |
 | [`pdf_kw`](./pdf_kw/SKILL.md) | Use when testing keyword categorization |
@@ -118,6 +123,7 @@
 | [`pptx_kw`](./pptx_kw/SKILL.md) | Use when testing keyword categorization |
 | [`progressive-disclosure`](./progressive-disclosure/SKILL.md) | Split an oversized skill, CLAUDE.md, or spec into an entry file plus files that load only when they're needed. |
 | [`prompt-engineering`](./prompt-engineering/SKILL.md) | Use this skill when you writing commands, hooks, skills for Agent, or prompts for sub agents or any other LLM interaction, including optimizing prompts, improving LLM outputs, or designing production prompt templates. |
+| [`prompt-engineering-patterns`](./prompt-engineering-patterns/SKILL.md) | This skill should be used when the user asks to "optimize a prompt", "improve prompt performance", "design a prompt template", "write better prompts", "debug prompt issues", "use chain-of-thought", "structured prompting", "few-shot prompting", or wants to apply advanced prompt engineering patterns… |
 | [`propose-hypotheses`](./propose-hypotheses/SKILL.md) | Execute complete FPF cycle from hypothesis generation to decision |
 | [`query`](./query/SKILL.md) | Search the FPF knowledge base and display hypothesis details with assurance information |
 | [`radio`](./radio/SKILL.md) | How to use radio well -- the inter-node live messaging system. |
@@ -131,6 +137,7 @@
 | [`root-cause-tracing`](./root-cause-tracing/SKILL.md) | Use when errors occur deep in execution and you need to trace back to find the original trigger - systematically traces bugs backward through call stack, adding instrumentation when needed, to identify source of invalid data or incorrect behavior |
 | [`rss`](./rss/SKILL.md) | Use when testing the rss golden build |
 | [`rss_empty`](./rss_empty/SKILL.md) | Use when testing the empty rss golden build |
+| [`session-guard`](./session-guard/SKILL.md) | Use when working on complex multi-step tasks, when a session is getting long (40+ tool calls), when the agent starts ignoring rules it followed earlier, when conventions drift, when output quality seems to degrade, or after any context compaction event. Prevents long-session corruption AND context… |
 | [`setup-arxiv-mcp`](./setup-arxiv-mcp/SKILL.md) | Guide for setup arXiv paper search MCP server using Docker MCP |
 | [`setup-codemap-cli`](./setup-codemap-cli/SKILL.md) | Guide for setup Codemap CLI for intelligent codebase visualization and navigation |
 | [`setup-context7-mcp`](./setup-context7-mcp/SKILL.md) | Guide for setup Context7 MCP server to load documentation for specific technologies. |
@@ -143,11 +150,15 @@
 | [`speed-reader`](./speed-reader/SKILL.md) | Launch RSVP speed reader for text |
 | [`status`](./status/SKILL.md) | Display the current state of the FPF knowledge base |
 | [`subagent-driven-development--neolabhq`](./subagent-driven-development--neolabhq/SKILL.md) | Use when executing implementation plans with independent tasks in the current session or facing 3+ independent issues that can be investigated without shared state or dependencies - dispatches fresh subagent for each task with code review between tasks, enabling fast iteration with quality gates |
+| [`task-coordination-strategies`](./task-coordination-strategies/SKILL.md) | Decompose complex tasks, design dependency graphs, and coordinate multi-agent work with proper task descriptions and workload balancing. Use this skill when breaking down work for agent teams, managing task dependencies, or monitoring team progress. |
+| [`team-communication-protocols`](./team-communication-protocols/SKILL.md) | Structured messaging protocols for agent team communication including message type selection, plan approval, shutdown procedures, and anti-patterns to avoid. Use this skill when establishing communication norms for a newly spawned team, when deciding whether to send a direct message or a broadcast… |
+| [`team-composition-patterns`](./team-composition-patterns/SKILL.md) | Design optimal agent team compositions with sizing heuristics, preset configurations, and agent type selection. Use this skill when deciding how many agents to spawn for a task, when choosing between a review team versus a feature team versus a debug team, when selecting the correct subagent_type… |
 | [`test-coverage`](./test-coverage/SKILL.md) | Use after writing tests to assess coverage quality across structural, mutation, requirements, and API/integration dimensions; organized knowledge for choosing and interpreting coverage analyses. |
 | [`test-driven-development--neolabhq`](./test-driven-development--neolabhq/SKILL.md) | Use when implementing any feature or bugfix, before writing implementation code - write the test first, watch it fail, write minimal code to pass; ensures tests actually verify behavior by requiring failure first |
 | [`test-prompt`](./test-prompt/SKILL.md) | Use when creating or editing any prompt (commands, hooks, skills, subagent instructions) to verify it produces desired behavior - applies RED-GREEN-REFACTOR cycle to prompt engineering using subagents for isolated testing |
 | [`test-skill`](./test-skill/SKILL.md) | Use when creating or editing skills, before deployment, to verify they work under pressure and resist rationalization - applies RED-GREEN-REFACTOR cycle to process documentation by running baseline without skill, writing to address failures, iterating to close loopholes |
 | [`thought-based-reasoning`](./thought-based-reasoning/SKILL.md) | Use when tackling complex reasoning tasks requiring step-by-step logic, multi-step arithmetic, commonsense reasoning, symbolic manipulation, or problems where simple prompting fails - provides comprehensive guide to Chain-of-Thought and related prompting techniques (Zero-shot CoT, Self-Consistency… |
+| [`track-management`](./track-management/SKILL.md) | Use this skill when creating, managing, or working with Conductor tracks - the logical work units for features, bugs, and refactors. Applies to spec.md, plan.md, and track lifecycle operations. |
 | [`traiage-review`](./traiage-review/SKILL.md) | This skill should be used when need prioritize what changed code in repository human must review. |
 | [`tree-of-thoughts`](./tree-of-thoughts/SKILL.md) | Execute tasks through systematic exploration, pruning, and expansion using Tree of Thoughts methodology with meta-judge evaluation specifications and multi-agent evaluation |
 | [`update-docs`](./update-docs/SKILL.md) | Update and maintain project documentation for local code changes using multi-agent workflow with tech-writer agents. Covers docs/, READMEs, JSDoc, and API documentation. |
@@ -160,6 +171,7 @@
 | [`wiki`](./wiki/SKILL.md) | The wiki CLI and the node's two knowledge bases -- project wiki and memory. |
 | [`word`](./word/SKILL.md) | Use when testing the word golden build |
 | [`work`](./work/SKILL.md) | Use for execution, debugging, verification, planning, and shipping when the user's Emulo working profile should guide the task. Do not use for design/UI/UX work, marketing or social writing, or Emulo setup/mining. |
+| [`workflow-patterns`](./workflow-patterns/SKILL.md) | Use this skill when implementing tasks according to Conductor's TDD workflow, handling phase checkpoints, managing git commits for tasks, or understanding the verification protocol. |
 | [`write`](./write/SKILL.md) | Use for marketing, social, replies, product copy, launch copy, and writing in the user's voice when their Emulo writing profile should guide the task. Do not use for unrelated execution or UI/UX design alone. |
 | [`write-judge-prompt`](./write-judge-prompt/SKILL.md) | Design LLM-as-Judge evaluators for subjective criteria that code-based checks cannot handle. Use when a failure mode requires interpretation (tone, faithfulness, relevance, completeness). Do NOT use when the failure mode can be checked with code (regex, schema validation, execution tests). Do NOT… |
 | [`write-tests`](./write-tests/SKILL.md) | Add missing test coverage for your local code changes by generating new test files (covers uncommitted and untracked changes, or the latest commit if everything is committed). Use when you want write tests for new logic or increase test coverage. |

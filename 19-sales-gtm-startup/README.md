@@ -2,7 +2,7 @@
 
 Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארטאפים בשלב מוקדם
 
-**מספר סקילים:** 293
+**מספר סקילים:** 298
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -88,6 +88,7 @@ Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארט�
 | [`color-system`](./color-system/SKILL.md) | Build a comprehensive color system with palette generation, semantic mapping, and accessibility compliance. |
 | [`community-marketing--infrasity-labs`](./community-marketing--infrasity-labs/SKILL.md) | Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users… |
 | [`competitive-analysis`](./competitive-analysis/SKILL.md) | Conduct a structured competitive analysis comparing UX patterns, features, strengths, and gaps across rival products. |
+| [`competitive-landscape`](./competitive-landscape/SKILL.md) | Analyze competition, identify differentiation opportunities, and develop winning market positioning strategies using Porter's Five Forces, Blue Ocean Strategy, and positioning maps. Use this skill when evaluating competitors, assessing market positioning, identifying sustainable competitive… |
 | [`competitor-intel--ognjengt`](./competitor-intel--ognjengt/SKILL.md) | Analyzes competitors using web research to provide verified business metrics, actionable leverage strategies, and predicted next moves. Use when user needs competitive intelligence, competitor analysis, market positioning insights, or strategic leverage opportunities. |
 | [`competitor-profiling--infrasity-labs`](./competitor-profiling--infrasity-labs/SKILL.md) | When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep dive,' 'who are my… |
 | [`competitors--infrasity-labs`](./competitors--infrasity-labs/SKILL.md) | When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do… |
@@ -175,6 +176,7 @@ Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארט�
 | [`llms-txt-checker--infrasity-labs`](./llms-txt-checker--infrasity-labs/SKILL.md) | Audits any domain's AI-readiness by using curl to directly probe robots.txt, llms.txt, and llms-full.txt, then scores each file against a structured checklist and delivers a formatted report with pass/warn/fail findings and actionable fixes. Use this skill whenever a user provides a domain or URL… |
 | [`loading-states`](./loading-states/SKILL.md) | Design loading, skeleton, and progressive content reveal patterns. |
 | [`localization-design`](./localization-design/SKILL.md) | Design interfaces that adapt gracefully to multiple languages, writing directions, and cultural contexts. |
+| [`market-sizing-analysis`](./market-sizing-analysis/SKILL.md) | Calculate TAM/SAM/SOM for market opportunities using top-down, bottom-up, and value theory methodologies. Use this skill when sizing markets, estimating addressable revenue, validating market opportunity for a new venture, or building investor-ready market analysis for a startup pitch or business… |
 | [`marketing-ideas--infrasity-labs`](./marketing-ideas--infrasity-labs/SKILL.md) | When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't… |
 | [`marketing-ideas--ognjengt`](./marketing-ideas--ognjengt/SKILL.md) | Produces the best marketing ideas for your business by analyzing your FOUNDER_CONTEXT and matching it against a curated database of 170+ proven marketing strategies. Use when user needs creative, actionable marketing ideas tailored to their business. |
 | [`meeting-notes`](./meeting-notes/SKILL.md) | Structured meeting summaries with action items, decisions, and key discussion points. Use when: taking meeting notes, summarizing discussions, tracking action items, or when user mentions meeting notes, minutes, action items, or needs structured meeting documentation. |
@@ -267,6 +269,8 @@ Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארט�
 | [`sop-creator`](./sop-creator/SKILL.md) | Creates detailed Standard Operating Procedures (SOPs) for business processes. Use when user needs SOPs, process documentation, operational guides, workflow documentation, or step-by-step instructions for repeatable business processes. |
 | [`spacing-system`](./spacing-system/SKILL.md) | Create a consistent spacing system based on a base unit with contextual application rules. |
 | [`stakeholder-alignment`](./stakeholder-alignment/SKILL.md) | Create stakeholder alignment artifacts including responsibility matrices, decision frameworks, and communication plans. |
+| [`startup-financial-modeling`](./startup-financial-modeling/SKILL.md) | Build comprehensive 3-5 year financial models with revenue projections, cost structures, cash flow analysis, and scenario planning for early-stage startups. Use this skill when creating financial projections, calculating burn rate or runway, modeling fundraising scenarios, or preparing… |
+| [`startup-metrics-framework`](./startup-metrics-framework/SKILL.md) | Track, calculate, and optimize key performance metrics for SaaS, marketplace, consumer, and B2B startups from seed through Series A, including unit economics, growth efficiency, and cash management. Use this skill when defining a metrics framework, calculating CAC/LTV/burn multiple, benchmarking… |
 | [`state-machine`](./state-machine/SKILL.md) | Model complex UI behavior as finite state machines with states, events, and transitions. |
 | [`stop-slop--infrasity-labs`](./stop-slop--infrasity-labs/SKILL.md) | Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells and produce more human-like writing. |
 | [`stop-slop--infrasity-labs-2`](./stop-slop--infrasity-labs-2/SKILL.md) | Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells and produce more human-like writing. |
@@ -274,6 +278,7 @@ Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארט�
 | [`summarize-interview--infrasity-labs`](./summarize-interview--infrasity-labs/SKILL.md) | Summarize a user interview transcript into structured insights with key themes, quotes, and action items. Use after conducting user interviews to extract and share findings efficiently. |
 | [`survey-design`](./survey-design/SKILL.md) | Design surveys that collect reliable, unbiased quantitative data to validate hypotheses and measure user attitudes at scale. |
 | [`tailor-resume`](./tailor-resume/SKILL.md) | Tailor your resume for a specific job posting |
+| [`team-composition-analysis`](./team-composition-analysis/SKILL.md) | Design optimal team structures, hiring plans, compensation strategies, and equity allocation for early-stage startups from pre-seed through Series A. Use this skill when planning headcount, determining which roles to hire next, setting compensation or equity ranges, designing org structure, or… |
 | [`team-workflow`](./team-workflow/SKILL.md) | Design team workflows covering task management, collaboration rituals, and tooling. |
 | [`test-driven-development--infrasity-labs`](./test-driven-development--infrasity-labs/SKILL.md) | Use when implementing any feature or bugfix, before writing implementation code |
 | [`test-scenario`](./test-scenario/SKILL.md) | Generates structured usability test scenarios with realistic tasks, success criteria, and facilitation notes — ready to run with real participants or in a moderated session. |
