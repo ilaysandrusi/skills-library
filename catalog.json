@@ -1,5 +1,5 @@
 {
- "total": 6259,
+ "total": 6333,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -3211,6 +3211,10 @@
      "description": "Creates a new Angular app using the Angular CLI. This skill should be used whenever a user wants to create a new Angular application and contains important guidelines for how to effectively create a modern Angular application."
     },
     {
+     "name": "answer-reviewer-questions",
+     "description": "For each reviewer question on a PR, recall implementation reasoning and compose a raw answer. Use when the user asks to \"answer reviewer questions\", \"draft answers to PR questions\", or \"explain reviewer questions\"."
+    },
+    {
      "name": "api-and-interface-design",
      "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend."
     },
@@ -3255,6 +3259,10 @@
      "description": "Guide for building GraphQL servers with Apollo Server 5.x. Use this skill when: (1) setting up a new Apollo Server project, (2) writing resolvers or defining GraphQL schemas, (3) implementing authentication or authorization, (4) creating plugins or custom data sources, (5) troubleshooting Apollo Server errors or performance issues."
     },
     {
+     "name": "apply-findings",
+     "description": "Apply findings by making the suggested code changes. Applies accepted verdicts, escalates ambiguous findings to the user, and offers to note genuine improvements for later. Use when the user asks to \"apply findings\", \"apply fixes\", \"apply suggestions\", \"apply accepted findings\", \"fix the findings\", or \"apply the review results\"."
+    },
+    {
      "name": "architecture-patterns",
      "description": "Implement proven backend architecture patterns including Clean Architecture, Hexagonal Architecture, and Domain-Driven Design. Use this skill when designing clean architecture for a new microservice, when refactoring a monolith to use bounded contexts, when implementing hexagonal or onion architecture patterns, or when debugging dependency cycles between application layers."
     },
@@ -3265,6 +3273,10 @@
     {
      "name": "aspnet-core",
      "description": "Build, review, refactor, or architect ASP.NET Core web applications using current official guidance for .NET web development. Use when working on Blazor Web Apps, Razor Pages, MVC, Minimal APIs, controller-based Web APIs, SignalR, gRPC, middleware, dependency injection, configuration, authentication, authorization, testing, performance, deployment, or ASP.NET Core upgrades."
+    },
+    {
+     "name": "assess-technical-debt",
+     "description": "Assess project-wide structural technical debt: complexity hotspots, deprecated API usage, duplication clusters, and architecture rot. Ranks findings by impact and refactor effort into a report at .turbo/technical-debt.md. Use when the user asks to \"assess technical debt\", \"find technical debt\", \"review technical debt\", \"what should we refactor\", \"find refactoring candidates\", \"where is the code rot\", or \"what's our worst code\". Analysis-only — does not modify code."
     },
     {
      "name": "async-python-patterns",
@@ -3357,6 +3369,10 @@
     {
      "name": "changelog-automation",
      "description": "Automate changelog generation from commits, PRs, and releases following Keep a Changelog format. Use when setting up release workflows, generating release notes, or standardizing commit conventions."
+    },
+    {
+     "name": "changelog-rules",
+     "description": "Shared changelog conventions and formatting rules referenced by /create-changelog and /update-changelog. Not typically invoked directly."
     },
     {
      "name": "chatgpt-apps",
@@ -3455,12 +3471,20 @@
      "description": "Simplifies and refines code for clarity, consistency, and maintainability while preserving all functionality. Use when asked to \"simplify code\", \"clean up code\", \"refactor for clarity\", \"improve readability\", or review recently modified code for elegance. Focuses on project-specific best practices."
     },
     {
+     "name": "code-style",
+     "description": "Enforce existence, reuse, mirror, and symmetry principles to keep new code minimal and consistent with surrounding code. Use when writing new code in an existing codebase, adding new features, refactoring, or making any code changes."
+    },
+    {
      "name": "codebase-design",
      "description": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary."
     },
     {
      "name": "codex-collab",
      "description": "Use when the user asks to invoke, delegate to, or collaborate with Codex on any task. Also use PROACTIVELY when an independent, non-Claude perspective from Codex would add value — second opinions on code, plans, architecture, or design decisions."
+    },
+    {
+     "name": "codex-exec",
+     "description": "Run autonomous task execution using the codex CLI. Use when the user asks to \"codex exec\", \"run codex exec\", \"execute a task with codex\", or \"delegate to codex\"."
     },
     {
      "name": "codex-review",
@@ -3471,12 +3495,32 @@
      "description": "Atomic commits, PR size limits, commit thresholds, stacked PRs"
     },
     {
+     "name": "commit-rules",
+     "description": "Shared commit message rules and technical constraints referenced by /stage-commit and /commit-staged. Not typically invoked directly."
+    },
+    {
      "name": "commit-staged",
      "description": "This skill should be used when user asks to \"commit these changes\", \"write commit message\", \"stage and commit\", \"create a commit\", \"commit staged files\", or explicitly invokes \"commit-staged\"."
     },
     {
+     "name": "commit-staged-push",
+     "description": "Commit already-staged changes and push in one step. Use when the user asks to \"commit and push staged changes\", \"commit and push what's staged\", or \"commit staged and push\"."
+    },
+    {
+     "name": "consult-codex",
+     "description": "Multi-turn consultation with Codex CLI for second opinions, brainstorming, or collaborative problem-solving. Use when the user asks to \"consult codex\", \"ask codex\", \"get codex's opinion\", \"brainstorm with codex\", \"discuss with codex\", or \"chat with codex\"."
+    },
+    {
+     "name": "consult-oracle",
+     "description": "Consult ChatGPT Pro via ChatGPT browser automation for problems that resist standard approaches. Use when stuck on a very hard problem, when standard approaches have failed, when multiple debugging attempts haven't worked, or when the user says \"ask the oracle\", \"consult oracle\", \"consult chatgpt\", \"I'm completely stuck\", \"I've tried everything\", or \"nothing is working\"."
+    },
+    {
      "name": "context-item-creation",
      "description": "Guides you through creating context items — instructions, skills, knowledge pointers, and memory events — that give the AI analyst persistent knowledge about your organization. Covers when to create each type, naming conventions, folder organization, and the hard boundary between context (rules and procedures) and the semantic layer (logic and calculations)."
+    },
+    {
+     "name": "contribute-turbo",
+     "description": "Propose a turbo skill improvement upstream by filing a GitHub issue against the turbo repo. Use when the user asks to \"contribute to turbo\", \"submit turbo changes\", \"contribute back\", \"suggest a turbo improvement\", or \"upstream my changes\"."
     },
     {
      "name": "conversation-review",
@@ -3493,6 +3537,30 @@
     {
      "name": "cqrs-implementation",
      "description": "Implement Command Query Responsibility Segregation for scalable architectures. Use when separating read and write models, optimizing query performance, or building event-sourced systems."
+    },
+    {
+     "name": "create-changelog",
+     "description": "Create a CHANGELOG.md following keepachangelog.com conventions with version history backfilled from GitHub releases or git tags. Use when the user asks to \"create a changelog\", \"add a changelog\", \"initialize changelog\", \"start a changelog\", \"set up changelog\", \"generate changelog\", or \"backfill changelog\"."
+    },
+    {
+     "name": "create-handoff",
+     "description": "Write a handoff file at .turbo/handoff/<YYYY-MM-DD>-<slug>.md capturing current session state — task, status, open decisions, in-flight changes, next step — so a fresh session can continue without re-deriving context. Use when the user asks to \"create a handoff\", \"create handoff\", \"save handoff\", \"handoff before compact\", \"save session state\", \"handoff for next session\", or \"capture session state\"."
+    },
+    {
+     "name": "create-issue",
+     "description": "Create a GitHub issue with a drafted title and body. Use when the user asks to \"create an issue\", \"file an issue\", \"open an issue\", \"submit an issue\", \"report a bug\", \"file a bug report\", \"file a feature request\", or \"file a design proposal\"."
+    },
+    {
+     "name": "create-project-skills",
+     "description": "Scans an existing codebase and generates project-specific skills that capture inferred conventions such as naming, file organization, framework usage, data access, error handling, and testing style. Writes into the project's chosen skill directory (e.g., `.claude/skills/`, `.agents/skills/`, or a custom path). Use when the user asks to \"extract skills from the codebase\", \"create project skills\", \"infer project conventions as skills\", \"codify patterns as skills\", or \"mine the repo for best practices\"."
+    },
+    {
+     "name": "create-test-plan",
+     "description": "Analyze what changed and generate a structured test plan at .turbo/test-plans/<slug>.md covering four escalating levels: basic functionality, complex operations, adversarial testing, and cross-cutting scenarios. Use when the user asks to \"create a test plan\", \"plan tests\", \"what should I test\", \"generate test scenarios\", \"test plan for this PR\", or \"what are the test cases\"."
+    },
+    {
+     "name": "create-threat-model",
+     "description": "Analyze a codebase and produce a structured threat model at .turbo/threat-model.md covering assets, trust boundaries, attack surfaces with existing mitigations, attacker stories, and calibrated severity. Use when the user asks to \"create a threat model\", \"threat model\", \"threat model this codebase\", \"security analysis\", \"analyze the attack surface\", \"what are the threats\", or \"identify security risks\"."
     },
     {
      "name": "creating-skills",
@@ -3575,6 +3643,10 @@
      "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow."
     },
     {
+     "name": "discuss-change",
+     "description": "Align on the shape of a change through an interview, then implement it. Escalates open product decisions and settles the implementation shape in conversation. Use when the user asks to \"discuss this change\", \"align on this change first\", \"ask me questions first\", \"interview me then implement\", \"agree on the approach before coding\", or wants the shape of a single change settled before any code is written."
+    },
+    {
      "name": "dispatching-parallel-agents",
      "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies"
     },
@@ -3599,12 +3671,20 @@
      "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production, security-sensitive logic, irreversible operations), or any time a confident output would be cheaper to verify now than to debug later."
     },
     {
+     "name": "draft-plan",
+     "description": "Produce an implementation plan at .turbo/plans/<slug>.md. Use when the user asks to \"draft a plan\", \"draft the plan\", \"write an implementation plan\", \"plan this change\", \"create an implementation plan\", or needs a first-draft plan file before refinement."
+    },
+    {
      "name": "entity-creation",
      "description": "Guides you through defining a new Honeydew entity from a data warehouse source — covering source type, granularity key, and initial attribute mapping — then pushes to Honeydew via the MCP tools."
     },
     {
      "name": "error-handling-patterns",
      "description": "Master error handling patterns across languages including exceptions, Result types, error propagation, and graceful degradation to build resilient applications. Use when implementing error handling, designing APIs, or improving application reliability."
+    },
+    {
+     "name": "evaluate-findings",
+     "description": "Critically assess external feedback (code reviews, AI reviewers, PR comments) and decide which suggestions to apply using adversarial verification. Use when the user asks to \"evaluate findings\", \"assess review comments\", \"triage review feedback\", \"evaluate review output\", or \"filter false positives\"."
     },
     {
      "name": "event-store-design",
@@ -3619,6 +3699,14 @@
      "description": "Analyze existing repositories, maintain structure, setup guardrails and best practices"
     },
     {
+     "name": "explain-this",
+     "description": "Explain whatever the user is pointing at right now in plain language: a pending question, a piece of code, an error, a command output, or an artifact like a plan or findings report. Use when the user asks to \"explain this\", \"what am I being asked\", \"what's happening right now\", \"help me understand this\", \"what does this mean\", \"what does this error mean\", \"what is this code doing\", or \"what do these options mean\"."
+    },
+    {
+     "name": "exploratory-test",
+     "description": "Execute multi-level exploratory testing of the app covering basic functionality, complex operations, adversarial testing, and cross-cutting scenarios, plus usability observations through a UX lens reported separately from defects. Deeper than /smoke-test. Use when the user asks to \"exploratory test\", \"test thoroughly\", \"test all scenarios\", \"deep test\", \"test edge cases\", \"test everything\", \"break it\", \"find bugs by testing\", \"test usability\", or \"check the UX while testing\"."
+    },
+    {
      "name": "external-model-delegation",
      "description": "A UserPromptSubmit hook classifies every user prompt into one of six cost/performance tiers. The hook injects additionalContext instructing Claude to run a specific delegation script and return the output."
     },
@@ -3629,6 +3717,10 @@
     {
      "name": "fastify",
      "description": "Guides development of Fastify Node.js backend servers and REST APIs using TypeScript or JavaScript. Use when building, configuring, or debugging a Fastify application — including defining routes, implementing plugins, setting up JSON Schema validation, handling errors, optimising performance, managing authentication, configuring CORS and security headers, integrating databases, working with WebSockets, and deploying to production. Covers the full Fastify request lifecycle (hooks, serialization…"
+    },
+    {
+     "name": "fetch-pr-comments",
+     "description": "Fetch and summarize review feedback and conversation from a GitHub PR (unresolved review threads, review bodies, and PR conversation comments) without making changes. Use when the user asks to \"fetch PR comments\", \"show PR comments\", \"check PR for unresolved comments\", \"list review comments\", \"what comments are on the PR\", \"show unresolved threads\", or \"summarize PR feedback\"."
     },
     {
      "name": "figma",
@@ -3667,8 +3759,16 @@
      "description": "Use when the user needs to filter data — whether in a structured query, a metric aggregation, or an attribute expression. Covers filter syntax, date handling, and best practices."
     },
     {
+     "name": "finalize",
+     "description": "Run the post-implementation quality assurance workflow including tests, code polishing, review, and commit. Use when the user asks to \"finalize implementation\", \"finalize changes\", \"wrap up implementation\", \"finish up\", \"ready to commit\", or \"run QA workflow\"."
+    },
+    {
      "name": "find-bugs",
      "description": "Find bugs, security vulnerabilities, and code quality issues in local branch changes. Use when asked to review changes, find bugs, security review, or audit code on the current branch."
+    },
+    {
+     "name": "find-dead-code",
+     "description": "Find dead code using parallel subagent analysis and optional CLI tools, treating code only referenced from tests as dead. Use when the user asks to \"find dead code\", \"find unused code\", \"find unused exports\", \"find unreferenced functions\", \"clean up dead code\", or \"what code is unused\". Analysis-only — does not modify or delete code."
     },
     {
      "name": "finding-duplicate-functions",
@@ -3761,6 +3861,10 @@
     {
      "name": "github-pr-review",
      "description": "Handles PR review comments and feedback resolution. Use when user wants to resolve PR comments, handle review feedback, fix review comments, address PR review, check review status, respond to reviewer, verify PR readiness, review PR comments, analyze review feedback, evaluate PR comments, assess review suggestions, or triage PR comments. Fetches comments via GitHub CLI, classifies by severity, applies fixes with user confirmation, commits with proper format, replies to threads."
+    },
+    {
+     "name": "github-voice",
+     "description": "Shared writing style rules for GitHub-facing output (PR comments, PR descriptions, PR titles, issues, design proposals). Differentiates insider vs outsider voice based on author association. Not typically invoked directly — loaded by other skills before composing GitHub text."
     },
     {
      "name": "gke-ai-troubleshooting-handle-disruption-gpu-tpu",
@@ -4175,6 +4279,14 @@
      "description": "Implement a piece of work based on a spec or set of tickets."
     },
     {
+     "name": "implement-improvements",
+     "description": "Validate improvements from .turbo/improvements.md, recommend a working set tailored to what's in the backlog, and run one lane: direct fixes, investigation, or planned work. One lane per session. Use when the user asks to \"implement improvements\", \"work on improvements\", \"address improvements\", \"process improvement backlog\", \"tackle improvements\", or \"implement noted improvements\"."
+    },
+    {
+     "name": "implement-plan",
+     "description": "Execute an implementation plan file produced by /draft-plan or /turboplan. Runs pre-implementation prep, then runs /implement to execute the steps and finalize once they are all done. Use when the user asks to \"implement plan\", \"implement the plan\", \"execute the plan\", \"run the plan\", \"implement plans/<slug>.md\", \"start implementing the plan\", or starts a fresh session to implement a previously drafted plan."
+    },
+    {
      "name": "improve-codebase-architecture",
      "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick."
     },
@@ -4189,6 +4301,14 @@
     {
      "name": "integrate-whatsapp",
      "description": "Connect WhatsApp to your product with Kapso: onboard customers with setup links, detect connections, receive events via webhooks, and send messages/templates/media. Also manage WhatsApp Flows (create/update/publish, data endpoints, encryption). Use when integrating WhatsApp end-to-end."
+    },
+    {
+     "name": "interpret-feedback",
+     "description": "Interpret third-party feedback by running parallel internal and peer interpretations to surface intent, correctness concerns, and ambiguities. Use when the user asks to \"interpret feedback\", \"interpret comments\", \"what does this feedback mean\", \"clarify reviewer intent\", \"understand this review\", or \"interpret these suggestions\"."
+    },
+    {
+     "name": "investigate",
+     "description": "Systematically investigate bugs, test failures, build errors, performance issues, or unexpected behavior by cycling through characterize-isolate-hypothesize-test steps. Use when the user asks to \"investigate this bug\", \"debug this\", \"figure out why this fails\", \"find the root cause\", \"why is this broken\", \"troubleshoot this\", \"diagnose the issue\", \"what's causing this error\", \"look into this failure\", \"why is this test failing\", or \"track down this bug\"."
     },
     {
      "name": "iterative-development",
@@ -4325,6 +4445,10 @@
     {
      "name": "managed-airflow-migrations",
      "description": "Provides guidance for migrating Apache Airflow DAGs in Managed Service for Apache Airflow (MSAA; formerly Cloud Composer). Covers migration to Airflow 2.11.1 (MSAA Gen 2 and 3) and Airflow 3 (MSAA Gen 3), including environment inspection, GCS download/upload and scanning patterns for breaking changes. Use when migrating the DAG code to newer Airflow version. Don't use when checking DAG run failures unrelated to code migration."
+    },
+    {
+     "name": "map-codebase",
+     "description": "Deep architecture report that fans out parallel inspections across different aspects of the codebase (structure, tech stack, APIs, patterns, data flow, dependencies, testing) and synthesizes findings into a comprehensive document at .turbo/codebase-map.md and .turbo/codebase-map.html. Use when the user asks to \"map the codebase\", \"map codebase\", \"architecture report\", \"codebase overview\", \"architecture overview\", \"what am I looking at\", or \"explain this codebase\"."
     },
     {
      "name": "markstream-angular",
@@ -4487,6 +4611,10 @@
      "description": "Contributes to and debugs Node.js core, including nodejs/node commit and PR tone, contribution workflows, native crashes, V8 performance, node-gyp builds, N-API bindings, and libuv issues. Use when drafting or reviewing a Node.js core commit or pull request, working in nodejs/node, or diagnosing C++ addons, binding.gyp failures, segfaults, native leaks, V8 deoptimizations, and event-loop internals."
     },
     {
+     "name": "note-improvement",
+     "description": "Capture an out-of-scope improvement opportunity so it doesn't get lost. Use when the user asks to \"note improvement\", \"save improvement\", \"track this for later\", \"remember this improvement\", \"note this idea\", \"log improvement\", \"backlog this\", or \"park this idea\". Also invoke proactively when noticing something improvable during work that falls outside the current task's scope, or after deliberately shipping a simpler approach that accepts a known ceiling — briefly mention it to the user and offer to note it."
+    },
+    {
      "name": "notion-knowledge-capture",
      "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking."
     },
@@ -4523,6 +4651,10 @@
      "description": "Use this skill whenever the prompt contains any `github.com` URL, even if the user only pastes a link and gives no GitHub-specific keywords. Handles git and GitHub operations using the gh CLI. Triggers include any GitHub link to an issue, pull request, commit, compare page, Actions run, release, discussion, or repository. Covers creating and reviewing PRs, watching CI checks, interactive rebasing, branch cleanup, submodule management, and repository archaeology with git log/blame/bisect."
     },
     {
+     "name": "onboard",
+     "description": "Developer onboarding guide that composes architecture mapping, tooling review, and agentic setup review with setup, troubleshooting, and next-steps agents to produce a comprehensive guide at .turbo/onboarding.md and .turbo/onboarding.html. Use when the user asks to \"onboard me\", \"onboard to this project\", \"generate onboarding guide\", \"new developer guide\", \"how do I get started\", or \"help me ramp up\"."
+    },
+    {
      "name": "openai-docs--openai",
      "description": "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains."
     },
@@ -4535,8 +4667,16 @@
      "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction."
     },
     {
+     "name": "peer-review",
+     "description": "Run an independent peer review via Codex. Use when the user asks to \"peer review\", \"peer review my code\", \"peer review my plan\", \"get a second opinion\", or \"independent review\"."
+    },
+    {
      "name": "performance-optimization",
      "description": "Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core Web Vitals or load times need improvement, when N+1 query patterns need fixing, or when profiling reveals bottlenecks."
+    },
+    {
+     "name": "pick-next-issue",
+     "description": "Fetch and rank open GitHub issues by community engagement, present the top 3 candidates, and plan implementation for the selected issue. Use when the user asks to \"pick next issue\", \"next issue\", \"which issue should I work on\", \"top issues\", \"most popular issues\", \"prioritize issues\", or \"what should I work on next\"."
     },
     {
      "name": "planning-and-task-breakdown",
@@ -4563,12 +4703,20 @@
      "description": "Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, and baseline placeholders you can edit before publishing or testing. Use when Codex needs to create a new local plugin, add optional plugin structure, or generate or update repo-root `.agents/plugins/marketplace.json` entries for plugin ordering and availability metadata."
     },
     {
+     "name": "polish-code",
+     "description": "Stage, format, lint, test, review, smoke test, and re-run itself until stable. Use when the user asks to \"polish code\", \"refine code\", \"iterate on code quality\", \"review loop\", \"clean up, test, and review loop\", or \"run the polish loop\"."
+    },
+    {
      "name": "polyphony",
      "description": "Multi-agent orchestration with container-isolated workspaces — each agent session runs in its own Docker container with independent git branches"
     },
     {
      "name": "posthog-analytics",
      "description": "PostHog analytics, event tracking, feature flags, dashboards"
+    },
+    {
+     "name": "preview",
+     "description": "Stand up the project's live app and hand it to the user to try a change firsthand, then gate on their verdict before continuing. Use when the user asks to \"preview the change\", \"let me try it\", \"spin up the app so I can test it\", \"set it up so I can poke at it\", or before finalizing a UI/UX change that needs human eyes."
     },
     {
      "name": "privacy-guard",
@@ -4679,6 +4827,10 @@
      "description": "React web development with hooks, React Query, Zustand"
     },
     {
+     "name": "recall-reasoning",
+     "description": "Recall the reasoning behind a past change by locating the Claude Code transcript that produced it. Use when the user asks to \"recall reasoning\", \"find reasoning\", \"look up reasoning\", \"recall implementation reasoning\", \"find the rationale\", \"why did I do X\", \"recall from transcripts\", or \"find the transcript for this commit\"."
+    },
+    {
      "name": "receiving-code-review",
      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation"
     },
@@ -4691,12 +4843,24 @@
      "description": "Reddit API with PRAW (Python) and Snoowrap (Node.js)"
     },
     {
+     "name": "refine-plan",
+     "description": "Iteratively review and revise a plan until no new findings survive evaluation. Use when the user asks to \"refine the plan\", \"iterate on the plan\", \"tighten the plan\", or \"improve the plan\"."
+    },
+    {
      "name": "relation-creation",
      "description": "Guides you through defining a relationship between two Honeydew entities — covering join type, direction, cross-filtering, and connection method — then pushes the updated entity YAML to Honeydew via the MCP tools."
     },
     {
      "name": "render-deploy",
      "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform."
+    },
+    {
+     "name": "reply-to-pr-conversation",
+     "description": "Draft, confirm, and post a single conversational reply to GitHub PR conversation comments (issue comments). The reply addresses all tracked items in one natural-prose message. Use when the user asks to \"reply to PR conversation\", \"post PR conversation replies\", or \"draft PR conversation messages\"."
+    },
+    {
+     "name": "reply-to-pr-threads",
+     "description": "Draft, confirm, and post replies to GitHub PR review threads. Handles per-category reply formatting, re-fetches thread resolution state so auto-resolved threads are skipped, and posts via GraphQL. Use when the user asks to \"reply to PR threads\", \"post PR thread replies\", or \"draft PR reply messages\"."
     },
     {
      "name": "requesting-code-review",
@@ -4707,12 +4871,36 @@
      "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent."
     },
     {
+     "name": "resolve-findings",
+     "description": "Choose an implementation path (direct or plan) for evaluated findings and dispatch it. Direct path applies fixes directly; plan path runs /turboplan. Use after /evaluate-findings has tagged findings and they need to be implemented, or when the user asks to \"resolve findings\", \"apply evaluated findings\", or \"dispatch findings to implementation\"."
+    },
+    {
      "name": "resolve-pr-comments",
      "description": "This skill should be used when user asks to \"address PR comments\", \"resolve PR feedback\", \"handle review comments\", \"fix PR issues\", \"respond to PR review\", or explicitly invokes \"resolve-pr-comments\"."
     },
     {
      "name": "resolving-merge-conflicts",
      "description": "Use when you need to resolve an in-progress git merge/rebase conflict."
+    },
+    {
+     "name": "review-agentic-setup",
+     "description": "Detect agentic coding infrastructure in a project: CLAUDE.md, AGENTS.md, installed skills, MCP servers, hooks, and cross-tool compatibility (Claude Code and Codex CLI). Returns structured findings about agentic readiness without applying changes. Use when the user asks to \"review agentic setup\", \"check agentic setup\", \"agentic readiness\", \"is this project set up for AI coding\", or \"review AI coding setup\"."
+    },
+    {
+     "name": "review-code",
+     "description": "Review code for bugs, security vulnerabilities, API misuse, consistency issues, simplicity problems, or test coverage gaps by running internal reviews and a peer review in parallel and returning combined findings. Single-concern with a type argument, or full review with no argument. Use when the user asks to \"review my code\", \"full code review\", \"review my changes\", \"check for bugs\", \"scan for bugs\", \"review correctness\", \"security audit\", \"find vulnerabilities\", \"review security\", \"check API usage\", \"verify against docs\", \"check for cross-file duplication\", \"review consistency\", \"check for code reuse\", \"review simplicity\", \"find untested code\", or \"review test coverage\"."
+    },
+    {
+     "name": "review-dependencies",
+     "description": "Detect package managers and discover outdated or vulnerable dependencies. Returns structured findings without upgrading. Use when the user asks to \"review dependencies\", \"check for outdated packages\", \"check dependencies\", \"scan dependencies\", or \"dependency review\"."
+    },
+    {
+     "name": "review-plan",
+     "description": "Review a plan by running internal reviews and a peer review in parallel and returning combined findings. Use when the user asks to \"review my plan\", \"check my plan\", \"critique my plan\", or wants feedback on a plan."
+    },
+    {
+     "name": "review-tooling",
+     "description": "Detect what dev tooling infrastructure a project has and flag gaps across linters, formatters, pre-commit hooks, test runners, and CI/CD pipelines. Returns structured findings without applying changes. Use when the user asks to \"review tooling\", \"check project tooling\", \"what tooling is missing\", \"review dev infrastructure\", or \"tooling audit\"."
     },
     {
      "name": "rover",
@@ -4747,6 +4935,10 @@
      "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services."
     },
     {
+     "name": "self-improve",
+     "description": "Extract lessons from the current session, or sweep the project's past sessions when asked, and route them to the appropriate knowledge layer (project AGENTS.md, auto memory, existing skills, or new skills). Use when the user asks to \"self-improve\", \"distill this session\", \"distill past sessions\", \"sweep past sessions\", \"extract lessons from all sessions\", \"save learnings\", \"update CLAUDE.md with what we learned\", \"capture session insights\", \"remember this for next time\", \"extract lessons\", \"update skills from session\", or \"what did we learn\"."
+    },
+    {
      "name": "sentry",
      "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry CLI; perform read-only queries using the `sentry` command."
     },
@@ -4771,6 +4963,10 @@
      "description": "Master ShellCheck static analysis configuration and usage for shell script quality. Use when setting up linting infrastructure, fixing code issues, or ensuring script portability."
     },
     {
+     "name": "ship",
+     "description": "Commit, push, and optionally create or update a PR for the current staged changes. Use when the user asks to \"ship\", \"ship it\", \"ship changes\", \"commit push and PR\", or \"ship this\"."
+    },
+    {
      "name": "ship-mate-scan",
      "description": "Scans the codebase to generate project-doc.md and AGENTS.md. Use when bootstrapping a new agent-driven repo, refreshing project documentation after architectural changes, or running a delta scan to detect drift. Runs a full scan on first use and a smart delta scan on subsequent runs. Uses understand-anything + context-mode when available, falls back to native tools otherwise. Only updates AGENTS.md on detected architectural changes with human confirmation."
     },
@@ -4781,6 +4977,18 @@
     {
      "name": "shopify-apps",
      "description": "Shopify app development - Remix, Admin API, checkout extensions"
+    },
+    {
+     "name": "simplify-all",
+     "description": "Run the code and documentation simplification passes together over one scope, launching every review agent concurrently before applying a single round of fixes. Use when the user asks to \"simplify all\", \"simplify everything\", \"simplify code and docs\", \"clean up code and docs\", \"run both simplify skills\", or \"simplify code and docs in parallel\"."
+    },
+    {
+     "name": "simplify-code",
+     "description": "Run a multi-agent review of changed files for scope, reuse, quality, efficiency, clarity, and altitude issues followed by automated fixes. Use when the user asks to \"simplify code\", \"review changed code\", \"check for code reuse\", \"review code quality\", \"review efficiency\", \"simplify changes\", \"clean up code\", \"refactor changes\", or \"run simplify\"."
+    },
+    {
+     "name": "simplify-docs",
+     "description": "Run a multi-agent review of code comments and markdown documentation for unnecessary content, then fix the issues. Covers comments that misdescribe the code, what-restating comments, name-mirroring doc comments, status-update prose, and other documentation noise. Use when the user asks to \"simplify docs\", \"simplify documentation\", \"clean up comments\", \"clean up docs\", \"review documentation\", \"strip unnecessary comments\", \"fix stale comments\", \"reduce doc noise\", or \"run simplify-docs\"."
     },
     {
      "name": "site-architecture--alinaqi",
@@ -4807,6 +5015,10 @@
      "description": "Analyze Rails application upgrade path. Checks current version, finds latest release, fetches upgrade notes and diffs, then performs selective upgrade preserving local customizations."
     },
     {
+     "name": "smoke-test",
+     "description": "Launch the app and hands-on verify that it works by interacting with it. Falls back to an existing integration test suite when there is no interactive surface in scope. Use when the user asks to \"smoke test\", \"test it manually\", \"verify it works\", \"try it out\", \"run a smoke test\", \"check it in the browser\", or \"does it actually work\". Not a unit test runner."
+    },
+    {
      "name": "snipgrapher",
      "description": "Configures and uses snipgrapher to generate polished code snippet images, including syntax-highlighted PNGs, SVGs, and WebP exports with custom themes, profiles, and styling options. Use when the user wants to create code screenshots, turn code into shareable images, generate pretty code snippets for docs or social posts, produce syntax-highlighted images from source files, or explicitly mentions snipgrapher. Supports single-file renders, batch jobs, watch mode, and reusable named profiles via…"
     },
@@ -4827,6 +5039,22 @@
      "description": "This skill provides safe update capabilities for GitHub SpecKit installations, preserving customizations while applying template updates."
     },
     {
+     "name": "split-and-ship",
+     "description": "Execute an approved split plan, shipping each change group separately as its own branch and PR or as sequential commits on the current branch. Use when the user asks to \"split and ship\", \"ship the split plan\", \"create separate PRs\", or \"split changes into branches\"."
+    },
+    {
+     "name": "stage",
+     "description": "Stage implementation changes for commit with precise file selection. Use when the user asks to \"stage changes\", \"stage files\", \"add files to staging\", or \"prepare changes for commit\"."
+    },
+    {
+     "name": "stage-commit",
+     "description": "Stage files and create a commit in one step with a message matching existing commit style. Use when the user asks to \"stage and commit\", \"add and commit\", \"commit my changes\", or \"commit these changes\"."
+    },
+    {
+     "name": "stage-commit-push",
+     "description": "Stage files, create a commit, and push in one step. Use when the user asks to \"stage commit and push\", \"add commit and push\", \"commit and push\", or \"commit and push my changes\"."
+    },
+    {
      "name": "subagent-driven-development",
      "description": "Use when executing implementation plans with independent tasks in the current session"
     },
@@ -4845,6 +5073,10 @@
     {
      "name": "supabase-python",
      "description": "FastAPI with Supabase and SQLAlchemy/SQLModel"
+    },
+    {
+     "name": "survey-patterns",
+     "description": "Survey the codebase for analogous features, reusable utilities, and existing patterns relevant to a proposed change, reading any source the task names outside this repo. Returns structured findings without writing code. Use when the user asks to \"survey patterns\", \"find existing patterns\", \"look for analogous features\", \"check how similar things are done\", \"find prior art for this change\", or needs pattern context before planning a change."
     },
     {
      "name": "systematic-debugging",
@@ -4895,6 +5127,46 @@
      "description": "Move issues and external PRs through a state machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs."
     },
     {
+     "name": "turbo-audit",
+     "description": "Project-wide health audit pipeline that fans out to all analysis skills in parallel, evaluates findings, and produces a unified report at .turbo/audit.md. Use when the user asks to \"audit the project\", \"run a full audit\", \"project health check\", \"audit my code\", \"codebase audit\", or \"comprehensive review\"."
+    },
+    {
+     "name": "turbo-codex-review",
+     "description": "Run AI-powered code review using the codex CLI. Use when the user asks to \"codex review\", \"run codex review\", or \"review a commit with codex\"."
+    },
+    {
+     "name": "turbo-commit-staged",
+     "description": "Commit already-staged changes with a message matching existing commit style. Use when the user asks to \"commit staged changes\" or \"commit what's staged\"."
+    },
+    {
+     "name": "turbo-create-pr",
+     "description": "Create a GitHub pull request with a drafted title and description. Use when the user asks to \"create a PR\", \"create a pull request\", \"open a PR\", or \"submit a PR\"."
+    },
+    {
+     "name": "turbo-create-skill",
+     "description": "Create a new skill or update an existing skill that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations. Use when the user asks to \"create a skill\", \"make a new skill\", \"build a skill\", \"scaffold a skill\", \"write a skill for...\", or \"new skill that does...\"."
+    },
+    {
+     "name": "turbo-frontend-design",
+     "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use when the user asks to build landing pages, websites, dashboards, web components, or any frontend UI. Generates creative, polished code that avoids generic AI aesthetics."
+    },
+    {
+     "name": "turbo-implement",
+     "description": "Load code-style and task-specific skills, make the change described by the current context, then run post-implementation QA. Use for ad-hoc changes when no plan file or improvements backlog governs the work, and when the user asks to \"just implement\", \"implement directly\", \"implement without a plan\", or \"apply the change\"."
+    },
+    {
+     "name": "turbo-resolve-pr-comments",
+     "description": "Evaluate, fix, answer, and reply to GitHub pull request review comments and conversation comments. Handles both change requests (fix or skip) and reviewer questions (explain using reasoning recalled from past Claude Code transcripts). Use when the user asks to \"resolve PR comments\", \"fix review comments\", \"address PR feedback\", \"handle review comments\", \"address review feedback\", \"respond to PR comments\", \"answer review questions\", or \"address code review\"."
+    },
+    {
+     "name": "turbo-review-pr",
+     "description": "Review a pull request by fetching PR comments, running a comprehensive code review, evaluating findings, and dispatching to implementation. Use when the user asks to \"review PR\", \"review pull request\", \"review this PR\", \"check PR before merging\", or \"full PR review\"."
+    },
+    {
+     "name": "turboplan",
+     "description": "Analyze task complexity and route to a mode by artifact: direct fix for clear-scope changes, or a plan file when the approach needs to be written down. Use when the user asks to \"turboplan\", \"run turboplan\", \"plan this task\", \"turbo plan mode\", \"plan and implement\", or \"use turboplan instead of plan mode\"."
+    },
+    {
      "name": "turborepo-caching",
      "description": "Configure Turborepo for efficient monorepo builds with local and remote caching. Use when setting up Turborepo, optimizing build pipelines, or implementing distributed caching."
     },
@@ -4923,12 +5195,36 @@
      "description": "Web UI - glassmorphism, Tailwind, dark mode, accessibility"
     },
     {
+     "name": "understand-change",
+     "description": "Teach the user to deeply understand a change through interactive tutoring: restating understanding, drilling into why/what/how, and quizzing until mastery. The active counterpart to a one-shot explanation. Use when the user asks to \"understand this change\", \"teach me this change\", \"help me understand what changed\", \"walk me through this change\", \"make sure I understand this\", \"quiz me on this\", or \"teach me what we did\"."
+    },
+    {
      "name": "unity-ecs-patterns",
      "description": "Master Unity ECS (Entity Component System) with DOTS, Jobs, and Burst for high-performance game development. Use when building data-oriented games, optimizing performance, or working with large entity counts."
     },
     {
+     "name": "update-changelog",
+     "description": "Update the Unreleased section of CHANGELOG.md based on current changes. No-op if CHANGELOG.md does not exist. Use when the user asks to \"update changelog\", \"add to changelog\", \"update the changelog\", \"changelog entry\", \"add changelog entry\", or \"log this change\"."
+    },
+    {
+     "name": "update-dependencies",
+     "description": "Upgrade project dependencies with breaking change research for major version updates. Use when the user asks to \"update dependencies\", \"upgrade packages\", \"upgrade dependencies\", \"update deps\", \"upgrade deps\", \"update npm deps\", \"update Swift packages\", \"cargo update\", \"go get updates\", \"bundle update\", or \"pip upgrade\"."
+    },
+    {
+     "name": "update-pr",
+     "description": "Update an existing GitHub pull request's title and description to reflect the current state of the branch. Use when the user asks to \"update the PR\", \"update PR description\", \"update PR title\", \"refresh PR description\", or \"sync PR with changes\"."
+    },
+    {
      "name": "update-pr-summary",
      "description": "This skill should be used when user asks to \"update PR summary\", \"update PR description\", \"rewrite PR body\", \"refresh PR title and body\", or explicitly invokes \"update-pr-summary\"."
+    },
+    {
+     "name": "update-turbo",
+     "description": "Update installed Turbo skills from the local repo with a dynamic changelog, conflict resolution for customized skills, and guided user experience. Use when the user asks to \"update turbo\", \"update turbo skills\", \"reinstall turbo\", or \"upgrade turbo\"."
+    },
+    {
+     "name": "user-experience",
+     "description": "Apply a UX lens to a user-facing change: whether it serves the user's real goal and whether the path through it holds together, using the Understanding, Bridging, and Flowing contexts. Use when scoping, planning, or assessing any change that affects what a user sees or does. Loaded as a lens during planning and assessment."
     },
     {
      "name": "user-journeys",

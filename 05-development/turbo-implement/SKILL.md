@@ -1,0 +1,67 @@
+---
+name: turbo-implement
+description: "Load code-style and task-specific skills, make the change described by the current context, then run post-implementation QA. Use for ad-hoc changes when no plan file or improvements backlog governs the work, and when the user asks to \"just implement\", \"implement directly\", \"implement without a plan\", or \"apply the change\"."
+---
+
+# Implement
+
+Standard implementation flow: load style rules, make the change, run post-implementation QA.
+
+## Task Tracking
+
+At the start, use `TaskCreate` to create a task for each step:
+
+1. Run `/code-style` skill
+2. Load task-specific skills
+3. Make the change
+4. Run verification
+5. Run `/smoke-test` skill for UI/UX changes
+6. Run `/preview` skill for UI/UX changes
+7. Post-implementation QA
+
+## Step 1: Run `/code-style` Skill
+
+Run the `/code-style` skill to load existence, reuse, mirror, and symmetry rules before editing.
+
+## Step 2: Load Task-Specific Skills
+
+Scan the work for types that match available skills, matching against the richest context available: a plan's **Implementation Steps** if a plan is in conversation context, otherwise the user request, a prior skill's task description, or an improvement entry. For each unambiguous match, run the skill via the Skill tool. For example, if the work includes "add a Drizzle migration" and a skill exists whose triggers reference Drizzle migrations, load it. If a work type has no matching skill trigger, do not load a generic skill.
+
+If unsure, do not load.
+
+## Step 3: Make the Change
+
+Apply the change described by the current context — the user request, a prior skill's task description, or an improvement entry. Keep the edit scoped to what the context describes.
+
+When the fix changes how a value is constructed, grep for every other site that constructs it and fix the ones carrying the same defect; treat these siblings as part of the same change. If the scope balloons beyond what the context specified, stop and confirm scope before continuing.
+
+## Step 4: Run Verification
+
+If a Verification section is in conversation context (e.g., from a plan file), execute the commands, smoke checks, or MCP tool invocations it specifies. If a check fails, run the `/investigate` skill. If a check is blocked by a dependency, unclear requirement, or environmental issue, use `AskUserQuestion` to surface the blocker and let the user choose how to proceed. If no Verification section is in context, skip this step.
+
+## Step 5: Run `/smoke-test` Skill for UI/UX Changes
+
+If the change touches a user-facing surface (UI components, styles, templates, markup, user-facing routes or screens), run the `/smoke-test` skill. When that is unclear, use `AskUserQuestion` to ask whether the change is user-facing rather than skipping silently. Skip this step for changes with no user-facing surface (backend-only, CLI, library, build or config).
+
+`/smoke-test` verifies without modifying code, so act on what it reports here: fix each failure and re-run it. When the same failure survives a fix attempt, run the `/investigate` skill; if investigation finds no root cause, stop and report with its findings. When a blocker cannot be cleared in this session (a path needing real credentials, an external service, or state unavailable here), carry it into Step 6 rather than treating it as a failure.
+
+## Step 6: Run `/preview` Skill for UI/UX Changes
+
+If Step 5 determined the change is user-facing, run the `/preview` skill so the user can try it firsthand before QA. Skip this step otherwise. Pass along any blocker Step 5 could not clear, so the hand-over names the cases still left to the user.
+
+## Step 7: Post-Implementation QA
+
+When a plan file governs the work, hold this step until every Implementation Step has been applied, and continue to the next Implementation Step at every earlier boundary. Then run the `/finalize` skill.
+
+When no plan file governs the work, use `AskUserQuestion` to offer three options:
+
+- **Full QA** — run the `/finalize` skill
+- **Lighter pass** — run the `/simplify-all` skill
+- **Stop here** — leave the change as-is
+
+Then use the TaskList tool and proceed to any remaining task.
+
+## Rules
+
+- Defer `git commit`, `git push`, and PR creation to Step 7.
+- Don't reference `.turbo/` content (filenames, acceptance criteria, step numbers, headings) in code or comments. `.turbo/` is gitignored, so these references would be opaque to anyone reading without local copies.

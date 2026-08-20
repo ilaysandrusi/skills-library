@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6259,
- "traced_to_source_repo": 6245,
- "distinct_source_repos": 222,
+ "skills": 6333,
+ "traced_to_source_repo": 6319,
+ "distinct_source_repos": 223,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -33,6 +33,7 @@
   "aws/agent-toolkit-for-aws": 87,
   "deanpeters/Product-Manager-Skills": 84,
   "trailofbits/skills": 78,
+  "tobihagemann/turbo": 74,
   "LambdaTest/agent-skills": 73,
   "alinaqi/claude-bootstrap": 72,
   "JasonColapietro/suede-creator-skills": 71,
@@ -56701,6 +56702,672 @@
    "method": "direct-import",
    "added_in": "2026-08-20",
    "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
+  },
+  "05-development/answer-reviewer-questions": {
+   "skill": "05-development/answer-reviewer-questions",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/apply-findings": {
+   "skill": "05-development/apply-findings",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/assess-technical-debt": {
+   "skill": "05-development/assess-technical-debt",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-audit": {
+   "skill": "05-development/turbo-audit",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/changelog-rules": {
+   "skill": "05-development/changelog-rules",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/code-style": {
+   "skill": "05-development/code-style",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/codex-exec": {
+   "skill": "05-development/codex-exec",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-codex-review": {
+   "skill": "05-development/turbo-codex-review",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/commit-rules": {
+   "skill": "05-development/commit-rules",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-commit-staged": {
+   "skill": "05-development/turbo-commit-staged",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/commit-staged-push": {
+   "skill": "05-development/commit-staged-push",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/consult-codex": {
+   "skill": "05-development/consult-codex",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/consult-oracle": {
+   "skill": "05-development/consult-oracle",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/contribute-turbo": {
+   "skill": "05-development/contribute-turbo",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/create-changelog": {
+   "skill": "05-development/create-changelog",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/create-handoff": {
+   "skill": "05-development/create-handoff",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/create-issue": {
+   "skill": "05-development/create-issue",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-create-pr": {
+   "skill": "05-development/turbo-create-pr",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/create-project-skills": {
+   "skill": "05-development/create-project-skills",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-create-skill": {
+   "skill": "05-development/turbo-create-skill",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/create-test-plan": {
+   "skill": "05-development/create-test-plan",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/create-threat-model": {
+   "skill": "05-development/create-threat-model",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/discuss-change": {
+   "skill": "05-development/discuss-change",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/draft-plan": {
+   "skill": "05-development/draft-plan",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/evaluate-findings": {
+   "skill": "05-development/evaluate-findings",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/explain-this": {
+   "skill": "05-development/explain-this",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/exploratory-test": {
+   "skill": "05-development/exploratory-test",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/fetch-pr-comments": {
+   "skill": "05-development/fetch-pr-comments",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/finalize": {
+   "skill": "05-development/finalize",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/find-dead-code": {
+   "skill": "05-development/find-dead-code",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-frontend-design": {
+   "skill": "05-development/turbo-frontend-design",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/github-voice": {
+   "skill": "05-development/github-voice",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-implement": {
+   "skill": "05-development/turbo-implement",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/implement-improvements": {
+   "skill": "05-development/implement-improvements",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/implement-plan": {
+   "skill": "05-development/implement-plan",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/interpret-feedback": {
+   "skill": "05-development/interpret-feedback",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/investigate": {
+   "skill": "05-development/investigate",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/map-codebase": {
+   "skill": "05-development/map-codebase",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/note-improvement": {
+   "skill": "05-development/note-improvement",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/onboard": {
+   "skill": "05-development/onboard",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/peer-review": {
+   "skill": "05-development/peer-review",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/pick-next-issue": {
+   "skill": "05-development/pick-next-issue",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/polish-code": {
+   "skill": "05-development/polish-code",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/preview": {
+   "skill": "05-development/preview",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/recall-reasoning": {
+   "skill": "05-development/recall-reasoning",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/refine-plan": {
+   "skill": "05-development/refine-plan",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/reply-to-pr-conversation": {
+   "skill": "05-development/reply-to-pr-conversation",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/reply-to-pr-threads": {
+   "skill": "05-development/reply-to-pr-threads",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/resolve-findings": {
+   "skill": "05-development/resolve-findings",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-resolve-pr-comments": {
+   "skill": "05-development/turbo-resolve-pr-comments",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/review-agentic-setup": {
+   "skill": "05-development/review-agentic-setup",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/review-code": {
+   "skill": "05-development/review-code",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/review-dependencies": {
+   "skill": "05-development/review-dependencies",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/review-plan": {
+   "skill": "05-development/review-plan",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turbo-review-pr": {
+   "skill": "05-development/turbo-review-pr",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/review-tooling": {
+   "skill": "05-development/review-tooling",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/self-improve": {
+   "skill": "05-development/self-improve",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/ship": {
+   "skill": "05-development/ship",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/simplify-all": {
+   "skill": "05-development/simplify-all",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/simplify-code": {
+   "skill": "05-development/simplify-code",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/simplify-docs": {
+   "skill": "05-development/simplify-docs",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/smoke-test": {
+   "skill": "05-development/smoke-test",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/split-and-ship": {
+   "skill": "05-development/split-and-ship",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/stage": {
+   "skill": "05-development/stage",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/stage-commit": {
+   "skill": "05-development/stage-commit",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/stage-commit-push": {
+   "skill": "05-development/stage-commit-push",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/survey-patterns": {
+   "skill": "05-development/survey-patterns",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/turboplan": {
+   "skill": "05-development/turboplan",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/understand-change": {
+   "skill": "05-development/understand-change",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/update-changelog": {
+   "skill": "05-development/update-changelog",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/update-dependencies": {
+   "skill": "05-development/update-dependencies",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/update-pr": {
+   "skill": "05-development/update-pr",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/update-turbo": {
+   "skill": "05-development/update-turbo",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "05-development/user-experience": {
+   "skill": "05-development/user-experience",
+   "sources": [
+    "tobihagemann/turbo"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-08-20",
+   "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
   }
  }
 }
