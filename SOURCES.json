@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6333,
- "traced_to_source_repo": 6319,
- "distinct_source_repos": 223,
+ "skills": 6094,
+ "traced_to_source_repo": 6080,
+ "distinct_source_repos": 222,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -22,10 +22,9 @@
   "NVIDIA/skills": 338,
   "affaan-m/ECC": 297,
   "gooseworks-ai/goose-skills": 270,
-  "lawvable/awesome-legal-skills": 238,
   "microsoft/skills": 188,
   "indranilbanerjee/digital-marketing-pro": 178,
-  "wshobson/agents": 174,
+  "wshobson/agents": 173,
   "aaron-he-zhu/aaron-marketing-skills": 122,
   "google/skills": 110,
   "browser-act/skills": 102,
@@ -37,208 +36,208 @@
   "LambdaTest/agent-skills": 73,
   "alinaqi/claude-bootstrap": 72,
   "JasonColapietro/suede-creator-skills": 71,
-  "NeoLabHQ/context-engineering-kit": 69,
   "phuryn/pm-skills": 69,
+  "NeoLabHQ/context-engineering-kit": 69,
   "alirezarezvani/claude-skills": 65,
   "nowork-studio/NotFair": 56,
   "openai/skills": 54,
   "bitwize-music-studio/claude-ai-music-skills": 53,
   "coreyhaines31/marketingskills": 50,
   "Eronred/aso-skills": 42,
-  "dembrandt/dembrandt-skills": 40,
   "getsentry/skills": 40,
+  "dembrandt/dembrandt-skills": 40,
   "flutter/skills": 38,
   "foryourhealth111-pixel/Vibe-Skills": 38,
   "mattpocock/skills": 37,
-  "AgriciDaniel/claude-seo": 36,
   "snyk/agent-scan": 36,
+  "AgriciDaniel/claude-seo": 36,
   "GanyuanRan/Aegis": 35,
   "hyperfx-ai/marketing-skills": 31,
   "addyosmani/agent-skills": 28,
-  "eduardo-sl/go-agent-skills": 28,
   "yusufkaraaslan/Skill_Seekers": 28,
+  "eduardo-sl/go-agent-skills": 28,
   "sanjay3290/ai-skills": 27,
-  "huggingface/skills": 26,
   "kreuzberg-dev/kreuzberg": 26,
-  "helius-labs/core-ai": 24,
+  "huggingface/skills": 26,
   "rudrankriyam/app-store-connect-cli-skills": 24,
+  "helius-labs/core-ai": 24,
+  "Paramchoudhary/ResumeSkills": 23,
   "BrianRWagner/ai-marketing-skills": 23,
   "MiniMax-AI/skills": 23,
-  "Paramchoudhary/ResumeSkills": 23,
   "expo/skills": 23,
   "hashicorp/agent-skills": 21,
   "veniceai/skills": 21,
   "WordPress/agent-skills": 20,
-  "Joannis/claude-skills": 19,
-  "awslabs/mcp + AWS official skills": 19,
   "huifer/Claude-Ally-Health": 19,
+  "awslabs/mcp + AWS official skills": 19,
+  "Joannis/claude-skills": 19,
   "AIDevGTM/gtm-cofounder": 18,
-  "Sendmux/skills": 18,
   "anthropics/skills": 18,
   "binance/binance-skills-hub": 18,
+  "Sendmux/skills": 18,
   "fcakyon/claude-codex-settings": 18,
   "browserbase/skills": 17,
+  "redis/agent-skills": 17,
+  "ognjengt/founder-skills": 17,
   "fal-ai-community/skills": 17,
   "google-labs-code/stitch-skills": 17,
-  "ognjengt/founder-skills": 17,
-  "redis/agent-skills": 17,
   "prompt-security/clawsec": 16,
-  "Orkas-AI/Orkas-VideoStudio": 15,
   "apollographql/skills": 15,
-  "czlonkowski/n8n-skills": 15,
   "obra/superpowers": 15,
-  "ZhangHanDong/makepad-skills": 14,
+  "Orkas-AI/Orkas-VideoStudio": 15,
+  "czlonkowski/n8n-skills": 15,
   "callstackincubator/agent-skills": 14,
   "honeydew-ai/honeydew-ai-coding-agents-plugins": 14,
-  "netlify/skills": 14,
   "raintree-technology/apple-hig-skills": 14,
-  "Leonxlnx/taste-skill": 13,
-  "brave/brave-search-skills": 13,
+  "ZhangHanDong/makepad-skills": 14,
+  "netlify/skills": 14,
   "cloudflare/skills": 13,
-  "qdrant/skills": 13,
+  "brave/brave-search-skills": 13,
+  "Leonxlnx/taste-skill": 13,
   "transloadit/skills": 13,
-  "ClickHouse/agent-skills": 12,
-  "firebase/skills": 12,
-  "nextlevelbuilder/ui-ux-pro-max-skill": 12,
+  "qdrant/skills": 13,
   "realkimbarrett/advertising-skills": 12,
+  "ClickHouse/agent-skills": 12,
+  "nextlevelbuilder/ui-ux-pro-max-skill": 12,
+  "firebase/skills": 12,
   "remotion-dev/skills": 12,
   "Neeeophytee/finding-unknowns-skills": 11,
-  "Simon-He95/markstream-vue": 11,
-  "mcollina/skills": 11,
   "vercel-labs/skills": 11,
-  "CloudAI-X/threejs-skills": 10,
-  "duckdb/duckdb-skills": 10,
+  "mcollina/skills": 11,
+  "Simon-He95/markstream-vue": 11,
   "neondatabase/agent-skills": 10,
+  "duckdb/duckdb-skills": 10,
+  "CloudAI-X/threejs-skills": 10,
+  "mongodb/agent-skills": 9,
+  "zxkane/aws-skills": 9,
+  "ohad6k/emulo": 9,
+  "metalbear-co/skills": 9,
   "Lum1104/Understand-Anything": 9,
   "MohamedAbdallah-14/unslop": 9,
-  "metalbear-co/skills": 9,
-  "mongodb/agent-skills": 9,
-  "ohad6k/emulo": 9,
-  "zxkane/aws-skills": 9,
-  "NoizAI/skills": 8,
   "addyosmani/web-quality-skills": 8,
   "better-auth/skills": 8,
-  "ehmo/platform-design-skills": 8,
+  "NoizAI/skills": 8,
   "figma/skills": 8,
   "greensock/gsap-skills": 8,
-  "firecrawl/skills": 7,
-  "fvadicamo/dev-agent-skills": 7,
+  "ehmo/platform-design-skills": 8,
   "ibelick/ui-skills": 7,
   "replicate/skills": 7,
   "sanity-io/skills": 7,
+  "fvadicamo/dev-agent-skills": 7,
+  "firecrawl/skills": 7,
   "stjbrown/agent-knowledge": 7,
+  "zilliztech/mfs": 6,
   "khendzel/skills-janitor": 6,
   "makenotion/claude-code-notion-plugin": 6,
   "makenotion/notion-cookbook": 6,
   "stripe/skills": 6,
-  "zilliztech/mfs": 6,
+  "shouldnotappearcalm/a-share-skill": 5,
+  "resend/resend-skills": 5,
   "Charlie85270/Dorothy": 5,
+  "rameerez/claude-code-startup-skills": 5,
   "K-Dense-AI/claude-scientific-skills": 5,
   "plasma-ai/fractal": 5,
-  "rameerez/claude-code-startup-skills": 5,
-  "resend/resend-skills": 5,
-  "shouldnotappearcalm/a-share-skill": 5,
   "gokapso/agent-skills": 4,
-  "google-gemini/gemini-skills": 4,
-  "obra/superpowers-lab": 4,
   "talkstream/ru-text": 4,
-  "tinybirdco/tinybird-agent-skills": 4,
   "voltagent/skills": 4,
+  "obra/superpowers-lab": 4,
+  "google-gemini/gemini-skills": 4,
+  "tinybirdco/tinybird-agent-skills": 4,
   "zapier/zapier-mcp": 4,
-  "Linked-API/linkedin-skills": 3,
-  "angular/skills": 3,
   "auth0/agent-skills": 3,
+  "supabase/agent-skills": 3,
+  "angular/skills": 3,
   "coderabbitai/skills": 3,
+  "frmoretto/clarity-gate": 3,
   "composiohq/skills": 3,
   "cypress-io/ai-toolkit": 3,
-  "frmoretto/clarity-gate": 3,
+  "Linked-API/linkedin-skills": 3,
   "hqhq1025/skill-optimizer": 3,
-  "supabase/agent-skills": 3,
-  "AvdLee/SwiftUI-Agent-Skill": 2,
-  "PSPDFKit-labs/nutrient-agent-skill": 2,
-  "ReScienceLab/opc-skills": 2,
-  "RoundTable02/tutor-skills": 2,
-  "VoltAgent/voltagent": 2,
-  "Xquik-dev/x-twitter-scraper": 2,
-  "awrshift/claude-memory-kit": 2,
-  "lackeyjb/playwright-skill": 2,
-  "muratcankoylan/Agent-Skills-for-Context-Engineering": 2,
-  "mvanhorn/last30days-skill": 2,
-  "santifer/career-ops": 2,
-  "sergebulaev/linkedin-skills": 2,
-  "squirrelscan/squirrelscan": 2,
-  "testdino-hq/playwright-skill": 2,
   "typefully/agent-skills": 2,
-  "video-db/skills": 2,
+  "muratcankoylan/Agent-Skills-for-Context-Engineering": 2,
+  "squirrelscan/squirrelscan": 2,
+  "santifer/career-ops": 2,
+  "awrshift/claude-memory-kit": 2,
+  "VoltAgent/voltagent": 2,
   "zarazhangrui/frontend-slides": 2,
-  "AVGVSTVS96/better-github-skill": 1,
-  "Alisa0808/vibe-creating-skill": 1,
-  "Aperivue/medsci-skills": 1,
-  "BehiSecc/VibeSec-Skill": 1,
-  "Bomx/distribb-skill": 1,
-  "CosmoBlk/email-marketing-bible": 1,
-  "Digidai/product-manager-skills": 1,
+  "mvanhorn/last30days-skill": 2,
+  "sergebulaev/linkedin-skills": 2,
+  "PSPDFKit-labs/nutrient-agent-skill": 2,
+  "testdino-hq/playwright-skill": 2,
+  "lackeyjb/playwright-skill": 2,
+  "video-db/skills": 2,
+  "ReScienceLab/opc-skills": 2,
+  "AvdLee/SwiftUI-Agent-Skill": 2,
+  "RoundTable02/tutor-skills": 2,
+  "Xquik-dev/x-twitter-scraper": 2,
+  "taisly/agent": 1,
+  "datadog-labs/agent-skills": 1,
+  "pattern-ai-labs/agentcall": 1,
+  "coinbase/agentic-wallet-skills": 1,
   "Ericyoung-183/alpha-insights": 1,
+  "truongduy2611/app-store-preflight-skills": 1,
+  "more-io/claude-apple-bridges": 1,
+  "VoltAgent/awesome-agent-skills": 1,
+  "SHADOWPR0/beautiful_prose": 1,
+  "AVGVSTVS96/better-github-skill": 1,
+  "reliefeai/browser-relay": 1,
   "EveryInc/charlie-cfo-skill": 1,
   "Kevin7Qi/codex-collab": 1,
-  "NotMyself/claude-win11-speckit-update-skill": 1,
-  "Optim-Agent/optim-agent": 1,
-  "Panniantong/Agent-Reach": 1,
-  "PleasePrompto/notebooklm-skill": 1,
-  "Ryan-yang125/motion-lexicon": 1,
-  "SHADOWPR0/beautiful_prose": 1,
-  "SHADOWPR0/security-bluebook-builder": 1,
-  "SeanZoR/claude-speed-reader": 1,
-  "Tubo2333/obsidian-knowledge-brain": 1,
-  "Vladimir-Human/humanizer-ru": 1,
-  "VoltAgent/awesome-agent-skills": 1,
-  "Xquik-dev/tweetclaw": 1,
-  "antonbabenko/terraform-skill": 1,
   "baskduf/FableCodex": 1,
-  "blader/humanizer": 1,
-  "coinbase/agentic-wallet-skills": 1,
-  "conorluddy/ios-simulator-skill": 1,
-  "csthink/dashmotion": 1,
-  "datadog-labs/agent-skills": 1,
-  "degausai/wonda": 1,
-  "deusyu/translate-book": 1,
-  "drogers0/gh-image": 1,
-  "efremidze/swift-patterns-skill": 1,
-  "ethos-link/rails-conventions": 1,
-  "garrytan/skills": 1,
-  "gitroomhq/postiz-agent": 1,
-  "jthack/ffuf_claude_skill": 1,
-  "k-kolomeitsev/data-structure-protocol": 1,
-  "komal-SkyNET/claude-skill-homeassistant": 1,
-  "makenotion/skills": 1,
-  "massimodeluisa/recursive-decomposition-skill": 1,
-  "meodai/skill.color-expert": 1,
-  "more-io/claude-apple-bridges": 1,
-  "muthuishere/hand-drawn-diagrams": 1,
-  "officialzeroxyz/zero-plugins": 1,
-  "oliver-zehentleitner/keep-the-why": 1,
-  "omkamal/pypict-claude-skill": 1,
-  "op7418/NanoBanana-PPT-Skills": 1,
-  "op7418/Youtube-clipper-skill": 1,
-  "pattern-ai-labs/agentcall": 1,
-  "ramzesenok/iOS-Accessibility-Audit-Skill": 1,
-  "reliefeai/browser-relay": 1,
-  "robzolkos/skill-rails-upgrade": 1,
-  "sametbrr/llm-wiki-manager": 1,
-  "scarletkc/vexor": 1,
-  "smixs/creative-director-skill": 1,
-  "superdesigndev/superdesign-skill": 1,
-  "taisly/agent": 1,
-  "takechanman1228/claude-ecom": 1,
-  "truongduy2611/app-store-preflight-skills": 1,
   "trycourier/courier-skills": 1,
-  "uucz/moyu": 1,
+  "smixs/creative-director-skill": 1,
+  "csthink/dashmotion": 1,
+  "k-kolomeitsev/data-structure-protocol": 1,
+  "Bomx/distribb-skill": 1,
+  "takechanman1228/claude-ecom": 1,
+  "CosmoBlk/email-marketing-bible": 1,
   "wanshuiyin/Auto-claude-code-research-in-sleep": 1,
+  "jthack/ffuf_claude_skill": 1,
+  "drogers0/gh-image": 1,
+  "garrytan/skills": 1,
+  "muthuishere/hand-drawn-diagrams": 1,
+  "komal-SkyNET/claude-skill-homeassistant": 1,
+  "blader/humanizer": 1,
+  "Vladimir-Human/humanizer-ru": 1,
+  "conorluddy/ios-simulator-skill": 1,
+  "oliver-zehentleitner/keep-the-why": 1,
   "wrsmith108/linear-claude-skill": 1,
-  "wrsmith108/varlock-claude-skill": 1,
-  "wshuyi/x-article-publisher-skill": 1,
+  "sametbrr/llm-wiki-manager": 1,
   "zscole/model-hierarchy-skill": 1,
-  "zw008/VMware-AIops": 1
+  "Ryan-yang125/motion-lexicon": 1,
+  "uucz/moyu": 1,
+  "op7418/NanoBanana-PPT-Skills": 1,
+  "PleasePrompto/notebooklm-skill": 1,
+  "makenotion/skills": 1,
+  "Tubo2333/obsidian-knowledge-brain": 1,
+  "Optim-Agent/optim-agent": 1,
+  "gitroomhq/postiz-agent": 1,
+  "Digidai/product-manager-skills": 1,
+  "Aperivue/medsci-skills": 1,
+  "omkamal/pypict-claude-skill": 1,
+  "ethos-link/rails-conventions": 1,
+  "massimodeluisa/recursive-decomposition-skill": 1,
+  "SHADOWPR0/security-bluebook-builder": 1,
+  "robzolkos/skill-rails-upgrade": 1,
+  "meodai/skill.color-expert": 1,
+  "NotMyself/claude-win11-speckit-update-skill": 1,
+  "SeanZoR/claude-speed-reader": 1,
+  "superdesigndev/superdesign-skill": 1,
+  "efremidze/swift-patterns-skill": 1,
+  "ramzesenok/iOS-Accessibility-Audit-Skill": 1,
+  "antonbabenko/terraform-skill": 1,
+  "deusyu/translate-book": 1,
+  "Xquik-dev/tweetclaw": 1,
+  "wrsmith108/varlock-claude-skill": 1,
+  "scarletkc/vexor": 1,
+  "Alisa0808/vibe-creating-skill": 1,
+  "BehiSecc/VibeSec-Skill": 1,
+  "zw008/VMware-AIops": 1,
+  "degausai/wonda": 1,
+  "wshuyi/x-article-publisher-skill": 1,
+  "op7418/Youtube-clipper-skill": 1,
+  "officialzeroxyz/zero-plugins": 1,
+  "Panniantong/Agent-Reach": 1
  },
  "attribution": {
   "19-sales-gtm-startup/00-start-here": {
@@ -901,15 +900,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/agent-authority-charter-builder-arkadiy-miteiko": {
-   "skill": "22-legal/agent-authority-charter-builder-arkadiy-miteiko",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "26-mobile-apple/agent-device": {
    "skill": "26-mobile-apple/agent-device",
    "sources": [
@@ -1202,15 +1192,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/agentic-delegation-audit-adrian-lerer": {
-   "skill": "22-legal/agentic-delegation-audit-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "05-development/agentic-development": {
    "skill": "05-development/agentic-development",
    "sources": [
@@ -1284,15 +1265,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/ai-audit-trail-larissa-meredith-flister": {
-   "skill": "22-legal/ai-audit-trail-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "14-testing-qa/ai-based-api": {
    "skill": "14-testing-qa/ai-based-api",
    "sources": [
@@ -1319,15 +1291,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "22-legal/ai-governance-reviewer-carl-ditzler": {
-   "skill": "22-legal/ai-governance-reviewer-carl-ditzler",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "05-development/ai-models": {
    "skill": "05-development/ai-models",
@@ -1746,24 +1709,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/ambiguity-report-seth-chandler": {
-   "skill": "22-legal/ambiguity-report-seth-chandler",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/ambiguity-stress-test-seth-chandler": {
-   "skill": "22-legal/ambiguity-stress-test-seth-chandler",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "20-nvidia-cuda/amc-run-rtsp-calibration": {
    "skill": "20-nvidia-cuda/amc-run-rtsp-calibration",
    "sources": [
@@ -1826,24 +1771,6 @@
    "method": "exact-name-match",
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
-  },
-  "22-legal/analyse-rgpd-de-dpa-fournisseur-hugo-salard": {
-   "skill": "22-legal/analyse-rgpd-de-dpa-fournisseur-hugo-salard",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/analyse-sanctions-et-exportations-gillan-saleh": {
-   "skill": "22-legal/analyse-sanctions-et-exportations-gillan-saleh",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "03-marketing/analytics": {
    "skill": "03-marketing/analytics",
@@ -3215,15 +3142,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/arbitration-clause-design-and-review-hafez-virjee": {
-   "skill": "22-legal/arbitration-clause-design-and-review-hafez-virjee",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/architecture-decision-records": {
    "skill": "29-ecc/architecture-decision-records",
    "sources": [
@@ -3246,15 +3164,6 @@
    "skill": "18-finance-accounting/argentina-references",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/argentine-supreme-court-analysis-adrian-lerer": {
-   "skill": "22-legal/argentine-supreme-court-analysis-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -3582,33 +3491,6 @@
    ],
    "method": "exact-name-match"
   },
-  "22-legal/assignation-refere-communication-associe-selim-brihi": {
-   "skill": "22-legal/assignation-refere-communication-associe-selim-brihi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/assignation-refere-recouvrement-creance-selim-brihi": {
-   "skill": "22-legal/assignation-refere-recouvrement-creance-selim-brihi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/assistant-juridique-christophe-quezel-ambrunaz": {
-   "skill": "22-legal/assistant-juridique-christophe-quezel-ambrunaz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/at-income-tax": {
    "skill": "18-finance-accounting/at-income-tax",
    "sources": [
@@ -3877,15 +3759,6 @@
    "skill": "12-security/audit-augmentation",
    "sources": [
     "trailofbits/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/audit-conformite-rgpd-site-internet-hugo-salard": {
-   "skill": "22-legal/audit-conformite-rgpd-site-internet-hugo-salard",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -4494,15 +4367,6 @@
    "skill": "13-cloud-deploy/aws-sst-development",
    "sources": [
     "zxkane/aws-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/az-eu-website-privacy-audit-mirza-chiragov": {
-   "skill": "22-legal/az-eu-website-privacy-audit-mirza-chiragov",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -5847,15 +5711,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/bacen-compliance-sentinel-rafael-mastronardi": {
-   "skill": "22-legal/bacen-compliance-sentinel-rafael-mastronardi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/backend-patterns": {
    "skill": "29-ecc/backend-patterns",
    "sources": [
@@ -6363,24 +6218,6 @@
    "skill": "05-development/bigtable-basics",
    "sources": [
     "google/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/billable-time-stephane-boghossian": {
-   "skill": "22-legal/billable-time-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/billing-cycle-manager-scott-margetts": {
-   "skill": "22-legal/billing-cycle-manager-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -7327,15 +7164,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/budget-and-fee-manager-scott-margetts": {
-   "skill": "22-legal/budget-and-fee-manager-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "03-marketing/budget-optimizer": {
    "skill": "03-marketing/budget-optimizer",
    "sources": [
@@ -8172,15 +8000,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/canned-response-generator-anthropic": {
-   "skill": "22-legal/canned-response-generator-anthropic",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "02-design-ui/canvas-design": {
    "skill": "02-design-ui/canvas-design",
    "sources": [
@@ -8265,15 +8084,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/case-briefer-seth-chandler": {
-   "skill": "22-legal/case-briefer-seth-chandler",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "19-sales-gtm-startup/case-study": {
    "skill": "19-sales-gtm-startup/case-study",
    "sources": [
@@ -8341,24 +8151,6 @@
    "skill": "18-finance-accounting/cbam-carbon-border-adjustment",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/ccpa-cpra-tanaji-hemant-naik": {
-   "skill": "22-legal/ccpa-cpra-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/central-african-special-criminal-court-jeanne-sulzer": {
-   "skill": "22-legal/central-african-special-criminal-court-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -8616,15 +8408,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/chronology-builder-andrew-bird": {
-   "skill": "22-legal/chronology-builder-andrew-bird",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "06-documents/chunking": {
    "skill": "06-documents/chunking",
    "sources": [
@@ -8714,15 +8497,6 @@
    "method": "exact-name-match",
    "added_in": "dce3ac32",
    "import_note": "OpenAI / Gemini / Replicate / fal.ai packs"
-  },
-  "22-legal/cis-controls-tanaji-hemant-naik": {
-   "skill": "22-legal/cis-controls-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "29-ecc/cisco-ios-patterns": {
    "skill": "29-ecc/cisco-ios-patterns",
@@ -9037,24 +8811,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/client-explanation-translator-larissa-meredith-flister": {
-   "skill": "22-legal/client-explanation-translator-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/client-instruction-schedule-serhan-handani-fx44146u": {
-   "skill": "22-legal/client-instruction-schedule-serhan-handani-fx44146u",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "03-marketing/client-onboarding": {
    "skill": "03-marketing/client-onboarding",
    "sources": [
@@ -9086,15 +8842,6 @@
    "skill": "03-marketing/client-validation-document",
    "sources": [
     "indranilbanerjee/digital-marketing-pro"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/climate-aligned-contracts-tclp": {
-   "skill": "22-legal/climate-aligned-contracts-tclp",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -9244,15 +8991,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/cmmc-tanaji-hemant-naik": {
-   "skill": "22-legal/cmmc-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/co-income-tax": {
    "skill": "18-finance-accounting/co-income-tax",
    "sources": [
@@ -9396,15 +9134,6 @@
     "alirezarezvani/claude-skills",
     "foryourhealth111-pixel/Vibe-Skills",
     "infrasity-labs/dev-gtm-claude-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/code-security-review-openai": {
-   "skill": "22-legal/code-security-review-openai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -9615,15 +9344,6 @@
    "skill": "03-marketing/cold-outreach-sequence",
    "sources": [
     "BrianRWagner/ai-marketing-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/collaboration-platform-advisor-scott-margetts": {
-   "skill": "22-legal/collaboration-platform-advisor-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -10657,15 +10377,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/connecticut-divorce-planner-stephane-boghossian": {
-   "skill": "22-legal/connecticut-divorce-planner-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/connections-optimizer": {
    "skill": "29-ecc/connections-optimizer",
    "sources": [
@@ -11065,15 +10776,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/continuous-improvement-engine-scott-margetts": {
-   "skill": "22-legal/continuous-improvement-engine-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "03-marketing/continuous-improvement-loop": {
    "skill": "03-marketing/continuous-improvement-loop",
    "sources": [
@@ -11128,24 +10830,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/contract-intelligence-workflow-reviewer-carl-ditzler": {
-   "skill": "22-legal/contract-intelligence-workflow-reviewer-carl-ditzler",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/contract-risk-analyzer-sneha-ganapavarapu": {
-   "skill": "22-legal/contract-risk-analyzer-sneha-ganapavarapu",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "26-mobile-apple/contributor-pr-description": {
    "skill": "26-mobile-apple/contributor-pr-description",
    "sources": [
@@ -11195,15 +10879,6 @@
    "skill": "25-data-databases/convert-file",
    "sources": [
     "duckdb/duckdb-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/cookie-policy-generator-malik-taiar": {
-   "skill": "22-legal/cookie-policy-generator-malik-taiar",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -11399,15 +11074,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/court-of-bih-war-crimes-chamber-jeanne-sulzer": {
-   "skill": "22-legal/court-of-bih-war-crimes-chamber-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "19-sales-gtm-startup/cover-letter": {
    "skill": "19-sales-gtm-startup/cover-letter",
    "sources": [
@@ -11471,24 +11137,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "22-legal/cpr-letter-drafter-andrew-bird": {
-   "skill": "22-legal/cpr-letter-drafter-andrew-bird",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/cra-vulnerability-obligations-ansvar-ai": {
-   "skill": "22-legal/cra-vulnerability-obligations-ansvar-ai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "03-marketing/crash-analytics": {
    "skill": "03-marketing/crash-analytics",
@@ -12058,15 +11706,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/cross-regulatory-impact-analyzer-patrick-munro": {
-   "skill": "22-legal/cross-regulatory-impact-analyzer-patrick-munro",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/crosspost": {
    "skill": "29-ecc/crosspost",
    "sources": [
@@ -12111,15 +11750,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "22-legal/csrd-tanaji-hemant-naik": {
-   "skill": "22-legal/csrd-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "18-finance-accounting/ct-income-tax": {
    "skill": "18-finance-accounting/ct-income-tax",
@@ -12386,15 +12016,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "22-legal/customs-trade-law-onur-kafkas": {
-   "skill": "22-legal/customs-trade-law-onur-kafkas",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "14-testing-qa/cypress-author": {
    "skill": "14-testing-qa/cypress-author",
@@ -12781,15 +12402,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/data-processing-agreement-art-28-gdpr-oliver-schmidt-prietz": {
-   "skill": "22-legal/data-processing-agreement-art-28-gdpr-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/data-scraper-agent": {
    "skill": "29-ecc/data-scraper-agent",
    "sources": [
@@ -13019,15 +12631,6 @@
     "NeoLabHQ/context-engineering-kit"
    ],
    "method": "exact-name-match"
-  },
-  "22-legal/decision-ownership-audit-adrian-lerer": {
-   "skill": "22-legal/decision-ownership-audit-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "26-mobile-apple/deckset": {
    "skill": "26-mobile-apple/deckset",
@@ -14673,24 +14276,6 @@
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
   },
-  "22-legal/disclosure-list-andrew-bird": {
-   "skill": "22-legal/disclosure-list-andrew-bird",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/disclosure-strategy-mapper-larissa-meredith-flister": {
-   "skill": "22-legal/disclosure-strategy-mapper-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "11-product-management/discovery-interview-prep": {
    "skill": "11-product-management/discovery-interview-prep",
    "sources": [
@@ -14743,15 +14328,6 @@
     "Bomx/distribb-skill"
    ],
    "method": "repo-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/divorce-practice-stephane-boghossian": {
-   "skill": "22-legal/divorce-practice-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
@@ -15468,15 +15044,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/document-approval-tracker-scott-margetts": {
-   "skill": "22-legal/document-approval-tracker-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "16-ai-apis-media/document-hunter": {
    "skill": "16-ai-apis-media/document-hunter",
    "sources": [
@@ -15605,15 +15172,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/dora-tanaji-hemant-naik": {
-   "skill": "22-legal/dora-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/dotnet-patterns": {
    "skill": "29-ecc/dotnet-patterns",
    "sources": [
@@ -15648,33 +15206,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/dpdpa-gdpr-compliance-review-parth-desai": {
-   "skill": "22-legal/dpdpa-gdpr-compliance-review-parth-desai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/dpdpa-tanaji-hemant-naik": {
-   "skill": "22-legal/dpdpa-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/dpia-sentinel-oliver-schmidt-prietz": {
-   "skill": "22-legal/dpia-sentinel-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "11-product-management/draft-nda": {
    "skill": "11-product-management/draft-nda",
    "sources": [
@@ -15688,15 +15219,6 @@
    "skill": "25-data-databases/duckdb-docs",
    "sources": [
     "duckdb/duckdb-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/due-diligence-gate-adrian-lerer": {
-   "skill": "22-legal/due-diligence-gate-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -15791,15 +15313,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "22-legal/ear-tanaji-hemant-naik": {
-   "skill": "22-legal/ear-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "03-marketing/early-access-designer": {
    "skill": "03-marketing/early-access-designer",
@@ -15989,15 +15502,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "22-legal/eccc-khmer-rouge-tribunal-jeanne-sulzer": {
-   "skill": "22-legal/eccc-khmer-rouge-tribunal-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "03-marketing/ecom": {
    "skill": "03-marketing/ecom",
@@ -16393,15 +15897,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/employment-law-research-yue-deng-wu": {
-   "skill": "22-legal/employment-law-research-yue-deng-wu",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "17-cybersecurity-pack/emulating-cloud-attacks-with-stratus-red-team": {
    "skill": "17-cybersecurity-pack/emulating-cloud-attacks-with-stratus-red-team",
    "sources": [
@@ -16418,24 +15913,6 @@
    ],
    "method": "exact-name-match"
   },
-  "22-legal/en-uk-legal-translation-wouter-van-den-berg": {
-   "skill": "22-legal/en-uk-legal-translation-wouter-van-den-berg",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/en-us-legal-translation-wouter-van-den-berg": {
-   "skill": "22-legal/en-us-legal-translation-wouter-van-den-berg",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/energy-procurement": {
    "skill": "29-ecc/energy-procurement",
    "sources": [
@@ -16445,28 +15922,10 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/enforcement-action-analysis-amir-fadavi": {
-   "skill": "22-legal/enforcement-action-analysis-amir-fadavi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "03-marketing/engagement-inbox-manager": {
    "skill": "03-marketing/engagement-inbox-manager",
    "sources": [
     "aaron-he-zhu/aaron-marketing-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/engagement-terms-billing-guidelines-scott-margetts": {
-   "skill": "22-legal/engagement-terms-billing-guidelines-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -16647,15 +16106,6 @@
    "skill": "11-product-management/epic-hypothesis",
    "sources": [
     "deanpeters/Product-Manager-Skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/epistemic-fault-line-audit-adrian-lerer": {
-   "skill": "22-legal/epistemic-fault-line-audit-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -16884,141 +16334,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/eu-ai-act-examination-report-generator-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-ai-act-examination-report-generator-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-high-risk-classifier-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-ai-act-high-risk-classifier-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-high-risk-implementation-readiness-werner-plutat": {
-   "skill": "22-legal/eu-ai-act-high-risk-implementation-readiness-werner-plutat",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-knowledge-base-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-ai-act-knowledge-base-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-obligations-mapper-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-ai-act-obligations-mapper-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-quick-assessment-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-ai-act-quick-assessment-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-role-determination-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-ai-act-role-determination-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-system-classifier-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-ai-act-system-classifier-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-system-classifier-werner-plutat": {
-   "skill": "22-legal/eu-ai-act-system-classifier-werner-plutat",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-tanaji-hemant-naik": {
-   "skill": "22-legal/eu-ai-act-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-ai-act-transparency-assessor-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-ai-act-transparency-assessor-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-cra-tanaji-hemant-naik": {
-   "skill": "22-legal/eu-cra-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-data-act-compliance-assessment-werner-plutat": {
-   "skill": "22-legal/eu-data-act-compliance-assessment-werner-plutat",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-data-act-oliver-schmidt-prietz": {
-   "skill": "22-legal/eu-data-act-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-data-act-ryan-malek": {
-   "skill": "22-legal/eu-data-act-ryan-malek",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/eu-directives-cross-border": {
    "skill": "18-finance-accounting/eu-directives-cross-border",
    "sources": [
@@ -17032,15 +16347,6 @@
    "skill": "18-finance-accounting/eu-intra-rates",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/eu-legislation-malik-taiar": {
-   "skill": "22-legal/eu-legislation-malik-taiar",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -17187,15 +16493,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "22-legal/excel-editor-openai": {
-   "skill": "22-legal/excel-editor-openai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "18-finance-accounting/excise-tax-workflow-base": {
    "skill": "18-finance-accounting/excise-tax-workflow-base",
@@ -17982,15 +17279,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/extraordinary-african-chambers-jeanne-sulzer": {
-   "skill": "22-legal/extraordinary-african-chambers-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "14-testing-qa/facebook-ads-library-search": {
    "skill": "14-testing-qa/facebook-ads-library-search",
    "sources": [
@@ -18184,24 +17472,6 @@
    "skill": "21-goose-agent/feature-launch-playbook",
    "sources": [
     "gooseworks-ai/goose-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/fedramp-tanaji-hemant-naik": {
-   "skill": "22-legal/fedramp-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/fee-arrangement-structuring-scott-margetts": {
-   "skill": "22-legal/fee-arrangement-structuring-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -18496,15 +17766,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/financial-comparison-glossary-adrian-lerer": {
-   "skill": "22-legal/financial-comparison-glossary-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/financial-reporting-router": {
    "skill": "18-finance-accounting/financial-reporting-router",
    "sources": [
@@ -18618,15 +17879,6 @@
    "skill": "18-finance-accounting/finland-vat-return",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/fintech-agreement-drafting-stephane-boghossian": {
-   "skill": "22-legal/fintech-agreement-drafting-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -19111,15 +18363,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/founder-agreement-drafting-stephane-boghossian": {
-   "skill": "22-legal/founder-agreement-drafting-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "03-marketing/four-core-documents": {
    "skill": "03-marketing/four-core-documents",
    "sources": [
@@ -19547,15 +18790,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/fundamental-rights-impact-assessment-eu-ai-act-art-27-werner-plutat": {
-   "skill": "22-legal/fundamental-rights-impact-assessment-eu-ai-act-art-27-werner-plutat",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "21-goose-agent/funding-signal-monitor": {
    "skill": "21-goose-agent/funding-signal-monitor",
    "sources": [
@@ -19668,24 +18902,6 @@
    "skill": "05-development/gcloud",
    "sources": [
     "google/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/gdpr-breach-sentinel-oliver-schmidt-prietz": {
-   "skill": "22-legal/gdpr-breach-sentinel-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/gdpr-compliance-tanaji-hemant-naik": {
-   "skill": "22-legal/gdpr-compliance-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -20157,15 +19373,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/gibraltar-regulatory-compliance-osint-philip-vasquez": {
-   "skill": "22-legal/gibraltar-regulatory-compliance-osint-philip-vasquez",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "16-ai-apis-media/gif-sticker-maker": {
    "skill": "16-ai-apis-media/gif-sticker-maker",
    "sources": [
@@ -20341,15 +19548,6 @@
    "skill": "12-security/github-triage",
    "sources": [
     "trailofbits/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/giurisprudenza-lampo-giovanna-panucci": {
-   "skill": "22-legal/giurisprudenza-lampo-giovanna-panucci",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -21560,24 +20758,6 @@
    "skill": "21-goose-agent/goose-graphics-create-style",
    "sources": [
     "gooseworks-ai/goose-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/gouvernance-societes-cotees-gillan-saleh": {
-   "skill": "22-legal/gouvernance-societes-cotees-gillan-saleh",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/gpai-code-of-practice-compliance-werner-plutat": {
-   "skill": "22-legal/gpai-code-of-practice-compliance-werner-plutat",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -22864,15 +22044,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/hipaa-compliance-tanaji-hemant-naik": {
-   "skill": "22-legal/hipaa-compliance-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "21-goose-agent/hiring-signal-outreach": {
    "skill": "21-goose-agent/hiring-signal-outreach",
    "sources": [
@@ -23316,15 +22487,6 @@
    "skill": "16-ai-apis-media/huggingface-zerogpu",
    "sources": [
     "huggingface/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/humaniseur-juridique-gary-haas": {
-   "skill": "22-legal/humaniseur-juridique-gary-haas",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -23951,69 +23113,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/icelandic-company-formation-magnus-smarason": {
-   "skill": "22-legal/icelandic-company-formation-magnus-smarason",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/icelandic-contract-review-magnus-smarason": {
-   "skill": "22-legal/icelandic-contract-review-magnus-smarason",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/icelandic-court-case-finder-magnus-smarason": {
-   "skill": "22-legal/icelandic-court-case-finder-magnus-smarason",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/icelandic-eea-gap-analysis-magnus-smarason": {
-   "skill": "22-legal/icelandic-eea-gap-analysis-magnus-smarason",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/icelandic-labour-law-magnus-smarason": {
-   "skill": "22-legal/icelandic-labour-law-magnus-smarason",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/icelandic-legal-terminology-magnus-smarason": {
-   "skill": "22-legal/icelandic-legal-terminology-magnus-smarason",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/icelandic-privacy-review-magnus-smarason": {
-   "skill": "22-legal/icelandic-privacy-review-magnus-smarason",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "19-sales-gtm-startup/icon-system": {
    "skill": "19-sales-gtm-startup/icon-system",
    "sources": [
@@ -24054,15 +23153,6 @@
    "skill": "05-development/icpg",
    "sources": [
     "alinaqi/claude-bootstrap"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/icty-ictr-irmct-jeanne-sulzer": {
-   "skill": "22-legal/icty-ictr-irmct-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -26158,15 +25248,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/incident-reporting-navigator-ansvar-ai": {
-   "skill": "22-legal/incident-reporting-navigator-ansvar-ai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "11-product-management/incoming-request-advisor": {
    "skill": "11-product-management/incoming-request-advisor",
    "sources": [
@@ -26268,24 +25349,6 @@
    "skill": "18-finance-accounting/india-transfer-pricing",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/indian-dpdp-act-consent-notice-siddhi-kudalkar": {
-   "skill": "22-legal/indian-dpdp-act-consent-notice-siddhi-kudalkar",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/indian-foreign-investment-approval-assessment-siddhi-kudalkar": {
-   "skill": "22-legal/indian-foreign-investment-approval-assessment-siddhi-kudalkar",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -26664,15 +25727,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/international-criminal-court-jeanne-sulzer": {
-   "skill": "22-legal/international-criminal-court-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/international-incorporation": {
    "skill": "18-finance-accounting/international-incorporation",
    "sources": [
@@ -26746,15 +25800,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/investigacion-juridica-matias-gv-rojas-faundez": {
-   "skill": "22-legal/investigacion-juridica-matias-gv-rojas-faundez",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "17-cybersecurity-pack/investigating-insider-threat-indicators": {
    "skill": "17-cybersecurity-pack/investigating-insider-threat-indicators",
    "sources": [
@@ -26827,15 +25872,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/invoice-review-compliance-scott-margetts": {
-   "skill": "22-legal/invoice-review-compliance-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "16-ai-apis-media/ios-application-dev": {
    "skill": "16-ai-apis-media/ios-application-dev",
    "sources": [
@@ -26867,15 +25903,6 @@
    "skill": "18-finance-accounting/ip-patent-box-matrix",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/irac-prompt-builder-stephane-boghossian": {
-   "skill": "22-legal/irac-prompt-builder-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -26926,55 +25953,10 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/isds-research-cameron-russell": {
-   "skill": "22-legal/isds-research-cameron-russell",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/isle-of-man-vat": {
    "skill": "18-finance-accounting/isle-of-man-vat",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/ism-tanaji-hemant-naik": {
-   "skill": "22-legal/ism-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/iso27001-tanaji-hemant-naik": {
-   "skill": "22-legal/iso27001-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/iso27701-tanaji-hemant-naik": {
-   "skill": "22-legal/iso27701-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/iso42001-tanaji-hemant-naik": {
-   "skill": "22-legal/iso42001-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -27119,15 +26101,6 @@
    "skill": "18-finance-accounting/italy-vat-return",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/itar-tanaji-hemant-naik": {
-   "skill": "22-legal/itar-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -27901,15 +26874,6 @@
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
   },
-  "22-legal/judicial-first-impression-larissa-meredith-flister": {
-   "skill": "22-legal/judicial-first-impression-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "16-ai-apis-media/jules": {
    "skill": "16-ai-apis-media/jules",
    "sources": [
@@ -28236,15 +27200,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/kosovo-specialist-chambers-jeanne-sulzer": {
-   "skill": "22-legal/kosovo-specialist-chambers-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/kosovo-vat": {
    "skill": "18-finance-accounting/kosovo-vat",
    "sources": [
@@ -28339,15 +27294,6 @@
    "skill": "18-finance-accounting/ks-sales-tax",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/ktzr-polskie-umowy-gospodarcze-adam-piotrowski": {
-   "skill": "22-legal/ktzr-polskie-umowy-gospodarcze-adam-piotrowski",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -28858,15 +27804,6 @@
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
-  "22-legal/law-expertise-to-skill-adrian-lerer": {
-   "skill": "22-legal/law-expertise-to-skill-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "19-sales-gtm-startup/law-of-common-region": {
    "skill": "19-sales-gtm-startup/law-of-common-region",
    "sources": [
@@ -29039,123 +27976,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/legal-ai-model-router-stephane-boghossian": {
-   "skill": "22-legal/legal-ai-model-router-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-ai-simulator-patrick-munro": {
-   "skill": "22-legal/legal-ai-simulator-patrick-munro",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-analysis-forge-oliver-schmidt-prietz": {
-   "skill": "22-legal/legal-analysis-forge-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-design-assessment-mirza-chiragov": {
-   "skill": "22-legal/legal-design-assessment-mirza-chiragov",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-diagram-sam-zhai": {
-   "skill": "22-legal/legal-diagram-sam-zhai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-document-drafting-alessandro-dardano": {
-   "skill": "22-legal/legal-document-drafting-alessandro-dardano",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-guidance-vault-michael-cremata": {
-   "skill": "22-legal/legal-guidance-vault-michael-cremata",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-mdl-audit-adrian-lerer": {
-   "skill": "22-legal/legal-mdl-audit-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-risk-assessment-zacharie-laik": {
-   "skill": "22-legal/legal-risk-assessment-zacharie-laik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-risk-assessor-anthropic": {
-   "skill": "22-legal/legal-risk-assessor-anthropic",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-test-builder-patrick-munro": {
-   "skill": "22-legal/legal-test-builder-patrick-munro",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legal-transition-audit-adrian-lerer": {
-   "skill": "22-legal/legal-transition-audit-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/legitimate-interest-oliver-schmidt-prietz": {
-   "skill": "22-legal/legitimate-interest-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "12-security/let-fate-decide": {
    "skill": "12-security/let-fate-decide",
    "sources": [
@@ -29169,24 +27989,6 @@
    "skill": "14-testing-qa/lettuce-skill",
    "sources": [
     "LambdaTest/agent-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/lgpd-sentinel-rafael-mastronardi": {
-   "skill": "22-legal/lgpd-sentinel-rafael-mastronardi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/lgpd-tanaji-hemant-naik": {
-   "skill": "22-legal/lgpd-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -29495,24 +28297,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/litigacion-latam-joselyne-garcia-montesdeoca": {
-   "skill": "22-legal/litigacion-latam-joselyne-garcia-montesdeoca",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/litigation-deadline-calendar-dave-marcus": {
-   "skill": "22-legal/litigation-deadline-calendar-dave-marcus",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "03-marketing/live-dashboard": {
    "skill": "03-marketing/live-dashboard",
    "sources": [
@@ -29625,15 +28409,6 @@
    "skill": "05-development/local-action-verification",
    "sources": [],
    "method": "commit-note",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/local-counsel-manager-scott-margetts": {
-   "skill": "22-legal/local-counsel-manager-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
@@ -30361,24 +29136,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/mandarinat-christophe-quezel-ambrunaz": {
-   "skill": "22-legal/mandarinat-christophe-quezel-ambrunaz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/mandatory-verification-larissa-meredith-flister": {
-   "skill": "22-legal/mandatory-verification-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/manim-video": {
    "skill": "29-ecc/manim-video",
    "sources": [
@@ -30737,33 +29494,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/matter-allocation-instruction-scott-margetts": {
-   "skill": "22-legal/matter-allocation-instruction-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/matter-intake-scoping-scott-margetts": {
-   "skill": "22-legal/matter-intake-scoping-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/matter-plan-builder-scott-margetts": {
-   "skill": "22-legal/matter-plan-builder-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/mauritius-vat": {
    "skill": "18-finance-accounting/mauritius-vat",
    "sources": [
@@ -30937,15 +29667,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/mediation-dispute-analysis-jinzhe-tan": {
-   "skill": "22-legal/mediation-dispute-analysis-jinzhe-tan",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/medical-professional": {
    "skill": "18-finance-accounting/medical-professional",
    "sources": [
@@ -30968,15 +29689,6 @@
    "skill": "21-goose-agent/meeting-brief",
    "sources": [
     "gooseworks-ai/goose-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/meeting-briefing-preparator-anthropic": {
-   "skill": "22-legal/meeting-briefing-preparator-anthropic",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -31829,15 +30541,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/monitor-prawa-ue-i-polskiego-grzegorz-skuza": {
-   "skill": "22-legal/monitor-prawa-ue-i-polskiego-grzegorz-skuza",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "17-cybersecurity-pack/monitoring-darkweb-sources": {
    "skill": "17-cybersecurity-pack/monitoring-darkweb-sources",
    "sources": [
@@ -31860,15 +30563,6 @@
    "skill": "18-finance-accounting/montenegro-vat",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/morocco-ecommerce-compliance-audit-omar-laftouh": {
-   "skill": "22-legal/morocco-ecommerce-compliance-audit-omar-laftouh",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -32077,15 +30771,6 @@
    "method": "exact-name-match",
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
-  },
-  "22-legal/multi-jurisdictional-research-zacharie-laik": {
-   "skill": "22-legal/multi-jurisdictional-research-zacharie-laik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "21-goose-agent/multi-platform-search-searchapi": {
    "skill": "21-goose-agent/multi-platform-search-searchapi",
@@ -32539,24 +31224,6 @@
    "skill": "18-finance-accounting/nd-sales-tax",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nda-reviewer-anthropic": {
-   "skill": "22-legal/nda-reviewer-anthropic",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nda-reviewer-jamie-tso": {
-   "skill": "22-legal/nda-reviewer-jamie-tso",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -33373,15 +32040,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/new-sanctions-designation-screening-test-amir-fadavi": {
-   "skill": "22-legal/new-sanctions-designation-screening-test-amir-fadavi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "13-cloud-deploy/new-terraform-provider": {
    "skill": "13-cloud-deploy/new-terraform-provider",
    "sources": [
@@ -33643,69 +32301,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/nil-contract-reviewer-samir-patel": {
-   "skill": "22-legal/nil-contract-reviewer-samir-patel",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nis2-navigator-oliver-schmidt-prietz": {
-   "skill": "22-legal/nis2-navigator-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nis2-tanaji-hemant-naik": {
-   "skill": "22-legal/nis2-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nist-800-53-tanaji-hemant-naik": {
-   "skill": "22-legal/nist-800-53-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nist-ai-rmf-rafal-fryc": {
-   "skill": "22-legal/nist-ai-rmf-rafal-fryc",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nist-ai-rmf-tanaji-hemant-naik": {
-   "skill": "22-legal/nist-ai-rmf-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nist-csf-tanaji-hemant-naik": {
-   "skill": "22-legal/nist-csf-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/nj-income-tax": {
    "skill": "18-finance-accounting/nj-income-tax",
    "sources": [
@@ -33904,15 +32499,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/normalisation-juridique-christophe-quezel-ambrunaz": {
-   "skill": "22-legal/normalisation-juridique-christophe-quezel-ambrunaz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/north-macedonia-vat": {
    "skill": "18-finance-accounting/north-macedonia-vat",
    "sources": [
@@ -33972,15 +32558,6 @@
     "nowork-studio/NotFair"
    ],
    "method": "exact-name-match"
-  },
-  "22-legal/notification-licenciement-selim-brihi": {
-   "skill": "22-legal/notification-licenciement-selim-brihi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "03-marketing/notifications-and-recovery": {
    "skill": "03-marketing/notifications-and-recovery",
@@ -34076,15 +32653,6 @@
    "skill": "14-testing-qa/nunit-skill",
    "sources": [
     "LambdaTest/agent-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nuremberg-tokyo-tribunals-jeanne-sulzer": {
-   "skill": "22-legal/nuremberg-tokyo-tribunals-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -34303,15 +32871,6 @@
    "skill": "18-finance-accounting/nz-provisional-tax",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/nzism-tanaji-hemant-naik": {
-   "skill": "22-legal/nzism-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -34778,15 +33337,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/opposing-counsel-review-larissa-meredith-flister": {
-   "skill": "22-legal/opposing-counsel-review-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "08-context-engineering/optim-agent": {
    "skill": "08-context-engineering/optim-agent",
    "sources": [
@@ -34809,15 +33359,6 @@
    "skill": "18-finance-accounting/or-income-tax",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/oral-argument-stephane-boghossian": {
-   "skill": "22-legal/oral-argument-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -34932,15 +33473,6 @@
    "added_in": "df74a162",
    "import_note": "Stripe / Better Auth / Sentry / Resend / Notion / Firecrawl / Typefully packs"
   },
-  "22-legal/originality-in-european-copyright-joris-deene": {
-   "skill": "22-legal/originality-in-european-copyright-joris-deene",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "19-sales-gtm-startup/orphan-pages-internal-linking-opportunities": {
    "skill": "19-sales-gtm-startup/orphan-pages-internal-linking-opportunities",
    "sources": [
@@ -34984,15 +33516,6 @@
    ],
    "method": "exact-name-match"
   },
-  "22-legal/outlook-malik-taiar": {
-   "skill": "22-legal/outlook-malik-taiar",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "02-design-ui/output-skill": {
    "skill": "02-design-ui/output-skill",
    "sources": [
@@ -35015,15 +33538,6 @@
    "skill": "19-sales-gtm-startup/outreach-specialist",
    "sources": [
     "ognjengt/founder-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/outside-counsel-billing-and-performance-reviewer-carl-ditzler": {
-   "skill": "22-legal/outside-counsel-billing-and-performance-reviewer-carl-ditzler",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -35229,24 +33743,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/panel-design-selection-scott-margetts": {
-   "skill": "22-legal/panel-design-selection-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/panel-review-rationalisation-scott-margetts": {
-   "skill": "22-legal/panel-review-rationalisation-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/paraguay-iva": {
    "skill": "18-finance-accounting/paraguay-iva",
    "sources": [
@@ -35337,15 +33833,6 @@
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
   },
-  "22-legal/pci-compliance-tanaji-hemant-naik": {
-   "skill": "22-legal/pci-compliance-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "06-documents/pdf": {
    "skill": "06-documents/pdf",
    "sources": [
@@ -35384,15 +33871,6 @@
     "yusufkaraaslan/Skill_Seekers"
    ],
    "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/pdf-editor-openai": {
-   "skill": "22-legal/pdf-editor-openai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
@@ -35515,15 +33993,6 @@
    "skill": "03-marketing/performance-report",
    "sources": [
     "indranilbanerjee/digital-marketing-pro"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/performance-scorecard-scott-margetts": {
-   "skill": "22-legal/performance-scorecard-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -37212,15 +35681,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/persuasive-legal-writing-larissa-meredith-flister": {
-   "skill": "22-legal/persuasive-legal-writing-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/peru-igv": {
    "skill": "18-finance-accounting/peru-igv",
    "sources": [
@@ -37772,15 +36232,6 @@
    "skill": "03-marketing/platform-norm-profiler",
    "sources": [
     "aaron-he-zhu/aaron-marketing-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/playbook-reviewer-anthropic": {
-   "skill": "22-legal/playbook-reviewer-anthropic",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -38406,15 +36857,6 @@
    "added_in": "ed39c631",
    "import_note": "Add 11-product-management: Dean Peters + Pawel Huryn PM packs (67 skills)"
   },
-  "22-legal/pre-motion-andrew-bird": {
-   "skill": "22-legal/pre-motion-andrew-bird",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "21-goose-agent/prediction-market-odds": {
    "skill": "21-goose-agent/prediction-market-odds",
    "sources": [
@@ -38635,28 +37077,10 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/privacy-compliance-advisor-anthropic": {
-   "skill": "22-legal/privacy-compliance-advisor-anthropic",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "05-development/privacy-guard": {
    "skill": "05-development/privacy-guard",
    "sources": [
     "fvadicamo/dev-agent-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/privacy-notice-generator-oliver-schmidt-prietz": {
-   "skill": "22-legal/privacy-notice-generator-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -38670,33 +37094,6 @@
    "method": "exact-name-match",
    "added_in": "ed39c631",
    "import_note": "Add 11-product-management: Dean Peters + Pawel Huryn PM packs (67 skills)"
-  },
-  "22-legal/privacy-policy-generator-malik-taiar": {
-   "skill": "22-legal/privacy-policy-generator-malik-taiar",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/privacy-policy-stephane-boghossian": {
-   "skill": "22-legal/privacy-policy-stephane-boghossian",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/privilege-sentinel-emily-cabrera": {
-   "skill": "22-legal/privilege-sentinel-emily-cabrera",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "11-product-management/problem-framing-canvas": {
    "skill": "11-product-management/problem-framing-canvas",
@@ -39138,15 +37535,6 @@
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
   },
-  "22-legal/proposition-audit-anthony-searle": {
-   "skill": "22-legal/proposition-audit-anthony-searle",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "03-marketing/prospecting": {
    "skill": "03-marketing/prospecting",
    "sources": [
@@ -39454,15 +37842,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/qcm-generateur-christophe-quezel-ambrunaz": {
-   "skill": "22-legal/qcm-generateur-christophe-quezel-ambrunaz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "25-data-databases/qdrant-advisor": {
    "skill": "25-data-databases/qdrant-advisor",
    "sources": [
@@ -39744,15 +38123,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/raisonnement-juridique-amaury-fouret": {
-   "skill": "22-legal/raisonnement-juridique-amaury-fouret",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/ralphinho-rfc-pipeline": {
    "skill": "29-ecc/ralphinho-rfc-pipeline",
    "sources": [
@@ -40023,33 +38393,6 @@
     "GanyuanRan/Aegis"
    ],
    "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/recherche-doctrine-allison-fiorentino": {
-   "skill": "22-legal/recherche-doctrine-allison-fiorentino",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/recherche-jurisprudence-allison-fiorentino": {
-   "skill": "22-legal/recherche-jurisprudence-allison-fiorentino",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/recherche-theses-allison-fiorentino": {
-   "skill": "22-legal/recherche-theses-allison-fiorentino",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
@@ -40485,15 +38828,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/red-team-verifier-patrick-munro": {
-   "skill": "22-legal/red-team-verifier-patrick-munro",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "17-cybersecurity-pack/red-teaming-llms-with-garak": {
    "skill": "17-cybersecurity-pack/red-teaming-llms-with-garak",
    "sources": [
@@ -40843,24 +39177,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/regulatory-deal-card-generator-patrick-munro": {
-   "skill": "22-legal/regulatory-deal-card-generator-patrick-munro",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/regulatory-threat-model-ansvar-ai": {
-   "skill": "22-legal/regulatory-threat-model-ansvar-ai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "28-career-education-health/rehabilitation-analyzer": {
    "skill": "28-career-education-health/rehabilitation-analyzer",
    "sources": [
@@ -40910,15 +39226,6 @@
    "skill": "06-documents/release-versioning",
    "sources": [
     "kreuzberg-dev/kreuzberg"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/relecteur-christophe-quezel-ambrunaz": {
-   "skill": "22-legal/relecteur-christophe-quezel-ambrunaz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -41495,15 +39802,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/requete-cph-licenciement-faute-grave-selim-brihi": {
-   "skill": "22-legal/requete-cph-licenciement-faute-grave-selim-brihi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "05-development/research": {
    "skill": "05-development/research",
    "sources": [
@@ -41681,15 +39979,6 @@
    "skill": "05-development/resolving-merge-conflicts",
    "sources": [
     "mattpocock/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/resource-planner-scott-margetts": {
-   "skill": "22-legal/resource-planner-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -42011,15 +40300,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/rfp-pitch-management-scott-margetts": {
-   "skill": "22-legal/rfp-pitch-management-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/ri-income-tax": {
    "skill": "18-finance-accounting/ri-income-tax",
    "sources": [
@@ -42033,24 +40313,6 @@
    "skill": "18-finance-accounting/ri-sales-tax",
    "sources": [
     "openaccountants/openaccountants"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/ricerca-giuridica-it-silvio-mistretta": {
-   "skill": "22-legal/ricerca-giuridica-it-silvio-mistretta",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/risk-and-issues-manager-scott-margetts": {
-   "skill": "22-legal/risk-and-issues-manager-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -42390,15 +40652,6 @@
    "added_in": "dce3ac32",
    "import_note": "OpenAI / Gemini / Replicate / fal.ai packs"
   },
-  "22-legal/runtime-admissibility-review-arkadiy-miteiko": {
-   "skill": "22-legal/runtime-admissibility-review-arkadiy-miteiko",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/russia-vat": {
    "skill": "18-finance-accounting/russia-vat",
    "sources": [
@@ -42594,15 +40847,6 @@
    "skill": "21-goose-agent/sales-prospecting",
    "sources": [
     "gooseworks-ai/goose-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/sanctions-and-export-analysis-gillan-saleh": {
-   "skill": "22-legal/sanctions-and-export-analysis-gillan-saleh",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -42886,28 +41130,10 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/scope-change-controller-scott-margetts": {
-   "skill": "22-legal/scope-change-controller-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "25-data-databases/score-eval": {
    "skill": "25-data-databases/score-eval",
    "sources": [
     "neondatabase/agent-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/screening-alert-adjudication-amir-fadavi": {
-   "skill": "22-legal/screening-alert-adjudication-amir-fadavi",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -43068,15 +41294,6 @@
    "sources": [
     "awrshift/claude-memory-kit",
     "trailofbits/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/section-508-tanaji-hemant-naik": {
-   "skill": "22-legal/section-508-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -44512,15 +42729,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/serious-incident-reporting-eu-ai-act-art-73-werner-plutat": {
-   "skill": "22-legal/serious-incident-reporting-eu-ai-act-art-73-werner-plutat",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "03-marketing/serp-analysis": {
    "skill": "03-marketing/serp-analysis",
    "sources": [
@@ -44570,24 +42778,6 @@
    "skill": "16-ai-apis-media/session-start",
    "sources": [
     "bitwize-music-studio/claude-ai-music-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/settlement-agreement-review-andrew-bird": {
-   "skill": "22-legal/settlement-agreement-review-andrew-bird",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/settlement-pressure-tester-larissa-meredith-flister": {
-   "skill": "22-legal/settlement-pressure-tester-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -45042,15 +43232,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/skill-creation-openai": {
-   "skill": "22-legal/skill-creation-openai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "09-anthropic-tools/skill-creator": {
    "skill": "09-anthropic-tools/skill-creator",
    "sources": [
@@ -45130,28 +43311,10 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/skill-improvement-malik-taiar": {
-   "skill": "22-legal/skill-improvement-malik-taiar",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "12-security/skill-improver": {
    "skill": "12-security/skill-improver",
    "sources": [
     "trailofbits/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/skill-injection-defense-adrian-lerer": {
-   "skill": "22-legal/skill-injection-defense-adrian-lerer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -45220,15 +43383,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "22-legal/skill-security-auditor-lawve": {
-   "skill": "22-legal/skill-security-auditor-lawve",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "08-context-engineering/skill-seekers": {
    "skill": "08-context-engineering/skill-seekers",
@@ -45406,15 +43560,6 @@
    "skill": "05-development/snipgrapher",
    "sources": [
     "mcollina/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/soc2-tanaji-hemant-naik": {
-   "skill": "22-legal/soc2-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -45662,15 +43807,6 @@
    ],
    "method": "exact-name-match"
   },
-  "22-legal/source-locked-verification-larissa-meredith-flister": {
-   "skill": "22-legal/source-locked-verification-larissa-meredith-flister",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/south-africa-transfer-pricing": {
    "skill": "18-finance-accounting/south-africa-transfer-pricing",
    "sources": [
@@ -45873,42 +44009,6 @@
    "skill": "14-testing-qa/specflow-skill",
    "sources": [
     "LambdaTest/agent-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/special-court-for-sierra-leone-jeanne-sulzer": {
-   "skill": "22-legal/special-court-for-sierra-leone-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/special-jurisdiction-for-peace-jeanne-sulzer": {
-   "skill": "22-legal/special-jurisdiction-for-peace-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/special-panels-timor-leste-jeanne-sulzer": {
-   "skill": "22-legal/special-panels-timor-leste-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/special-tribunal-for-lebanon-jeanne-sulzer": {
-   "skill": "22-legal/special-tribunal-for-lebanon-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -46141,15 +44241,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/stakeholder-comms-planner-scott-margetts": {
-   "skill": "22-legal/stakeholder-comms-planner-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "11-product-management/stakeholder-engagement-advisor": {
    "skill": "11-product-management/stakeholder-engagement-advisor",
    "sources": [
@@ -46237,33 +44328,6 @@
    "skill": "03-marketing/status-colors-and-errors",
    "sources": [
     "dembrandt/dembrandt-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/status-report-drafter-scott-margetts": {
-   "skill": "22-legal/status-report-drafter-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/statute-analyzer-rafal-fryc": {
-   "skill": "22-legal/statute-analyzer-rafal-fryc",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/statute-briefer-seth-chandler": {
-   "skill": "22-legal/statute-briefer-seth-chandler",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -47145,15 +45209,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/sujet-crfpa-allison-fiorentino": {
-   "skill": "22-legal/sujet-crfpa-allison-fiorentino",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "11-product-management/summarize-interview": {
    "skill": "11-product-management/summarize-interview",
    "sources": [
@@ -47268,15 +45323,6 @@
    "skill": "19-sales-gtm-startup/survey-design",
    "sources": [
     "infrasity-labs/dev-gtm-claude-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/sustainable-opposing-counsel-review-seth-chandler": {
-   "skill": "22-legal/sustainable-opposing-counsel-review-seth-chandler",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -47399,15 +45445,6 @@
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
   },
-  "22-legal/swift-csp-tanaji-hemant-naik": {
-   "skill": "22-legal/swift-csp-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "26-mobile-apple/swift-library-design": {
    "skill": "26-mobile-apple/swift-library-design",
    "sources": [
@@ -47475,15 +45512,6 @@
    "skill": "26-mobile-apple/swiftui-wcag-accessibility-auditor",
    "sources": [
     "ramzesenok/iOS-Accessibility-Audit-Skill"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/swiss-legal-source-and-authority-triage-enrique-g-zbinden": {
-   "skill": "22-legal/swiss-legal-source-and-authority-triage-enrique-g-zbinden",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -47575,15 +45603,6 @@
    "skill": "03-marketing/tab-navigation",
    "sources": [
     "dembrandt/dembrandt-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/tabular-review-antoine-louis": {
-   "skill": "22-legal/tabular-review-antoine-louis",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -48350,24 +46369,6 @@
    "skill": "23-microsoft/teams-app-developer",
    "sources": [
     "microsoft/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/tech-contract-negotiator-patrick-munro": {
-   "skill": "22-legal/tech-contract-negotiator-patrick-munro",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/tech-contract-review-parth-desai": {
-   "skill": "22-legal/tech-contract-review-parth-desai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -49259,15 +47260,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/timeline-generator-scott-margetts": {
-   "skill": "22-legal/timeline-generator-scott-margetts",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "25-data-databases/tinybird-best-practices": {
    "skill": "25-data-databases/tinybird-best-practices",
    "sources": [
@@ -49394,15 +47386,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/trademark-search-robb-miller": {
-   "skill": "22-legal/trademark-search-robb-miller",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "27-web3-crypto/trading-signal": {
    "skill": "27-web3-crypto/trading-signal",
    "sources": [
@@ -49498,15 +47481,6 @@
    "skill": "19-sales-gtm-startup/transcribe-video",
    "sources": [
     "rameerez/claude-code-startup-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/transfer-impact-assessment-tia-oliver-schmidt-prietz": {
-   "skill": "22-legal/transfer-impact-assessment-tia-oliver-schmidt-prietz",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -49768,15 +47742,6 @@
    "skill": "14-testing-qa/trustpilot-reviews",
    "sources": [
     "browser-act/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/tsa-compliance-tanaji-hemant-naik": {
-   "skill": "22-legal/tsa-compliance-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -50585,15 +48550,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/unfair-dismissal-screener-andrew-bird": {
-   "skill": "22-legal/unfair-dismissal-screener-andrew-bird",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "29-ecc/unified-memory": {
    "skill": "29-ecc/unified-memory",
    "sources": [
@@ -50625,15 +48581,6 @@
    "skill": "26-mobile-apple/unix-cli-best-practices",
    "sources": [
     "flutter/skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/unmik-regulation-64-panels-jeanne-sulzer": {
-   "skill": "22-legal/unmik-regulation-64-panels-jeanne-sulzer",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -51440,15 +49387,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/vendor-due-diligence-patrick-munro": {
-   "skill": "22-legal/vendor-due-diligence-patrick-munro",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/venezuela-iva": {
    "skill": "18-finance-accounting/venezuela-iva",
    "sources": [
@@ -52077,15 +50015,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/vn-pdpl-tanaji-hemant-naik": {
-   "skill": "22-legal/vn-pdpl-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "16-ai-apis-media/voice-checker": {
    "skill": "16-ai-apis-media/voice-checker",
    "sources": [
@@ -52171,15 +50100,6 @@
    "skill": "11-product-management/vp-cpo-readiness-advisor",
    "sources": [
     "deanpeters/Product-Manager-Skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/vs-code-extension-antoine-louis": {
-   "skill": "22-legal/vs-code-extension-antoine-louis",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -52477,15 +50397,6 @@
    "skill": "03-marketing/wcag-accessibility",
    "sources": [
     "dembrandt/dembrandt-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/wcag-tanaji-hemant-naik": {
-   "skill": "22-legal/wcag-tanaji-hemant-naik",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -52925,15 +50836,6 @@
    ],
    "method": "exact-name-match"
   },
-  "22-legal/whistleblower-policy-advisor-malik-taiar": {
-   "skill": "22-legal/whistleblower-policy-advisor-malik-taiar",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "08-context-engineering/why": {
    "skill": "08-context-engineering/why",
    "sources": [
@@ -53123,15 +51025,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "22-legal/without-prejudice-drafter-andrew-bird": {
-   "skill": "22-legal/without-prejudice-drafter-andrew-bird",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "05-development/wizard": {
    "skill": "05-development/wizard",
    "sources": [
@@ -53163,33 +51056,6 @@
    "skill": "08-context-engineering/word",
    "sources": [
     "yusufkaraaslan/Skill_Seekers"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/word-editor-antoine-louis": {
-   "skill": "22-legal/word-editor-antoine-louis",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/word-editor-openai": {
-   "skill": "22-legal/word-editor-openai",
-   "sources": [
-    "lawvable/awesome-legal-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/word-editor-superdoc": {
-   "skill": "22-legal/word-editor-superdoc",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -53873,15 +51739,6 @@
    "skill": "21-goose-agent/yc-batch-evaluator",
    "sources": [
     "gooseworks-ai/goose-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "22-legal/yc-saas-drafter-victor-wang": {
-   "skill": "22-legal/yc-saas-drafter-victor-wang",
-   "sources": [
-    "lawvable/awesome-legal-skills"
    ],
    "method": "exact-name-match",
    "added_in": "e7e832a4",
@@ -55823,15 +53680,6 @@
   },
   "15-integrations/hermes-tweet": {
    "skill": "15-integrations/hermes-tweet",
-   "sources": [
-    "wshobson/agents"
-   ],
-   "method": "direct-import",
-   "added_in": "2026-08-20",
-   "import_note": "daily maintenance 2026-08-20: wshobson/agents plugin skills, full package per skill"
-  },
-  "22-legal/employment-contract-templates": {
-   "skill": "22-legal/employment-contract-templates",
    "sources": [
     "wshobson/agents"
    ],

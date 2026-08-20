@@ -1,1 +1,0 @@
-Use this skill when asked about forming, registering, or structuring a company in Iceland. Triggers on questions about Icelandic business entities (ehf, hf, sf, svf, ses), capital requirements, registration with Fyrirtækjaskrá, governance structures, or choosing the right entity type.

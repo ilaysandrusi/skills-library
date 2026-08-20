@@ -1,1 +1,0 @@
-Perform language and framework specific security best-practice reviews and suggest improvements. Covers Python, JavaScript/TypeScript, and Go. Use when the user requests security best practices guidance, a security review or report, or secure-by-default coding help.

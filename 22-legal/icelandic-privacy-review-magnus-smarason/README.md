@@ -1,1 +1,0 @@
-Use this skill when asked to review data protection or privacy compliance under Icelandic law and GDPR. Triggers on requests involving personal data processing, privacy policies, DPIA assessments, kennitala handling, Persónuvernd filings, or cross-border data transfers from Iceland.

@@ -1,1 +1,0 @@
-Searches, replaces, and reads text in Word documents from the command line. Use when the user asks to edit, search, or extract text from .docx files.

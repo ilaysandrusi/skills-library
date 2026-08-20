@@ -1,1 +1,0 @@
-Guide for drafting privacy policies compliant with GDPR. Includes CNIL 2020 recommendations, a reference template, and best practices. Use when drafting or revising a privacy policy for a website or application.

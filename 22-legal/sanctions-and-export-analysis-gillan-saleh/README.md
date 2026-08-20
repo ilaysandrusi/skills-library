@@ -1,1 +1,0 @@
-Real-time individual screening across 30+ official lists (UN, EU, OFAC, OFSI, French DGT...), sectoral analysis, dual-use goods (EU Reg. 2021/821), US/China extraterritorial regimes (EAR, ITAR, FDPR, ECL), USD/SWIFT risk and jurisdictional mapping across 30+ countries.

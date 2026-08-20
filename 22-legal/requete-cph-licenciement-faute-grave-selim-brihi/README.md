@@ -1,1 +1,0 @@
-Guide for drafting petitions to the French Labor Court (Conseil de prud'hommes) to contest a dismissal for gross misconduct and request reclassification as unfair dismissal. Use when an employee wants to challenge their termination for alleged gross misconduct before the CPH.
