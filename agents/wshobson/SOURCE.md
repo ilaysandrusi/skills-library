@@ -3,8 +3,9 @@
 - Repository: https://github.com/wshobson/agents
 - Upstream path(s): `plugins/*/agents/`
 - Commit pinned at import: `d6837ae274c2cd817acad3fb98f193a4390a4c3e` (branch `main`)
+- Commit of the 2026-08-20 top-up: `367cb6a4a182cf7e9b0a17c9429f7411ddd9cf35`
 - License: MIT
-- Files here: 142
+- Files here: 146
 
 The largest sub-agent collection in the library: language specialists (`python-pro`,
 `rust-pro`, `golang-pro`, `typescript-pro`, `java-pro`, `elixir-pro`, `haskell-pro`,
@@ -30,10 +31,17 @@ the filename so the two never disagree. That is the only content change. The six
 `ship-mate` pipeline agents were prefixed because bare `architect`, `implement`, `qa`,
 `review`, `orchestrate` and `playwright` mean nothing outside that pipeline.
 
+## Added 2026-08-20
+
+`quant-analyst`, `risk-manager`, `hr-pro` and `legal-advisor`. The first import left
+them out as off-topic, but their plugins' skills are now archived here under
+`18-finance-accounting` and `22-legal`/`12-security`, and both categories already carry
+several hundred skills each. `legal-advisor` in particular is software work: privacy
+policies, ToS, cookie consent and DPAs for a product. Leaving the matching agents
+behind would have made those imports half-packages.
+
 ## Not imported
 
-- `quantitative-trading` (`quant-analyst`, `risk-manager`) and `hr-legal-compliance`
-  (`hr-pro`, `legal-advisor`) — outside this library's scope.
 - `protect-mcp` and `review-agent-governance` — their hooks run
   `npx protect-mcp@0.7.4` on every `PreToolUse` and `PostToolUse` event. Fetching and
   executing a third-party package on every single tool call is not something to ship by

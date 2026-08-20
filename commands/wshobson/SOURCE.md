@@ -21,6 +21,8 @@ stored once under the bare command name, and a differing same-named command keep
 plugin prefix. Commands whose bare name carries no meaning outside their workflow were
 prefixed (`conductor-*`, `plugin-eval-*`, `ship-mate-*`, `meigen-*`, `team-issue`).
 
-Not imported: the `quantitative-trading` and `hr-legal-compliance` plugins (out of
-scope), and `protect-mcp` / `review-agent-governance`, whose hooks run
+Not imported: `protect-mcp` and `review-agent-governance`, whose hooks run
 `npx protect-mcp@0.7.4` on every tool call.
+
+The `quantitative-trading` and `hr-legal-compliance` plugins ship no commands at all —
+only agents and skills, both of which are archived here as of 2026-08-20.
