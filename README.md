@@ -102,3 +102,12 @@ README ראשי ו-`SOURCES.json`). הקובץ מקבל רשימת `{"category",
 python3 tools/index-skills.py new-skills.json \
   --source owner/repo --note "daily maintenance" --check
 ```
+
+הוצאת סקילים משירות — מוחקת את התיקייה ומסירה אותה מאותם אינדקסים. גם כאן שורות שנשארות
+מועתקות כמו שהן. הסרה של יותר מ-10 סקילים בריצה אחת חסומה בכוונה ודורשת
+`--allow-mass-removal`, כדי שניקוי המוני לא יקרה בטעות:
+
+```bash
+python3 tools/remove-skills.py retire.json \
+  --reason "test fixtures, not real skills" --check
+```
