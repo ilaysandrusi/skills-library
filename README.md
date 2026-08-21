@@ -111,3 +111,13 @@ python3 tools/index-skills.py new-skills.json \
 python3 tools/remove-skills.py retire.json \
   --reason "test fixtures, not real skills" --check
 ```
+
+בדיקה מול המקור: משווה כל קובץ בכל סקיל של ריפו מסוים ל-upstream לפי git blob SHA. התאמה
+מלאה אומרת שהעותק המקומי הוא בדיוק אותו commit, ולכן אפשר לרשום אותו כ-baseline אמין. מצב
+הבדיקות האחרון, כולל commit מאומת לכל מקור ותור לבדיקה ידנית, נשמר ב-
+[`UPDATE_CHECKS.json`](./UPDATE_CHECKS.json):
+
+```bash
+python3 tools/check-upstream.py anthropics/skills
+python3 tools/check-upstream.py trailofbits/skills --json
+```
