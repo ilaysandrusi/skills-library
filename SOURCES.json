@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6089,
- "traced_to_source_repo": 6075,
- "distinct_source_repos": 222,
+ "skills": 6090,
+ "traced_to_source_repo": 6076,
+ "distinct_source_repos": 223,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -182,6 +182,7 @@
   "Kevin7Qi/codex-collab": 1,
   "NotMyself/claude-win11-speckit-update-skill": 1,
   "Optim-Agent/optim-agent": 1,
+  "OthmanAdi/planning-with-files": 1,
   "Panniantong/Agent-Reach": 1,
   "PleasePrompto/notebooklm-skill": 1,
   "Ryan-yang125/motion-lexicon": 1,
@@ -55171,6 +55172,15 @@
    "method": "direct-import",
    "added_in": "2026-08-20",
    "import_note": "daily maintenance 2026-08-20: turbo claude-edition dev process pack, 9 slugs prefixed to avoid collisions"
+  },
+  "08-context-engineering/planning-with-files": {
+   "skill": "08-context-engineering/planning-with-files",
+   "sources": [
+    "OthmanAdi/planning-with-files"
+   ],
+   "method": "direct-import",
+   "added_in": "84eb74c4b0cda85af1dc86ee883917f7b325eee5",
+   "import_note": "daily maintenance discovery 2026-08-21"
   }
  }
 }

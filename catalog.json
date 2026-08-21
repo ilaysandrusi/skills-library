@@ -1,5 +1,5 @@
 {
- "total": 6089,
+ "total": 6090,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -6022,6 +6022,10 @@
     {
      "name": "plan-task",
      "description": "Refine, parallelize, and verify a draft task specification into a fully planned implementation-ready task"
+    },
+    {
+     "name": "planning-with-files",
+     "description": "Manus-style persistent file-based planning for AI coding agents: keeps task_plan.md, findings.md, and progress.md on disk so work survives context loss and /clear. Use when asked to plan out, break down, or organize a multi-step project, research task, or any work requiring 5+ tool calls. Supports automatic session recovery after /clear."
     },
     {
      "name": "pptx--yusufkaraaslan",

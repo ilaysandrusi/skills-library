@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6089
+**סה״כ סקילים:** 6090
 
 ## איך ללמוד
 
@@ -56,7 +56,7 @@
 | [פיתוח ודיבאג](./05-development/) | 565 | Superpowers, בדיקות, תוכניות עבודה |
 | [מסמכים](./06-documents/) | 40 | PDF, Word, PowerPoint, Excel |
 | [Supabase / Postgres](./07-supabase/) | 4 | עבודה עם מסדי נתונים של Supabase |
-| [Context Engineering](./08-context-engineering/) | 170 | ניהול קונטקסט, סוכני משנה, חשיבה |
+| [Context Engineering](./08-context-engineering/) | 171 | ניהול קונטקסט, סוכני משנה, חשיבה |
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 5 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 149 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |

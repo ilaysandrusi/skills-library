@@ -2,7 +2,7 @@
 
 ניהול קונטקסט, סוכני משנה, חשיבה
 
-**מספר סקילים:** 170
+**מספר סקילים:** 171
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -119,6 +119,7 @@
 | [`pitch-packager`](./pitch-packager/SKILL.md) | Package a finished piece of work (spec, prototype, implementation notes) into a single document that gets reviewers to understanding and approval fast. Use when the user needs buy-in, a review, or a shareable summary of what was built and why. |
 | [`plan-do-check-act`](./plan-do-check-act/SKILL.md) | Iterative PDCA cycle for systematic experimentation and continuous improvement |
 | [`plan-task`](./plan-task/SKILL.md) | Refine, parallelize, and verify a draft task specification into a fully planned implementation-ready task |
+| [`planning-with-files`](./planning-with-files/SKILL.md) | Manus-style persistent file-based planning for AI coding agents: keeps task_plan.md, findings.md, and progress.md on disk so work survives context loss and /clear. Use when asked to plan out, break down, or organize a multi-step project, research task, or any work requiring 5+ tool calls. Supports… |
 | [`pptx--yusufkaraaslan`](./pptx--yusufkaraaslan/SKILL.md) | Use when testing the pptx golden build |
 | [`pptx_kw`](./pptx_kw/SKILL.md) | Use when testing keyword categorization |
 | [`progressive-disclosure`](./progressive-disclosure/SKILL.md) | Split an oversized skill, CLAUDE.md, or spec into an entry file plus files that load only when they're needed. |
