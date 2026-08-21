@@ -40,6 +40,15 @@ several hundred skills each. `legal-advisor` in particular is software work: pri
 policies, ToS, cookie consent and DPAs for a product. Leaving the matching agents
 behind would have made those imports half-packages.
 
+**Update 2026-08-21.** The `22-legal` category was dropped from the library in `7412a40f`,
+which took `22-legal/employment-contract-templates` — the one skill this repo contributed
+there — with it. `12-security/pci-compliance` is the surviving half of that pairing. All
+four agents were kept: `quant-analyst` and `risk-manager` still match the
+`18-finance-accounting` skills, and `legal-advisor` still covers the product-legal work
+named above, which is why it was taken in the first place. `hr-pro` is now the one agent
+here with no matching skill in the library; it is left in place pending review rather than
+removed on the strength of a category deletion it was not part of.
+
 ## Not imported
 
 - `protect-mcp` and `review-agent-governance` — their hooks run
