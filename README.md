@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6094
+**סה״כ סקילים:** 6089
 
 ## איך ללמוד
 
@@ -60,7 +60,7 @@
 | [כלי Anthropic נוספים](./09-anthropic-tools/) | 5 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 149 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |
-| [אבטחה וביקורת קוד](./12-security/) | 162 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
+| [אבטחה וביקורת קוד](./12-security/) | 157 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
 | [ענן ופריסה](./13-cloud-deploy/) | 171 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
 | [בדיקות ואוטומציה](./14-testing-qa/) | 204 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
 | [אינטגרציות ושירותים](./15-integrations/) | 256 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
