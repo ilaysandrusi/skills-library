@@ -16,80 +16,81 @@
    }
   },
   "huggingface/skills": {
-   "last_checked": "2026-08-21",
-   "verified_commit": "020194918dc4a27d5a5d9a154b6b56cc2bd21364",
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-18",
    "license": "Apache-2.0",
    "local_skills": 26,
    "result": {
-    "no-upstream-path": 2,
+    "unmatched-candidate": 2,
     "identical": 24
    },
-   "note": "train-sentence-transformers was brought up to this commit during the 2026-08-21 run. The rest match HEAD."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "flutter/skills": {
-   "last_checked": "2026-08-21",
-   "verified_commit": "1e5696a2e986345f7ecc92842b5e9293bc079d6f",
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-21",
    "license": "BSD-3-Clause",
    "local_skills": 38,
    "result": {
-    "no-upstream-path": 2,
+    "unmatched-candidate": 2,
     "identical": 36
    },
-   "note": "dart-skills-lint-validation was brought up to this commit during the 2026-08-21 run. The rest match HEAD."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "getsentry/skills": {
-   "last_checked": "2026-08-21",
-   "verified_commit": "6abccd60c704f669423d6a06ff0809fa39513ce8",
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-19",
    "license": "Apache-2.0",
    "local_skills": 40,
    "result": {
-    "no-upstream-path": 14,
-    "identical": 26
+    "unmatched-candidate": 7,
+    "identical": 26,
+    "no-upstream-path": 7
    },
-   "note": "All resolvable packages match HEAD. Nothing to apply."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "openai/skills": {
-   "last_checked": "2026-08-21",
-   "verified_commit": "49f948faa9258a0c61caceaf225e179651397431",
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-07-14",
    "license": null,
    "local_skills": 54,
    "result": {
-    "no-upstream-path": 6,
+    "unmatched-candidate": 6,
     "drift": 2,
     "identical": 44,
     "upstream-added-files": 2
    },
-   "note": "Two figma skills have drifted, and linear plus notion-knowledge-capture are missing upstream asset files. Both asset gaps sit inside the --openai duplicate cluster listed under review_queue, so they are held until that is resolved rather than patched twice."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "trailofbits/skills": {
-   "last_checked": "2026-08-21",
-   "verified_commit": "7be90d6e55e6b5e1607b519e97d0019b32b2656a",
-   "upstream_pushed_at": "2026-08-20",
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
    "license": "CC-BY-SA-4.0",
    "local_skills": 78,
    "result": {
     "identical": 24,
-    "no-upstream-path": 16,
+    "unmatched-candidate": 16,
     "drift": 38
    },
-   "note": "38 of 78 packages have drifted. Over the 10-resource automatic-update limit, so held for manual review."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "mattpocock/skills": {
-   "last_checked": "2026-08-21",
-   "verified_commit": "0ab1b63a410a03d3627979a109c8695de27af954",
-   "upstream_pushed_at": "2026-08-20",
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
    "license": "MIT",
    "local_skills": 37,
    "result": {
     "drift": 31,
-    "no-upstream-path": 3,
+    "unmatched-candidate": 3,
     "identical": 3
    },
-   "note": "31 of 37 packages have drifted. Over the 10-resource automatic-update limit, so held for manual review."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "mukul975/Anthropic-Cybersecurity-Skills": {
    "last_checked": "2026-08-22",
@@ -119,22 +120,24 @@
    "local_skills": 358,
    "result": {
     "drift": 39,
-    "no-upstream-path": 43,
+    "unmatched-candidate": 43,
     "identical": 275,
     "upstream-added-files": 1
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "NVIDIA/skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "7149a886d50da8db72cdc1f20ff01cefeadfe6a9",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-21",
    "license": "Apache-2.0",
    "local_skills": 338,
    "result": {
     "identical": 334,
-    "no-upstream-path": 4
-   }
+    "no-upstream-path": 3,
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "affaan-m/ECC": {
    "last_checked": "2026-08-22",
@@ -143,12 +146,12 @@
    "license": "MIT",
    "local_skills": 297,
    "result": {
-    "no-upstream-path": 10,
+    "unmatched-candidate": 10,
     "drift": 2,
     "identical": 282,
     "upstream-added-files": 3
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "gooseworks-ai/goose-skills": {
    "last_checked": "2026-08-22",
@@ -157,12 +160,12 @@
    "license": "MIT",
    "local_skills": 270,
    "result": {
-    "no-upstream-path": 18,
+    "unmatched-candidate": 18,
     "identical": 245,
     "drift": 5,
     "upstream-added-files": 2
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "microsoft/skills": {
    "last_checked": "2026-08-22",
@@ -172,13 +175,10 @@
    "local_skills": 188,
    "result": {
     "drift": 1,
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "identical": 186
    },
-   "note": "All 7 azure-skills packages in 23-microsoft were brought up to this commit. The remaining drift is 05-development/mcp-builder, which is deliberately NOT updated from here: SOURCES.json lists it under three repositories by exact-name-match, and it is blob-identical to anthropics/skills HEAD, so Anthropic is the real origin and Microsoft's .github/skills/mcp-builder is a vendored fork. Applying this source over it would silently replace the original with a fork.",
-   "excluded_from_update": {
-    "05-development/mcp-builder": "Origin is anthropics/skills (verified blob-identical). Microsoft ships a vendored fork; do not apply."
-   }
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "indranilbanerjee/digital-marketing-pro": {
    "last_checked": "2026-08-22",
@@ -188,21 +188,23 @@
    "local_skills": 178,
    "result": {
     "identical": 158,
-    "no-upstream-path": 19,
+    "unmatched-candidate": 19,
     "drift": 1
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "wshobson/agents": {
    "last_checked": "2026-08-22",
-   "verified_commit": "367cb6a4a182cf7e9b0a17c9429f7411ddd9cf35",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-18",
    "license": "MIT",
    "local_skills": 173,
    "result": {
-    "no-upstream-path": 7,
-    "identical": 166
-   }
+    "unmatched-candidate": 5,
+    "identical": 166,
+    "no-upstream-path": 2
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "aaron-he-zhu/aaron-marketing-skills": {
    "last_checked": "2026-08-22",
@@ -212,9 +214,9 @@
    "local_skills": 122,
    "result": {
     "drift": 54,
-    "no-upstream-path": 68
+    "unmatched-candidate": 68
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "google/skills": {
    "last_checked": "2026-08-22",
@@ -223,22 +225,24 @@
    "license": "Apache-2.0",
    "local_skills": 110,
    "result": {
-    "no-upstream-path": 13,
+    "no-upstream-path": 4,
     "drift": 12,
-    "identical": 85
+    "identical": 85,
+    "unmatched-candidate": 9
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "browser-act/skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "8f287271faa0c1df79a44578cb059102ff004da2",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-12",
    "license": "MIT",
    "local_skills": 102,
    "result": {
     "identical": 101,
-    "no-upstream-path": 1
-   }
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "googleworkspace/skills": {
    "last_checked": "2026-08-22",
@@ -262,14 +266,16 @@
   },
   "deanpeters/Product-Manager-Skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "a03af68414bb0b924746c97bddf9a5057d017af7",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-13",
    "license": "NOASSERTION",
    "local_skills": 84,
    "result": {
     "identical": 77,
-    "no-upstream-path": 7
-   }
+    "unmatched-candidate": 6,
+    "no-upstream-path": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "tobihagemann/turbo": {
    "last_checked": "2026-08-22",
@@ -279,10 +285,11 @@
    "local_skills": 74,
    "result": {
     "identical": 38,
-    "no-upstream-path": 28,
-    "drift": 8
+    "unmatched-candidate": 19,
+    "drift": 8,
+    "no-upstream-path": 9
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "LambdaTest/agent-skills": {
    "last_checked": "2026-08-22",
@@ -297,14 +304,15 @@
   },
   "alinaqi/claude-bootstrap": {
    "last_checked": "2026-08-22",
-   "verified_commit": "abc600e8a8d3206f1c9244f31526d3c89a418d2b",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-18",
    "license": "MIT",
    "local_skills": 72,
    "result": {
-    "no-upstream-path": 9,
+    "unmatched-candidate": 9,
     "identical": 63
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "JasonColapietro/suede-creator-skills": {
    "last_checked": "2026-08-22",
@@ -316,29 +324,31 @@
     "drift": 69,
     "no-upstream-path": 2
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "NeoLabHQ/context-engineering-kit": {
    "last_checked": "2026-08-22",
-   "verified_commit": "c346eeea5afac55c0845e48ffe9df6fdb82e69d5",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-21",
    "license": "GPL-3.0",
    "local_skills": 69,
    "result": {
     "identical": 61,
-    "no-upstream-path": 8
-   }
+    "unmatched-candidate": 8
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "phuryn/pm-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "18468a95b427e70e258b51389796367c6f684e7d",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-07-03",
    "license": "MIT",
    "local_skills": 69,
    "result": {
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "identical": 68
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "alirezarezvani/claude-skills": {
    "last_checked": "2026-08-22",
@@ -347,11 +357,11 @@
    "license": "MIT",
    "local_skills": 65,
    "result": {
-    "no-upstream-path": 49,
+    "unmatched-candidate": 49,
     "identical": 12,
     "drift": 4
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "nowork-studio/NotFair": {
    "last_checked": "2026-08-22",
@@ -360,11 +370,11 @@
    "license": "MIT",
    "local_skills": 56,
    "result": {
-    "no-upstream-path": 12,
+    "unmatched-candidate": 12,
     "identical": 35,
     "drift": 9
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "bitwize-music-studio/claude-ai-music-skills": {
    "last_checked": "2026-08-22",
@@ -385,31 +395,33 @@
    "result": {
     "identical": 41,
     "drift": 7,
-    "no-upstream-path": 2
+    "unmatched-candidate": 2
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "Eronred/aso-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "f97c943d44481dd3e29e2deaf672fc3c7ee83fa9",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-07-27",
    "license": "MIT",
    "local_skills": 42,
    "result": {
     "identical": 40,
-    "no-upstream-path": 2
-   }
+    "unmatched-candidate": 2
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "dembrandt/dembrandt-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "643a0b75f2bacc2d77dd6bae07601ab40128bb12",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-21",
    "license": "MIT",
    "local_skills": 40,
    "result": {
     "identical": 37,
-    "no-upstream-path": 3
-   }
+    "unmatched-candidate": 3
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "foryourhealth111-pixel/Vibe-Skills": {
    "last_checked": "2026-08-22",
@@ -419,21 +431,23 @@
    "local_skills": 38,
    "result": {
     "drift": 14,
-    "no-upstream-path": 14,
-    "identical": 10
+    "unmatched-candidate": 13,
+    "identical": 10,
+    "no-upstream-path": 1
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "AgriciDaniel/claude-seo": {
    "last_checked": "2026-08-22",
-   "verified_commit": "09d37c7b66ed3ca9c6efbdb765a805a6c76a8f01",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-20",
    "license": "MIT",
    "local_skills": 36,
    "result": {
-    "no-upstream-path": 3,
+    "unmatched-candidate": 3,
     "identical": 33
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "GanyuanRan/Aegis": {
    "last_checked": "2026-08-22",
@@ -442,22 +456,23 @@
    "license": "MIT",
    "local_skills": 35,
    "result": {
-    "no-upstream-path": 11,
+    "unmatched-candidate": 11,
     "drift": 4,
     "identical": 20
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "hyperfx-ai/marketing-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "8b5012e4811ad04def471076c4fa378251cb8e86",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-08",
    "license": "MIT",
    "local_skills": 31,
    "result": {
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "identical": 30
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "snyk/agent-scan": {
    "last_checked": "2026-08-22",
@@ -466,22 +481,24 @@
    "license": "Apache-2.0",
    "local_skills": 31,
    "result": {
-    "no-upstream-path": 6,
+    "unmatched-candidate": 6,
     "drift": 10,
     "identical": 15
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "addyosmani/agent-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "5a5ea45e806f82273549fd85e60adb95d55f510d",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-21",
    "license": "MIT",
    "local_skills": 28,
    "result": {
     "identical": 20,
-    "no-upstream-path": 8
-   }
+    "unmatched-candidate": 7,
+    "no-upstream-path": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "eduardo-sl/go-agent-skills": {
    "last_checked": "2026-08-22",
@@ -490,43 +507,46 @@
    "license": "MIT",
    "local_skills": 28,
    "result": {
-    "no-upstream-path": 23,
+    "unmatched-candidate": 23,
     "drift": 5
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "yusufkaraaslan/Skill_Seekers": {
    "last_checked": "2026-08-22",
-   "verified_commit": "f3972efa33fa79634b96936acf1fac321cdcf7c1",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-09",
    "license": "MIT",
    "local_skills": 28,
    "result": {
-    "no-upstream-path": 2,
+    "unmatched-candidate": 2,
     "identical": 26
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "sanjay3290/ai-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "361969210b1002034be70de60a041a25732b098a",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-07-09",
    "license": "Apache-2.0",
    "local_skills": 27,
    "result": {
-    "no-upstream-path": 3,
+    "unmatched-candidate": 3,
     "identical": 24
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "kreuzberg-dev/kreuzberg": {
    "last_checked": "2026-08-22",
-   "verified_commit": "0a60357897cd8151e503d1f66fe2f7e394e5e434",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-22",
    "license": "MIT",
    "local_skills": 26,
    "result": {
     "identical": 18,
-    "no-upstream-path": 8
-   }
+    "unmatched-candidate": 8
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "helius-labs/core-ai": {
    "last_checked": "2026-08-22",
@@ -547,10 +567,10 @@
    "local_skills": 24,
    "result": {
     "identical": 13,
-    "no-upstream-path": 9,
+    "unmatched-candidate": 9,
     "drift": 2
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "BrianRWagner/ai-marketing-skills": {
    "last_checked": "2026-08-22",
@@ -576,14 +596,15 @@
   },
   "Paramchoudhary/ResumeSkills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-06-19",
    "license": "MIT",
    "local_skills": 23,
    "result": {
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "identical": 22
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "expo/skills": {
    "last_checked": "2026-08-22",
@@ -623,53 +644,48 @@
    "license": "NOASSERTION",
    "local_skills": 20,
    "result": {
-    "no-upstream-path": 2,
+    "no-upstream-path": 1,
     "identical": 16,
-    "drift": 2
+    "drift": 2,
+    "unmatched-candidate": 1
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "Joannis/claude-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "a88556df3b1183cdd927680021b800149900c15f",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-02",
    "license": null,
    "local_skills": 19,
    "result": {
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "identical": 18
-   }
-  },
-  "awslabs/mcp + AWS official skills": {
-   "last_checked": "2026-08-22",
-   "verified_commit": null,
-   "local_skills": 19,
-   "result": {
-    "unreachable": 1
    },
-   "note": "Upstream could not be read (gh api repos/awslabs/mcp + AWS official skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "huifer/Claude-Ally-Health": {
    "last_checked": "2026-08-22",
-   "verified_commit": "f604350c8448194ee7791495c1b3b84e1895c30b",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-07-16",
    "license": "MIT",
    "local_skills": 19,
    "result": {
     "identical": 15,
-    "no-upstream-path": 4
-   }
+    "unmatched-candidate": 4
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "AIDevGTM/gtm-cofounder": {
    "last_checked": "2026-08-22",
-   "verified_commit": "0402213f43e389f939ea6da3aec4be95ebc22970",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-18",
    "license": "MIT",
    "local_skills": 18,
    "result": {
-    "no-upstream-path": 13,
+    "unmatched-candidate": 13,
     "identical": 5
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "Sendmux/skills": {
    "last_checked": "2026-08-22",
@@ -688,33 +704,35 @@
    "license": null,
    "local_skills": 18,
    "result": {
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "drift": 1,
     "identical": 16
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "fcakyon/claude-codex-settings": {
    "last_checked": "2026-08-22",
-   "verified_commit": "1cab93424849c217fdde1a2c1189f55e4f93b51f",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-22",
    "license": "Apache-2.0",
    "local_skills": 18,
    "result": {
     "identical": 14,
-    "no-upstream-path": 4
-   }
+    "unmatched-candidate": 4
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "browserbase/skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "d15a21ffde5a020feb39393603089f3824389eba",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-20",
    "license": null,
    "local_skills": 17,
    "result": {
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "identical": 16
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "fal-ai-community/skills": {
    "last_checked": "2026-08-22",
@@ -728,25 +746,28 @@
   },
   "google-labs-code/stitch-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "0337446dadde6f8c94210444e2aa9d546126480f",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-17",
    "license": "Apache-2.0",
    "local_skills": 17,
    "result": {
     "identical": 15,
-    "no-upstream-path": 2
-   }
+    "no-upstream-path": 1,
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "ognjengt/founder-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "a45931cad934dc6243a68f905485467935a4ad9a",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-05-18",
    "license": "MIT",
    "local_skills": 17,
    "result": {
-    "no-upstream-path": 2,
+    "unmatched-candidate": 2,
     "identical": 15
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "redis/agent-skills": {
    "last_checked": "2026-08-22",
@@ -773,25 +794,27 @@
   },
   "Orkas-AI/Orkas-VideoStudio": {
    "last_checked": "2026-08-22",
-   "verified_commit": "7387d99d468e0cce22508854ba8bca04e79657e1",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-12",
    "license": "MIT",
    "local_skills": 15,
    "result": {
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "identical": 14
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "apollographql/skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "c288eb80629dd2309eed81f23d693f66a452d043",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-07-29",
    "license": "MIT",
    "local_skills": 15,
    "result": {
     "identical": 14,
-    "no-upstream-path": 1
-   }
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "czlonkowski/n8n-skills": {
    "last_checked": "2026-08-22",
@@ -807,14 +830,15 @@
   },
   "obra/superpowers": {
    "last_checked": "2026-08-22",
-   "verified_commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-19",
    "license": "MIT",
    "local_skills": 15,
    "result": {
     "identical": 14,
-    "no-upstream-path": 1
-   }
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "ZhangHanDong/makepad-skills": {
    "last_checked": "2026-08-22",
@@ -828,14 +852,16 @@
   },
   "callstackincubator/agent-skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "2766baa46ca0fe7c16cc5ab4d0077ccec2e95fb9",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-08",
    "license": "MIT",
    "local_skills": 14,
    "result": {
-    "no-upstream-path": 2,
-    "identical": 12
-   }
+    "no-upstream-path": 1,
+    "identical": 12,
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "honeydew-ai/honeydew-ai-coding-agents-plugins": {
    "last_checked": "2026-08-22",
@@ -845,10 +871,10 @@
    "local_skills": 14,
    "result": {
     "identical": 6,
-    "no-upstream-path": 5,
+    "unmatched-candidate": 5,
     "drift": 3
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "netlify/skills": {
    "last_checked": "2026-08-22",
@@ -901,14 +927,15 @@
   },
   "qdrant/skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": "93b66882bab856a92907798ce1fad5b034ed4604",
+   "verified_commit": null,
    "upstream_pushed_at": "2026-08-19",
    "license": "Apache-2.0",
    "local_skills": 13,
    "result": {
-    "no-upstream-path": 1,
+    "unmatched-candidate": 1,
     "identical": 12
-   }
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "transloadit/skills": {
    "last_checked": "2026-08-22",
@@ -950,10 +977,10 @@
    "result": {
     "identical": 7,
     "upstream-added-files": 1,
-    "no-upstream-path": 2,
+    "unmatched-candidate": 2,
     "drift": 2
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "realkimbarrett/advertising-skills": {
    "last_checked": "2026-08-22",
@@ -1178,14 +1205,65 @@
    ]
   },
   "upstream_updates_held": {
-   "trailofbits/skills": "38 of 78 packages drifted. Security-sensitive source, so the diff needs reading rather than bulk-applying.",
-   "mattpocock/skills": "31 of 37 packages drifted.",
-   "openai/skills": "figma-generate-library and figma-use drifted; linear and notion-knowledge-capture are missing upstream assets that their --openai twins already carry."
+   "note": "Sources whose drift exceeds what one automatic run should apply, or that need a judgement call. Counts are from the 2026-08-22 pass.",
+   "JasonColapietro/suede-creator-skills": "69 of 71 packages drifted.",
+   "aaron-he-zhu/aaron-marketing-skills": "54 of 122 drifted, plus 68 unmatched candidates.",
+   "infrasity-labs/dev-gtm-claude-skills": "39 of 358 drifted.",
+   "trailofbits/skills": "38 of 78 drifted. Security-sensitive, so the diff needs reading.",
+   "mattpocock/skills": "31 of 37 drifted.",
+   "helius-labs/core-ai": "24 of 24 drifted — the whole pack moved.",
+   "foryourhealth111-pixel/Vibe-Skills": "14 of 38 drifted.",
+   "remotion-dev/skills": "12 of 12 drifted — the whole pack moved.",
+   "google/skills": "12 of 110 drifted. First-party and a good candidate for the next run.",
+   "snyk/agent-scan": "10 of 31 drifted, but these are the scanner's test fixtures listed under snyk_agent_scan_test_fixtures. Do not update them; they should be retired, not refreshed.",
+   "openai/skills": "figma-generate-library and figma-use drifted; linear and notion-knowledge-capture are missing upstream assets their --openai twins carry. Held behind the duplicate cluster."
   },
   "smaller_items": {
    "agents/wshobson/hr-pro.md": "Kept when 22-legal was dropped, but is now the one agent here with no matching skill in the library.",
    "28-career-education-health/Vibe-Skills/bundled/skills/unsloth/references/llms-full.md": "0 bytes and referenced by nothing in the pack.",
    "09-anthropic-tools/template--anthropics": "Anthropic's empty skill template. Kept on purpose (the category covers templates), noted so it is not repeatedly flagged as a placeholder."
+  },
+  "coverage_2026_08_22": {
+   "sources_covered": 87,
+   "sources_total": 222,
+   "skill_source_pairs_checked": 5936,
+   "identical": 5070,
+   "note": "87 of 222 sources have now been checked and 5070 local skill copies are blob-identical to their upstream HEAD, so their provenance is proven rather than assumed. 135 sources remain unchecked; --rotate picks them up oldest-first."
+  },
+  "unmatched_candidates": {
+   "what": "Skills whose upstream directory exists but where not a single file matches by blob SHA. Surfaced on 2026-08-22 when check-upstream.py stopped mislabelling these as 'no-upstream-path', a status that reads as 'nothing to do'. Each one is either a wholesale upstream rewrite worth taking or a coincidental same-name skill in an unrelated repository, where applying the update would destroy the local skill. Blob SHAs cannot tell those apart.",
+   "count": 449,
+   "biggest": {
+    "aaron-he-zhu/aaron-marketing-skills": 68,
+    "alirezarezvani/claude-skills": 49,
+    "infrasity-labs/dev-gtm-claude-skills": 43,
+    "eduardo-sl/go-agent-skills": 23,
+    "tobihagemann/turbo": 19,
+    "indranilbanerjee/digital-marketing-pro": 19,
+    "gooseworks-ai/goose-skills": 18,
+    "trailofbits/skills": 16
+   },
+   "suggested": "Work through these per source, not in bulk. SOURCES.json attributes many skills by exact-name-match, so expect most to be coincidences rather than updates. eas-observe (expo/skills) was the one confirmed rewrite this run and was applied after checking the frontmatter matched."
+  },
+  "orphaned_upstreams": {
+   "what": "Sources that returned 404 with no relocated repository found. Each is named as the only source of its local skills, so the origin was real and has been deleted or made private. The archive is now the only copy. Preserve them: no baseline is recoverable and no future update check is possible unless upstream returns.",
+   "googleworkspace/skills": {
+    "local_skills": 96,
+    "checked": "2026-08-22",
+    "note": "The googleworkspace org now publishes only googleworkspace/cli."
+   },
+   "netlify/skills": {
+    "local_skills": 14,
+    "checked": "2026-08-22"
+   }
   }
+ },
+ "statuses": {
+  "identical": "every file matches upstream at verified_commit",
+  "upstream-added-files": "local files all match; upstream has extra files",
+  "drift": "some files match and some differ — a real update to review",
+  "unmatched-candidate": "the directory exists upstream but not one file matches: either a wholesale rewrite or a coincidental same-name skill. Never a baseline.",
+  "no-upstream-path": "no upstream directory matches this skill's name",
+  "unreachable": "upstream could not be read — renamed, deleted or made private"
  }
 }
