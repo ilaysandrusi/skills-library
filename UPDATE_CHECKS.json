@@ -3,7 +3,7 @@
  "purpose": "Rotating upstream update-check state. Each entry records the commit the local copies were verified against, so a later run starts from a real baseline instead of re-deriving one, and can pick the sources that have waited longest.",
  "how_to_check": "python3 tools/check-upstream.py <owner/repo>",
  "baseline_method": "Every local file is compared to the upstream tree by git blob SHA. 'identical' therefore means the local copy is exactly verified_commit, not merely similar to it.",
- "source_repos_total": 222,
+ "source_repos_total": 223,
  "checked": {
   "anthropics/skills": {
    "last_checked": "2026-08-21",
@@ -91,6 +91,363 @@
     "identical": 3
    },
    "note": "31 of 37 packages have drifted. Over the 10-resource automatic-update limit, so held for manual review."
+  },
+  "mukul975/Anthropic-Cybersecurity-Skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-20",
+   "license": "Apache-2.0",
+   "local_skills": 817,
+   "result": {
+    "identical": 815,
+    "drift": 2
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "openaccountants/openaccountants": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "895cbdbdf984ebc0f360648661ae5a56c3cb886d",
+   "upstream_pushed_at": "2026-08-21",
+   "license": "AGPL-3.0",
+   "local_skills": 781,
+   "result": {
+    "identical": 781
+   }
+  },
+  "infrasity-labs/dev-gtm-claude-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-06-28",
+   "license": "MIT",
+   "local_skills": 358,
+   "result": {
+    "drift": 39,
+    "no-upstream-path": 43,
+    "identical": 275,
+    "upstream-added-files": 1
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "NVIDIA/skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "7149a886d50da8db72cdc1f20ff01cefeadfe6a9",
+   "upstream_pushed_at": "2026-08-21",
+   "license": "Apache-2.0",
+   "local_skills": 338,
+   "result": {
+    "identical": 334,
+    "no-upstream-path": 4
+   }
+  },
+  "affaan-m/ECC": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": "MIT",
+   "local_skills": 297,
+   "result": {
+    "no-upstream-path": 10,
+    "drift": 2,
+    "identical": 282,
+    "upstream-added-files": 3
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "gooseworks-ai/goose-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-14",
+   "license": "MIT",
+   "local_skills": 270,
+   "result": {
+    "no-upstream-path": 18,
+    "identical": 245,
+    "drift": 5,
+    "upstream-added-files": 2
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "microsoft/skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": "MIT",
+   "local_skills": 188,
+   "result": {
+    "drift": 8,
+    "no-upstream-path": 1,
+    "identical": 179
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "indranilbanerjee/digital-marketing-pro": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-17",
+   "license": "MIT",
+   "local_skills": 178,
+   "result": {
+    "identical": 158,
+    "no-upstream-path": 19,
+    "drift": 1
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "wshobson/agents": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "367cb6a4a182cf7e9b0a17c9429f7411ddd9cf35",
+   "upstream_pushed_at": "2026-08-18",
+   "license": "MIT",
+   "local_skills": 173,
+   "result": {
+    "no-upstream-path": 7,
+    "identical": 166
+   }
+  },
+  "aaron-he-zhu/aaron-marketing-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-22",
+   "license": "Apache-2.0",
+   "local_skills": 122,
+   "result": {
+    "drift": 54,
+    "no-upstream-path": 68
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "google/skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": "Apache-2.0",
+   "local_skills": 110,
+   "result": {
+    "no-upstream-path": 13,
+    "drift": 12,
+    "identical": 85
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "browser-act/skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "8f287271faa0c1df79a44578cb059102ff004da2",
+   "upstream_pushed_at": "2026-08-12",
+   "license": "MIT",
+   "local_skills": 102,
+   "result": {
+    "identical": 101,
+    "no-upstream-path": 1
+   }
+  },
+  "googleworkspace/skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "local_skills": 96,
+   "result": {
+    "unreachable": 1
+   },
+   "note": "Upstream could not be read (gh api repos/googleworkspace/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  "aws/agent-toolkit-for-aws": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-20",
+   "license": "Apache-2.0",
+   "local_skills": 87,
+   "result": {
+    "identical": 86,
+    "drift": 1
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "deanpeters/Product-Manager-Skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "a03af68414bb0b924746c97bddf9a5057d017af7",
+   "upstream_pushed_at": "2026-08-13",
+   "license": "NOASSERTION",
+   "local_skills": 84,
+   "result": {
+    "identical": 77,
+    "no-upstream-path": 7
+   }
+  },
+  "tobihagemann/turbo": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": "MIT",
+   "local_skills": 74,
+   "result": {
+    "identical": 38,
+    "no-upstream-path": 28,
+    "drift": 8
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "LambdaTest/agent-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "0491a3a29aa18558d2c3c64ff09367adb976c56f",
+   "upstream_pushed_at": "2026-07-24",
+   "license": "MIT",
+   "local_skills": 73,
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 72
+   }
+  },
+  "alinaqi/claude-bootstrap": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "abc600e8a8d3206f1c9244f31526d3c89a418d2b",
+   "upstream_pushed_at": "2026-08-18",
+   "license": "MIT",
+   "local_skills": 72,
+   "result": {
+    "no-upstream-path": 9,
+    "identical": 63
+   }
+  },
+  "JasonColapietro/suede-creator-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-22",
+   "license": "MIT",
+   "local_skills": 71,
+   "result": {
+    "drift": 69,
+    "no-upstream-path": 2
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "NeoLabHQ/context-engineering-kit": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "c346eeea5afac55c0845e48ffe9df6fdb82e69d5",
+   "upstream_pushed_at": "2026-08-21",
+   "license": "GPL-3.0",
+   "local_skills": 69,
+   "result": {
+    "identical": 61,
+    "no-upstream-path": 8
+   }
+  },
+  "phuryn/pm-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "18468a95b427e70e258b51389796367c6f684e7d",
+   "upstream_pushed_at": "2026-07-03",
+   "license": "MIT",
+   "local_skills": 69,
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 68
+   }
+  },
+  "alirezarezvani/claude-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": "MIT",
+   "local_skills": 65,
+   "result": {
+    "no-upstream-path": 49,
+    "identical": 12,
+    "drift": 4
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "nowork-studio/NotFair": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-14",
+   "license": "MIT",
+   "local_skills": 56,
+   "result": {
+    "no-upstream-path": 12,
+    "identical": 35,
+    "drift": 9
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "bitwize-music-studio/claude-ai-music-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "b1b11a67e8ce5dd07691b68cf736cff8e4c55c87",
+   "upstream_pushed_at": "2026-08-20",
+   "license": "CC0-1.0",
+   "local_skills": 53,
+   "result": {
+    "identical": 53
+   }
+  },
+  "coreyhaines31/marketingskills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-22",
+   "license": "MIT",
+   "local_skills": 50,
+   "result": {
+    "identical": 41,
+    "drift": 7,
+    "no-upstream-path": 2
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "Eronred/aso-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "f97c943d44481dd3e29e2deaf672fc3c7ee83fa9",
+   "upstream_pushed_at": "2026-07-27",
+   "license": "MIT",
+   "local_skills": 42,
+   "result": {
+    "identical": 40,
+    "no-upstream-path": 2
+   }
+  },
+  "dembrandt/dembrandt-skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "643a0b75f2bacc2d77dd6bae07601ab40128bb12",
+   "upstream_pushed_at": "2026-08-21",
+   "license": "MIT",
+   "local_skills": 40,
+   "result": {
+    "identical": 37,
+    "no-upstream-path": 3
+   }
+  },
+  "foryourhealth111-pixel/Vibe-Skills": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-11",
+   "license": "Apache-2.0",
+   "local_skills": 38,
+   "result": {
+    "drift": 14,
+    "no-upstream-path": 14,
+    "identical": 10
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "AgriciDaniel/claude-seo": {
+   "last_checked": "2026-08-22",
+   "verified_commit": "09d37c7b66ed3ca9c6efbdb765a805a6c76a8f01",
+   "upstream_pushed_at": "2026-08-20",
+   "license": "MIT",
+   "local_skills": 36,
+   "result": {
+    "no-upstream-path": 3,
+    "identical": 33
+   }
+  },
+  "GanyuanRan/Aegis": {
+   "last_checked": "2026-08-22",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-22",
+   "license": "MIT",
+   "local_skills": 35,
+   "result": {
+    "no-upstream-path": 11,
+    "drift": 4,
+    "identical": 20
+   },
+   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
   }
  },
  "review_queue": {
