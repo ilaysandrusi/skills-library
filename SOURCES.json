@@ -4133,9 +4133,9 @@
   "13-cloud-deploy/aws-ai-ml": {
    "skill": "13-cloud-deploy/aws-ai-ml",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
@@ -4160,36 +4160,36 @@
   "13-cloud-deploy/aws-auth": {
    "skill": "13-cloud-deploy/aws-auth",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-billing-and-cost-management": {
    "skill": "13-cloud-deploy/aws-billing-and-cost-management",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-blocks": {
    "skill": "13-cloud-deploy/aws-blocks",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-cdk": {
    "skill": "13-cloud-deploy/aws-cdk",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
@@ -4205,27 +4205,27 @@
   "13-cloud-deploy/aws-cloudformation": {
    "skill": "13-cloud-deploy/aws-cloudformation",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-compute": {
    "skill": "13-cloud-deploy/aws-compute",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-containers": {
    "skill": "13-cloud-deploy/aws-containers",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
@@ -4241,18 +4241,18 @@
   "13-cloud-deploy/aws-database": {
    "skill": "13-cloud-deploy/aws-database",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-deployment": {
    "skill": "13-cloud-deploy/aws-deployment",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
@@ -4268,9 +4268,9 @@
   "13-cloud-deploy/aws-iam": {
    "skill": "13-cloud-deploy/aws-iam",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
@@ -4286,72 +4286,72 @@
   "13-cloud-deploy/aws-messaging-and-streaming": {
    "skill": "13-cloud-deploy/aws-messaging-and-streaming",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-networking": {
    "skill": "13-cloud-deploy/aws-networking",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-observability": {
    "skill": "13-cloud-deploy/aws-observability",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-sdk-js-v3-usage": {
    "skill": "13-cloud-deploy/aws-sdk-js-v3-usage",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-sdk-python-usage": {
    "skill": "13-cloud-deploy/aws-sdk-python-usage",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-sdk-swift-usage": {
    "skill": "13-cloud-deploy/aws-sdk-swift-usage",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-security": {
    "skill": "13-cloud-deploy/aws-security",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
   "13-cloud-deploy/aws-serverless": {
    "skill": "13-cloud-deploy/aws-serverless",
    "sources": [
-    "awslabs/mcp + AWS official skills"
+    "aws/agent-toolkit-for-aws"
    ],
-   "method": "vendor-prefix",
+   "method": "upstream-path-verified",
    "added_in": "a350d03c",
    "import_note": "AWS official core skills"
   },
