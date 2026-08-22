@@ -2,7 +2,7 @@
 
 Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד
 
-**מספר סקילים:** 256
+**מספר סקילים:** 257
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -99,6 +99,7 @@ Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Work
 | [`gws-workflow-standup-report`](./gws-workflow-standup-report/SKILL.md) | Google Workflow: Today's meetings + open tasks as a standup summary. |
 | [`gws-workflow-weekly-digest`](./gws-workflow-weekly-digest/SKILL.md) | Google Workflow: Weekly summary: this week's meetings + unread email count. |
 | [`hermes-tweet`](./hermes-tweet/SKILL.md) | Install and operate Hermes Tweet, a Hermes Agent plugin for X/Twitter research, timeline reading, tweet analysis, and approval-gated tweet actions. Use this skill when installing Hermes Tweet, researching X/Twitter accounts, monitoring launch signals, investigating mentions, auditing giveaways, or… |
+| [`hey`](./hey/SKILL.md) | Interact with HEY via the HEY CLI. Read and send emails, manage contacts, boxes, labels, collections, calendars, todos, habits, time tracking, and journal entries. Use for ANY HEY-related question or action. |
 | [`images-search`](./images-search/SKILL.md) | USE FOR image search. Returns images with title, source URL, thumbnail. Supports SafeSearch filter. Up to 200 results. |
 | [`integrate-asset-delivery-with-transloadit-smartcdn-in-nextjs`](./integrate-asset-delivery-with-transloadit-smartcdn-in-nextjs/SKILL.md) | Add Transloadit Smart CDN URL signing to a Next.js App Router project (server-side signing route + optional client demo page). |
 | [`integrate-uppy-transloadit-s3-uploading-to-nextjs`](./integrate-uppy-transloadit-s3-uploading-to-nextjs/SKILL.md) | Add Uppy Dashboard + Transloadit uploads to a Next.js (App Router) app, with server-side signature generation and optional /s3/store export. |

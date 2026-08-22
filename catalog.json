@@ -1,5 +1,5 @@
 {
- "total": 6090,
+ "total": 6092,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -9541,6 +9541,10 @@
      "description": "Install and operate Hermes Tweet, a Hermes Agent plugin for X/Twitter research, timeline reading, tweet analysis, and approval-gated tweet actions. Use this skill when installing Hermes Tweet, researching X/Twitter accounts, monitoring launch signals, investigating mentions, auditing giveaways, or preparing guarded tweet actions. Use proactively when a Hermes Agent workflow needs current X/Twitter context. Requires XQUIK_API_KEY for read and action tools."
     },
     {
+     "name": "hey",
+     "description": "Interact with HEY via the HEY CLI. Read and send emails, manage contacts, boxes, labels, collections, calendars, todos, habits, time tracking, and journal entries. Use for ANY HEY-related question or action."
+    },
+    {
      "name": "images-search",
      "description": "USE FOR image search. Returns images with title, source URL, thumbnail. Supports SafeSearch filter. Up to 200 results."
     },
@@ -10534,6 +10538,10 @@
     {
      "name": "hybrid-search-implementation",
      "description": "Combine vector and keyword search for improved retrieval. Use when implementing RAG systems, building search engines, or when neither approach alone provides sufficient recall."
+    },
+    {
+     "name": "illo",
+     "description": "Creates original editorial illustrations where a recurring mascot character performs the idea — one caught scene by default, a hand-built explainer diagram (a flow, fan-out, timeline, loop, or stack) when the structure itself is the point, or a transparent character cutout (pose-only compositing asset, no scene or text) — in one of seventeen bundled looks (sixteen print, plus a photoreal toy-brick set). Also handles \"surprise me\" / \"random\" (optionally scoped to a focus or character): rolls provenance, builds three saying candidates, picks via interactive choice or auto-pick-best (`--autopick`), and renders one image. Triggers only when the skill is directly invoked or \"illo\" is requested; never on generic illustrate / draw / make-an-image requests."
     },
     {
      "name": "imagegen",

@@ -2,7 +2,7 @@
 
 OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה
 
-**מספר סקילים:** 241
+**מספר סקילים:** 242
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -90,6 +90,7 @@ OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידא
 | [`huggingface-vision-trainer`](./huggingface-vision-trainer/SKILL.md) | Trains and fine-tunes vision models for object detection (D-FINE, RT-DETR v2, DETR, YOLOS), image classification (timm models — MobileNetV3, MobileViT, ResNet, ViT/DINOv3 — plus any Transformers classifier), and SAM/SAM2 segmentation using Hugging Face Transformers on Hugging Face Jobs cloud GPUs.… |
 | [`huggingface-zerogpu`](./huggingface-zerogpu/SKILL.md) | AI demos and GPU compute with Gradio Spaces and Hugging Face Spaces ZeroGPU. Use when writing or reviewing code that uses `@spaces.GPU`, configuring `python_version` or `requirements.txt` for a ZeroGPU Space, or handling ZeroGPU-specific code constraints — pickle-based process isolation, `gr.State`… |
 | [`hybrid-search-implementation`](./hybrid-search-implementation/SKILL.md) | Combine vector and keyword search for improved retrieval. Use when implementing RAG systems, building search engines, or when neither approach alone provides sufficient recall. |
+| [`illo`](./illo/SKILL.md) | Creates original editorial illustrations where a recurring mascot character performs the idea — one caught scene by default, a hand-built explainer diagram (a flow, fan-out, timeline, loop, or stack) when the structure itself is the point, or a transparent character cutout (pose-only compositing… |
 | [`imagegen`](./imagegen/SKILL.md) | Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references… |
 | [`imagen`](./imagen/SKILL.md) | Generate images using Google Gemini's image generation capabilities. Use this skill when the user needs to create, generate, or produce images for any purpose including UI mockups, icons, illustrations, diagrams, concept art, placeholder images, or visual representations. |
 | [`import-art`](./import-art/SKILL.md) | Places album art files in the correct audio and content directory locations. Use when the user has generated or downloaded album artwork that needs to be saved. |

@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6090
+**סה״כ סקילים:** 6092
 
 ## איך ללמוד
 
@@ -63,8 +63,8 @@
 | [אבטחה וביקורת קוד](./12-security/) | 157 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
 | [ענן ופריסה](./13-cloud-deploy/) | 171 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
 | [בדיקות ואוטומציה](./14-testing-qa/) | 204 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
-| [אינטגרציות ושירותים](./15-integrations/) | 256 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
-| [AI APIs ומדיה](./16-ai-apis-media/) | 241 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
+| [אינטגרציות ושירותים](./15-integrations/) | 257 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
+| [AI APIs ומדיה](./16-ai-apis-media/) | 242 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
 | [חבילת סייבר ענקית](./17-cybersecurity-pack/) | 821 | אנציקלופדיית סקילי סייבר (800+): פורנזיקה, תגובה לאירועים, מודיעין איומים, פנטסטינג והקשחה |
 | [פיננסים וחשבונאות](./18-finance-accounting/) | 791 | openaccountants (780+), CFO, ניתוח מניות ודוחות: הנהלת חשבונות, מס, ביקורת ותכנון פיננסי |
 | [מכירות, GTM וסטארטאפ](./19-sales-gtm-startup/) | 298 | Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארטאפים בשלב מוקדם |

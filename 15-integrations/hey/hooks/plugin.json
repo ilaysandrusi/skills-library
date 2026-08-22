@@ -1,0 +1,12 @@
+{
+  "name": "hey",
+  "version": "0.1.1",
+  "description": "HEY integration for Claude Code. Read email, manage todos, track time.",
+  "author": {
+    "name": "37signals",
+    "email": "support@37signals.com"
+  },
+  "homepage": "https://github.com/basecamp/hey-cli",
+  "repository": "https://github.com/basecamp/hey-cli",
+  "license": "MIT"
+}

@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6090,
- "traced_to_source_repo": 6076,
- "distinct_source_repos": 223,
+ "skills": 6092,
+ "traced_to_source_repo": 6078,
+ "distinct_source_repos": 224,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -27,9 +27,9 @@
   "wshobson/agents": 173,
   "aaron-he-zhu/aaron-marketing-skills": 122,
   "google/skills": 110,
+  "aws/agent-toolkit-for-aws": 106,
   "browser-act/skills": 102,
   "googleworkspace/skills": 96,
-  "aws/agent-toolkit-for-aws": 87,
   "deanpeters/Product-Manager-Skills": 84,
   "trailofbits/skills": 78,
   "tobihagemann/turbo": 74,
@@ -69,7 +69,6 @@
   "veniceai/skills": 21,
   "WordPress/agent-skills": 20,
   "Joannis/claude-skills": 19,
-  "awslabs/mcp + AWS official skills": 19,
   "huifer/Claude-Ally-Health": 19,
   "AIDevGTM/gtm-cofounder": 18,
   "Sendmux/skills": 18,
@@ -194,6 +193,7 @@
   "VoltAgent/awesome-agent-skills": 1,
   "Xquik-dev/tweetclaw": 1,
   "antonbabenko/terraform-skill": 1,
+  "basecamp/hey-cli": 1,
   "baskduf/FableCodex": 1,
   "blader/humanizer": 1,
   "coinbase/agentic-wallet-skills": 1,
@@ -230,6 +230,7 @@
   "superdesigndev/superdesign-skill": 1,
   "taisly/agent": 1,
   "takechanman1228/claude-ecom": 1,
+  "tmchow/illo-skill": 1,
   "truongduy2611/app-store-preflight-skills": 1,
   "trycourier/courier-skills": 1,
   "uucz/moyu": 1,
@@ -55181,6 +55182,24 @@
    "method": "direct-import",
    "added_in": "84eb74c4b0cda85af1dc86ee883917f7b325eee5",
    "import_note": "daily maintenance discovery 2026-08-21"
+  },
+  "16-ai-apis-media/illo": {
+   "skill": "16-ai-apis-media/illo",
+   "sources": [
+    "tmchow/illo-skill"
+   ],
+   "method": "direct-import",
+   "added_in": "873f4d85",
+   "import_note": "editorial illustration skill imported whole from skills/illo @ 873f4d85 (v0.34.4)"
+  },
+  "15-integrations/hey": {
+   "skill": "15-integrations/hey",
+   "sources": [
+    "basecamp/hey-cli"
+   ],
+   "method": "direct-import",
+   "added_in": "bf09d786",
+   "import_note": "first-party Basecamp HEY skill from skills/hey @ bf09d786; hooks archived, not enabled"
   }
  }
 }
