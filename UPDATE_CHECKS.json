@@ -6,15 +6,14 @@
  "source_repos_total": 223,
  "checked": {
   "anthropics/skills": {
-   "last_checked": "2026-08-21",
-   "verified_commit": "0a64e398ec6bb34a494f0c347e8ccae53a862f8e",
-   "upstream_pushed_at": "2026-08-18",
+   "last_checked": "2026-08-22",
+   "verified_commit": "3b3fad96af16a10759d930941b4520ba0c40edae",
+   "upstream_pushed_at": "2026-08-21",
    "license": null,
    "local_skills": 18,
    "result": {
     "identical": 18
-   },
-   "note": "All 18 packages match HEAD blob-for-blob. claude-api was brought up to this commit during the 2026-08-21 run."
+   }
   },
   "huggingface/skills": {
    "last_checked": "2026-08-21",
@@ -94,15 +93,13 @@
   },
   "mukul975/Anthropic-Cybersecurity-Skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": null,
+   "verified_commit": "f76261573a539ec40c3d434ecbb9e657d26aa921",
    "upstream_pushed_at": "2026-08-20",
    "license": "Apache-2.0",
    "local_skills": 817,
    "result": {
-    "identical": 815,
-    "drift": 2
-   },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+    "identical": 817
+   }
   },
   "openaccountants/openaccountants": {
    "last_checked": "2026-08-22",
@@ -174,11 +171,14 @@
    "license": "MIT",
    "local_skills": 188,
    "result": {
-    "drift": 8,
+    "drift": 1,
     "no-upstream-path": 1,
-    "identical": 179
+    "identical": 186
    },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "All 7 azure-skills packages in 23-microsoft were brought up to this commit. The remaining drift is 05-development/mcp-builder, which is deliberately NOT updated from here: SOURCES.json lists it under three repositories by exact-name-match, and it is blob-identical to anthropics/skills HEAD, so Anthropic is the real origin and Microsoft's .github/skills/mcp-builder is a vendored fork. Applying this source over it would silently replace the original with a fork.",
+   "excluded_from_update": {
+    "05-development/mcp-builder": "Origin is anthropics/skills (verified blob-identical). Microsoft ships a vendored fork; do not apply."
+   }
   },
   "indranilbanerjee/digital-marketing-pro": {
    "last_checked": "2026-08-22",
@@ -247,19 +247,17 @@
    "result": {
     "unreachable": 1
    },
-   "note": "Upstream could not be read (gh api repos/googleworkspace/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+   "note": "Upstream returns 404 and the googleworkspace org now publishes only googleworkspace/cli; no relocated repository was found. All 96 local skills name this repo as their only source (methods: vendor-prefix, documented-in-import-commit), so the origin is real and has been deleted or made private. The archive is now the only copy. Preserve them; no baseline is recoverable and no future update check is possible unless upstream returns."
   },
   "aws/agent-toolkit-for-aws": {
    "last_checked": "2026-08-22",
-   "verified_commit": null,
+   "verified_commit": "d6ad2e44d5e3077b85b63f322e007c84f94f3a6c",
    "upstream_pushed_at": "2026-08-20",
    "license": "Apache-2.0",
    "local_skills": 87,
    "result": {
-    "identical": 86,
-    "drift": 1
-   },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+    "identical": 87
+   }
   },
   "deanpeters/Product-Manager-Skills": {
    "last_checked": "2026-08-22",
