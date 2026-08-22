@@ -587,16 +587,13 @@
   },
   "expo/skills": {
    "last_checked": "2026-08-22",
-   "verified_commit": null,
+   "verified_commit": "472d040092900dc8bbf84dc7efb0c90abff77a0d",
    "upstream_pushed_at": "2026-08-21",
    "license": "MIT",
    "local_skills": 23,
    "result": {
-    "identical": 18,
-    "no-upstream-path": 1,
-    "drift": 4
-   },
-   "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+    "identical": 23
+   }
   },
   "hashicorp/agent-skills": {
    "last_checked": "2026-08-22",

@@ -20,7 +20,8 @@ Statuses per skill:
 
 - `identical`             every file matches upstream; the baseline is HEAD
 - `upstream-added-files`  local files all match, upstream has extra files
-- `drift`                 some files differ or are missing upstream
+- `drift`                 some files match and some differ — a real update
+- `unmatched-candidate`   the directory exists upstream but not one file matches
 - `no-upstream-path`      no upstream directory matches this skill's name
 - `local-missing`         indexed in SOURCES.json but not on disk
 
@@ -28,6 +29,13 @@ Statuses per skill:
 whose `sources` entry is a name-match rather than a real origin — `SOURCES.json`
 lists every repository that publishes a skill of the same name, not one origin.
 Both cases need a human, so they are reported rather than guessed at.
+
+`unmatched-candidate` is deliberately neither of the two neighbouring statuses.
+Zero matching files means either the skill was rewritten wholesale upstream (an
+update worth taking) or the local skill and the upstream directory merely share a
+name (an update that would destroy the local skill). Nothing distinguishes those
+two from blob SHAs alone, so it never counts as a baseline and always needs the
+diff read by a human.
 
 Requires an authenticated `gh`. Costs three API calls per repository regardless
 of how many skills it owns, because the whole comparison runs off one recursive
@@ -149,9 +157,20 @@ def compare(repo):
                         "differ": sorted(differ), "absent_upstream": sorted(absent),
                         "new_upstream": added}
 
-        if best is None or best["matched"] == 0:
+        # A candidate directory that exists upstream but matches nothing is not
+        # a missing path. It is either a fully rewritten skill or a coincidental
+        # same-name skill in an unrelated repository, and those need opposite
+        # treatment, so keep it out of both `no-upstream-path` (reads as
+        # "nothing to do") and `drift` (reads as "apply the update").
+        if best is None:
             status = "no-upstream-path"
             entry = {"skill": key, "status": status}
+        elif best["matched"] == 0:
+            status = "unmatched-candidate"
+            entry = {"skill": key, "status": status, "upstream": best["upstream"]}
+            for field in ("differ", "absent_upstream", "new_upstream"):
+                if best[field]:
+                    entry[field] = best[field]
         elif not best["differ"] and not best["absent_upstream"]:
             status = "identical" if not best["new_upstream"] else "upstream-added-files"
             entry = {"skill": key, "status": status, "upstream": best["upstream"]}
@@ -217,7 +236,8 @@ def render(report):
 
 def record(state, report, today):
     """Store the outcome. `verified_commit` is only a baseline when nothing drifted."""
-    clean = not any(e["status"] in ("drift", "local-missing") for e in report["skills"])
+    clean = not any(e["status"] in ("drift", "local-missing", "unmatched-candidate")
+                    for e in report["skills"])
     entry = {
         "last_checked": today,
         "verified_commit": report["head"] if clean else None,
@@ -234,8 +254,8 @@ def record(state, report, today):
                          "incomplete and the commit is not a baseline.")
         entry["verified_commit"] = None
     elif not clean:
-        entry["note"] = ("Drift found; no baseline recorded. The diff has to be read "
-                         "before anything is applied.")
+        entry["note"] = ("Drift or an unmatched candidate was found; no baseline "
+                         "recorded. The diff has to be read before anything is applied.")
     state["checked"][report["repo"]] = entry
 
 
