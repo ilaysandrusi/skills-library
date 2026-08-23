@@ -4,7 +4,7 @@ The **current** resource for the operator's Kafka client connection (replaces th
 
 **API Version:** `mirrord.metalbear.co/v1`
 **Kind:** `MirrordPropertyList`
-**Namespace:** the **same namespace as the target workload** and its `MirrordSplitConfig` (this differs from the deprecated `MirrordKafkaClientConfig`, which lived in the operator's namespace).
+**Namespace:** looked up in two places, in order: (1) the **target workload's namespace** (also the namespace of its `MirrordSplitConfig`) — the recommended default, and it wins if a list of the same name also exists in the operator's namespace; (2) the **operator's own namespace**, as a fallback that lets one connection config be shared across many teams/namespaces (requires operator **3.191.0+**; earlier operators only look in the target's namespace). ConfigMap/Secret refs inside a property list resolve in whichever namespace the list itself was found in. A property list in the target's namespace that the operator can't parse fails the session outright — it does not fall through to the operator's namespace. This lookup is unrelated to the deprecated `MirrordKafkaClientConfig`, which only ever lived in the operator's namespace.
 
 ## spec
 
@@ -27,12 +27,19 @@ Consumed by the operator, not forwarded to the Kafka client:
 | `mirrord.client_implementation` | `librdkafka` (default), `java` | Kafka client backend. Use `java` for **Kafka Streams** consumers (`appConfig.appId`). |
 | `mirrord.auth.kind` | `MSK_IAM` | Extra authentication mechanism (only supported value). See [MSK IAM](#aws-msk-iam). |
 | `mirrord.auth.aws_region` | e.g. `eu-south-1` | AWS region; required when `mirrord.auth.kind` is `MSK_IAM`. |
+| `mirrord.temporary_group_id` | `"true"` | Works around `INCONSISTENT_GROUP_PROTOCOL` errors from clients that advertise their own partition-assignment protocol (e.g. KafkaJS). Requires operator **3.195.0+**. See [KafkaJS / custom group protocols](#kafkajs--custom-group-protocols-mirrordtemporary_group_id). |
 
 > **Do not set `group.id`.** The consumer group used by the operator's own client is managed by mirrord.
 
-## Fallback to the legacy resource
+## Namespace lookup order and legacy fallback
 
-If no `MirrordPropertyList` with the referenced `clientConfig` name exists in the target's namespace, the operator falls back to a legacy `MirrordKafkaClientConfig` of the same name in the operator's namespace. This keeps older setups working while you migrate.
+The operator resolves a `clientConfig` name in this order:
+
+1. A `MirrordPropertyList` in the target's namespace.
+2. A `MirrordPropertyList` in the operator's namespace (operator **3.191.0+**) — for sharing one connection config across namespaces.
+3. A legacy `MirrordKafkaClientConfig` of the same name in the operator's namespace, if no `MirrordPropertyList` was found in either namespace above.
+
+This keeps older setups working while you migrate.
 
 ## Common properties
 
@@ -120,6 +127,25 @@ spec:
 ```
 
 Kafka Streams also requires the operator's Kafka sidecar (`operator.kafkaSplittingSidecar.enabled: true` in the Helm chart).
+
+### KafkaJS / custom group protocols (`mirrord.temporary_group_id`)
+
+Some client libraries — KafkaJS, for example — advertise their own partition-assignment protocol name, which the operator's librdkafka-based consumer cannot join a group with. This surfaces as an `INCONSISTENT_GROUP_PROTOCOL` error when a split session starts.
+
+Set `mirrord.temporary_group_id: "true"` on the Kafka `MirrordPropertyList`:
+
+```yaml
+spec:
+  properties:
+    - name: bootstrap.servers
+      value: kafka.default.svc.cluster.local:9092
+    - name: mirrord.temporary_group_id
+      value: "true"
+```
+
+With this set, splits patch the workload's consumer-group env vars (`appConfig.groupId`) to a generated temporary group, alongside the topic rewrite. The operator keeps the original group to itself, so it never negotiates a protocol with the application's client — any client library works. Offsets are preserved: the operator keeps committing into the original group, and the workload resumes exactly where it left off when the split ends.
+
+Temporary group names follow the temporary topic name format (`mirrord-tmp-...`) — if you use group ACLs, the application's credentials must be allowed to join groups with that prefix, and the operator's credentials need `DeleteGroups` for cleanup. Requires operator **3.195.0+**.
 
 ## JKS credentials → PEM
 
