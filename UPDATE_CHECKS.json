@@ -3,7 +3,7 @@
  "purpose": "Rotating upstream update-check state. Each entry records the commit the local copies were verified against, so a later run starts from a real baseline instead of re-deriving one, and can pick the sources that have waited longest.",
  "how_to_check": "python3 tools/check-upstream.py <owner/repo>",
  "baseline_method": "Every local file is compared to the upstream tree by git blob SHA. 'identical' therefore means the local copy is exactly verified_commit, not merely similar to it.",
- "source_repos_total": 224,
+ "source_repos_total": 225,
  "checked": {
   "anthropics/skills": {
    "last_checked": "2026-08-22",
@@ -1492,6 +1492,16 @@
    "result": {
     "identical": 4
    }
+  },
+  "GaZmagik/iso-24495": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "upstream_pushed_at": "2026-08-23",
+   "license": "MIT",
+   "local_skills": 8,
+   "result": {
+    "identical": 8
+   }
   }
  },
  "review_queue": {
@@ -1695,7 +1705,8 @@
    "gokapso/agent-skills": "2026-08-23: APPLIED, integrate-whatsapp. Now identical at d0cdd934. Upstream declares no license — flagged for the owner to decide whether to keep the skill at all.",
    "firecrawl/skills": "2026-08-23: APPLIED, both index skills. Now identical at 8b18f3b1.",
    "snyk/agent-scan": "2026-08-22: 10 of 31 drifted, but these are the scanner's test fixtures listed under snyk_agent_scan_test_fixtures. Do not update them; they should be retired, not refreshed.",
-   "openai/skills": "2026-08-22: figma-generate-library and figma-use drifted; linear and notion-knowledge-capture are missing upstream assets their --openai twins carry. Held behind the duplicate cluster."
+   "openai/skills": "2026-08-22: figma-generate-library and figma-use drifted; linear and notion-knowledge-capture are missing upstream assets their --openai twins carry. Held behind the duplicate cluster.",
+   "GaZmagik/iso-24495": "2026-08-23: imported at 58077fc4 (tag v0.6.1) and identical. All eight skills carry a copy of the upstream root LICENSE, reported as local_root_copies rather than absent_upstream."
   },
   "smaller_items": {
    "agents/wshobson/hr-pro.md": "Kept when 22-legal was dropped, but is now the one agent here with no matching skill in the library.",
@@ -1758,19 +1769,19 @@
   },
   "coverage": {
    "as_of": "2026-08-23",
-   "sources_covered": 126,
-   "sources_total": 224,
-   "skill_source_pairs_checked": 6196,
-   "identical": 5261,
-   "note": "126 of 224 sources have been checked and 5261 local skill copies are blob-identical to their upstream HEAD, so their provenance is proven rather than assumed. 98 sources remain unchecked; --rotate picks them up never-checked first, then oldest.",
+   "sources_covered": 127,
+   "sources_total": 225,
+   "skill_source_pairs_checked": 6204,
+   "identical": 5269,
+   "note": "127 of 225 sources have been checked and 5269 local skill copies are blob-identical to their upstream HEAD, so their provenance is proven rather than assumed. 98 sources remain unchecked; --rotate picks them up never-checked first, then oldest.",
    "history": {
     "2026-08-22": "87 claimed, 86 actual (off by one); 222 total before two sources were added.",
-    "2026-08-23": "126 sources after a 40-source rotation batch."
+    "2026-08-23": "127 sources after a 40-source rotation batch, plus GaZmagik/iso-24495 on import."
    }
   }
  },
  "statuses": {
-  "identical": "every file matches upstream at verified_commit",
+  "identical": "every file matches upstream, so the local copy is provably that commit. `local_root_copies` names any local file proven by blob SHA to be a copy of an upstream repository-root file, such as a LICENSE placed inside the skill directory; that is a packaging choice made here and never counts as drift.",
   "upstream-added-files": "local files all match; upstream has extra files",
   "drift": "some files match and some differ — a real update to review",
   "unmatched-candidate": "the directory exists upstream but not one file matches: either a wholesale rewrite or a coincidental same-name skill. Never a baseline.",

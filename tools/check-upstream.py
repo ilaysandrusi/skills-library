@@ -20,6 +20,10 @@ Statuses per skill:
 
 - `identical`             every file matches upstream; the baseline is HEAD
 - `upstream-added-files`  local files all match, upstream has extra files
+                          (`local_root_copies` lists local files proven by blob SHA
+                          to be copies of an upstream repository-root file, such as
+                          a LICENSE placed inside the skill; they are a packaging
+                          choice here, so they never count as drift)
 - `drift`                 some files match and some differ — a real update
 - `unmatched-candidate`   the directory exists upstream but not one file matches
 - `no-upstream-path`      no upstream directory matches this skill's name
@@ -155,6 +159,13 @@ def compare(repo, probe_frontmatter=False):
         for i in range(len(parts) - 1):
             bydir[parts[i]].append(path)
 
+    # A repository-root file copied into a skill directory — a LICENSE, most often —
+    # is a local packaging choice, not drift. Matching it by blob SHA keeps that
+    # precise: a LICENSE that is *not* the upstream root licence still reports,
+    # because an unexplained root file is one of the few tells that the origin is
+    # wrong and this repository is a fork.
+    root_blobs = {sha: path for path, sha in up.items() if "/" not in path}
+
     report = {
         "repo": repo,
         "head": sha,
@@ -191,12 +202,15 @@ def compare(repo, probe_frontmatter=False):
 
         best = None
         for candidate in sorted(candidates):
-            differ, absent = [], []
+            differ, absent, root_copies = [], [], []
             matched = 0
             for rel, want in local.items():
                 have = up.get(f"{candidate}/{rel}")
                 if have is None:
-                    absent.append(rel)
+                    if want in root_blobs:
+                        root_copies.append(f"{rel} == {root_blobs[want]}")
+                    else:
+                        absent.append(rel)
                 elif have != want:
                     differ.append(rel)
                 else:
@@ -208,7 +222,7 @@ def compare(repo, probe_frontmatter=False):
             if best is None or score > best["score"]:
                 best = {"upstream": candidate, "score": score, "matched": matched,
                         "differ": sorted(differ), "absent_upstream": sorted(absent),
-                        "new_upstream": added}
+                        "new_upstream": added, "local_root_copies": sorted(root_copies)}
 
         # A candidate directory that exists upstream but matches nothing is not
         # a missing path. It is either a fully rewritten skill or a coincidental
@@ -222,7 +236,7 @@ def compare(repo, probe_frontmatter=False):
             status = "unmatched-candidate"
             entry = {"skill": key, "status": status, "upstream": best["upstream"],
                      "local_files": len(local)}
-            for field in ("differ", "absent_upstream", "new_upstream"):
+            for field in ("differ", "absent_upstream", "new_upstream", "local_root_copies"):
                 if best[field]:
                     entry[field] = best[field]
             # The one question blob SHAs cannot answer: same skill, or same name?
@@ -233,12 +247,13 @@ def compare(repo, probe_frontmatter=False):
         elif not best["differ"] and not best["absent_upstream"]:
             status = "identical" if not best["new_upstream"] else "upstream-added-files"
             entry = {"skill": key, "status": status, "upstream": best["upstream"]}
-            if best["new_upstream"]:
-                entry["new_upstream"] = best["new_upstream"]
+            for field in ("new_upstream", "local_root_copies"):
+                if best[field]:
+                    entry[field] = best[field]
         else:
             status = "drift"
             entry = {"skill": key, "status": status, "upstream": best["upstream"]}
-            for field in ("differ", "absent_upstream", "new_upstream"):
+            for field in ("differ", "absent_upstream", "new_upstream", "local_root_copies"):
                 if best[field]:
                     entry[field] = best[field]
         report["summary"][status] += 1
