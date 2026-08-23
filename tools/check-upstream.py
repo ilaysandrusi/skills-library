@@ -37,6 +37,15 @@ name (an update that would destroy the local skill). Nothing distinguishes those
 two from blob SHAs alone, so it never counts as a baseline and always needs the
 diff read by a human.
 
+A skill made of a single `SKILL.md` lands here whenever that one file changes at
+all, because one changed file means zero matched files. `local_files` is reported
+so those are visible without opening anything, and `--probe-frontmatter` settles
+them: it reads the upstream `SKILL.md` and compares the frontmatter `name` and
+`description` to the local ones. Identical frontmatter is strong evidence of the
+same skill rather than a name collision, which is the one question blob SHAs
+cannot answer. It costs one extra API call per candidate, so it is opt-in, and it
+never changes a status on its own — it only records the evidence.
+
 Requires an authenticated `gh`. Costs three API calls per repository regardless
 of how many skills it owns, because the whole comparison runs off one recursive
 tree.
@@ -79,6 +88,50 @@ def blob_sha(path):
     return digest.hexdigest()
 
 
+def frontmatter(text):
+    """The `name` and `description` from a SKILL.md header, folded to one line each."""
+    lines = text.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return {}
+    fields, key = {}, None
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        if line[:1] not in (" ", "\t") and ":" in line:
+            key, _, value = line.partition(":")
+            key = key.strip()
+            fields[key] = value.strip().lstrip(">|").strip()
+        elif key in fields:
+            fields[key] = f"{fields[key]} {line.strip()}".strip()
+    return {k: " ".join(v.split()).strip("\"'")
+            for k, v in fields.items() if k in ("name", "description")}
+
+
+def upstream_blob(repo, sha):
+    payload = gh(f"repos/{repo}/git/blobs/{sha}")
+    if payload.get("encoding") != "base64":
+        raise Unreachable(f"blob {sha[:12]} came back as {payload.get('encoding')}")
+    import base64
+    return base64.b64decode(payload["content"]).decode("utf-8", "replace")
+
+
+def frontmatter_verdict(repo, local_path, upstream_sha):
+    """Compare local and upstream SKILL.md identity. Evidence only, never a status."""
+    try:
+        with open(local_path, encoding="utf-8", errors="replace") as handle:
+            mine = frontmatter(handle.read())
+        theirs = frontmatter(upstream_blob(repo, upstream_sha))
+    except (Unreachable, OSError) as error:
+        return f"unavailable ({str(error)[:80]})"
+    if not mine or not theirs:
+        return "unavailable (no frontmatter on one side)"
+    if mine.get("name") != theirs.get("name"):
+        return "name-differs"
+    if mine.get("description") == theirs.get("description"):
+        return "name-and-description-match"
+    return "name-matches-description-differs"
+
+
 def local_skills_for(repo):
     src = json.load(open(os.path.join(ROOT, "SOURCES.json"), encoding="utf-8"))
     return sorted(k for k, v in src["attribution"].items()
@@ -93,7 +146,7 @@ def upstream_tree(repo):
     return info, head["sha"], blobs, bool(tree.get("truncated"))
 
 
-def compare(repo):
+def compare(repo, probe_frontmatter=False):
     info, sha, up, truncated = upstream_tree(repo)
 
     bydir = collections.defaultdict(list)
@@ -167,10 +220,16 @@ def compare(repo):
             entry = {"skill": key, "status": status}
         elif best["matched"] == 0:
             status = "unmatched-candidate"
-            entry = {"skill": key, "status": status, "upstream": best["upstream"]}
+            entry = {"skill": key, "status": status, "upstream": best["upstream"],
+                     "local_files": len(local)}
             for field in ("differ", "absent_upstream", "new_upstream"):
                 if best[field]:
                     entry[field] = best[field]
+            # The one question blob SHAs cannot answer: same skill, or same name?
+            upstream_skill = up.get(f"{best['upstream']}/SKILL.md")
+            if probe_frontmatter and upstream_skill and "SKILL.md" in local:
+                entry["frontmatter"] = frontmatter_verdict(
+                    repo, os.path.join(directory, "SKILL.md"), upstream_skill)
         elif not best["differ"] and not best["absent_upstream"]:
             status = "identical" if not best["new_upstream"] else "upstream-added-files"
             entry = {"skill": key, "status": status, "upstream": best["upstream"]}
@@ -231,7 +290,12 @@ def render(report):
     print(f"  {json.dumps(report['summary'])}")
     for entry in report["skills"]:
         if entry["status"] != "identical":
-            print(f"  {entry['status']:22s} {entry['skill']}")
+            suffix = ""
+            if entry.get("frontmatter"):
+                suffix = f"  [frontmatter: {entry['frontmatter']}]"
+            elif entry.get("local_files") == 1:
+                suffix = "  [single-file skill]"
+            print(f"  {entry['status']:22s} {entry['skill']}{suffix}")
 
 
 def record(state, report, today):
@@ -246,6 +310,9 @@ def record(state, report, today):
         "local_skills": len(report["skills"]),
         "result": report["summary"],
     }
+    probed = {e["skill"]: e["frontmatter"] for e in report["skills"] if e.get("frontmatter")}
+    if probed:
+        entry["frontmatter_probe"] = dict(sorted(probed.items(), key=lambda kv: kv[0].lower()))
     if report["archived"]:
         entry["upstream_archived"] = True
     if report["tree_truncated"]:
@@ -267,6 +334,9 @@ def main():
                         help="check the next N repositories in the rotation")
     parser.add_argument("--record", action="store_true",
                         help="write results back into UPDATE_CHECKS.json")
+    parser.add_argument("--probe-frontmatter", action="store_true",
+                        help="for unmatched candidates, compare the upstream SKILL.md "
+                             "frontmatter to the local one (one extra API call each)")
     args = parser.parse_args()
 
     repos = list(args.repo)
@@ -283,7 +353,7 @@ def main():
         # One dead upstream must not abandon the rest of the batch, and an
         # unreachable repository is a finding in its own right.
         try:
-            report = compare(repo)
+            report = compare(repo, probe_frontmatter=args.probe_frontmatter)
         except Unreachable as error:
             print(f"{repo}  UNREACHABLE  {error}")
             if args.record:

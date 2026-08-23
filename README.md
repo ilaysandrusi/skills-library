@@ -121,3 +121,13 @@ python3 tools/remove-skills.py retire.json \
 python3 tools/check-upstream.py anthropics/skills
 python3 tools/check-upstream.py trailofbits/skills --json
 ```
+
+כשתיקיית ה-upstream קיימת אבל אף קובץ לא מתאים, זה יכול להיות שכתוב מלא של הסקיל (עדכון
+שכדאי לקחת) או סקיל אחר לגמרי עם אותו שם (עדכון שימחק את הסקיל המקומי). blob SHA לא מבדיל
+ביניהם, ולכן `--probe-frontmatter` קורא את ה-`SKILL.md` במעלה הזרם ומשווה את `name` ו-`description`
+לשלנו. זהות מלאה היא עדות חזקה שזה אותו סקיל; `name-differs` מוכיח התנגשות שמות:
+
+```bash
+python3 tools/check-upstream.py firecrawl/skills --probe-frontmatter
+python3 tools/check-upstream.py --rotate 20 --record --probe-frontmatter
+```
