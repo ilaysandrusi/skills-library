@@ -2,7 +2,7 @@
 
 MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB
 
-**מספר סקילים:** 113
+**מספר סקילים:** 112
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -110,7 +110,6 @@ MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB
 | [`redshift-guide`](./redshift-guide/SKILL.md) | Amazon Redshift is NOT PostgreSQL — corrects PostgreSQL-derived LLM mistakes; covers Redshift-specific SQL, DDL, COPY/UNLOAD, system views, metadata discovery, and operational patterns. Applies ONLY when the task is about Redshift itself (cluster, Serverless workgroup, or Redshift SQL). Pushes back… |
 | [`review-skill`](./review-skill/SKILL.md) | Review a proposed Agent Skill for structural validity and content quality before publishing. Runs the skill-validator CLI to check for structural issues, scores the skill with an LLM judge, and interprets results to advise SMEs on what to address. Use when a user wants to review, validate, or… |
 | [`s3-explore`](./s3-explore/SKILL.md) | Explore and query data on S3, Cloudflare R2, GCS, MinIO, or any S3-compatible storage. Use when the user mentions an s3://, r2://, gs://, or gcs:// URL, asks "what's in this bucket", wants to list remote files, preview remote Parquet/CSV/JSON, or query data on object storage without downloading it.… |
-| [`score-eval`](./score-eval/SKILL.md) | Score the eval diff at $ARGUMENTS against the eval rubric. |
 | [`spark-optimization`](./spark-optimization/SKILL.md) | Optimize Apache Spark jobs with partitioning, caching, shuffle optimization, and memory tuning. Use when improving Spark performance, debugging slow jobs, or scaling data processing pipelines. |
 | [`spatial`](./spatial/SKILL.md) | Answer questions about spatial data using DuckDB. Use when the user mentions locations, coordinates, lat/lng, distances, maps, addresses, "near", "within", "closest", geographic names, or spatial file formats (GeoJSON, Shapefile, GeoPackage, GPX, GeoParquet). Also triggers when the user wants to… |
 | [`sql-optimization-patterns`](./sql-optimization-patterns/SKILL.md) | Master SQL query optimization, indexing strategies, and EXPLAIN analysis to dramatically improve database performance and eliminate slow queries. Use when debugging slow queries, designing database schemas, or optimizing application performance. |

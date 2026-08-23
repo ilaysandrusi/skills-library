@@ -1,7 +1,7 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6092,
- "traced_to_source_repo": 6078,
+ "skills": 6091,
+ "traced_to_source_repo": 6077,
  "distinct_source_repos": 224,
  "non_skill_directories": {
   "14-testing-qa/shared": {
@@ -106,11 +106,11 @@
   "vercel-labs/skills": 11,
   "CloudAI-X/threejs-skills": 10,
   "duckdb/duckdb-skills": 10,
-  "neondatabase/agent-skills": 10,
   "Lum1104/Understand-Anything": 9,
   "MohamedAbdallah-14/unslop": 9,
   "metalbear-co/skills": 9,
   "mongodb/agent-skills": 9,
+  "neondatabase/agent-skills": 9,
   "ohad6k/emulo": 9,
   "zxkane/aws-skills": 9,
   "NoizAI/skills": 8,
@@ -41104,15 +41104,6 @@
    "method": "exact-name-match",
    "added_in": "2ddbc8f0",
    "import_note": "affaan-m/ECC"
-  },
-  "25-data-databases/score-eval": {
-   "skill": "25-data-databases/score-eval",
-   "sources": [
-    "neondatabase/agent-skills"
-   ],
-   "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "05-development/screenshot": {
    "skill": "05-development/screenshot",
