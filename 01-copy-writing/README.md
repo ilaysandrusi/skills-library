@@ -2,7 +2,7 @@
 
 עצירת סלופ AI, קופי, הנחיות כתיבה
 
-**מספר סקילים:** 100
+**מספר סקילים:** 108
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -18,6 +18,14 @@
 | [`emails`](./emails/SKILL.md) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation,"… |
 | [`humanizer`](./humanizer/SKILL.md) | Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive "Signs of AI writing" guide. Detects and fixes patterns including: inflated symbolism, promotional language, superficial -ing… |
 | [`humanizer-ru`](./humanizer-ru/SKILL.md) | Проверяет русскоязычный текст на следы машинной генерации и по явной просьбе пользователя переписывает его естественным языком. Отвечает на просьбы вида «очеловечь», «убери гпт-шность», «звучит как нейросеть», «проверь на ИИ», «убери штампы», «убери канцелярит», «сделай живым». Detects AI-generated… |
+| [`iso-24495-1`](./iso-24495-1/SKILL.md) | Core Plain Language standard (ISO 24495-1:2023). Governs all user-facing responses to ensure clear, structured, findable, understandable, and actionable output. |
+| [`iso-24495-2`](./iso-24495-2/SKILL.md) | Sector-specific Plain Language standard for legal communication (ISO 24495-2:2025). Applied during contract drafting, license review, and legal/compliance writing. |
+| [`iso-24495-3`](./iso-24495-3/SKILL.md) | Sector-specific Plain Language standard for science and technical writing (ISO 24495-3:2026). Applied during software documentation, architecture specs, and technical analysis. |
+| [`iso-24495-4`](./iso-24495-4/SKILL.md) | Provisional task skill for organisational plain language implementation (based on ISO/CD 24495-4, committee draft). Activates for plain language gap analysis, policy drafting, review workflow design, and organisational readiness for the future published standard. Does not activate for ordinary… |
+| [`iso-24495-5`](./iso-24495-5/SKILL.md) | Provisional sector-specific Plain Language standard for document design (based on ISO/WD 24495-5, under development). Applied when structuring complex documents so readers can find and navigate content through layout, visual hierarchy, and navigation aids. |
+| [`iso-24495-code`](./iso-24495-code/SKILL.md) | Plain language applied to source code (ISO 24495-1:2023 principles). Governs the parts of code a person reads: the order units appear in, their names, comments, and error messages. Applied when writing or restructuring code, not when explaining it. |
+| [`iso-24495-style`](./iso-24495-style/SKILL.md) | Hold every response to the ISO 24495 plain-language rules, and route to the sector skills. Codex has no output style, so these rules are a skill. |
+| [`iso-24495-text-audit`](./iso-24495-text-audit/SKILL.md) | Audit user-selected Markdown or text files for deterministic plain-language findings. Use only when the user explicitly invokes this skill. |
 | [`johnny-suede-design`](./johnny-suede-design/SKILL.md) | Design and write polished product surfaces people understand fast: landing pages, dashboards, campaigns, restyles, UI copy, and visual QA. |
 | [`johnny-suede-write`](./johnny-suede-write/SKILL.md) | Write sharper Suede copy for docs, pages, email, social, headlines, CTAs, product listings, and public explainers. |
 | [`ru-check`](./ru-check/SKILL.md) | Full Russian text quality check against the whole corpus. Triggers: вычитай, вычитай через ru-text, прогони ru-text, проверь текст по ru-text, ru-check, полная вычитка. Use when the user asks to proofread Russian text, or when a project gate names ru-text. Returns findings with the rule behind each… |

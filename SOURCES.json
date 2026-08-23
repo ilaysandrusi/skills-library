@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6091,
- "traced_to_source_repo": 6077,
- "distinct_source_repos": 224,
+ "skills": 6099,
+ "traced_to_source_repo": 6085,
+ "distinct_source_repos": 225,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -113,6 +113,7 @@
   "neondatabase/agent-skills": 9,
   "ohad6k/emulo": 9,
   "zxkane/aws-skills": 9,
+  "GaZmagik/iso-24495": 8,
   "NoizAI/skills": 8,
   "addyosmani/web-quality-skills": 8,
   "better-auth/skills": 8,
@@ -55191,6 +55192,78 @@
    "method": "direct-import",
    "added_in": "bf09d786",
    "import_note": "first-party Basecamp HEY skill from skills/hey @ bf09d786; hooks archived, not enabled"
+  },
+  "01-copy-writing/iso-24495-1": {
+   "skill": "01-copy-writing/iso-24495-1",
+   "sources": [
+    "GaZmagik/iso-24495"
+   ],
+   "method": "direct-import",
+   "added_in": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "import_note": "ISO 24495 plain-language pack, tag v0.6.1"
+  },
+  "01-copy-writing/iso-24495-2": {
+   "skill": "01-copy-writing/iso-24495-2",
+   "sources": [
+    "GaZmagik/iso-24495"
+   ],
+   "method": "direct-import",
+   "added_in": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "import_note": "ISO 24495 plain-language pack, tag v0.6.1"
+  },
+  "01-copy-writing/iso-24495-3": {
+   "skill": "01-copy-writing/iso-24495-3",
+   "sources": [
+    "GaZmagik/iso-24495"
+   ],
+   "method": "direct-import",
+   "added_in": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "import_note": "ISO 24495 plain-language pack, tag v0.6.1"
+  },
+  "01-copy-writing/iso-24495-4": {
+   "skill": "01-copy-writing/iso-24495-4",
+   "sources": [
+    "GaZmagik/iso-24495"
+   ],
+   "method": "direct-import",
+   "added_in": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "import_note": "ISO 24495 plain-language pack, tag v0.6.1"
+  },
+  "01-copy-writing/iso-24495-5": {
+   "skill": "01-copy-writing/iso-24495-5",
+   "sources": [
+    "GaZmagik/iso-24495"
+   ],
+   "method": "direct-import",
+   "added_in": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "import_note": "ISO 24495 plain-language pack, tag v0.6.1"
+  },
+  "01-copy-writing/iso-24495-code": {
+   "skill": "01-copy-writing/iso-24495-code",
+   "sources": [
+    "GaZmagik/iso-24495"
+   ],
+   "method": "direct-import",
+   "added_in": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "import_note": "ISO 24495 plain-language pack, tag v0.6.1"
+  },
+  "01-copy-writing/iso-24495-text-audit": {
+   "skill": "01-copy-writing/iso-24495-text-audit",
+   "sources": [
+    "GaZmagik/iso-24495"
+   ],
+   "method": "direct-import",
+   "added_in": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "import_note": "ISO 24495 plain-language pack, tag v0.6.1"
+  },
+  "01-copy-writing/iso-24495-style": {
+   "skill": "01-copy-writing/iso-24495-style",
+   "sources": [
+    "GaZmagik/iso-24495"
+   ],
+   "method": "direct-import",
+   "added_in": "58077fc4dd70daeedafc273f2abb9d341e6e5960",
+   "import_note": "ISO 24495 plain-language pack, tag v0.6.1"
   }
  }
 }
