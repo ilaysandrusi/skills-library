@@ -3,7 +3,7 @@
  "purpose": "Rotating upstream update-check state. Each entry records the commit the local copies were verified against, so a later run starts from a real baseline instead of re-deriving one, and can pick the sources that have waited longest.",
  "how_to_check": "python3 tools/check-upstream.py <owner/repo>",
  "baseline_method": "Every local file is compared to the upstream tree by git blob SHA. 'identical' therefore means the local copy is exactly verified_commit, not merely similar to it.",
- "source_repos_total": 222,
+ "source_repos_total": 224,
  "checked": {
   "anthropics/skills": {
    "last_checked": "2026-08-22",
@@ -1024,6 +1024,474 @@
     "drift": 3
    },
    "note": "Drift found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "mcollina/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "856efd268ae85482d882f3d0bed869fd020b5c06",
+   "upstream_pushed_at": "2026-08-17",
+   "license": "MIT",
+   "local_skills": 11,
+   "result": {
+    "identical": 11
+   }
+  },
+  "vercel-labs/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a",
+   "upstream_pushed_at": "2026-08-18",
+   "license": "MIT",
+   "local_skills": 11,
+   "result": {
+    "no-upstream-path": 10,
+    "identical": 1
+   }
+  },
+  "CloudAI-X/threejs-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "b1c623076c661fc9b03dac19292e825a5d106823",
+   "upstream_pushed_at": "2026-07-09",
+   "license": null,
+   "local_skills": 10,
+   "result": {
+    "identical": 10
+   }
+  },
+  "duckdb/duckdb-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-04-23",
+   "license": "MIT",
+   "local_skills": 10,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 9
+   },
+   "frontmatter_probe": {
+    "08-context-engineering/query": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "neondatabase/agent-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": "Apache-2.0",
+   "local_skills": 9,
+   "result": {
+    "no-upstream-path": 1,
+    "unmatched-candidate": 7,
+    "drift": 1
+   },
+   "frontmatter_probe": {
+    "25-data-databases/claimable-postgres": "name-and-description-match",
+    "25-data-databases/neon": "name-and-description-match",
+    "25-data-databases/neon-ai-gateway": "name-matches-description-differs",
+    "25-data-databases/neon-object-storage": "name-and-description-match",
+    "25-data-databases/neon-postgres-branches": "name-and-description-match"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "Lum1104/Understand-Anything": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "32944829e7a63a9fa9c55d811d7f98a9530c6a6a",
+   "upstream_pushed_at": "2026-08-11",
+   "license": "MIT",
+   "local_skills": 9,
+   "result": {
+    "identical": 9
+   }
+  },
+  "MohamedAbdallah-14/unslop": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": "MIT",
+   "local_skills": 9,
+   "result": {
+    "drift": 3,
+    "unmatched-candidate": 2,
+    "identical": 4
+   },
+   "frontmatter_probe": {
+    "01-copy-writing/unslop--mohamedabdallah-14": "name-and-description-match",
+    "01-copy-writing/unslop--mohamedabdallah-14-2": "name-and-description-match"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "metalbear-co/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "8dffe83946bc9f6060a1adaf224b0c43bb2449df",
+   "upstream_pushed_at": "2026-08-19",
+   "license": "MIT",
+   "local_skills": 9,
+   "result": {
+    "identical": 9
+   }
+  },
+  "mongodb/agent-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "2fd451405f6b7897bca16fca5c65eb6d65284329",
+   "upstream_pushed_at": "2026-08-22",
+   "license": "Apache-2.0",
+   "local_skills": 9,
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 8
+   }
+  },
+  "ohad6k/emulo": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-18",
+   "license": "MIT",
+   "local_skills": 9,
+   "result": {
+    "unmatched-candidate": 3,
+    "identical": 6
+   },
+   "frontmatter_probe": {
+    "03-marketing/video": "name-matches-description-differs",
+    "16-ai-apis-media/video--ohad6k": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "zxkane/aws-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-06-15",
+   "license": "MIT",
+   "local_skills": 9,
+   "result": {
+    "no-upstream-path": 3,
+    "unmatched-candidate": 1,
+    "identical": 5
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "NoizAI/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "2a0e09d8cb9056e044c473dd53a136b81ba428e9",
+   "upstream_pushed_at": "2026-05-07",
+   "license": null,
+   "local_skills": 8,
+   "result": {
+    "identical": 8
+   }
+  },
+  "addyosmani/web-quality-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-06-14",
+   "license": "MIT",
+   "local_skills": 8,
+   "result": {
+    "identical": 6,
+    "unmatched-candidate": 2
+   },
+   "frontmatter_probe": {
+    "29-ecc/accessibility": "name-matches-description-differs",
+    "29-ecc/seo": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "better-auth/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-07-11",
+   "license": null,
+   "local_skills": 8,
+   "result": {
+    "unmatched-candidate": 2,
+    "no-upstream-path": 5,
+    "identical": 1
+   },
+   "frontmatter_probe": {
+    "02-design-ui/best-practices": "name-differs",
+    "05-development/security": "name-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "ehmo/platform-design-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "dc2be825d8b439caea78e9eaa8fb3ac23b0ff3e9",
+   "upstream_pushed_at": "2026-03-19",
+   "license": "MIT",
+   "local_skills": 8,
+   "result": {
+    "no-upstream-path": 8
+   }
+  },
+  "figma/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "local_skills": 8,
+   "result": {
+    "unreachable": 1
+   },
+   "note": "Upstream could not be read (gh api repos/figma/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  "greensock/gsap-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+   "upstream_pushed_at": "2026-07-29",
+   "license": "MIT",
+   "local_skills": 8,
+   "result": {
+    "identical": 8
+   }
+  },
+  "firecrawl/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "8b18f3b161ff3081e8dc8417dcdc8cb24aa0fd9e",
+   "upstream_pushed_at": "2026-08-21",
+   "license": "ISC",
+   "local_skills": 7,
+   "result": {
+    "identical": 7
+   }
+  },
+  "fvadicamo/dev-agent-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-09",
+   "license": "MIT",
+   "local_skills": 7,
+   "result": {
+    "identical": 5,
+    "unmatched-candidate": 2
+   },
+   "frontmatter_probe": {
+    "05-development/git-commit": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "ibelick/ui-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "b5be117f9cc3371caef7d3869f5c650f2033f14c",
+   "upstream_pushed_at": "2026-08-22",
+   "license": "MIT",
+   "local_skills": 7,
+   "result": {
+    "identical": 7
+   }
+  },
+  "replicate/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "2f36e415965ae63baa1c9f6635888092bcd771d3",
+   "upstream_pushed_at": "2026-06-04",
+   "license": "Apache-2.0",
+   "local_skills": 7,
+   "result": {
+    "identical": 7
+   }
+  },
+  "sanity-io/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "local_skills": 7,
+   "result": {
+    "unreachable": 1
+   },
+   "note": "Upstream could not be read (gh api repos/sanity-io/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  "stjbrown/agent-knowledge": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
+   "upstream_pushed_at": "2026-08-01",
+   "license": "MIT",
+   "local_skills": 7,
+   "result": {
+    "identical": 7
+   }
+  },
+  "khendzel/skills-janitor": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "4a4c0134ebb6ad78e24bad8fe8295011499ff9d0",
+   "upstream_pushed_at": "2026-08-11",
+   "license": "MIT",
+   "local_skills": 6,
+   "result": {
+    "identical": 6
+   }
+  },
+  "makenotion/claude-code-notion-plugin": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-01-22",
+   "license": null,
+   "local_skills": 6,
+   "result": {
+    "identical": 4,
+    "drift": 2
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "makenotion/notion-cookbook": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": "MIT",
+   "local_skills": 6,
+   "result": {
+    "identical": 4,
+    "drift": 2
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "stripe/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "local_skills": 6,
+   "result": {
+    "unreachable": 1
+   },
+   "note": "Upstream could not be read (gh api repos/stripe/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  "zilliztech/mfs": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-07-31",
+   "license": "Apache-2.0",
+   "local_skills": 6,
+   "result": {
+    "unmatched-candidate": 2,
+    "identical": 4
+   },
+   "frontmatter_probe": {
+    "16-ai-apis-media/deep-research": "name-matches-description-differs",
+    "29-ecc/deep-research": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "Charlie85270/Dorothy": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-07-07",
+   "license": "MIT",
+   "local_skills": 5,
+   "result": {
+    "identical": 4,
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "K-Dense-AI/claude-scientific-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-19",
+   "license": "MIT",
+   "local_skills": 5,
+   "result": {
+    "drift": 4,
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "29-ecc/exa-search": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "plasma-ai/fractal": {
+   "last_checked": "2026-08-23",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-20",
+   "license": "Apache-2.0",
+   "local_skills": 5,
+   "result": {
+    "unmatched-candidate": 2,
+    "identical": 3
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "rameerez/claude-code-startup-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "410f81f83e4ac309032eab3d3265353f97ea665f",
+   "upstream_pushed_at": "2026-02-23",
+   "license": "MIT",
+   "local_skills": 5,
+   "result": {
+    "identical": 5
+   }
+  },
+  "resend/resend-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "2a69b9f39a16c043cbfad45fbfa3c141bd27b050",
+   "upstream_pushed_at": "2026-08-23",
+   "license": "MIT",
+   "local_skills": 5,
+   "result": {
+    "identical": 5
+   }
+  },
+  "shouldnotappearcalm/a-share-skill": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "84946232ef36d2f1e04a0089ad64380c2de46698",
+   "upstream_pushed_at": "2026-06-24",
+   "license": "MIT",
+   "local_skills": 5,
+   "result": {
+    "identical": 5
+   }
+  },
+  "gokapso/agent-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "d0cdd934dcc1bc69e53dc3d042c08a1150abebc4",
+   "upstream_pushed_at": "2026-08-22",
+   "license": null,
+   "local_skills": 4,
+   "result": {
+    "identical": 3,
+    "no-upstream-path": 1
+   }
+  },
+  "google-gemini/gemini-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "b40dd8d9c771ba6e84c0ff6502875e3f42b4ec14",
+   "upstream_pushed_at": "2026-08-19",
+   "license": "Apache-2.0",
+   "local_skills": 4,
+   "result": {
+    "identical": 4
+   }
+  },
+  "obra/superpowers-lab": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "51111f74f24058117752d9aa917cb19859f8ec86",
+   "upstream_pushed_at": "2026-06-01",
+   "license": "MIT",
+   "local_skills": 4,
+   "result": {
+    "identical": 4
+   }
+  },
+  "talkstream/ru-text": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "73dc04a492fc0bbeae31bd5374ce90c2d3cad6e7",
+   "upstream_pushed_at": "2026-08-17",
+   "license": "MIT",
+   "local_skills": 4,
+   "result": {
+    "identical": 4
+   }
+  },
+  "tinybirdco/tinybird-agent-skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "19a3ec18b2270fb82cc3489eabf122da0706e6a0",
+   "upstream_pushed_at": "2026-07-29",
+   "license": null,
+   "local_skills": 4,
+   "result": {
+    "identical": 4
+   }
+  },
+  "voltagent/skills": {
+   "last_checked": "2026-08-23",
+   "verified_commit": "066b137c520a8739a899e160516d1f4044add7f3",
+   "upstream_pushed_at": "2026-01-27",
+   "license": "MIT",
+   "local_skills": 4,
+   "result": {
+    "identical": 4
+   }
   }
  },
  "review_queue": {
@@ -1205,34 +1673,46 @@
    ]
   },
   "upstream_updates_held": {
-   "note": "Sources whose drift exceeds what one automatic run should apply, or that need a judgement call. Counts are from the 2026-08-22 pass.",
-   "JasonColapietro/suede-creator-skills": "69 of 71 packages drifted.",
-   "aaron-he-zhu/aaron-marketing-skills": "54 of 122 drifted, plus 68 unmatched candidates.",
-   "infrasity-labs/dev-gtm-claude-skills": "39 of 358 drifted.",
-   "trailofbits/skills": "38 of 78 drifted. Security-sensitive, so the diff needs reading.",
-   "mattpocock/skills": "31 of 37 drifted.",
-   "helius-labs/core-ai": "24 of 24 drifted — the whole pack moved.",
-   "foryourhealth111-pixel/Vibe-Skills": "14 of 38 drifted.",
-   "remotion-dev/skills": "12 of 12 drifted — the whole pack moved.",
-   "google/skills": "12 of 110 drifted. First-party and a good candidate for the next run.",
-   "snyk/agent-scan": "10 of 31 drifted, but these are the scanner's test fixtures listed under snyk_agent_scan_test_fixtures. Do not update them; they should be retired, not refreshed.",
-   "openai/skills": "figma-generate-library and figma-use drifted; linear and notion-knowledge-capture are missing upstream assets their --openai twins carry. Held behind the duplicate cluster."
+   "note": "Sources whose drift exceeds what one automatic run should apply, or that need a judgement call. Counts are from the run named beside each entry.",
+   "K-Dense-AI/claude-scientific-skills": "2026-08-23: 4 drifted — 06-documents/docx, pdf, pptx, xlsx. DO NOT APPLY. All four are blob-identical to anthropics/skills @ 3b3fad96 (verified 2026-08-22) and carry Anthropic's LICENSE.txt, so Anthropic is the origin and K-Dense ships a vendored fork. Applying this would replace the originals with a third party's copy.",
+   "Charlie85270/Dorothy": "2026-08-23: 1 drifted — 05-development/vercel-react-best-practices. Held on the same suspicion: 8 local files are absent upstream, including README.md, metadata.json and six rules files, so the local copy is richer than Dorothy's and Dorothy looks like a subset or fork rather than the origin. The sibling 16-ai-apis-media/vercel-react-best-practices--charlie85270 IS identical to Dorothy, which fits two copies with two different origins. Needs the real Vercel upstream identified before either is touched.",
+   "makenotion/notion-cookbook + makenotion/claude-code-notion-plugin": "2026-08-23: 2 drifted in each — meeting-intelligence and spec-to-implementation, and their --makenotion twins. Both Notion repositories publish the same two skills, and the local tree holds both copies, so this is the duplicate cluster and the update question cannot be answered before the duplicate one is. See duplicate_skill_md_groups.",
+   "MohamedAbdallah-14/unslop": "2026-08-23: 3 drifted, 2 unmatched candidates, across 9 local copies of one upstream pack. The probe reports name-and-description-match for unslop--mohamedabdallah-14 and -2, confirming they are the same skill as their unsuffixed sibling. Deduplicate first, then update whatever survives.",
+   "neondatabase/agent-skills": "2026-08-23: 1 drifted, 8 unmatched candidates. Upstream restructured into a plugin layout (plugins/neon-postgres/skills/), so the flat local layout no longer mirrors it. The probe reports name-and-description-match for several, so these are the same skills at new paths, not collisions — but adopting the plugin layout is a structural decision for the owner. Restructuring-heavy, so reported rather than applied.",
+   "JasonColapietro/suede-creator-skills": "2026-08-22: 69 of 71 packages drifted.",
+   "aaron-he-zhu/aaron-marketing-skills": "2026-08-22: 54 of 122 drifted, plus 68 unmatched candidates.",
+   "infrasity-labs/dev-gtm-claude-skills": "2026-08-22: 39 of 358 drifted.",
+   "trailofbits/skills": "2026-08-22: 38 of 78 drifted. Security-sensitive, so the diff needs reading.",
+   "mattpocock/skills": "2026-08-22: 31 of 37 drifted.",
+   "helius-labs/core-ai": "2026-08-22: 24 of 24 drifted — the whole pack moved.",
+   "foryourhealth111-pixel/Vibe-Skills": "2026-08-22: 14 of 38 drifted.",
+   "remotion-dev/skills": "2026-08-22: 12 of 12 drifted — the whole pack moved.",
+   "google/skills": "2026-08-22: 12 of 110 drifted. First-party and a good candidate for the next run.",
+   "metalbear-co/skills": "2026-08-23: APPLIED, 7 skills. Now identical at 8dffe839.",
+   "resend/resend-skills": "2026-08-23: APPLIED, 2 skills. Now identical at 2a69b9f3.",
+   "mcollina/skills": "2026-08-23: APPLIED, fastify. Now identical at 856efd26.",
+   "talkstream/ru-text": "2026-08-23: APPLIED, ru-text and ru-check. Now identical at 73dc04a4.",
+   "gokapso/agent-skills": "2026-08-23: APPLIED, integrate-whatsapp. Now identical at d0cdd934. Upstream declares no license — flagged for the owner to decide whether to keep the skill at all.",
+   "firecrawl/skills": "2026-08-23: APPLIED, both index skills. Now identical at 8b18f3b1.",
+   "snyk/agent-scan": "2026-08-22: 10 of 31 drifted, but these are the scanner's test fixtures listed under snyk_agent_scan_test_fixtures. Do not update them; they should be retired, not refreshed.",
+   "openai/skills": "2026-08-22: figma-generate-library and figma-use drifted; linear and notion-knowledge-capture are missing upstream assets their --openai twins carry. Held behind the duplicate cluster."
   },
   "smaller_items": {
    "agents/wshobson/hr-pro.md": "Kept when 22-legal was dropped, but is now the one agent here with no matching skill in the library.",
    "28-career-education-health/Vibe-Skills/bundled/skills/unsloth/references/llms-full.md": "0 bytes and referenced by nothing in the pack.",
-   "09-anthropic-tools/template--anthropics": "Anthropic's empty skill template. Kept on purpose (the category covers templates), noted so it is not repeatedly flagged as a placeholder."
-  },
-  "coverage_2026_08_22": {
-   "sources_covered": 87,
-   "sources_total": 222,
-   "skill_source_pairs_checked": 5936,
-   "identical": 5070,
-   "note": "87 of 222 sources have now been checked and 5070 local skill copies are blob-identical to their upstream HEAD, so their provenance is proven rather than assumed. 135 sources remain unchecked; --rotate picks them up oldest-first."
+   "09-anthropic-tools/template--anthropics": "Anthropic's empty skill template. Kept on purpose (the category covers templates), noted so it is not repeatedly flagged as a placeholder.",
+   "25-data-databases/score-eval": "RESOLVED 2026-08-23: retired. It came from neondatabase/agent-skills evals/neon-postgres-egress-optimizer/.claude/skills/, was an eval-harness helper rather than a skill, set disable-model-invocation: true, and read three files that are not in the archive.",
+   "UPDATE_CHECKS.json derived counters": "RESOLVED 2026-08-23: source_repos_total said 222 after two sources were added (224), and coverage claimed 87 sources against 86 recorded. Both now recomputed from the files."
   },
   "unmatched_candidates": {
-   "what": "Skills whose upstream directory exists but where not a single file matches by blob SHA. Surfaced on 2026-08-22 when check-upstream.py stopped mislabelling these as 'no-upstream-path', a status that reads as 'nothing to do'. Each one is either a wholesale upstream rewrite worth taking or a coincidental same-name skill in an unrelated repository, where applying the update would destroy the local skill. Blob SHAs cannot tell those apart.",
-   "count": 449,
+   "what": "Skills whose upstream directory exists but where not a single file matches by blob SHA. Each one is either a wholesale upstream rewrite worth taking or a coincidental same-name skill in an unrelated repository, where applying the update would destroy the local skill. Blob SHAs cannot tell those apart.",
+   "count": 474,
+   "triage": "Run `tools/check-upstream.py <repo> --probe-frontmatter`. It reads the upstream SKILL.md and compares `name` and `description` to the local ones, and records the verdict under `checked[repo].frontmatter_probe`. `name-and-description-match` is strong evidence of the same skill; `name-differs` proves a collision and the update must not be applied. `local_files: 1` marks a single-file skill, which lands in this status whenever its one file changes at all, because one changed file leaves zero matched files. Two of the four updates applied on 2026-08-23 were found this way.",
+   "probe_verdicts_so_far": {
+    "name-matches-description-differs": 10,
+    "name-and-description-match": 6,
+    "name-differs": 2
+   },
    "biggest": {
     "aaron-he-zhu/aaron-marketing-skills": 68,
     "alirezarezvani/claude-skills": 49,
@@ -1241,9 +1721,13 @@
     "tobihagemann/turbo": 19,
     "indranilbanerjee/digital-marketing-pro": 19,
     "gooseworks-ai/goose-skills": 18,
-    "trailofbits/skills": 16
+    "trailofbits/skills": 16,
+    "neondatabase/agent-skills": 8
    },
-   "suggested": "Work through these per source, not in bulk. SOURCES.json attributes many skills by exact-name-match, so expect most to be coincidences rather than updates. eas-observe (expo/skills) was the one confirmed rewrite this run and was applied after checking the frontmatter matched."
+   "confirmed_collisions_do_not_apply": {
+    "02-design-ui/best-practices": "better-auth/skills — name-differs. Generic slug; the upstream directory is an unrelated skill.",
+    "05-development/security": "better-auth/skills — name-differs. Same."
+   }
   },
   "orphaned_upstreams": {
    "what": "Sources that returned 404 with no relocated repository found. Each is named as the only source of its local skills, so the origin was real and has been deleted or made private. The archive is now the only copy. Preserve them: no baseline is recoverable and no future update check is possible unless upstream returns.",
@@ -1255,6 +1739,33 @@
    "netlify/skills": {
     "local_skills": 14,
     "checked": "2026-08-22"
+   },
+   "figma/skills": {
+    "local_skills": 8,
+    "checked": "2026-08-23",
+    "note": "404. Searched the figma org and GitHub for a rename; nothing matching exists. The 8 local skills are all figma-* under 02-design-ui."
+   },
+   "sanity-io/skills": {
+    "local_skills": 7,
+    "checked": "2026-08-23",
+    "note": "404, no relocation found. 7 local skills under 15-integrations."
+   },
+   "stripe/skills": {
+    "local_skills": 6,
+    "checked": "2026-08-23",
+    "note": "404, no relocation found. The stripe org still publishes claude-code-patches and detect-agent, neither of which is a skill pack. 6 local skills under 15-integrations."
+   }
+  },
+  "coverage": {
+   "as_of": "2026-08-23",
+   "sources_covered": 126,
+   "sources_total": 224,
+   "skill_source_pairs_checked": 6196,
+   "identical": 5261,
+   "note": "126 of 224 sources have been checked and 5261 local skill copies are blob-identical to their upstream HEAD, so their provenance is proven rather than assumed. 98 sources remain unchecked; --rotate picks them up never-checked first, then oldest.",
+   "history": {
+    "2026-08-22": "87 claimed, 86 actual (off by one); 222 total before two sources were added.",
+    "2026-08-23": "126 sources after a 40-source rotation batch."
    }
   }
  },
