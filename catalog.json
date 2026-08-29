@@ -1,5 +1,5 @@
 {
- "total": 6099,
+ "total": 6100,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -24591,6 +24591,17 @@
    "title": "אחר",
    "description": "סקילים שלא סווגו לקטגוריה ברורה",
    "skills": []
+  },
+  {
+   "id": "HEADROOM",
+   "title": "HEADROOM",
+   "description": "סקילים וכלים לזיכרון, הקשר ורציפות עבודה בין סשנים",
+   "skills": [
+   {
+    "name": "claude-mem",
+    "description": "כלי זיכרון לסוכני קוד כמו Claude Code, Codex, Cursor, OpenCode ו-Gemini. משתמשים בו כשרוצים שהסוכן יזכור סשנים קודמים, יחפש החלטות ותיקונים מהעבר, יכניס הקשר רלוונטי לעבודה חדשה, וימשיך פרויקט בלי להסביר הכול מחדש. התיקייה כוללת את המאגר המקורי המלא: plugin files, hooks, MCP search tools, worker service, תיעוד, בדיקות וקובצי runtime."
+   }
+   ]
   }
  ]
 }
