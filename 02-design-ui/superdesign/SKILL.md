@@ -1,22 +1,23 @@
 ---
 name: superdesign
-description: "Design or redesign frontend UI on the Superdesign canvas. Use whenever the user wants to design a page, feature, flow, or a brand-new product with no code yet; redesign or improve existing UI; faithfully reproduce current UI; explore visual variants; set or extract a design system (including borrowing a style from a live website URL); build reusable design components; design multi-page flows; or create static posters, flyers, cover art, or social/marketing graphics composed on canvas, even if they never say the word 'design tool'."
+description: "Design or redesign frontend UI, presentations, and graphics on the Superdesign canvas with a choice of leading AI models. Use whenever the user wants to design a page, feature, flow, slide deck, or brand-new product; improve or reproduce existing UI; compare design results across top models; explore visual variants; set or extract a design system; build reusable components or multi-page flows; create presentations; or create posters and marketing graphics, even if they never say the word 'design tool'. Also supports generating supporting image or video assets when a design needs them."
 ---
 
-Superdesign helps you (1) find design inspirations/styles and (2) generate/iterate design drafts on an infinite canvas.
+Superdesign helps you find design inspiration and generate or iterate design drafts on an infinite canvas, with multiple leading models available for different design tasks and side-by-side exploration. When a design needs a new visual asset, it can also provide image and video generation.
 
 ---
 
 # Core scenarios (what this skill handles)
 
-1. **"superdesign init"** (the user asking for repo analysis) — analyze the repo and build UI context to `.superdesign/init/`. This is this skill's own analysis pass; the CLI's `init` command is a different thing entirely (it installs skill files) — never run it to build `.superdesign/init/`.
-2. **Help me design X** (feature/page/flow) — the target decides the SOP: an existing rendered page is reproduced first (ground truth), while a brand-new page (in a real repo or from scratch) is designed directly with no reproduction step; see UI TARGET ROUTING in [SUPERDESIGN.md](references/SUPERDESIGN.md)
-3. **Set design system** (optionally seed or refresh it from a live site via `extract-website --design-md` — you'll choose *create-from / inspired-by / update-existing*, asking first if a `design-system.md` already exists; see [SUPERDESIGN.md](references/SUPERDESIGN.md) SOP: BRAND NEW PROJECT Step 2)
-4. **Help me improve design of X**
-5. **Make a poster / marketing asset** (flyer, cover art, social feed post, story, channel cover, thumbnail, ad creative) — a static artwork, not a page. Skip repo init/analysis; read [GRAPHIC.md](references/GRAPHIC.md) and follow it (you generate the key visual with your own image tool, upload it, then compose the artwork on a fixed canvas; platform dimension table included).
-6. **Design from a live website / reference URL** (borrow a style, restyle, recombine, or plan a rebuild) — extract a reference site's design DNA (style guide, design tokens, content structure, brand assets, a static reference clone) with `extract-website`, then design with it. Read [WEBSITE.md](references/WEBSITE.md) and follow its recipes. Note: via the CLI a "recreate"/"clone" is a **style-informed rebuild** — faithful pixel-recreation and *editable* on-canvas clones are done in the Superdesign app (superdesign.dev), not the CLI.
-7. **Design or correct with your own model** — when the user explicitly asks, `create-design-draft` / `iterate-design-draft` still fails after one retry, or [SUPERDESIGN.md](references/SUPERDESIGN.md) **CORRECTION METHOD ROUTING** selects a deterministic direct edit, follow [design-with-your-model.md](references/design-with-your-model.md) to author or revise the draft yourself.
-8. **Work on an initialized target** — whenever a real-codebase UI request addresses a target already recorded in `.superdesign/resume.json`, try the durable path in [RESUME.md](references/RESUME.md) before any cold repo/context discovery. This is state-driven, not dependent on words such as "continue" or "refine".
+1. **Analyze a codebase for design work** — `superdesign init` builds reusable UI context in `.superdesign/init/`; read [INIT.md](references/INIT.md).
+2. **Design, reproduce, or improve UI** — create pages, features, flows, and new products on the canvas; read [SUPERDESIGN.md](references/SUPERDESIGN.md).
+3. **Choose and compare leading design models** — run `list-models`, select a model suited to the task, or use different models to explore independent directions.
+4. **Create design systems and reusable components** — establish visual foundations, extract patterns, and design connected multi-page experiences.
+5. **Design from a live website or reference URL** — extract and apply its design language; read [WEBSITE.md](references/WEBSITE.md).
+6. **Create or export presentations** — plan an editable slide outline, approve it in chat, generate a real presentation draft, make slide-safe edits, or reconstruct an editable PPTX when requested and supported; read [PRESENTATION.md](references/PRESENTATION.md).
+7. **Create graphics** — posters, covers, social posts, thumbnails, flyers, and ads; read [GRAPHIC.md](references/GRAPHIC.md).
+8. **Generate supporting images or video** — use native image generation when appropriate or choose from Superdesign's generation models; read [ASSET_GENERATION.md](references/ASSET_GENERATION.md).
+9. **Continue or directly correct existing work** — resume saved targets through [RESUME.md](references/RESUME.md), or use [design-with-your-model.md](references/design-with-your-model.md) when direct authoring is the right path.
 
 When continuing a draft, follow [SUPERDESIGN.md](references/SUPERDESIGN.md) **ITERATION MODE ROUTING**: replace refines the selected direction with version history; branch is only for alternatives the user wants to compare.
 
@@ -50,7 +51,11 @@ Two entry paths. Choose one with this cheap, deterministic check BEFORE any init
 
 **Exception — standalone extraction:** if the task is ONLY to extract a site's design DNA or set/refresh `design-system.md` from a URL (`extract-website` → `design-system.md`, no design generation; read [WEBSITE.md](references/WEBSITE.md) for the recipes), run it WITHOUT repo init — extracting an external site's style doesn't require analyzing the user's codebase. Init is still required before generating designs FOR the existing codebase's UI (reproducing/redesigning an existing page).
 
-**Exception — graphics:** posters/marketing assets (scenario 5) skip init even in a real codebase — the brief carries the style, and most of init's output (components, layouts, routes, pages) has no bearing on a fixed-canvas artwork. The graphic brief round asks whether the artwork should be on-brand with this repo's product ([GRAPHIC.md](references/GRAPHIC.md) Step 1); only an on-brand "yes" pulls in the design-system/brand context — running init first only if that context doesn't already exist.
+**Exception — graphics:** posters/marketing assets (scenario 7) skip init even in a real codebase — the brief carries the style, and most of init's output (components, layouts, routes, pages) has no bearing on a fixed-canvas artwork. The graphic brief round asks whether the artwork should be on-brand with this repo's product ([GRAPHIC.md](references/GRAPHIC.md) Step 1); only an on-brand "yes" pulls in the design-system/brand context — running init first only if that context doesn't already exist.
+
+**Exception — presentations:** slide decks (scenario 6) skip UI repo init by default because routes, components, and page dependency trees do not help deck creation. Follow [PRESENTATION.md](references/PRESENTATION.md). Use narrowly relevant product documents, design-system context, and Brand Assets when the user wants an on-brand product presentation; run init only when matching the codebase brand is required and no usable brand/theme context exists yet.
+
+**Exception — image/video generation:** a standalone generated asset (scenario 8) skips init even in a real codebase. Read [ASSET_GENERATION.md](references/ASSET_GENERATION.md) and gather only the project, brand, reference, or destination context the requested asset actually needs. If the asset is one step inside a broader UI, presentation, or graphic-design task, follow that task's normal init/brief path and use asset generation only at the point where a new visual is needed.
 
 # Step 1.5 — Resume before rediscovery (real-codebase UI path)
 
@@ -62,7 +67,7 @@ Use the cold path only when no saved entry covers the requested target, the user
 
 # Init: Repo Analysis (real-codebase path)
 
-When a real codebase is present (per Step 1, and neither Step 1 exception — standalone extraction, graphics — applies) and init is NOT complete, you MUST automatically:
+When a real codebase is present (per Step 1, and no Step 1 exception applies) and init is NOT complete, you MUST automatically:
 
 1. Create the `.superdesign/init/` directory
 2. Read [INIT.md](references/INIT.md)
@@ -148,3 +153,5 @@ Always close with a short, warm follow-up that offers to go further (on every su
 # How it works
 
 Read [SUPERDESIGN.md](references/SUPERDESIGN.md), then follow its instructions.
+
+For an image or video generation request, read [ASSET_GENERATION.md](references/ASSET_GENERATION.md). Load the other scenario-specific references linked above when those scenarios apply.

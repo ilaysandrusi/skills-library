@@ -3,7 +3,9 @@
 - Repository: `OthmanAdi/planning-with-files`
 - URL: https://github.com/OthmanAdi/planning-with-files
 - Upstream path: `skills/planning-with-files`
-- Imported commit: `84eb74c4b0cda85af1dc86ee883917f7b325eee5`
+- Imported commit: `03128b278b0926180854703e43abd7ea2ff18c00`
+- Upstream version: `3.16.0`
+- Previous imported commit: `84eb74c4b0cda85af1dc86ee883917f7b325eee5` (`3.11.0`)
 - Local skill path: `08-context-engineering/planning-with-files`
 - License: MIT (Copyright (c) 2026 Ahmad Adi)
 
@@ -46,13 +48,34 @@ Reviewed before import:
   networking imports in `session-catchup.py`, no downloads, no remote execution.
 - No destructive commands, no `sudo`, no writes outside the project's
   `.planning/` directory.
-- `session-catchup.py` reads `~/.claude/projects/` and `~/.codex/sessions`
-  transcripts. That is read-only and is the documented purpose of the skill —
-  rebuilding plan state after `/clear` — but it does mean the script touches
-  local session history, so it is worth knowing before enabling.
 - `gate-stop.sh` is a thin dispatcher that resolves a sibling `check-complete.sh`
   and runs it; both honour a `PLANNING_DISABLED=1` opt-out and exit 0 when the
   skill is not in use.
+
+### `session-catchup.py` and the `3.16.0` hardening
+
+At `3.11.0` this script read `~/.claude/projects/` and `~/.codex/sessions`
+transcripts **by default**, including from the automatic session-start path. That
+was read-only and was the skill's documented purpose, but it meant a lifecycle
+hook reached into local session history unprompted.
+
+`3.16.0` narrows that, and the change is the reason this update was taken:
+
+- automatic recovery now reads the project's own planning files plus
+  `git diff --stat` only, and no longer inspects any agent session store;
+- session history is reachable solely through an explicit flag —
+  `--metadata` emits aggregate counts for the same project only, and `--replay`
+  emits bounded, nonce-framed excerpts;
+- every hook command now short-circuits with `exit 0` when `CLAUDE_PLUGIN_ROOT`
+  is set, so a plugin install no longer double-fires the handlers;
+- the frontmatter description now states outright that the skill has no network
+  upload path and never runs commands declared in Markdown.
+
+Re-verified after the update: still no `curl`, `wget`, `urllib`, `requests`,
+`socket`, `subprocess`, `os.system`, `eval`, `exec`, `Invoke-WebRequest` or
+`Invoke-Expression` anywhere in the package. The nonce framing around replayed
+excerpts is prompt-injection defence — replayed transcript text is fenced so the
+reading agent cannot mistake it for instructions.
 
 ## Why this is not a duplicate
 

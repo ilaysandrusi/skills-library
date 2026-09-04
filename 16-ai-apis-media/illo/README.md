@@ -1,14 +1,14 @@
 # Illo
 
+**[illo-skill.com](https://illo-skill.com)** — live examples, character packs,
+and copy-paste installs. This file is the developer reference (engines,
+models, cost, API keys).
+
 Turn a concept or an article into original **editorial illustrations** —
 flat, bold-lined print-style scenes where a recurring mascot performs the
 idea. One image says one thing: a key judgment, a flow, a before/after, a
 trap. It's a deliberate house style, not a generic image generator — closer
 to a smart, deadpan print zine than to clip art or an infographic.
-
-> **🌐 [illo-skill.com](https://illo-skill.com)** — the friendly tour: live
-> examples, the character gallery, and copy-paste installs. This README is
-> the developer reference; the site is the two-minute version.
 
 The methodology is the constant; **the character pack and palette are yours
 to set** — and every character pack carries its own print style. Out of the
@@ -215,7 +215,7 @@ the fallback for runtimes without a native plugin/skill manager.
 | **Claude Code** | `/plugin marketplace add tmchow/illo-skill` then `/plugin install illo@illo-skill` | `claude plugin update illo`, or enable marketplace auto-update |
 | **Codex** | `codex plugin marketplace add tmchow/illo-skill` then `codex plugin add illo@illo-skill` | `codex plugin marketplace upgrade` |
 | **Grok CLI** | `grok plugin marketplace add tmchow/illo-skill` then `grok plugin install tmchow/illo-skill --trust` | `grok plugin update illo` |
-| **Grok Bot** | paste the prompt below into Grok Bot. | paste the prompt again after updates |
+| **Grok Bot** | tap [the illo bot template](https://x.ai/bot/y3uTGY5hkl6iTmE-ZAX02) | add the template again after updates |
 | **Gemini CLI** | `gemini extensions install https://github.com/tmchow/illo-skill` | `gemini extensions update illo` |
 | **Copilot / GitHub CLI** | `gh skill install tmchow/illo-skill illo` (cross-agent via `--agent`) | `gh skill update illo` |
 | **Hermes** | `hermes skills install tmchow/illo-skill/illo` | `hermes skills update illo` |
@@ -225,13 +225,7 @@ the fallback for runtimes without a native plugin/skill manager.
 
 ### Grok Bot
 
-Paste this into Grok Bot; it is not a terminal command for you to run yourself.
-
-```text
-Install the illo skill and all community characters.
-
-npx skills add tmchow/illo-skill --skill illo -g -y
-```
+Open the [illo bot template](https://x.ai/bot/y3uTGY5hkl6iTmE-ZAX02) and tap **Add to Grok Bot**. That creates an illo bot on your account.
 
 From an interactive Hermes session:
 
@@ -267,12 +261,17 @@ kept in lockstep with `SKILL.md` by Release Please and CI.
 - **Mini-comics** — a process, a before→after, a fail→fix told in 2–4 panels
   inside one image. The best shape when a sequence belongs together — and for
   social, where one self-contained image beats a thread.
-- **Explainer diagrams** — when the point *is* the structure (a pipeline, a
-  fan-out, a timeline, a loop, a layered stack), ask for "the flow" or "an
-  explainer" and the same mascot and look draw it as a hand-built
-  sketch-diagram: stations, one flow direction, short color-coded callouts —
-  traceable, but never a PowerPoint flowchart. The scene stays the default;
-  the diagram register is opt-in or earned by content whose thesis is the
+- **Explainer diagrams** — when the point *is* the structure (labeled
+  stages, a fan-out, a timeline, a loop, a layered stack), ask for "the
+  flow", "as labeled stages", "label the steps", "walk the stages", or
+  "an explainer" and the same mascot and look draw it as a hand-built
+  sketch-diagram: named phases, one flow direction, station names plus
+  arrow notes — traceable, but never a PowerPoint / Visio flowchart look.
+  Asking for a flowchart still means labeled stages in the pack's look.
+  A named pipeline or recipe is labeled stages: one connected system,
+  solved for that character, never a new look. The world is invented
+  from the thesis and the pack. The scene stays the default; the
+  diagram register is opt-in or earned by content whose thesis is the
   structure itself.
 - **Character cutouts** — transparent PNG of the mascot alone (pose, optional
   contact objects in touch with the body) for slides, compositing, or handing
@@ -318,6 +317,16 @@ stray titles, fresh metaphor every time), and aspect ratios cover article
   or generic stock art.
 - Image models approximate exact colors; the skill eyedrops and re-rolls
   off-target palettes.
+
+## In this repo
+
+The skill lives in this directory (`skills/illo/`). Installers copy it
+verbatim, so only what every install should ship belongs here. Docs-only
+images live in [`_assets/illo/`](../../_assets/illo/) at the repo root
+(linked by raw URL). Proven explainer renders used on the repo README are in
+[`docs/examples/`](../../docs/examples/). Plugin manifests sit at the repo
+root (`.claude-plugin/`, `.codex-plugin/`, `.cursor-plugin/`,
+`.grok-plugin/`, `gemini-extension.json`).
 
 ## License & credit
 

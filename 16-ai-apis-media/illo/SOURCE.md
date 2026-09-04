@@ -3,8 +3,9 @@
 - Repository: `tmchow/illo-skill`
 - URL: https://github.com/tmchow/illo-skill
 - Upstream path: `skills/illo`
-- Imported commit: `873f4d851f51ad4db1b9026df8a940e658f9f60d`
-- Upstream version: `0.34.4`
+- Imported commit: `6623c82d40c6b3e0a4d44333288e4b436b8047c2`
+- Upstream version: `0.35.0`
+- Previous imported commit: `873f4d851f51ad4db1b9026df8a940e658f9f60d` (`0.34.4`)
 - Local skill path: `16-ai-apis-media/illo`
 - License: MIT (`LICENSE`, copied from the repository root; see also `NOTICE`)
 - Author: Trevin Chow
@@ -26,6 +27,7 @@ The whole upstream skill directory:
   prompt-recipe and quality-bar references
 - `scripts/illo.py` — the renderer
 - `scripts/repair-hermes-assets.sh` — an asset-integrity preflight
+- `scripts/diagram_route.py` — the diagram-type picker (see "Upstream changes")
 - `assets/` — `character-reference.webp`, `character-reference-pixel.png` and
   `checksums.txt`
 
@@ -64,6 +66,23 @@ covers that.
 binaries. Both binary assets were verified against it after import, so neither
 was corrupted in transit — a real failure mode for this archive, which has
 previously acquired 0-byte fonts and tarballs from binary-unsafe imports.
+
+## Upstream changes taken in `0.35.0`
+
+The release adds **labeled stages** as an explicit structure type inside the
+explainer register, so a request for a "flowchart", a "labeled workflow" or a
+"process diagram" resolves to named phases drawn in the pack's own look instead
+of being refused as too formal. `SKILL.md`, `references/composition.md` and five
+other references were rewritten around that, and one new file arrived:
+
+- `scripts/diagram_route.py` — an executable lock on the new picker. It parses
+  the "Pick the diagram type" and "Two registers" sections out of
+  `references/composition.md` and classifies a request the same way the prose
+  does, raising if that prose drifts. Pure text classification: it imports only
+  `dataclasses`, `pathlib`, `re` and `sys`, reads exactly one file (its own
+  sibling reference) and writes nothing. No network, no subprocess, no `eval`.
+
+Nothing was removed upstream, so no local file was lost in the update.
 
 ## Security review
 
