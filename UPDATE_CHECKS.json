@@ -3,7 +3,7 @@
  "purpose": "Rotating upstream update-check state. Each entry records the commit the local copies were verified against, so a later run starts from a real baseline instead of re-deriving one, and can pick the sources that have waited longest.",
  "how_to_check": "python3 tools/check-upstream.py <owner/repo>",
  "baseline_method": "Every local file is compared to the upstream tree by git blob SHA. 'identical' therefore means the local copy is exactly verified_commit, not merely similar to it.",
- "source_repos_total": 225,
+ "source_repos_total": 227,
  "checked": {
   "anthropics/skills": {
    "last_checked": "2026-08-22",
@@ -93,27 +93,34 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "mukul975/Anthropic-Cybersecurity-Skills": {
-   "last_checked": "2026-08-22",
-   "verified_commit": "f76261573a539ec40c3d434ecbb9e657d26aa921",
-   "upstream_pushed_at": "2026-08-20",
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-31",
    "license": "Apache-2.0",
    "local_skills": 817,
    "result": {
-    "identical": 817
-   }
+    "identical": 784,
+    "drift": 33
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "openaccountants/openaccountants": {
-   "last_checked": "2026-08-22",
-   "verified_commit": "895cbdbdf984ebc0f360648661ae5a56c3cb886d",
-   "upstream_pushed_at": "2026-08-21",
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-04",
    "license": "AGPL-3.0",
    "local_skills": 781,
    "result": {
-    "identical": 781
-   }
+    "identical": 780,
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "18-finance-accounting/ga-income-tax": "name-and-description-match"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "infrasity-labs/dev-gtm-claude-skills": {
-   "last_checked": "2026-08-22",
+   "last_checked": "2026-09-04",
    "verified_commit": null,
    "upstream_pushed_at": "2026-06-28",
    "license": "MIT",
@@ -124,39 +131,117 @@
     "identical": 275,
     "upstream-added-files": 1
    },
+   "frontmatter_probe": {
+    "01-copy-writing/stop-slop": "name-matches-description-differs",
+    "02-design-ui/frontend-design": "name-and-description-match",
+    "02-design-ui/seo": "name-matches-description-differs",
+    "02-design-ui/web-design-guidelines": "name-and-description-match",
+    "03-marketing/ai-seo": "name-matches-description-differs",
+    "03-marketing/community-marketing": "name-and-description-match",
+    "03-marketing/content-brief": "name-matches-description-differs",
+    "03-marketing/form-design": "name-matches-description-differs",
+    "03-marketing/information-architecture": "name-matches-description-differs",
+    "03-marketing/launch": "name-matches-description-differs",
+    "03-marketing/linkedin-profile-optimizer": "name-matches-description-differs",
+    "03-marketing/seo-ahrefs": "name-matches-description-differs",
+    "03-marketing/seo-backlinks": "name-and-description-match",
+    "03-marketing/seo-bing": "name-and-description-match",
+    "03-marketing/seo-competitor-pages": "name-and-description-match",
+    "03-marketing/seo-content": "name-and-description-match",
+    "03-marketing/seo-drift": "name-matches-description-differs",
+    "03-marketing/seo-firecrawl": "name-and-description-match",
+    "03-marketing/seo-flow": "name-matches-description-differs",
+    "03-marketing/seo-geo": "name-and-description-match",
+    "03-marketing/seo-image-gen": "name-and-description-match",
+    "03-marketing/seo-images": "name-and-description-match",
+    "03-marketing/seo-local": "name-matches-description-differs",
+    "03-marketing/seo-maps": "name-matches-description-differs",
+    "03-marketing/seo-page": "name-and-description-match",
+    "03-marketing/seo-profound": "name-and-description-match",
+    "03-marketing/seo-programmatic": "name-and-description-match",
+    "03-marketing/seo-schema": "name-and-description-match",
+    "03-marketing/seo-seranking": "name-matches-description-differs",
+    "03-marketing/seo-sitemap": "name-and-description-match",
+    "03-marketing/seo-technical": "name-and-description-match",
+    "03-marketing/seo-unlighthouse": "name-matches-description-differs",
+    "05-development/test-driven-development": "name-and-description-match",
+    "08-context-engineering/reflect": "name-matches-description-differs",
+    "10-hyperfx-marketing/customer-research": "name-matches-description-differs",
+    "11-product-management/interview-script": "name-matches-description-differs",
+    "11-product-management/jobs-to-be-done": "name-matches-description-differs",
+    "11-product-management/pm-skill-creator": "name-and-description-match",
+    "11-product-management/prd-development": "name-and-description-match",
+    "11-product-management/prioritization-advisor": "name-and-description-match",
+    "11-product-management/summarize-interview": "name-matches-description-differs",
+    "21-goose-agent/job-search": "name-matches-description-differs",
+    "29-ecc/seo": "name-matches-description-differs"
+   },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "NVIDIA/skills": {
-   "last_checked": "2026-08-22",
+   "last_checked": "2026-09-04",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-08-21",
+   "upstream_pushed_at": "2026-09-04",
    "license": "Apache-2.0",
    "local_skills": 338,
    "result": {
-    "identical": 334,
-    "no-upstream-path": 3,
-    "unmatched-candidate": 1
+    "identical": 257,
+    "drift": 75,
+    "unmatched-candidate": 3,
+    "no-upstream-path": 3
+   },
+   "frontmatter_probe": {
+    "20-nvidia-cuda/cuopt-server-api-python": "name-and-description-match",
+    "20-nvidia-cuda/nemo-mbridge-perf-activation-recompute": "name-matches-description-differs",
+    "20-nvidia-cuda/nv-generate-mr-brain": "name-matches-description-differs"
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "affaan-m/ECC": {
-   "last_checked": "2026-08-22",
+   "last_checked": "2026-09-04",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-08-21",
+   "upstream_pushed_at": "2026-09-03",
    "license": "MIT",
    "local_skills": 297,
    "result": {
-    "unmatched-candidate": 10,
-    "drift": 2,
-    "identical": 282,
+    "unmatched-candidate": 25,
+    "drift": 6,
+    "identical": 263,
     "upstream-added-files": 3
+   },
+   "frontmatter_probe": {
+    "02-design-ui/accessibility": "name-matches-description-differs",
+    "02-design-ui/design-system": "name-matches-description-differs",
+    "02-design-ui/seo": "name-matches-description-differs",
+    "03-marketing/content-engine": "name-matches-description-differs",
+    "06-documents/nutrient-document-processing": "name-matches-description-differs",
+    "12-security/security-review": "name-matches-description-differs",
+    "15-integrations/blueprint": "name-matches-description-differs",
+    "15-integrations/prompt-optimizer": "name-matches-description-differs",
+    "16-ai-apis-media/deep-research": "name-matches-description-differs",
+    "21-goose-agent/market-research": "name-matches-description-differs",
+    "29-ecc/cost-aware-llm-pipeline": "name-matches-description-differs",
+    "29-ecc/crosspost": "name-and-description-match",
+    "29-ecc/data-scraper-agent": "name-matches-description-differs",
+    "29-ecc/deep-research": "name-and-description-match",
+    "29-ecc/email-ops": "name-matches-description-differs",
+    "29-ecc/exa-search": "name-and-description-match",
+    "29-ecc/gateguard": "name-matches-description-differs",
+    "29-ecc/github-ops": "name-matches-description-differs",
+    "29-ecc/ito-compute": "name-and-description-match",
+    "29-ecc/jira-integration": "name-matches-description-differs",
+    "29-ecc/market-research": "name-and-description-match",
+    "29-ecc/nasiko-control-plane": "name-matches-description-differs",
+    "29-ecc/social-publisher": "name-and-description-match",
+    "29-ecc/strategic-compact": "name-and-description-match",
+    "29-ecc/x-api": "name-and-description-match"
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "gooseworks-ai/goose-skills": {
-   "last_checked": "2026-08-22",
+   "last_checked": "2026-09-04",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-08-14",
+   "upstream_pushed_at": "2026-09-01",
    "license": "MIT",
    "local_skills": 270,
    "result": {
@@ -165,23 +250,46 @@
     "drift": 5,
     "upstream-added-files": 2
    },
+   "frontmatter_probe": {
+    "04-remotion/remotion-best-practices": "name-matches-description-differs",
+    "09-anthropic-tools/skill-creator": "name-matches-description-differs",
+    "10-hyperfx-marketing/cold-email-outreach": "name-matches-description-differs",
+    "10-hyperfx-marketing/competitor-intel": "name-matches-description-differs",
+    "11-product-management/company-intel": "name-matches-description-differs",
+    "15-integrations/web-search": "name-matches-description-differs",
+    "21-goose-agent/ad-angle-miner": "name-and-description-match",
+    "21-goose-agent/competitor-ad-intelligence": "name-matches-description-differs",
+    "21-goose-agent/find-twitter-influencers": "name-and-description-match",
+    "21-goose-agent/gtm-enrichment-smart": "name-and-description-match",
+    "21-goose-agent/instagram-scraper": "name-and-description-match",
+    "21-goose-agent/linkedin-scraper": "name-and-description-match",
+    "21-goose-agent/meta-ads-analyzer": "name-matches-description-differs",
+    "21-goose-agent/social-listening": "name-and-description-match",
+    "21-goose-agent/social-media-scraping-scrapecreators": "name-matches-description-differs",
+    "21-goose-agent/tiktok-search": "name-and-description-match",
+    "21-goose-agent/twitter-profile-lookup": "name-and-description-match",
+    "29-ecc/market-research": "name-matches-description-differs"
+   },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "microsoft/skills": {
-   "last_checked": "2026-08-22",
+   "last_checked": "2026-09-04",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-08-21",
+   "upstream_pushed_at": "2026-09-03",
    "license": "MIT",
    "local_skills": 188,
    "result": {
-    "drift": 1,
+    "drift": 3,
     "unmatched-candidate": 1,
-    "identical": 186
+    "identical": 184
+   },
+   "frontmatter_probe": {
+    "09-anthropic-tools/skill-creator": "name-matches-description-differs"
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "indranilbanerjee/digital-marketing-pro": {
-   "last_checked": "2026-08-22",
+   "last_checked": "2026-09-04",
    "verified_commit": null,
    "upstream_pushed_at": "2026-08-17",
    "license": "MIT",
@@ -191,30 +299,77 @@
     "unmatched-candidate": 19,
     "drift": 1
    },
+   "frontmatter_probe": {
+    "03-marketing/ad-creative": "name-matches-description-differs",
+    "03-marketing/brand-setup": "name-and-description-match",
+    "03-marketing/budget-optimizer": "name-matches-description-differs",
+    "03-marketing/check": "name-and-description-match",
+    "03-marketing/cro": "name-matches-description-differs",
+    "03-marketing/engagement-workflow": "name-and-description-match",
+    "03-marketing/keyword-research": "name-matches-description-differs",
+    "03-marketing/programmatic-seo": "name-matches-description-differs",
+    "03-marketing/roi-calculator": "name-matches-description-differs",
+    "03-marketing/seo-audit": "name-matches-description-differs",
+    "03-marketing/seo-drift": "name-matches-description-differs",
+    "03-marketing/seo-plan": "name-matches-description-differs",
+    "03-marketing/validate-profile": "name-and-description-match",
+    "08-context-engineering/status": "name-matches-description-differs",
+    "10-hyperfx-marketing/analytics-insights": "name-matches-description-differs",
+    "11-product-management/cohort-analysis": "name-matches-description-differs",
+    "11-product-management/competitor-analysis": "name-matches-description-differs",
+    "16-ai-apis-media/help": "name-matches-description-differs",
+    "29-ecc/content-engine": "name-matches-description-differs"
+   },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "wshobson/agents": {
-   "last_checked": "2026-08-22",
+   "last_checked": "2026-09-04",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-08-18",
+   "upstream_pushed_at": "2026-09-01",
    "license": "MIT",
    "local_skills": 173,
    "result": {
-    "unmatched-candidate": 5,
+    "unmatched-candidate": 6,
     "identical": 166,
-    "no-upstream-path": 2
+    "no-upstream-path": 1
+   },
+   "frontmatter_probe": {
+    "25-data-databases/postgresql-table-design": "name-and-description-match"
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "aaron-he-zhu/aaron-marketing-skills": {
-   "last_checked": "2026-08-22",
+   "last_checked": "2026-09-04",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-08-22",
+   "upstream_pushed_at": "2026-09-04",
    "license": "Apache-2.0",
    "local_skills": 122,
    "result": {
-    "drift": 54,
-    "unmatched-candidate": 68
+    "unmatched-candidate": 89,
+    "drift": 33
+   },
+   "frontmatter_probe": {
+    "03-marketing/ad-account-auditor": "name-and-description-match",
+    "03-marketing/attribution-reconciler": "name-and-description-match",
+    "03-marketing/audience-segment-builder": "name-and-description-match",
+    "03-marketing/budget-pacing-monitor": "name-and-description-match",
+    "03-marketing/campaign-architect": "name-and-description-match",
+    "03-marketing/cold-outbound-sequencer": "name-and-description-match",
+    "03-marketing/conversion-value-mapper": "name-and-description-match",
+    "03-marketing/dynamic-content-personalizer": "name-and-description-match",
+    "03-marketing/email-quality-auditor": "name-and-description-match",
+    "03-marketing/email-sequence-designer": "name-and-description-match",
+    "03-marketing/fatigue-frequency-manager": "name-and-description-match",
+    "03-marketing/landing-experience-checker": "name-and-description-match",
+    "03-marketing/list-growth-designer": "name-and-description-match",
+    "03-marketing/list-segment-builder": "name-and-description-match",
+    "03-marketing/newsletter-monetization-planner": "name-and-description-match",
+    "03-marketing/paid-measurement-loop": "name-and-description-match",
+    "03-marketing/placement-exclusion-manager": "name-and-description-match",
+    "03-marketing/preference-frequency-manager": "name-and-description-match",
+    "03-marketing/reactivation-specialist": "name-and-description-match",
+    "03-marketing/search-term-miner": "name-and-description-match",
+    "03-marketing/send-experiment-designer": "name-and-description-match"
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
@@ -1502,6 +1657,1118 @@
    "result": {
     "identical": 8
    }
+  },
+  "zapier/zapier-mcp": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "5360f152b96735712e5f925ad728732cb86888df",
+   "upstream_pushed_at": "2026-07-29",
+   "license": "MIT",
+   "local_skills": 4,
+   "result": {
+    "identical": 4
+   }
+  },
+  "Linked-API/linkedin-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-13",
+   "license": "MIT",
+   "local_skills": 3,
+   "result": {
+    "identical": 2,
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "10-hyperfx-marketing/linkedin": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "angular/skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": null,
+   "local_skills": 3,
+   "result": {
+    "drift": 2,
+    "identical": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "auth0/agent-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-04",
+   "license": "Apache-2.0",
+   "local_skills": 3,
+   "result": {
+    "no-upstream-path": 2,
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "coderabbitai/skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-17",
+   "license": "MIT",
+   "local_skills": 3,
+   "result": {
+    "identical": 2,
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "05-development/code-review": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "composiohq/skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-03-19",
+   "license": "MIT",
+   "local_skills": 3,
+   "result": {
+    "drift": 1,
+    "identical": 2
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "cypress-io/ai-toolkit": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "005d8ae7545b3fe61cf9764557ce4d105d4af01b",
+   "upstream_pushed_at": "2026-08-28",
+   "license": "MIT",
+   "local_skills": 3,
+   "result": {
+    "identical": 3
+   }
+  },
+  "frmoretto/clarity-gate": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+   "upstream_pushed_at": "2026-03-02",
+   "license": "NOASSERTION",
+   "local_skills": 3,
+   "result": {
+    "identical": 3
+   }
+  },
+  "hqhq1025/skill-optimizer": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
+   "upstream_pushed_at": "2026-05-14",
+   "license": "MIT",
+   "local_skills": 3,
+   "result": {
+    "identical": 3
+   }
+  },
+  "supabase/agent-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+   "upstream_pushed_at": "2026-08-12",
+   "license": "MIT",
+   "local_skills": 3,
+   "result": {
+    "identical": 2,
+    "no-upstream-path": 1
+   }
+  },
+  "AvdLee/SwiftUI-Agent-Skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "4c6a97d15aa5e023538c3cb06b5192f241dd451d",
+   "upstream_pushed_at": "2026-08-12",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "identical": 2
+   }
+  },
+  "PSPDFKit-labs/nutrient-agent-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-30",
+   "license": null,
+   "local_skills": 2,
+   "result": {
+    "drift": 1,
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "29-ecc/nutrient-document-processing": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "ReScienceLab/opc-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "Apache-2.0",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 2
+   },
+   "frontmatter_probe": {
+    "03-marketing/seo-geo": "name-matches-description-differs",
+    "10-hyperfx-marketing/reddit": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "RoundTable02/tutor-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "397110c9fefbc6bd5444277686600aec28063c05",
+   "upstream_pushed_at": "2026-02-28",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "identical": 2
+   }
+  },
+  "VoltAgent/voltagent": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de",
+   "upstream_pushed_at": "2026-08-27",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "identical": 2
+   }
+  },
+  "Xquik-dev/x-twitter-scraper": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-04",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1
+   },
+   "frontmatter_probe": {
+    "03-marketing/x-twitter-scraper": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "awrshift/claude-memory-kit": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-02",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "no-upstream-path": 1,
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "12-security/second-opinion": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "lackeyjb/playwright-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-14",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1
+   },
+   "frontmatter_probe": {
+    "14-testing-qa/playwright-skill": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "muratcankoylan/Agent-Skills-for-Context-Engineering": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-19",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "no-upstream-path": 1,
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "08-context-engineering/multi-agent-patterns": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "mvanhorn/last30days-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-02",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1
+   },
+   "frontmatter_probe": {
+    "03-marketing/last30days": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "santifer/career-ops": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-04",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 2
+   },
+   "frontmatter_probe": {
+    "28-career-education-health/career-ops": "name-and-description-match"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "sergebulaev/linkedin-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1
+   },
+   "frontmatter_probe": {
+    "03-marketing/linkedin-profile-optimizer": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "squirrelscan/squirrelscan": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "95928ed7506baf90b1d259f792b9cbf5116c24d2",
+   "upstream_pushed_at": "2026-09-04",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "identical": 2
+   }
+  },
+  "testdino-hq/playwright-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-07-02",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 1,
+    "no-upstream-path": 1
+   },
+   "frontmatter_probe": {
+    "05-development/playwright-cli": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "typefully/agent-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "051a266090f8f655801b835bd359abc073e7dec3",
+   "upstream_pushed_at": "2026-08-28",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 1
+   }
+  },
+  "video-db/skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-07-25",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 1
+   },
+   "frontmatter_probe": {
+    "05-development/python": "name-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "zarazhangrui/frontend-slides": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-06-23",
+   "license": "MIT",
+   "local_skills": 2,
+   "result": {
+    "unmatched-candidate": 2
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "AVGVSTVS96/better-github-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "be00903d489baee08a3fd8475979f48b24620e09",
+   "upstream_pushed_at": "2026-08-17",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Alisa0808/vibe-creating-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "a599301980a66eb47ddac5c15e41081b74a2759d",
+   "upstream_pushed_at": "2026-06-17",
+   "license": "NOASSERTION",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "Aperivue/medsci-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "912f7e880aaa89a270aae37844c4e66be34d95c7",
+   "upstream_pushed_at": "2026-09-01",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "BehiSecc/VibeSec-Skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+   "upstream_pushed_at": "2026-02-17",
+   "license": "Apache-2.0",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Bomx/distribb-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "061a055768e13cf09108932a90aeb2e957183858",
+   "upstream_pushed_at": "2026-08-21",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "CosmoBlk/email-marketing-bible": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "ff526b0712dad8737caaf0bb8ccf65ac6509140c",
+   "upstream_pushed_at": "2026-06-30",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Digidai/product-manager-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "ab7a40662c8455ece631834dee9670b3322f465b",
+   "upstream_pushed_at": "2026-04-12",
+   "license": "NOASSERTION",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Ericyoung-183/alpha-insights": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+   "upstream_pushed_at": "2026-06-29",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "EveryInc/charlie-cfo-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+   "upstream_pushed_at": "2026-01-29",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Kevin7Qi/codex-collab": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "982f2ea32ae0f3958c0bb8367a6c5e3095957718",
+   "upstream_pushed_at": "2026-08-20",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "NotMyself/claude-win11-speckit-update-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2025-10-26",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "upstream_archived": true,
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "Optim-Agent/optim-agent": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-14",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "08-context-engineering/optim-agent": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "OthmanAdi/planning-with-files": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "03128b278b0926180854703e43abd7ea2ff18c00",
+   "upstream_pushed_at": "2026-09-02",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "Panniantong/Agent-Reach": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "da5044d26fc6adddb6554d5679c94ac22e76e428",
+   "upstream_pushed_at": "2026-09-01",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "PleasePrompto/notebooklm-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "eea5cb28ba79ab8b078a1eaa44ce9ec44f75dbf8",
+   "upstream_pushed_at": "2025-11-21",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Ryan-yang125/motion-lexicon": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "SHADOWPR0/beautiful_prose": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "bf44efb7f9706f8f563af3b6913a3784c7c52a12",
+   "upstream_pushed_at": "2025-12-30",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "SHADOWPR0/security-bluebook-builder": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "bbf77219c997f3b9ab19ee434e81d36f7ebb1953",
+   "upstream_pushed_at": "2025-12-24",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "SeanZoR/claude-speed-reader": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+   "upstream_pushed_at": "2026-01-15",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Tubo2333/obsidian-knowledge-brain": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "de83d3a5a9ccd724b3e504c72b72001242c50061",
+   "upstream_pushed_at": "2026-07-02",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Vladimir-Human/humanizer-ru": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-04",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "VoltAgent/awesome-agent-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "4a755af153df462e10859336596c73415d64437a",
+   "upstream_pushed_at": "2026-09-02",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "Xquik-dev/tweetclaw": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "antonbabenko/terraform-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "0a3a4a66e99001347d36a41e10260a825be3ab62",
+   "upstream_pushed_at": "2026-07-03",
+   "license": "NOASSERTION",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "basecamp/hey-cli": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "baskduf/FableCodex": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-07-26",
+   "license": "AGPL-3.0",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "blader/humanizer": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
+   "upstream_pushed_at": "2026-08-19",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "coinbase/agentic-wallet-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "70cb79c85f397fab3636ef07c8c99dc52a7c555f",
+   "upstream_pushed_at": "2026-08-04",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "conorluddy/ios-simulator-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-06-18",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "csthink/dashmotion": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
+   "upstream_pushed_at": "2026-06-16",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "datadog-labs/agent-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "157edafdc1007e2550c5051649caaff5be32f3b8",
+   "upstream_pushed_at": "2026-08-26",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "degausai/wonda": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-24",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "16-ai-apis-media/wonda-cli": "name-and-description-match"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "deusyu/translate-book": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "5d07e733fa9318ff9c718085191c0c2243f51383",
+   "upstream_pushed_at": "2026-08-06",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "drogers0/gh-image": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-02",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "05-development/github-image-upload": "name-and-description-match"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "efremidze/swift-patterns-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "2e9b66b0470a324cf3a6898549279e622aa7df71",
+   "upstream_pushed_at": "2026-03-16",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "ethos-link/rails-conventions": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "4a3f59424ca3ab3380d494557ea9de998701d047",
+   "upstream_pushed_at": "2026-08-31",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "garrytan/skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "local_skills": 1,
+   "result": {
+    "unreachable": 1
+   },
+   "note": "Upstream could not be read (gh api repos/garrytan/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  "gitroomhq/postiz-agent": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "6d3be9c0aec768075e91b4a29b04fb624d72d942",
+   "upstream_pushed_at": "2026-09-03",
+   "license": "NOASSERTION",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "jthack/ffuf_claude_skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
+   "upstream_pushed_at": "2025-10-16",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "k-kolomeitsev/data-structure-protocol": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-10",
+   "license": "Apache-2.0",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "komal-SkyNET/claude-skill-homeassistant": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+   "upstream_pushed_at": "2026-07-04",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "makenotion/skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "423af2bf546cd0354e5cc871017251945d9ad14f",
+   "upstream_pushed_at": "2026-06-16",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "massimodeluisa/recursive-decomposition-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-28",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "meodai/skill.color-expert": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "6514810aaab15cdd0e4202af52a6afed27ed314d",
+   "upstream_pushed_at": "2026-09-02",
+   "license": "CC-BY-4.0",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "more-io/claude-apple-bridges": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "8e9890fdbe913de70c26342c9ceb2c510ee6e9e2",
+   "upstream_pushed_at": "2026-07-03",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "muthuishere/hand-drawn-diagrams": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "b1a87cf580e9559469af1baead05bfde29d7c1c0",
+   "upstream_pushed_at": "2026-08-10",
+   "license": "NOASSERTION",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "officialzeroxyz/zero-plugins": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-21",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "oliver-zehentleitner/keep-the-why": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "omkamal/pypict-claude-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "fbda212bca79dfa7611be12527b102c89cc8faeb",
+   "upstream_pushed_at": "2026-03-22",
+   "license": "NOASSERTION",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "op7418/NanoBanana-PPT-Skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+   "upstream_pushed_at": "2026-01-19",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "op7418/Youtube-clipper-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+   "upstream_pushed_at": "2026-01-22",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "pattern-ai-labs/agentcall": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "7b0841e38024516abf75c17dee48f5b378c8de67",
+   "upstream_pushed_at": "2026-08-10",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "ramzesenok/iOS-Accessibility-Audit-Skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
+   "upstream_pushed_at": "2026-03-01",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "rebelytics/one-skill-to-rule-them-all": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "510caad26c907793e48306262af216ff9f71c9f7",
+   "upstream_pushed_at": "2026-08-28",
+   "license": "CC-BY-4.0",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "reliefeai/browser-relay": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "c9f394d2ea5f0665d01d889f2dd15291590c281c",
+   "upstream_pushed_at": "2026-08-04",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "robzolkos/skill-rails-upgrade": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
+   "upstream_pushed_at": "2026-01-27",
+   "license": null,
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "sametbrr/llm-wiki-manager": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "cc0cc33d23882fd8555af290c2a003d1495a893a",
+   "upstream_pushed_at": "2026-06-11",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "scarletkc/vexor": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-08-29",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "smixs/creative-director-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "ac06eb255371da35d1db0a146dbfcca8c8857543",
+   "upstream_pushed_at": "2026-08-08",
+   "license": "CC-BY-4.0",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "superdesigndev/superdesign-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+   "upstream_pushed_at": "2026-08-21",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "taisly/agent": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "05a46b89a9c35f15c88fbadc8a2898404525fec0",
+   "upstream_pushed_at": "2026-07-06",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "takechanman1228/claude-ecom": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-06-11",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "thedotmack/claude-mem": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "Apache-2.0",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "tmchow/illo-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "6623c82d40c6b3e0a4d44333288e4b436b8047c2",
+   "upstream_pushed_at": "2026-08-29",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "truongduy2611/app-store-preflight-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "e52e007036fb6edea104b6b49eb01f69c155ad51",
+   "upstream_pushed_at": "2026-05-29",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "trycourier/courier-skills": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "15-integrations/courier": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "uucz/moyu": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-07-30",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "08-context-engineering/moyu": "name-and-description-match"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "wanshuiyin/Auto-claude-code-research-in-sleep": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "frontmatter_probe": {
+    "29-ecc/exa-search": "name-matches-description-differs"
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "wrsmith108/linear-claude-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "d61cd9ad05f1863a421d891d9319ec2405904488",
+   "upstream_pushed_at": "2026-07-17",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "wrsmith108/varlock-claude-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "348a435345b7ddafb4d1002d41d9e2ef3f5b6992",
+   "upstream_pushed_at": "2026-03-04",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "wshuyi/x-article-publisher-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
+   "upstream_pushed_at": "2026-01-25",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "identical": 1
+   }
+  },
+  "zscole/model-hierarchy-skill": {
+   "last_checked": "2026-09-04",
+   "verified_commit": "9095f8303847a60de9f564659e561f3f6fd0cdc4",
+   "upstream_pushed_at": "2026-02-16",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "no-upstream-path": 1
+   }
+  },
+  "zw008/VMware-AIops": {
+   "last_checked": "2026-09-04",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-03",
+   "license": "MIT",
+   "local_skills": 1,
+   "result": {
+    "drift": 1
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   }
  },
  "review_queue": {
