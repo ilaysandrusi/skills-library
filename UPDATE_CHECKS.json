@@ -2957,8 +2957,8 @@
    "MohamedAbdallah-14/unslop": "2026-08-23: 3 drifted, 2 unmatched candidates, across 9 local copies of one upstream pack. The probe reports name-and-description-match for unslop--mohamedabdallah-14 and -2, confirming they are the same skill as their unsuffixed sibling. Deduplicate first, then update whatever survives.",
    "neondatabase/agent-skills": "2026-08-23: 1 drifted, 8 unmatched candidates. Upstream restructured into a plugin layout (plugins/neon-postgres/skills/), so the flat local layout no longer mirrors it. The probe reports name-and-description-match for several, so these are the same skills at new paths, not collisions — but adopting the plugin layout is a structural decision for the owner. Restructuring-heavy, so reported rather than applied.",
    "JasonColapietro/suede-creator-skills": "2026-08-22: 69 of 71 packages drifted.",
-   "aaron-he-zhu/aaron-marketing-skills": "2026-08-22: 54 of 122 drifted, plus 68 unmatched candidates.",
-   "infrasity-labs/dev-gtm-claude-skills": "2026-08-22: 39 of 358 drifted.",
+   "aaron-he-zhu/aaron-marketing-skills": "2026-09-04: 33 drifted and 89 unmatched-candidate, with no identical files at all. Over the limit, and the zero-identical result means no baseline was ever established for any of the 122 local copies. Previously judged not worth importing further (discovery notes: 2608 upstream skills, heavy drift). Needs a decision on whether this source is tracked at all before any file is touched.",
+   "infrasity-labs/dev-gtm-claude-skills": "2026-09-04: 39 drifted of 275 local skills, plus 43 unmatched-candidate. Over the limit, held. Upstream last pushed 2026-06-28, so the drift is the local tree lagging a finished pack rather than an active stream of fixes.",
    "trailofbits/skills": "2026-08-22: 38 of 78 drifted. Security-sensitive, so the diff needs reading.",
    "mattpocock/skills": "2026-08-22: 31 of 37 drifted.",
    "helius-labs/core-ai": "2026-08-22: 24 of 24 drifted — the whole pack moved.",
@@ -2973,7 +2973,13 @@
    "firecrawl/skills": "2026-08-23: APPLIED, both index skills. Now identical at 8b18f3b1.",
    "snyk/agent-scan": "2026-08-22: 10 of 31 drifted, but these are the scanner's test fixtures listed under snyk_agent_scan_test_fixtures. Do not update them; they should be retired, not refreshed.",
    "openai/skills": "2026-08-22: figma-generate-library and figma-use drifted; linear and notion-knowledge-capture are missing upstream assets their --openai twins carry. Held behind the duplicate cluster.",
-   "GaZmagik/iso-24495": "2026-08-23: imported at 58077fc4 (tag v0.6.1) and identical. All eight skills carry a copy of the upstream root LICENSE, reported as local_root_copies rather than absent_upstream."
+   "GaZmagik/iso-24495": "2026-08-23: imported at 58077fc4 (tag v0.6.1) and identical. All eight skills carry a copy of the upstream root LICENSE, reported as local_root_copies rather than absent_upstream.",
+   "NVIDIA/skills": "2026-09-04: 75 drifted of 257 local skills. Over the 10-resource automatic limit, so held. First-party Apache-2.0 and actively pushed, so this is the largest genuinely valuable backlog in the queue — it needs a human to decide whether to take it as one large batch.",
+   "mukul975/Anthropic-Cybersecurity-Skills": "2026-09-04: 33 drifted of 784 local skills — the 17-cybersecurity-pack. Over the limit, held. The 784 identical files prove the baseline is sound, so this is a real partial update, but 33 security skills need reading individually.",
+   "PSPDFKit-labs/nutrient-agent-skill": "2026-09-04: 1 drifted — 06-documents/nutrient-document-processing — but held deliberately despite being a single resource. It is a major-version rewrite (1.0 -> 2.0.0) touching 27 of ~30 files: the one skill is split into a three-product router (DWS Processor / Data Extraction / Accessibility), openclaw runtime metadata is added, and **the licence changes from Apache-2.0 to MIT-0**. Restructuring-heavy plus a licensing change is exactly what the policy says to report rather than apply. Also decide it together with the duplicate 29-ecc/nutrient-document-processing copy.",
+   "microsoft/skills + composiohq/skills — mis-attribution risk": "2026-09-04: microsoft/skills reports 3 drifted and composiohq/skills 1, but two of those are multi-source skills where the listed source is probably a vendored fork rather than the origin: 05-development/mcp-builder (anthropics + microsoft + snyk; verified blob-identical to anthropics/skills and carries Anthropic's LICENSE.txt) and 09-anthropic-tools/skill-creator (eight listed sources, an Anthropic original). Applying either would replace an Anthropic original with a third party's copy. The two genuinely single-source microsoft skills — 23-microsoft/azure-enterprise-infra-planner and 23-microsoft/microsoft-foundry — are safe to update and are simply not yet done.",
+   "angular/skills + affaan-m/ECC": "2026-09-04: 05-development/angular-developer and 29-ecc/angular-developer both list affaan-m/ECC and angular/skills as sources and both drifted. ECC vendors Angular's skill, so the origin must be settled before either copy is updated, and the two local copies are themselves a duplicate pair. Same shape for 02-design-ui/frontend-slides (affaan-m/ECC + zarazhangrui/frontend-slides).",
+   "small single-resource drift not yet applied": "2026-09-04: 14 single-source skills each showed exactly 1 drifted resource and were left for a later run purely for time, not for any doubt: 02-design-ui/motion-lexicon, 03-marketing/ecom, 03-marketing/last30days--mvanhorn, 03-marketing/linkedin-skills, 03-marketing/tweetclaw, 03-marketing/xquik-social-research, 05-development/data-structure-protocol, 05-development/speckit-updater, 05-development/vexor-cli, 08-context-engineering/keep-the-why, 08-context-engineering/recursive-decomposition, 08-context-engineering/zero, 01-copy-writing/humanizer-ru, 13-cloud-deploy/vmware-aiops. Each is a clean single-origin update; take a few per run."
   },
   "smaller_items": {
    "agents/wshobson/hr-pro.md": "Kept when 22-legal was dropped, but is now the one agent here with no matching skill in the library.",
@@ -3032,19 +3038,69 @@
     "local_skills": 6,
     "checked": "2026-08-23",
     "note": "404, no relocation found. The stripe org still publishes claude-code-patches and detect-agent, neither of which is a skill pack. 6 local skills under 15-integrations."
-   }
+   },
+   "garrytan/skills": "2026-09-04: newly 404. 1 local skill. Checked for the first time in today's rotation, so it was already gone before this library ever verified it — no baseline exists and none can be established. The local copy is now the only copy; preserve it."
   },
   "coverage": {
-   "as_of": "2026-08-23",
-   "sources_covered": 127,
-   "sources_total": 225,
-   "skill_source_pairs_checked": 6204,
-   "identical": 5269,
-   "note": "127 of 225 sources have been checked and 5269 local skill copies are blob-identical to their upstream HEAD, so their provenance is proven rather than assumed. 98 sources remain unchecked; --rotate picks them up never-checked first, then oldest.",
+   "as_of": "2026-09-04",
+   "sources_covered": 227,
+   "sources_total": 227,
+   "skill_source_pairs_checked": 6342,
+   "identical": 5187,
+   "note": "All 227 known upstream sources have now been checked at least once, so the rotation has no never-checked backlog left and future runs cycle by staleness. Note that the three whole-repo clones in review_queue.unindexed_whole_repo_clones are NOT among these sources: they are absent from SOURCES.json, so they are outside the rotation entirely until they are indexed.",
    "history": {
     "2026-08-22": "87 claimed, 86 actual (off by one); 222 total before two sources were added.",
-    "2026-08-23": "127 sources after a 40-source rotation batch, plus GaZmagik/iso-24495 on import."
+    "2026-08-23": "127 sources after a 40-source rotation batch, plus GaZmagik/iso-24495 on import.",
+    "2026-09-04": "Full coverage reached: a --rotate 110 batch closed the last 98 never-checked sources. 29 sources reported drift (217 skills); 3 skills updated, 4 oversized updates queued."
+   },
+   "status_totals": {
+    "drift": 493,
+    "identical": 5187,
+    "no-upstream-path": 105,
+    "unmatched-candidate": 542,
+    "unreachable": 6,
+    "upstream-added-files": 9
    }
+  },
+  "unindexed_whole_repo_clones": {
+   "found": "2026-09-04",
+   "note": "Commit 618c95be (2026-08-26) added three whole upstream repositories into category directories as 'full upstream clones': 13,641 files and 3.69M lines. None has a root SKILL.md, none is in catalog.json / SOURCES.json / its category README, none arrived with SOURCE.md, and none had a recorded security review. They therefore hold ~69 skills that are invisible to every index and to tools/install-skill.mjs. On 2026-09-04 each was given a traced SOURCE.md with a baseline and a first security review; the structural question is left for manual review because extracting or removing them is far past the 10-resource automatic limit.",
+   "clones": [
+    {
+     "path": "16-ai-apis-media/omniroute",
+     "upstream": "diegosouzapw/OmniRoute",
+     "license": "MIT",
+     "size": "250 MB / 13,098 files — the largest directory in the library",
+     "baseline": "approximate: 13,079/13,098 files match 42a13fedef8bb6806c1c4382b2c65539e871e88c (2026-08-26); upstream commits seconds apart, so no commit matches exactly",
+     "nested_skills": 46,
+     "issue": "Whole product source (src 68MB, tests 41MB, docs 108MB of which 102MB is translated i18n) imported to obtain a 500KB skills/ directory. Also contains tests/fixtures/devin-bridge/e2e-workspace/.claude/skills/bridge-proof/SKILL.md, a test fixture that must never be catalogued.",
+     "security": "No secrets, no malware-sweep hits, nothing auto-running. Quality signal: upstream commits every few seconds and is heavily self-marketed.",
+     "recommendation": "Import a reviewed subset of skills/ with proper indexes, or drop the clone. The gateway is the product the skills drive, not material they own (same call as 15-integrations/hey)."
+    },
+    {
+     "path": "09-anthropic-tools/claude-code-setup",
+     "upstream": "petekp/claude-code-setup",
+     "license": "MIT",
+     "size": "828 KB / 76 files",
+     "baseline": "proven: all 76 files blob-identical to f1cb10fdacff75af66509c0f1ef6920368bbb6e8 (2026-08-07)",
+     "nested_skills": 18,
+     "issue": "A personal forkable Claude Code dotfiles repo, not a skill pack. Its 18 skills (catch-up, circuit, claude-code-audit, code-comments, deep-research, typography, plain, spike, …) are genuine packages with references/scripts/evals and are worth keeping.",
+     "security": "settings.json declares hooks on 15 lifecycle events; every one POSTs the hook payload to http://127.0.0.1:7474/hook with a token from ~/.capacitor/runtime. Loopback only, 1s timeouts, `|| true` — a local observability daemon, not egress — but it would feed prompt text and every tool call to whatever listens on 7474. Archive only, never enable. setup.sh and scripts/skill-manager.sh write into ~/.claude and would overwrite a user's own config.",
+     "upstream_ahead": "HEAD 439a0cf7 (2026-09-03): 7 files changed, 2 added since the imported commit",
+     "recommendation": "Extract the 18 skills into their proper categories with per-skill SOURCE.md; drop the personal dotfiles."
+    },
+    {
+     "path": "12-security/strix",
+     "upstream": "usestrix/strix",
+     "license": "Apache-2.0",
+     "size": "9.5 MB / 467 files",
+     "baseline": "proven: all 467 files blob-identical to a5856108a7c628cf45cf2231692271f20ae136b5 (2026-08-26)",
+     "nested_skills": 9,
+     "issue": "The repository is the Strix application — an autonomous AI pentesting engine with a shell tool, browser driver and intercepting proxy. The 9 skills drive Strix; they are not Strix.",
+     "security": "Reputable Apache-2.0 tool, nothing disguised. But it is executable offensive tooling, a class rejected before (Trail of Bits Burp/APK, Claude-BugHunter). strix/skills/vulnerabilities/rce.md is the standing malware sweep's only hit library-wide (`base64 -d | sh` documented as a payload pattern) — dual-use knowledge in context. Nothing here should be executed from the archive.",
+     "recommendation": "Keep the 9 defensive-testing skills in 12-security; leave the engine upstream."
+    }
+   ]
   }
  },
  "statuses": {
