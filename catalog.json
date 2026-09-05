@@ -1,5 +1,5 @@
 {
- "total": 6108,
+ "total": 6094,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -7068,10 +7068,6 @@
      "description": "Scans Algorand smart contracts for 11 common vulnerabilities including rekeying attacks, unchecked transaction fees, missing field validations, and access control issues. Use when auditing Algorand projects (TEAL/PyTeal)."
     },
     {
-     "name": "algorithmic-art--snyk",
-     "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations."
-    },
-    {
      "name": "anti-entropy-governance",
      "description": "Use when touching retiring old logic, collapsing duplicate owners, removing fallbacks, or schema/persistence/source-of-truth boundaries; identify opportunities automatically; destructive execution requires explicit confirmation."
     },
@@ -7102,10 +7098,6 @@
     {
      "name": "brainstorming--ganyuanran",
      "description": "Use when defining ambiguous or high-complexity new features, product behavior, UI/component design, architecture choices, contract changes, or when grilling/pressure-testing a plan or design. Routine small requests stay on the fast path."
-    },
-    {
-     "name": "brand-guidelines--snyk",
-     "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply."
     },
     {
      "name": "burpsuite-project-parser",
@@ -7216,10 +7208,6 @@
      "description": "Use when facing 2+ independent tasks without a written plan, with no shared state or sequential dependencies, where parallel delegation beats inline cost; otherwise inline. Planned tasks use subagent-driven-development."
     },
     {
-     "name": "docx--snyk",
-     "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks"
-    },
-    {
      "name": "dwarf-expert",
      "description": "Analyzes DWARF debug information in compiled binaries. Use when inspecting .debug_* sections, DIE trees, or DW_TAG_/DW_AT_ entries with dwarfdump/llvm-dwarfdump or readelf, verifying debug info with llvm-dwarfdump --verify, answering DWARF standard questions, or writing code that parses DWARF (libdwarf, pyelftools, gimli)."
     },
@@ -7254,10 +7242,6 @@
     {
      "name": "fp-check",
      "description": "Systematically verifies suspected security bugs to eliminate false positives, producing a TRUE POSITIVE or FALSE POSITIVE verdict with documented evidence for each. Use when asked whether a specific finding is real, exploitable, or a false positive, or to verify or validate a suspected vulnerability — not for hunting or discovering new bugs."
-    },
-    {
-     "name": "frontend-design--snyk",
-     "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics."
     },
     {
      "name": "fuzzing-dictionary",
@@ -7316,10 +7300,6 @@
      "description": "Hermes runtime traffic monitoring baseline for opt-in proxy inspection, egress detection, and attestation-aware traffic posture."
     },
     {
-     "name": "internal-comms--snyk",
-     "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.)."
-    },
-    {
      "name": "interpreting-culture-index",
      "description": "Interprets Culture Index (CI) surveys, behavioral profiles, and personality assessment data. Supports individual profile interpretation, team composition analysis (gas/brake/glue), burnout detection, profile comparison, hiring profiles, manager coaching, interview transcript analysis for trait prediction, candidate debrief, onboarding planning, and conflict mediation. Accepts extracted JSON or PDF input via OpenCV extraction script."
     },
@@ -7342,10 +7322,6 @@
     {
      "name": "long-task-continuation",
      "description": "Use when a task is multi-step, may span context resets or sessions, uses subagents, or risks losing state before completion."
-    },
-    {
-     "name": "mcp-builder--snyk",
-     "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
     },
     {
      "name": "mermaid-to-proverif",
@@ -7384,10 +7360,6 @@
      "description": "Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems. Use when securing payment processing, achieving PCI compliance, or implementing payment card security measures."
     },
     {
-     "name": "pdf--snyk",
-     "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale."
-    },
-    {
      "name": "pentesting-with-aws-security-agent",
      "description": "Run an AWS Security Agent penetration test against a live web application — registers and verifies the target domain, exercises the supplied endpoints with the managed Security Agent service, and returns verified runtime findings. Use when the user asks to pentest, run a penetration test, test their app's attack surface, find runtime vulnerabilities, register or verify a target domain, or check pentest status / findings."
     },
@@ -7402,10 +7374,6 @@
     {
      "name": "picoclaw-traffic-guardian",
      "description": "Picoclaw runtime traffic monitoring baseline for lightweight AI gateway proxy inspection, egress detection, and posture integration."
-    },
-    {
-     "name": "pptx--snyk",
-     "description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks"
     },
     {
      "name": "property-based-testing",
@@ -7508,16 +7476,8 @@
      "description": "Step-by-step cookbook for setting up cryptographically signed audit trails on Claude Code tool calls. Use when explaining, evaluating, or demonstrating the pattern before committing to the protect-mcp runtime hooks. Covers Cedar policy, Ed25519 receipts, offline verification, tamper detection, CI/CD integration, and SLSA composition."
     },
     {
-     "name": "skill-creator--snyk",
-     "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations."
-    },
-    {
      "name": "skill-improver",
      "description": "Iteratively reviews and fixes Claude Code skill quality issues until they meet standards. Runs automated fix-review cycles using the skill-reviewer agent. Use to fix skill quality issues, improve skill descriptions, run automated skill review loops, or iteratively refine a skill. Triggers on 'fix my skill', 'improve skill quality', 'skill improvement loop'. NOT for one-time reviews—use /skill-reviewer directly."
-    },
-    {
-     "name": "slack-gif-creator--snyk",
-     "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\""
     },
     {
      "name": "slicing-code-context",
@@ -7566,10 +7526,6 @@
     {
      "name": "testing-handbook-generator",
      "description": "Meta-skill that analyzes the Trail of Bits Testing Handbook (appsec.guide) and generates Claude Code skills for security testing tools and techniques. Use when creating new skills based on handbook content."
-    },
-    {
-     "name": "theme-factory--snyk",
-     "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly."
     },
     {
      "name": "threat-mitigation-mapping",
@@ -7644,14 +7600,6 @@
      "description": "This skill should be used when the user asks to \"triage a vulnerability report\", \"assess a CVE\", \"evaluate a bug bounty submission\", \"decide if a finding is valid\", \"review a security finding\", \"dismiss a vulnerability\", \"should we fix this CVE\", \"prioritize a vulnerability report\", or needs to determine whether an incoming vulnerability report warrants investigation. Applies 7 brocards (rules of thumb) to systematically accept, dismiss, or request more information on vulnerability reports, or…"
     },
     {
-     "name": "web-artifacts-builder--snyk",
-     "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts."
-    },
-    {
-     "name": "webapp-testing--snyk",
-     "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs."
-    },
-    {
      "name": "writing-lean-proofs",
      "description": "Writes and reviews structured Lean 4 proofs and designs Lean libraries following Mathlib conventions. Use when proving theorems in Lean, formalizing mathematics or specifications in Lean 4, defining new types or definitions in a Lean library, reviewing Lean proofs for readability and maintainability, refactoring long tactic proofs into lemmas, filling in sorry placeholders in a Lean development, setting up CI or linters for a Lean project, diagnosing slow proofs or maxHeartbeats timeouts, or…"
     },
@@ -7666,10 +7614,6 @@
     {
      "name": "wycheproof",
      "description": "Wycheproof provides test vectors for validating cryptographic implementations. Use when testing crypto code for known attacks and edge cases."
-    },
-    {
-     "name": "xlsx--snyk",
-     "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas"
     },
     {
      "name": "yara-rule-authoring",

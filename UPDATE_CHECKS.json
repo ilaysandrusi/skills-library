@@ -3225,8 +3225,8 @@
  "review_queue": {
   "note": "Findings that exceed what a single automatic run should change on its own, per the 10-resource limit in the maintenance policy. Listed here so they are not rediscovered from scratch every day.",
   "snyk_agent_scan_test_fixtures": {
-   "what": "Every 12-security/*--snyk directory is a copy of an Anthropic skill taken from snyk/agent-scan/tests/skills/. snyk/agent-scan is a scanner for agent skills, so its test tree is fixtures, not a skill collection. Each one duplicates a complete copy that already sits in the correct category, several lost their binaries during import (0-byte fonts, PDFs and tarballs), and none of them belong in 12-security.",
-   "skills": [
+   "what": "RETIRED 2026-09-05. The 14 12-security/*--snyk directories were copies of Anthropic skills taken from snyk/agent-scan/tests/skills/. Each had an intact counterpart in the correct category. Retired with tools/remove-skills.py --allow-mass-removal (commit of this run). Do not re-import and do not refresh the remaining exact-name-match attributions on the real Anthropic skills — those 17 SOURCES.json entries still list snyk/agent-scan as a name-match source, which is the mis-attribution trap, not a reason to update from snyk.",
+   "retired": [
     "12-security/algorithmic-art--snyk",
     "12-security/brand-guidelines--snyk",
     "12-security/docx--snyk",
@@ -3242,15 +3242,14 @@
     "12-security/webapp-testing--snyk",
     "12-security/xlsx--snyk"
    ],
-   "count": 14,
+   "count": 0,
    "already_removed_2026_08_21": [
     "12-security/malicious-skill",
     "12-security/canary-project-skill",
     "12-security/test-skill--snyk",
     "12-security/test-skill--snyk-2",
     "12-security/canvas-design--snyk"
-   ],
-   "suggested": "Retire all of them with tools/remove-skills.py --allow-mass-removal, after confirming each has an intact counterpart elsewhere."
+   ]
   },
   "duplicate_skill_md_groups": {
    "what": "Groups whose SKILL.md is byte-identical. Most come from the VoltAgent/awesome-agent-skills mass import re-adding skills that were already present under an --owner suffix. No group is a whole-directory duplicate: in almost every case one side carries supporting files the other lacks, so the more complete side has to be picked per group rather than by rule.",

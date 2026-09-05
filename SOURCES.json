@@ -1,7 +1,7 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6108,
- "traced_to_source_repo": 6094,
+ "skills": 6094,
+ "traced_to_source_repo": 6080,
  "distinct_source_repos": 228,
  "non_skill_directories": {
   "14-testing-qa/shared": {
@@ -52,7 +52,6 @@
   "AgriciDaniel/claude-seo": 36,
   "GanyuanRan/Aegis": 35,
   "hyperfx-ai/marketing-skills": 31,
-  "snyk/agent-scan": 31,
   "addyosmani/agent-skills": 28,
   "eduardo-sl/go-agent-skills": 28,
   "yusufkaraaslan/Skill_Seekers": 28,
@@ -80,6 +79,7 @@
   "google-labs-code/stitch-skills": 17,
   "ognjengt/founder-skills": 17,
   "redis/agent-skills": 17,
+  "snyk/agent-scan": 17,
   "prompt-security/clawsec": 16,
   "Orkas-AI/Orkas-VideoStudio": 15,
   "apollographql/skills": 15,
@@ -1516,15 +1516,6 @@
    "method": "exact-name-match",
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
-  },
-  "12-security/algorithmic-art--snyk": {
-   "skill": "12-security/algorithmic-art--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "03-marketing/algorithmic-color-palette": {
    "skill": "03-marketing/algorithmic-color-palette",
@@ -6890,15 +6881,6 @@
    "skill": "15-integrations/brand-guidelines--getsentry",
    "sources": [
     "getsentry/skills"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "12-security/brand-guidelines--snyk": {
-   "skill": "12-security/brand-guidelines--snyk",
-   "sources": [
-    "snyk/agent-scan"
    ],
    "method": "owner-suffix-match",
    "added_in": "e7e832a4",
@@ -15088,15 +15070,6 @@
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
   },
-  "12-security/docx--snyk": {
-   "skill": "12-security/docx--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "26-mobile-apple/dogfood": {
    "skill": "26-mobile-apple/dogfood",
    "sources": [
@@ -18656,15 +18629,6 @@
    "skill": "16-ai-apis-media/frontend-design--orkas-ai",
    "sources": [
     "Orkas-AI/Orkas-VideoStudio"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "12-security/frontend-design--snyk": {
-   "skill": "12-security/frontend-design--snyk",
-   "sources": [
-    "snyk/agent-scan"
    ],
    "method": "owner-suffix-match",
    "added_in": "e7e832a4",
@@ -25706,15 +25670,6 @@
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
   },
-  "12-security/internal-comms--snyk": {
-   "skill": "12-security/internal-comms--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/international-incorporation": {
    "skill": "18-finance-accounting/international-incorporation",
    "sources": [
@@ -29551,15 +29506,6 @@
    "skill": "23-microsoft/mcp-builder--microsoft",
    "sources": [
     "microsoft/skills"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "12-security/mcp-builder--snyk": {
-   "skill": "12-security/mcp-builder--snyk",
-   "sources": [
-    "snyk/agent-scan"
    ],
    "method": "owner-suffix-match",
    "added_in": "e7e832a4",
@@ -33835,15 +33781,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "12-security/pdf--snyk": {
-   "skill": "12-security/pdf--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "08-context-engineering/pdf--yusufkaraaslan": {
    "skill": "08-context-engineering/pdf--yusufkaraaslan",
    "sources": [
@@ -36707,15 +36644,6 @@
    "method": "exact-name-match",
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
-  },
-  "12-security/pptx--snyk": {
-   "skill": "12-security/pptx--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "08-context-engineering/pptx--yusufkaraaslan": {
    "skill": "08-context-engineering/pptx--yusufkaraaslan",
@@ -43263,15 +43191,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "12-security/skill-creator--snyk": {
-   "skill": "12-security/skill-creator--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "08-context-engineering/skill-generalizer": {
    "skill": "08-context-engineering/skill-generalizer",
    "sources": [
@@ -43417,15 +43336,6 @@
    "method": "exact-name-match",
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
-  },
-  "12-security/slack-gif-creator--snyk": {
-   "skill": "12-security/slack-gif-creator--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "28-career-education-health/sleep-analyzer": {
    "skill": "28-career-education-health/sleep-analyzer",
@@ -46915,15 +46825,6 @@
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
   },
-  "12-security/theme-factory--snyk": {
-   "skill": "12-security/theme-factory--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "19-sales-gtm-startup/theming-system": {
    "skill": "19-sales-gtm-startup/theming-system",
    "sources": [
@@ -50400,15 +50301,6 @@
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
   },
-  "12-security/web-artifacts-builder--snyk": {
-   "skill": "12-security/web-artifacts-builder--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "05-development/web-content": {
    "skill": "05-development/web-content",
    "sources": [
@@ -50618,15 +50510,6 @@
    "method": "exact-name-match",
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
-  },
-  "12-security/webapp-testing--snyk": {
-   "skill": "12-security/webapp-testing--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "14-testing-qa/webcrawler-deep-crawl": {
    "skill": "14-testing-qa/webcrawler-deep-crawl",
@@ -51650,15 +51533,6 @@
    "method": "exact-name-match",
    "added_in": "b8aaaafc",
    "import_note": "seeded locally from the ilay_sandrusi_website project"
-  },
-  "12-security/xlsx--snyk": {
-   "skill": "12-security/xlsx--snyk",
-   "sources": [
-    "snyk/agent-scan"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
   "03-marketing/xquik-social-research": {
    "skill": "03-marketing/xquik-social-research",
