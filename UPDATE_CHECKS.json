@@ -3,7 +3,7 @@
  "purpose": "Rotating upstream update-check state. Each entry records the commit the local copies were verified against, so a later run starts from a real baseline instead of re-deriving one, and can pick the sources that have waited longest.",
  "how_to_check": "python3 tools/check-upstream.py <owner/repo>",
  "baseline_method": "Every local file is compared to the upstream tree by git blob SHA. 'identical' therefore means the local copy is exactly verified_commit, not merely similar to it.",
- "source_repos_total": 227,
+ "source_repos_total": 228,
  "checked": {
   "anthropics/skills": {
    "last_checked": "2026-09-05",
@@ -3210,6 +3210,16 @@
     "drift": 1
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "timescale/pg-aiguide": {
+   "last_checked": "2026-09-05",
+   "verified_commit": "acf42427fed507b7bfe98c4039fbacf0c4a69b65",
+   "upstream_pushed_at": "2026-09-04",
+   "license": "Apache-2.0",
+   "local_skills": 7,
+   "result": {
+    "identical": 7
+   }
   }
  },
  "review_queue": {
@@ -3504,20 +3514,20 @@
   },
   "coverage": {
    "as_of": "2026-09-05",
-   "sources_covered": 227,
-   "sources_total": 227,
-   "skill_source_pairs_checked": 6342,
-   "identical": 4950,
+   "sources_covered": 228,
+   "sources_total": 228,
+   "skill_source_pairs_checked": 6349,
+   "identical": 4957,
    "note": "All 227 known upstream sources have now been checked at least once, so the rotation has no never-checked backlog left and future runs cycle by staleness. Note that the three whole-repo clones in review_queue.unindexed_whole_repo_clones are NOT among these sources: they are absent from SOURCES.json, so they are outside the rotation entirely until they are indexed.",
    "history": {
     "2026-08-22": "87 claimed, 86 actual (off by one); 222 total before two sources were added.",
     "2026-08-23": "127 sources after a 40-source rotation batch, plus GaZmagik/iso-24495 on import.",
     "2026-09-04": "Full coverage reached: a --rotate 110 batch closed the last 98 never-checked sources. 29 sources reported drift (217 skills); 3 skills updated, 4 oversized updates queued.",
-    "2026-09-05": "A --rotate 117 batch re-checked every source that had not been looked at since 2026-08-22/23, so all 227 sources are now current within one day. 50 sources reported drift (430 skills). 20 skills updated from 10 first-party vendor sources; the rest were held (over the 10-resource limit, mis-attribution risk, or a known fixture tree). Note the all-time identical count FELL 5187 -> 4950 and drift rose 493 -> 624: that is not a regression in the archive, it is 117 stale baselines being re-measured against upstreams that moved on in the intervening two weeks."
+    "2026-09-05": "A --rotate 117 batch re-checked every source that had not been looked at since 2026-08-22/23, so all 227 sources are now current within one day. 50 sources reported drift (430 skills). 20 skills updated from 10 first-party vendor sources; the rest were held (over the 10-resource limit, mis-attribution risk, or a known fixture tree). Note the all-time identical count FELL 5187 -> 4950 and drift rose 493 -> 624: that is not a regression in the archive, it is 117 stale baselines being re-measured against upstreams that moved on in the intervening two weeks. timescale/pg-aiguide was added by the same run's import and checked on arrival, taking the source set to 228."
    },
    "status_totals": {
     "drift": 624,
-    "identical": 4950,
+    "identical": 4957,
     "no-upstream-path": 122,
     "unmatched-candidate": 632,
     "unreachable": 6,

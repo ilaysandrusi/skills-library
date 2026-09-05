@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6101
+**סה״כ סקילים:** 6108
 
 ## איך ללמוד
 
@@ -71,7 +71,7 @@
 | [NVIDIA ו-CUDA](./20-nvidia-cuda/) | 341 | הסקילים הרשמיים של NVIDIA: CUDA, GPU, ביצועים, רשתות עצביות ותשתית AI |
 | [Goose Agent](./21-goose-agent/) | 263 | חבילת הסקילים של gooseworks: 260+ סקילים לסוכן Goose של Block |
 | [Microsoft](./23-microsoft/) | 187 | הסקילים הרשמיים של מיקרוסופט: Azure, .NET, TypeSpec, Playwright, GitHub ועוד |
-| [דאטה ובסיסי נתונים](./25-data-databases/) | 112 | MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus ו-VideoDB |
+| [דאטה ובסיסי נתונים](./25-data-databases/) | 119 | MongoDB, Redis, Qdrant, DuckDB, ClickHouse, Neon, Tinybird, Milvus, TimescaleDB/PostGIS ו-VideoDB |
 | [מובייל ו-Apple](./26-mobile-apple/) | 136 | Flutter, Expo, React Native, Swift/SwiftUI, iOS, App Store Connect ו-HIG |
 | [Web3 וקריפטו](./27-web3-crypto/) | 47 | Binance, Coinbase, Helius (Solana): ארנקים, מסחר ופיתוח בלוקצ'יין |
 | [קריירה, חינוך ובריאות](./28-career-education-health/) | 45 | קורות חיים, ניהול קריירה, חונכות לימודית ובריאות אישית |
