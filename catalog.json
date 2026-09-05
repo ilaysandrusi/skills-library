@@ -10174,7 +10174,7 @@
     },
     {
      "name": "wp-patterns",
-     "description": "Generate technically correct, design-distinctive WordPress block patterns. Use when creating block patterns, starter page patterns, template patterns, template part patterns, or improving pattern design quality. Covers pattern registration (PHP headers, auto/manual), block markup syntax, theme.json design tokens, categories, template types, accessibility, and i18n/escaping."
+     "description": "Pattern: create or update WordPress block patterns (starter pages, templates, template parts, Query Loop layouts), review pattern registration, block markup, categories, accessibility, or i18n/escaping, or improve pattern design quality. Route custom blocks to wp-block-development; route frontend interactivity to wp-interactivity-api."
     },
     {
      "name": "wp-performance",
@@ -10437,7 +10437,7 @@
     },
     {
      "name": "gemini-omni-flash-api",
-     "description": "Use this skill for generative video editing, text-to-video, image-referenced video generation, and first-frame-to-video transition animations using the official google-genai SDK. Includes workflows for pre-processing/optimizing high-resolution or long source videos with ffmpeg, stripping audio for full sound regeneration, and handling turn-by-turn video editing and parallel execution."
+     "description": "Use this skill for generative video editing, text-to-video, image-referenced video generation, first-frame-to-video, first-and-last-frame transitions, and video extensions using Gemini Omni 1.1 Flash (gemini-omni-1.1-flash) via the official google-genai SDK. Includes workflows for pre-processing/optimizing high-resolution or long source videos with ffmpeg, stripping audio for full sound regeneration, and handling turn-by-turn video editing and parallel execution."
     },
     {
      "name": "genmedia",
@@ -22338,7 +22338,7 @@
     },
     {
      "name": "qdrant-monitoring",
-     "description": "Guides Qdrant monitoring and observability setup. Use when someone asks 'how to monitor Qdrant', 'what metrics to track', 'is Qdrant healthy', 'optimizer stuck', 'why is memory growing', 'requests are slow', or needs to set up Prometheus, Grafana, or health checks. Also use when debugging production issues that require metric analysis."
+     "description": "Guides Qdrant monitoring and observability setup. Use when someone asks 'how to monitor Qdrant', 'what metrics to track', 'is Qdrant healthy', 'optimizer stuck', 'why is memory growing', 'requests are slow', 'set up alerts', 'cluster health check', or needs to set up Prometheus, Grafana, health checks, or log centralization. Also use when debugging production issues that require metric analysis."
     },
     {
      "name": "qdrant-multitenancy",
@@ -22350,11 +22350,11 @@
     },
     {
      "name": "qdrant-scaling",
-     "description": "Guides Qdrant scaling decisions. Use when someone asks 'how many nodes do I need', 'data doesn't fit on one node', 'need more throughput', 'cluster is slow', 'too many tenants', 'vertical or horizontal', 'how to shard', or 'need to add capacity'."
+     "description": "Guides Qdrant scaling decisions. Use when someone asks 'how many nodes do I need', 'data doesn't fit on one node', 'need more throughput or QPS', 'CPU is pegged / can't keep up with the request rate', 'one query is slow / p99 or tail latency too high', 'cluster is slow', 'too many tenants', 'vertical or horizontal', 'how to shard', 'need to add capacity', 'large limit / pagination / scroll is slow', or 'only recent data matters / expiring old vectors / retention window'."
     },
     {
      "name": "qdrant-search-quality",
-     "description": "Diagnoses and improves Qdrant search relevance. Use when someone reports 'search results are bad', 'wrong results', 'low precision', 'low recall', 'irrelevant matches', 'missing expected results', or asks 'how to improve search quality?', 'which embedding model?', 'should I use hybrid search?', 'should I use reranking?', 'how to measure retrieval quality?', 'build a golden set', 'ground truth dataset', or 'how to score recall@k?'. Also use when search quality degrades after quantization, model…"
+     "description": "Diagnoses and improves Qdrant search relevance. Use when someone reports 'search results are bad', 'wrong results', 'low precision', 'low recall', 'irrelevant matches', 'missing expected results', or asks 'how to improve search quality?', 'which embedding model?', 'should I use hybrid search?', 'how to combine keyword and vector search / fusion / RRF / prefetch?', 'should I use reranking?', 'relevance feedback?', 'how to measure retrieval quality?', 'build a golden set', 'ground truth dataset', or 'how to score recall@k?'. Also use when search quality degrades after quantization, model change, or data growth."
     },
     {
      "name": "qdrant-sizing",
