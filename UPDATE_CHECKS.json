@@ -404,23 +404,9 @@
    "local_skills": 110,
    "result": {
     "no-upstream-path": 4,
-    "drift": 18,
-    "identical": 76,
-    "unmatched-candidate": 12
-   },
-   "frontmatter_probe": {
-    "05-development/agent-platform-prompt-management": "name-and-description-match",
-    "05-development/gcloud": "name-and-description-match",
-    "05-development/gke-backup-dr": "name-matches-description-differs",
-    "05-development/gke-cost-analysis": "name-and-description-match",
-    "05-development/gke-cost-optimization": "name-and-description-match",
-    "05-development/gke-observability": "name-and-description-match",
-    "05-development/gke-platform-security": "name-and-description-match",
-    "05-development/gke-productionize": "name-matches-description-differs",
-    "05-development/gke-service-networking": "name-and-description-match",
-    "05-development/google-cloud-solution-n-tier-serverless-web-app": "name-matches-description-differs",
-    "05-development/google-mobile-ads-rewarded": "name-matches-description-differs",
-    "16-ai-apis-media/gemini-interactions-api": "name-matches-description-differs"
+    "identical": 92,
+    "unmatched-candidate": 12,
+    "drift": 2
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
@@ -455,16 +441,9 @@
    "license": "Apache-2.0",
    "local_skills": 106,
    "result": {
-    "identical": 88,
-    "drift": 13,
+    "identical": 101,
     "unmatched-candidate": 4,
     "no-upstream-path": 1
-   },
-   "frontmatter_probe": {
-    "13-cloud-deploy/aws-containers": "name-matches-description-differs",
-    "13-cloud-deploy/aws-messaging-and-streaming": "name-matches-description-differs",
-    "13-cloud-deploy/aws-networking": "name-and-description-match",
-    "13-cloud-deploy/setup-devops-agent": "name-and-description-match"
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
@@ -3446,7 +3425,7 @@
    "helius-labs/core-ai": "2026-09-05: still 24 of 24 drifted.",
    "foryourhealth111-pixel/Vibe-Skills": "2026-08-22: 14 of 38 drifted.",
    "remotion-dev/skills": "2026-09-05: still 12 of 12 drifted — the whole pack moved. Over the limit.",
-   "google/skills": "2026-09-05: grew to 18 of 110 drifted (was 12). Now over the 10-resource limit, so it can no longer be applied automatically even though it is first-party. Best candidate for a manual batch.",
+   "google/skills": "2026-09-05: APPLIED 17 of 18 drifted skills @ 1776276d672b. Held 13-cloud-deploy/firebase-basics — it lists firebase/skills AND google/skills, and is identical to firebase/skills HEAD, so Firebase is the origin and Google is a vendor. google-mobile-ads-get-started still reports drift because assets/skadnetwork-identifiers.xml is a preserved local extra not in this HEAD.",
    "metalbear-co/skills": "2026-09-05: 5 drifted again after the 2026-08-23 refresh. Under the limit and single-source — a good candidate for the next run; skipped here only to keep this run's review load honest.",
    "resend/resend-skills": "2026-08-23: APPLIED, 2 skills. Now identical at 2a69b9f3.",
    "mcollina/skills": "2026-08-23: APPLIED, fastify. Now identical at 856efd26.",
@@ -3471,7 +3450,7 @@
    "getsentry/skills": "2026-09-05: APPLIED, 1 skill — 15-integrations/iterate-pr.",
    "google-gemini/gemini-skills": "2026-09-05: APPLIED, 1 skill — 16-ai-apis-media/gemini-omni-flash-api. Taken for a security hardening: the --api-key CLI argument is gone and error output is now sanitised of keys, tokens and raw response bodies.",
    "redis/agent-skills": "2026-09-05: NO CONTENT DRIFT. All 8 \"drifted\" skills are byte-identical to upstream; the only difference is that each local directory still carries the per-skill .cursor-plugin/plugin.json that upstream removed when it consolidated into plugins/redis-development/. That file is faithful to the imported commit and carries author/licence/homepage metadata, so it was kept rather than deleted. Adopting the plugin layout is a structural decision for the owner.",
-   "aws/agent-toolkit-for-aws": "2026-09-05: 13 of 106 drifted. Just over the limit; first-party and worth a manual batch.",
+   "aws/agent-toolkit-for-aws": "2026-09-05: APPLIED all 13 drifted skills @ 8ea26bdf9c8b. Now identical except 4 unrelated unmatched-candidate skills.",
    "prompt-security/clawsec": "2026-09-05: 2 drifted (clawsec-feed, clawsec-suite). AGPL-3.0 security tooling that ships hooks; needs the hook diff read before anything is applied.",
    "addyosmani/web-quality-skills": "2026-09-05: 2 drifted. 02-design-ui/accessibility also lists affaan-m/ECC, so the origin must be settled first; 02-design-ui/web-quality-audit is single-source and safe.",
    "nowork-studio/NotFair": "2026-09-05: 9 drifted, 12 unmatched. Under the limit but unreviewed.",
@@ -3548,7 +3527,7 @@
    "sources_covered": 231,
    "sources_total": 231,
    "skill_source_pairs_checked": 6425,
-   "identical": 5031,
+   "identical": 5060,
    "note": "All 227 known upstream sources have now been checked at least once, so the rotation has no never-checked backlog left and future runs cycle by staleness. Note that the three whole-repo clones in review_queue.unindexed_whole_repo_clones are NOT among these sources: they are absent from SOURCES.json, so they are outside the rotation entirely until they are indexed.",
    "history": {
     "2026-08-22": "87 claimed, 86 actual (off by one); 222 total before two sources were added.",
@@ -3557,8 +3536,8 @@
     "2026-09-05": "A --rotate 117 batch re-checked every source that had not been looked at since 2026-08-22/23, so all 227 sources are now current within one day. 50 sources reported drift (430 skills). 20 skills updated from 10 first-party vendor sources; the rest were held (over the 10-resource limit, mis-attribution risk, or a known fixture tree). Note the all-time identical count FELL 5187 -> 4950 and drift rose 493 -> 624: that is not a regression in the archive, it is 117 stale baselines being re-measured against upstreams that moved on in the intervening two weeks. timescale/pg-aiguide was added by the same run's import and checked on arrival, taking the source set to 228."
    },
    "status_totals": {
-    "drift": 626,
-    "identical": 5031,
+    "drift": 597,
+    "identical": 5060,
     "no-upstream-path": 122,
     "unmatched-candidate": 632,
     "unreachable": 6,
