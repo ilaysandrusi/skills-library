@@ -1,8 +1,8 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6094,
- "traced_to_source_repo": 6080,
- "distinct_source_repos": 228,
+ "skills": 6170,
+ "traced_to_source_repo": 6156,
+ "distinct_source_repos": 231,
  "non_skill_directories": {
   "14-testing-qa/shared": {
    "skill": "14-testing-qa/shared",
@@ -43,6 +43,7 @@
   "openai/skills": 54,
   "bitwize-music-studio/claude-ai-music-skills": 53,
   "coreyhaines31/marketingskills": 50,
+  "diegosouzapw/OmniRoute": 46,
   "Eronred/aso-skills": 42,
   "dembrandt/dembrandt-skills": 40,
   "getsentry/skills": 40,
@@ -65,6 +66,7 @@
   "Paramchoudhary/ResumeSkills": 23,
   "expo/skills": 23,
   "hashicorp/agent-skills": 21,
+  "petekp/claude-code-setup": 21,
   "veniceai/skills": 21,
   "WordPress/agent-skills": 20,
   "Joannis/claude-skills": 19,
@@ -112,6 +114,7 @@
   "mongodb/agent-skills": 9,
   "neondatabase/agent-skills": 9,
   "ohad6k/emulo": 9,
+  "usestrix/strix": 9,
   "zxkane/aws-skills": 9,
   "GaZmagik/iso-24495": 8,
   "NoizAI/skills": 8,
@@ -55222,6 +55225,690 @@
    "method": "direct-import",
    "added_in": "2026-09-05",
    "import_note": "daily maintenance 2026-09-05: seven of the nine skills in timescale/pg-aiguide, chosen individually; the umbrella postgres router and design-postgres-tables were skipped as duplicative (see each SOURCE.md)"
+  },
+  "05-development/calldiff": {
+   "skill": "05-development/calldiff",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "08-context-engineering/catch-up": {
+   "skill": "08-context-engineering/catch-up",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/circuit": {
+   "skill": "05-development/circuit",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/circuit-resource-analysis": {
+   "skill": "05-development/circuit-resource-analysis",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "09-anthropic-tools/claude-code-audit": {
+   "skill": "09-anthropic-tools/claude-code-audit",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/code-comments": {
+   "skill": "05-development/code-comments",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "08-context-engineering/deep-research--petekp": {
+   "skill": "08-context-engineering/deep-research--petekp",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "08-context-engineering/discernment-nudge": {
+   "skill": "08-context-engineering/discernment-nudge",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/exhaustive-systems-analysis": {
+   "skill": "05-development/exhaustive-systems-analysis",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "08-context-engineering/frame-check": {
+   "skill": "08-context-engineering/frame-check",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/improve-codebase-architecture--petekp": {
+   "skill": "05-development/improve-codebase-architecture--petekp",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "08-context-engineering/latent-potential": {
+   "skill": "08-context-engineering/latent-potential",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "01-copy-writing/literate-guide": {
+   "skill": "01-copy-writing/literate-guide",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "01-copy-writing/plain": {
+   "skill": "01-copy-writing/plain",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/pr-description": {
+   "skill": "05-development/pr-description",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/pr-screenshot-comparison": {
+   "skill": "05-development/pr-screenshot-comparison",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/pr-self-review": {
+   "skill": "05-development/pr-self-review",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/react-change-review": {
+   "skill": "05-development/react-change-review",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "05-development/spike": {
+   "skill": "05-development/spike",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "02-design-ui/typography": {
+   "skill": "02-design-ui/typography",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "09-anthropic-tools/write-goal": {
+   "skill": "09-anthropic-tools/write-goal",
+   "sources": [
+    "petekp/claude-code-setup"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+  },
+  "12-security/api-security-testing": {
+   "skill": "12-security/api-security-testing",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "12-security/application-security-testing": {
+   "skill": "12-security/application-security-testing",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "12-security/ci-security-scanning-with-strix": {
+   "skill": "12-security/ci-security-scanning-with-strix",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "12-security/find-security-vulnerabilities-in-code": {
+   "skill": "12-security/find-security-vulnerabilities-in-code",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "12-security/fix-security-vulnerabilities-with-strix": {
+   "skill": "12-security/fix-security-vulnerabilities-with-strix",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "12-security/managed-pentesting-with-strix": {
+   "skill": "12-security/managed-pentesting-with-strix",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "12-security/owasp-top-10-testing": {
+   "skill": "12-security/owasp-top-10-testing",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "12-security/penetration-testing-with-strix": {
+   "skill": "12-security/penetration-testing-with-strix",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "12-security/web-app-penetration-testing": {
+   "skill": "12-security/web-app-penetration-testing",
+   "sources": [
+    "usestrix/strix"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 9 driver skills from HEAD of a fresh Desktop clone of usestrix/strix @ ff5c8cc8. The pentest engine itself was not imported."
+  },
+  "16-ai-apis-media/cli-a2a": {
+   "skill": "16-ai-apis-media/cli-a2a",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-backup-sync": {
+   "skill": "16-ai-apis-media/cli-backup-sync",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-batches": {
+   "skill": "16-ai-apis-media/cli-batches",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-chat": {
+   "skill": "16-ai-apis-media/cli-chat",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-compression": {
+   "skill": "16-ai-apis-media/cli-compression",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-contexts": {
+   "skill": "16-ai-apis-media/cli-contexts",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-cost-usage": {
+   "skill": "16-ai-apis-media/cli-cost-usage",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-eval": {
+   "skill": "16-ai-apis-media/cli-eval",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-health": {
+   "skill": "16-ai-apis-media/cli-health",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-keys": {
+   "skill": "16-ai-apis-media/cli-keys",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-mcp": {
+   "skill": "16-ai-apis-media/cli-mcp",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-models": {
+   "skill": "16-ai-apis-media/cli-models",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-plugins-skills": {
+   "skill": "16-ai-apis-media/cli-plugins-skills",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-policy-audit": {
+   "skill": "16-ai-apis-media/cli-policy-audit",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-providers": {
+   "skill": "16-ai-apis-media/cli-providers",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-resilience": {
+   "skill": "16-ai-apis-media/cli-resilience",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-routing": {
+   "skill": "16-ai-apis-media/cli-routing",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-serve": {
+   "skill": "16-ai-apis-media/cli-serve",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-setup": {
+   "skill": "16-ai-apis-media/cli-setup",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-skill-collector": {
+   "skill": "16-ai-apis-media/cli-skill-collector",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/cli-tunnel": {
+   "skill": "16-ai-apis-media/cli-tunnel",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/config-codex-cli": {
+   "skill": "16-ai-apis-media/config-codex-cli",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-agents-a2a": {
+   "skill": "16-ai-apis-media/omni-agents-a2a",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-api-keys": {
+   "skill": "16-ai-apis-media/omni-api-keys",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-auth": {
+   "skill": "16-ai-apis-media/omni-auth",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-budget": {
+   "skill": "16-ai-apis-media/omni-budget",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-cache": {
+   "skill": "16-ai-apis-media/omni-cache",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-cli-tools": {
+   "skill": "16-ai-apis-media/omni-cli-tools",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-combos-routing": {
+   "skill": "16-ai-apis-media/omni-combos-routing",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-compression": {
+   "skill": "16-ai-apis-media/omni-compression",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-context-rtk": {
+   "skill": "16-ai-apis-media/omni-context-rtk",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-db-backups": {
+   "skill": "16-ai-apis-media/omni-db-backups",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-github-skills": {
+   "skill": "16-ai-apis-media/omni-github-skills",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-inference": {
+   "skill": "16-ai-apis-media/omni-inference",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-mcp": {
+   "skill": "16-ai-apis-media/omni-mcp",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-models": {
+   "skill": "16-ai-apis-media/omni-models",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-providers": {
+   "skill": "16-ai-apis-media/omni-providers",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-proxies": {
+   "skill": "16-ai-apis-media/omni-proxies",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-resilience": {
+   "skill": "16-ai-apis-media/omni-resilience",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-settings": {
+   "skill": "16-ai-apis-media/omni-settings",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-sync-cloud": {
+   "skill": "16-ai-apis-media/omni-sync-cloud",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-tunnels": {
+   "skill": "16-ai-apis-media/omni-tunnels",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-usage-logs": {
+   "skill": "16-ai-apis-media/omni-usage-logs",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-version-manager": {
+   "skill": "16-ai-apis-media/omni-version-manager",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/omni-webhooks": {
+   "skill": "16-ai-apis-media/omni-webhooks",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
+  },
+  "16-ai-apis-media/ponytail": {
+   "skill": "16-ai-apis-media/ponytail",
+   "sources": [
+    "diegosouzapw/OmniRoute"
+   ],
+   "method": "direct-import",
+   "added_in": "2026-09-05",
+   "import_note": "daily 2026-09-05: extracted the 46 skills/ packages from HEAD of a fresh Desktop clone of diegosouzapw/OmniRoute @ 9d1a896c. Application, docs/i18n, tests and the bridge-proof fixture were left out."
   }
  }
 }

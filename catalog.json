@@ -1,5 +1,5 @@
 {
- "total": 6094,
+ "total": 6170,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -93,6 +93,14 @@
     {
      "name": "johnny-suede-write",
      "description": "Write sharper Suede copy for docs, pages, email, social, headlines, CTAs, product listings, and public explainers."
+    },
+    {
+     "name": "literate-guide",
+     "description": "Create a narrative guide to a codebase or feature in the style of Knuth's Literate Programming — code and prose interwoven as a single essay, ordered for human understanding rather than compiler needs. Use when the user asks to 'explain this codebase as a story', 'write a literate guide', 'create a narrative walkthrough', 'tell the story of this code', 'Knuth-style documentation', 'weave a guide for this feature', or when they want deep, readable documentation that treats the program as literature. Also trigger when someone wants a document that a thoughtful reader could follow from start to finish and come away understanding both WHAT the code does and WHY every design choice was made."
+    },
+    {
+     "name": "plain",
+     "description": "Restate dense, jargon-heavy, or hard-to-follow content in plain language so the user actually understands it. Use whenever the user invokes /plain, says something like \"explain that more simply\", \"I don't follow\", \"what does that actually mean\", \"in plain English\", \"break that down\", \"ELI5\", or pastes/points at text they find dense. With no arguments, restate your own previous response. With arguments (pasted text, a file path, or \"the part about X\"), restate that instead. Trigger even on informal signals of confusion — \"wait, what?\", \"huh?\", \"lost me\" — not just explicit requests."
     },
     {
      "name": "ru-check",
@@ -876,6 +884,10 @@
     {
      "name": "threejs-textures",
      "description": "Three.js textures - texture types, UV mapping, environment maps, texture settings. Use when working with images, UV coordinates, cubemaps, HDR environments, or texture optimization."
+    },
+    {
+     "name": "typography",
+     "description": "Apply professional typography principles to create readable, hierarchical, and aesthetically refined interfaces. Use when setting type scales, choosing fonts, adjusting spacing, designing text-heavy layouts, implementing dark mode typography, or when asked about readability, font pairing, line height, measure, typographic hierarchy, variable fonts, font loading, or OpenType features."
     },
     {
      "name": "ui-skills-root",
@@ -3399,6 +3411,10 @@
      "description": "Build in public isn't marketing. It's letting people watch you work. The best posts feel like you're narrating your thought process to a friend who's also a senior engineer. No hype sludge. No \\\"I'm excited to announce.\\\" Just: here's what I built, here's why it matters, here's…"
     },
     {
+     "name": "calldiff",
+     "description": "Call-graph evidence from git via the calldiff CLI: which functions reach a symbol, and how a change moved the call structure. Use when you need blast radius before editing (does anything reach this function, and by what path), when scoping which files a change really touches, or when reviewing a diff whose risk is structural rather than textual. Tree-sitter based, 22 languages, no build step. Do not use it as a general replacement for git diff."
+    },
+    {
      "name": "changelog-automation",
      "description": "Automate changelog generation from commits, PRs, and releases following Keep a Changelog format. Use when setting up release workflows, generating release notes, or standardizing commit conventions."
     },
@@ -3413,6 +3429,14 @@
     {
      "name": "ci-cd-and-automation",
      "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies."
+    },
+    {
+     "name": "circuit",
+     "description": "Operate Circuit, the flow engine that runs coding work as structured, evidence-backed flows (Fix, Build, Explore, Review, Prototype). Use ONLY when the user explicitly invokes Circuit by name — e.g. says \"circuit\", \"run a flow\", \"use circuit\", \"start a circuit run\", \"resume the run\", or names Circuit-specific concepts (flows, checkpoints, run folders, the power dial or process override, connectors, `circuit preview`, `circuit reclaim`). Do NOT trigger on generic coding requests, even substantive ones; do NOT trigger merely because Circuit is installed in the project. Absent an explicit mention, do the work by hand."
+    },
+    {
+     "name": "circuit-resource-analysis",
+     "description": "Analyze a provided resource through a Circuit lens. Use when the user provides or points to an article, pasted conversation, X thread, workflow example, GitHub repo, local codebase, product page, paper, or other outside reference and asks what Circuit can learn from it, whether it suggests a possible Circuit flow, whether Circuit can support the workflow today, what product or block changes would be needed, or whether the analysis should be added to Circuit's ideas or flow backlog."
     },
     {
      "name": "claude-api",
@@ -3465,6 +3489,10 @@
     {
      "name": "cloudflare-deploy",
      "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare."
+    },
+    {
+     "name": "code-comments",
+     "description": "Write clear, plain-spoken code comments and documentation that lives alongside the code. Use when writing or reviewing code that needs inline documentation—file headers, function docs, architectural decisions, or explanatory comments. Optimized for both human readers and AI coding assistants who benefit from co-located context."
     },
     {
      "name": "code-deduplication",
@@ -3725,6 +3753,10 @@
     {
      "name": "executing-plans",
      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints"
+    },
+    {
+     "name": "exhaustive-systems-analysis",
+     "description": "Perform evidence-driven, multi-subsystem audits of real codebases to find correctness bugs, race conditions, security gaps, stale documentation, dead code, and production-readiness risks. Use when asked to audit a system end-to-end, verify agent-written code before shipping, analyze a subsystem for correctness across multiple modules, or produce a structured risk report for a real implementation. Prefer other skills for a single isolated bug, a proposal or document review, or a dedicated dead-code cleanup."
     },
     {
      "name": "existing-repo",
@@ -4323,6 +4355,10 @@
      "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick."
     },
     {
+     "name": "improve-codebase-architecture--petekp",
+     "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick."
+    },
+    {
      "name": "incremental-implementation",
      "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step."
     },
@@ -4747,6 +4783,18 @@
      "description": "PostHog analytics, event tracking, feature flags, dashboards"
     },
     {
+     "name": "pr-description",
+     "description": "Write a short, visual, evidence-backed GitHub PR description and open or update the PR with it. Use whenever the user asks to open a PR, write or rewrite a PR description, 'describe this change', or run gh pr create — even if they don't say 'description'. Gathers real proof first (screenshots for UI, terminal transcripts for CLI, ascii before/after for data shapes), then writes prose that captions the evidence. Do not use for PRD/product documents (that's writing-prds) or for review comments on an existing PR (that's pr-self-review)."
+    },
+    {
+     "name": "pr-screenshot-comparison",
+     "description": "Create clear, polished before-and-after screenshots from the actual running product for a GitHub pull request. Use when a UI change needs visual proof: capture matching product states, crop to the relevant UI, stitch and caption one comparison image, attach it natively to the PR, and keep the image out of the repository."
+    },
+    {
+     "name": "pr-self-review",
+     "description": "Draft short, plainspoken notes in the author's voice that help reviewers understand non-obvious choices, boundaries, and preserved behavior in the author's own pull request or local diff. Use when the user asks to self-review, annotate, or add reviewer context to their PR or changes. Draft locally when no PR exists, and post approved notes as one GitHub review when a PR does exist. Do not use for reviewing someone else's PR, writing code comments, explaining code generally, or drafting a PR description. Never post without explicit approval."
+    },
+    {
      "name": "preview",
      "description": "Stand up the project's live app and hand it to the user to try a change firsthand, then gate on their verdict before continuing. Use when the user asks to \"preview the change\", \"let me try it\", \"spin up the app so I can test it\", \"set it up so I can poke at it\", or before finalizing a UI/UX change that needs human eyes."
     },
@@ -4841,6 +4889,10 @@
     {
      "name": "rails-conventions",
      "description": "Rails 8.x application architecture, implementation, and review guidance for production codebases. Use when building or reviewing Ruby on Rails 8 features across models, controllers, routes, Hotwire, jobs, APIs, performance, security, and testing. Trigger for requests mentioning Rails 8, Active Record, Active Job, GoodJob, Solid Queue, Turbo/Stimulus, REST resources, migrations, code quality, naming, and production readiness."
+    },
+    {
+     "name": "react-change-review",
+     "description": "Review recent React, Next.js, or TypeScript UI code changes for hardening before merge or commit. Use when asked to review recent React code changes, audit a React diff, harden a feature, check a PR or branch for React issues, or produce a stack-ranked list of nonredundant findings and a recommended fix plan using react-doctor, Vercel React best practices, Vercel composition patterns, and React useEffect guidance."
     },
     {
      "name": "react-modernization",
@@ -5069,6 +5121,10 @@
     {
      "name": "speckit-updater",
      "description": "This skill provides safe update capabilities for GitHub SpecKit installations, preserving customizations while applying template updates."
+    },
+    {
+     "name": "spike",
+     "description": "Run a spike — a timeboxed, deliberately disposable experiment whose only job is to answer the unknowns in a task before anyone commits to a real implementation. Use whenever the user says \"spike\", \"spike this\", \"let's spike it\", \"throwaway\", \"proof of concept\", \"POC\", \"quick and dirty\", \"just to see if it works\", \"prototype it\", \"tracer bullet\", or \"hack something together\". Also use — even without those words — when the user is weighing whether an approach is viable, asks \"would this even work\", \"can we do X with Y\", \"how hard would this be\", \"is this fast enough\", \"how many places does this touch\", or is about to start a large effort whose shape depends on a fact nobody has checked yet. Prefer this over building the real thing when the honest answer to \"do we know this will work?\" is no."
     },
     {
      "name": "split-and-ship",
@@ -5676,6 +5732,10 @@
      "description": "Build a custom browser-based annotation interface tailored to your data for reviewing LLM traces and collecting structured feedback. Use when you need to build an annotation tool, review traces, or collect human labels."
     },
     {
+     "name": "catch-up",
+     "description": "Give the human a fast, plain-English catch-up on what changed in the project: what the agents did, why, and what decisions need their input. Use this whenever the user asks to \"catch me up\", \"what changed\", \"where are we\", \"recap\", \"brief me\", \"give me the rundown\", \"what did you do\", \"summarize the session\", \"fill me in\", or otherwise signals they have been away and want to get back up to speed quickly. Built for someone steering several agent-driven projects at once who does not read the code closely but needs to grasp the core ideas, the choices made, and the open decisions well enough to steer. Trigger even if they do not use these exact words: any request to get oriented on recent progress should use this skill."
+    },
+    {
      "name": "cause-and-effect",
      "description": "Systematic Fishbone analysis exploring problem causes across six categories"
     },
@@ -5792,8 +5852,16 @@
      "description": "Manage evidence freshness by identifying stale decisions and providing governance actions"
     },
     {
+     "name": "deep-research--petekp",
+     "description": "Conduct exhaustive, citation-rich research on any topic using all available tools: web search, browser automation, documentation APIs, and codebase exploration. Use when asked to \"research X\", \"find out about Y\", \"investigate Z\", \"deep dive into...\", \"what's the current state of...\", \"compare options for...\", \"fact-check this...\", or any request requiring comprehensive, accurate information from multiple sources. Prioritizes accuracy over speed, cross-references claims across sources, identifies conflicts, and provides full citations. Outputs structured findings with confidence levels and source quality assessments."
+    },
+    {
      "name": "design-testing-strategy",
      "description": "Use before writing any type of tests. Distills 14 industry sources into deterministic decision gates, schemas, and worked test examples."
+    },
+    {
+     "name": "discernment-nudge",
+     "description": "After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, analysis or interpretation of data, factual claims they may rely on, or a multi-step argument — invoke this skill BEFORE finalizing your reply and then, if it applies, append 2-3 short follow-up questions, each tied to something specific in what you just produced, that help the user check key facts, probe the reasoning or assumptions, and notice missing context. Do this at most once per conversation. Skip it when the user asked a trivial how-to or simple lookup, wants a purely educational explanation, asked you only to format, convert, or assemble a file from content they provided, is writing code they will run, is doing creative writing or casual chat, or already asked you to double-check, cite, or review — the skill file explains these boundaries and the exact output format."
     },
     {
      "name": "do-and-judge",
@@ -5846,6 +5914,10 @@
     {
      "name": "fractal--plasma-ai",
      "description": "Hierarchical agent loops with recursive self-organization."
+    },
+    {
+     "name": "frame-check",
+     "description": "Check whether the stated problem is the right problem before work commits to it. Walks a problem statement back down to what was actually observed, names where the inference leapt, and returns competing frames plus the cheapest observation that would tell them apart. Use when the user asks \"is this the right problem\", \"frame check\", \"what if the real problem is something else\", \"are we sure that's the cause\", \"reframe this\", or questions a diagnosis. Also use proactively at the moments where solving the wrong problem is most likely and most expensive: a bug that keeps coming back after being fixed, a PRD or project whose problem statement is asserted rather than evidenced, a post-incident review, or the start of a large effort whose direction rests on an unexamined diagnosis. Do not use to pressure-test a plan whose problem is already settled, and do not use on small well-specified tasks where the frame is not in doubt."
     },
     {
      "name": "generate-synthetic-data",
@@ -5950,6 +6022,10 @@
     {
      "name": "keep-the-why",
      "description": "Preserves or recovers the reasoning behind a codebase - architectural decisions, rejected alternatives, workarounds, incident learnings, operational constraints, and historical context the code itself cannot explain. Use when implementing or reviewing a non-trivial change involving a design decision, workaround, incident fix, operational constraint, rejected alternative, or changed assumption; when documenting an existing or legacy codebase; during onboarding or a maintainer handover; or when…"
+    },
+    {
+     "name": "latent-potential",
+     "description": "First-principles, team-of-experts assessment of a software project that surfaces latent potential; underexploited assets, a sharper north star, missing high-leverage capabilities, better framing and messaging. Produces a prioritized, evidence-grounded report with cheap probes, a reframe candidate, a stop-doing list, and an honest skeptic's case. Use whenever the user wants fresh eyes on a project they have built: \"what am I sitting on\", \"what could this become\", \"is there a bigger play here\", \"how do I make this valuable or impactful\", \"assess this project\", \"strategic review\", \"where should this go next\", \"is this worth pursuing\", \"what's the potential here\", or when they point at a repo and ask what to do with it, even if they never say \"assessment\" or \"potential\". Not for routine code review, debugging, or performance audits."
     },
     {
      "name": "launch-sub-agent",
@@ -6295,6 +6371,10 @@
    "description": "יצירת סקילים, תבניות, בדיקות וכו׳",
    "skills": [
     {
+     "name": "claude-code-audit",
+     "description": "Forensic audit of the user's recent Claude Code sessions to surface step-change workflow improvements — not marginal ones. Use when the user asks to \"audit my Claude Code sessions\", \"analyze how I use Claude Code\", \"find patterns in my usage\", \"improve my Claude Code workflow\", \"review my sessions\", \"find leverage in my setup\", or wants to understand where their Claude Code setup is leaking time. Samples dozens of real transcripts, extracts quantitative signal via scripts, uses parallel subagents for deep reads, then synthesizes into a short prioritized report with drafted implementations (new skills, CLAUDE.md rules, hooks, settings diffs) that the user can install directly. Trigger even when the user doesn't say the word \"audit\" — if they're asking about improving or reviewing their Claude Code habits at scale, use this skill."
+    },
+    {
      "name": "evaluation-methodology",
      "description": "PluginEval quality methodology — dimensions, rubrics, statistical methods, and scoring formulas. Use this skill when understanding how plugin quality is measured, when interpreting a low score on a specific dimension, when deciding how to improve a skill's triggering accuracy or orchestration fitness, when calibrating scoring thresholds for your marketplace, or when explaining quality badges to external partners like Neon."
     },
@@ -6313,6 +6393,10 @@
     {
      "name": "template--anthropics",
      "description": "Replace with description of the skill and when Claude should use it."
+    },
+    {
+     "name": "write-goal",
+     "description": "Turn the prompt supplied with this skill into a concise, auditable Codex Goal or explain why a Goal is not the right fit. Use when the user asks to draft, formulate, rewrite, tighten, or create a `/goal` from a plain-language task, especially for multi-step work that needs a durable objective, evidence-based completion, constraints, iteration policy, and a default adversarial review loop."
     }
    ]
   },
@@ -7072,6 +7156,14 @@
      "description": "Use when touching retiring old logic, collapsing duplicate owners, removing fallbacks, or schema/persistence/source-of-truth boundaries; identify opportunities automatically; destructive execution requires explicit confirmation."
     },
     {
+     "name": "api-security-testing",
+     "description": "Security-test a REST, GraphQL, or gRPC API with Strix — autonomous agents that enumerate endpoints from an OpenAPI/GraphQL schema (or by crawling), then actually exploit the API-specific vulnerability classes in the OWASP API Security Top 10 (2023) — broken object-level authorization (BOLA/IDOR), broken object property level authorization (excessive data exposure and mass assignment), broken function-level authorization, unrestricted resource consumption, SSRF, injection, and auth/token flaws. Every finding comes with a working proof-of-concept request. Use when the user asks to pentest, security-test, audit, or find vulnerabilities in an API, endpoint, or backend service."
+    },
+    {
+     "name": "application-security-testing",
+     "description": "Application security testing (AppSec) across a whole product with Strix — decide which asset needs which test (source code, running web app, API, CI pipeline), run it, and turn the results into a ranked remediation plan. Autonomous agents exploit and prove each issue instead of emitting static-analysis alerts, so the plan is ordered by what is actually reachable. Use when the user asks for an application security review or audit, an appsec assessment, vulnerability scanning across their stack, a security review before a launch or a customer security questionnaire, or does not yet know which kind of security test they need."
+    },
+    {
      "name": "atheris",
      "description": "Atheris is a coverage-guided Python fuzzer based on libFuzzer. Use for fuzzing pure Python code and Python C extensions."
     },
@@ -7118,6 +7210,10 @@
     {
      "name": "chrome-mcp-troubleshooting",
      "description": "Diagnose and fix Claude in Chrome MCP extension connectivity issues. Use when mcp__claude-in-chrome__* tools fail, return \"Browser extension is not connected\", or behave erratically."
+    },
+    {
+     "name": "ci-security-scanning-with-strix",
+     "description": "Add security scanning to CI/CD with Strix — GitHub Actions, GitLab CI, or any pipeline — so every pull request gets a diff-scoped AI pentest that blocks vulnerable code before it merges, with results as PR comments and SARIF uploaded to code scanning. Covers both the self-hosted open-source CLI (runs in your runner) and the managed app.strix.ai platform (GitHub/GitLab app or API, no runner infra). Use when the user asks to add security scanning, SAST/DAST, pentesting, vulnerability checks, or automated security review to their CI pipeline, pre-merge gate, or PR workflow."
     },
     {
      "name": "claw-release",
@@ -7228,6 +7324,10 @@
      "description": "Expert guidance for ffuf web fuzzing during penetration testing, including authenticated fuzzing with raw requests, auto-calibration, and result analysis"
     },
     {
+     "name": "find-security-vulnerabilities-in-code",
+     "description": "Find security vulnerabilities in a codebase or repository with Strix — a white-box AI security review that reads your source, reasons about the actual data flow and authorization model, then exploits what it finds in a live sandbox so every reported issue has a working proof-of-concept instead of a noisy static-analysis alert. Covers injection, XSS, SSRF, broken access control and IDOR, insecure deserialization, secrets in code, unsafe dependencies, and business-logic flaws. Use when the user asks to security-scan, security-review, or audit their code, repo, or pull request for vulnerabilities."
+    },
+    {
      "name": "finishing-a-development-branch--ganyuanran",
      "description": "Use when verified work needs integration or cleanup of an existing task-created branch/worktree, or the user explicitly requests merge, PR, or branch lifecycle handling."
     },
@@ -7238,6 +7338,10 @@
     {
      "name": "first-principles-review",
      "description": "Use when asked for first-principles or Occam's-razor review, or when high-risk decisions involve competing constraints, fallback growth, duplicate owners, or architecture direction risk. Ordinary bug fixes stay on the fast path."
+    },
+    {
+     "name": "fix-security-vulnerabilities-with-strix",
+     "description": "Fix security vulnerabilities found by a Strix pentest (open-source CLI or app.strix.ai cloud) — triage by severity, patch the root cause rather than the symptom, and re-run Strix to prove each fix actually closes the exploit. Handles injection, XSS, SSRF, broken access control, IDOR, and other validated findings. Use after a Strix scan reports findings, or when the user asks to remediate, patch, or fix security issues from a strix_runs report, vulnerabilities.json, findings.sarif, or a cloud scan."
     },
     {
      "name": "fp-check",
@@ -7324,6 +7428,10 @@
      "description": "Use when a task is multi-step, may span context resets or sessions, uses subagents, or risks losing state before completion."
     },
     {
+     "name": "managed-pentesting-with-strix",
+     "description": "Run a managed pentest of a web app, API, repository, or local workspace on the app.strix.ai platform with the `strix cloud` CLI or REST API — no local Docker or LLM key needed. Safely review and upload local source, register assets, launch and poll scans, triage vulnerabilities, export SARIF, download compliance reports, start PR reviews, buy credits, and set up schedules or webhooks. Use for managed, continuous, scheduled, team-tracked, or sandboxed-agent security testing."
+    },
+    {
      "name": "mermaid-to-proverif",
      "description": "Translates Mermaid sequenceDiagrams describing cryptographic protocols into ProVerif formal verification models (.pv files). Use when generating a ProVerif model, formally verifying a protocol, converting a Mermaid diagram to ProVerif, verifying protocol security properties (secrecy, authentication, forward secrecy), checking for replay attacks, or producing a .pv file from a sequence diagram."
     },
@@ -7356,8 +7464,16 @@
      "description": "OSS-Fuzz provides free continuous fuzzing for open source projects. Use when setting up continuous fuzzing infrastructure or enrolling projects."
     },
     {
+     "name": "owasp-top-10-testing",
+     "description": "Test an application against the OWASP Top 10 with Strix — autonomous AI agents that attempt real exploits for each category of the current OWASP Top 10:2025 (broken access control including SSRF, security misconfiguration, software supply chain failures, cryptographic failures, injection, insecure design, authentication failures, integrity failures, logging and alerting failures, mishandling of exceptional conditions) and report only what they could actually prove, mapped back to the category with a proof-of-concept. Also covers the OWASP API Security Top 10 (2023). Use when the user asks for an OWASP Top 10 assessment, OWASP compliance testing, or a security review mapped to OWASP categories."
+    },
+    {
      "name": "pci-compliance",
      "description": "Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems. Use when securing payment processing, achieving PCI compliance, or implementing payment card security measures."
+    },
+    {
+     "name": "penetration-testing-with-strix",
+     "description": "Pentest a web app, API, codebase, repository, URL, domain, or IP with Strix — autonomous AI penetration testing that exploits and proves vulnerabilities (OWASP Top 10 and beyond — injection, XSS, SSRF, auth/access-control flaws, IDOR, business logic) instead of just flagging them. Runs self-hosted with the open-source CLI or via the managed app.strix.ai cloud, and returns validated findings with proof-of-concept exploits (Markdown, JSON, CSV, SARIF). Use when the user asks to pentest, hack, security-scan, security-audit, or find vulnerabilities in an app, API, website, or repo."
     },
     {
      "name": "pentesting-with-aws-security-agent",
@@ -7598,6 +7714,10 @@
     {
      "name": "vulnerability-triage-brocards",
      "description": "This skill should be used when the user asks to \"triage a vulnerability report\", \"assess a CVE\", \"evaluate a bug bounty submission\", \"decide if a finding is valid\", \"review a security finding\", \"dismiss a vulnerability\", \"should we fix this CVE\", \"prioritize a vulnerability report\", or needs to determine whether an incoming vulnerability report warrants investigation. Applies 7 brocards (rules of thumb) to systematically accept, dismiss, or request more information on vulnerability reports, or…"
+    },
+    {
+     "name": "web-app-penetration-testing",
+     "description": "Pentest a web app or website end to end — black-box testing of a live URL, staging environment, or local dev server that finds and exploits real vulnerabilities (auth bypass, broken access control, IDOR, injection, XSS, SSRF, business logic) and proves each one with a working proof-of-concept instead of a signature match. Runs with Strix, either the self-hosted open-source CLI or the managed app.strix.ai cloud. Use when the user asks to pentest, hack, security-test, or audit their web app, website, web application, or staging site."
     },
     {
      "name": "writing-lean-proofs",
@@ -10232,6 +10352,90 @@
      "description": "Design cinematic image and video prompts for genmedia. Use this for shot language, camera movement, lighting, lens choices, color grade, film texture, scene blocking, and production-ready visual direction."
     },
     {
+     "name": "cli-a2a",
+     "description": "Interact with the OmniRoute A2A server from the CLI. Send tasks, inspect skill execution history, and test the JSON-RPC 2.0 agent-to-agent protocol interactively."
+    },
+    {
+     "name": "cli-backup-sync",
+     "description": "Backup and restore OmniRoute data from the CLI. Trigger incremental snapshots, sync to cloud storage, manage backup schedules, and restore from archive files."
+    },
+    {
+     "name": "cli-batches",
+     "description": "Submit and monitor batch inference jobs from the CLI. Upload and manage files for batch processing, retrieve results, and integrate batch pipelines with CI/CD workflows."
+    },
+    {
+     "name": "cli-chat",
+     "description": "Send chat completions, stream responses, and start an interactive REPL session from the CLI. Supports all OmniRoute providers, combo routing, and system prompt configuration."
+    },
+    {
+     "name": "cli-compression",
+     "description": "Configure and test prompt compression from the CLI. Manage RTK filters, Caveman rules, stacked compression modes, and preview compression output with real prompts."
+    },
+    {
+     "name": "cli-contexts",
+     "description": "Manage context engineering configurations, RTK filter sets, and conversation sessions from the CLI. Apply context-relay settings and inspect active context pipelines."
+    },
+    {
+     "name": "cli-cost-usage",
+     "description": "View cost breakdowns, token usage, and call logs from the CLI. Filter by provider, model, or date range. Export usage reports and inspect per-connection spending."
+    },
+    {
+     "name": "cli-eval",
+     "description": "Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI."
+    },
+    {
+     "name": "cli-health",
+     "description": "Check server health, component status, and live metrics from the CLI. Run `health`, `health components`, and `health watch` for a real-time dashboard of circuit breakers and provider status."
+    },
+    {
+     "name": "cli-keys",
+     "description": "Create, list, rotate, and revoke OmniRoute API keys from the CLI. Manage OAuth flows for provider authentication and inspect key scopes and expiration."
+    },
+    {
+     "name": "cli-mcp",
+     "description": "Inspect the MCP server status, list registered tools and scopes, run tool invocations, and manage MCP audit logs from the CLI."
+    },
+    {
+     "name": "cli-models",
+     "description": "Query available AI models, list model aliases, and browse the full model catalog from the CLI. Filter by provider, search by capability, and resolve model name variants."
+    },
+    {
+     "name": "cli-plugins-skills",
+     "description": "Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI."
+    },
+    {
+     "name": "cli-policy-audit",
+     "description": "Inspect audit logs, manage access policies, view telemetry data, and review request history from the CLI. Filter by event type, user, or time range for compliance workflows."
+    },
+    {
+     "name": "cli-providers",
+     "description": "Manage provider connections from the CLI: list available/configured providers, add, test, test-all, validate, rotate API keys, and view per-provider metrics."
+    },
+    {
+     "name": "cli-resilience",
+     "description": "Inspect and manage circuit-breaker states, connection cooldowns, quota limits, and backoff levels from the CLI. Reset stuck providers and configure resilience thresholds."
+    },
+    {
+     "name": "cli-routing",
+     "description": "Create, list, update, and delete routing combos from the CLI. Test routing strategies, inspect combo metrics, and configure fallback chains interactively."
+    },
+    {
+     "name": "cli-serve",
+     "description": "Start, stop, and restart the OmniRoute server from the CLI. Manage daemon mode, port configuration, auto-recovery, system tray integration, and the dashboard open shortcut."
+    },
+    {
+     "name": "cli-setup",
+     "description": "Run initial setup, configure global CLI settings, manage environment variables, check for updates, and configure autostart via the CLI setup and config commands."
+    },
+    {
+     "name": "cli-skill-collector",
+     "description": "Detect installed CLI coding tools (Claude Code, Codex, Cursor, Copilot, Cline and more), search GitHub for matching agent skills, and install them to the detected tools via OmniRoute's built-in APIs."
+    },
+    {
+     "name": "cli-tunnel",
+     "description": "Start and stop tunnel connections (ngrok, Cloudflare, custom) from the CLI. Inspect active tunnel URLs, configure authentication, and test external reachability."
+    },
+    {
      "name": "clipboard",
      "description": "Copies track content (lyrics, style prompts, streaming lyrics) to the system clipboard. Use when the user needs to paste lyrics or style prompts into Suno or other external tools."
     },
@@ -10258,6 +10462,10 @@
     {
      "name": "composition-design-review",
      "description": "Design review layer for OrkasVideoStudio COMPOSE previews and drafts. Review every immutable snapshot frame before showing a visual preview; when preview is skipped, use the draft as the fallback evidence. Return one complete, actionable repair set without opening another user gate."
+    },
+    {
+     "name": "config-codex-cli",
+     "description": "Step-by-step agent workflow to configure the OpenAI Codex CLI on any machine (Linux, macOS, Windows) to use OmniRoute as an OpenAI-compatible backend. Detects OS and shell, writes config.toml and 7 named profiles, sets environment variables, and verifies the setup."
     },
     {
      "name": "configure",
@@ -10636,6 +10844,98 @@
      "description": "Analyzes album state and recommends the optimal next action. Use when the user asks \"what should I do next?\" or \"what's left to do?\""
     },
     {
+     "name": "omni-agents-a2a",
+     "description": "Interact with OmniRoute via JSON-RPC 2.0 agent-to-agent protocol. 6 built-in A2A skills: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities."
+    },
+    {
+     "name": "omni-api-keys",
+     "description": "Create, list, rotate, and revoke OmniRoute API keys. Control per-key scopes, spending limits, and expiration. Keys gate access to all proxy and management endpoints."
+    },
+    {
+     "name": "omni-auth",
+     "description": "Manage API key authentication and session tokens. Start here to authenticate requests via Bearer token, obtain session cookies, and configure login requirements for the OmniRoute API."
+    },
+    {
+     "name": "omni-budget",
+     "description": "Configure spending limits, token quotas, and rate-limit policies per API key or globally. Inspect current consumption and enforce cost controls across providers."
+    },
+    {
+     "name": "omni-cache",
+     "description": "Manage the LLM response cache. View cache statistics, clear entries, configure TTL policies, and control semantic-similarity caching thresholds."
+    },
+    {
+     "name": "omni-cli-tools",
+     "description": "Manage CLI tool integrations exposed via the API. List, configure, and invoke CLI tool plugins that extend OmniRoute's automation surface."
+    },
+    {
+     "name": "omni-combos-routing",
+     "description": "Create and manage routing combos with 19 strategies (priority, weighted, round-robin, Auto-combo, and more). Configure fallback chains, test routing outcomes, and retrieve combo metrics."
+    },
+    {
+     "name": "omni-compression",
+     "description": "Configure RTK (command output), Caveman (prose), and stacked compression modes. Manage language packs, custom rules, and test prompt compression reducing tokens by 60–90%."
+    },
+    {
+     "name": "omni-context-rtk",
+     "description": "Configure RTK filters, context engineering rules, and context relay settings. Test compression with real prompt samples and manage context transformation pipelines."
+    },
+    {
+     "name": "omni-db-backups",
+     "description": "Trigger system backups, restore from backup files, and manage the SQLite database lifecycle. Supports export, import, and incremental snapshot strategies."
+    },
+    {
+     "name": "omni-github-skills",
+     "description": "Search, score, scan, and import agent skills from GitHub repositories that contain SKILL.md, CLAUDE.md, .cursorrules, and similar agent skill files. Discover community skills across many tool and provider categories, evaluate relevance with heuristic scoring, check for malware or hardcoded secrets, and install into Hermes, Claude Code, Gemini CLI, or OpenCode agent directories."
+    },
+    {
+     "name": "omni-inference",
+     "description": "The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, and the Responses API. The primary integration surface for AI agents."
+    },
+    {
+     "name": "omni-mcp",
+     "description": "Connect to the OmniRoute MCP server (110 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 33 permission scopes."
+    },
+    {
+     "name": "omni-models",
+     "description": "Query available AI models across all configured providers. List models, resolve model aliases, and browse the full model catalog including provider-specific variants."
+    },
+    {
+     "name": "omni-providers",
+     "description": "Manage provider connections, API keys, OAuth flows, and connection tests via the REST API. List, add, update, remove, and test AI provider integrations across OmniRoute's 327-provider catalog."
+    },
+    {
+     "name": "omni-proxies",
+     "description": "Configure HTTP/HTTPS/SOCKS proxies for upstream provider requests. Set per-provider or global proxy rules, test connectivity, and manage proxy rotation."
+    },
+    {
+     "name": "omni-resilience",
+     "description": "Monitor provider health, circuit-breaker states, p50/p95/p99 latency metrics, and budget guard alerts. Inspect connection cooldowns and model lockouts in real time."
+    },
+    {
+     "name": "omni-settings",
+     "description": "Read and update global application settings: system prompts, thinking budget, IP filters, payload rules, combo defaults, and require-login configuration."
+    },
+    {
+     "name": "omni-sync-cloud",
+     "description": "Synchronise OmniRoute configuration, provider connections, and settings to/from cloud storage. Manage cloud worker authentication and remote backup targets."
+    },
+    {
+     "name": "omni-tunnels",
+     "description": "Create and manage secure tunnels (ngrok, Cloudflare Tunnel, custom) to expose OmniRoute to the internet or share access with remote agents and CI pipelines."
+    },
+    {
+     "name": "omni-usage-logs",
+     "description": "Access detailed call logs and usage analytics. Filter by provider, model, time range, status, and cost. Export logs and aggregate token usage across all connections."
+    },
+    {
+     "name": "omni-version-manager",
+     "description": "Install, start, stop, restart, and update embedded services (9Router, CLIProxyAPI). Monitor service status, retrieve logs, and configure auto-start for local-only service endpoints."
+    },
+    {
+     "name": "omni-webhooks",
+     "description": "Register, list, test, and remove webhook endpoints. Configure event subscriptions (request.completed, request.failed, quota.exceeded, etc.) and manage delivery retries."
+    },
+    {
      "name": "openai-docs",
      "description": "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains."
     },
@@ -10646,6 +10946,10 @@
     {
      "name": "plagiarism-checker",
      "description": "Scans lyrics for phrases that may match existing songs using web search and LLM knowledge. Use before release to check for unintentional borrowing."
+    },
+    {
+     "name": "ponytail",
+     "description": "External agent skill (MIT, github.com/DietrichGebert/ponytail). Forces the laziest solution that actually works: question whether the task needs to exist at all (YAGNI), reuse what is already in the codebase, reach for the standard library before custom code, native platform features before dependencies, one line before fifty. Climb the ladder on every coding task — writing, adding, refactoring, fixing, reviewing, or designing code, and choosing libraries or dependencies. Supports intensity levels: lite, full (default), ultra. Never cut validation, error handling, security, or accessibility."
     },
     {
      "name": "ppt-editing-skill",

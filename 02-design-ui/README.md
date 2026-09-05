@@ -2,7 +2,7 @@
 
 UI/UX, פרונט, נגישות, גלילה
 
-**מספר סקילים:** 122
+**מספר סקילים:** 123
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -114,6 +114,7 @@ UI/UX, פרונט, נגישות, גלילה
 | [`threejs-postprocessing`](./threejs-postprocessing/SKILL.md) | Three.js post-processing - EffectComposer, bloom, DOF, screen effects. Use when adding visual effects, color grading, blur, glow, or creating custom screen-space shaders. |
 | [`threejs-shaders`](./threejs-shaders/SKILL.md) | Three.js shaders - GLSL, ShaderMaterial, uniforms, custom effects. Use when creating custom visual effects, modifying vertices, writing fragment shaders, or extending built-in materials. |
 | [`threejs-textures`](./threejs-textures/SKILL.md) | Three.js textures - texture types, UV mapping, environment maps, texture settings. Use when working with images, UV coordinates, cubemaps, HDR environments, or texture optimization. |
+| [`typography`](./typography/SKILL.md) | Apply professional typography principles to create readable, hierarchical, and aesthetically refined interfaces. Use when setting type scales, choosing fonts, adjusting spacing, designing text-heavy layouts, implementing dark mode typography, or when asked about readability, font pairing, line… |
 | [`ui-skills-root`](./ui-skills-root/SKILL.md) | Use before UI-related work to select the smallest useful UI Skills context through the ui-skills CLI. |
 | [`ui-styling--nextlevelbuilder`](./ui-styling--nextlevelbuilder/SKILL.md) | Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components… |
 | [`ui-styling--nextlevelbuilder-2`](./ui-styling--nextlevelbuilder-2/SKILL.md) | Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components… |

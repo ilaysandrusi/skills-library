@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6094
+**סה״כ סקילים:** 6170
 
 ## איך ללמוד
 
@@ -49,22 +49,22 @@
 
 | קטגוריה | סקילים | תיאור |
 |---|---|---|
-| [כתיבה וניקוי טקסט](./01-copy-writing/) | 108 | עצירת סלופ AI, קופי, הנחיות כתיבה |
-| [עיצוב וממשק](./02-design-ui/) | 122 | UI/UX, פרונט, נגישות, גלילה |
+| [כתיבה וניקוי טקסט](./01-copy-writing/) | 110 | עצירת סלופ AI, קופי, הנחיות כתיבה |
+| [עיצוב וממשק](./02-design-ui/) | 123 | UI/UX, פרונט, נגישות, גלילה |
 | [שיווק ותוכן](./03-marketing/) | 536 | חבילת Corey Haines וסקילים שיווקיים |
 | [Remotion (וידאו מקוד)](./04-remotion/) | 12 | יצירת וידאו עם React / Remotion |
-| [פיתוח ודיבאג](./05-development/) | 565 | Superpowers, בדיקות, תוכניות עבודה |
+| [פיתוח ודיבאג](./05-development/) | 576 | Superpowers, בדיקות, תוכניות עבודה |
 | [מסמכים](./06-documents/) | 40 | PDF, Word, PowerPoint, Excel |
 | [Supabase / Postgres](./07-supabase/) | 4 | עבודה עם מסדי נתונים של Supabase |
-| [Context Engineering](./08-context-engineering/) | 171 | ניהול קונטקסט, סוכני משנה, חשיבה |
-| [כלי Anthropic נוספים](./09-anthropic-tools/) | 5 | יצירת סקילים, תבניות, בדיקות וכו׳ |
+| [Context Engineering](./08-context-engineering/) | 176 | ניהול קונטקסט, סוכני משנה, חשיבה |
+| [כלי Anthropic נוספים](./09-anthropic-tools/) | 7 | יצירת סקילים, תבניות, בדיקות וכו׳ |
 | [Hyper — פלטפורמות שיווק ומודעות (MCP)](./10-hyperfx-marketing/) | 30 | חבילת hyperfx-ai: פלטפורמות מודעות (Google/Meta/TikTok ועוד), סושיאל, SEO ותפעול — רץ מעל Hyper MCP |
 | [ניהול מוצר](./11-product-management/) | 149 | חבילות Dean Peters ו-Pawel Huryn: אסטרטגיה, דיסקברי, PRD, תעדוף, מטריקות ו-GTM |
-| [אבטחה וביקורת קוד](./12-security/) | 143 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
+| [אבטחה וביקורת קוד](./12-security/) | 152 | Trail of Bits, Snyk, OpenAI ו-Sentry: סקירות אבטחה, ניתוח סטטי, Semgrep/CodeQL ומודלי איומים |
 | [ענן ופריסה](./13-cloud-deploy/) | 171 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
 | [בדיקות ואוטומציה](./14-testing-qa/) | 204 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
 | [אינטגרציות ושירותים](./15-integrations/) | 257 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
-| [AI APIs ומדיה](./16-ai-apis-media/) | 242 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
+| [AI APIs ומדיה](./16-ai-apis-media/) | 288 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
 | [חבילת סייבר ענקית](./17-cybersecurity-pack/) | 821 | אנציקלופדיית סקילי סייבר (800+): פורנזיקה, תגובה לאירועים, מודיעין איומים, פנטסטינג והקשחה |
 | [פיננסים וחשבונאות](./18-finance-accounting/) | 791 | openaccountants (780+), CFO, ניתוח מניות ודוחות: הנהלת חשבונות, מס, ביקורת ותכנון פיננסי |
 | [מכירות, GTM וסטארטאפ](./19-sales-gtm-startup/) | 298 | Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארטאפים בשלב מוקדם |

@@ -2,7 +2,7 @@
 
 ניהול קונטקסט, סוכני משנה, חשיבה
 
-**מספר סקילים:** 171
+**מספר סקילים:** 176
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -24,6 +24,7 @@
 | [`brainstorm`](./brainstorm/SKILL.md) | Use when creating or developing, before writing code or implementation plans - refines rough ideas into fully-formed designs through collaborative questioning, alternative exploration, and incremental validation. Don't use during clear 'mechanical' processes |
 | [`brainstorm-prototypes`](./brainstorm-prototypes/SKILL.md) | Generate several genuinely different throwaway variations (designs, approaches, drafts) for the user to react to. Use when the user can only recognize what they want by seeing it — visual design, UX flows, naming, tone — or asks to brainstorm or prototype before building. |
 | [`build-review-interface`](./build-review-interface/SKILL.md) | Build a custom browser-based annotation interface tailored to your data for reviewing LLM traces and collecting structured feedback. Use when you need to build an annotation tool, review traces, or collect human labels. |
+| [`catch-up`](./catch-up/SKILL.md) | Give the human a fast, plain-English catch-up on what changed in the project: what the agents did, why, and what decisions need their input. Use this whenever the user asks to "catch me up", "what changed", "where are we", "recap", "brief me", "give me the rundown", "what did you do", "summarize… |
 | [`cause-and-effect`](./cause-and-effect/SKILL.md) | Systematic Fishbone analysis exploring problem causes across six categories |
 | [`change-quiz`](./change-quiz/SKILL.md) | After a working session, produce a report on what changed plus a quiz the user must pass before merging. Use when the user asks "what did we actually do," wants to review a large change, or invokes a quiz before merge. |
 | [`chat`](./chat/SKILL.md) | Use when testing the golden_chat golden build |
@@ -53,7 +54,9 @@
 | [`create-workflow-command`](./create-workflow-command/SKILL.md) | Create a workflow command that orchestrates multi-step execution through sub-agents with file-based task prompts |
 | [`critique`](./critique/SKILL.md) | Comprehensive multi-perspective review using specialized judges with debate and consensus building |
 | [`decay`](./decay/SKILL.md) | Manage evidence freshness by identifying stale decisions and providing governance actions |
+| [`deep-research--petekp`](./deep-research--petekp/SKILL.md) | Conduct exhaustive, citation-rich research on any topic using all available tools: web search, browser automation, documentation APIs, and codebase exploration. Use when asked to "research X", "find out about Y", "investigate Z", "deep dive into...", "what's the current state of...", "compare… |
 | [`design-testing-strategy`](./design-testing-strategy/SKILL.md) | Use before writing any type of tests. Distills 14 industry sources into deterministic decision gates, schemas, and worked test examples. |
+| [`discernment-nudge`](./discernment-nudge/SKILL.md) | After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, analysis or interpretation of data, factual claims they may rely on, or a multi-step argument — invoke… |
 | [`do-and-judge`](./do-and-judge/SKILL.md) | Execute a task with sub-agent implementation and LLM-as-a-judge verification with automatic retry loop |
 | [`do-competitively`](./do-competitively/SKILL.md) | Execute tasks through competitive multi-agent generation, meta-judge evaluation specification, multi-judge evaluation, and evidence-based synthesis |
 | [`do-in-parallel`](./do-in-parallel/SKILL.md) | Run independent tasks concurrently across multiple files or targets using parallel sub-agents, with per-task model selection and LLM-as-a-judge verification. Use when tasks do not depend on each other and can run side by side. |
@@ -67,6 +70,7 @@
 | [`fable-advisor`](./fable-advisor/SKILL.md) | This skill should be used when the user asks for a "Fable second opinion", wants to "check a plan before committing", needs another view after repeated failures, or explicitly invokes "fable-advisor". |
 | [`fractal`](./fractal/SKILL.md) | Spawn and manage child nodes -- recursive autonomous agent loops. |
 | [`fractal--plasma-ai`](./fractal--plasma-ai/SKILL.md) | Hierarchical agent loops with recursive self-organization. |
+| [`frame-check`](./frame-check/SKILL.md) | Check whether the stated problem is the right problem before work commits to it. Walks a problem statement back down to what was actually observed, names where the inference leapt, and returns competing frames plus the cheapest observation that would tell them apart. Use when the user asks "is this… |
 | [`generate-synthetic-data`](./generate-synthetic-data/SKILL.md) | Create diverse synthetic test inputs for LLM pipeline evaluation using dimension-based tuple generation. Use when bootstrapping an eval dataset, when real user data is sparse, or when stress-testing specific failure hypotheses. Do NOT use when you already have 100+ representative real traces (use… |
 | [`git-notes`](./git-notes/SKILL.md) | Use when adding metadata to commits without changing history, tracking review status, test results, code quality annotations, or supplementing commit messages post-hoc - provides git notes commands and patterns for attaching non-invasive metadata to Git objects. |
 | [`git-worktrees`](./git-worktrees/SKILL.md) | Use when working on multiple branches simultaneously, context switching without stashing, reviewing PRs while developing, testing in isolation, or comparing implementations across branches - provides git worktree commands and workflow patterns for parallel development with multiple working… |
@@ -93,6 +97,7 @@
 | [`jupyter_topics`](./jupyter_topics/SKILL.md) | Use when testing the golden_jupyter_topics golden build |
 | [`kaizen`](./kaizen/SKILL.md) | Use when Code implementation and refactoring, architecturing or designing systems, process and workflow improvements, error handling and validation. Provide tehniquest to avoid over-engineering and apply iterative improvements. |
 | [`keep-the-why`](./keep-the-why/SKILL.md) | Preserves or recovers the reasoning behind a codebase - architectural decisions, rejected alternatives, workarounds, incident learnings, operational constraints, and historical context the code itself cannot explain. Use when implementing or reviewing a non-trivial change involving a design… |
+| [`latent-potential`](./latent-potential/SKILL.md) | First-principles, team-of-experts assessment of a software project that surfaces latent potential; underexploited assets, a sharper north star, missing high-leverage capabilities, better framing and messaging. Produces a prioritized, evidence-grounded report with cheap probes, a reframe candidate… |
 | [`launch-sub-agent`](./launch-sub-agent/SKILL.md) | Launch an intelligent sub-agent with automatic model selection based on task complexity, specialized agent matching, Zero-shot CoT reasoning, and mandatory self-critique verification |
 | [`llm-wiki-manager`](./llm-wiki-manager/SKILL.md) | Build, maintain, and query a personal LLM-managed wiki — a markdown knowledge base where the LLM owns all writing, cross-referencing, and bookkeeping while the user curates sources. Use this skill when the user wants to (1) bootstrap a new wiki, second brain, or research notebook; (2) ingest a new… |
 | [`load-issues`](./load-issues/SKILL.md) | Load all open issues from GitHub and save them as markdown files |

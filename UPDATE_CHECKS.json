@@ -3,7 +3,7 @@
  "purpose": "Rotating upstream update-check state. Each entry records the commit the local copies were verified against, so a later run starts from a real baseline instead of re-deriving one, and can pick the sources that have waited longest.",
  "how_to_check": "python3 tools/check-upstream.py <owner/repo>",
  "baseline_method": "Every local file is compared to the upstream tree by git blob SHA. 'identical' therefore means the local copy is exactly verified_commit, not merely similar to it.",
- "source_repos_total": 228,
+ "source_repos_total": 231,
  "checked": {
   "anthropics/skills": {
    "last_checked": "2026-09-05",
@@ -3219,6 +3219,38 @@
    "local_skills": 7,
    "result": {
     "identical": 7
+   }
+  },
+  "petekp/claude-code-setup": {
+   "last_checked": "2026-09-05",
+   "verified_commit": null,
+   "upstream_pushed_at": "2026-09-04",
+   "license": "MIT",
+   "local_skills": 21,
+   "result": {
+    "identical": 19,
+    "drift": 2
+   },
+   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+  },
+  "usestrix/strix": {
+   "last_checked": "2026-09-05",
+   "verified_commit": "ff5c8cc8e46d8e60c2bc2439f7bcb07c05ca3db2",
+   "upstream_pushed_at": "2026-09-05",
+   "license": "Apache-2.0",
+   "local_skills": 9,
+   "result": {
+    "identical": 9
+   }
+  },
+  "diegosouzapw/OmniRoute": {
+   "last_checked": "2026-09-05",
+   "verified_commit": "9d1a896c6058b2ade94c9078c2e54377b9aa76d3",
+   "upstream_pushed_at": "2026-09-05",
+   "license": "MIT",
+   "local_skills": 46,
+   "result": {
+    "identical": 46
    }
   }
  },

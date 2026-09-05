@@ -2,7 +2,7 @@
 
 עצירת סלופ AI, קופי, הנחיות כתיבה
 
-**מספר סקילים:** 108
+**מספר סקילים:** 110
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -28,6 +28,8 @@
 | [`iso-24495-text-audit`](./iso-24495-text-audit/SKILL.md) | Audit user-selected Markdown or text files for deterministic plain-language findings. Use only when the user explicitly invokes this skill. |
 | [`johnny-suede-design`](./johnny-suede-design/SKILL.md) | Design and write polished product surfaces people understand fast: landing pages, dashboards, campaigns, restyles, UI copy, and visual QA. |
 | [`johnny-suede-write`](./johnny-suede-write/SKILL.md) | Write sharper Suede copy for docs, pages, email, social, headlines, CTAs, product listings, and public explainers. |
+| [`literate-guide`](./literate-guide/SKILL.md) | Create a narrative guide to a codebase or feature in the style of Knuth's Literate Programming — code and prose interwoven as a single essay, ordered for human understanding rather than compiler needs. Use when the user asks to 'explain this codebase as a story', 'write a literate guide', 'create a… |
+| [`plain`](./plain/SKILL.md) | Restate dense, jargon-heavy, or hard-to-follow content in plain language so the user actually understands it. Use whenever the user invokes /plain, says something like "explain that more simply", "I don't follow", "what does that actually mean", "in plain English", "break that down", "ELI5", or… |
 | [`ru-check`](./ru-check/SKILL.md) | Full Russian text quality check against the whole corpus. Triggers: вычитай, вычитай через ru-text, прогони ru-text, проверь текст по ru-text, ru-check, полная вычитка. Use when the user asks to proofread Russian text, or when a project gate names ru-text. Returns findings with the rule behind each… |
 | [`ru-score`](./ru-score/SKILL.md) | Score Russian text 0.0–10.0 across five dimensions: typography, clean language, grammar, structure, precision for the reader. Triggers: оцени текст, ru-score, оценка качества текста, насколько хорош текст, балл за текст. Use when the user wants a number rather than a list of findings. Never edits a… |
 | [`ru-text`](./ru-text/SKILL.md) | Russian text quality. Triggers: вычитай, проверь текст, поправь, отредактируй, причеши, ru-text. Typography silently on any Russian output; deeper editing on request. Info-style, editorial, UX writing, business correspondence, AI-text cleanup. |
