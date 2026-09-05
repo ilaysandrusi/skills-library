@@ -3545,10 +3545,10 @@
   },
   "coverage": {
    "as_of": "2026-09-05",
-   "sources_covered": 228,
-   "sources_total": 228,
-   "skill_source_pairs_checked": 6349,
-   "identical": 4957,
+   "sources_covered": 231,
+   "sources_total": 231,
+   "skill_source_pairs_checked": 6425,
+   "identical": 5031,
    "note": "All 227 known upstream sources have now been checked at least once, so the rotation has no never-checked backlog left and future runs cycle by staleness. Note that the three whole-repo clones in review_queue.unindexed_whole_repo_clones are NOT among these sources: they are absent from SOURCES.json, so they are outside the rotation entirely until they are indexed.",
    "history": {
     "2026-08-22": "87 claimed, 86 actual (off by one); 222 total before two sources were added.",
@@ -3557,8 +3557,8 @@
     "2026-09-05": "A --rotate 117 batch re-checked every source that had not been looked at since 2026-08-22/23, so all 227 sources are now current within one day. 50 sources reported drift (430 skills). 20 skills updated from 10 first-party vendor sources; the rest were held (over the 10-resource limit, mis-attribution risk, or a known fixture tree). Note the all-time identical count FELL 5187 -> 4950 and drift rose 493 -> 624: that is not a regression in the archive, it is 117 stale baselines being re-measured against upstreams that moved on in the intervening two weeks. timescale/pg-aiguide was added by the same run's import and checked on arrival, taking the source set to 228."
    },
    "status_totals": {
-    "drift": 624,
-    "identical": 4957,
+    "drift": 626,
+    "identical": 5031,
     "no-upstream-path": 122,
     "unmatched-candidate": 632,
     "unreachable": 6,
@@ -3566,44 +3566,12 @@
    }
   },
   "unindexed_whole_repo_clones": {
-   "found": "2026-09-04",
-   "note": "Commit 618c95be (2026-08-26) added three whole upstream repositories into category directories as 'full upstream clones': 13,641 files and 3.69M lines. None has a root SKILL.md, none is in catalog.json / SOURCES.json / its category README, none arrived with SOURCE.md, and none had a recorded security review. They therefore hold ~69 skills that are invisible to every index and to tools/install-skill.mjs. On 2026-09-04 each was given a traced SOURCE.md with a baseline and a first security review; the structural question is left for manual review because extracting or removing them is far past the 10-resource automatic limit.",
-   "clones": [
-    {
-     "path": "16-ai-apis-media/omniroute",
-     "upstream": "diegosouzapw/OmniRoute",
-     "license": "MIT",
-     "size": "250 MB / 13,098 files — the largest directory in the library",
-     "baseline": "approximate: 13,079/13,098 files match 42a13fedef8bb6806c1c4382b2c65539e871e88c (2026-08-26); upstream commits seconds apart, so no commit matches exactly",
-     "nested_skills": 46,
-     "issue": "Whole product source (src 68MB, tests 41MB, docs 108MB of which 102MB is translated i18n) imported to obtain a 500KB skills/ directory. Also contains tests/fixtures/devin-bridge/e2e-workspace/.claude/skills/bridge-proof/SKILL.md, a test fixture that must never be catalogued.",
-     "security": "No secrets, no malware-sweep hits, nothing auto-running. Quality signal: upstream commits every few seconds and is heavily self-marketed.",
-     "recommendation": "Import a reviewed subset of skills/ with proper indexes, or drop the clone. The gateway is the product the skills drive, not material they own (same call as 15-integrations/hey)."
-    },
-    {
-     "path": "09-anthropic-tools/claude-code-setup",
-     "upstream": "petekp/claude-code-setup",
-     "license": "MIT",
-     "size": "828 KB / 76 files",
-     "baseline": "proven: all 76 files blob-identical to f1cb10fdacff75af66509c0f1ef6920368bbb6e8 (2026-08-07)",
-     "nested_skills": 18,
-     "issue": "A personal forkable Claude Code dotfiles repo, not a skill pack. Its 18 skills (catch-up, circuit, claude-code-audit, code-comments, deep-research, typography, plain, spike, …) are genuine packages with references/scripts/evals and are worth keeping.",
-     "security": "settings.json declares hooks on 15 lifecycle events; every one POSTs the hook payload to http://127.0.0.1:7474/hook with a token from ~/.capacitor/runtime. Loopback only, 1s timeouts, `|| true` — a local observability daemon, not egress — but it would feed prompt text and every tool call to whatever listens on 7474. Archive only, never enable. setup.sh and scripts/skill-manager.sh write into ~/.claude and would overwrite a user's own config.",
-     "upstream_ahead": "HEAD 439a0cf7 (2026-09-03): 7 files changed, 2 added since the imported commit",
-     "recommendation": "Extract the 18 skills into their proper categories with per-skill SOURCE.md; drop the personal dotfiles."
-    },
-    {
-     "path": "12-security/strix",
-     "upstream": "usestrix/strix",
-     "license": "Apache-2.0",
-     "size": "9.5 MB / 467 files",
-     "baseline": "proven: all 467 files blob-identical to a5856108a7c628cf45cf2231692271f20ae136b5 (2026-08-26)",
-     "nested_skills": 9,
-     "issue": "The repository is the Strix application — an autonomous AI pentesting engine with a shell tool, browser driver and intercepting proxy. The 9 skills drive Strix; they are not Strix.",
-     "security": "Reputable Apache-2.0 tool, nothing disguised. But it is executable offensive tooling, a class rejected before (Trail of Bits Burp/APK, Claude-BugHunter). strix/skills/vulnerabilities/rce.md is the standing malware sweep's only hit library-wide (`base64 -d | sh` documented as a payload pattern) — dual-use knowledge in context. Nothing here should be executed from the archive.",
-     "recommendation": "Keep the 9 defensive-testing skills in 12-security; leave the engine upstream."
-    }
-   ]
+   "what": "RESOLVED 2026-09-05. The three whole-repo clones added in 618c95be were replaced by per-skill extracts from a fresh Desktop clone of each official HEAD, then the snapshots were deleted from the library. The Desktop clones remain at /home/ubuntu/Desktop/{claude-code-setup,strix,OmniRoute} and are outside the git repo.",
+   "resolved": {
+    "09-anthropic-tools/claude-code-setup": "21 skills extracted from petekp/claude-code-setup @ dcd4ca77; snapshot deleted.",
+    "12-security/strix": "9 driver skills extracted from usestrix/strix @ ff5c8cc8; engine not imported; snapshot deleted.",
+    "16-ai-apis-media/omniroute": "46 skills/ packages extracted from diegosouzapw/OmniRoute @ 9d1a896c; application/docs/tests/bridge-proof not imported; snapshot deleted."
+   }
   }
  },
  "statuses": {
