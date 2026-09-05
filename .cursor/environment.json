@@ -1,0 +1,4 @@
+{
+  "name": "skills-library",
+  "install": "node --version && python3 --version && node tools/validate-catalog.mjs"
+}
