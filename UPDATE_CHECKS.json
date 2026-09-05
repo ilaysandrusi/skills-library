@@ -3264,33 +3264,12 @@
   },
   "duplicate_skill_md_groups": {
    "what": "Groups whose SKILL.md is byte-identical. Most come from the VoltAgent/awesome-agent-skills mass import re-adding skills that were already present under an --owner suffix. No group is a whole-directory duplicate: in almost every case one side carries supporting files the other lacks, so the more complete side has to be picked per group rather than by rule.",
-   "groups": 35,
-   "skills": 71,
+   "groups": 24,
+   "skills": 48,
    "listing": [
-    [
-     "01-copy-writing/unslop",
-     "01-copy-writing/unslop--mohamedabdallah-14",
-     "01-copy-writing/unslop--mohamedabdallah-14-2"
-    ],
-    [
-     "01-copy-writing/unslop--mohamedabdallah-14-3",
-     "01-copy-writing/unslop-file"
-    ],
-    [
-     "02-design-ui/brand-guidelines",
-     "12-security/brand-guidelines--snyk"
-    ],
     [
      "02-design-ui/generate-design",
      "02-design-ui/stitch-generate-design"
-    ],
-    [
-     "02-design-ui/theme-factory",
-     "12-security/theme-factory--snyk"
-    ],
-    [
-     "02-design-ui/ui-styling--nextlevelbuilder",
-     "02-design-ui/ui-styling--nextlevelbuilder-2"
     ],
     [
      "05-development/linear",
@@ -3301,16 +3280,8 @@
      "06-documents/notion-knowledge-capture"
     ],
     [
-     "06-documents/internal-comms",
-     "12-security/internal-comms--snyk"
-    ],
-    [
      "08-context-engineering/clarity-gate--frmoretto",
      "08-context-engineering/clarity-gate--frmoretto-2"
-    ],
-    [
-     "09-anthropic-tools/slack-gif-creator",
-     "12-security/slack-gif-creator--snyk"
     ],
     [
      "15-integrations/meeting-intelligence",
@@ -3323,10 +3294,6 @@
     [
      "16-ai-apis-media/sendmux-attachments",
      "16-ai-apis-media/sendmux-attachments--sendmux"
-    ],
-    [
-     "16-ai-apis-media/sendmux-cli",
-     "16-ai-apis-media/sendmux-cli--sendmux"
     ],
     [
      "16-ai-apis-media/sendmux-email-for-agents",
@@ -3359,18 +3326,6 @@
     [
      "19-sales-gtm-startup/blog-google",
      "19-sales-gtm-startup/blog-google--infrasity-labs"
-    ],
-    [
-     "19-sales-gtm-startup/content-strategy--infrasity-labs",
-     "19-sales-gtm-startup/content-strategy--infrasity-labs-3"
-    ],
-    [
-     "19-sales-gtm-startup/sdk-docs-auditor",
-     "19-sales-gtm-startup/sdk-docs-auditor--infrasity-labs"
-    ],
-    [
-     "19-sales-gtm-startup/seo-dataforseo--infrasity-labs",
-     "19-sales-gtm-startup/seo-dataforseo--infrasity-labs-2"
     ],
     [
      "19-sales-gtm-startup/site-architecture--infrasity-labs",
@@ -3408,7 +3363,15 @@
      "25-data-databases/redis-semantic-cache",
      "25-data-databases/redis-semantic-cache--redis"
     ]
-   ]
+   ],
+   "resolved_2026_09_05": {
+    "unslop": "Kept 01-copy-writing/unslop (copied agents/openai.yaml into it) and 01-copy-writing/unslop-file (copied CHANGELOG/README/SECURITY/pyproject into it). Retired the three --mohamedabdallah-14 suffixes.",
+    "ui-styling": "Kept ui-styling--nextlevelbuilder (98 files including fonts); retired the 16-file -2 subset.",
+    "sendmux-cli": "Copied evals/ into sendmux-cli; retired sendmux-cli--sendmux.",
+    "infrasity": "Retired content-strategy--infrasity-labs-3 (subset), seo-dataforseo--infrasity-labs (subset of -2), sdk-docs-auditor--infrasity-labs after copying its extras into sdk-docs-auditor.",
+    "snyk_groups": "Four SKILL.md-identical snyk groups disappeared with the 14-fixture retirement.",
+    "skipped": "clarity-gate scripts differ; blog-google scripts differ; site-architecture--infrasity-labs-2 nests a ui-ux-pro-max pack of unclear ownership; Notion/makenotion, linear/openai, generate-design/stitch, redis --* pairs need an origin decision."
+   }
   },
   "upstream_updates_held": {
    "note": "Sources whose drift exceeds what one automatic run should apply, or that need a judgement call. Counts are from the run named beside each entry.",

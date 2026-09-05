@@ -1,5 +1,5 @@
 {
- "total": 6170,
+ "total": 6162,
  "categories": [
   {
    "id": "01-copy-writing",
@@ -401,18 +401,6 @@
     {
      "name": "unslop",
      "description": "Humanize LLM output so it reads like a careful human wrote it. Subtracts AI-isms (sycophancy, tricolons, em-dash overuse, \"delve\"/\"tapestry\"/\"testament\", hedging stacks, tidy five-paragraph shapes), engineers burstiness and calibrated uncertainty, and preserves technical accuracy. Supports intensity levels: subtle, balanced (default), full, voice-match, anti-detector. Use when user says \"humanize this\", \"make this sound human\", \"de-slop this\", \"rewrite without AI tone\", \"match my voice\", \"less…"
-    },
-    {
-     "name": "unslop--mohamedabdallah-14",
-     "description": "Humanize LLM output so it reads like a careful human wrote it. Subtracts AI-isms (sycophancy, tricolons, em-dash overuse, \"delve\"/\"tapestry\"/\"testament\", hedging stacks, tidy five-paragraph shapes), engineers burstiness and calibrated uncertainty, and preserves technical accuracy. Supports intensity levels: subtle, balanced (default), full, voice-match, anti-detector. Use when user says \"humanize this\", \"make this sound human\", \"de-slop this\", \"rewrite without AI tone\", \"match my voice\", \"less…"
-    },
-    {
-     "name": "unslop--mohamedabdallah-14-2",
-     "description": "Humanize LLM output so it reads like a careful human wrote it. Subtracts AI-isms (sycophancy, tricolons, em-dash overuse, \"delve\"/\"tapestry\"/\"testament\", hedging stacks, tidy five-paragraph shapes), engineers burstiness and calibrated uncertainty, and preserves technical accuracy. Supports intensity levels: subtle, balanced (default), full, voice-match, anti-detector. Use when user says \"humanize this\", \"make this sound human\", \"de-slop this\", \"rewrite without AI tone\", \"match my voice\", \"less…"
-    },
-    {
-     "name": "unslop--mohamedabdallah-14-3",
-     "description": "Humanize natural-language memory files (CLAUDE.md, todos, preferences, docs) by removing AI-isms and adding burstiness while preserving every code block, URL, path, command, and heading exactly. Two modes: --deterministic (fast, regex-based, no API) and LLM (default, calls Claude for rewrite). Humanized version overwrites the original file. Plain backup saved as FILE.original.md. Trigger: /unslop-file <filepath> or \"humanize memory file\""
     },
     {
      "name": "unslop-commit",
@@ -895,10 +883,6 @@
     },
     {
      "name": "ui-styling--nextlevelbuilder",
-     "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications."
-    },
-    {
-     "name": "ui-styling--nextlevelbuilder-2",
      "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications."
     },
     {
@@ -11092,10 +11076,6 @@
      "description": "Use the Sendmux command-line interface for terminal-driven Sendmux work. Use when the user wants install commands, profiles, key-scope preflight, --json output, colon-namespaced Sendmux commands, request body/path/query/header flags, or CLI examples for Management, Mailbox, or Sending API operations."
     },
     {
-     "name": "sendmux-cli--sendmux",
-     "description": "Use the Sendmux command-line interface for terminal-driven Sendmux work. Use when the user wants install commands, profiles, key-scope preflight, --json output, colon-namespaced Sendmux commands, request body/path/query/header flags, or CLI examples for Management, Mailbox, or Sending API operations."
-    },
-    {
      "name": "sendmux-email-for-agents",
      "description": "Design and route Sendmux email workflows for AI agents, including skill installation, self-registration, secure agent credential-bundle storage, owner approval, and runtime email operations. Use when a user wants to give an AI agent its own inbox or email address, let an agent receive/search/triage/reply to mail, draft human-approved replies, send notifications, monitor mailbox state, or build email-based agent workflows even when the user does not mention Sendmux by name."
     },
@@ -18285,10 +18265,6 @@
      "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce…"
     },
     {
-     "name": "content-strategy--infrasity-labs-3",
-     "description": "Define what content a product needs, how it should be structured, and who owns it."
-    },
-    {
      "name": "copywriting--infrasity-labs",
      "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"CTA copy,\" \"value proposition,\" \"tagline,\" \"subheadline,\" \"hero section copy,\" \"above the fold,\" \"this copy is weak,\" \"make this more compelling,\" or \"help me describe my product.\" Use this whenever…"
     },
@@ -18785,10 +18761,6 @@
      "description": "Audits any SDK documentation site and produces a fully scored, downloadable HTML report. Use this skill whenever a user provides a documentation URL and asks to audit, review, analyse, score, or check the quality of SDK docs. Also trigger for phrases like \"audit the SDK docs at X\", \"check if the docs at X are complete\", \"review this SDK documentation\", \"how good are these docs\", \"run an SDK audit on X\", or any time a user pastes a URL alongside words like audit, review, crawl, check, analyse…"
     },
     {
-     "name": "sdk-docs-auditor--infrasity-labs",
-     "description": "Audits any SDK documentation site and produces a fully scored, downloadable HTML report. Use this skill whenever a user provides a documentation URL and asks to audit, review, analyse, score, or check the quality of SDK docs. Also trigger for phrases like \"audit the SDK docs at X\", \"check if the docs at X are complete\", \"review this SDK documentation\", \"how good are these docs\", \"run an SDK audit on X\", or any time a user pastes a URL alongside words like audit, review, crawl, check, analyse…"
-    },
-    {
      "name": "search-ux",
      "description": "Design search experiences that help users find what they need, recover from failure, and refine results."
     },
@@ -18839,10 +18811,6 @@
     {
      "name": "seo-content-brief--infrasity-labs",
      "description": "Generate competitive SEO content briefs with per-section word counts, competitor scoring, keyword density guidance, and page-type templates. Supports both new page briefs and improve-existing-page briefs. Use when user says \"content brief\", \"write a brief\", \"content outline\", \"blog brief\", \"service page brief\", \"brief for\", \"writing brief\", \"content plan\", or \"outline for\"."
-    },
-    {
-     "name": "seo-dataforseo--infrasity-labs",
-     "description": "Live SEO data via DataForSEO MCP server. SERP analysis (Google, Bing, Yahoo, YouTube, Google Images), keyword research (volume, difficulty, intent, trends), backlink profiles, on-page analysis (Lighthouse, content parsing), competitor analysis, content analysis, business listings, AI visibility (ChatGPT scraper, LLM mention tracking), and domain analytics. Requires DataForSEO extension installed. Use when user says \"dataforseo\", \"live SERP\", \"keyword volume\", \"backlink data\", \"competitor data\"…"
     },
     {
      "name": "seo-dataforseo--infrasity-labs-2",

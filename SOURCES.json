@@ -1,7 +1,7 @@
 {
  "generated_by": "completion-and-repair pass",
- "skills": 6170,
- "traced_to_source_repo": 6156,
+ "skills": 6162,
+ "traced_to_source_repo": 6148,
  "distinct_source_repos": 231,
  "non_skill_directories": {
   "14-testing-qa/shared": {
@@ -18,7 +18,7 @@
  "source_repo_skill_counts": {
   "mukul975/Anthropic-Cybersecurity-Skills": 817,
   "openaccountants/openaccountants": 781,
-  "infrasity-labs/dev-gtm-claude-skills": 358,
+  "infrasity-labs/dev-gtm-claude-skills": 355,
   "NVIDIA/skills": 338,
   "affaan-m/ECC": 297,
   "gooseworks-ai/goose-skills": 270,
@@ -72,10 +72,10 @@
   "Joannis/claude-skills": 19,
   "huifer/Claude-Ally-Health": 19,
   "AIDevGTM/gtm-cofounder": 18,
-  "Sendmux/skills": 18,
   "anthropics/skills": 18,
   "binance/binance-skills-hub": 18,
   "fcakyon/claude-codex-settings": 18,
+  "Sendmux/skills": 17,
   "browserbase/skills": 17,
   "fal-ai-community/skills": 17,
   "google-labs-code/stitch-skills": 17,
@@ -99,17 +99,16 @@
   "transloadit/skills": 13,
   "ClickHouse/agent-skills": 12,
   "firebase/skills": 12,
-  "nextlevelbuilder/ui-ux-pro-max-skill": 12,
   "realkimbarrett/advertising-skills": 12,
   "remotion-dev/skills": 12,
   "Neeeophytee/finding-unknowns-skills": 11,
   "Simon-He95/markstream-vue": 11,
   "mcollina/skills": 11,
+  "nextlevelbuilder/ui-ux-pro-max-skill": 11,
   "vercel-labs/skills": 11,
   "CloudAI-X/threejs-skills": 10,
   "duckdb/duckdb-skills": 10,
   "Lum1104/Understand-Anything": 9,
-  "MohamedAbdallah-14/unslop": 9,
   "metalbear-co/skills": 9,
   "mongodb/agent-skills": 9,
   "neondatabase/agent-skills": 9,
@@ -130,6 +129,7 @@
   "sanity-io/skills": 7,
   "stjbrown/agent-knowledge": 7,
   "timescale/pg-aiguide": 7,
+  "MohamedAbdallah-14/unslop": 6,
   "khendzel/skills-janitor": 6,
   "makenotion/claude-code-notion-plugin": 6,
   "makenotion/notion-cookbook": 6,
@@ -10635,15 +10635,6 @@
   },
   "19-sales-gtm-startup/content-strategy--infrasity-labs-2": {
    "skill": "19-sales-gtm-startup/content-strategy--infrasity-labs-2",
-   "sources": [
-    "infrasity-labs/dev-gtm-claude-skills"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "19-sales-gtm-startup/content-strategy--infrasity-labs-3": {
-   "skill": "19-sales-gtm-startup/content-strategy--infrasity-labs-3",
    "sources": [
     "infrasity-labs/dev-gtm-claude-skills"
    ],
@@ -41102,15 +41093,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "19-sales-gtm-startup/sdk-docs-auditor--infrasity-labs": {
-   "skill": "19-sales-gtm-startup/sdk-docs-auditor--infrasity-labs",
-   "sources": [
-    "infrasity-labs/dev-gtm-claude-skills"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "18-finance-accounting/se-income-tax": {
    "skill": "18-finance-accounting/se-income-tax",
    "sources": [
@@ -41561,15 +41543,6 @@
     "Sendmux/skills"
    ],
    "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "16-ai-apis-media/sendmux-cli--sendmux": {
-   "skill": "16-ai-apis-media/sendmux-cli--sendmux",
-   "sources": [
-    "Sendmux/skills"
-   ],
-   "method": "owner-suffix-match",
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
@@ -42081,15 +42054,6 @@
    "skill": "03-marketing/seo-dataforseo--agricidaniel",
    "sources": [
     "AgriciDaniel/claude-seo"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "19-sales-gtm-startup/seo-dataforseo--infrasity-labs": {
-   "skill": "19-sales-gtm-startup/seo-dataforseo--infrasity-labs",
-   "sources": [
-    "infrasity-labs/dev-gtm-claude-skills"
    ],
    "method": "owner-suffix-match",
    "added_in": "e7e832a4",
@@ -48045,15 +48009,6 @@
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },
-  "02-design-ui/ui-styling--nextlevelbuilder-2": {
-   "skill": "02-design-ui/ui-styling--nextlevelbuilder-2",
-   "sources": [
-    "nextlevelbuilder/ui-ux-pro-max-skill"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
   "14-testing-qa/ui-test": {
    "skill": "14-testing-qa/ui-test",
    "sources": [
@@ -48448,33 +48403,6 @@
     "MohamedAbdallah-14/unslop"
    ],
    "method": "exact-name-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "01-copy-writing/unslop--mohamedabdallah-14": {
-   "skill": "01-copy-writing/unslop--mohamedabdallah-14",
-   "sources": [
-    "MohamedAbdallah-14/unslop"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "01-copy-writing/unslop--mohamedabdallah-14-2": {
-   "skill": "01-copy-writing/unslop--mohamedabdallah-14-2",
-   "sources": [
-    "MohamedAbdallah-14/unslop"
-   ],
-   "method": "owner-suffix-match",
-   "added_in": "e7e832a4",
-   "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
-  },
-  "01-copy-writing/unslop--mohamedabdallah-14-3": {
-   "skill": "01-copy-writing/unslop--mohamedabdallah-14-3",
-   "sources": [
-    "MohamedAbdallah-14/unslop"
-   ],
-   "method": "owner-suffix-match",
    "added_in": "e7e832a4",
    "import_note": "mass import from the VoltAgent/awesome-agent-skills index"
   },

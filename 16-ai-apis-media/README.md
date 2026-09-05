@@ -2,7 +2,7 @@
 
 OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה
 
-**מספר סקילים:** 288
+**מספר סקילים:** 287
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -204,7 +204,6 @@ OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידא
 | [`sendmux-attachments`](./sendmux-attachments/SKILL.md) | Use Sendmux attachment workflows without wasting model context on base64. Use when uploading, downloading, reading, forwarding, or sending email attachments through Sendmux MCP, CLI, SDKs, or direct HTTP, especially when choosing file_path vs presigned upload URL vs inline base64, reading inbound… |
 | [`sendmux-attachments--sendmux`](./sendmux-attachments--sendmux/SKILL.md) | Use Sendmux attachment workflows without wasting model context on base64. Use when uploading, downloading, reading, forwarding, or sending email attachments through Sendmux MCP, CLI, SDKs, or direct HTTP, especially when choosing file_path vs presigned upload URL vs inline base64, reading inbound… |
 | [`sendmux-cli`](./sendmux-cli/SKILL.md) | Use the Sendmux command-line interface for terminal-driven Sendmux work. Use when the user wants install commands, profiles, key-scope preflight, --json output, colon-namespaced Sendmux commands, request body/path/query/header flags, or CLI examples for Management, Mailbox, or Sending API… |
-| [`sendmux-cli--sendmux`](./sendmux-cli--sendmux/SKILL.md) | Use the Sendmux command-line interface for terminal-driven Sendmux work. Use when the user wants install commands, profiles, key-scope preflight, --json output, colon-namespaced Sendmux commands, request body/path/query/header flags, or CLI examples for Management, Mailbox, or Sending API… |
 | [`sendmux-email-for-agents`](./sendmux-email-for-agents/SKILL.md) | Design and route Sendmux email workflows for AI agents, including skill installation, self-registration, secure agent credential-bundle storage, owner approval, and runtime email operations. Use when a user wants to give an AI agent its own inbox or email address, let an agent… |
 | [`sendmux-email-for-agents--sendmux`](./sendmux-email-for-agents--sendmux/SKILL.md) | Design and route Sendmux email workflows for AI agents, including skill installation, self-registration, secure agent credential-bundle storage, owner approval, and runtime email operations. Use when a user wants to give an AI agent its own inbox or email address, let an agent… |
 | [`sendmux-getting-started`](./sendmux-getting-started/SKILL.md) | Sendmux setup, skill installation, API key validation, agent access, secure agent credential-bundle storage, and first-call guidance. Use when the user wants to install Sendmux tooling or skills, check whether an smx_root_, smx_mbx_, or smx_agent_ credential works, choose MCP vs CLI vs SDK, connect… |

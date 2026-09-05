@@ -2,7 +2,7 @@
 
 UI/UX, פרונט, נגישות, גלילה
 
-**מספר סקילים:** 123
+**מספר סקילים:** 122
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -117,7 +117,6 @@ UI/UX, פרונט, נגישות, גלילה
 | [`typography`](./typography/SKILL.md) | Apply professional typography principles to create readable, hierarchical, and aesthetically refined interfaces. Use when setting type scales, choosing fonts, adjusting spacing, designing text-heavy layouts, implementing dark mode typography, or when asked about readability, font pairing, line… |
 | [`ui-skills-root`](./ui-skills-root/SKILL.md) | Use before UI-related work to select the smallest useful UI Skills context through the ui-skills CLI. |
 | [`ui-styling--nextlevelbuilder`](./ui-styling--nextlevelbuilder/SKILL.md) | Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components… |
-| [`ui-styling--nextlevelbuilder-2`](./ui-styling--nextlevelbuilder-2/SKILL.md) | Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components… |
 | [`ui-ux-pro-max`](./ui-ux-pro-max/SKILL.md) | UI/UX design intelligence for web and mobile. Searchable local database with 84 styles, 192 color palettes, 74 font pairings, 192 product types, 98 UX guidelines, 104 icon entries, 16 GSAP motion presets, and 25 chart types across 22 stacks (React, Next.js, Vue, Nuxt, Svelte, Astro, SwiftUI, React… |
 | [`ui-ux-pro-max--nextlevelbuilder`](./ui-ux-pro-max--nextlevelbuilder/SKILL.md) | UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation.… |
 | [`upload-to-stitch`](./upload-to-stitch/SKILL.md) | Upload local assets (images, mockups, extracted HTML, design markdown) to a Stitch project. ALWAYS use this skill when you need to upload visual assets, HTML pages, or design docs to Stitch, particularly when direct MCP tool calls fail or truncate due to base64 token limits. |

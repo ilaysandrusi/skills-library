@@ -2,7 +2,7 @@
 
 עצירת סלופ AI, קופי, הנחיות כתיבה
 
-**מספר סקילים:** 110
+**מספר סקילים:** 107
 
 | סקיל | מה הוא עושה |
 |---|---|
@@ -105,9 +105,6 @@
 | [`suede-workflow-skills`](./suede-workflow-skills/SKILL.md) | Umbrella workflow for 71 public skills: Full Send, copy, design, code review, SEO, launch packaging, MCP QA, iOS and Android app shipping, Instagram growth, and creator workflows. Loads the full public skill pack. |
 | [`translate-book`](./translate-book/SKILL.md) | Translate books (PDF/DOCX/EPUB) into any language using parallel sub-agents. Converts input -> Markdown chunks -> translated chunks -> HTML/DOCX/EPUB/PDF. |
 | [`unslop`](./unslop/SKILL.md) | Humanize LLM output so it reads like a careful human wrote it. Subtracts AI-isms (sycophancy, tricolons, em-dash overuse, "delve"/"tapestry"/"testament", hedging stacks, tidy five-paragraph shapes), engineers burstiness and calibrated uncertainty, and preserves technical accuracy. Supports… |
-| [`unslop--mohamedabdallah-14`](./unslop--mohamedabdallah-14/SKILL.md) | Humanize LLM output so it reads like a careful human wrote it. Subtracts AI-isms (sycophancy, tricolons, em-dash overuse, "delve"/"tapestry"/"testament", hedging stacks, tidy five-paragraph shapes), engineers burstiness and calibrated uncertainty, and preserves technical accuracy. Supports… |
-| [`unslop--mohamedabdallah-14-2`](./unslop--mohamedabdallah-14-2/SKILL.md) | Humanize LLM output so it reads like a careful human wrote it. Subtracts AI-isms (sycophancy, tricolons, em-dash overuse, "delve"/"tapestry"/"testament", hedging stacks, tidy five-paragraph shapes), engineers burstiness and calibrated uncertainty, and preserves technical accuracy. Supports… |
-| [`unslop--mohamedabdallah-14-3`](./unslop--mohamedabdallah-14-3/SKILL.md) | Humanize natural-language memory files (CLAUDE.md, todos, preferences, docs) by removing AI-isms and adding burstiness while preserving every code block, URL, path, command, and heading exactly. Two modes: --deterministic (fast, regex-based, no API) and LLM (default, calls Claude for rewrite).… |
 | [`unslop-commit`](./unslop-commit/SKILL.md) | Rewrites commit messages so they sound like a careful human engineer wrote them. Strips AI/marketing slop ("comprehensive solution", "robust implementation", "leverage", "enhance", "seamlessly", "This commit..."). Keeps Conventional Commits format. Subject ≤72 chars (aim ≤50), imperative mood. Body… |
 | [`unslop-file`](./unslop-file/SKILL.md) | Humanize natural-language memory files (CLAUDE.md, todos, preferences, docs) by removing AI-isms and adding burstiness while preserving every code block, URL, path, command, and heading exactly. Two modes: --deterministic (fast, regex-based, no API) and LLM (default, calls Claude for rewrite).… |
 | [`unslop-help`](./unslop-help/SKILL.md) | Quick-reference card for unslop modes, sub-skills, and slash commands. One-shot display, not a persistent mode. Trigger: /unslop-help, "unslop help", "what unslop commands", "how do I use unslop". |

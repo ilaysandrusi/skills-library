@@ -2,7 +2,7 @@
 
 פה מרוכזים כל הסקילים ללמידה ולעיון. הפרויקט של האתר (`ilay_sandrusi_website`) מחזיק רק את מה שצריך לאתר.
 
-**סה״כ סקילים:** 6170
+**סה״כ סקילים:** 6162
 
 ## איך ללמוד
 
@@ -49,8 +49,8 @@
 
 | קטגוריה | סקילים | תיאור |
 |---|---|---|
-| [כתיבה וניקוי טקסט](./01-copy-writing/) | 110 | עצירת סלופ AI, קופי, הנחיות כתיבה |
-| [עיצוב וממשק](./02-design-ui/) | 123 | UI/UX, פרונט, נגישות, גלילה |
+| [כתיבה וניקוי טקסט](./01-copy-writing/) | 107 | עצירת סלופ AI, קופי, הנחיות כתיבה |
+| [עיצוב וממשק](./02-design-ui/) | 122 | UI/UX, פרונט, נגישות, גלילה |
 | [שיווק ותוכן](./03-marketing/) | 536 | חבילת Corey Haines וסקילים שיווקיים |
 | [Remotion (וידאו מקוד)](./04-remotion/) | 12 | יצירת וידאו עם React / Remotion |
 | [פיתוח ודיבאג](./05-development/) | 576 | Superpowers, בדיקות, תוכניות עבודה |
@@ -64,10 +64,10 @@
 | [ענן ופריסה](./13-cloud-deploy/) | 171 | Cloudflare, Netlify, Firebase, HashiCorp, AWS ו-Next.js: פריסות, תשתיות ו-DevOps |
 | [בדיקות ואוטומציה](./14-testing-qa/) | 204 | LambdaTest, Cypress, Playwright, Browserbase ואוטומציית דפדפן: בדיקות, נגישות ו-CI/CD |
 | [אינטגרציות ושירותים](./15-integrations/) | 257 | Stripe, Better Auth, Sentry, Resend, Notion, Zapier, n8n, WordPress, Google Workspace ועוד |
-| [AI APIs ומדיה](./16-ai-apis-media/) | 288 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
+| [AI APIs ומדיה](./16-ai-apis-media/) | 287 | OpenAI, Gemini, Hugging Face, Replicate, fal.ai, MiniMax: תמונות, וידאו, קול ומוזיקה |
 | [חבילת סייבר ענקית](./17-cybersecurity-pack/) | 821 | אנציקלופדיית סקילי סייבר (800+): פורנזיקה, תגובה לאירועים, מודיעין איומים, פנטסטינג והקשחה |
 | [פיננסים וחשבונאות](./18-finance-accounting/) | 791 | openaccountants (780+), CFO, ניתוח מניות ודוחות: הנהלת חשבונות, מס, ביקורת ותכנון פיננסי |
-| [מכירות, GTM וסטארטאפ](./19-sales-gtm-startup/) | 298 | Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארטאפים בשלב מוקדם |
+| [מכירות, GTM וסטארטאפ](./19-sales-gtm-startup/) | 295 | Infrasity dev-GTM, GTM co-founder, סקילים למייסדים ולסטארטאפים בשלב מוקדם |
 | [NVIDIA ו-CUDA](./20-nvidia-cuda/) | 341 | הסקילים הרשמיים של NVIDIA: CUDA, GPU, ביצועים, רשתות עצביות ותשתית AI |
 | [Goose Agent](./21-goose-agent/) | 263 | חבילת הסקילים של gooseworks: 260+ סקילים לסוכן Goose של Block |
 | [Microsoft](./23-microsoft/) | 187 | הסקילים הרשמיים של מיקרוסופט: Azure, .NET, TypeSpec, Playwright, GitHub ועוד |
