@@ -16,7 +16,7 @@ Read this file when the loader sent you here from
 capabilities (configure, build, modify, run, test, debug) see
 [TASKS.md](TASKS.md). For where the underlying public
 documentation and installed package paths live, defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
 do not duplicate URLs or install paths in this file.
 
 ## Pattern overview
@@ -175,7 +175,7 @@ level for work the higher-level library already covers is not free.
 
 For the canonical DOCA version-detection chain, the four-way match
 rule, NGC container semantics, and the headers-win-over-docs rule,
-see [`doca-version`](../../doca-version/SKILL.md). The body lives
+see [`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The raw-verbs-specific overlay** is:
@@ -216,7 +216,7 @@ there; this skill does not duplicate it.
   authoritative truth for what the *built* library exposes. The
   agent must not assert a symbol exists without confirming it
   there — per the headers-win-over-docs rule in
-  [`doca-version`](../../doca-version/SKILL.md).
+  [`doca-version`](../doca-version/SKILL.md).
 
 ## Error taxonomy
 
@@ -326,7 +326,7 @@ and the foundation log surface in
 [`doca-common CAPABILITIES.md ## log`](../doca-common/CAPABILITIES.md#log).
 For the install-tree observability (logger names, package layout)
 defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -385,7 +385,7 @@ Additional rules:
   that involves a `mlxconfig`-class firmware-stored configuration
   change (e.g., enabling/disabling a specific QP feature at the
   device level) follows the meta-policy in
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   pre-flight inventory, OOB access, maintenance window, cold
   power cycle, replica-first, rollback documented.
 
@@ -425,7 +425,7 @@ elsewhere:
   skill's `## debug` redirects there for layers 1-4 and layer 7;
   layers 5-6 carry the raw-verbs-specific overlay.
 - **Cross-library `doca_caps` invocation patterns** — owned by
-  [`doca-caps`](../../tools/doca-caps/SKILL.md). This skill
+  [`doca-caps`](../doca-caps/SKILL.md). This skill
   references the *raw-verbs capability query family*
   (`doca_verbs_query_device` + `doca_verbs_device_attr_get_*`),
   which is per-library; the *cross-library capability snapshot

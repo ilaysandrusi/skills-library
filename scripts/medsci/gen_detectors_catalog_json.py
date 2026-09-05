@@ -1,0 +1,301 @@
+#!/usr/bin/env python3
+"""Generate metadata/detectors_catalog.json — the MedSci-Audit detector registry.
+
+Why: the repo ships dozens of deterministic analysis-integrity detectors, but until now
+they were only *counted* (`metadata/catalog_counts.json: integrity_detectors`),
+never *enumerated* in a machine-readable single source of truth. This catalog
+names and groups them so MEDSCI_AUDIT.md (and any external surface) can reference
+one authoritative list instead of hand-maintaining a parallel copy. It is the
+detector analogue of metadata/skills_catalog.json.
+
+Discovery uses the EXACT same glob as scripts/validate_catalog_consistency.py:
+`check_*.py`/`detect_*.py`/`derive_*.py`/`verify_refs.py` under `skills/*/scripts/`
+ONLY — top-level `scripts/` validators (validate_*, repo-CI/host gates) are NOT
+manuscript-integrity detectors and are excluded. So `detector_count` here equals
+`catalog_counts.json::integrity_detectors`; the self-test asserts it.
+
+Family: detectors have no in-file category, so each detector id is mapped to one
+of a small set of audit families via the explicit table below (the v4.0.0
+CHANGELOG groupings). An unmapped detector aborts generation (fail loud) so a new
+detector must be deliberately categorized — exactly like gen_skills_catalog_json.py
+fails on an unmapped owner_domain.
+
+Stdlib-only, deterministic (sorted, no timestamps) so `--check` is meaningful.
+
+Usage:
+  python3 scripts/gen_detectors_catalog_json.py          # write metadata/detectors_catalog.json
+  python3 scripts/gen_detectors_catalog_json.py --check   # verify in sync; exit 1 on drift (CI gate)
+"""
+
+from __future__ import annotations
+
+import argparse
+import ast
+import json
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SKILLS_DIR = ROOT / "skills"
+OUT = ROOT / "metadata" / "detectors_catalog.json"
+
+# Same glob as validate_catalog_consistency.py (skills/*/scripts only).
+DETECTOR_GLOBS = ("check_*.py", "detect_*.py", "derive_*.py", "verify_refs.py")
+
+# detector id (filename stem) -> audit family key. Every detector found by the
+# glob must appear here; an unmapped id fails generation (see build()).
+FAMILY_BY_ID: dict[str, str] = {
+    # Numerical, cohort & pool arithmetic
+    "check_cohort_arithmetic": "numerical_cohort",
+    "check_effect_stability": "numerical_cohort",
+    "check_table_percentages": "numerical_cohort",
+    "check_reported_p_from_counts": "numerical_cohort",
+    "check_dta_denominators": "numerical_cohort",
+    "check_paired_difference_estimator": "numerical_cohort",
+    "check_artifact_coverage": "numerical_cohort",
+    "check_rounded_delta": "numerical_cohort",
+    "check_pool_consistency": "numerical_cohort",
+    "detect_copy_divergence": "numerical_cohort",
+    "derive_figure_legend_counts": "numerical_cohort",
+    # Citation & reference integrity
+    "verify_refs": "citation_reference",
+    "check_citation_keys": "citation_reference",
+    "check_citekey_provenance": "citation_reference",
+    "check_xref": "citation_reference",
+    "check_csl_render": "citation_reference",
+    "check_bib_title_markup": "citation_reference",
+    "check_reference_adequacy": "citation_reference",
+    "check_placeholders": "citation_reference",
+    "check_reference_duplication": "citation_reference",
+    "check_claim_fidelity": "citation_reference",
+    "check_doi_record_match": "citation_reference",
+    # Style & review-process integrity
+    "check_classical_style": "style_review",
+    "check_slide_tells": "style_review",
+    "check_deck_budget": "style_review",
+    "check_font_portability": "style_review",
+    "check_diagram_edges": "style_review",
+    "check_text_overflow": "style_review",
+    "check_generated_code": "style_review",
+    "check_panel_diversity": "style_review",
+    "check_reviewer_team_consistency": "style_review",
+    "check_paren_spans": "style_review",
+    "check_training_hygiene": "style_review",
+    "check_editorial_impression": "style_review",
+    "check_baseline_drift": "style_review",
+    "check_emphasis_density": "style_review",
+    "check_aphorism_density": "style_review",
+    "check_rhetorical_density": "style_review",
+    "check_perspective_structure": "style_review",
+    "check_rewrite_fidelity": "style_review",
+    "check_sentence_variety": "style_review",
+    "check_response_claims": "style_review",
+    "check_density_complaint": "style_review",
+    "check_pdf_injection": "style_review",
+    "check_self_improvement_claims": "style_review",
+    "check_review_request_types": "style_review",
+    "check_review_length": "style_review",
+    "check_review_boxes": "style_review",
+    "check_marked_manuscript": "style_review",
+    # Confounding, scope & estimand contracts
+    "check_scope_coherence": "confounding_scope_estimand",
+    "check_incorporation_bias": "confounding_scope_estimand",
+    "check_analysis_definitions": "confounding_scope_estimand",
+    "check_confounding_completeness": "confounding_scope_estimand",
+    "check_nested_group_comparison": "confounding_scope_estimand",
+    "check_claim_artifact": "confounding_scope_estimand",
+    "check_null_calibration": "confounding_scope_estimand",
+    # Reporting compliance
+    "check_framework_naming": "reporting_compliance",
+    "check_checklist_exists": "reporting_compliance",
+    "check_checklist_version": "reporting_compliance",
+    "check_prisma_figure": "reporting_compliance",
+    "check_wordcount_cap": "reporting_compliance",
+    "check_disclosure_availability": "reporting_compliance",
+    "check_summary_box": "reporting_compliance",
+    "check_supplement_hygiene": "reporting_compliance",
+    "check_citation_order": "reporting_compliance",
+    "check_figure_citation": "reporting_compliance",
+    "check_model_card_complete": "reporting_compliance",
+    "check_mllm_eval_completeness": "reporting_compliance",
+    "check_explainability_report": "reporting_compliance",
+    "check_uncertainty_reporting": "reporting_compliance",
+    "check_exclusion_code_validity": "reporting_compliance",
+    "check_portal_mirror": "reporting_compliance",
+    "check_credit_integrity": "reporting_compliance",
+    # Data preparation & validation
+    "check_structural_zero": "data_preparation",
+    "check_reverse_coding": "data_preparation",
+    "check_asset_anonymization": "data_preparation",
+    "check_cross_artifact_stale": "data_preparation",
+    "check_checklist_dump_leak": "data_preparation",
+    "check_binning_consistency": "data_preparation",
+    "check_split_leakage": "data_preparation",
+    "check_cv_leakage": "data_preparation",
+    "check_metric_reporting": "data_preparation",
+    "check_dataset_profile": "data_preparation",
+    "check_model_provenance": "data_preparation",
+    "check_preprocessing_leakage": "data_preparation",
+    "check_normalizer_domain": "data_preparation",
+    "check_radiomics_ml": "data_preparation",
+    "check_separation": "data_preparation",
+    "check_contribution_safety": "data_preparation",
+    "check_portal_field_residue": "data_preparation",
+}
+
+# Stable display order + human labels for the families array.
+FAMILY_ORDER = [
+    "numerical_cohort",
+    "citation_reference",
+    "style_review",
+    "confounding_scope_estimand",
+    "reporting_compliance",
+    "data_preparation",
+]
+FAMILY_LABELS = {
+    "numerical_cohort": "Numerical, cohort & pool arithmetic",
+    "citation_reference": "Citation & reference integrity",
+    "style_review": "Style & review-process integrity",
+    "confounding_scope_estimand": "Confounding, scope & estimand contracts",
+    "reporting_compliance": "Reporting compliance",
+    "data_preparation": "Data preparation & validation",
+}
+
+
+class DetectorError(Exception):
+    """Raised when a detector cannot be parsed into a valid catalog entry."""
+
+
+def _doc_summary(path: Path, cap: int = 200) -> str:
+    """First sentence of the module docstring's opening paragraph, with a leading
+    `<filename>.py —/:/- ` self-reference stripped. Mirrors gen_skills_catalog_json's
+    short_desc (first sentence, capped) but collapses a wrapped opening paragraph
+    first so a sentence that spans lines is not truncated. Empty string if none."""
+    try:
+        doc = ast.get_docstring(ast.parse(path.read_text(encoding="utf-8")))
+    except (SyntaxError, ValueError):
+        return ""
+    if not doc:
+        return ""
+    # Opening paragraph: lines up to the first blank line, whitespace-collapsed.
+    para_lines: list[str] = []
+    for line in doc.strip().splitlines():
+        if line.strip() == "":
+            break
+        para_lines.append(line.strip())
+    para = re.sub(r"^[\w.]+\.py\s*[—:\-]\s*", "", " ".join(para_lines)).strip()
+    if not para:
+        return ""
+    # First sentence (ends at ". "), capped — same rule as the skills catalog.
+    end = len(para)
+    p = para.find(". ")
+    if p != -1:
+        end = p + 1
+    end = min(end, cap)
+    s = para[:end].rstrip()
+    if end < len(para) and not s.endswith("."):
+        s += "…"
+    return s
+
+
+def build(skills_dir: Path = SKILLS_DIR) -> dict:
+    if not skills_dir.is_dir():
+        raise DetectorError(f"{skills_dir} directory not found")
+    paths = sorted(
+        {p for g in DETECTOR_GLOBS for p in skills_dir.glob(f"*/scripts/{g}")},
+        key=lambda p: p.stem,
+    )
+    if not paths:
+        raise DetectorError("no detectors found under */scripts/")
+
+    detectors: list[dict] = []
+    for p in paths:
+        det_id = p.stem
+        # skills_dir/<skill>/scripts/<file>.py -> <skill>
+        skill = p.parent.parent.name
+        if det_id not in FAMILY_BY_ID:
+            raise DetectorError(
+                f"{det_id} ({skill}) is not mapped to a family in "
+                "gen_detectors_catalog_json.py (FAMILY_BY_ID). Add it before release."
+            )
+        family = FAMILY_BY_ID[det_id]
+        desc = _doc_summary(p)
+        if not desc:
+            raise DetectorError(f"{det_id}: no module docstring to derive a description from")
+        detectors.append({
+            "id": det_id,
+            "skill": skill,
+            "family": family,
+            "family_label": FAMILY_LABELS[family],
+            "description": desc,
+        })
+
+    by_family: dict[str, list[str]] = {k: [] for k in FAMILY_ORDER}
+    for d in detectors:
+        by_family[d["family"]].append(d["id"])
+    families = [
+        {"key": k, "label": FAMILY_LABELS[k], "ids": sorted(by_family[k])}
+        for k in FAMILY_ORDER
+        if by_family[k]
+    ]
+
+    return {
+        "_comment": (
+            "AUTO-GENERATED by scripts/gen_detectors_catalog_json.py from the "
+            "analysis-integrity detectors under skills/*/scripts/ (same glob as "
+            "validate_catalog_consistency.py). Machine-readable registry of the "
+            "MedSci-Audit detector suite (single source of truth). Do not hand-edit; "
+            "CI gate: python3 scripts/gen_detectors_catalog_json.py --check."
+        ),
+        "detector_count": len(detectors),
+        "families": families,
+        "detectors": detectors,
+    }
+
+
+def render(catalog: dict) -> str:
+    return json.dumps(catalog, indent=2, ensure_ascii=False, sort_keys=False) + "\n"
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Generate metadata/detectors_catalog.json.")
+    ap.add_argument("--check", action="store_true",
+                    help="verify the catalog is in sync; exit 1 on drift (CI gate)")
+    ap.add_argument("--skills-dir", type=Path, default=SKILLS_DIR,
+                    help="skills/ directory to scan (default: repo skills/; for tests)")
+    ap.add_argument("--out", type=Path, default=OUT,
+                    help="output JSON path (default: metadata/detectors_catalog.json)")
+    args = ap.parse_args()
+
+    try:
+        content = render(build(args.skills_dir))
+    except DetectorError as e:
+        print(f"FAIL: {e}", file=sys.stderr)
+        return 1
+
+    out = args.out
+    if args.check:
+        if not out.exists():
+            print(f"DETECTORS_CATALOG_DRIFT — MISSING {out}; run "
+                  "`python3 scripts/gen_detectors_catalog_json.py`", file=sys.stderr)
+            return 1
+        if out.read_text(encoding="utf-8") != content:
+            print(f"DETECTORS_CATALOG_DRIFT — {out} out of sync; run "
+                  "`python3 scripts/gen_detectors_catalog_json.py`", file=sys.stderr)
+            return 1
+        catalog = json.loads(content)
+        print(f"OK: {out} in sync ({catalog['detector_count']} detectors, "
+              f"{len(catalog['families'])} families).")
+        return 0
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(content, encoding="utf-8")
+    catalog = json.loads(content)
+    print(f"OK: wrote {out} ({catalog['detector_count']} detectors, "
+          f"{len(catalog['families'])} families).")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

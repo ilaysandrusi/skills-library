@@ -42,7 +42,7 @@ The skill is **read-only** — it inspects state, never modifies it. It also **n
 | **MCP server health** | Every entry in `.mcp.json` (if present) responds to a tools/list ping | WARNING |
 | **Credential storage** | `~/.claude-marketing/brands/{brand}/credentials.json` (or env vars) present for every backend referenced | BLOCKER |
 | **Output paths writeable** | `~/.claude-marketing/brands/{brand}/` is writeable; the user-visible publish dir (`$DIGITAL_MARKETING_PRO_PUBLISH_DIR` or `~/Documents/DigitalMarketingPro/`) is writeable | BLOCKER |
-| **Model curator currency** | `scripts/resolve_model.py --registry-age` returns < 90 days | WARNING |
+| **Model curator currency** | `../../scripts/digital-marketing-pro/resolve_model.py --registry-age` returns < 90 days | WARNING |
 
 A **BLOCKER** means "do not let the user run engagement / campaign-plan / launch-campaign until this is fixed." A **WARNING** is surfaced but does not gate.
 
@@ -75,7 +75,7 @@ For every entry in `target_jurisdictions`, confirm `skills/context-engine/compli
 
 ### Step 4 — Connector reachability (credential-safe)
 
-For each backend referenced in `tracking.backend`, `integrations.crm`, `integrations.email`, `integrations.cms`, `integrations.analytics`, `integrations.social`, run the matching health probe via `scripts/connector-status.py`:
+For each backend referenced in `tracking.backend`, `integrations.crm`, `integrations.email`, `integrations.cms`, `integrations.analytics`, `integrations.social`, run the matching health probe via `../../scripts/digital-marketing-pro/connector-status.py`:
 
 ```bash
 python "${CLAUDE_PLUGIN_ROOT}/scripts/connector-status.py" \
@@ -184,5 +184,5 @@ Also emit a machine-readable JSON summary so it can be consumed by `/digital-mar
 - [`status`](../status/SKILL.md) — unified read-only snapshot of the active brand
 - [`check`](../check/SKILL.md) — pre-publish content quality gate
 - [`switch-brand`](../switch-brand/SKILL.md) — set the active brand
-- `scripts/connector-status.py` — the underlying connector health probe
-- `scripts/resolve_model.py` — model curator (used for currency check)
+- `../../scripts/digital-marketing-pro/connector-status.py` — the underlying connector health probe
+- `../../scripts/digital-marketing-pro/resolve_model.py` — model curator (used for currency check)

@@ -9,11 +9,11 @@ the agent to [SKILL.md](SKILL.md), [CAPABILITIES.md](CAPABILITIES.md),
 the host-side framework at
 [`doca-pcc`](../doca-pcc/SKILL.md), the read-only counter
 tool at
-[`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md),
+[`doca-pcc-counters`](../doca-pcc-counters/SKILL.md),
 the DPA two-side-program rule at
 [`doca-dpa`](../doca-dpa/SKILL.md), and the public DOCA
 PCC programming guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever a question is out of scope for this skill.
 
 **Universal precondition.** Every workflow below assumes:
@@ -39,9 +39,9 @@ agent walks four checks, then stops:
 
 1. **Is DOCA installed at all?** Run the canonical detection
    chain documented in
-   [`doca-version`](../../doca-version/SKILL.md). If
+   [`doca-version`](../doca-version/SKILL.md). If
    nothing is present, route to
-   [`doca-setup`](../../doca-setup/SKILL.md) for the
+   [`doca-setup`](../doca-setup/SKILL.md) for the
    from-scratch install (host package OR public NGC
    container at `nvcr.io/nvidia/doca/`) and STOP — that
    skill is the install authority, not this one.
@@ -54,7 +54,7 @@ agent walks four checks, then stops:
    output verbatim rather than reconstructing flags from
    memory. If the call fails, the algorithm component
    was not selected in the DOCA install — route to
-   [`doca-setup`](../../doca-setup/SKILL.md) to add it.
+   [`doca-setup`](../doca-setup/SKILL.md) to add it.
 3. **Is the matched-version DPACC compiler installed?**
    The algorithm is DPA-side code compiled by DPACC; per
    the DOCA Compatibility Policy at
@@ -74,13 +74,13 @@ agent walks four checks, then stops:
    of the shipped DOCA PCC application sample at
    `/opt/mellanox/doca/applications/pcc/`. If anything is
    missing, route to
-   [`doca-setup`](../../doca-setup/SKILL.md) — do NOT
+   [`doca-setup`](../doca-setup/SKILL.md) — do NOT
    piecewise-install components by hand from this skill.
 
 The agent does not invent install commands beyond what the
 shipped DOCA install procedure documents. If the user is
 mid-install and asking for the right install incantation,
-route to [`doca-setup`](../../doca-setup/SKILL.md).
+route to [`doca-setup`](../doca-setup/SKILL.md).
 
 ## configure
 
@@ -97,7 +97,7 @@ agent walks four checks before any code change.
    right answer may be a custom algorithm — route to
    [`doca-pcc`](../doca-pcc/SKILL.md) and the public PCC
    programming guide via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 2. **Pick the variant.** Per
    [CAPABILITIES.md ## Capabilities and modes](CAPABILITIES.md#capabilities-and-modes)
    the DPA-side source ships several variants (vanilla /
@@ -129,9 +129,9 @@ The agent does NOT do any host-OS-level configuration of
 RDMA (route to
 [`doca-rdma`](../doca-rdma/SKILL.md)), or any firmware-
 level PCC configuration (route to
-[`doca-setup`](../../doca-setup/SKILL.md) and the public
+[`doca-setup`](../doca-setup/SKILL.md) and the public
 firmware-config guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 
 ## build
 
@@ -414,7 +414,7 @@ in the build. Walk the ladder; do not jump.
      workload-vs-algorithm-fit question, not a wiring
      question — route to the public DOCA PCC
      programming guide via
-     [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+     [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
      for the algorithm's documented behavior model,
      and consider whether a custom algorithm is
      warranted (route to
@@ -429,8 +429,8 @@ For cross-cutting debug primitives
 (`--sdk-log-level`, `DOCA_LOG_LEVEL=trace`, the trace
 build flavor, the DOCA debug ladder, the structured-tools
 contract for inspection commands) see
-[`doca-debug`](../../doca-debug/SKILL.md) and
-[`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md).
+[`doca-debug`](../doca-debug/SKILL.md) and
+[`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md).
 
 ## use
 
@@ -484,7 +484,7 @@ custom one. Three workflows.
    framework's user-algo / user-init / user-set-algo-
    params callbacks the custom algorithm fills in, and
    to the public DOCA PCC programming guide via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    for algorithm-design content. This skill's job is to
    make the *decision* explicit (keep the reference,
    tune the reference, or replace it) and to surface
@@ -503,7 +503,7 @@ than attempting an answer.
   the host-side `doca-pcc` framework. Route to
   [`doca-pcc`](../doca-pcc/SKILL.md) plus the public
   DOCA PCC programming guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **`benchmark`, `compare-algorithms`,
   `tune-for-workload`.** Workload-level evaluation. Route
   the user to their own measurement discipline plus the
@@ -511,15 +511,15 @@ than attempting an answer.
   <https://docs.nvidia.com/doca/sdk/DOCA+PCC+Application+Guide.md>.
 - **`inspect counters` (deep / read-only).** This is the
   read-only counter CLI side; route to
-  [`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md).
+  [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md).
 - **`provision`, `configure firmware`,
   `mlxconfig`-side configuration.** Firmware-side
   configuration of PCC slots and PCC defaults. Route to
-  [`doca-setup`](../../doca-setup/SKILL.md) and the public
+  [`doca-setup`](../doca-setup/SKILL.md) and the public
   firmware-config guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **`upgrade DOCA`.** DOCA install / upgrade. Route to
-  [`doca-setup`](../../doca-setup/SKILL.md). The shipped
+  [`doca-setup`](../doca-setup/SKILL.md). The shipped
   algorithm versions with DOCA itself, so DOCA upgrades
   include algorithm upgrades.
 - **`tune RoCE-v2 traffic`, `bring up RDMA`,

@@ -30,7 +30,7 @@ based in [location], engagement above 4%, who have worked with brands like [bran
 
 ## Skill Contract
 
-- **Reads**: brand/product, niche or category, target platforms, follower range, engagement floor, location/language, audience demographics, exclusions; prior `entity-registry` brand profile and any `audience-mapper` output if present in memory; existing roster records under `memory/creators/` (dedupe the candidate pool against creators already rostered by [creator-registry](../../../protocol/creator-registry/SKILL.md)).
+- **Reads**: brand/product, niche or category, target platforms, follower range, engagement floor, location/language, audience demographics, exclusions; prior `entity-registry` brand profile and any `audience-mapper` output if present in memory; existing roster records under `memory/creators/` (dedupe the candidate pool against creators already rostered by [creator-registry](../creator-registry/SKILL.md)).
 - **Writes**: only with separate exact authorization, discovery results to `memory/influencer/influencer-discovery/YYYY-MM-DD-<topic>.md` — search criteria, candidate pool stats, per-influencer profiles, tiered shortlist with preliminary triage signals. Roster-worthy shortlisted creators (verified handles, contact path, audience stats) go as one-line updates to `memory/events/creators.ndjson` only via a separately authorized `operation: propose` request to `registry-events.py` — only `creator-registry` writes canonical records under `memory/creators/`.
 - **Promotes**: only with separate exact authorization, durable facts (top-tier handles, confirmed niche/platform mix, competitor-saturated creators) to `memory/hot-cache.md`.
 - **Done when**:
@@ -42,7 +42,7 @@ based in [location], engagement above 4%, who have worked with brands like [bran
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -57,9 +57,9 @@ Where a tool *could* sharpen results, use `~~` connector placeholders:
 
 **Keyless candidate-card metadata (oEmbed)**: YouTube (`https://www.youtube.com/oembed?url=<video-url>&format=json`), TikTok (`https://www.tiktok.com/oembed?url=<post-url>`), and X (`https://publish.twitter.com/oembed?url=<post-url>`) return a post's title, author name/handle, and thumbnail with **no key** — enough to auto-fill a candidate's profile row from pasted links instead of hand-copying. Metadata only: no follower or engagement metrics, so those stay `~~influencer database` or manual export — **except YouTube**, below.
 
-**Measured YouTube metrics (free key)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/youtube.py" channel @handle` returns the real displayed subscriber count, total views, and video count, and `youtube.py videos @handle --limit 10` adds per-video views/likes/comments — upgrading a YouTube candidate's profile row from Estimated to **Measured**. Free `YOUTUBE_API_KEY` (10,000 units/day; one channel check ≈ 1–3 units). ToS boundary: vet a **named shortlist**, don't build a bulk creator database — quota extensions are refused for competitive harvesting. See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Measured YouTube metrics (free key)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/youtube.py" channel @handle` returns the real displayed subscriber count, total views, and video count, and `youtube.py videos @handle --limit 10` adds per-video views/likes/comments — upgrading a YouTube candidate's profile row from Estimated to **Measured**. Free `YOUTUBE_API_KEY` (10,000 units/day; one channel check ≈ 1–3 units). ToS boundary: vet a **named shortlist**, don't build a bulk creator database — quota extensions are refused for competitive harvesting. See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the free/keyless recipe per category and the opt-in MCP layer. None are required — every step degrades to user-supplied inputs.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the free/keyless recipe per category and the opt-in MCP layer. None are required — every step degrades to user-supplied inputs.
 
 ## Instructions
 
@@ -72,7 +72,7 @@ Each step has a fill-in block in [references/templates.md](references/templates.
 5. **Compile the discovery report.** Roll profiles into summary stats, by-platform and by-tier breakdowns, the three-tier shortlist, mix recommendation, and next steps. Step 5 template.
 6. **Add insights.** Note niche content trends, the competitive picture, and recommendations for future searches. Step 6 template.
 
-Return the discovery report inline. Saving the report, caching the shortlist, and submitting each roster-worthy creator as `operation: propose` are three separate operations and each requires exact authorization; without it, offer the eligible path and write nothing. After a vetted shortlist exists, hand it with dated evidence to [fit-scorer](../fit-scorer/SKILL.md). `fit-scorer` records the S1-S10 evidence read; [creator-content-auditor](../../activate/creator-content-auditor/SKILL.md) alone determines verified STAR vetoes and renders the gate verdict.
+Return the discovery report inline. Saving the report, caching the shortlist, and submitting each roster-worthy creator as `operation: propose` are three separate operations and each requires exact authorization; without it, offer the eligible path and write nothing. After a vetted shortlist exists, hand it with dated evidence to [fit-scorer](../fit-scorer/SKILL.md). `fit-scorer` records the S1-S10 evidence read; [creator-content-auditor](../creator-content-auditor/SKILL.md) alone determines verified STAR vetoes and renders the gate verdict.
 
 ## Compact Example
 
@@ -85,10 +85,10 @@ Return the discovery report inline. Saving the report, caching the shortlist, an
 - [references/templates.md](references/templates.md) — all step fill-in blocks (criteria, search, screening, profile, report, insights), the worked example, tips, and the "what/when" overview.
 - [references/platform-vetting.md](references/platform-vetting.md) — per-platform creator playbooks (X/LinkedIn/TikTok/YouTube/Reddit) feeding screening and profiling in steps 3-4.
 - [references/creator-dossier.md](references/creator-dossier.md) — structured per-creator dossier from public data, with a contact-discovery waterfall.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipes and opt-in MCP layer.
-- STAR benchmark at [references/star-benchmark.md](../../../references/star-benchmark.md) — scoring framework that fit-scorer applies downstream.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipes and opt-in MCP layer.
+- STAR benchmark at [references/star-benchmark.md](../../references/aaron-marketing/star-benchmark.md) — scoring framework that fit-scorer applies downstream.
 - Siblings in the scout phase: [fit-scorer](../fit-scorer/SKILL.md), [audience-mapper](../audience-mapper/SKILL.md), [trend-spotter](../trend-spotter/SKILL.md).
 
 ## Next Best Skill
@@ -96,7 +96,7 @@ Return the discovery report inline. Saving the report, caching the shortlist, an
 **Primary**: [fit-scorer](../fit-scorer/SKILL.md) — score and rank the discovered candidates with weighted criteria before outreach.
 
 **Alternates (same influencer family)**:
-- [competitor-tracker](../../target/competitor-tracker/SKILL.md) — when discovery surfaced competitor-saturated creators and you want to map the competitive field first.
+- [competitor-tracker](../competitor-tracker/SKILL.md) — when discovery surfaced competitor-saturated creators and you want to map the competitive field first.
 - [audience-mapper](../audience-mapper/SKILL.md) — when the target audience is still fuzzy and criteria need sharpening before a re-search.
 
 **Termination**: Maintain a visited-set. If a skill has already been invoked this session, stop and report chain-complete rather than re-invoking it. Max chain depth is 3 hops from the originating request; stop and summarize when reached.
@@ -105,5 +105,5 @@ Return the discovery report inline. Saving the report, caching the shortlist, an
 
 - [audience-mapper](../audience-mapper/SKILL.md) - Define who to reach
 - [fit-scorer](../fit-scorer/SKILL.md) - Score and rank discovered influencers
-- [competitor-tracker](../../target/competitor-tracker/SKILL.md) - Find competitor influencers
-- [outreach-manager](../../activate/outreach-manager/SKILL.md) - Contact discovered influencers
+- [competitor-tracker](../competitor-tracker/SKILL.md) - Find competitor influencers
+- [outreach-manager](../outreach-manager/SKILL.md) - Contact discovered influencers

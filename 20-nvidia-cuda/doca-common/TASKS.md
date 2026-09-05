@@ -17,9 +17,9 @@ policy that these workflows assume, see
 [CAPABILITIES.md](CAPABILITIES.md). For the universal
 modify-a-shipped-sample workflow and the cross-library
 `DOCA_ERROR_*` taxonomy these workflows rest on, see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 For the cross-cutting debug ladder that the Common debug verb feeds
-into, see [`doca-debug`](../../doca-debug/SKILL.md).
+into, see [`doca-debug`](../doca-debug/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through the
@@ -30,9 +30,9 @@ next call.
 
 DOCA Common is part of every DOCA install — installing doca-common
 in isolation is not a thing. The install verb routes to
-[`doca-setup`](../../doca-setup/SKILL.md) for the env / install
+[`doca-setup`](../doca-setup/SKILL.md) for the env / install
 chain, and to
-[`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)
+[`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)
 for the on-disk layout the rest of this file assumes.
 
 The agent's checks before declaring the install ready for any
@@ -50,11 +50,11 @@ foundation work:
    $(pkg-config --variable=includedir doca-common) (`doca_buf.h`,
    `doca_ctx.h`, `doca_dev.h`, `doca_pe.h`, `doca_log.h`,
    `doca_mmap.h`, …) per the headers-win-over-docs rule in
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 If any of the three checks fails, **stop** — this skill's
 workflows assume the install is healthy, and a partial install is a
-[`doca-setup`](../../doca-setup/SKILL.md) concern.
+[`doca-setup`](../doca-setup/SKILL.md) concern.
 
 ## configure
 
@@ -271,7 +271,7 @@ Steps:
    library exposes that cap publicly). The result must match the
    configure-time baseline; if it does not, the device or firmware
    state changed (mode flip, firmware burn — see
-   [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md))
+   [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md))
    and the user is operating on a different surface than they
    thought.
 3. **Lifecycle smoke.** With the user's smallest possible
@@ -510,9 +510,9 @@ the agent does not invent guidance:
 - **deploy.** Deploying DOCA apps at scale, routing log output to
   centralized aggregation systems, K8s sidecars — out of scope for
   this skill; partial guidance in
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for DOCA Log Service and DOCA Telemetry Service routing, and
-  [`doca-container-deployment`](../../doca-container-deployment/SKILL.md)
+  [`doca-container-deployment`](../doca-container-deployment/SKILL.md)
   for the container path.
 - **rollback.** Coordinated rollback across multiple hosts /
   DPUs — out of scope for this skill. For single-host config
@@ -559,7 +559,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

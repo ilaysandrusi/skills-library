@@ -15,7 +15,7 @@ events / opaque events / metrics / OTLP logs) plus the NetFlow
 sibling API, the error taxonomy, observability, and safety policy,
 see [CAPABILITIES.md](CAPABILITIES.md). For where to find docs, the
 installed DOCA layout, or release notes, route through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through the
@@ -44,7 +44,7 @@ Steps the agent should walk the user through:
    to publish; the aggregating / receiving side is the DOCA
    Telemetry Service (DTS), a separate DOCA service with its own
    public guide reachable via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
    State the role first.
 2. **Pick the publish surface.** Walk the publish-surface table in
    [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
@@ -295,7 +295,7 @@ layers 5 (runtime) and 6 (program):
 - Walk the role rule: did the user actually want the exporter
   (publisher) and not the receiving DOCA Telemetry Service? If they
   are reading the DTS guide, route to it via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
   not deeper into the exporter.
 - Walk destination staging: for IPC, is the DTS up and does
   `check_ipc_status` return `CONNECTED`? A passing build + a missing
@@ -345,17 +345,17 @@ the agent does not invent guidance:
 
 - **install.** Installing DOCA, choosing packages, post-install
   verification, `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the install-tree
+  [`doca-setup`](../doca-setup/SKILL.md) and to the install-tree
   layout in
-  [doca-public-knowledge-map ## Layout of an installed DOCA package](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [doca-public-knowledge-map ## Layout of an installed DOCA package](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA is already installed.
 - **receiver / collector / aggregating service.** Setting up the
   DOCA Telemetry Service (DTS), an OpenTelemetry Collector, or a
   NetFlow collector — out of scope. Route to the receiver's own
   public guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
   and to
-  [`doca-collectx-deployment`](../../doca-collectx-deployment/SKILL.md)
+  [`doca-collectx-deployment`](../doca-collectx-deployment/SKILL.md)
   for the CollectX collection path. This skill is publisher-side
   only.
 - **deploy.** Deploying telemetry-emitting applications at scale
@@ -387,7 +387,7 @@ the agent should:
    report *"falling back to manual chain"*.
 4. The version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

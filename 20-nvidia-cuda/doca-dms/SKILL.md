@@ -47,7 +47,7 @@ the daemon, open [`TASKS.md`](TASKS.md) and start at
 of service is DMS and what protocols does it speak*, start at
 [`CAPABILITIES.md`](CAPABILITIES.md). If DOCA is not installed on the
 management endpoint yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first.
+[`doca-setup`](../doca-setup/SKILL.md) first.
 
 ## Example questions this skill answers well
 
@@ -138,8 +138,8 @@ on the management endpoint (host, DPU, or pod). Concretely:
 
 Do **not** load this skill for general DOCA orientation, install of
 DOCA itself, or library-API questions. For those, route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-setup`](../../doca-setup/SKILL.md), or the matching
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-setup`](../doca-setup/SKILL.md), or the matching
 `libs/<library>` skill.
 
 ## What this skill provides
@@ -159,7 +159,7 @@ files:
 The skill assumes a host where DOCA is already installed and the
 operator has root / `sudo` access where the public guide says it is
 required. It does not cover installing DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -204,15 +204,15 @@ and pull requests should not add:
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — the routing table to the public DMS guide and the rest of the
   public DOCA documentation set.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation and
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation and
   install verification on the host where `dmsd` will run, including
   the *I have no install yet* path via the public NGC DOCA container.
   This skill assumes its preconditions are satisfied at the management
   endpoint.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA patterns. DMS is service-shaped not library-shaped, so
   the build / modify / first-app pattern there does not apply directly,
   but the cross-library `DOCA_ERROR_*` taxonomy and the

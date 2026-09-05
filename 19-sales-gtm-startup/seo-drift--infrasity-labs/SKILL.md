@@ -99,8 +99,8 @@ Captures the current state of a page and stores it.
 
 **Execution:**
 ```bash
-python scripts/drift_baseline.py <url>
-python scripts/drift_baseline.py <url> --skip-cwv
+python ../../scripts/infrasity-dev-gtm/drift_baseline.py <url>
+python ../../scripts/infrasity-dev-gtm/drift_baseline.py <url> --skip-cwv
 ```
 
 **Output:** JSON with baseline ID, timestamp, URL, and summary of captured elements.
@@ -122,16 +122,16 @@ Fetches the current page state and diffs it against the most recent baseline.
 
 **Execution:**
 ```bash
-python scripts/drift_compare.py <url>
-python scripts/drift_compare.py <url> --baseline-id 5
-python scripts/drift_compare.py <url> --skip-cwv
+python ../../scripts/infrasity-dev-gtm/drift_compare.py <url>
+python ../../scripts/infrasity-dev-gtm/drift_compare.py <url> --baseline-id 5
+python ../../scripts/infrasity-dev-gtm/drift_compare.py <url> --skip-cwv
 ```
 
 **Output:** JSON with all triggered rules, old/new values, severity, and actions.
 
 After comparison, offer to generate an HTML report:
 ```bash
-python scripts/drift_report.py <comparison_json_file> --output drift-report.html
+python ../../scripts/infrasity-dev-gtm/drift_report.py <comparison_json_file> --output drift-report.html
 ```
 
 ---
@@ -142,8 +142,8 @@ Shows all baselines and comparisons for a URL.
 
 **Execution:**
 ```bash
-python scripts/drift_history.py <url>
-python scripts/drift_history.py <url> --limit 10
+python ../../scripts/infrasity-dev-gtm/drift_history.py <url>
+python ../../scripts/infrasity-dev-gtm/drift_history.py <url> --limit 10
 ```
 
 **Output:** JSON array of baselines (newest first) with timestamps and comparison summaries.

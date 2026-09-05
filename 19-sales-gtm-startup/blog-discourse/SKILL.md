@@ -31,7 +31,7 @@ This sub-skill uses WebSearch with platform-targeted site operators. No API keys
 | `/blog discourse <topic> --feed-into brief` | Run the brief, then immediately invoke `/blog brief <topic>` with DISCOURSE.md auto-loaded |
 | `/blog discourse <topic> --feed-into write` | Run the brief, then invoke `/blog write <topic>` |
 | `/blog discourse <topic> --feed-into strategy` | Run the brief, then invoke `/blog strategy <topic>` |
-| `/blog discourse <topic> --input results.json` | Skip search; build the brief from a pre-gathered results file. The flag name matches `scripts/discourse_research.py --input` directly. |
+| `/blog discourse <topic> --input results.json` | Skip search; build the brief from a pre-gathered results file. The flag name matches `../../scripts/infrasity-dev-gtm/discourse_research.py --input` directly. |
 
 ## Workflow
 
@@ -114,7 +114,7 @@ The script also enforces a defense-in-depth layer: `_validate_item` rejects non-
 
 ### Phase 4: Brief Generation (Python helper)
 
-Invoke `scripts/discourse_research.py` to:
+Invoke `../../scripts/infrasity-dev-gtm/discourse_research.py` to:
 1. Parse the results JSON
 2. Apply LAW 2: no invented titles. Preserve title from snippet, never paraphrase.
 3. Apply cross-source clustering (group by upstream source / theme)
@@ -125,7 +125,7 @@ Invoke `scripts/discourse_research.py` to:
 Run:
 
 ```bash
-python scripts/discourse_research.py \
+python ../../scripts/infrasity-dev-gtm/discourse_research.py \
   --input "$RESULTS_JSON" \
   --topic "<original topic>" \
   --days 30 \

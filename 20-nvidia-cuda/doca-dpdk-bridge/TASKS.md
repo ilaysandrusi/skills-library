@@ -20,12 +20,12 @@ observability, and safety policy, see
 patterns layered under everything below (the universal
 lifecycle, the cross-library `DOCA_ERROR_*` taxonomy, the
 modify-a-shipped-sample workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 For the steering library that is the most common reason to use
 this bridge, see [`doca-flow`](../doca-flow/SKILL.md). For the
 matched-pair DPDK ↔ DOCA version coupling that this skill
 overlays on top of the canonical four-way match, see
-[`doca-version`](../../doca-version/SKILL.md).
+[`doca-version`](../doca-version/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -83,7 +83,7 @@ Steps the agent should walk the user through, in order:
    the user's app; and `rte_eth_dev_start` succeeded on the
    target port id. The agent does NOT walk DPDK setup itself —
    defer the env-side fix to upstream DPDK docs reachable via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    and the shared hugepage / mlx5 env preconditions to
    [`doca-setup TASKS.md ## configure`](../../doca-setup/TASKS.md#configure).
 4. **Open the DOCA-side device and bind it to the DPDK port.**
@@ -178,7 +178,7 @@ code-level edit:
 
 | Slot | What the agent asks the user | Bridge-specific consideration |
 | --- | --- | --- |
-| 1. Starting sample | Which DOCA Flow sample under `/opt/mellanox/doca/samples/doca_flow/` that already drives the bridge (e.g. ones using `flow_common.c`, which calls `doca_dpdk_port_probe()` / `doca_dpdk_port_as_dev()`)? Or which reference application that already pairs DPDK + DOCA Flow (per the reference-applications index in [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md))? | Pick the closest *adopter shape* — bridge + DOCA Flow vs bridge + DOCA accelerator — to the user's intent. The sample tree is C; a *"clean rewrite"* in another language is almost always slower to first green |
+| 1. Starting sample | Which DOCA Flow sample under `/opt/mellanox/doca/samples/doca_flow/` that already drives the bridge (e.g. ones using `flow_common.c`, which calls `doca_dpdk_port_probe()` / `doca_dpdk_port_as_dev()`)? Or which reference application that already pairs DPDK + DOCA Flow (per the reference-applications index in [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md))? | Pick the closest *adopter shape* — bridge + DOCA Flow vs bridge + DOCA accelerator — to the user's intent. The sample tree is C; a *"clean rewrite"* in another language is almost always slower to first green |
 | 2. Port-handover code | Are you wiring a new DPDK port id into the bridge, or reusing the sample's port-handover code as-is? | The `doca_dpdk_port_probe()` / `doca_dpdk_port_as_dev()` binding and the `doca_dev` open are the load-bearing edits. Do NOT change the DPDK port's start / stop / queue-config calls — those stay owned by the DPDK side. The bridge associates a port id with a `doca_dev`; it does not transfer ownership of the port |
 | 3. Conversion sites | Where in the data plane are `rte_mbuf` ↔ `doca_buf` conversions actually needed? | Per the mbuf-conversion rule in [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes), convert at the boundary, NOT in the inner loop. If the diff puts a conversion call on every packet of a high-rate path, surface the cost before recommending the edit — the user often actually wants DOCA Flow steering installed once and DPDK to keep delivering already-steered packets, with no per-packet conversion |
 | 4. Capability re-validation | Did the diff start requesting representors on the probe that the program did not assume before? | Re-run `doca_dpdk_cap_is_rep_port_supported()` from [`## configure`](#configure) step 5 against the active `doca_devinfo`; the device cap is the authority, not the prior install's |
@@ -218,7 +218,7 @@ Steps the agent should walk the user through:
    transitions appear on stderr. For DPDK's own logging
    surface (`rte_log`, `--log-level`), the upstream DPDK docs
    are the authority — route via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md);
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md);
    the agent must not paraphrase DPDK log knobs.
 3. **Send one trivial DOCA-library operation through the
    bridge handle.** For the canonical adopter (DOCA Flow): one
@@ -417,16 +417,16 @@ so the agent does not invent guidance:
 
 - **install (DOCA side).** Installing DOCA, choosing packages,
   post-install verification, `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
-  [doca-public-knowledge-map ## Layout of an installed DOCA package](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [doca-public-knowledge-map ## Layout of an installed DOCA package](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA is already installed.
 - **install / learn DPDK itself.** Installing DPDK, mounting
   hugepages, binding PCIe ports, learning the DPDK programming
   model, choosing a DPDK release — out of scope. DPDK is its
   own upstream project; this skill treats DPDK as a
   precondition and routes the user to upstream DPDK docs via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **migrate to native `doca-eth`.** Rewriting the user's DPDK
   data-plane to `doca_eth_rxq` / `doca_eth_txq` — out of scope
   here, and almost always the wrong tradeoff for a working
@@ -445,7 +445,7 @@ so the agent does not invent guidance:
   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug)
   layer 5 (driver), then to the upstream MLNX OFED / firmware
   documentation reachable through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Command appendix
 
@@ -477,7 +477,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |
@@ -486,7 +486,7 @@ the agent should:
 | `pkg-config --modversion doca-dpdk-bridge` | `## configure` step 1; `## build` slot 6 | What is the build-time DOCA DPDK Bridge version? | A semver string matching `doca_caps --version`. Disagreement = partial install (route to [`doca-version TASKS.md ## debug`](../../doca-version/TASKS.md#debug) layer 2) |
 | `pkg-config --modversion libdpdk` | `## configure` step 1; `## build` slot 6; `## debug` layer 2 | What DPDK version is installed on this host, and does it fall within the bridge's matched-pair window? | A semver string; the agent quotes it against the bridge's installed headers / docs declared window. Disagreement = the canonical *"the bridge loads but every operation returns confusing errors"* failure; do not assume *"latest DPDK works"* |
 | `pkg-config --cflags --libs doca-dpdk-bridge libdpdk` | `## build` | What include + link flags does the linker need for a bridge consumer? | DOCA-side includes resolve under $(pkg-config --variable=includedir doca-common); libs include whatever `pkg-config --libs doca-dpdk-bridge` resolves (do not predict the `-l<name>` form by hand); DPDK-side includes resolve under the user's DPDK install; libs include the `-lrte_*` set |
-| `ls /opt/mellanox/doca/samples/doca_flow/` | `## modify` slot 1 | Which DOCA Flow samples ship in this install (the bridge API has no samples dir of its own — it is used inside the DOCA Flow samples, e.g. `flow_common.c`), and which is the closest starting point? | A list of DOCA Flow sample directories; pick one whose adopter shape (bridge + Flow steering) is closest. Empty = the user's install does not ship DOCA Flow samples; route to the reference-applications index in [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) |
+| `ls /opt/mellanox/doca/samples/doca_flow/` | `## modify` slot 1 | Which DOCA Flow samples ship in this install (the bridge API has no samples dir of its own — it is used inside the DOCA Flow samples, e.g. `flow_common.c`), and which is the closest starting point? | A list of DOCA Flow sample directories; pick one whose adopter shape (bridge + Flow steering) is closest. Empty = the user's install does not ship DOCA Flow samples; route to the reference-applications index in [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) |
 | `dpdk-devbind.py --status` | `## configure` step 3; `## debug` layer 5 | Is the target PCIe port bound under DPDK? | The target port appears under the `Network devices using DPDK-compatible driver` section. Anything else means the port is not on the DPDK side and the bridge cannot see it |
 | `cat /proc/meminfo | grep Huge` | `## configure` step 3; `## debug` layer 5 | Are hugepages mounted on this host (DPDK precondition)? | `HugePages_Total` non-zero, `HugePages_Free` non-zero before the DPDK app starts |
 | `doca_caps --list-devs` | `## configure` step 4; `## debug` layer 5 | Which devices on this host can be opened as a `doca_dev` and used as the DOCA side of the bridge binding? | One row per visible device with PCIe address; the device the DPDK port is bound to must appear here |

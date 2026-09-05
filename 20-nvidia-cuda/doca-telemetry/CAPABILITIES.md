@@ -23,7 +23,7 @@ Read this file when the loader sent you here from
 (the verbs `configure / build / modify / run / test / debug`),
 jump to [TASKS.md](TASKS.md). For the canonical DOCA
 version-handling rules that this skill layers a per-domain
-overlay on top of, see [`doca-version`](../../doca-version/SKILL.md).
+overlay on top of, see [`doca-version`](../doca-version/SKILL.md).
 
 ## Pattern overview
 
@@ -85,7 +85,7 @@ invent a generic "telemetry collector" context. Exact symbol
 names are install-bound — confirm against the user's installed
 headers under `$(pkg-config --variable=includedir doca-common)`
 per the headers-win-over-docs rule in
-[`doca-version`](../../doca-version/SKILL.md).
+[`doca-version`](../doca-version/SKILL.md).
 
 | Header | Domain | Counter family it reads | Per-domain cap query |
 | --- | --- | --- | --- |
@@ -133,13 +133,13 @@ recommending reader setup.
 | --- | --- |
 | The user is reading hardware counters (PCC / DPA / DIAG / ADP-RETX / PHY / PCI) off a `doca_dev` from inside their own application | The user wants to **PUBLISH / EXPORT** counter values to a monitoring pipeline (OTLP / Prometheus / labeled metrics) — that is [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md), the sibling publisher library |
 | The user needs the structured per-domain counter snapshot the device exposes through the public per-domain C API | The user wants plain structured stdout / per-line logging from their own program — use `doca-log`; the per-domain cap-query discipline is overhead they do not need |
-| The user is consuming the device's own hardware counters | The user wants a turnkey, deployed aggregation service across a fleet — that is the externally-productized DOCA Telemetry Service (DTS), **out of scope** for this bundle (see [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) non-goals); or a generic NetFlow / IPFIX / Prometheus collector outside the DOCA family |
+| The user is consuming the device's own hardware counters | The user wants a turnkey, deployed aggregation service across a fleet — that is the externally-productized DOCA Telemetry Service (DTS), **out of scope** for this bundle (see [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) non-goals); or a generic NetFlow / IPFIX / Prometheus collector outside the DOCA family |
 
 ## Version compatibility
 
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-docs
-rule, see [`doca-version`](../../doca-version/SKILL.md). The body
+rule, see [`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The per-domain reader overlay** is:
@@ -235,7 +235,7 @@ For the cross-cutting observability primitives
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -288,7 +288,7 @@ will get asked but should route elsewhere:
   service that is NOT in `doca/services/` at the bundle-aligned
   DOCA release; it is **out of scope** for this bundle. Reach its
   docs via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   non-goals.
 - **NetFlow / IPFIX / local-socket collector frameworks** — the
   per-domain reader libraries do NOT expose a collector /
@@ -298,7 +298,7 @@ will get asked but should route elsewhere:
   for publishing, or to DTS (out of scope) for productized
   aggregation.
 - **DOCA Core context internals** — owned by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   Note the per-domain reader does NOT use the generic
   `doca_ctx_*` / progress-engine surface; it uses per-domain
   `_create` / `_start` / `_stop` / `_destroy` directly.

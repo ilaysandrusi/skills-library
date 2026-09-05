@@ -7,7 +7,7 @@ description: "Use this skill alongside figma-use when the task involves translat
 
 Use this skill to create or update full-page screens in Figma by **reusing the published design system** — components, variables, and styles — rather than drawing primitives with hardcoded values. The key insight: the Figma file likely has a published design system with components, color/spacing variables, and text/effect styles that correspond to the codebase's UI components and tokens. Find and use those instead of drawing boxes with hex colors.
 
-**MANDATORY**: You MUST also load [figma-use](../figma-use/SKILL.md) before any `use_figma` call. That skill contains critical rules (color ranges, font loading, etc.) that apply to every script you write.
+**MANDATORY**: You MUST also load [figma-use](../../02-design-ui/figma-use/SKILL.md) before any `use_figma` call. That skill contains critical rules (color ranges, font loading, etc.) that apply to every script you write.
 
 **Always pass `skillNames: "figma-generate-design"` when calling `use_figma` as part of this skill.** This is a logging parameter — it does not affect execution.
 
@@ -15,7 +15,7 @@ Use this skill to create or update full-page screens in Figma by **reusing the p
 
 - Use this skill when the deliverable is a **Figma screen** (new or updated) composed of design system component instances.
 - If the user wants to generate **code from a Figma design**, switch to [figma-implement-design](../figma-implement-design/SKILL.md).
-- If the user wants to create **new reusable components or variants**, use [figma-use](../figma-use/SKILL.md) directly.
+- If the user wants to create **new reusable components or variants**, use [figma-use](../../02-design-ui/figma-use/SKILL.md) directly.
 - If the user wants to write **Code Connect mappings**, switch to [figma-code-connect-components](../figma-code-connect-components/SKILL.md).
 
 ## Prerequisites
@@ -134,7 +134,7 @@ return [...varMap.values()];
 
 For library variables (remote = true), import them by key with `figma.variables.importVariableByKeyAsync(key)`. For local variables, use `figma.variables.getVariableByIdAsync(id)` directly.
 
-See [variable-patterns.md](../figma-use/references/variable-patterns.md) for binding patterns.
+See [variable-patterns.md](../../02-design-ui/figma-use/references/variable-patterns.md) for binding patterns.
 
 #### 2c: Discover styles (text styles, effect styles)
 
@@ -161,7 +161,7 @@ return {
 
 Import library styles with `figma.importStyleByKeyAsync(key)`, then apply with `node.textStyleId = style.id` or `node.effectStyleId = style.id`.
 
-See [text-style-patterns.md](../figma-use/references/text-style-patterns.md) and [effect-style-patterns.md](../figma-use/references/effect-style-patterns.md) for details.
+See [text-style-patterns.md](../../02-design-ui/figma-use/references/text-style-patterns.md) and [effect-style-patterns.md](../../02-design-ui/figma-use/references/effect-style-patterns.md) for details.
 
 ### Step 3: Create the Page Wrapper Frame First
 
@@ -240,7 +240,7 @@ After each section, validate with `get_screenshot` before moving on. Look closel
 
 #### Override instance text with setProperties()
 
-Component instances ship with placeholder text ("Title", "Heading", "Button"). Use the component property keys you discovered in Step 2 to override them with `setProperties()` — this is more reliable than direct `node.characters` manipulation. See [component-patterns.md](../figma-use/references/component-patterns.md#overriding-text-in-a-component-instance) for the full pattern.
+Component instances ship with placeholder text ("Title", "Heading", "Button"). Use the component property keys you discovered in Step 2 to override them with `setProperties()` — this is more reliable than direct `node.characters` manipulation. See [component-patterns.md](../../02-design-ui/figma-use/references/component-patterns.md#overriding-text-in-a-component-instance) for the full pattern.
 
 For nested instances that expose their own TEXT properties, call `setProperties()` on the nested instance:
 
@@ -309,17 +309,17 @@ return { success: true, mutatedNodeIds: [existingButton.id] };
 
 ## Reference Docs
 
-For detailed API patterns and gotchas, load these from the [figma-use](../figma-use/SKILL.md) references as needed:
+For detailed API patterns and gotchas, load these from the [figma-use](../../02-design-ui/figma-use/SKILL.md) references as needed:
 
-- [component-patterns.md](../figma-use/references/component-patterns.md) — importing by key, finding variants, setProperties, text overrides, working with instances
-- [variable-patterns.md](../figma-use/references/variable-patterns.md) — creating/binding variables, importing library variables, scopes, aliasing, discovering existing variables
-- [text-style-patterns.md](../figma-use/references/text-style-patterns.md) — creating/applying text styles, importing library text styles, type ramps
-- [effect-style-patterns.md](../figma-use/references/effect-style-patterns.md) — creating/applying effect styles (shadows), importing library effect styles
-- [gotchas.md](../figma-use/references/gotchas.md) — layout pitfalls (HUG/FILL interactions, counterAxisAlignItems, sizing order), paint/color issues, page context resets
+- [component-patterns.md](../../02-design-ui/figma-use/references/component-patterns.md) — importing by key, finding variants, setProperties, text overrides, working with instances
+- [variable-patterns.md](../../02-design-ui/figma-use/references/variable-patterns.md) — creating/binding variables, importing library variables, scopes, aliasing, discovering existing variables
+- [text-style-patterns.md](../../02-design-ui/figma-use/references/text-style-patterns.md) — creating/applying text styles, importing library text styles, type ramps
+- [effect-style-patterns.md](../../02-design-ui/figma-use/references/effect-style-patterns.md) — creating/applying effect styles (shadows), importing library effect styles
+- [gotchas.md](../../02-design-ui/figma-use/references/gotchas.md) — layout pitfalls (HUG/FILL interactions, counterAxisAlignItems, sizing order), paint/color issues, page context resets
 
 ## Error Recovery
 
-Follow the error recovery process from [figma-use](../figma-use/SKILL.md#6-error-recovery--self-correction):
+Follow the error recovery process from [figma-use](../../02-design-ui/figma-use/SKILL.md#6-error-recovery--self-correction):
 
 1. **STOP** on error — do not retry immediately.
 2. **Read the error message carefully** to understand what went wrong.

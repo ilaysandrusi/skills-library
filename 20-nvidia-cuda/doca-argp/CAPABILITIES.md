@@ -12,7 +12,7 @@ Read this file when the loader sent you here from
 jump to [TASKS.md](TASKS.md). For the canonical DOCA
 version-handling rules that this skill layers an Arg-Parser
 overlay on top of, see
-[`doca-version`](../../doca-version/SKILL.md).
+[`doca-version`](../doca-version/SKILL.md).
 
 ## Pattern overview
 
@@ -121,7 +121,7 @@ before recommending the Arg Parser path.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The Arg-Parser-specific overlay** is:
@@ -144,7 +144,7 @@ there; this skill does not duplicate it.
   layer 2 before any Arg-Parser-layer diagnosis.
 - **Headers in $(pkg-config --variable=includedir doca-common)
   win over public docs.** Per the headers-win-over-docs rule
-  in [`doca-version`](../../doca-version/SKILL.md), if a
+  in [`doca-version`](../doca-version/SKILL.md), if a
   public Arg Parser doc page mentions a `doca_argp_*` symbol
   that is not in the installed `doca_argp.h`, the headers
   describe what *this* install can call; the docs describe
@@ -210,7 +210,7 @@ Three primary signals the agent should reach for:
 
 For the install-tree observability (logger names, package
 layout) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -276,14 +276,14 @@ elsewhere:
   layered on top if a feature is genuinely required.
 - **DOCA Core context, progress engine, and `doca_mmap`
   internals** — owned by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   Arg Parser is upstream of the Core context (it parses the
   CLI that selects which device the Core context will open);
   it does not redefine the Core context.
 - **DOCA Log internals** (registry names, per-source level
   filters) — owned by the public DOCA Log guide reachable
   through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
   Arg Parser registers `--sdk-log-level` as a default flag but
   does not own the log layer it configures.
 - **Cross-cutting `DOCA_ERROR_*` taxonomy** — owned by

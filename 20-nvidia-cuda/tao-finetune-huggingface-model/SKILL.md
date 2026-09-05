@@ -89,9 +89,9 @@ a GPU host — read them first.
 
 | Concern | Authoritative skill |
 |---|---|
-| GPU host runtime (driver 580, CUDA Toolkit 13.0, NVIDIA Container Toolkit 1.19.0) | [`tao-skill-bank:tao-setup-nvidia-gpu-host`](../../platform/tao-setup-nvidia-gpu-host/SKILL.md) |
-| `docker run` flags, NGC auth, mounts, env passthrough | [`tao-skill-bank:tao-run-on-docker`](../../platform/tao-run-on-docker/SKILL.md) |
-| Local Docker job preflight (daemon, GPU smoke) | [`tao-skill-bank:tao-run-on-local-docker`](../../platform/tao-run-on-local-docker/SKILL.md) |
+| GPU host runtime (driver 580, CUDA Toolkit 13.0, NVIDIA Container Toolkit 1.19.0) | [`tao-skill-bank:tao-setup-nvidia-gpu-host`](../tao-setup-nvidia-gpu-host/SKILL.md) |
+| `docker run` flags, NGC auth, mounts, env passthrough | [`tao-skill-bank:tao-run-on-docker`](../tao-run-on-docker/SKILL.md) |
+| Local Docker job preflight (daemon, GPU smoke) | [`tao-skill-bank:tao-run-on-local-docker`](../tao-run-on-local-docker/SKILL.md) |
 
 **Default platform:** `local-docker` — build a one-off image (`run-<short>:latest`)
 and run it on the local Docker daemon. Ask only when the user explicitly needs a

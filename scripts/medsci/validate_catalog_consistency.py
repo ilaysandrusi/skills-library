@@ -1,0 +1,364 @@
+#!/usr/bin/env python3
+"""Catalog-count consistency check (codex Improvement A).
+
+Counts cited in public docs (skill count, reporting-guideline count, journal-
+profile counts) were hand-maintained in multiple places and drifted (README once
+said "22 guidelines" while orchestrate said "15"; more recently every doc said
+"33 reporting guidelines" while only 32 are enumerated and vendored). This makes
+the counts a single source of truth and fails CI on drift.
+
+Four layers:
+  1. Recompute every count from disk (the real ground truth).
+  2. Assert metadata/catalog_counts.json matches disk — the SSOT cannot lie.
+     Exception: the journal-profile counts (``AUTO_DERIVED_KEYS``) are recomputed
+     from disk but never asserted against the JSON, so that adding one profile —
+     the single-file change the "add a journal profile" good-first-issue (#115)
+     invites from a first-time contributor — can never fail on a count bump they
+     have no reason to know about. Those counts are cited in no checked doc claim,
+     so disk is their sole source of truth.
+  3. Assert the count claims in the public docs match the SSOT. Guideline claims are
+     matched (case-insensitively, so a "### 33 Reporting Guidelines" heading is caught)
+     by "guidelines" or "checklists", optionally qualified by "reporting"/"EQUATOR"/
+     "vendored", across README, orchestrate, check-reporting, the figure map,
+     CITATION.cff, and paper.md (the JOSS submission). The skill self-count is checked
+     in the "skills that actually work" tagline, the README shields badge
+     (img.shields.io/badge/Skills-N-), and catalog-total prose ("All N skills",
+     "N task-bounded skills"). The badge regex is scoped to the shields URL so arbitrary
+     prose never trips it, and comparison/marketing lines about *other* repos
+     ("400-900 skills", "869 skills") are never touched. Dated version notes (2- or
+     3-component, e.g. **v5.20.1**) are skipped for every current-claim scan.
+  4. Assert the MEDSCI_AUDIT per-family detector table against the generated
+     metadata/detectors_catalog.json — each row's count against that family's true
+     size, and its listed names against that family's true membership. Layer 3 already
+     watched the "The N detectors fall into six audit families" total; nothing watched
+     the rows under it, and they drifted to 72 against a total of 80.
+
+Exit 0 when everything agrees; non-zero on any drift. Stdlib-only.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SSOT = ROOT / "metadata" / "catalog_counts.json"
+
+# Counts that a drive-by contributor legitimately changes with a single-file PR
+# (adding one journal profile). These are AUTO-DERIVED from disk and deliberately
+# NOT asserted against catalog_counts.json — otherwise the flagship "add a journal
+# profile" good-first-issue (#115) would fail CATALOG_COUNT_DRIFT for the exact
+# newcomer it targets, who has no reason to touch the SSOT JSON. No public doc
+# cross-checks these counts, so disk is their sole source of truth. Maintainer-
+# scoped counts (skills, reporting_guidelines, integrity_detectors) stay hard-
+# asserted below and in catalog_counts.json.
+# `plugins` is derived from the marketplace SSOT (.claude-plugin/marketplace.json),
+# not from catalog_counts.json, so it is not asserted against the JSON here — but
+# unlike the journal-profile keys it IS cross-checked against the README plugin
+# claim in Layer 3 (doc_claims).
+AUTO_DERIVED_KEYS = ("journal_profiles_find", "journal_profiles_write", "plugins")
+
+
+def disk_counts() -> dict[str, int]:
+    skills = sum(1 for p in (ROOT / "skills").iterdir() if p.is_dir() and (p / "SKILL.md").exists())
+    checklists = len(list((ROOT / "skills" / "check-reporting" / "references" / "checklists").glob("*.md")))
+    find_prof = len(list((ROOT / "skills" / "find-journal" / "references" / "journal_profiles").glob("*.md")))
+    write_prof = len(list((ROOT / "skills" / "write-paper" / "references" / "journal_profiles").glob("*.md")))
+    # Deterministic, stdlib-only analysis-integrity detectors living inside skills/
+    # (check_*/detect_*/derive_*/verify_refs). Excludes top-level repo-CI validators
+    # (validate_*.py in scripts/) and host/format validators (validate_schema.py,
+    # validate_pptx_mac_compat.py), which are not manuscript-integrity gates.
+    detector_globs = ("check_*.py", "detect_*.py", "derive_*.py", "verify_refs.py")
+    detectors = len({
+        str(p) for g in detector_globs for p in (ROOT / "skills").glob(f"*/scripts/{g}")
+    })
+    # medsci-* category plugins in the plugin marketplace SSOT
+    mp = ROOT / ".claude-plugin" / "marketplace.json"
+    plugins = 0
+    if mp.exists():
+        try:
+            data = json.loads(mp.read_text(encoding="utf-8"))
+            plugins = sum(1 for p in data.get("plugins", [])
+                          if str(p.get("name", "")).startswith("medsci-"))
+        except (ValueError, OSError):
+            plugins = 0
+    return {
+        "skills": skills,
+        "reporting_guidelines": checklists,
+        "journal_profiles_find": find_prof,
+        "journal_profiles_write": write_prof,
+        "integrity_detectors": detectors,
+        "plugins": plugins,
+    }
+
+
+# Files that carry the catalog-total guideline claim. Scoped explicitly rather
+# than scanning all .md: phrases like "PRISMA 2020 guidelines" (version year) or
+# "4 reporting guidelines in one tool" (a flow-diagram subset in figure_specs.md)
+# are NOT catalog totals and would false-positive a blanket scan. A new doc that
+# cites the catalog total must be added here. CHANGELOG is deliberately absent —
+# it is a dated record that legitimately quotes superseded counts. CITATION.cff and
+# paper.md (the JOSS submission) each state the total once in prose ("44 EQUATOR
+# guidelines", "46 vendored checklists"); both drifted while ungated, so they are
+# included and the noun/qualifier set below matches their phrasings.
+GUIDELINE_CLAIM_FILES = [
+    "README.md",
+    "skills/orchestrate/SKILL.md",
+    "skills/check-reporting/SKILL.md",
+    "skills/make-figures/references/reporting_guideline_figure_map.md",
+    "CITATION.cff",
+    "paper.md",
+]
+SKILLS_TAGLINE_FILES = ["README.md"]
+# README shields badge (img.shields.io/badge/Skills-N-...). Scoped to the badge URL so
+# only the literal badge count is checked, never arbitrary "Skills" prose.
+#
+# Translated READMEs are included by GLOB, not by enumeration. The badge is a shields.io URL
+# with the count written into it as a literal, and a translation copies that URL
+# character-for-character — so the number rides along into a file no gate was watching, and the
+# translated page goes quietly wrong the first time a skill is added while the English page stays
+# green. Because the URL is identical across locales, no new pattern is needed: the existing
+# `badge_re` matches it wherever it appears. A glob also means the next language is covered on
+# arrival rather than after someone remembers to add it here.
+SKILLS_BADGE_FILES = ["README.md"] + sorted(
+    p.name for p in ROOT.glob("README.*.md") if p.name != "README.md"
+)
+# Catalog-total SKILL claim in prose (not the tagline/badge). README "All N skills"
+# (skill-table intro) and paper.md "N task-bounded skills" (JOSS Summary) drifted
+# because only the tagline+badge were gated. Anchored to those two phrasings so
+# other-repo comparison lines ("869 skills") and per-lane subsets never match; dated
+# version notes are skipped like the guideline claim.
+SKILLS_PROSE_FILES = ["README.md", "paper.md"]
+
+# Files carrying the catalog-total DETECTOR claim. MEDSCI_AUDIT.md drifted once
+# (lead said 27 while the SSOT was 28) because no gate watched it. The patterns
+# below are anchored to the *current-total* phrasings ONLY — they must never match
+# historical/evaluation numbers in the same file (e.g. "brought the catalog to 24",
+# "19 DefectSpec rows", "n=21", or the per-family sub-counts in the family table),
+# which are legitimately different facts. A new doc citing the detector total must
+# be added here with an anchored pattern.
+#
+# paper.md (the JOSS submission) states the total in its Summary and was ungated
+# until the suite grew past it — a paper whose headline number disagrees with the
+# software it describes is exactly the drift this file exists to prevent.
+# README carries the same claim in its MedSci-Audit tagline and was NOT watched, so it sat at
+# 36 — the v4.10 count — while the catalog, MEDSCI_AUDIT.md and paper.md moved to 84. The
+# front page of the project understated its own verification layer by more than half, and the
+# gate built to prevent exactly that was not looking at it. The patterns above are already
+# scoped to current-state phrasings, so the dated version notes ("61 integrity detectors" in
+# the v5.21 entry) do not match and stay correct as history.
+DETECTOR_CLAIM_FILES = ["MEDSCI_AUDIT.md", "paper.md", "README.md"]
+DETECTOR_CLAIM_PATTERNS = [
+    r"\b(\d{1,3})\s+deterministic detectors\b",
+    r"\bThe\s+(\d{1,3})\s+detectors\s+fall into\b",
+    r"Current detector catalog:\s*(\d{1,3})\b",
+    r'"(\d{1,3})\s+detectors,\s*validated\b',
+    r"\bcover all\s+(\d{1,3})\s+detectors\b",
+]
+
+# Files carrying the plugin-marketplace count claim (the `medsci-*` category
+# plugins). Drifted once (README said "eight" while marketplace.json had nine)
+# because no gate watched it. The number is written as an English word, so a small
+# word->int map is needed; only a number token immediately preceding
+# "category plugins" is treated as a claim.
+PLUGIN_CLAIM_FILES = ["README.md"]
+NUM_WORDS = {w: i for i, w in enumerate(
+    ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+     "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+     "sixteen", "seventeen", "eighteen", "nineteen", "twenty"])}
+
+# The MEDSCI_AUDIT family table is a hand-maintained mirror of the auto-generated
+# metadata/detectors_catalog.json. It drifted: the prose said "The 80 detectors fall
+# into six audit families" — gated by DETECTOR_CLAIM_PATTERNS above — while the rows
+# beneath it enumerated only 72. The total was watched; the rows were not. Layer 4
+# asserts every row against the catalog's own per-family id list, so a detector added
+# without a family-table row fails here instead of silently unbalancing the registry.
+FAMILY_TABLE_FILE = "MEDSCI_AUDIT.md"
+DETECTORS_CATALOG = "metadata/detectors_catalog.json"
+
+
+def family_table_failures() -> list[str]:
+    """Return one message per MEDSCI_AUDIT family row that disagrees with the catalog.
+
+    Checks each row's declared count against the family's true size and its listed
+    names against the family's true membership (the rows are the complete enumeration,
+    not a sample). Rows whose label is not a catalog family label are ignored, so the
+    other tables in the file are never parsed as family rows.
+    """
+    out: list[str] = []
+    cat, doc = ROOT / DETECTORS_CATALOG, ROOT / FAMILY_TABLE_FILE
+    if not cat.exists() or not doc.exists():
+        return out
+    families = json.loads(cat.read_text(encoding="utf-8")).get("families", [])
+    truth = {f["label"]: set(f["ids"]) for f in families}
+    row_re = re.compile(r"^\|\s*([^|]+?)\s*\|\s*(\d+)\s*\|\s*(.+?)\s*\|\s*$", re.M)
+    seen: set[str] = set()
+    for m in row_re.finditer(doc.read_text(encoding="utf-8")):
+        label, count, cells = m.group(1).strip(), int(m.group(2)), m.group(3)
+        if label not in truth:
+            continue  # not a family row
+        seen.add(label)
+        listed, real = set(re.findall(r"`([A-Za-z0-9_]+)`", cells)), truth[label]
+        if count != len(real):
+            out.append(f"{FAMILY_TABLE_FILE} family '{label}': count {count}, catalog has {len(real)}")
+        if missing := sorted(real - listed):
+            out.append(f"{FAMILY_TABLE_FILE} family '{label}': row omits {', '.join(missing)}")
+        if extra := sorted(listed - real):
+            out.append(f"{FAMILY_TABLE_FILE} family '{label}': row lists non-member(s) {', '.join(extra)}")
+    for label in truth:
+        if label not in seen:
+            out.append(f"{FAMILY_TABLE_FILE}: no family row for '{label}'")
+    return out
+
+
+def doc_claims() -> list[tuple[str, int, int, str]]:
+    """Return (file, claimed, expected, context) for every count claim found.
+
+    Guideline claims use a 1-2 digit count (4-digit version years like "2020" are
+    excluded) followed by "[reporting] guidelines". The skill self-count is matched
+    only by the README "skills that actually work" tagline, so comparison lines
+    about other repos ("400-900 skills") are never touched.
+
+    Dated version notes (README "**v5.21** — ... 46 guidelines ...") are SKIPPED: like
+    the CHANGELOG, they legitimately record the count at that release and must not be
+    rewritten when the current count changes. The detector claim is already scoped to
+    current-state phrasings for exactly this reason; the guideline claim was never
+    scoped because the guideline count sat at 46 across every listed version, so the
+    collision only surfaces on the first guideline addition. Only the current-state
+    guideline claims (moat line, skills table, bundled-checklist line) are checked.
+    """
+    out: list[tuple[str, int, int, str]] = []
+    truth = disk_counts()
+    g = truth["reporting_guidelines"]
+    s = truth["skills"]
+
+    guide_re = re.compile(
+        r"\b(\d{1,2})\s+(?:reporting\s+|EQUATOR\s+|vendored\s+)?(?:guidelines|checklists)\b",
+        re.IGNORECASE)
+    # A dated release note (2- or 3-component: **v5.21** or **v5.20.1**), not a
+    # current claim. The optional third component matters: **v5.20.1** was NOT
+    # skipped before, so "all 55 skills made routable" in that note would trip the
+    # new skills-prose scan below.
+    version_note_re = re.compile(r"^\s*\*\*v\d+\.\d+(?:\.\d+)?\*\*")
+    skills_re = re.compile(r"\*\*(\d+)\s+skills that actually work")
+    badge_re = re.compile(r"img\.shields\.io/badge/Skills-(\d+)-")
+    skills_prose_re = re.compile(r"\bAll (\d+) skills\b|\b(\d+) task-bounded skills\b", re.IGNORECASE)
+
+    for rel in GUIDELINE_CLAIM_FILES:
+        f = ROOT / rel
+        if not f.exists():
+            continue
+        for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            if version_note_re.match(line):
+                continue  # dated version note: records a superseded count on purpose
+            for m in guide_re.finditer(line):
+                out.append((rel, int(m.group(1)), g, f"L{i} guidelines"))
+
+    for rel in SKILLS_TAGLINE_FILES:
+        f = ROOT / rel
+        if not f.exists():
+            continue
+        for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            for m in skills_re.finditer(line):
+                out.append((rel, int(m.group(1)), s, f"L{i} skills tagline"))
+
+    for rel in SKILLS_BADGE_FILES:
+        f = ROOT / rel
+        if not f.exists():
+            continue
+        for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            for m in badge_re.finditer(line):
+                out.append((rel, int(m.group(1)), s, f"L{i} skills badge"))
+
+    for rel in SKILLS_PROSE_FILES:
+        f = ROOT / rel
+        if not f.exists():
+            continue
+        for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            if version_note_re.match(line):
+                continue  # dated version note: records a superseded count on purpose
+            for m in skills_prose_re.finditer(line):
+                tok = next(g for g in m.groups() if g)
+                out.append((rel, int(tok), s, f"L{i} skills prose"))
+
+    d = truth["integrity_detectors"]
+    det_res = [re.compile(p, re.IGNORECASE) for p in DETECTOR_CLAIM_PATTERNS]
+    for rel in DETECTOR_CLAIM_FILES:
+        f = ROOT / rel
+        if not f.exists():
+            continue
+        for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            for rx in det_res:
+                for m in rx.finditer(line):
+                    out.append((rel, int(m.group(1)), d, f"L{i} detector total"))
+
+    # Plugin marketplace count: a number word or digit shortly before "category
+    # plugins". The capture group is constrained to number tokens so an ordinary
+    # word (e.g. "of", "medsci") that happens to sit before the phrase is not
+    # mistaken for the count.
+    pl = truth["plugins"]
+    _num_alt = "|".join(NUM_WORDS)
+    # "N category plugins" OR a bare "N plugins" restatement — the bare form drifted
+    # ("All eight plugins share the same repository source") while the "category
+    # plugins" form stayed correct, so "category" is optional here.
+    plugin_re = re.compile(rf"\b({_num_alt}|\d+)\b[^.\n]{{0,20}}?\b(?:category\s+)?plugins\b", re.IGNORECASE)
+    for rel in PLUGIN_CLAIM_FILES:
+        f = ROOT / rel
+        if not f.exists():
+            continue
+        for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            if version_note_re.match(line):
+                continue  # dated version note: records a superseded count on purpose
+            for m in plugin_re.finditer(line):
+                tok = m.group(1).lower()
+                n = NUM_WORDS.get(tok, int(tok) if tok.isdigit() else None)
+                if n is not None:
+                    out.append((rel, n, pl, f"L{i} plugin count"))
+    return out
+
+
+def main() -> int:
+    truth = disk_counts()
+
+    print("=" * 41)
+    print(" Catalog-Count Consistency")
+    print("=" * 41)
+    for k, v in truth.items():
+        print(f"  disk: {k} = {v}")
+
+    failures = 0
+
+    # Layer 2 — SSOT must match disk.
+    if not SSOT.exists():
+        print(f"\nFAIL: SSOT missing: {SSOT.relative_to(ROOT)}", file=sys.stderr)
+        return 1
+    ssot = json.loads(SSOT.read_text(encoding="utf-8"))
+    for key, val in truth.items():
+        if key in AUTO_DERIVED_KEYS:
+            continue  # disk is truth; a profile-add PR must never need a JSON bump
+        if ssot.get(key) != val:
+            print(f"\nFAIL: SSOT {key}={ssot.get(key)} != disk {val}", file=sys.stderr)
+            failures += 1
+
+    # Layer 3 — doc claims must match disk.
+    for rel, claimed, expected, ctx in doc_claims():
+        if claimed != expected:
+            print(f"\nFAIL: {rel} {ctx}: claims {claimed}, expected {expected}", file=sys.stderr)
+            failures += 1
+
+    # Layer 4 — the MEDSCI_AUDIT family table must match the generated catalog.
+    for msg in family_table_failures():
+        print(f"\nFAIL: {msg}", file=sys.stderr)
+        failures += 1
+
+    if failures:
+        print(f"\nCATALOG_COUNT_DRIFT: {failures} mismatch(es).", file=sys.stderr)
+        return 1
+    print("\nOK: SSOT and all doc count claims agree with disk.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

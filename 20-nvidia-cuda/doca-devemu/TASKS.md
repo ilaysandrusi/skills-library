@@ -18,7 +18,7 @@ surface, and the safety policy, see
 patterns layered under everything below (the universal Core
 lifecycle, the cross-library `DOCA_ERROR_*` taxonomy, the
 modify-a-shipped-sample workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -53,7 +53,7 @@ Steps the agent should walk the user through:
    rest of the setup goes. If the user's intent is actually a
    packaged service (NVMe / virtio-blk SNAP-style storage, or
    a packaged virtio-net daemon), route via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    to the DOCA SNAP Service / DOCA Virtio-net Service guide —
    the user does not need this library at all in that case.
 2. **Confirm the env preconditions on BOTH sides for the pinned
@@ -82,7 +82,7 @@ Steps the agent should walk the user through:
    resolve the exact field from the installed tool / matching guide;
    never derive a field name by analogy. A pending next-boot value
    is not active. Any write or reset leaves this skill for
-   [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md).
+   [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md).
 3. **Run per-sub-library capability discovery against the
    active `doca_devinfo`.** Per the capability-query rule in
    [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes),
@@ -211,7 +211,7 @@ this skill provides the Device Emulation-specific slot fill.
 | Slot | What the agent asks the user | Device Emulation-specific consideration |
 | --- | --- | --- |
 | 1. Starting sample | Enumerate the installed Device Emulation sample tree and identify a sample for the pinned sub-library. If no matching sample exists, **stop the modify-from-sample workflow**; do not scaffold headers, a build manifest, or source from API prose. Route to a verified installed project/example, the matching packaged SNAP / Virtio-net service when that is the user's intent, or the matching public Device Emulation guide. | Pick only a sample whose sub-library matches the user's pinned sub-library from [`## configure`](#configure) step 1. Cross-sub-library re-use is not a substitute for a missing sample |
-| 2. Backend body | What is the backend actually doing (packet forwarding logic for virtio-net, storage backend for a SNAP-style PCI Generic device, filesystem implementation for virtio-fs)? | The agent's anti-pattern alerts: (a) do NOT invent a backend body in this skill — backend design is a domain question (storage / networking / filesystem), not an API question, route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md); (b) do NOT recommend re-implementing what the packaged DOCA SNAP / Virtio-net services already provide unless the user has confirmed those services do not meet their needs |
+| 2. Backend body | What is the backend actually doing (packet forwarding logic for virtio-net, storage backend for a SNAP-style PCI Generic device, filesystem implementation for virtio-fs)? | The agent's anti-pattern alerts: (a) do NOT invent a backend body in this skill — backend design is a domain question (storage / networking / filesystem), not an API question, route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md); (b) do NOT recommend re-implementing what the packaged DOCA SNAP / Virtio-net services already provide unless the user has confirmed those services do not meet their needs |
 | 3. Device descriptor / identity values | What device identity does the host see (vendor / device IDs for PCI Generic; virtio device class identifiers and feature-bit subset for virtio-net / virtio-fs)? | Per the `INVALID_VALUE` row in [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy), a malformed or non-cap-supported descriptor is the most common first-submit failure. Re-validate against the per-sub-library cap-query from [`## configure`](#configure) step 3 before accepting the modify |
 | 4. Doorbell / DMA wiring | Does the sample's doorbell / DMA wiring still match what the modified backend needs? | A modify that changes the backend without updating the doorbell / DMA wiring is a common way to introduce *"host driver is active but DPU sees nothing"* — surface this explicitly and re-check the wiring against [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes) doorbell / DMA table |
 | 5. Re-validate against per-sub-library capabilities | Re-run the `doca_devemu_<sub>_cap_*` queries from [`## configure`](#configure) step 3 against the modified configuration — descriptor changes, feature-bit changes, or queue-sizing changes can flip a per-sub-library capability boundary | Per the cross-cutting rule in [`doca-version CAPABILITIES.md ## Observability`](../../doca-version/CAPABILITIES.md#observability), the cap query is the runtime authority |
@@ -464,7 +464,7 @@ Device Emulation-specific manifestation at layers 5 (runtime),
   DPU-side privilege, disabled firmware configuration, pending
   activation, wrong device, and unsupported hardware/install.
   Route any configuration write or reset through
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md).
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md).
 - `DOCA_ERROR_IO_FAILED` on host ↔ DPU interaction after
   start (host kernel driver reads / writes / kicks, DMA
   primitives moving payload) points at a host-side driver
@@ -499,9 +499,9 @@ follows so the agent does not invent guidance:
   emulation-type slots, installing host-side kernel drivers
   (or loading kernel modules), choosing matched DOCA
   versions, post-install verification, `pkg-config` wiring —
-  defer to [`doca-setup`](../../doca-setup/SKILL.md) and to
+  defer to [`doca-setup`](../doca-setup/SKILL.md) and to
   the install-tree layout in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA is installed, the firmware-side
   emulation type for the chosen sub-library is enabled, and
   the host kernel ships the matching driver.
@@ -516,14 +516,14 @@ follows so the agent does not invent guidance:
   Service or the DOCA Virtio-net Service as the user's
   *backend* rather than writing one with this library — out
   of scope. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the DOCA SNAP Services guide and the DOCA Virtio-net
   Service Guide; the services are separate artifacts with
   their own service guides.
 - **backend design.** Designing the storage backend, the
   packet-forwarding logic, or the filesystem implementation
   the user runs on the DPU — out of scope. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public DOCA Device Emulation umbrella guide and to
   the user's own domain expertise; this skill prescribes how
   to *expose* an emulated PCIe device, not what the backend
@@ -563,7 +563,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

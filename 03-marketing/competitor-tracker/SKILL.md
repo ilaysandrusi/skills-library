@@ -35,7 +35,7 @@ Compare influencer strategies across [competitor 1], [competitor 2], and [compet
 
 - **Reads**: your brand name, the competitor set, platforms to monitor, time period, focus areas (partnerships/campaigns/content/all). Public creator handles and post data the user supplies or that ~~social platform analytics returns.
 - **Writes**: a competitive intelligence report saved to `memory/influencer/competitor-tracker/YYYY-MM-DD-<topic>.md` (partnership roster, campaign analysis, content-strategy review, performance estimates, side-by-side comparison, opportunity list).
-- **Promotes**: durable facts (named competitors, their primary tiers/platforms, confirmed exclusive partners, recurring campaign windows) to `memory/hot-cache.md`. Competitor-partner and exclusivity flags for creators already on the roster go as one-line updates to `memory/events/creators.ndjson` via an authorized `operation: propose` request to `registry-events.py` for [creator-registry](../../../protocol/creator-registry/SKILL.md) to reconcile.
+- **Promotes**: durable facts (named competitors, their primary tiers/platforms, confirmed exclusive partners, recurring campaign windows) to `memory/hot-cache.md`. Competitor-partner and exclusivity flags for creators already on the roster go as one-line updates to `memory/events/creators.ndjson` via an authorized `operation: propose` request to `registry-events.py` for [creator-registry](../creator-registry/SKILL.md) to reconcile.
 - **Done when**:
   1. Each tracked competitor has a partnership roster and campaign breakdown with sources or stated estimates.
   2. A side-by-side comparison table covers your brand plus every competitor.
@@ -44,7 +44,7 @@ Compare influencer strategies across [competitor 1], [competitor 2], and [compet
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -56,11 +56,11 @@ Where a tool could speed things up, use `~~` connector placeholders:
 - `~~social platform analytics` — estimate reach, engagement rate, and post cadence per creator.
 - `~~CRM` — cross-check whether a former competitor partner has already touched your pipeline.
 
-**Keyless news read on rivals**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/gdelt.py" '"<competitor>"' --days 30` lists a rival's global news coverage with no key — campaign launches, partnership announcements, PR pushes — **Measured** from GDELT's news index (news media only, not social posts; ≥5s between calls). See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Keyless news read on rivals**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/gdelt.py" '"<competitor>"' --days 30` lists a rival's global news coverage with no key — campaign launches, partnership announcements, PR pushes — **Measured** from GDELT's news index (news media only, not social posts; ≥5s between calls). See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 **Rival-partner channel watch (free key / keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/youtube.py" channel <partner-handle>` reads a competitor partner's real subscriber/view counts (free `YOUTUBE_API_KEY`), and every YouTube channel also has a **keyless RSS feed** — `https://www.youtube.com/feeds/videos.xml?channel_id=UC…` piped into `rss_monitor.py` — for tracking partner posting cadence and spotting a burst of sponsored content without any API at all.
 
-Label every estimate as an estimate. See [CONNECTORS.md](../../../CONNECTORS.md) for the keyless/free recipe per category.
+Label every estimate as an estimate. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the keyless/free recipe per category.
 
 ## Instructions
 
@@ -84,16 +84,16 @@ Each step has a fill-in template in [references/templates.md](references/templat
 ## Reference Materials
 
 - [references/templates.md](references/templates.md) — fill-in templates for all 8 steps, invocation patterns, worked example, and tips.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and handoff summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — keyless/free data recipe per `~~` connector category.
-- Sibling Scout skills: [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — find creators competitors aren't using; [fit-scorer](../../scout/fit-scorer/SKILL.md) — score competitor partners for your brand.
-- [trend-spotter](../../scout/trend-spotter/SKILL.md) — spot trends competitors are riding.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and handoff summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — keyless/free data recipe per `~~` connector category.
+- Sibling Scout skills: [influencer-discovery](../influencer-discovery/SKILL.md) — find creators competitors aren't using; [fit-scorer](../fit-scorer/SKILL.md) — score competitor partners for your brand.
+- [trend-spotter](../trend-spotter/SKILL.md) — spot trends competitors are riding.
 
 ## Next Best Skill
 
 - **Primary**: [campaign-planner](../campaign-planner/SKILL.md) — turn competitive gaps into a differentiated campaign.
-- **Alternate (Scout)**: [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — pursue the untapped and former-competitor creators this analysis surfaced.
-- **Alternate (Scout)**: [fit-scorer](../../scout/fit-scorer/SKILL.md) — score a competitor's roster against your brand before you poach.
+- **Alternate (Scout)**: [influencer-discovery](../influencer-discovery/SKILL.md) — pursue the untapped and former-competitor creators this analysis surfaced.
+- **Alternate (Scout)**: [fit-scorer](../fit-scorer/SKILL.md) — score a competitor's roster against your brand before you poach.
 
 Termination note: keep a visited-set of skills invoked this session. If the next skill has already run this session, stop and report the chain complete instead of re-invoking. Max chain depth is 3 hops.

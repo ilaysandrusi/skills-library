@@ -10,7 +10,7 @@ Read this file when the loader sent you here from
 capabilities (install, configure, build, modify, run, test, debug,
 use) see [TASKS.md](TASKS.md). For where the underlying public
 documentation and installed package paths live, defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) — do
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) — do
 not duplicate URLs or install paths in this file.
 
 ## Pattern overview
@@ -148,7 +148,7 @@ recommend it.
 
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-docs
-rule, see [`doca-version`](../../doca-version/SKILL.md). The body
+rule, see [`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The RDMI-specific overlay** is:
@@ -168,7 +168,7 @@ lives there; this skill does not duplicate it.
   [`doca-version CAPABILITIES.md ## Observability`](../../doca-version/CAPABILITIES.md#observability),
   the agent confirms a symbol exists by checking the installed
   header (look up the install-path pattern in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package))
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package))
   before recommending it. A *"function not found"* link error on
   a `doca_rdmi_*` symbol is most commonly a wrong-version
   mismatch — confirm the version per
@@ -193,7 +193,7 @@ lives there; this skill does not duplicate it.
   [DOCA SDK index](https://docs.nvidia.com/doca/sdk/) is the
   authoritative starting point for whether an *RDMI*-specific
   page now exists; route through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for the up-to-date URL pattern rather than quoting a URL
   literal from agent memory.
 
@@ -210,7 +210,7 @@ indicate:
 | --- | --- | --- |
 | `DOCA_ERROR_BAD_STATE` | A configuration call (`_init_receive`, `_dpa_completion_attach`, `_cq_attach`, `_set_input`) ran *after* `doca_ctx_start()`; or a DPA-side call ran on a context that was not set on the DPA datapath via `doca_ctx_set_datapath_on_dpa()` | Walk the lifecycle in [`## Capabilities and modes`](#capabilities-and-modes); confirm every attach/configure call landed before `doca_ctx_start()` and that the datapath was set before start |
 | `DOCA_ERROR_INVALID_VALUE` | An object handle is NULL, a buffer size is zero, or a verbs context / PD argument is mismatched between connection and poster | Re-walk the create/configure step in [`## Capabilities and modes`](#capabilities-and-modes); the verbs PD must be consistent across the connection, poster, and any sibling verbs objects in the same application |
-| `DOCA_ERROR_NOT_SUPPORTED` | The installed DOCA version does not export the requested `doca_rdmi_*` symbol, or the device does not support the DPA datapath this code requires | Confirm the symbol exists in the installed headers per [`## Version compatibility`](#version-compatibility); confirm DPA support on the device via `doca_caps` ([`doca-caps`](../../tools/doca-caps/SKILL.md)) |
+| `DOCA_ERROR_NOT_SUPPORTED` | The installed DOCA version does not export the requested `doca_rdmi_*` symbol, or the device does not support the DPA datapath this code requires | Confirm the symbol exists in the installed headers per [`## Version compatibility`](#version-compatibility); confirm DPA support on the device via `doca_caps` ([`doca-caps`](../doca-caps/SKILL.md)) |
 | `DOCA_ERROR_NO_MEMORY` | The library could not allocate internal bookkeeping (queues, descriptors) — typically a budget exceeded on the verbs surface below RDMI | Inspect verbs-side resource limits; route to the verbs-layer / driver-layer ladder in [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug) |
 | `DOCA_ERROR_DRIVER` | The layer below DOCA (mlx5 driver, firmware, the verbs QP transitions) reported a failure | Stop. This is not an RDMI-spec problem. Capture `dmesg | tail` and `mlxconfig -d <pcie> q`; route to [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug) layer 7 |
 
@@ -264,7 +264,7 @@ var) see
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -310,7 +310,7 @@ For changes that touch hardware state below the RDMI library
 itself — `mlxconfig`-class writes, firmware burns, BlueField BFB
 reflash, host kernel boot parameters that affect the DPA — the
 cross-cutting meta-policy in
-[`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+[`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
 applies without modification. RDMI does not redefine those rules;
 the agent walks the hardware-safety ladder first whenever the
 symptom involves device state, then the RDMI overlay above for
@@ -346,6 +346,6 @@ elsewhere:
   [`doca-programming-guide CAPABILITIES.md ## Error taxonomy`](../../doca-programming-guide/CAPABILITIES.md#error-taxonomy).
   This skill adds the RDMI overlay, not the taxonomy itself.
 - **Cross-library capability-snapshot tooling** — owned by
-  [`doca-caps`](../../tools/doca-caps/SKILL.md). This skill
+  [`doca-caps`](../doca-caps/SKILL.md). This skill
   references the tool; it does not redefine its invocation
   patterns.

@@ -403,20 +403,20 @@ policy` adds the per-artifact preconditions on top of the meta-
 policy here. The canonical in-bundle overlays are:
 
 - Services (kubelet-standalone container deployments that touch
-  device state): [`doca-argus`](../services/doca-argus/SKILL.md),
-  [`doca-dms`](../services/doca-dms/SKILL.md),
-  [`doca-firefly`](../services/doca-firefly/SKILL.md),
-  [`doca-urom-svc`](../services/doca-urom-svc/SKILL.md).
+  device state): [`doca-argus`](../doca-argus/SKILL.md),
+  [`doca-dms`](../doca-dms/SKILL.md),
+  [`doca-firefly`](../doca-firefly/SKILL.md),
+  [`doca-urom-svc`](../doca-urom-svc/SKILL.md).
 - Device-touching libraries:
-  [`doca-flow`](../libs/doca-flow/SKILL.md),
-  [`doca-rdma`](../libs/doca-rdma/SKILL.md),
-  [`doca-eth`](../libs/doca-eth/SKILL.md),
-  [`doca-pcc`](../libs/doca-pcc/SKILL.md),
-  [`doca-rmax`](../libs/doca-rmax/SKILL.md).
+  [`doca-flow`](../doca-flow/SKILL.md),
+  [`doca-rdma`](../doca-rdma/SKILL.md),
+  [`doca-eth`](../doca-eth/SKILL.md),
+  [`doca-pcc`](../doca-pcc/SKILL.md),
+  [`doca-rmax`](../doca-rmax/SKILL.md).
 - Hardware-touching tools:
-  [`doca-spcx-cc`](../tools/doca-spcx-cc/SKILL.md),
-  [`doca-pcc-counters`](../tools/doca-pcc-counters/SKILL.md),
-  [`doca-flow-tune`](../tools/doca-flow-tune/SKILL.md).
+  [`doca-spcx-cc`](../doca-spcx-cc/SKILL.md),
+  [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md),
+  [`doca-flow-tune`](../doca-flow-tune/SKILL.md).
 
 Each of those is an overlay; this skill is the meta-policy they
 share. **Externally-productized analogs** — `doca-virtio-net`,

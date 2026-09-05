@@ -40,7 +40,7 @@ a side-effect-free CLI. Open [`TASKS.md`](TASKS.md) and start at
 smoke-test. Open [`CAPABILITIES.md`](CAPABILITIES.md) when the
 question is *what kinds of capability families `doca_caps` reports*.
 If DOCA is not installed yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first.
+[`doca-setup`](../doca-setup/SKILL.md) first.
 
 ## Example questions this skill answers well
 
@@ -131,9 +131,9 @@ NGC DOCA container). Concretely:
 
 Do **not** load this skill for general DOCA orientation, library API
 work, or installation. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
 the matching `libs/<library>` skill, or
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill provides
 
@@ -187,13 +187,13 @@ requests should not add:
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — routing to the public Capabilities Print Tool guide and the rest
   of the public DOCA documentation set.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation, install
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation, install
   verification (`doca_caps` is the canonical first step there), and
   the *I have no install yet* path with the public NGC DOCA container.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   cross-library programming patterns, including the `## debug`
   procedure where the saved `doca_caps` snapshot is consumed.
 - The matching `libs/<library>` skill — for fine-grained,

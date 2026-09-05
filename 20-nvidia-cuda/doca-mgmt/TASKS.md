@@ -16,7 +16,7 @@ compatibility, error taxonomy, observability surface, and safety
 policy that these workflows assume, see
 [CAPABILITIES.md](CAPABILITIES.md). For where to find docs, the
 installed DOCA layout, or release notes, route through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -30,7 +30,7 @@ Goal: confirm the user's installed DOCA actually ships
 path before any management-plane work begins.
 
 This skill does **not** own DOCA installation; that path lives
-in [`doca-setup`](../../doca-setup/SKILL.md). The
+in [`doca-setup`](../doca-setup/SKILL.md). The
 management-specific preconditions the agent verifies after a
 DOCA install:
 
@@ -40,7 +40,7 @@ DOCA install:
    installed DOCA package set does not include doca-mgmt; the
    user needs to install the matching package (the exact
    package name is platform-specific and looked up via
-   [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)).
+   [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)).
 2. **Supporting `.pc` files are present.** doca-mgmt requires
    `doca-common`. Both `pkg-config --modversion` results must
    agree on the same DOCA semver per the four-way match in
@@ -68,7 +68,7 @@ DOCA install:
    binary before any write is attempted.
 
 If any precondition fails, **stop and route to
-[`doca-setup`](../../doca-setup/SKILL.md)** for the install /
+[`doca-setup`](../doca-setup/SKILL.md)** for the install /
 kernel side or to the operator's privilege-management process
 for the privilege side; a doca-mgmt-layer diagnosis against a
 half-installed system wastes the user's time.
@@ -90,7 +90,7 @@ Steps the agent should walk the user through:
    [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility).
 2. **Open the device.** Use the standard `doca_dev` discovery
    path (looked up via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    when the user is unfamiliar with it) to obtain a
    `doca_dev*` for the target BlueField / ConnectX.
 3. **Create the management device context.** Call
@@ -140,7 +140,7 @@ This skill carries only the mgmt-specific overlay:
 | --- | --- | --- |
 | `pkg-config` module name | `doca-mgmt` | The library's `.pc` file installed by the DOCA host packages |
 | Co-required modules | `doca-common` | doca-mgmt depends on Core / Common |
-| Header check | The public mgmt header set (`doca_mgmt.h` plus the sub-domain headers) resolvable under the installed DOCA infrastructure include tree (path via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)) | If `pkg-config --cflags doca-mgmt` resolves but the headers are missing, the install is partial |
+| Header check | The public mgmt header set (`doca_mgmt.h` plus the sub-domain headers) resolvable under the installed DOCA infrastructure include tree (path via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)) | If `pkg-config --cflags doca-mgmt` resolves but the headers are missing, the install is partial |
 | Minimum required DOCA version | Query with `pkg-config --modversion doca-mgmt`; never hardcode in build files | The EXPERIMENTAL tag means a version pin from agent memory is wrong by construction |
 | Runtime privilege model | The built binary will need root or an equivalent capability set to issue management operations; ensure the deployment plan accounts for this | A binary that compiles but cannot exercise its primary surface in deployment is a productivity sink |
 
@@ -300,7 +300,7 @@ Iteration shape:
    field the upcoming write will touch. The result is the
    rollback baseline.
 4. **Apply the write on a replica.** Per the
-   [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+   [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
    replica-first rule, the test environment is the replica;
    never the production device. Apply the write.
 5. **Post-write re-query.** Run the `_get` / `_query` again
@@ -376,7 +376,7 @@ management-specific manifestation at layers 5 (runtime), 6
   privileges before deeper investigation.
 - Confirm the `fwctl` ioctl path is reachable. The kernel-side
   check for `fwctl` is owned by
-  [`doca-setup`](../../doca-setup/SKILL.md); route there.
+  [`doca-setup`](../doca-setup/SKILL.md); route there.
 
 **Layer 6 (program) — doca-mgmt overlay.**
 
@@ -447,7 +447,7 @@ The integration shape this skill teaches:
    version bump without re-testing.
 5. **Operational handoff.** Production deployment uses the
    bundle's hardware-safety meta-policy
-   ([`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md))
+   ([`doca-hardware-safety`](../doca-hardware-safety/SKILL.md))
    for every write. The fleet tool's *change-control runbook*
    names the maintenance window, the OOB access class, the
    replica-first stage, the rollback path, and the
@@ -468,9 +468,9 @@ so the agent does not invent guidance:
 
 - **install (of DOCA itself).** Installing DOCA, choosing
   packages, post-install verification, `pkg-config` wiring —
-  defer to [`doca-setup`](../../doca-setup/SKILL.md) and to
+  defer to [`doca-setup`](../doca-setup/SKILL.md) and to
   the install-tree layout in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill's `## install` verb assumes DOCA is already
   installed and only checks the mgmt-specific preconditions.
 - **deploy.** Deploying fleet-management agents at scale across
@@ -484,18 +484,18 @@ so the agent does not invent guidance:
   surface for per-device rollback is the same `_set` / `_modify`
   / `raw_cmd` used for the original write, called with the
   pre-state captured per [`## modify`](#modify). The
-  cross-cutting [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+  cross-cutting [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   meta-policy owns the discipline.
 - **mlxconfig direct operation.** Some configuration spaces are
   reachable both via doca-mgmt and via `mlxconfig`; the latter
   is outside this skill's surface and routes through
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   for the change-application discipline.
 - **Firmware burn / BFB reflash.** Out of scope. Route to
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   for the meta-policy and to the public firmware-tooling
   documentation reachable through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Command appendix
 
@@ -526,7 +526,7 @@ manual command in the row.
 | `id -u` and `getcap <binary>` | [`## run`](#run) step 1 | Does the user / binary have the privileges management operations require? | `0` for root invocation, or a capability set that includes the device-administration `cap_*` the operation requires |
 | `ls /dev/fwctl*` | [`## install`](#install) step 4 | Is the host kernel exposing the `fwctl` character device doca-mgmt's raw command path uses? | One or more `/dev/fwctl*` character devices visible to root |
 | `DOCA_LOG_LEVEL=trace ./<binary>` | [`## run`](#run) step 2 | What did the structured DOCA logger emit for the first failing call? | A trace-level line on every lifecycle transition and every management-plane call |
-| `dmesg | tail -n 40` (sudo) | [`## debug`](#debug) layer 7 | What did the kernel / driver / firmware log around the last mgmt call? | Empty or recent benign messages. Repeated firmware / `fwctl` errors → route to [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) for the device-state investigation |
+| `dmesg | tail -n 40` (sudo) | [`## debug`](#debug) layer 7 | What did the kernel / driver / firmware log around the last mgmt call? | Empty or recent benign messages. Repeated firmware / `fwctl` errors → route to [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) for the device-state investigation |
 | `mlxconfig -d <pcie> q | head -n 40` (sudo) | [`## debug`](#debug) layer 7 | What firmware-stored config does the NIC / DPU report? | Stable firmware config. Mismatched values vs the pre-state captured in [`## modify`](#modify) indicate the change had side effects beyond the user's intent — trigger the rollback path |
 
 For commands shared across libraries (`pkg-config --modversion`,

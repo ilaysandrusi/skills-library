@@ -36,17 +36,17 @@ What does it take to rank for [keyword]?
 - **Writes**: a user-facing analysis and reusable summary.
 - **Promotes**: durable keyword priorities, competitor facts, and pending strategy decisions to `memory/hot-cache.md`, `memory/open-loops.md`, and `memory/research/`.
 - **Done when**: the SERP composition and top-result ranking factors are documented from a verified live/provided SERP; dominant intent is named with evidence; and a True Difficulty score (0-100, weighted inputs per the template) plus per-site-stage fit is stated.
-- **Primary next skill**: [content-writer](../../implement/content-writer/SKILL.md) when the user is ready to build against the observed SERP.
+- **Primary next skill**: [content-writer](../content-writer/SKILL.md) when the user is ready to build against the observed SERP.
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
-Optional integrations: ~~SEO tool, ~~search console, ~~AI monitor. Before fetching third-party SERP pages, apply [SECURITY.md §Scraping Boundaries](../../../SECURITY.md). Without tools, ask for target keywords, SERP screenshots or top-10 URLs, and search context. See [CONNECTORS.md](../../../CONNECTORS.md).
+Optional integrations: ~~SEO tool, ~~search console, ~~AI monitor. Before fetching third-party SERP pages, apply [SECURITY.md §Scraping Boundaries](../../references/aaron-marketing/SECURITY.md). Without tools, ask for target keywords, SERP screenshots or top-10 URLs, and search context. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md).
 
-**Zero-dependency live SERP (keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/firecrawl.py" search "<keyword>" --limit 10` pulls a live web SERP — title/URL/description per result; add `--scrape` for each result's full markdown, `--country`/`--tbs` for locale and freshness — through Firecrawl's keyless free tier (~1,000 credits/mo; optional `FIRECRAWL_API_KEY` raises limits). Label these results **Measured** from a live SERP. Caveat: this is the organic result list only — feature composition (ads, AI Overviews, packs, PAA) still needs a hand-checked SERP screenshot, so mark feature claims accordingly. See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Zero-dependency live SERP (keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/firecrawl.py" search "<keyword>" --limit 10` pulls a live web SERP — title/URL/description per result; add `--scrape` for each result's full markdown, `--country`/`--tbs` for locale and freshness — through Firecrawl's keyless free tier (~1,000 credits/mo; optional `FIRECRAWL_API_KEY` raises limits). Label these results **Measured** from a live SERP. Caveat: this is the organic result list only — feature composition (ads, AI Overviews, packs, PAA) still needs a hand-checked SERP screenshot, so mark feature claims accordingly. See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 **Second keyless engine for corroboration**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/tavily.py" search "<keyword>" --limit 10` returns an independently ranked result set with a per-result relevance score, and `--answer` shows what an AI answer engine synthesizes-and-cites for the query (a direct AI-visibility read for step 5). Where Firecrawl and Tavily disagree sharply on the top results, report the SERP as volatile/ambiguous instead of trusting either single engine's view — that disagreement itself feeds the SERP-stability input of True Difficulty.
 
@@ -109,19 +109,19 @@ When the SERP carries a video pack or the query is video-led, profile the videos
 2. **Extract packaging patterns** — read the outlier titles for the format that earned the views (e.g. "X, Clearly Explained", "Stop doing X, do Y instead", number/year-comparison hooks). These are proven title-packaging templates to mirror.
 3. **Treat YouTube as a GEO surface** — YouTube videos and their transcripts/descriptions are an AI-citation source; a strong video can win the answer even when the page does not. Note video opportunities in the SERP Feature Strategy, not only organic pages.
 
-See [references/platforms/youtube.md](../../../references/platforms/youtube.md) for YouTube-as-citation detail.
+See [references/platforms/youtube.md](../../references/aaron-marketing/platforms/youtube.md) for YouTube-as-citation detail.
 
 ## Save Results
 
-Write path: `memory/research/serp-analysis/YYYY-MM-DD-<topic>.md`; promote durable difficulty/intent verdicts to `memory/hot-cache.md`. See [Skill Contract](../../../references/skill-contract.md) §Save Results Template.
+Write path: `memory/research/serp-analysis/YYYY-MM-DD-<topic>.md`; promote durable difficulty/intent verdicts to `memory/hot-cache.md`. See [Skill Contract](../../references/aaron-marketing/skill-contract.md) §Save Results Template.
 
 ## Reference Materials
 
 - [Analysis Templates](references/analysis-templates.md) — Step-by-step analysis templates
 - [SERP Feature Taxonomy](references/serp-feature-taxonomy.md) — Feature taxonomy and intent signals
 - [Example Report](references/example-report.md) — Worked sample
-- [YouTube as citation surface](../../../references/platforms/youtube.md) — Video SERP / outlier packaging and GEO/AI-citation notes
+- [YouTube as citation surface](../../references/aaron-marketing/platforms/youtube.md) — Video SERP / outlier packaging and GEO/AI-citation notes
 
 ## Next Best Skill
 
-Primary: [content-writer](../../implement/content-writer/SKILL.md).
+Primary: [content-writer](../content-writer/SKILL.md).

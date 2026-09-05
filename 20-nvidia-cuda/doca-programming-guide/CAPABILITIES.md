@@ -29,7 +29,7 @@ Two principles cut across all five:
 
 - **Library-agnostic shape, library-specific overlay.** This skill
   prescribes the shape; the matching library skill (e.g.
-  [`doca-flow`](../libs/doca-flow/SKILL.md)) overlays the
+  [`doca-flow`](../doca-flow/SKILL.md)) overlays the
   library-specific specifics (Flow pipe topology, RDMA QP semantics,
   …). Both must be loaded for a complete answer.
 - **Programs run *with* DOCA, not *of* DOCA.** Everything below

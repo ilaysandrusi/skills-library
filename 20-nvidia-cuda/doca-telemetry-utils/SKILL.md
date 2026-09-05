@@ -42,7 +42,7 @@ three documented invocation classes
 [`CAPABILITIES.md`](CAPABILITIES.md) when the question is
 *what does this tool actually discover about the telemetry
 schema*, *how does it pair with the developer-side
-[`doca-telemetry`](../../libs/doca-telemetry/SKILL.md) and
+[`doca-telemetry`](../doca-telemetry/SKILL.md) and
 exporter libraries*, *how do I confirm a device supports a
 counter before committing an exporter config to it*, or
 *why does my exporter pipeline silently drop a metric*.
@@ -50,13 +50,13 @@ counter before committing an exporter config to it*, or
 This skill is the **operator-side support tool** for a
 DOCA Telemetry deployment. It is NOT the developer-side
 collector library (that is
-[`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)),
+[`doca-telemetry`](../doca-telemetry/SKILL.md)),
 NOT the developer-side publisher library (that is
 `doca-telemetry-exporter` — see
-[`doca-telemetry ## Related skills`](../../libs/doca-telemetry/SKILL.md#related-skills)),
+[`doca-telemetry ## Related skills`](../doca-telemetry/SKILL.md#related-skills)),
 and NOT a DOCA Telemetry Service (DTS) deployment guide
 (route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 Three separate surfaces; conflating them is the most
 common telemetry first-touch error.
 
@@ -126,7 +126,7 @@ instance.
   version?"*. Answered by the version-overlay in
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility),
   which redirects to the canonical
-  [`doca-version`](../../doca-version/SKILL.md) chain
+  [`doca-version`](../doca-version/SKILL.md) chain
   and adds the *tool ↔ `doca-telemetry` library
   schema-version* match rule.
 
@@ -145,7 +145,7 @@ Concretely:
   which counters the target devices actually expose
   before committing the exporter config.
 - A developer of a downstream consumer (a collector
-  app linking [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md),
+  app linking [`doca-telemetry`](../doca-telemetry/SKILL.md),
   or a third-party aggregator consuming via DTS) who
   has a captured Data ID stream and needs to translate
   IDs back to counter names + properties.
@@ -167,9 +167,9 @@ binary itself, **not** a substitute for the live public
 DOCA Telemetry guides, and **not** the right place for
 learning how to *write* an exporter application (that
 audience belongs in
-[`doca-telemetry-exporter` skill](../../libs/doca-telemetry-exporter/SKILL.md)
+[`doca-telemetry-exporter` skill](../doca-telemetry-exporter/SKILL.md)
 when present, or via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 
 The tool is shipped as a **CLI binary** under
 `/opt/mellanox/doca/tools/`, not a library you link
@@ -220,9 +220,9 @@ Concretely:
 Do **not** load this skill for general DOCA orientation,
 collector / exporter library programming, DTS
 deployment, or DOCA install. For those, route to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-telemetry`](../../libs/doca-telemetry/SKILL.md),
-or [`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-telemetry`](../doca-telemetry/SKILL.md),
+or [`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill provides
 
@@ -272,7 +272,7 @@ the operator is targeting is visible to DOCA, and the
 exporter / collector pipeline that consumes the
 resolved Data IDs is either being authored or has
 already been authored against the matching
-[`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+[`doca-telemetry`](../doca-telemetry/SKILL.md)
 library version.
 
 ## What this skill deliberately does not ship
@@ -294,7 +294,7 @@ should not add:
   operators on a different setup.
 - **A DTS deployment recipe.** DTS is a separate DOCA
   service with its own public guide; route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
   This skill *resolves the counter names + IDs* a
   DTS pipeline consumes; it does not configure DTS.
 - **Wrappers, parsers, or scripts** in any language
@@ -305,7 +305,7 @@ should not add:
 - **A `samples/` or `reference/` subtree.** This is
   a thin loader for a shipped CLI; substantive
   material lives on the public page, in `--help`,
-  and in [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md).
+  and in [`doca-telemetry`](../doca-telemetry/SKILL.md).
 
 ## Loading order
 
@@ -326,7 +326,7 @@ should not add:
 
 ## Related skills
 
-- [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)
+- [`doca-telemetry`](../doca-telemetry/SKILL.md)
   — the developer-side collector library whose
   schema this tool helps the operator discover. Pair
   them in every exporter-pipeline triage session.
@@ -338,38 +338,38 @@ should not add:
   inspectable from the operator side. Conflating
   the library and the tool is the most common
   telemetry first-touch error.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — routing to the public DOCA Telemetry guide and
   the DOCA Telemetry Service (DTS) page on
   `docs.nvidia.com`, plus the on-disk install
   layout for the tool.
-- [`doca-version`](../../doca-version/SKILL.md) —
+- [`doca-version`](../doca-version/SKILL.md) —
   canonical DOCA version-handling rules. The
   `## Version compatibility` section in
   [`CAPABILITIES.md`](CAPABILITIES.md) is a concise
   overlay that redirects here for the body and
   adds the *tool ↔ `doca-telemetry` library
   schema-version pairing* rule.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env
+- [`doca-setup`](../doca-setup/SKILL.md) — env
   preparation, install verification, and the *I
   have no install yet* path with the public NGC
   DOCA container. This skill assumes its
   preconditions are satisfied (DOCA installed
   with the telemetry component, BlueField visible
   to DOCA).
-- [`doca-debug`](../../doca-debug/SKILL.md) — the
+- [`doca-debug`](../doca-debug/SKILL.md) — the
   cross-cutting debug ladder. Telemetry-utils
   feeds the cross-cutting ladder by surfacing the
   counter schema + per-device support truth at the
   runtime layer; exporter-pipeline regressions
   often resolve at the schema layer before
   touching the collector / network path.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
   — the bundle's detect → prefer → fall back →
   report contract for structured helper tools. The
   command appendix in [`TASKS.md`](TASKS.md)
   honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md)
   — general DOCA programming patterns shared by
   every library / tool surface, including the
   cross-library `DOCA_ERROR_*` taxonomy this

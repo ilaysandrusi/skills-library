@@ -54,15 +54,15 @@ Use `deliverability-qa` to repair authentication, `consent-registry` for lawful-
 
 ### Runtime Reads
 
-- `../../../references/auditor-runbook.md`
-- `../../../references/scoring-semantics.md`
-- `../../../references/send-benchmark.md`
-- `../../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/auditor-runbook.md`
+- `../../references/aaron-marketing/scoring-semantics.md`
+- `../../references/aaron-marketing/send-benchmark.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 - `references/auditor-runtime.md`
 
 ### Runtime and Setup
 
-Read `../../../references/auditor-runbook.md`, `scoring-semantics.md`, `send-benchmark.md`, and the SEND catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
+Read `../../references/aaron-marketing/auditor-runbook.md`, `scoring-semantics.md`, `send-benchmark.md`, and the SEND catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
 
 Declare profile (`promotional|retention|cold-outbound|newsletter`), target/program, provider, market, normalized window, list age, MPP share, and observation date.
 
@@ -119,14 +119,14 @@ Persist only after explicit authorization to `memory/audits/email/YYYY-MM-DD-<to
 
 ## Reference Materials
 
-- [SEND benchmark](../../../references/send-benchmark.md)
-- [Measurement protocol](../../../references/measurement-protocol.md)
-- [Auditor runbook](../../../references/auditor-runbook.md)
-- [Scoring semantics](../../../references/scoring-semantics.md)
+- [SEND benchmark](../../references/aaron-marketing/send-benchmark.md)
+- [Measurement protocol](../../references/aaron-marketing/measurement-protocol.md)
+- [Auditor runbook](../../references/aaron-marketing/auditor-runbook.md)
+- [Scoring semantics](../../references/aaron-marketing/scoring-semantics.md)
 
 ## Next Best Skill
 
-- **Authentication/placement:** [deliverability-qa](../../setup/deliverability-qa/SKILL.md)
-- **Consent/suppression:** [consent-registry](../../../protocol/consent-registry/SKILL.md)
-- **Lifecycle:** [email-sequence-designer](../../nurture/email-sequence-designer/SKILL.md)
+- **Authentication/placement:** [deliverability-qa](../deliverability-qa/SKILL.md)
+- **Consent/suppression:** [consent-registry](../consent-registry/SKILL.md)
+- **Lifecycle:** [email-sequence-designer](../email-sequence-designer/SKILL.md)
 - **Experiment:** [send-experiment-designer](../send-experiment-designer/SKILL.md)

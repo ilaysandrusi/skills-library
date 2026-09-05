@@ -140,10 +140,10 @@ BlueField:
 
 | Service | Service-specific overlay (lives in the per-service skill) |
 | --- | --- |
-| [`doca-argus`](../services/doca-argus/SKILL.md) | Runtime-security / monitoring policy config; event-stream output as the "healthy" signal |
-| [`doca-dms`](../services/doca-dms/SKILL.md) | gNMI / gNOI endpoint config; gNMI session up + per-RPC counter as the "healthy" signal; host-side gNMI client as the paired-workload contract |
-| [`doca-firefly`](../services/doca-firefly/SKILL.md) | Four-axis PTP config (role / profile / domain / interface); PHC offset + ports state as the "healthy" signal; host-side time follower as a paired requirement |
-| [`doca-urom-svc`](../services/doca-urom-svc/SKILL.md) | UROM operations endpoint; per-operation counter as the "healthy" signal; paired host↔DPU workload contract |
+| [`doca-argus`](../doca-argus/SKILL.md) | Runtime-security / monitoring policy config; event-stream output as the "healthy" signal |
+| [`doca-dms`](../doca-dms/SKILL.md) | gNMI / gNOI endpoint config; gNMI session up + per-RPC counter as the "healthy" signal; host-side gNMI client as the paired-workload contract |
+| [`doca-firefly`](../doca-firefly/SKILL.md) | Four-axis PTP config (role / profile / domain / interface); PHC offset + ports state as the "healthy" signal; host-side time follower as a paired requirement |
+| [`doca-urom-svc`](../doca-urom-svc/SKILL.md) | UROM operations endpoint; per-operation counter as the "healthy" signal; paired host↔DPU workload contract |
 
 The agent's rule: walk the shared runtime here, then route to the
 matching per-service skill for the per-service overlay. Re-stating

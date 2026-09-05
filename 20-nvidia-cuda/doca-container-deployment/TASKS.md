@@ -55,10 +55,10 @@ every later verb assumes the operator has read it here.
    per-service overlay (config schema, paired workload, "healthy"
    definition) lives in the matching per-service skill. Load both
    skills together:
-    - Argus → [`doca-argus`](../services/doca-argus/SKILL.md)
-    - DMS → [`doca-dms`](../services/doca-dms/SKILL.md)
-    - Firefly → [`doca-firefly`](../services/doca-firefly/SKILL.md)
-    - UROM service → [`doca-urom-svc`](../services/doca-urom-svc/SKILL.md)
+    - Argus → [`doca-argus`](../doca-argus/SKILL.md)
+    - DMS → [`doca-dms`](../doca-dms/SKILL.md)
+    - Firefly → [`doca-firefly`](../doca-firefly/SKILL.md)
+    - UROM service → [`doca-urom-svc`](../doca-urom-svc/SKILL.md)
 
    Quote the per-service config schema and "healthy" signal from
    the per-service skill; quote the runtime contract (kubelet
@@ -609,9 +609,9 @@ Three cross-cutting rules for this appendix:
   workload behind UROM service) — not a container-deployment
   question. Route to the matching per-service skill's
   deferred-verbs block, which itself routes to the per-library
-  skill ([`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md),
-  [`doca-flow`](../libs/doca-flow/SKILL.md),
-  [`doca-rmax`](../libs/doca-rmax/SKILL.md), …) when the paired
+  skill ([`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md),
+  [`doca-flow`](../doca-flow/SKILL.md),
+  [`doca-rmax`](../doca-rmax/SKILL.md), …) when the paired
   workload is a DOCA-using application.
 - **Operating a full Kubernetes cluster** (cluster API,
   `kubectl`, `Deployment` / `Service` / `Ingress` objects,

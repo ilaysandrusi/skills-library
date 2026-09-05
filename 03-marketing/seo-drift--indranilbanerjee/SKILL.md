@@ -1,6 +1,6 @@
 ---
 name: seo-drift
-description: "Compare two SEO snapshots from the same source — GSC, the GSC AI Performance report, a rank-tracker export, or aeo-audit probes — into a drift report: top gainers and losers per metric, growth/decline/reshuffle/stable/new/lost classification, and a four-gate quality scorecard. Triggers on \"/digital-marketing-pro:seo-drift\", \"compare this month's GSC export to last month's\", \"what moved after the core update\", \"did the content refresh work\", \"which queries lost AI Mode impressions\". Runs scripts/seo_drift.py on two CSVs, reads the brand profile for noise thresholds, and branches findings to /digital-marketing-pro:seo-audit, /digital-marketing-pro:aeo-geo, or /digital-marketing-pro:content-engine."
+description: "Compare two SEO snapshots from the same source — GSC, the GSC AI Performance report, a rank-tracker export, or aeo-audit probes — into a drift report: top gainers and losers per metric, growth/decline/reshuffle/stable/new/lost classification, and a four-gate quality scorecard. Triggers on \"/digital-marketing-pro:seo-drift\", \"compare this month's GSC export to last month's\", \"what moved after the core update\", \"did the content refresh work\", \"which queries lost AI Mode impressions\". Runs ../../scripts/digital-marketing-pro/seo_drift.py on two CSVs, reads the brand profile for noise thresholds, and branches findings to /digital-marketing-pro:seo-audit, /digital-marketing-pro:aeo-geo, or /digital-marketing-pro:content-engine."
 argument-hint: "[brand-name]"
 user-invocable: true
 ---
@@ -149,4 +149,4 @@ This skill is typically a consumer + diagnostician:
 - `/digital-marketing-pro:aeo-audit` — diagnose AI Mode citation loss
 - `/digital-marketing-pro:content-decay-scan` — for content-side decline triage
 - `/digital-marketing-pro:content-engine` — for amplifying gainers
-- `scripts/seo_drift.py` — the underlying drift engine
+- `../../scripts/digital-marketing-pro/seo_drift.py` — the underlying drift engine

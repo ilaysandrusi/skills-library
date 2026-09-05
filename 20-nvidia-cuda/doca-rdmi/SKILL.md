@@ -49,7 +49,7 @@ which carries the self-contained install-check → device/cap
 discovery → sample → `pkg-config` build → run → debug walkthrough
 with the exact commands. You do **not** need to open `doca-setup` or
 `doca-programming-guide` to answer an RDMI build/run/debug question.
-Route to [`doca-setup`](../../doca-setup/SKILL.md) when the required
+Route to [`doca-setup`](../doca-setup/SKILL.md) when the required
 DOCA prerequisites are absent, partial, or version-mismatched.
 
 ## Example questions this skill answers well
@@ -104,7 +104,7 @@ load-bearing piece — the worked example is a single instance.
   RDMI overlay on the cross-library taxonomy in
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in [`TASKS.md ## debug`](TASKS.md#debug)
-  that escalates to [`doca-debug`](../../doca-debug/SKILL.md).
+  that escalates to [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -167,8 +167,8 @@ on a host or BlueField with DOCA installed. Concretely:
 
 Do **not** load this skill for general DOCA orientation, install of
 DOCA itself, or two-sided host-CPU RDMA questions. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-setup`](../../doca-setup/SKILL.md), and
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-setup`](../doca-setup/SKILL.md), and
 [`doca-rdma`](../doca-rdma/SKILL.md) respectively.
 
 ## What this skill provides
@@ -199,7 +199,7 @@ The skill assumes a host or BlueField where DOCA is already
 installed at the standard location and the user has the privileges
 their public install profile expects. It does not cover installing
 DOCA itself — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -212,7 +212,7 @@ contain — and pull requests should not add:
   reference code on the user's installed DOCA and to prescribe a
   minimum-diff modification via the universal modify-a-sample
   workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the RDMI-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify). Because every RDMI
   symbol is EXPERIMENTAL at the time of writing, the skill
@@ -245,7 +245,7 @@ contain — and pull requests should not add:
    modify, run, test, debug, use — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other and to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or the
 installed package layout" rather than "RDMI-specific guidance".
 
@@ -270,29 +270,29 @@ installed package layout" rather than "RDMI-specific guidance".
   layer on the same DOCA RDMA / verbs substrate; either may
   apply depending on whether the initiator is on the DPA or on
   the GPU.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) — the
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) — the
   routing table for every public DOCA documentation source and
   the on-disk layout of an installed DOCA package.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, and the *I have no install yet* path with
   the public NGC DOCA container.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library: the
   canonical `pkg-config` + meson build pattern, the universal
   modify-a-shipped-sample first-app workflow, the universal
   Core-context lifecycle, the cross-library `DOCA_ERROR_*`
   taxonomy. This skill layers RDMI specifics on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). RDMI-specific debug overlays on top of it.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the bundle-wide hardware-safety meta-policy. The `## Safety
   policy` overlay in `CAPABILITIES.md` cross-links it.
-- [`doca-version`](../../doca-version/SKILL.md) — the version
+- [`doca-version`](../doca-version/SKILL.md) — the version
   detection / four-way match rule every per-artifact `##
   Version compatibility` anchor builds on. This skill quotes
   the RDMI-specific overlay only.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the JSON-schema contracts for the agent-preferred structured
   helpers (env probe, capability snapshot, version-matrix
   lookup); the `## Command appendix` in `TASKS.md` defers to

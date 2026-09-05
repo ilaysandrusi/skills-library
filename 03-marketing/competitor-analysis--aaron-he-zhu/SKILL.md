@@ -39,13 +39,13 @@ Compare my site [URL] against [competitor 1], [competitor 2], [competitor 3]
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
-Optional integrations: ~~SEO tool, ~~analytics, ~~AI monitor. Without tools, ask for competitor URLs, your site metrics, and industry context. See [CONNECTORS.md](../../../CONNECTORS.md).
+Optional integrations: ~~SEO tool, ~~analytics, ~~AI monitor. Without tools, ask for competitor URLs, your site metrics, and industry context. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md).
 
-**Zero-dependency competitor fetch (keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/firecrawl.py" scrape <competitor-url>` returns the rendered page as LLM-ready markdown (JavaScript-heavy pages included), `firecrawl.py map <competitor-domain> --limit 500` inventories their URL surface fast, and `firecrawl.py search "<brand or topic>" --tbs qdr:m` finds their fresh coverage — all on Firecrawl's keyless free tier (~1,000 credits/mo). The connector pre-flights the target's robots.txt locally and refuses on a Disallow per [SECURITY.md §Scraping Boundaries](../../../SECURITY.md). See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Zero-dependency competitor fetch (keyless)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/firecrawl.py" scrape <competitor-url>` returns the rendered page as LLM-ready markdown (JavaScript-heavy pages included), `firecrawl.py map <competitor-domain> --limit 500` inventories their URL surface fast, and `firecrawl.py search "<brand or topic>" --tbs qdr:m` finds their fresh coverage — all on Firecrawl's keyless free tier (~1,000 credits/mo). The connector pre-flights the target's robots.txt locally and refuses on a Disallow per [SECURITY.md §Scraping Boundaries](../../references/aaron-marketing/SECURITY.md). See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 ## Decision Gates
 
@@ -86,7 +86,7 @@ For a pairwise topic-coverage gap map ("content [competitor] has that I don't, s
 
 ### Video Benchmarking
 
-When a competitor invests in video, benchmark their YouTube outliers (views >=2x their channel average) and the title/thumbnail packaging that drives those wins — those patterns show what topics and framing earn reach. See [platforms/youtube.md](../../../references/platforms/youtube.md).
+When a competitor invests in video, benchmark their YouTube outliers (views >=2x their channel average) and the title/thumbnail packaging that drives those wins — those patterns show what topics and framing earn reach. See [platforms/youtube.md](../../references/aaron-marketing/platforms/youtube.md).
 
 ### Link Intersection
 
@@ -108,7 +108,7 @@ How has [competitor]'s SEO strategy evolved over the past year?
 
 ## Save Results
 
-Write path: `memory/research/competitor-analysis/YYYY-MM-DD-<topic>.md`; promote durable competitor facts and entity candidates to `memory/hot-cache.md`. See [Skill Contract](../../../references/skill-contract.md) §Save Results Template.
+Write path: `memory/research/competitor-analysis/YYYY-MM-DD-<topic>.md`; promote durable competitor facts and entity candidates to `memory/hot-cache.md`. See [Skill Contract](../../references/aaron-marketing/skill-contract.md) §Save Results Template.
 
 ## Reference Materials
 
@@ -116,8 +116,8 @@ Write path: `memory/research/competitor-analysis/YYYY-MM-DD-<topic>.md`; promote
 - [Battlecard Template](references/battlecard-template.md) — Quick-reference battlecard format
 - [Positioning Frameworks](references/positioning-frameworks.md) — Positioning and differentiation frameworks
 - [Example Report](references/example-report.md) — Worked sample
-- [platforms/youtube.md](../../../references/platforms/youtube.md) — YouTube outlier and title-packaging benchmarks for video-heavy competitors
+- [platforms/youtube.md](../../references/aaron-marketing/platforms/youtube.md) — YouTube outlier and title-packaging benchmarks for video-heavy competitors
 
 ## Next Best Skill
 
-Primary: [content-gap-analysis](../content-gap-analysis/SKILL.md). Also: [serp-analysis](../serp-analysis/SKILL.md) and [offsite-signal-analyzer](../../evaluate/offsite-signal-analyzer/SKILL.md). If the goal is a head-to-head "us vs them" page, hand the vetted competitor set to [page-play-builder](../../implement/page-play-builder/SKILL.md).
+Primary: [content-gap-analysis](../content-gap-analysis/SKILL.md). Also: [serp-analysis](../serp-analysis/SKILL.md) and [offsite-signal-analyzer](../offsite-signal-analyzer/SKILL.md). If the goal is a head-to-head "us vs them" page, hand the vetted competitor set to [page-play-builder](../page-play-builder/SKILL.md).

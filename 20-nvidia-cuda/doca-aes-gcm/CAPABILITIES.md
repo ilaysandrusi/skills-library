@@ -10,7 +10,7 @@ Read this file when the loader sent you here from
 verbs `configure / build / modify / run / test / debug`), jump to
 [TASKS.md](TASKS.md). For the canonical DOCA version-handling rules
 that this skill layers an AES-GCM overlay on top of, see
-[`doca-version`](../../doca-version/SKILL.md).
+[`doca-version`](../doca-version/SKILL.md).
 
 ## Pattern overview
 
@@ -150,7 +150,7 @@ own program needs them.
 
 For the canonical DOCA version-detection chain, the four-way match
 rule, NGC container semantics, and the headers-win-over-docs rule,
-see [`doca-version`](../../doca-version/SKILL.md). The body lives
+see [`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The AES-GCM-specific overlay** is:
@@ -259,7 +259,7 @@ For cross-cutting observability primitives (`--sdk-log-level`, the
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package layout)
 defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -373,7 +373,7 @@ topics the agent will get asked but should route elsewhere:
   is the operational key-handling discipline in
   [`## Safety policy`](#safety-policy).
 - **DOCA Core context and progress engine internals** — owned by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   This skill *uses* the Core context lifecycle; it does not
   redefine it.
 - **Cross-cutting `DOCA_ERROR_*` taxonomy** — owned by

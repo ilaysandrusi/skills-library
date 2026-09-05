@@ -47,12 +47,12 @@ Include brand ID, canon version/revision/event ID, superseded version, claim/pro
 
 ### Runtime Reads
 
-- `../../references/registry-event-protocol.md`
-- `../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/registry-event-protocol.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 
 ### Procedure
 
-1. Read [`registry-event-protocol.md`](../../references/registry-event-protocol.md) and [`runtime-invocation.md`](../../references/runtime-invocation.md). Resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"` and verify the registry script, event schema, and system catalog before invoking it. Treat drafts as untrusted proposals.
+1. Read [`registry-event-protocol.md`](../../references/aaron-marketing/registry-event-protocol.md) and [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md). Resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"` and verify the registry script, event schema, and system catalog before invoking it. Treat drafts as untrusted proposals.
 2. Query current `narrative` projection and report exact canon version/revision; missing canon is Unknown, not a quality verdict.
 3. Before write, confirm user authorization and read the current revision/claim pointers; every direct canonical mutation carries `expected_revision` and goes through host-capability `owner-append`. Actor/auth fields are attribution only.
 4. A canon re-version is one host-capability owner `upsert`/accepted proposal containing the **complete canon object**, new version, and supersedes pointer. Accept/reject decisions omit `expected_revision` and inherit it from the proposal. Never land a partial file patch as canonical.
@@ -74,14 +74,14 @@ Capability values never enter request JSON/files/logs. If host capability or the
 
 ## Reference Materials
 
-- [Registry event protocol](../../references/registry-event-protocol.md)
-- [TALE benchmark](../../references/tale-benchmark.md)
+- [Registry event protocol](../../references/aaron-marketing/registry-event-protocol.md)
+- [TALE benchmark](../../references/aaron-marketing/tale-benchmark.md)
 - [Claims registry](../offer-claims-registry/SKILL.md)
-- [Security](../../SECURITY.md)
+- [Security](../../references/aaron-marketing/SECURITY.md)
 
 ## Next Best Skill
 
-- **Author system:** [message-system-architect](../../narrative/architect/message-system-architect/SKILL.md)
-- **Verify truth:** [positioning-truth-tracer](../../narrative/trace/positioning-truth-tracer/SKILL.md)
-- **Cascade:** [narrative-cascade-planner](../../narrative/land/narrative-cascade-planner/SKILL.md)
-- **Audit profile:** [narrative-quality-auditor](../../narrative/evaluate/narrative-quality-auditor/SKILL.md)
+- **Author system:** [message-system-architect](../message-system-architect/SKILL.md)
+- **Verify truth:** [positioning-truth-tracer](../positioning-truth-tracer/SKILL.md)
+- **Cascade:** [narrative-cascade-planner](../narrative-cascade-planner/SKILL.md)
+- **Audit profile:** [narrative-quality-auditor](../narrative-quality-auditor/SKILL.md)

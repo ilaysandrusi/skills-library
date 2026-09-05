@@ -330,7 +330,7 @@ Three cross-cutting rules for this appendix:
   only `POLL` / `Aggregation` are Unimplemented); for a productized
   telemetry-aggregation surface, route to the DOCA Telemetry Service
   (DTS), discoverable through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - **Library-internal API questions** (Flow pipe construction, RDMA
   queue setup, …) — outside DMS. Route to the matching
   `libs/<library>` skill.
@@ -347,4 +347,4 @@ Three cross-cutting rules for this appendix:
 - All operational guidance must preserve the documented two-process
   separation (`dmsd` low-priv frontend, `dmspe` privileged backend).
 - For URL routing to the DMS guide and other public DOCA documentation,
-  see [doca-public-knowledge-map ## DOCA services](../../doca-public-knowledge-map/SKILL.md#doca-services).
+  see [doca-public-knowledge-map ## DOCA services](../doca-public-knowledge-map/SKILL.md#doca-services).

@@ -8,7 +8,7 @@ first, then drill into the H2 that owns the substance. For the
 *how* of executing each pattern, jump to [TASKS.md](TASKS.md).
 For the `doca-flow` API surface that created the pipeline this
 tool tunes, see
-[`doca-flow CAPABILITIES.md`](../../libs/doca-flow/CAPABILITIES.md).
+[`doca-flow CAPABILITIES.md`](../doca-flow/CAPABILITIES.md).
 
 This file is loaded by [`SKILL.md`](SKILL.md). It documents *what
 `doca_flow_tune` is*, *what it observes and what it recommends on*,
@@ -26,7 +26,7 @@ to, not one specific pipeline.
 
 | `doca_flow_tune` pattern | Class shape | Where the substance lives |
 | --- | --- | --- |
-| 1. Decide tune vs perf vs other | flow-tune *optimizes*; [`doca-flow-perf`](../doca-flow-perf/SKILL.md) *measures*; the program-side debug surface lives in [`doca-flow`](../../libs/doca-flow/SKILL.md). Picking the wrong tool produces an answer to a different question. | [`## Capabilities and modes`](#capabilities-and-modes) tune-vs-perf bullet + [TASKS.md ## configure](TASKS.md#configure) |
+| 1. Decide tune vs perf vs other | flow-tune *optimizes*; [`doca-flow-perf`](../doca-flow-perf/SKILL.md) *measures*; the program-side debug surface lives in [`doca-flow`](../doca-flow/SKILL.md). Picking the wrong tool produces an answer to a different question. | [`## Capabilities and modes`](#capabilities-and-modes) tune-vs-perf bullet + [TASKS.md ## configure](TASKS.md#configure) |
 | 2. Decide the role inside the artifact | `doca_flow_tune` is one binary with two internal roles: a server role that snapshots and exposes live pipe state via a local IPC channel, and a client / consumer role that analyzes / visualizes / recommends on top of either the live snapshot or a captured config. Pick which role the session uses *before* invocation. | [`## Capabilities and modes`](#capabilities-and-modes) one-binary-two-roles + [TASKS.md ## configure](TASKS.md#configure) |
 | 3. Pick the tuning axis | rule placement vs resource hints / table sizing vs hardware-offload mode. Picking one is mandatory; mixing axes per session hides which axis moved the measurement. | [`## Capabilities and modes`](#capabilities-and-modes) three-axis table + [TASKS.md ## configure](TASKS.md#configure) |
 | 4. Pick the measurement axis | rule-install rate vs lookup latency vs hardware-counter delta. The chosen measurement must match the tuning axis; a latency answer to a rule-install-rate question is the canonical apples-to-oranges failure. | [`## Capabilities and modes`](#capabilities-and-modes) measurement table + [TASKS.md ## configure](TASKS.md#configure) |
@@ -140,7 +140,7 @@ pin them — see
 
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-docs
-rule, see [`doca-version`](../../doca-version/SKILL.md). The body
+rule, see [`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The `doca_flow_tune`-specific overlay** is:
@@ -269,7 +269,7 @@ escalating order:
    with `mlx5_core` reload, recommendations that do not move
    the metric even after a clean before / after pair).
    Routing: hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug);
    the tune surface has reached its limit.
 
@@ -328,7 +328,7 @@ For the program-side observability surface (`DOCA_LOG_LEVEL`,
 [`doca-programming-guide CAPABILITIES.md ## Observability`](../../doca-programming-guide/CAPABILITIES.md#observability).
 For the Flow library's own programmatic counter / inspector
 surface see
-[`doca-flow CAPABILITIES.md ## Observability`](../../libs/doca-flow/CAPABILITIES.md#observability).
+[`doca-flow CAPABILITIES.md ## Observability`](../doca-flow/CAPABILITIES.md#observability).
 
 ## Safety policy
 
@@ -397,7 +397,7 @@ user's installed binary and the shipped `flow_tune_cfg*.json`
 templates, since granular-build support means the *available*
 surface is install-specific within the *documented* surface. For
 the `doca-flow` API behind the pipeline being tuned, the source
-of truth is [`doca-flow`](../../libs/doca-flow/SKILL.md) plus the
+of truth is [`doca-flow`](../doca-flow/SKILL.md) plus the
 public DOCA Flow guide reached the same way. For the matching
 measurement tools, see
 [`doca-flow-perf`](../doca-flow-perf/SKILL.md) and

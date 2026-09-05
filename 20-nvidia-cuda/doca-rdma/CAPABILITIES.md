@@ -10,7 +10,7 @@ Read this file when the loader sent you here from
 capabilities (configure, build, modify, run, test, debug) see
 [TASKS.md](TASKS.md). For where the underlying public documentation
 and installed package paths live, defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) — do
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) — do
 not duplicate URLs or install paths in this file.
 
 ## Pattern overview
@@ -88,7 +88,7 @@ On the host any `doca_dev` works; on the BlueField platform,
 applications must provide the library with **SFs as a `doca_dev`**
 (see the public *OpenvSwitch Acceleration — OVS in DOCA* and
 *BlueField DPU Scalable Function* guides, both reachable through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 The exception is RDMA on the DPA datapath, which currently only
 supports PFs.
 
@@ -138,7 +138,7 @@ from the library; query the active value with
 
 ## Version compatibility
 
-For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
+For the canonical DOCA version-detection chain, the four-way match rule, NGC container semantics, and the headers-win-over-docs rule, see [`doca-version`](../doca-version/SKILL.md). The body lives there; this skill does not duplicate it.
 
 **The RDMA-specific overlay** is:
 
@@ -201,7 +201,7 @@ For cross-cutting observability primitives (`--sdk-log-level`, the
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package layout)
 defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -254,7 +254,7 @@ the agent will get asked but should route elsewhere:
   the abstractions and is asking *how to express them through the
   DOCA RDMA API*.
 - **DOCA Core context and progress engine internals** — owned by
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   This skill *uses* the Core context lifecycle; it does not
   redefine it.
 - **Cross-cutting `DOCA_ERROR_*` taxonomy** — owned by
@@ -266,7 +266,7 @@ the agent will get asked but should route elsewhere:
   skill's `## debug` redirects there for layer 1-4 and layer 7;
   layers 5-6 carry the RDMA-specific overlay.
 - **Cross-library `doca_caps` invocation patterns** — owned by
-  [`doca-caps`](../../tools/doca-caps/SKILL.md). This skill
+  [`doca-caps`](../doca-caps/SKILL.md). This skill
   references the *RDMA capability query family*
   (`doca_rdma_cap_*`), which is per-library; the *cross-library
   capability snapshot tool* (`doca_caps --list-devs`) is a

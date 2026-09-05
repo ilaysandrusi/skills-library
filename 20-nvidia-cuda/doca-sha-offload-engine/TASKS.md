@@ -20,15 +20,15 @@ build + load + run sequence needs **before** any
 engine-specific work begins.
 
 This skill does **not** own DOCA installation; that path
-lives in [`doca-setup`](../../doca-setup/SKILL.md). The
+lives in [`doca-setup`](../doca-setup/SKILL.md). The
 `doca-sha-offload-engine`-specific preconditions:
 
 1. **`doca-sha.pc` is present.** Run
    `pkg-config --modversion doca-sha`. If the `.pc` does
    not resolve, the installed DOCA does not include
    doca-sha; route to
-   [`../../libs/doca-sha/SKILL.md`](../../libs/doca-sha/SKILL.md)
-   and [`doca-setup`](../../doca-setup/SKILL.md).
+   [`../doca-sha/SKILL.md`](../doca-sha/SKILL.md)
+   and [`doca-setup`](../doca-setup/SKILL.md).
 2. **OpenSSL ≥ 1.1.1 is present** per the shipped
    `readme.md`. Verify via `openssl version`. OpenSSL
    3.x is supported via the legacy ENGINE code path
@@ -70,7 +70,7 @@ Steps the agent walks the user through, in order:
    [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
    engine-vs-library selection table. If the user is
    writing a new pipeline, route to
-   [`../../libs/doca-sha/SKILL.md`](../../libs/doca-sha/SKILL.md);
+   [`../doca-sha/SKILL.md`](../doca-sha/SKILL.md);
    if the user needs SHA-224 or another non-covered
    algorithm, the engine is the wrong answer.
 2. **Identify the DOCA SHA PCIe address.** Run
@@ -128,7 +128,7 @@ shipped `test_cmdline_mode/readme.md`):
    can find `doca-sha.pc`, `doca-common.pc`, and the
    OpenSSL `.pc` files. The DOCA `pkgconfig` directory
    is documented in
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 3. **Build under the DOCA top-level meson tree.** Per
    `test_cmdline_mode/readme.md`: `cd ${DOCA_DIR}`;
    `meson setup build`; `cd build`; `ninja`. The engine's
@@ -150,7 +150,7 @@ Routing for nearby "build" questions:
   OpenSSL 3.x."* → out of scope; the shipped artifact is
   an ENGINE, not a PROVIDER. Route to the OpenSSL
   upstream PROVIDERS migration guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - *"I want to author my own ENGINE wrapping a different
   doca library."* → out of scope; route to
   [`doca-programming-guide TASKS.md ## build`](../../doca-programming-guide/TASKS.md#build).
@@ -179,7 +179,7 @@ Routing for nearby "modify" questions:
   source-level extension. The user can either (a) use
   doca-sha directly for those algorithms if the library
   supports them per
-  [`../../libs/doca-sha/CAPABILITIES.md`](../../libs/doca-sha/CAPABILITIES.md),
+  [`../doca-sha/CAPABILITIES.md`](../doca-sha/CAPABILITIES.md),
   (b) use OpenSSL's software path for the non-covered
   algorithms, or (c) route to a different bundle that
   ships a customized engine.
@@ -191,7 +191,7 @@ Routing for nearby "modify" questions:
   many `EVP_DigestUpdate` calls."* → the verified
   engine is one-shot per the shipped `readme.md`. For
   true incremental hashing, route to
-  [`../../libs/doca-sha/`](../../libs/doca-sha/SKILL.md)
+  [`../../libs/doca-sha/`](../doca-sha/SKILL.md)
   and the partial-hash task there.
 
 ## run
@@ -361,7 +361,7 @@ layers in order:
 3. **Runtime-layer.** Engine registered, but a digest
    call fails. Confirm the message size against
    `doca_sha_cap_get_max_src_buf_size` per
-   [`../../libs/doca-sha/CAPABILITIES.md`](../../libs/doca-sha/CAPABILITIES.md);
+   [`../doca-sha/CAPABILITIES.md`](../doca-sha/CAPABILITIES.md);
    raise `DOCA_LOG_LEVEL` to surface the engine's
    internal logging.
 4. **Engine-not-engaged.** The `openssl dgst` call
@@ -381,7 +381,7 @@ layers in order:
 6. **Cross-cutting.** Cause is below DOCA. Hand off to
    [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug)
    and
-   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug).
+   [`doca-setup TASKS.md ## debug`](../doca-setup/TASKS.md#debug).
 
 In every case: **quote what OpenSSL and the engine
 reported.** Do not paraphrase the load output; do not
@@ -434,21 +434,21 @@ The decision shape this skill teaches:
 The verbs below are not `doca-sha-offload-engine` work
 and should be routed out:
 
-- **install DOCA** ⇒ [`doca-setup TASKS.md`](../../doca-setup/TASKS.md).
+- **install DOCA** ⇒ [`doca-setup TASKS.md`](../doca-setup/TASKS.md).
 - **author a new SHA pipeline against doca-sha
   directly** ⇒
-  [`../../libs/doca-sha/SKILL.md`](../../libs/doca-sha/SKILL.md).
+  [`../doca-sha/SKILL.md`](../doca-sha/SKILL.md).
 - **offload algorithms the engine does not cover
   (SHA-224, SHA-3, MD5, HMAC-SHA)** ⇒
-  [`../../libs/doca-sha/CAPABILITIES.md`](../../libs/doca-sha/CAPABILITIES.md)
+  [`../doca-sha/CAPABILITIES.md`](../doca-sha/CAPABILITIES.md)
   for the library's coverage; for genuine non-coverage,
   route to OpenSSL's software path or to a different
   bundle.
 - **OpenSSL PROVIDER authoring (OpenSSL 3.x
   long-term)** ⇒ out of scope; route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the OpenSSL upstream PROVIDERS migration docs on
   `openssl.org`.
 - **hardware-touching changes underneath** (firmware
   burn on the DOCA SHA device, BFB reflash) ⇒
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md).
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md).

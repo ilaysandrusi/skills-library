@@ -39,13 +39,13 @@ What keywords is [competitor URL] ranking for that I should target?
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
-Optional integrations: ~~SEO tool, ~~search console. Without tools, ask for seed keywords, audience, goals, and any known metrics. See [CONNECTORS.md](../../../CONNECTORS.md).
+Optional integrations: ~~SEO tool, ~~search console. Without tools, ask for seed keywords, audience, goals, and any known metrics. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md).
 
-**Zero-dependency local helper** (no tool needed): `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/suggest.py" "<seed>" --expand` harvests free keyword ideas from Google Autocomplete (⚠️ unofficial endpoint). Search *volume / difficulty* still needs `~~SEO tool` or own Search Console data. See [scripts/connectors/README.md](../../../scripts/connectors/README.md).
+**Zero-dependency local helper** (no tool needed): `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/suggest.py" "<seed>" --expand` harvests free keyword ideas from Google Autocomplete (⚠️ unofficial endpoint). Search *volume / difficulty* still needs `~~SEO tool` or own Search Console data. See [scripts/connectors/README.md](../../scripts/aaron-marketing/connectors/README.md).
 
 **Keyless live-SERP sampling**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/firecrawl.py" search "<candidate keyword>" --limit 10` (Firecrawl keyless free tier, ~1,000 credits/mo, no key needed) shows who actually ranks for a candidate — feed the top-10 domains and formats into the intent check and the difficulty read as **Measured** evidence instead of guessing. Volume still needs `~~SEO tool` or GSC.
 
@@ -94,7 +94,7 @@ See [references/example-report.md](references/example-report.md) for a full work
 
 ## Save Results
 
-Write path: `memory/research/keyword-research/YYYY-MM-DD-<topic>.md`; promote durable keyword priorities to `memory/hot-cache.md`. See [Skill Contract](../../../references/skill-contract.md) §Save Results Template.
+Write path: `memory/research/keyword-research/YYYY-MM-DD-<topic>.md`; promote durable keyword priorities to `memory/hot-cache.md`. See [Skill Contract](../../references/aaron-marketing/skill-contract.md) §Save Results Template.
 
 ## Reference Materials
 

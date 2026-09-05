@@ -12,7 +12,7 @@ This file is loaded by [`SKILL.md`](SKILL.md). It documents
 *what the tracer captures*, *which DPA programming events it
 exposes*, *what its capture-mode + JSON config surface looks
 like*, *what the trace-overhead-vs-fidelity tradeoff is*,
-*how it pairs with the [`doca-dpa`](../../libs/doca-dpa/SKILL.md)
+*how it pairs with the [`doca-dpa`](../doca-dpa/SKILL.md)
 library and the DPACC compiler*, *its layered error and
 observability surfaces*, *and the safety posture* that
 bounds when tracing is appropriate. For step-by-step
@@ -40,7 +40,7 @@ Two cross-cutting rules that apply to *every* pattern above:
 - **Tracing is observation, not workload.** The tracer
   captures what the DPA kernel does; it does not cause
   the workload to run. The DPA-side workload must be
-  brought up by [`doca-dpa`](../../libs/doca-dpa/SKILL.md)
+  brought up by [`doca-dpa`](../doca-dpa/SKILL.md)
   first — start the host-side `doca_dpa` context, load
   the DPA application image, run at least one launch.
   A tracer started against an idle DPA produces an empty
@@ -69,15 +69,15 @@ A small gate the agent walks before configuring the tracer:
 | The host-side `doca_dpa_*` call returns a `DOCA_ERROR_*` | Host-side debug; not this tool. Walk [`doca-dpa TASKS.md ## debug`](../../libs/doca-dpa/TASKS.md#debug) first. |
 | The DPA-side kernel is producing wrong results, with clean host-side completions | DPA-side high-level tracing. This tool. |
 | The DPA-side kernel is slower than expected at a granularity above per-instruction (kernel-entry to first-comm latency, RDMA-WR-issue to completion-drain gap, sync-point dwell) | DPA-side high-level tracing. This tool. |
-| The DPA-side kernel is slow at per-instruction granularity (cache misses, branch behaviour, individual cycles) | Raw DPA cycle profiler, NOT this tool. Route via [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools) to the matching low-level surface. |
-| The image DPACC produced is wrong / does not start | DPACC compiler diagnostics, not a runtime trace. Walk the public DPACC guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) first. |
+| The DPA-side kernel is slow at per-instruction granularity (cache misses, branch behaviour, individual cycles) | Raw DPA cycle profiler, NOT this tool. Route via [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools) to the matching low-level surface. |
+| The image DPACC produced is wrong / does not start | DPACC compiler diagnostics, not a runtime trace. Walk the public DPACC guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) first. |
 | The DPA processor is not visible to the host at all | DPA env layer, not this tool. Walk [`doca-dpa TASKS.md ## configure`](../../libs/doca-dpa/TASKS.md#configure) step 1 + [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug). |
 
 **DPA programming event taxonomy.** The tracer exposes the
 documented *DPA programming events* surface — i.e. events
 the DPA programming model itself defines, not the raw
 instruction stream. The exact event names + IDs are
-versioned with the [`doca-dpa`](../../libs/doca-dpa/SKILL.md)
+versioned with the [`doca-dpa`](../doca-dpa/SKILL.md)
 library and authoritative on `--help` of the installed
 binary. The event *classes* the agent reasons about:
 
@@ -137,7 +137,7 @@ just *"a few seconds"*.
 
 **ELF-must-match-image rule.** Decode (`--parse-file`,
 `--elf-file`) requires the same DPA-side ELF that
-[`doca-dpa`](../../libs/doca-dpa/SKILL.md) loaded into the
+[`doca-dpa`](../doca-dpa/SKILL.md) loaded into the
 `doca_dpa_app` context. A decode against a different ELF
 build produces noise / wrong-symbol output even when the
 binary trace is intact. The agent's rule: snapshot the ELF
@@ -152,21 +152,21 @@ cannot repair the mismatch.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The `doca_dpa_hl_tracer`-specific overlay** is:
 
 - **Tracer ↔ `doca-dpa` library ↔ DPACC must match.** The
   tracer is the operator-side companion to the host-side
-  [`doca-dpa`](../../libs/doca-dpa/SKILL.md) library and
+  [`doca-dpa`](../doca-dpa/SKILL.md) library and
   the DPA-side image is produced by the DPACC compiler.
   All three must come from a matched DOCA release band
   per the
   [`doca-version CAPABILITIES.md ## Version compatibility`](../../doca-version/CAPABILITIES.md#version-compatibility)
   four-way rule, plus the DPA-specific *DOCA must match
   DPACC* overlay
-  [`doca-dpa`](../../libs/doca-dpa/SKILL.md) carries.
+  [`doca-dpa`](../doca-dpa/SKILL.md) carries.
 - **The DPA-side image must be the same image the tracer
   decodes against.** The captured binary trace file
   references event IDs and offsets that resolve against
@@ -225,7 +225,7 @@ jumping layers wastes the user's time on the wrong fix.
    [`doca-dpa TASKS.md ## run`](../../libs/doca-dpa/TASKS.md#run)
    that the instrumented image was loaded; re-read the public DPACC
    guide via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    for the documented instrumentation build options.
 4. **Capture-window.** Capture started after the relevant
    events fired (including a workload that ended before
@@ -271,7 +271,7 @@ jumping layers wastes the user's time on the wrong fix.
    before any further investigation.
 8. **Cross-cutting.** Cause is below DOCA — driver,
    firmware, BlueField mode, IOMMU, NUMA. Routing: hand
-   off to [`doca-debug ## debug`](../../doca-debug/SKILL.md)
+   off to [`doca-debug ## debug`](../doca-debug/SKILL.md)
    and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug).
 
@@ -337,7 +337,7 @@ the capture itself. The rules:
   The tool is documented for diagnostic capture; it is
   not a substitute for production telemetry (route
   there via
-  [`doca-telemetry`](../../libs/doca-telemetry/SKILL.md)).
+  [`doca-telemetry`](../doca-telemetry/SKILL.md)).
   The agent does not recommend running the tracer
   continuously against a production workload.
 - **The tracer perturbs what it observes.** `TRACE`
@@ -380,7 +380,7 @@ the capture itself. The rules:
 The canonical public source for `doca_dpa_hl_tracer` is the
 **DOCA DPA Tools** umbrella on `docs.nvidia.com`, reachable
 through
-[`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools).
+[`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools).
 The companion programming-model surface lives in the public
 DOCA DPA, DPACC, DPA-Comms, and DPA-Verbs guides on the
 same site. Do not invent flags, event names, mode tokens,

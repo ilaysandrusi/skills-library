@@ -17,7 +17,7 @@ taxonomy, observability, and safety policy, see
 patterns layered under everything below (the universal
 lifecycle, the cross-library `DOCA_ERROR_*` taxonomy, the
 modify-a-shipped-sample workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 For the queue surface that carries the packets a Rivermax
 stream produces or consumes, see
 [`doca-eth`](../doca-eth/SKILL.md). For the steering side
@@ -64,7 +64,7 @@ Steps the agent should walk the user through:
    two — there is no DOCA-side fallback that preserves timing
    precision. Route the install / license question to the
    public Rivermax SDK guide via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 2. **Stand up the underlying packet queue first.** Per the
    queue-pair workflow in
    [`doca-eth TASKS.md ## configure`](../doca-eth/TASKS.md#configure),
@@ -108,7 +108,7 @@ Steps the agent should walk the user through:
    scheduling discipline for the streaming threads now,
    before start — the canonical scheduling guidance lives in
    the Rivermax SDK guide via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 6. **Start the input stream** via `doca_ctx_start()`, attach a
    `doca_rmax_flow` filter with `doca_rmax_flow_attach()`, and
    progress the PE (`doca_pe_progress`). *No frames
@@ -140,7 +140,7 @@ This skill carries only the Rivermax-specific overlay:
 | `pkg-config` module name (DOCA side) | `doca-rmax` | The library's `.pc` file installed by the DOCA host packages. A missing `.pc` does NOT imply the Rivermax SDK is missing — they are two independent install layers |
 | Include flags (DOCA side) | `pkg-config --cflags doca-rmax` | Resolves to headers under $(pkg-config --variable=includedir doca-common) for the Rivermax-integration subset |
 | Link flags (DOCA side) | `pkg-config --libs doca-rmax` | Pulls in whatever `pkg-config --libs` resolves on this install (do not predict the `-l<name>` form by hand — `.so` basenames use underscores, `.pc` names use hyphens, and `pkg-config` is the only correct translator) (plus device-side providers as the `.pc` declares them). The DOCA-side link does NOT include the Rivermax SDK itself — that comes from the SDK's own integration mechanism |
-| Rivermax SDK integration | Per the public Rivermax SDK guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) | The Rivermax SDK ships its own include / link integration mechanism (header location, library path, license-file path). The agent must consult the Rivermax SDK guide rather than invent flags |
+| Rivermax SDK integration | Per the public Rivermax SDK guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) | The Rivermax SDK ships its own include / link integration mechanism (header location, library path, license-file path). The agent must consult the Rivermax SDK guide rather than invent flags |
 | Companion DOCA libraries | `doca-eth` (always — the queue surface is required); `doca-flow` only if the consumer programs its own steering; `doca-argp` for argument parsing if the consumer uses the standard DOCA arg style | Adding unnecessary companion libs bloats the link line and obscures real partial-install issues |
 | Minimum required DOCA version | Query with `pkg-config --modversion doca-rmax`; never hardcode in build files | Cross-version build / runtime mixing breaks per [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility); the Rivermax SDK version is a second axis the build must also honor |
 
@@ -171,7 +171,7 @@ any code-level edit:
 | 3. Stream-type change | Switching the stream type (e.g. ST 2110 video → audio, or video frame rate / size change)? | Re-run the matching `doca_rmax_get_*_supported` query (PTP clock, packet-placement order) for the new configuration against the active `doca_devinfo`; capability is the joint property of device + DOCA version + Rivermax SDK version |
 | 4. Underlying queue change | Changing the underlying `doca_eth_rxq` sizing, burst size, or RX type? | This is an `doca-eth` change, not a Rivermax change. Route to [`doca-eth`](../doca-eth/SKILL.md) for the queue body and back here only after the queue change re-validates against its own cap queries |
 | 5. Steering / Flow rule change | Adding or modifying the Flow rule that steers traffic to the queue? | This is a steering change, not a Rivermax change. Route to [`doca-flow`](../doca-flow/SKILL.md) for the rule body and back here only after the rule programs cleanly |
-| 6. Scheduling discipline | Changing the real-time priority of the streaming thread, the CPU pinning, or the isolation? | This is a Rivermax-side concern; route the canonical scheduling guidance via the public Rivermax SDK guide reachable through [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md). The agent must not invent scheduler flags |
+| 6. Scheduling discipline | Changing the real-time priority of the streaming thread, the CPU pinning, or the isolation? | This is a Rivermax-side concern; route the canonical scheduling guidance via the public Rivermax SDK guide reachable through [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md). The agent must not invent scheduler flags |
 
 Keep the build manifest unchanged: the sample's existing
 `meson.build` already wires `pkg-config doca-rmax`
@@ -213,7 +213,7 @@ Steps the agent should walk the user through:
    will be silent regardless of how cleanly Rivermax came up.
 3. **Set the real-time scheduling on the streaming thread.**
    Per the canonical Rivermax SDK guidance (route via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)),
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)),
    the streaming thread should run at real-time priority for
    sub-microsecond jitter to hold. Confirm the program is
    actually setting this — defaults are not enough.
@@ -302,14 +302,14 @@ Eval-loop overlay — why this is a loop, not a one-shot pass:
 | `doca_rmax_init()` returns `DOCA_ERROR_NOT_SUPPORTED` | Initialization fails before any stream is created | Re-walk the Rivermax SDK and license preconditions and route their remediation through `doca-public-knowledge-map`. Do not reinterpret this as device access. |
 | A later Rivermax call returns `DOCA_ERROR_NOT_PERMITTED` | The exact failing call and installed-header mapping have been captured | Follow the call-specific evidence. For device open / stream create, validate DOCA-side device access; do not label the error a license failure without verified documentation for that call. |
 | Input stream started cleanly, no completions | Stream + underlying queue both STARTED; no `DOCA_ERROR_*`; no Rx-data event | Almost always (a) Flow rule missing on the steering side, or (b) Rivermax license problem the agent missed at configure, or (c) PE not progressed in the user's main loop. Walk those three in order. |
-| Stream-rate smoke shows jitter / dropped frames | Single-frame smoke passed cleanly; full-rate run shows jitter past the Rivermax spec | The streaming thread is not at real-time priority, or the CPU is not isolated, or another high-priority thread is preempting it. Route the scheduling discipline to the public Rivermax SDK guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md). |
+| Stream-rate smoke shows jitter / dropped frames | Single-frame smoke passed cleanly; full-rate run shows jitter past the Rivermax spec | The streaming thread is not at real-time priority, or the CPU is not isolated, or another high-priority thread is preempting it. Route the scheduling discipline to the public Rivermax SDK guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md). |
 | Placement-order set returns `DOCA_ERROR_NOT_SUPPORTED` at start | A `doca_rmax_get_*_supported` query returned `DOCA_SUCCESS`, but `doca_ctx_start()` rejects the configuration | The cap query was run against the wrong `doca_devinfo`, or a `doca_rmax_in_stream_set_*` setter is incompatible with the chosen configuration. Re-narrow to the per-`devinfo` query and the full setter sequence. Confirm the Rivermax SDK version on the host matches the one the cap-query result implies. |
 | Same code works on host A, fails on host B | One host has the Rivermax SDK + license; the other does not, or has a different Rivermax version | Re-walk the precondition matrix on host B; then re-run [`## configure`](#configure) step 4 (capability discovery) + [`doca-version TASKS.md ## test`](../../doca-version/TASKS.md#test) four-way match on host B. The cap surface is per-device AND per-Rivermax-version. |
 
 Loop termination: stop after five iterations or once two consecutive
 iterations do not change the picture, whichever comes first. Route Rivermax SDK,
 license, and Rivermax scheduling causes through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 to the public Rivermax guidance. Route DOCA runtime, driver,
 firmware, and device-access causes to
 [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug)
@@ -339,7 +339,7 @@ not check.
   license is readable BEFORE diagnosing anything else. This
   is the gate. A failure here cannot be papered over by any
   later layer; route to the public Rivermax SDK guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 **Layer 5 (runtime) — Rivermax overlay.**
 
@@ -359,7 +359,7 @@ not check.
   high-priority thread is preempting it. Route to the public
   Rivermax SDK guide for the canonical scheduling discipline
   via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 **Layer 6 (program) — Rivermax overlay.**
 
@@ -387,7 +387,7 @@ verb on the matching skill: install / build / link / driver
 to [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug);
 Rivermax SDK / license install to the public Rivermax SDK
 guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md);
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md);
 version to
 [`doca-version ## debug`](../../doca-version/TASKS.md#debug);
 steering to
@@ -410,14 +410,14 @@ so the agent does not invent guidance:
   rotating the license — out of scope for this skill (and
   out of scope for the whole DOCA bundle). Route via the
   public Rivermax SDK guide reachable through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
   This skill assumes the SDK + license are already present.
 - **install (DOCA).** Installing DOCA, choosing packages,
   post-install verification, `pkg-config` wiring,
   port-bring-up — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
-  [doca-public-knowledge-map ## Layout of an installed DOCA package](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [doca-public-knowledge-map ## Layout of an installed DOCA package](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
 - **steer.** Programming the steering rules that decide which
   packets reach which queue (Flow pipes, RSS, hairpin,
   mirroring) — owned by
@@ -440,7 +440,7 @@ so the agent does not invent guidance:
   [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug)
   layer 5 (driver), then to the upstream MLNX OFED / firmware
   documentation reachable through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Command appendix
 
@@ -469,18 +469,18 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |
 | `pkg-config --modversion doca-rmax` | `## configure` step 1; `## build` slot 1 | What is the build-time DOCA Rivermax (wrapper) version? | A semver string matching `doca_caps --version`. Disagreement = partial install (route to [`doca-version ## debug`](../../doca-version/TASKS.md#debug) layer 2). Success here does NOT imply the Rivermax SDK is installed |
 | `pkg-config --cflags --libs doca-rmax` | `## build` | What include + link flags does the linker need on the DOCA side? | Trust whatever `pkg-config --cflags --libs` produces on this install. Do not hardcode either the `-I` include path or the `-l<name>` flag form — both can drift between DOCA install profiles and DOCA majors; the on-disk `.so` basenames use underscores on every release where we have ground truth, while the `.pc` package names use hyphens, and `pkg-config` is the only thing that resolves both correctly. Hand-crafted `-l` lines silently break when DOCA upgrades. |
-| `ls /opt/mellanox/doca/samples/doca_rmax/` | `## modify` slot 1 | Which DOCA Rivermax samples ship in this install, and which is the closest starting point? | A list of receive-side sample directories named after the stream-type pattern they demonstrate. An empty result means no samples shipped on this install — route to [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) for the public DOCA Rivermax guide |
+| `ls /opt/mellanox/doca/samples/doca_rmax/` | `## modify` slot 1 | Which DOCA Rivermax samples ship in this install, and which is the closest starting point? | A list of receive-side sample directories named after the stream-type pattern they demonstrate. An empty result means no samples shipped on this install — route to [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) for the public DOCA Rivermax guide |
 | `devlink dev show` (sudo) | `## configure` step 1; `## debug` layer 7 | Is the underlying port up at the driver layer? | One row per port with `state: PORT_ACTIVE`; anything else means the port is down and the Rivermax stream will be silent |
 | `ip -j link show <dev>` | `## configure` step 1; `## debug` layer 7 | Does the kernel report this device as UP? | `flags` contains `UP,LOWER_UP`. Promiscuous mode is generally NOT how Rivermax input streams get their packets — they get them via a Flow rule on the underlying queue |
 | `ethtool <dev>` | `## configure` step 1; `## debug` layer 7 | Does the driver report link / speed / duplex? | A non-zero speed and `Link detected: yes` |
 | `doca_caps --list-devs` | `## configure` step 4 | Which devices on this host can be used as a `doca_dev` for Rivermax integration? | One row per visible device with PCIe address and capability flags |
-| `dmesg | tail -n 40` (sudo) | `## debug` layer 7 | What did the kernel / driver log around the last Rivermax call? | Empty or recent benign messages. Repeated `mlx5` errors → driver-layer bug; route to [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug). Repeated Rivermax-side errors → route to the Rivermax SDK guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) |
+| `dmesg | tail -n 40` (sudo) | `## debug` layer 7 | What did the kernel / driver log around the last Rivermax call? | Empty or recent benign messages. Repeated `mlx5` errors → driver-layer bug; route to [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug). Repeated Rivermax-side errors → route to the Rivermax SDK guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) |
 | `mlxconfig -d <pcie> q | head -n 40` (sudo) | `## debug` layer 7 | What firmware config does the underlying NIC report? | Stable firmware config; transient values indicate a partial reset |
 | `DOCA_LOG_LEVEL=trace ./<binary>` | `## run` step 4 | What did the structured DOCA logger emit for the first failing call? | A trace-level line on every lifecycle transition and every event / task. Preserve the exact failing call and return code: `DOCA_ERROR_NOT_SUPPORTED` from `doca_rmax_init()` routes first to SDK/license checks; silence after a started stream routes to PE progress, steering, and queue checks |
 
@@ -492,5 +492,5 @@ this table adds the Rivermax-specific rows on top. For the
 Rivermax SDK's own diagnostic commands (license check,
 Rivermax-side log capture, Rivermax-side version query) the
 canonical reference is the public Rivermax SDK guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
 the agent must not invent Rivermax-side commands from memory.

@@ -18,7 +18,7 @@ observability surface, and the safety policy, see
 patterns layered under everything below (the universal Core
 lifecycle, the cross-library `DOCA_ERROR_*` taxonomy, the
 modify-a-shipped-sample workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -62,7 +62,7 @@ Steps the agent should walk the user through:
    host-side launch call is drafted. If the user is asking
    *"how do I write the DPA-side kernel itself"*, that is the
    DPACC + DPA-side libraries surface — route via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    to the public DOCA DPA / DPACC / DPA-Comms / DPA-Verbs
    guides; do not redefine those surfaces here.
 3. **Run dual capability discovery against the target
@@ -141,7 +141,7 @@ overlay:
 | --- | --- | --- |
 | `pkg-config` module name | `doca-dpa` | The library's `.pc` file installed by the DOCA host packages; gives the host-side include + link flags for the DOCA DPA host API |
 | DPA-side toolchain | `dpacc` (DPACC compiler), installed alongside DOCA | Compiles DPA-side translation units into the binary that the host executable embeds as the `doca_dpa_app`. The host system compiler is NOT a substitute |
-| Include flags | `pkg-config --cflags doca-dpa` for the host side; the DPACC-prescribed include path for the DPA side | Resolves DOCA headers under whichever include directory `pkg-config --cflags` reports on this install (do not hardcode the include path — it can move across DOCA install profiles) for the host side; the DPA-side include path comes from the DPACC install layout via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) |
+| Include flags | `pkg-config --cflags doca-dpa` for the host side; the DPACC-prescribed include path for the DPA side | Resolves DOCA headers under whichever include directory `pkg-config --cflags` reports on this install (do not hardcode the include path — it can move across DOCA install profiles) for the host side; the DPA-side include path comes from the DPACC install layout via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) |
 | Link flags | `pkg-config --libs doca-dpa` on the host side, plus the DPACC-prescribed embed step that bakes the DPA-side binary into the host executable | Pulls in whatever `pkg-config --libs` resolves on this install (do not predict the `-l<name>` form by hand — `.so` basenames use underscores, `.pc` names use hyphens, and `pkg-config` is the only correct translator) on the host side. The DPACC embed step is the load-bearing build action — without it the host has no DPA application image to load at runtime |
 | Companion DOCA libs | `doca-argp` for arg parsing in samples; the shipped samples include both host-side and DPA-side translation units | The shipped samples are the verified two-side-program build template; do not invent a one-side-only manifest |
 | DPA device-side archives NOT to add to the host link line | `libdoca_dpa_dev_comm.a`, `libdoca_dpa_dev_verbs.a` | These are DPA-SIDE archives shipped within `doca-dpa` (NOT separate pkg-config modules): their symbols are linked into the DPA image from inside the DPA kernel by `dpacc`, NOT from the host link line. Adding them to the host link line is a common first-build error |
@@ -225,7 +225,7 @@ Steps the agent should walk the user through:
    debugger and the DPA process-state inspector named in
    [`CAPABILITIES.md ## Observability`](CAPABILITIES.md#observability)
    and routed via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    to the public *DPA Tools* umbrella).
 
 For the runtime version + `LD_LIBRARY_PATH` cross-checks that
@@ -569,7 +569,7 @@ walk these overlays.
    side; the agent must NOT quote them from memory. Direct the
    user to the DPA-side header `doca_dpa_dev_verbs.h` (per the
    DPACC guide via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md))
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md))
    and to `/opt/mellanox/doca/samples/doca_dpa/`. Headers
    win over docs.
 6. **Pick the completion topology.** Host-side CQE inspection
@@ -682,9 +682,9 @@ follows so the agent does not invent guidance:
 - **install.** Installing DOCA, installing the DPACC compiler,
   choosing matched versions, post-install verification,
   `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA + DPACC are already installed and
   matched.
 - **deploy.** Deploying DPA-using applications at scale
@@ -697,7 +697,7 @@ follows so the agent does not invent guidance:
   kernel function body itself, DPA-side memory layout,
   DPACC compile flags, DPA-side debugging from inside the
   kernel — out of scope. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public *DOCA DPA*, *DOCA DPACC Compiler*, *DOCA DPA
   Comms*, and *DOCA DPA Verbs* guides plus the *DPA Tools*
   umbrella. This skill prescribes how to *use* the
@@ -709,7 +709,7 @@ follows so the agent does not invent guidance:
   separate pkg-config modules): their symbols are called from
   inside the DPA kernel and linked by `dpacc`, not from the
   host. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public *DOCA DPA Comms* and *DOCA DPA Verbs* guides.
 
 ## Command appendix
@@ -740,18 +740,18 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |
 | `pkg-config --modversion doca-dpa` | `## configure` step 1; `## build` minimum-version slot | What is the build-time DOCA DPA host-side library version? | A semver string matching `doca_caps --version`. Disagreement = partial install (route to [`doca-version TASKS.md ## debug`](../../doca-version/TASKS.md#debug) layer 2) |
 | `pkg-config --cflags --libs doca-dpa` | `## build` | What include + link flags does the host-side linker need? | Trust whatever `pkg-config --cflags --libs` produces on this install. Do not hardcode either the `-I` include path or the `-l<name>` flag form — both can drift between DOCA install profiles and DOCA majors; the on-disk `.so` basenames use underscores on every release where we have ground truth, while the `.pc` package names use hyphens, and `pkg-config` is the only thing that resolves both correctly. Hand-crafted `-l` lines silently break when DOCA upgrades. |
-| `which dpacc && dpacc --version` (or the install-tree path) | `## configure` step 1; `## build` minimum-DPACC slot | Is the DPACC compiler installed and at what version? | A version string the agent compares against the DOCA Compatibility Policy linked from [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility). Missing `dpacc` = the DPA-side translation unit cannot be built; route to [`doca-setup`](../../doca-setup/SKILL.md) |
-| `doca_caps --list-devs` | `## configure` step 1; `## configure` step 3 | Which DOCA devices does the host see, and which expose a DPA processor? | One entry per `doca_dev` with the BlueField identity and the per-library capability flags including the DPA support axis. No DPA-capable entry = the BlueField is not present, not in the right mode, or not on a generation that exposes the DPA; route to [`doca-setup`](../../doca-setup/SKILL.md) |
+| `which dpacc && dpacc --version` (or the install-tree path) | `## configure` step 1; `## build` minimum-DPACC slot | Is the DPACC compiler installed and at what version? | A version string the agent compares against the DOCA Compatibility Policy linked from [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility). Missing `dpacc` = the DPA-side translation unit cannot be built; route to [`doca-setup`](../doca-setup/SKILL.md) |
+| `doca_caps --list-devs` | `## configure` step 1; `## configure` step 3 | Which DOCA devices does the host see, and which expose a DPA processor? | One entry per `doca_dev` with the BlueField identity and the per-library capability flags including the DPA support axis. No DPA-capable entry = the BlueField is not present, not in the right mode, or not on a generation that exposes the DPA; route to [`doca-setup`](../doca-setup/SKILL.md) |
 | `ls /opt/mellanox/doca/samples/doca_dpa/` | `## modify` slot 1 | Which DPA samples ship in this install (both host-side AND DPA-side translation units), and which is the closest starting point? | A list of sample directories that each contain BOTH host-side and DPA-side source plus a `meson.build` that wires `dpacc` and `pkg-config doca-dpa` together |
 | `dmesg \| tail -n 40` (sudo) | `## debug` layer 7 | What did the kernel / driver log around the last DPA call? | Empty or recent benign messages. Repeated mlx5 / DPA-driver errors → driver-layer bug; route to [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug) |
 | `DOCA_LOG_LEVEL=trace ./<binary>` | `## run` step 4 | What did the structured DOCA logger emit for the first failing host-side DPA call? | A trace-level line on every host-side lifecycle transition and every launch submit. Silence after a launch submit = either host PE not progressed OR DPA kernel running but stuck — reach for the DPA-side tooling next |
-| (route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)) DPA-side developer tools — DPA debugger, DPA process-state inspector, DPA statistics tool | `## debug` layer 5; `## debug` layer 6 | What is the DPA processor itself doing right now, from the DPA side? | The public *DPA Tools* umbrella documents the per-tool output; the agent's job is to NAME the existence of these tools and route the user there, not to redefine their surface |
+| (route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)) DPA-side developer tools — DPA debugger, DPA process-state inspector, DPA statistics tool | `## debug` layer 5; `## debug` layer 6 | What is the DPA processor itself doing right now, from the DPA side? | The public *DPA Tools* umbrella documents the per-tool output; the agent's job is to NAME the existence of these tools and route the user there, not to redefine their surface |
 
 For commands shared across libraries (`pkg-config --modversion`,
 `doca_caps`, `cat /opt/mellanox/doca/applications/VERSION`,

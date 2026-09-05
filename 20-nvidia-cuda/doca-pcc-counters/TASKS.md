@@ -18,7 +18,7 @@ appendix`.
 For the host-side custom-PCC control surface (a SEPARATE
 surface — the firmware counters this script reads are
 independent of any custom kernel), see
-[`doca-pcc`](../../libs/doca-pcc/SKILL.md).
+[`doca-pcc`](../doca-pcc/SKILL.md).
 
 ## configure
 
@@ -70,7 +70,7 @@ Routing for nearby "build" questions:
 - *"How do I build a custom PCC algorithm whose behaviour
   these counters reflect?"* → that is the host-side +
   DPA-side compile path owned by
-  [`doca-pcc`](../../libs/doca-pcc/SKILL.md) and the DPACC
+  [`doca-pcc`](../doca-pcc/SKILL.md) and the DPACC
   compiler — a separate surface from this firmware-counter
   readout script.
 
@@ -86,7 +86,7 @@ should be invented.
   reads a fixed firmware diagnostic counter set; it is not
   user-extensible here. If you need device counters outside
   that set, that is a firmware / driver question — route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 - *"I want different output formatting / a parser"* → out of
   scope; the script's printed `Counter: ... Value: ...` lines
   are the contract. Parse them on your side if needed, but the
@@ -201,7 +201,7 @@ IN ORDER:
    `doca-pcc` algorithm, firmware PCC configuration, or
    driver / firmware behaviour. Route to
    [`doca-pcc TASKS.md ## debug`](../../libs/doca-pcc/TASKS.md#debug),
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
    or [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug).
 
 In every case: **quote what the script printed.** Do not
@@ -219,19 +219,19 @@ skill's name.
   [`doca-setup TASKS.md ## no-install`](../../doca-setup/TASKS.md#no-install)
   for the NGC DOCA container path).
 - **writing / loading a custom PCC algorithm** ⇒
-  [`doca-pcc`](../../libs/doca-pcc/SKILL.md). That is the
+  [`doca-pcc`](../doca-pcc/SKILL.md). That is the
   host-side library + DPA-side compile surface; this script
   only reads the device's firmware diagnostic counters.
 - **firmware PCC algorithm configuration / fleet-wide CC
   tuning** ⇒ out of scope; route the documentation lookup via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
   Any CC decision derived from a counter reading must go back
   through the user's own domain analysis per
   [`CAPABILITIES.md ## Safety policy`](CAPABILITIES.md#safety-policy).
 - **long-term retention / analytics on PCC counters** ⇒ not a
   feature of this script. The DOCA Telemetry Service (DTS) is
   the documented telemetry surface; route via
-  [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
+  [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
 
 ## Command appendix
 
@@ -280,4 +280,4 @@ A few rules that apply across every verb in this file:
 - **Quote, do not paraphrase** the counter lines.
 - This skill **assumes a healthy DOCA / MFT install** (mst
   tools, debugfs, sudo). If in doubt, route to
-  [`doca-setup`](../../doca-setup/SKILL.md) first.
+  [`doca-setup`](../doca-setup/SKILL.md) first.

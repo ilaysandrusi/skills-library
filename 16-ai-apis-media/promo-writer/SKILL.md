@@ -41,7 +41,7 @@ Between content completion and promo-reviewer. The promo-reviewer polishes what 
 ## Supporting Files
 
 - **[copy-formulas.md](copy-formulas.md)** — Hook formulas, CTA templates, post structures, hashtag recipes
-- **[/reference/promotion/social-media-best-practices.md](/reference/promotion/social-media-best-practices.md)** — Platform strategy and content guidance
+- **[../../references/ai-music/promotion/social-media-best-practices.md](../../references/ai-music/promotion/social-media-best-practices.md)** — Platform strategy and content guidance
 - **[/skills/promo-reviewer/platform-rules.md](/skills/promo-reviewer/platform-rules.md)** — Character limits and hashtag rules
 
 ---

@@ -60,7 +60,7 @@ Unlike V4, V5 follows instructions exactly. Don't overthink it.
 - Say what you want directly
 - Trust the model to understand
 
-**V5.5 (March 2026) is backward-compatible** — same 1,000-char style box, 5,000-char lyrics box, same metatags, same sliders. V5 prompts work identically. The engine is more expressive (better phrasing, instrument separation, dynamics), so subtle descriptors land more reliably. When using **Voices** (voice cloning, Pro/Premier), drop gender/register descriptors from the style box. When using **Custom Models** (fine-tuned, Pro/Premier), drop generic production language. See [v5-best-practices.md](../../reference/suno/v5-best-practices.md) for full details.
+**V5.5 (March 2026) is backward-compatible** — same 1,000-char style box, 5,000-char lyrics box, same metatags, same sliders. V5 prompts work identically. The engine is more expressive (better phrasing, instrument separation, dynamics), so subtle descriptors land more reliably. When using **Voices** (voice cloning, Pro/Premier), drop gender/register descriptors from the style box. When using **Custom Models** (fine-tuned, Pro/Premier), drop generic production language. See [v5-best-practices.md](../../references/ai-music/suno/v5-best-practices.md) for full details.
 
 ### Section Tags are Critical
 Structure your songs with explicit section markers:

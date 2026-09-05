@@ -18,7 +18,7 @@ they apply to every GPU-NIC pair the benchmark can target.
 
 | `gpunetio_ib_write_bw` pattern | Class shape | Where the substance lives |
 | --- | --- | --- |
-| 1. Pick the runtime surface | Decide *before* building whether the workload's WR-init path should be GPUNetIO (this tool), GPI (the [`doca-gpi`](../../libs/doca-gpi/SKILL.md) library programming surface — `doca/tools/` ships no GPI benchmark binary), or classic CPU-initiated `perftest` `ib_write_bw`. The three measure the same physical operation but answer different runtime questions. | [`## Capabilities and modes`](#capabilities-and-modes) surface-selection table |
+| 1. Pick the runtime surface | Decide *before* building whether the workload's WR-init path should be GPUNetIO (this tool), GPI (the [`doca-gpi`](../doca-gpi/SKILL.md) library programming surface — `doca/tools/` ships no GPI benchmark binary), or classic CPU-initiated `perftest` `ib_write_bw`. The three measure the same physical operation but answer different runtime questions. | [`## Capabilities and modes`](#capabilities-and-modes) surface-selection table |
 | 2. Confirm the GPU-NIC pairing | The GPUNetIO path requires the GPU and the IB device to be reachable through the same PCIe / NVLink fabric for the WR-submission path to be efficient. A wrong pairing produces a number, but not the property the operator was asking about. | [`## Capabilities and modes`](#capabilities-and-modes) GPU-NIC pairing rule + [TASKS.md ## configure](TASKS.md#configure) |
 | 3. Build against the install | The tool ships under `doca/tools/gpunetio_ib_write_bw/` as a client/ + server/ pair with a `meson.build` that wraps `doca-gpunetio`, `doca-rdma`, `doca-common` and the CUDA Toolkit. Mismatched DOCA + CUDA surfaces at build time. | [`## Version compatibility`](#version-compatibility) + [TASKS.md ## build](TASKS.md#build) |
 | 4. Decompose the throughput | A reported BW is meaningful only when the operator can name which constraint binds it: GPU compute occupancy (the CUDA kernel can't issue WRs fast enough), NIC issue rate (the device hits its WR-submission ceiling), or link saturation (the physical IB link is full). Quoting a number without naming the binding constraint is the canonical apples-to-oranges failure. | [`## Capabilities and modes`](#capabilities-and-modes) throughput-decomposition table + [`## Observability`](#observability) |
@@ -78,8 +78,8 @@ to the operator before quoting any number:
 
 | Surface | Tool | When this surface is the right answer |
 | --- | --- | --- |
-| GPUNetIO (this skill) | `doca-gpunetio-ib-write-bw` | The CUDA kernel drives RDMA WRITE through the higher-level `doca-gpunetio` framework (the Send / Receive-style and direct-RDMA paths exposed by [`../../libs/doca-gpunetio/CAPABILITIES.md`](../../libs/doca-gpunetio/CAPABILITIES.md)). Right when the application sits on doca-gpunetio and wants the BW it will see in practice. |
-| GPI | [`doca-gpi`](../../libs/doca-gpi/SKILL.md) (library programming surface; `doca/tools/` ships no GPI `ib_write_bw` or `ib_write_lat` benchmark binary, so the GPI vs GPUNetIO BW comparison is against the library surface, not a sibling tool). | Right when the user has *already committed* to GPI as their programming surface. |
+| GPUNetIO (this skill) | `doca-gpunetio-ib-write-bw` | The CUDA kernel drives RDMA WRITE through the higher-level `doca-gpunetio` framework (the Send / Receive-style and direct-RDMA paths exposed by [`../doca-gpunetio/CAPABILITIES.md`](../doca-gpunetio/CAPABILITIES.md)). Right when the application sits on doca-gpunetio and wants the BW it will see in practice. |
+| GPI | [`doca-gpi`](../doca-gpi/SKILL.md) (library programming surface; `doca/tools/` ships no GPI `ib_write_bw` or `ib_write_lat` benchmark binary, so the GPI vs GPUNetIO BW comparison is against the library surface, not a sibling tool). | Right when the user has *already committed* to GPI as their programming surface. |
 | CPU-initiated `perftest` | Upstream `perftest` `ib_write_bw` (out of scope here; not in `doca/tools/`) | Right when the comparison the operator needs is *"how much overhead does the GPU-initiated path add (or remove) versus the classic CPU-initiated path?"*. |
 
 **Decision rule for the agent.** Surface the choice; ask which
@@ -98,14 +98,14 @@ the reported BW reflects PCIe-crossover overhead, not the
 property the operator was trying to measure. The pre-flight
 check is the GPU-NIC pairing verification in
 [`TASKS.md ## configure`](TASKS.md#configure) and the
-[`doca-gpunetio`](../../libs/doca-gpunetio/SKILL.md) library;
+[`doca-gpunetio`](../doca-gpunetio/SKILL.md) library;
 the rule is independent of the WR-init runtime surface. The
 agent quotes the pairing
 alongside any reported number.
 
 In addition, GPUNetIO carries the *"`nvidia_peermem` loaded
 for GPUDirect RDMA"* env precondition documented in
-[`../../libs/doca-gpunetio/CAPABILITIES.md#safety-policy`](../../libs/doca-gpunetio/CAPABILITIES.md#safety-policy);
+[`../doca-gpunetio/CAPABILITIES.md#safety-policy`](../doca-gpunetio/CAPABILITIES.md#safety-policy);
 without it, the GPU-resident buffers cannot be registered
 with DOCA and the benchmark cannot bring up the WR path.
 
@@ -118,8 +118,8 @@ distinct:
 | Binding constraint | Symptom on the BW plot | What to check next |
 | --- | --- | --- |
 | Link saturation | Reported BW sits near the physical IB link's documented capacity for the chosen transport; further tuning (message size, queue depth, kernel-side concurrency) does not move it. | This is the physical ceiling; quote it as the answer. |
-| NIC issue rate | Reported BW is well below link capacity but the message-size sweep flattens (the BW does not grow as message size grows); raising the queue depth or the in-flight WR count does not help. | Confirm the NIC's documented WR-submission rate for this transport; route the platform question through [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md). |
-| GPU compute occupancy | Reported BW grows with CUDA kernel block / thread count up to a point, then plateaus well below link capacity; `nvidia-smi dmon` shows the SM under-utilized. | Re-walk the CUDA kernel's persistent-kernel pattern per [`../../libs/doca-gpunetio/CAPABILITIES.md#capabilities-and-modes`](../../libs/doca-gpunetio/CAPABILITIES.md#capabilities-and-modes); the kernel may not be issuing WRs at the rate the device can accept. |
+| NIC issue rate | Reported BW is well below link capacity but the message-size sweep flattens (the BW does not grow as message size grows); raising the queue depth or the in-flight WR count does not help. | Confirm the NIC's documented WR-submission rate for this transport; route the platform question through [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md). |
+| GPU compute occupancy | Reported BW grows with CUDA kernel block / thread count up to a point, then plateaus well below link capacity; `nvidia-smi dmon` shows the SM under-utilized. | Re-walk the CUDA kernel's persistent-kernel pattern per [`../doca-gpunetio/CAPABILITIES.md#capabilities-and-modes`](../doca-gpunetio/CAPABILITIES.md#capabilities-and-modes); the kernel may not be issuing WRs at the rate the device can accept. |
 | PCIe crossover (wrong pairing) | Reported BW is well below all three of the above and does not respond to message-size / queue-depth changes the way the platform documents. | Walk the GPU-NIC pairing precondition above; the answer is platform-side, not benchmark-side. |
 
 This decomposition is the load-bearing piece of *"interpret
@@ -131,7 +131,7 @@ canonical apples-to-oranges quote.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The `doca-gpunetio-ib-write-bw`-specific overlay** is:
@@ -152,12 +152,12 @@ there; this skill does not duplicate it.
   `client/kernel.cu` is compiled with `nvcc`; the toolkit
   version must be the one paired with the installed DOCA
   per the DOCA release notes (looked up via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 - **The CUDA driver is a third axis the agent surfaces but
   does not own.** GPUDirect-style buffer registration
   requires both the CUDA driver and the `nvidia_peermem`
   kernel module loaded per
-  [`../../libs/doca-gpunetio/CAPABILITIES.md#safety-policy`](../../libs/doca-gpunetio/CAPABILITIES.md#safety-policy).
+  [`../doca-gpunetio/CAPABILITIES.md#safety-policy`](../doca-gpunetio/CAPABILITIES.md#safety-policy).
   An older CUDA driver than the toolkit was built against
   surfaces as a runtime `DOCA_ERROR_DRIVER` route per
   [`## Error taxonomy`](#error-taxonomy) layer 8.
@@ -190,9 +190,9 @@ layers the agent should distinguish, in escalating order:
    under `doca/tools/gpunetio_ib_write_bw/`. Common causes:
    `doca-gpunetio.pc` not found, `nvcc` not on `PATH`,
    GCC / GLIBC mismatch. Re-route through
-   [`doca-setup`](../../doca-setup/SKILL.md) and the
+   [`doca-setup`](../doca-setup/SKILL.md) and the
    GPUNetIO library skill's
-   [`../../libs/doca-gpunetio/TASKS.md`](../../libs/doca-gpunetio/TASKS.md)
+   [`../doca-gpunetio/TASKS.md`](../doca-gpunetio/TASKS.md)
    verification before re-running the build.
 3. **GPU-NIC pairing.** Binary built; the runtime cannot
    bind the GPU to the IB device because the platform does
@@ -206,12 +206,12 @@ layers the agent should distinguish, in escalating order:
    not registered with DOCA before `doca_ctx_start()`, the
    per-CUDA-device `doca_gpu` not initialized on the right
    CUDA device. Route to
-   [`../../libs/doca-gpunetio/CAPABILITIES.md#error-taxonomy`](../../libs/doca-gpunetio/CAPABILITIES.md#error-taxonomy).
+   [`../doca-gpunetio/CAPABILITIES.md#error-taxonomy`](../doca-gpunetio/CAPABILITIES.md#error-taxonomy).
 5. **RDMA-connection.** The OOB socket comes up but the
    queue connection fails: GID index mismatch, RDMA
    permissions do not include WRITE, the remote
    memory-mmap export was rejected. Route to
-   [`../../libs/doca-rdma/CAPABILITIES.md`](../../libs/doca-rdma/CAPABILITIES.md).
+   [`../doca-rdma/CAPABILITIES.md`](../doca-rdma/CAPABILITIES.md).
 6. **Measurement-soundness.** The benchmark completes and
    prints throughput, but the number is unsound. Common
    sub-layers: (a) the GPU-NIC pairing is wrong, (b) the
@@ -347,7 +347,7 @@ safety overlay:
   GPUDirect, hugepage reservation change, BlueField BFB
   reflash, NIC firmware burn) is a hardware-touching change
   that runs through the cross-cutting meta-policy in
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md),
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md),
   not through this tool's invocation.
 
 ## Public-source pointer
@@ -358,7 +358,7 @@ RDMA** page on `docs.nvidia.com/doca/sdk/`, plus the shipped
 source tree at `doca/tools/gpunetio_ib_write_bw/` on the
 user's install (or in the public DOCA SDK download).
 Routing to those lives in
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 Do not invent flags, GPUNetIO symbols, RDMA queue
 attributes, or expected throughput literals beyond what
 those sources document.

@@ -35,7 +35,7 @@ Routing for nearby "install" questions:
   install yet.
 - *"I want a structured probe before installing"* → the
   detect → prefer → fall back → report contract per
-  [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+  [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
   is the right surface; the structured helpers it documents
   (`doca-env --json` for version + libraries + drivers in one
   shot) are the cheapest pre-install reconnaissance.
@@ -133,12 +133,12 @@ Routing for nearby "build" questions:
   `doca_flow_tune` question. Route to
   [`doca-programming-guide ## build`](../../doca-programming-guide/TASKS.md#build)
   for the cross-library build pattern and to
-  [`doca-flow TASKS.md ## build`](../../libs/doca-flow/TASKS.md#build)
+  [`doca-flow TASKS.md ## build`](../doca-flow/TASKS.md#build)
   for the Flow-specific build overlay; the tune binary is the
   shipped harness, a bespoke analyzer is a different artifact.
 - *"I want the trace-build flavor of `doca-flow` so the tune
   attach role works."* → the trace-flavor question belongs to
-  [`doca-flow TASKS.md ## build`](../../libs/doca-flow/TASKS.md#build);
+  [`doca-flow TASKS.md ## build`](../doca-flow/TASKS.md#build);
   this skill does not duplicate the Flow build recipe.
 
 The `## What this skill deliberately does not ship` block in
@@ -165,7 +165,7 @@ The pattern:
    provenance of the recommendation.
 2. **Translate the recommendation into a Flow-program change
    proposal.** Per
-   [`doca-flow TASKS.md ## modify`](../../libs/doca-flow/TASKS.md#modify),
+   [`doca-flow TASKS.md ## modify`](../doca-flow/TASKS.md#modify),
    identify which Flow API call in the program is the lever the
    recommendation moves (a pipe attribute, a resource-hint
    parameter, a steering-mode selection). If the recommendation
@@ -312,7 +312,7 @@ The smoke-before-bulk shape:
    predicted, reselect exactly one of the three axes and run one
    new confirmed recommendation. If that second attempt is also
    non-green, restore the pre-change snapshot via
-   [`doca-flow TASKS.md ## rollback`](../../libs/doca-flow/TASKS.md#rollback),
+   [`doca-flow TASKS.md ## rollback`](../doca-flow/TASKS.md#rollback),
    report both diffs, and escalate the unresolved gap. Do not
    start a third tuning attempt.
 
@@ -323,8 +323,8 @@ Eval-loop overlay (rows apply to every tune session):
 | Smoke completed; analyze recommendation does not match the question | Could be the wrong tuning axis was selected, the wrong measurement was selected, or the scope is wrong | Reselect exactly one axis in [`## configure`](#configure), obtain fresh per-recommendation confirmation, and run once. If that second attempt is non-green, roll back and escalate; do not reselect another axis. |
 | Online attach fails on a known-good Flow app | Attach-failed layer per [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy) layer 2; not a measurement-soundness issue | Walk [`## debug`](#debug) layer 2; do not loop on the dumper expecting different output |
 | Before / after diff is empty when a Flow-program change shipped | Either the change did not deploy, or the captured before-leg snapshot was already the post-change state | Re-confirm the Flow application's running version, re-capture the before leg from a known-pre-change state |
-| Recommendation says *"increase table size"* but the Flow program hard-codes the value | Recommendation-unactionable layer 5; not a tune bug | Modify the Flow program per [`doca-flow TASKS.md ## modify`](../../libs/doca-flow/TASKS.md#modify) to expose the knob, then re-run the tune session |
-| After-leg measurement is in the opposite direction from the prediction | Could be a real regression the recommendation introduced, or could be a different workload running on the device | Re-confirm workload stability, quote the diff, then reselect one axis and retry once with fresh confirmation. On a second non-green result, restore the pre-change snapshot and escalate through [`doca-debug ## debug`](../../doca-debug/SKILL.md); no third attempt. |
+| Recommendation says *"increase table size"* but the Flow program hard-codes the value | Recommendation-unactionable layer 5; not a tune bug | Modify the Flow program per [`doca-flow TASKS.md ## modify`](../doca-flow/TASKS.md#modify) to expose the knob, then re-run the tune session |
+| After-leg measurement is in the opposite direction from the prediction | Could be a real regression the recommendation introduced, or could be a different workload running on the device | Re-confirm workload stability, quote the diff, then reselect one axis and retry once with fresh confirmation. On a second non-green result, restore the pre-change snapshot and escalate through [`doca-debug ## debug`](../doca-debug/SKILL.md); no third attempt. |
 
 This skill does **not** ship a "test fixture" or pre-recorded
 expected output. The expected output is install-, device-,
@@ -346,14 +346,14 @@ layers in order:
    CLI / JSON intuition.
 2. **Attach-failed (online mode).** Confirm the live Flow
    application is up via
-   [`doca-flow TASKS.md ## test`](../../libs/doca-flow/TASKS.md#test);
+   [`doca-flow TASKS.md ## test`](../doca-flow/TASKS.md#test);
    confirm the `network.server_uds` path matches the
    application's actual setting; confirm filesystem permissions
    and namespace boundary. Re-attempt only after the application
    is on the snapshot.
 3. **Pipe-not-found.** Confirm the pipe set against the Flow
    application's own view per
-   [`doca-flow TASKS.md ## modify`](../../libs/doca-flow/TASKS.md#modify);
+   [`doca-flow TASKS.md ## modify`](../doca-flow/TASKS.md#modify);
    if the pipe is genuinely not created, the next move is the
    Flow program, not the tune binary.
 4. **Measurement-unsound.** Walk the three sub-layers per
@@ -371,7 +371,7 @@ layers in order:
    tune-specific symptom is a tune binary from a different DOCA
    train than the Flow application's linked library.
 7. **Cross-cutting.** Hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) for the
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) for the
    cross-cutting debug ladder and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug) for
    the env-side layers.
@@ -424,7 +424,7 @@ The pattern:
    [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
    tune-vs-perf table; quoting the recommendation without the
    baseline is half the picture and the
-   [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug)
+   [`doca-debug TASKS.md ## debug`](../doca-debug/TASKS.md#debug)
    ladder cannot pick up where the agent left off without both.
 
 ## Deferred task verbs
@@ -438,15 +438,15 @@ name.
   [`doca-flow-dpa-perf`](../doca-flow-dpa-perf/SKILL.md) (DPA-
   offloaded). Tune does not produce a primary baseline number.
 - **write a doca-flow application** ⇒
-  [`doca-flow`](../../libs/doca-flow/SKILL.md), layered on
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-flow`](../doca-flow/SKILL.md), layered on
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   Tune observes pipelines the program created; it does not
   create them.
 - **install DOCA** ⇒
   [`doca-setup ## configure`](../../doca-setup/TASKS.md#configure)
   and [`## no-install`](../../doca-setup/TASKS.md#no-install).
 - **library-internal pipe / counter / inspector deep dive** ⇒
-  [`doca-flow`](../../libs/doca-flow/SKILL.md). Tune transports
+  [`doca-flow`](../doca-flow/SKILL.md). Tune transports
   the data the Flow library exposes programmatically; the deeper
   per-pipe semantics belong to the library.
 - **streaming telemetry export of Flow KPIs to a production
@@ -467,7 +467,7 @@ guide.
 
 **Infra-aware preamble (every row below).** Per the bundle's
 detect → prefer → fall back → report contract documented in
-[`doca-structured-tools-contract ## The agent behavior contract`](../../doca-structured-tools-contract/SKILL.md#the-agent-behavior-contract),
+[`doca-structured-tools-contract ## The agent behavior contract`](../doca-structured-tools-contract/SKILL.md#the-agent-behavior-contract),
 the agent should:
 
 1. Probe for the matching structured helper FIRST (`doca-env --json`
@@ -481,9 +481,9 @@ the agent should:
 3. If the probe fails, fall back to the manual command in the
    row. Report *"falling back to manual chain"*.
 4. The schemas the structured tools emit are defined in
-   [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
+   [`doca-structured-tools-contract ## Schemas`](../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose (class) | Invocation (shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -494,7 +494,7 @@ the agent should:
 | Snapshot a live Flow pipeline (online read-only) | The documented online-mode invocation against a JSON config naming `network.server_uds` and the scope | [`## run`](#run) step 3 | The dumper CSV, analyze JSON, and visualize mermaid land in the `outputs_directory`; live Flow state is not changed. |
 | Diff two captured tune sessions | `scripts/flow_json_diff.py` and `scripts/flow_mermaid_diff.py` from the shipped `scripts/` directory | [`## test`](#test) step 5 | The diff scripts produce a structural and counter diff that the agent quotes verbatim; never paraphrased. |
 | Post-process the dumper CSV | `scripts/hw_counters_csv_analyzer.py` from the shipped `scripts/` directory | [`## run`](#run) step 5 | The analyzer reports per-counter statistics over the captured CSV; the agent quotes the analyzer's output. |
-| Save a session snapshot for debug | Capture the full `outputs_directory` (CSV + JSON + mermaid + log files) plus the four-tuple of (cmd line, JSON config, DOCA version, device, env) | [`## test`](#test) step 1 + [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug) | The saved bundle is consumed by the cross-cutting debug ladder as the Flow-side evidence pair. |
+| Save a session snapshot for debug | Capture the full `outputs_directory` (CSV + JSON + mermaid + log files) plus the four-tuple of (cmd line, JSON config, DOCA version, device, env) | [`## test`](#test) step 1 + [`doca-debug TASKS.md ## debug`](../doca-debug/TASKS.md#debug) | The saved bundle is consumed by the cross-cutting debug ladder as the Flow-side evidence pair. |
 
 Three cross-cutting rules for this appendix:
 
@@ -510,9 +510,9 @@ Three cross-cutting rules for this appendix:
   canonical dataplane-disruption failure mode.
 - **Cross-link instead of duplicate.** Cross-cutting commands
   (`pkg-config --modversion`, `doca_caps --list-devs`, `dmesg`)
-  live in [`doca-debug TASKS.md ## Command appendix`](../../doca-debug/TASKS.md);
+  live in [`doca-debug TASKS.md ## Command appendix`](../doca-debug/TASKS.md);
   Flow-application-side build / port / pipe commands live in
-  [`doca-flow TASKS.md ## Command appendix`](../../libs/doca-flow/TASKS.md);
+  [`doca-flow TASKS.md ## Command appendix`](../doca-flow/TASKS.md);
   the perf-side measurement commands live in
   [`doca-flow-perf`](../doca-flow-perf/SKILL.md) and
   [`doca-flow-dpa-perf`](../doca-flow-dpa-perf/SKILL.md); this
@@ -549,8 +549,8 @@ in [`SKILL.md`](SKILL.md):
   NGC DOCA container) and a working `doca-flow` application
   (or a captured configuration of one). If either is in doubt,
   route to
-  [`doca-setup`](../../doca-setup/SKILL.md) and
-  [`doca-flow`](../../libs/doca-flow/SKILL.md) before running
+  [`doca-setup`](../doca-setup/SKILL.md) and
+  [`doca-flow`](../doca-flow/SKILL.md) before running
   anything else here. For baselines that the recommendations
   optimize on top of, load
   [`doca-flow-perf`](../doca-flow-perf/SKILL.md) and / or

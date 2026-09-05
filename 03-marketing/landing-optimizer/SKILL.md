@@ -17,7 +17,7 @@ metadata: {"author": "aaron-he-zhu", "version": "19.2.0", "discipline": "influen
 
 This skill helps you create and optimize landing pages specifically for influencer marketing traffic. When users click from an influencer's post, the landing experience should feel connected and optimized for conversion.
 
-> **Cross-discipline (paid ads):** this is also the **paid-ads** post-click skill — the page half of the ROAS **Offer** message-match (it pairs with [ad-creative-builder](../../../ad/orchestrate/ad-creative-builder/SKILL.md), which owns the ad half). The same diagnose-and-fix flow applies to paid landing pages; save paid runs under `memory/ad/landing-optimizer/`. On paid runs, message-match the page against the [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md) ledger when present: offer terms, promo codes, and dates against `memory/claims/offers.md`, and claim wording against the approved variants in `memory/claims/claims-ledger.md`.
+> **Cross-discipline (paid ads):** this is also the **paid-ads** post-click skill — the page half of the ROAS **Offer** message-match (it pairs with [ad-creative-builder](../ad-creative-builder/SKILL.md), which owns the ad half). The same diagnose-and-fix flow applies to paid landing pages; save paid runs under `memory/ad/landing-optimizer/`. On paid runs, message-match the page against the [offer-claims-registry](../offer-claims-registry/SKILL.md) ledger when present: offer terms, promo codes, and dates against `memory/claims/offers.md`, and claim wording against the approved variants in `memory/claims/claims-ledger.md`.
 
 ## Quick Start
 
@@ -46,7 +46,7 @@ Our influencer landing page has [X%] conversion rate. How can we improve it?
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -59,7 +59,7 @@ Optional connectors that can deepen the analysis when available:
 - `~~CMS / landing page builder` — inspect current page structure and copy directly.
 - `~~social platform analytics` — confirm the creator's actual messaging and audience.
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the verified free/keyless recipe per category. Every step degrades gracefully to user-supplied inputs.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the verified free/keyless recipe per category. Every step degrades gracefully to user-supplied inputs.
 
 ## Instructions
 
@@ -91,13 +91,13 @@ Save the finished plan to `memory/influencer/landing-optimizer/YYYY-MM-DD-<topic
 
 - [templates.md](references/templates.md) — all step fill-in templates, ASCII layouts, HTML snippets, the full worked example, and tips.
 
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipes per connector category.
-- [conversion-quality.md](../../../references/scoring-rubrics/conversion-quality.md) — advisory conversion rubric (non-veto) to sanity-check the optimization plan.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipes per connector category.
+- [conversion-quality.md](../../references/aaron-marketing/scoring-rubrics/conversion-quality.md) — advisory conversion rubric (non-veto) to sanity-check the optimization plan.
 - Sibling skills in the influencer-marketing family:
-  - [content-amplifier](../../activate/content-amplifier/SKILL.md) — source creator content for landing pages and drive traffic to them.
-  - [brief-generator](../../target/brief-generator/SKILL.md) — align creator content with landing goals.
+  - [content-amplifier](../content-amplifier/SKILL.md) — source creator content for landing pages and drive traffic to them.
+  - [brief-generator](../brief-generator/SKILL.md) — align creator content with landing goals.
 
 ## Next Best Skill
 
@@ -105,7 +105,7 @@ Save the finished plan to `memory/influencer/landing-optimizer/YYYY-MM-DD-<topic
 
 **Alternates** (same Report family):
 
-- [content-amplifier](../../activate/content-amplifier/SKILL.md) — when the audit shows the page needs more creator content to feature.
+- [content-amplifier](../content-amplifier/SKILL.md) — when the audit shows the page needs more creator content to feature.
 - [roi-calculator](../roi-calculator/SKILL.md) — when the page's conversion is validated and you want to translate it into ROI and payback math.
 
 **Termination note**: Maintain a visited-set this session. If a recommended skill has already been invoked, stop and report the chain as complete rather than re-running it. Hard stop at chain depth 3 to avoid loops.

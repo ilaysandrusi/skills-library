@@ -144,7 +144,7 @@ For DOCA Flow internals — port and representor setup, pipe creation,
 match/action specifications, pipe validation before hardware programming,
 Flow counters and traces, Flow version compatibility, and debugging
 `DOCA_ERROR_*` failures from the Flow API — load
-[`doca-flow`](../libs/doca-flow/SKILL.md). That skill assumes this one is
+[`doca-flow`](../doca-flow/SKILL.md). That skill assumes this one is
 available for shared documentation routing and install-layout lookups,
 `doca-setup` for environment preparation, and `doca-programming-guide`
 for the cross-library programming patterns it layers on top of.

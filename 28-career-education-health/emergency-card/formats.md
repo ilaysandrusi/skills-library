@@ -48,16 +48,16 @@ HTML文件包含以下章节：
 **使用示例**:
 ```bash
 # 生成HTML卡片（自动检测类型）
-python scripts/generate_emergency_card.py
+python ../../scripts/claude-ally-health/generate_emergency_card.py
 
 # 生成特定类型
-python scripts/generate_emergency_card.py child
+python ../../scripts/claude-ally-health/generate_emergency_card.py child
 
 # 生成钱包卡尺寸
-python scripts/generate_emergency_card.py standard wallet
+python ../../scripts/claude-ally-health/generate_emergency_card.py standard wallet
 
 # 生成大字版
-python scripts/generate_emergency_card.py elderly large
+python ../../scripts/claude-ally-health/generate_emergency_card.py elderly large
 ```
 
 **优势**:

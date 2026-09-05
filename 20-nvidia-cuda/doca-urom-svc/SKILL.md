@@ -34,10 +34,10 @@ shape of service is DOCA UROM Service, what does it execute, and
 how does it pair with the host-side library*, start at
 [`CAPABILITIES.md`](CAPABILITIES.md). If DOCA is not installed
 on the BlueField yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user's
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user's
 real question is about *writing host-side code that enqueues
 remote memory operations through the paired API*, the right
-skill is [`doca-urom`](../../libs/doca-urom/SKILL.md) — the
+skill is [`doca-urom`](../doca-urom/SKILL.md) — the
 host-side library; this service is the DPU-side executor that
 library offloads to.
 
@@ -66,7 +66,7 @@ load-bearing piece; the worked example is one instance.
   [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility)
   + the paired-version step in
   [`TASKS.md ## configure`](TASKS.md#configure) +
-  [`doca-version`](../../doca-version/SKILL.md) as the canonical
+  [`doca-version`](../doca-version/SKILL.md) as the canonical
   body.
 - **"What does the service configure — UCX components,
   collectives, queue depths, how the host pairs over Comch?"** — worked
@@ -129,13 +129,13 @@ end-to-end before scaling a real HPC workload on top.
 It is **not** for NVIDIA developers contributing to the DOCA
 UROM Service itself, and it is **not** a programming guide for
 *building applications on top of* DOCA libraries (that is
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md)
 plus the matching `libs/<library>` skill). DOCA UROM Service is
 a **service**, not a library: the operator deploys a container
 on the BlueField and configures it via the documented config
 surface; they do not link `lib<uromservice>.so` to write their
 own program. The paired host-side library
-[`doca-urom`](../../libs/doca-urom/SKILL.md) is a separate
+[`doca-urom`](../doca-urom/SKILL.md) is a separate
 skill with its own scope and its own audience (HPC application
 developers, not service operators); the agent must refuse to
 collapse the library and the service into one another.
@@ -198,10 +198,10 @@ installed. Concretely:
 Do **not** load this skill for general DOCA orientation,
 install of DOCA itself, host-side `doca-urom` library API
 questions, or non-UROM HPC stack topics. For those, route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-setup`](../../doca-setup/SKILL.md), or the matching
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-setup`](../doca-setup/SKILL.md), or the matching
 host-side library skill
-[`doca-urom`](../../libs/doca-urom/SKILL.md).
+[`doca-urom`](../doca-urom/SKILL.md).
 
 ## What this skill provides
 
@@ -233,9 +233,9 @@ The skill assumes a BlueField where DOCA is already installed
 and the operator has the privileges the public DOCA UROM
 Service Guide expects to pull, run, and configure containers
 on BlueField Arm. It does not cover installing DOCA — that path
-goes through [`doca-setup`](../../doca-setup/SKILL.md). It does
+goes through [`doca-setup`](../doca-setup/SKILL.md). It does
 not cover the host-side `doca-urom` library API — that is
-[`doca-urom`](../../libs/doca-urom/SKILL.md).
+[`doca-urom`](../doca-urom/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -260,7 +260,7 @@ add:
 - **Container image names, tags, or registry paths.** The
   authoritative image source is the public DOCA UROM Service
   Guide reachable through
-  [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services);
+  [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services);
   the service's image tag is version-bound and changes
   between DOCA releases AND must match the host-side library
   version per the paired-contract rule. Inventing or
@@ -271,7 +271,7 @@ add:
 - **Host-side `doca-urom` application source code, build
   manifests, or MPI / UCX integration glue.** Those live on
   the host and belong to
-  [`doca-urom`](../../libs/doca-urom/SKILL.md) (host library
+  [`doca-urom`](../doca-urom/SKILL.md) (host library
   API) or to upstream MPI / UCX documentation (stack-side
   integration). This skill names *that* the host side must
   be wired through `doca-urom` and *that* the version must
@@ -304,7 +304,7 @@ add:
 
 ## Related skills
 
-- [`doca-urom`](../../libs/doca-urom/SKILL.md) — the paired
+- [`doca-urom`](../doca-urom/SKILL.md) — the paired
   host-side library. Hosts link `doca-urom` to ENQUEUE remote
   memory operations; this service EXECUTES them. The two
   skills load together for any HPC offload deployment and they
@@ -312,34 +312,34 @@ add:
   on its own; this service is never enqueued through by
   itself. Mismatches between the library and the service are
   the dominant subtle-failure mode for the paired contract.
-- [`doca-rdma`](../../libs/doca-rdma/SKILL.md) — the underlying
+- [`doca-rdma`](../doca-rdma/SKILL.md) — the underlying
   RDMA transport substrate this service uses to actually move
   bytes once a host enqueue lands on the DPU. The service does
   NOT replace RDMA; it sits on top of it. A failing RDMA fabric
   surfaces at the service as *operations enqueued but never
   complete* and at the host as `DOCA_ERROR_IO_FAILED`; the fix
   is on the substrate side, not in this service's config.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — the routing table to the public DOCA UROM Service Guide
   and the rest of the public DOCA documentation set. The
   service URL is listed under
-  [`## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation
+  [`## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation
   and install verification on the BlueField where the service
   container will run, including the *I have no install yet*
   path via the public NGC DOCA container. This skill assumes
   its preconditions are satisfied on BlueField Arm.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. This service's container tag is
   version-bound AND its host-library pairing is version-bound;
   this skill's `## Version compatibility` cross-links the
   four-way match rule and adds the host-library + DPU-service
   paired-version overlay that is load-bearing for UROM.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md)
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md)
   — the bundle's structured-tools precedence rule (detect /
   prefer / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md)
   — general DOCA patterns. The DOCA UROM Service is
   service-shaped not library-shaped, so the build / modify /
   first-app pattern there does not apply directly, but the
@@ -347,7 +347,7 @@ add:
   layer-before-config) remains useful when the service
   reports an error that originated in the container runtime
   or in a DOCA library it called.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). Service-specific debug (container not
   running, host-library / service version mismatch,

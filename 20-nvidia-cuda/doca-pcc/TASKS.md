@@ -18,7 +18,7 @@ cross-library DOCA patterns layered under everything below
 (the universal Core lifecycle, the cross-library
 `DOCA_ERROR_*` taxonomy, the modify-a-shipped-sample
 workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -73,7 +73,7 @@ Steps the agent should walk the user through:
    the user is asking *"how do I design the algorithm
    itself"*, that is the public DOCA PCC programming guide +
    the user's domain expertise — route via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    to the public guide; do not invent an algorithm body.
 3. **Run triple-axis capability discovery against the target
    BlueField.** Per the triple-axis rule in
@@ -158,7 +158,7 @@ This skill carries only the PCC-specific overlay:
 | --- | --- | --- |
 | `pkg-config` module name | `doca-pcc` | The library's `.pc` file installed by the DOCA host packages; gives the host-side include + link flags for the DOCA PCC host API |
 | DPA-side toolchain | `dpacc` (DPACC compiler), installed alongside DOCA | Compiles DPA-side congestion-control algorithm translation units into the binary that the host executable embeds as the `doca_pcc_app`. The host system compiler is NOT a substitute |
-| Include flags | `pkg-config --cflags doca-pcc` for the host side; the DPACC-prescribed include path for the DPA side | Resolves DOCA headers under whichever include directory `pkg-config --cflags` reports on this install (do not hardcode the include path — it can move across DOCA install profiles) for the host side; the DPA-side include path comes from the DPACC install layout via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) |
+| Include flags | `pkg-config --cflags doca-pcc` for the host side; the DPACC-prescribed include path for the DPA side | Resolves DOCA headers under whichever include directory `pkg-config --cflags` reports on this install (do not hardcode the include path — it can move across DOCA install profiles) for the host side; the DPA-side include path comes from the DPACC install layout via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) |
 | Link flags | `pkg-config --libs doca-pcc` on the host side, plus the DPACC-prescribed embed step that bakes the DPA-side algorithm binary into the host executable | Pulls in whatever `pkg-config --libs` resolves on this install (do not predict the `-l<name>` form by hand — `.so` basenames use underscores, `.pc` names use hyphens, and `pkg-config` is the only correct translator) on the host side. The DPACC embed step is the load-bearing build action — without it the host has no PCC algorithm image to load at runtime |
 | Companion DOCA libs | `doca-argp` for arg parsing in samples | The shipped samples include both host-side and DPA-side translation units; do not invent a one-side-only manifest |
 | What NOT to add to the host link line | The DPA-side libraries that the algorithm body may call from inside the DPA (named generically here so we don't invent the symbol set) — those are linked into the DPA-side translation unit by `dpacc`, NOT into the host executable | Adding DPA-side libraries to the host link line is a common first-build error; the host side links only against `doca-pcc` + `doca-common` |
@@ -187,7 +187,7 @@ this skill provides the PCC-specific slot fill.
 | Slot | What the agent asks the user | PCC-specific consideration |
 | --- | --- | --- |
 | 1. Starting sample | Which sample under `/opt/mellanox/doca/samples/doca_pcc/`? | Pick a sample whose **shape** matches the user's intent: same host-side parameter shape, same observability pattern, same DPA-side algorithm-entry-point set. PCC samples are two-side programs; the sample's DPA-side translation unit is the second half of the verified base, and the algorithm body in it is the starting point for the user's own algorithm |
-| 2. DPA-side algorithm body | What is the algorithm actually computing? Is it a brand-new design or a tweak on the sample's algorithm? | The DPA-side translation unit is the in-place edit point for the algorithm body. The agent's anti-pattern alerts: (a) do NOT propose moving the algorithm logic to the host side — that defeats the entire reason to use PCC (the algorithm has to run per packet / per event on the DPA, not host-round-trip per packet); (b) do NOT invent a brand-new algorithm body in this skill — congestion-control algorithm design is a research / domain question, not an API question, route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) |
+| 2. DPA-side algorithm body | What is the algorithm actually computing? Is it a brand-new design or a tweak on the sample's algorithm? | The DPA-side translation unit is the in-place edit point for the algorithm body. The agent's anti-pattern alerts: (a) do NOT propose moving the algorithm logic to the host side — that defeats the entire reason to use PCC (the algorithm has to run per packet / per event on the DPA, not host-round-trip per packet); (b) do NOT invent a brand-new algorithm body in this skill — congestion-control algorithm design is a research / domain question, not an API question, route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) |
 | 3. Host-side parameter shape | What parameters does the algorithm take, what shapes / sizes / ranges? | Per the two-side-program rule in [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes), the host-side parameter calls and the DPA-side algorithm's parameter shape MUST agree on count, size, type, and range. Any change to one side requires updating the other; track this as a single edit, not two |
 | 4. Attach-to-port choice | Which `doca_dev` will the modified algorithm attach to? Is it the same port the sample assumes? | The `doca_dev` selection in the sample's host-side configure step is what determines which BlueField port the algorithm modulates. Changing it changes which RDMA / RoCE traffic the algorithm affects; the agent must surface this even when it looks like a trivial config tweak |
 | 5. Observability hook-up | How does the host observe what the running algorithm is doing? | Whatever observability the algorithm emits to the host through the loaded image's reporting surface is the user's primary signal during testing. A modify pass that changes the algorithm body without updating the observability hook-up is a common way to lose visibility silently |
@@ -250,7 +250,7 @@ Steps the agent should walk the user through:
    inactive, reach for the `pcc_counters` CLI named in
    [`CAPABILITIES.md ## Observability`](CAPABILITIES.md#observability)
    and routed via
-   [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools)
+   [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools)
    to inspect counters at the port — this catches the
    *"algorithm loaded fine but is not actually affecting
    traffic"* case the host-side surface alone may not show.
@@ -388,7 +388,7 @@ and 7 (driver):
   [`doca-rdma`](../doca-rdma/SKILL.md)) OR the algorithm
   body computes correctly but takes no rate-update action.
   Use the `pcc_counters` CLI (route via
-  [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools))
+  [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools))
   to inspect the port-level counters and confirm which case
   applies.
 - A *"DPA-side PCC algorithm hung; cannot stop the program"*
@@ -465,9 +465,9 @@ follows so the agent does not invent guidance:
   compiler, choosing matched versions, enabling the
   BlueField firmware custom-PCC slot, post-install
   verification, `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill assumes DOCA + DPACC are installed and matched
   and the firmware custom-PCC slot is enabled.
 - **deploy.** Deploying custom-PCC-using applications at
@@ -479,7 +479,7 @@ follows so the agent does not invent guidance:
   "deploy" workflow.
 - **algorithm design.** Designing the congestion-control
   algorithm body itself — out of scope. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public *DOCA PCC* programming guide and to the
   user's own congestion-control domain expertise. This
   skill prescribes how to *load and attach* an algorithm
@@ -489,20 +489,20 @@ follows so the agent does not invent guidance:
   layout used inside the algorithm, DPACC compile flags,
   DPA-side debugging from inside the algorithm — out of
   scope. Route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   to the public *DOCA PCC*, *DOCA DPACC Compiler*, and
   *DOCA DPA* guides plus the *DPA Tools* umbrella. This
   skill prescribes how to *use* the DPACC-produced image
   from the host; it does not redefine how to produce it.
 - **`pcc_counters` diagnostic CLI** — a separate
   artifact for read-only PCC counter inspection; route via
-  [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools).
+  [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools).
   This skill is for *custom algorithm load + control*, not
   for inspection.
 - **Default factory PCC algorithm in ConnectX firmware** —
   not a `doca-pcc` topic. Configuration is firmware-side;
   route via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Command appendix
 
@@ -532,19 +532,19 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |
 | `pkg-config --modversion doca-pcc` | `## configure` step 1; `## build` minimum-version slot | What is the build-time DOCA PCC host-side library version? | A semver string matching `doca_caps --version`. Disagreement = partial install (route to [`doca-version TASKS.md ## debug`](../../doca-version/TASKS.md#debug) layer 2) |
 | `pkg-config --cflags --libs doca-pcc` | `## build` | What include + link flags does the host-side linker need? | Trust whatever `pkg-config --cflags --libs` produces on this install. Do not hardcode either the `-I` include path or the `-l<name>` flag form — both can drift between DOCA install profiles and DOCA majors; the on-disk `.so` basenames use underscores on every release where we have ground truth, while the `.pc` package names use hyphens, and `pkg-config` is the only thing that resolves both correctly. Hand-crafted `-l` lines silently break when DOCA upgrades. |
-| `which dpacc && dpacc --version` (or the install-tree path) | `## configure` step 1; `## build` minimum-DPACC slot | Is the DPACC compiler installed and at what version? | A version string the agent compares against the DOCA Compatibility Policy linked from [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility). Missing `dpacc` = the DPA-side algorithm cannot be built; route to [`doca-setup`](../../doca-setup/SKILL.md) |
-| `doca_caps --list-devs` | `## configure` step 1; `## configure` step 3 | Which DOCA devices does the host see, and which expose a DPA processor (the hardware substrate the custom PCC algorithm runs on)? | One entry per `doca_dev` with the BlueField identity and the per-library capability flags including the DPA support axis. No DPA-capable entry = the BlueField is not present, not in the right mode, or not on a generation that exposes the DPA; route to [`doca-setup`](../../doca-setup/SKILL.md) |
+| `which dpacc && dpacc --version` (or the install-tree path) | `## configure` step 1; `## build` minimum-DPACC slot | Is the DPACC compiler installed and at what version? | A version string the agent compares against the DOCA Compatibility Policy linked from [`CAPABILITIES.md ## Version compatibility`](CAPABILITIES.md#version-compatibility). Missing `dpacc` = the DPA-side algorithm cannot be built; route to [`doca-setup`](../doca-setup/SKILL.md) |
+| `doca_caps --list-devs` | `## configure` step 1; `## configure` step 3 | Which DOCA devices does the host see, and which expose a DPA processor (the hardware substrate the custom PCC algorithm runs on)? | One entry per `doca_dev` with the BlueField identity and the per-library capability flags including the DPA support axis. No DPA-capable entry = the BlueField is not present, not in the right mode, or not on a generation that exposes the DPA; route to [`doca-setup`](../doca-setup/SKILL.md) |
 | `ls /opt/mellanox/doca/samples/doca_pcc/` | `## modify` slot 1 | Which PCC samples ship in this install (both host-side AND DPA-side translation units), and which is the closest starting point? | A list of sample directories that each contain BOTH host-side and DPA-side source plus a `meson.build` that wires `dpacc` and `pkg-config doca-pcc` together |
 | `dmesg \| tail -n 40` (sudo) | `## debug` layer 7 | What did the kernel / driver log around the last PCC call? | Empty or recent benign messages. Repeated mlx5 / PCC-driver / firmware errors → driver-layer bug; route to [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug). Repeated *"custom PCC slot not enabled"* or similar → firmware-side fix |
 | `DOCA_LOG_LEVEL=trace ./<binary>` | `## run` step 5 | What did the structured DOCA logger emit for the first failing host-side PCC call? | A trace-level line on every host-side lifecycle transition and every algorithm-load / parameter-set call. Silence after a `doca_pcc_start()` = either host PE not progressed OR algorithm body running but emitting nothing — reach for the counter tool next |
-| (route via [`doca-public-knowledge-map ## DOCA tools`](../../doca-public-knowledge-map/SKILL.md#doca-tools)) `pcc_counters` CLI — read-only PCC counter inspection at the port | `## test` step 2; `## debug` layer 5 | What are the actual PCC-related counters at the BlueField port doing right now, independent of the host-side `doca-pcc` program? | The public *DOCA Tools* umbrella documents the per-tool output; the agent's job is to NAME the existence of this tool and route the user there, not to redefine its surface. This is the load-bearing diagnostic for the *"the algorithm loaded but I see no on-wire change"* case |
-| (route via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)) DPA-side developer tools — DPA debugger, DPA process-state inspector, DPA statistics tool | `## debug` layer 5; `## debug` layer 6 | What is the DPA processor itself doing right now, from the DPA side (for cases where the algorithm body is suspected to be stuck)? | The public *DPA Tools* umbrella documents the per-tool output; the agent's job is to NAME the existence of these tools and route the user there. These overlay the same surface [`doca-dpa CAPABILITIES.md ## Observability`](../doca-dpa/CAPABILITIES.md#observability) documents |
+| (route via [`doca-public-knowledge-map ## DOCA tools`](../doca-public-knowledge-map/SKILL.md#doca-tools)) `pcc_counters` CLI — read-only PCC counter inspection at the port | `## test` step 2; `## debug` layer 5 | What are the actual PCC-related counters at the BlueField port doing right now, independent of the host-side `doca-pcc` program? | The public *DOCA Tools* umbrella documents the per-tool output; the agent's job is to NAME the existence of this tool and route the user there, not to redefine its surface. This is the load-bearing diagnostic for the *"the algorithm loaded but I see no on-wire change"* case |
+| (route via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)) DPA-side developer tools — DPA debugger, DPA process-state inspector, DPA statistics tool | `## debug` layer 5; `## debug` layer 6 | What is the DPA processor itself doing right now, from the DPA side (for cases where the algorithm body is suspected to be stuck)? | The public *DPA Tools* umbrella documents the per-tool output; the agent's job is to NAME the existence of these tools and route the user there. These overlay the same surface [`doca-dpa CAPABILITIES.md ## Observability`](../doca-dpa/CAPABILITIES.md#observability) documents |
 
 For commands shared across libraries (`pkg-config --modversion`,
 `doca_caps`, `cat /opt/mellanox/doca/applications/VERSION`,

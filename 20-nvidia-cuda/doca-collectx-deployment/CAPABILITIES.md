@@ -6,9 +6,9 @@ CollectX-based telemetry collector. Pick the pattern first, then
 drill into the H2 that owns the substance. For the *how* of
 executing each pattern, jump to [TASKS.md](TASKS.md). For the
 two telemetry **library** API surfaces this skill routes to, see
-[`doca-telemetry`](../libs/doca-telemetry/SKILL.md) (the
+[`doca-telemetry`](../doca-telemetry/SKILL.md) (the
 hardware-counter reader) and
-[`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md)
+[`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md)
 (the application-side publisher). For the productized DTS
 container (out of scope here), see the
 [`doca-public-knowledge-map` externally-productized routing row](../doca-public-knowledge-map/SKILL.md#externally-productized-doca-software--not-in-this-bundle-but-here-is-where-to-route).
@@ -69,8 +69,8 @@ config-level guidance.
 | Surface | What it is | Owner |
 | --- | --- | --- |
 | CollectX (clx) collection mechanism | The framework that gathers provider counters into a schema and ships them through exporters — the *collector runtime* the operator deploys | THIS skill (deployment / operation) |
-| Hardware-counter reader library | The per-domain API a DOCA program links to *read* hardware counters off a `doca_dev` | [`doca-telemetry`](../libs/doca-telemetry/SKILL.md) |
-| Publisher library | The application-side API a DOCA program links to *emit / publish* counters and events to a consumer | [`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md) |
+| Hardware-counter reader library | The per-domain API a DOCA program links to *read* hardware counters off a `doca_dev` | [`doca-telemetry`](../doca-telemetry/SKILL.md) |
+| Publisher library | The application-side API a DOCA program links to *emit / publish* counters and events to a consumer | [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md) |
 | Productized DTS container | The packaged, NGC-shipped / kubelet-started DOCA Telemetry Service as-deployed (config schema, built-in providers, manifest) | Out of bundle (Non-goal #7) — route to the [public DTS guide](../doca-public-knowledge-map/SKILL.md#externally-productized-doca-software--not-in-this-bundle-but-here-is-where-to-route) |
 
 Conflating any two of these is the #1 first-touch telemetry
@@ -217,7 +217,7 @@ live), defer to
   the canonical "silently dropped metric" — the collector does
   not fail loudly, it just emits nothing for that counter. Probe
   per-device support first (the same gate-before-commit rule
-  [`doca-telemetry-utils`](../tools/doca-telemetry-utils/SKILL.md)
+  [`doca-telemetry-utils`](../doca-telemetry-utils/SKILL.md)
   owns for the exporter-config case), and verify the probe result
   against the live device, not from memory.
 - **The collector is read-only against the device.** Sampling
@@ -242,9 +242,9 @@ collector. Adjacent topics the agent will get asked but should
 route elsewhere:
 
 - **The hardware-counter reader API** — owned by
-  [`doca-telemetry`](../libs/doca-telemetry/SKILL.md).
+  [`doca-telemetry`](../doca-telemetry/SKILL.md).
 - **The application-side publisher API** — owned by
-  [`doca-telemetry-exporter`](../libs/doca-telemetry-exporter/SKILL.md).
+  [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md).
 - **The productized DTS container as-deployed** — externally
   productized (Non-goal #7); route to the
   [public DTS guide](../doca-public-knowledge-map/SKILL.md#externally-productized-doca-software--not-in-this-bundle-but-here-is-where-to-route).

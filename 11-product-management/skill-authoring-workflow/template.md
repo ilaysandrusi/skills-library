@@ -62,9 +62,9 @@ example rather than the usual two business domains. A second "domain" here would
 ### Phase 4 — Validate
 
 ```bash
-./scripts/test-a-skill.sh --skill <skill-name> --smoke
-python3 scripts/check-skill-metadata.py skills/<skill-name>/SKILL.md
-python3 scripts/check-skill-triggers.py
+../../scripts/pm-skills/test-a-skill.sh --skill <skill-name> --smoke
+python3 ../../scripts/pm-skills/check-skill-metadata.py skills/<skill-name>/SKILL.md
+python3 ../../scripts/pm-skills/check-skill-triggers.py
 ```
 
 - [ ] Conformance passes
@@ -79,10 +79,10 @@ python3 scripts/check-skill-triggers.py
 - [ ] Added to the correct README category table and nav block
 - [ ] Added to `.claude-plugin/marketplace.json` — **hand-maintained**, alphabetical
 - [ ] Cross-referenced from related skills' References sections
-- [ ] `python3 scripts/generate-catalog.py`
-- [ ] `bash scripts/build-dist.sh`
-- [ ] `python3 scripts/check-dist-freshness.py`
-- [ ] `bash scripts/validate-skills.sh` — the CI path
+- [ ] `python3 ../../scripts/pm-skills/generate-catalog.py`
+- [ ] `bash ../../scripts/pm-skills/build-dist.sh`
+- [ ] `python3 ../../scripts/pm-skills/check-dist-freshness.py`
+- [ ] `bash ../../scripts/pm-skills/validate-skills.sh` — the CI path
 
 ---
 

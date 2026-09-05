@@ -42,18 +42,18 @@ description: 生成紧急情况下快速访问的医疗信息摘要卡片。当�
 使用方式：
 ```bash
 # 生成标准卡片
-python scripts/generate_emergency_card.py
+python ../../scripts/claude-ally-health/generate_emergency_card.py
 
 # 指定卡片类型
-python scripts/generate_emergency_card.py standard
-python scripts/generate_emergency_card.py child
-python scripts/generate_emergency_card.py elderly
-python scripts/generate_emergency_card.py severe
+python ../../scripts/claude-ally-health/generate_emergency_card.py standard
+python ../../scripts/claude-ally-health/generate_emergency_card.py child
+python ../../scripts/claude-ally-health/generate_emergency_card.py elderly
+python ../../scripts/claude-ally-health/generate_emergency_card.py severe
 
 # 指定打印尺寸
-python scripts/generate_emergency_card.py standard a4       # A4标准
-python scripts/generate_emergency_card.py standard wallet   # 钱包卡
-python scripts/generate_emergency_card.py standard large    # 大字版（老年）
+python ../../scripts/claude-ally-health/generate_emergency_card.py standard a4       # A4标准
+python ../../scripts/claude-ally-health/generate_emergency_card.py standard wallet   # 钱包卡
+python ../../scripts/claude-ally-health/generate_emergency_card.py standard large    # 大字版（老年）
 ```
 
 输出文件：`emergency-cards/emergency-card-{variant}-{YYYY-MM-DD}.html`

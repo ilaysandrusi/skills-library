@@ -12,7 +12,7 @@ Show the Digital Marketing Pro user guide with **live plugin state** (version, a
 
 Versions and counts in this plugin used to be baked into this skill body as literal version and count strings — a hardcoded version number, a fixed slash-command count, a fixed integrations count. Those drifted out of sync with the actual install every release and misreported the plugin to users.
 
-**Always read live values from `scripts/plugin-metadata.py`. Never quote a version number, skill count, agent count, command count, or connector count from memory or from this skill body.**
+**Always read live values from `../../scripts/digital-marketing-pro/plugin-metadata.py`. Never quote a version number, skill count, agent count, command count, or connector count from memory or from this skill body.**
 
 ## Behavior
 
@@ -168,7 +168,7 @@ Full engagement:
 - Render in clean, scannable tables and code blocks. Keep it concise — this is a quick reference, not a tutorial.
 - **Always** quote `version` and counts from the JSON, never from this file body.
 - Iterate the JSON `skills` / `commands` arrays for those lists — never a hand-maintained list.
-- If `scripts/plugin-metadata.py` fails to run (e.g. Python not available), fall back to: "Live metadata script could not run. Plugin version is in `.claude-plugin/plugin.json`; the skill list is in `skills/`; the command list is in `commands/`." Do not invent numbers in the fallback either.
+- If `../../scripts/digital-marketing-pro/plugin-metadata.py` fails to run (e.g. Python not available), fall back to: "Live metadata script could not run. Plugin version is in `.claude-plugin/plugin.json`; the skill list is in `skills/`; the command list is in `commands/`." Do not invent numbers in the fallback either.
 
 ## What this skill explicitly avoids
 

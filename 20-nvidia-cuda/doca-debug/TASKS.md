@@ -64,7 +64,7 @@ debug session, not when authoring a new app):
 | --- | --- | --- |
 | Log `doca_error_t` from every lifecycle call | The layer-classifier ([`## debug`](#debug) layer 5) needs the *exact* `doca_error_get_descr()` text; samples often silently propagate the error and lose it | [`## debug`](#debug) layer 5 + [`doca-programming-guide CAPABILITIES.md ## Error taxonomy`](../doca-programming-guide/CAPABILITIES.md#error-taxonomy) |
 | Print `cfg → init → start` call order before each | `DOCA_ERROR_BAD_STATE` is almost always lifecycle out of order; logging the order is the cheapest way to confirm or refute the hypothesis | [`## debug`](#debug) layer 6 + [`doca-programming-guide CAPABILITIES.md ## Capabilities and modes`](../doca-programming-guide/CAPABILITIES.md#capabilities-and-modes) |
-| Insert read-only capability dumps before commit | Confirms hardware/firmware actually exposes what the program is about to ask for (`doca_caps` cross-check); turns layer 5 / 7 ambiguity into layer 7 evidence | [doca-caps](../tools/doca-caps/SKILL.md) + [`## debug`](#debug) layer 5 |
+| Insert read-only capability dumps before commit | Confirms hardware/firmware actually exposes what the program is about to ask for (`doca_caps` cross-check); turns layer 5 / 7 ambiguity into layer 7 evidence | [doca-caps](../doca-caps/SKILL.md) + [`## debug`](#debug) layer 5 |
 | Reduce scope to one unit of damage (one rep, one QP, one channel, one device) | Per [`## test`](#test) step 1: a symptom that disappears at scope=1 is a contention bug, not per-unit | [`## test`](#test) step 1 |
 | Add a hash / sequence number to per-packet / per-event logs | Timing-dependent symptoms need ordering evidence the unprefixed log does not preserve | [`## test`](#test) step 4 |
 
@@ -172,7 +172,7 @@ The agent's rule: walk the layers in order, top to bottom (which is bottom-of-st
 
 - `pkg-config --modversion doca-common` (build-time view).
 - `cat /opt/mellanox/doca/applications/VERSION` (install-tree view).
-- `doca_caps --version` (runtime view) — see [`doca-caps`](../tools/doca-caps/SKILL.md) for when this is available.
+- `doca_caps --version` (runtime view) — see [`doca-caps`](../doca-caps/SKILL.md) for when this is available.
 - BFB version on the BlueField, if applicable, via the BFB's own version file.
 
 If any disagree, the install is partial / mixed — delegate
@@ -245,7 +245,7 @@ library skill; this appendix lists only the cross-cutting ones.
 | Link | `pkg-config --libs doca-<library>` | [`## debug`](#debug) layer 4 | Returns the canonical `-l` list. Hand-typed `-l` lines are the anti-pattern. |
 | Link | `ldd /path/to/binary` | [`## debug`](#debug) layer 4 | All `*.so` entries resolved; no "not found" lines. |
 | Runtime | `--sdk-log-level 70` on first run | [`## configure`](#configure) step 2 / [`## run`](#run) overlay | TRACE output appears in stderr; failure path produces named lifecycle calls. |
-| Runtime | `doca_caps --list-devs`; if absent, only an exact capability probe already present in an installed shipped sample or the user's program | [`## debug`](#debug) layer 5 + [doca-caps](../tools/doca-caps/SKILL.md) | Lists every device DOCA can see; if neither the CLI nor an existing probe is available, record capability evidence unavailable and route to `doca-setup ## configure` — never generate probe code. |
+| Runtime | `doca_caps --list-devs`; if absent, only an exact capability probe already present in an installed shipped sample or the user's program | [`## debug`](#debug) layer 5 + [doca-caps](../doca-caps/SKILL.md) | Lists every device DOCA can see; if neither the CLI nor an existing probe is available, record capability evidence unavailable and route to `doca-setup ## configure` — never generate probe code. |
 | Runtime | `doca_error_get_descr(<rc>)` (called from program) | [`## debug`](#debug) layer 5 | Returns the canonical description; quote it verbatim, do not paraphrase. |
 | Capture | `dmesg \| tail -200` | [`## test`](#test) step 3 | Kernel-side device events; `mlx5_core` messages around the failure window. |
 | Capture | `journalctl --since "5 min ago"` | [`## test`](#test) step 3 | Service-level logs for the failure window. |

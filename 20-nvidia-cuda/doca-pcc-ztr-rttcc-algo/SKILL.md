@@ -49,14 +49,14 @@ modify / run / test / debug / use); open
 *what does the algorithm express, what are its variants and
 parameters, what does it ship vs not ship*. If the user has
 not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the user
+[`doca-setup`](../doca-setup/SKILL.md) first; if the user
 has not stood up the host-side `doca-pcc` framework yet,
 route to [`doca-pcc`](../doca-pcc/SKILL.md) first (this
 algorithm is a *library consumed by* the PCC framework, not
 a standalone program); if the user only wants to *inspect*
 PCC counters at runtime without changing the running
 algorithm, route to
-[`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md);
+[`doca-pcc-counters`](../doca-pcc-counters/SKILL.md);
 if the user wants to *write their own algorithm from
 scratch*, that is the `doca-pcc` library plus the public
 PCC programming guide — this skill is for the shipped
@@ -107,7 +107,7 @@ example is a single instance.
   [`CAPABILITIES.md ## Observability`](CAPABILITIES.md#observability)
   + the counter-watch loop in
   [`TASKS.md ## test`](TASKS.md#test) which routes to
-  [`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md).
+  [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md).
 - **"Which tunables does the algorithm expose, and how
   do I change them from the host without rebuilding the
   DPA-side image?"** — worked example: *"my workload is
@@ -128,7 +128,7 @@ example is a single instance.
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates
   through
   [`doca-pcc`](../doca-pcc/SKILL.md) and
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -144,7 +144,7 @@ developers contributing to the algorithm itself, nor for
 users who want general PCC programming theory (route via
 the public DOCA PCC programming guide), nor for users who
 only want to *inspect* PCC counters (route to
-[`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md)).
+[`doca-pcc-counters`](../doca-pcc-counters/SKILL.md)).
 
 **Language scope.** The algorithm ships as a DPA-side
 library (`pkg-config` module `doca-pcc-ztr-rttcc-algo`)
@@ -191,7 +191,7 @@ unit built by `dpacc`. Concretely:
   `doca_pcc_dev_set_ztr_rttcc_params`).
 - Observing whether the running algorithm is actually
   modulating RoCE-v2 flows under load (route to
-  [`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md)
+  [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md)
   for the read-only inspection side).
 - Deciding when to *replace* the shipped algorithm with a
   custom one because latency target, fairness policy, or
@@ -204,14 +204,14 @@ for the host-side `doca-pcc` lifecycle (route to
 algorithm from scratch (route to
 [`doca-pcc`](../doca-pcc/SKILL.md) and the public PCC
 programming guide via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md));
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md));
 for read-only PCC counter inspection (route to
-[`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md));
+[`doca-pcc-counters`](../doca-pcc-counters/SKILL.md));
 or for the default firmware-shipped PCC algorithms that
 predate Programmable Congestion Control entirely (no
 host-side code, no DPACC compile — that is a firmware-only
 path routed via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 
 ## What this skill provides
 
@@ -290,7 +290,7 @@ contain — and pull requests should not add:
   the public symbol on this install, and routes
   algorithm-design questions to the public PCC
   programming guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
   It does not redefine each variant's mathematical
   behavior.
 - **A specific congestion-control algorithm tutorial.**
@@ -320,17 +320,17 @@ contain — and pull requests should not add:
 Both companion files cross-link to each other,
 [`doca-pcc`](../doca-pcc/SKILL.md) for the host-side PCC
 lifecycle that loads this algorithm,
-[`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md)
+[`doca-pcc-counters`](../doca-pcc-counters/SKILL.md)
 for the read-only counter-inspection side of validating that
 the algorithm is modulating traffic,
 [`doca-dpa`](../doca-dpa/SKILL.md) for the DPA-side
 two-side-program model and the DPACC compiler discipline,
-[`doca-version`](../../doca-version/SKILL.md) for the
+[`doca-version`](../doca-version/SKILL.md) for the
 canonical DOCA version-handling rules (with the DPACC
 overlay inherited from
 [`doca-dpa`](../doca-dpa/SKILL.md) and
 [`doca-pcc`](../doca-pcc/SKILL.md)), and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public DOCA
 PCC programming guide or the on-disk install layout".
 
@@ -344,7 +344,7 @@ PCC programming guide or the on-disk install layout".
   `doca_pcc_app`, the attach-to-port semantics) is owned
   by `doca-pcc`. This skill prescribes only the DPA-side
   algorithm integration on top.
-- [`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md) —
+- [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md) —
   the read-only diagnostic CLI for PCC counters at the
   port. The canonical *"is the algorithm actually
   modulating traffic"* check goes through the counter
@@ -357,14 +357,14 @@ PCC programming guide or the on-disk install layout".
   compiled by DPACC; the two-side-program rule and the
   DOCA-and-DPACC version-match overlay inherited from
   here apply.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation
   source (the DOCA PCC programming guide at
   <https://docs.nvidia.com/doca/sdk/doca-pcc/index.html>;
   the DOCA PCC application guide; the DOCA Compatibility
   Policy) and the on-disk layout of an installed DOCA
   package.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env
+- [`doca-setup`](../doca-setup/SKILL.md) — env
   preparation, install verification, DPACC compiler
   install / verification, BlueField firmware
   configuration (including the custom-PCC slot enable),
@@ -373,27 +373,27 @@ PCC programming guide or the on-disk install layout".
   preconditions are satisfied AND that DPACC is installed
   at a version that matches DOCA AND that the firmware-
   level custom-PCC slot is enabled.
-- [`doca-version`](../../doca-version/SKILL.md) —
+- [`doca-version`](../doca-version/SKILL.md) —
   canonical DOCA version-handling rules. This skill's
   `## Version compatibility` cross-links the four-way
   match rule plus the DOCA-and-DPACC overlay inherited
   from [`doca-pcc`](../doca-pcc/SKILL.md).
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect /
   prefer / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns. This skill layers
   algorithm-specific overlays on top of the universal
   build, modify-a-shipped-sample, and Core lifecycle
   patterns.
-- [`doca-debug`](../../doca-debug/SKILL.md) — cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — cross-cutting
   debug ladder. Algorithm-specific debug (the algorithm
   loaded but counters do not move; the algorithm fails to
   initialize; the algorithm modulates traffic too
   aggressively / too gently for the workload) overlays on
   top of that ladder.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   cross-cutting hardware-safety meta-policy. Because the
   algorithm modulates production RoCE-v2 flows on a
   BlueField port, the meta-policy's pre-flight inventory,

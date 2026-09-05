@@ -79,9 +79,9 @@ external proxy / sidecar / VPN protects the plaintext server*, *which language b
 the gRPC ecosystem covers*, or *how to interpret the server's
 own logs alongside the live Flow application's logs*. If DOCA is
 not installed, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the user has
+[`doca-setup`](../doca-setup/SKILL.md) first; if the user has
 not stood up `doca-flow` yet, route to
-[`doca-flow`](../../libs/doca-flow/SKILL.md) FIRST — the gRPC
+[`doca-flow`](../doca-flow/SKILL.md) FIRST — the gRPC
 server is a remote control plane on top of the Flow library, not
 a replacement for it.
 
@@ -98,7 +98,7 @@ load-bearing piece; the worked example is one instance.
   remotely?"*. Answered by the *when-to-use-gRPC* decision in
   [`CAPABILITIES.md ## Capabilities and modes`](CAPABILITIES.md#capabilities-and-modes)
   + the routing into
-  [`doca-flow`](../../libs/doca-flow/SKILL.md) when a direct
+  [`doca-flow`](../doca-flow/SKILL.md) when a direct
   library link is the better answer.
 - **"Where is the gRPC contract surface actually defined on my
   install?"** — worked example: *"I want to generate a Python
@@ -161,7 +161,7 @@ It is **not** for users debugging the gRPC server's source code,
 **not** a substitute for the live public DOCA Flow gRPC Server
 guide on `docs.nvidia.com`, and **not** the place to learn the
 `doca-flow` API — that audience belongs in
-[`doca-flow`](../../libs/doca-flow/SKILL.md).
+[`doca-flow`](../doca-flow/SKILL.md).
 
 `doca_flow_grpc` is a **single CLI binary built from the DOCA
 source tree** (`executable('doca_flow_grpc', ..., install: false)`
@@ -184,7 +184,7 @@ from the shipped `.proto` files (see the
 on `grpc.io`). The server itself is C++ + DOCA; the client
 languages are open, gated only by the standard `protoc` plugin
 set. For the `doca-flow` API the server programs, see
-[`doca-flow`](../../libs/doca-flow/SKILL.md) — that surface is
+[`doca-flow`](../doca-flow/SKILL.md) — that surface is
 C-language.
 
 ## When to load this skill
@@ -306,7 +306,7 @@ contain — and pull requests should not add:
 
 ## Related skills
 
-- [`doca-flow`](../../libs/doca-flow/SKILL.md) — the **base
+- [`doca-flow`](../doca-flow/SKILL.md) — the **base
   library** the server's gRPC contract is a thin remote-
   control wrapper over. Pipe / entry / rule semantics, the
   validate-before-commit rule, the Flow counter / inspector
@@ -316,20 +316,20 @@ contain — and pull requests should not add:
   the change can be applied through the surrounding
   application or — when the control plane is remote —
   through this gRPC server's RPC surface.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — routing to the public DOCA Flow gRPC Server page on
   `docs.nvidia.com` and the rest of the public DOCA
   documentation set.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   version-handling rules. The
   [`## Version compatibility`](CAPABILITIES.md#version-compatibility)
   section in this skill is a thin overlay on top.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder. gRPC server failures route into the ladder at
   the runtime layer.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, and the NGC DOCA container path.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the cross-cutting hardware-safety meta-policy this skill's
   `## Safety policy` overlays. Any state-changing RPC is a
   potential dataplane-affecting change and must respect the

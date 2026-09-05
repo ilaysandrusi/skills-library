@@ -45,7 +45,7 @@ emulated device they want to build. Open
 *what can Device Emulation express* on this DOCA version + this
 BlueField generation + this firmware. If the user has not
 installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. **Before
+[`doca-setup`](../doca-setup/SKILL.md) first. **Before
 anything else, the agent must route the user to the right
 sub-library** — DOCA Device Emulation is an *umbrella* that
 covers PCI Generic (raw PCIe device emulation), virtio-net
@@ -58,7 +58,7 @@ If the user wants a packaged solution rather than a library
 (e.g. *"I want NVMe SNAP on my host without writing the
 backend myself"*, or *"I want a managed virtio-net daemon"*),
 route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 to the DOCA SNAP Service / DOCA Virtio-net Service guides
 — those services are *built on top of* this library and are a
 different artifact than what this skill covers.
@@ -176,7 +176,7 @@ the standard driver for the emulated device class the user is
 building. It does not cover installing DOCA, flipping
 firmware-level configuration, or installing host-side kernel
 drivers — those paths go through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## Loading order
 
@@ -197,13 +197,13 @@ drivers — those paths go through
    run, test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the
+[`doca-version`](../doca-version/SKILL.md) for the
 canonical DOCA version-handling rules (with the Device
 Emulation overlay that the chosen sub-library's `pkg-config`
 module plus the firmware-level emulation slot plus the
 `doca_devemu_*_cap_*` query are all part of *"is this
 emulation supported here"*), and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public DOCA
 Device Emulation umbrella guide, the per-sub-library guide
 linked from it, the DOCA SNAP / Virtio-net Service guide, or

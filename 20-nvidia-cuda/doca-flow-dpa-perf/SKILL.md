@@ -46,7 +46,7 @@ when the question is *what `doca_flow_dpa_perf` can measure*,
 *what the DPA preconditions are*, *which devices it runs on*,
 or *how to interpret update / disable / self-test output without
 fooling yourself*. If DOCA is not installed yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first; if the device is
+[`doca-setup`](../doca-setup/SKILL.md) first; if the device is
 not DPA-capable (no ConnectX-7+ or BlueField-3+) then this tool is
 the wrong surface and the right answer is
 [`doca-flow-perf`](../doca-flow-perf/SKILL.md).
@@ -132,7 +132,7 @@ It is **not** for users debugging the tool's source code,
 **not** a substitute for the live public DOCA Flow DPA Perf guide
 on `docs.nvidia.com`, **not** the place to learn the `doca-flow`
 or `doca-dpa` APIs (that audience belongs in
-[`doca-flow`](../../libs/doca-flow/SKILL.md) and
+[`doca-flow`](../doca-flow/SKILL.md) and
 `doca-dpa`), and **not** the right
 tool for the host / DPU-CPU Flow path (route to
 [`doca-flow-perf`](../doca-flow-perf/SKILL.md)).
@@ -156,7 +156,7 @@ the JSON-config-or-CLI invocation surface. For the
 engine, see
 `doca-dpa`; for the `doca-flow`
 API behind the pipeline the DPA path executes, see
-[`doca-flow`](../../libs/doca-flow/SKILL.md).
+[`doca-flow`](../doca-flow/SKILL.md).
 
 ## When to load this skill
 
@@ -185,9 +185,9 @@ Concretely:
 
 Do **not** load this skill for general DOCA orientation, Flow
 program API work, or installation. For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
 the matching `libs/<library>` skill, or
-[`doca-setup`](../../doca-setup/SKILL.md). Do not load it for
+[`doca-setup`](../doca-setup/SKILL.md). Do not load it for
 the host / DPU-CPU Flow path — that audience belongs in
 [`doca-flow-perf`](../doca-flow-perf/SKILL.md).
 
@@ -207,7 +207,7 @@ companion files:
   operation axis (update vs disable-enable), the version
   overlay (this tool rides the `doca-flow` and `doca-dpa`
   versions it links against; the canonical rules live in
-  [`doca-version`](../../doca-version/SKILL.md)), the layered
+  [`doca-version`](../doca-version/SKILL.md)), the layered
   error taxonomy
   (config-syntax / device-binding / dpa-precondition /
   workload-precondition / measurement-soundness / self-test /
@@ -281,7 +281,7 @@ contain — and pull requests should not add:
 
 ## Related skills
 
-- [`doca-flow`](../../libs/doca-flow/SKILL.md) — the **base
+- [`doca-flow`](../doca-flow/SKILL.md) — the **base
   library** whose pipeline this tool measures on the DPA
   path. The pipe / entry / rule surface this tool drives is
   created by `doca-flow` program code; the library's pipe
@@ -300,22 +300,22 @@ contain — and pull requests should not add:
   tuning tool. A DPA-perf number is the kind of baseline
   `doca-flow-tune` then optimizes on top of, via a Flow-program
   modify-a-sample loop.
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   routing to the public DOCA Flow DPA Perf page on
   `docs.nvidia.com` and the rest of the public DOCA
   documentation set.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. The
   [`## Version compatibility`](CAPABILITIES.md#version-compatibility)
   section in this skill is a thin overlay on top.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, hugepages, NUMA awareness, and the
   *I have no install yet* path with the public NGC DOCA
   container.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder. DPA-perf surfaces *its own* error taxonomy;
   when the cause turns out to be below DOCA, the taxonomy
   hands off to `doca-debug`.
-- [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) —
+- [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) —
   the cross-cutting hardware-safety meta-policy this skill's
   `## Safety policy` overlays.

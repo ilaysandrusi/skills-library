@@ -30,7 +30,7 @@ Review these contract terms from an influencer agency: [paste terms]
 
 ## Skill Contract
 
-- **Reads**: campaign brief, agreed deliverables, compensation figure, platform list, usage-rights and exclusivity needs, any pasted incoming agreement. If `memory-management` is active, prior outreach terms and budget caps load from the hot cache. For rostered creators, read `memory/creators/<handle-slug>.md` — the [creator-registry](../../../protocol/creator-registry/SKILL.md) roster record — for existing exclusivity windows, contract status, usage-rights history, and standard-range anchors before drafting or reviewing.
+- **Reads**: campaign brief, agreed deliverables, compensation figure, platform list, usage-rights and exclusivity needs, any pasted incoming agreement. If `memory-management` is active, prior outreach terms and budget caps load from the hot cache. For rostered creators, read `memory/creators/<handle-slug>.md` — the [creator-registry](../creator-registry/SKILL.md) roster record — for existing exclusivity windows, contract status, usage-rights history, and standard-range anchors before drafting or reviewing.
 - **Writes**: drafted agreement or review memo to `memory/influencer/contract-helper/YYYY-MM-DD-<topic>.md`. Signed terms (usage-rights window, exclusivity scope, final rate) also go as a one-line update to `memory/events/creators.ndjson` via an authorized `operation: propose` request to `registry-events.py` — only `creator-registry` writes canonical roster records.
 - **Promotes**: durable facts (signed terms, usage-rights window, exclusivity scope, payment schedule) to `memory/hot-cache.md`.
 - **Done when**:
@@ -41,7 +41,7 @@ Review these contract terms from an influencer agency: [paste terms]
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Data Sources
 
@@ -53,7 +53,7 @@ Optional connectors that COULD speed up specific steps:
 - `~~influencer database` — confirm the creator's legal name, entity, and audience-authenticity signals for the warranties section.
 - `~~e-signature` — route the finished agreement for signing.
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the free/keyless recipe per category. None are required.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the free/keyless recipe per category. None are required.
 
 ## Instructions
 
@@ -64,7 +64,7 @@ When a user requests contract help:
 3. **Explain key clauses** — for each material clause give what it covers, why it matters, and what to watch for. Clause guide in [references/templates.md §3](references/templates.md).
 4. **Review and flag** — for any incoming paper, run the checklist: essential terms present, red flags, and per-clause negotiation ranges. Checklist + tables in [references/templates.md §4-5](references/templates.md).
 
-Save the drafted agreement or review memo to `memory/influencer/contract-helper/YYYY-MM-DD-<topic>.md`, and promote durable signed terms to the hot cache. Once terms are signed, also submit them (usage-rights window, exclusivity scope, final rate) as a one-line update to `memory/events/creators.ndjson` via an authorized `operation: propose` request to `registry-events.py` for [creator-registry](../../../protocol/creator-registry/SKILL.md) to reconcile into the roster record.
+Save the drafted agreement or review memo to `memory/influencer/contract-helper/YYYY-MM-DD-<topic>.md`, and promote durable signed terms to the hot cache. Once terms are signed, also submit them (usage-rights window, exclusivity scope, final rate) as a one-line update to `memory/events/creators.ndjson` via an authorized `operation: propose` request to `registry-events.py` for [creator-registry](../creator-registry/SKILL.md) to reconcile into the roster record.
 
 ## Example
 
@@ -75,10 +75,10 @@ Save the drafted agreement or review memo to `memory/influencer/contract-helper/
 ## Reference Materials
 
 - [references/templates.md](references/templates.md) — gathering form, full 11-section agreement template, clause explanations, review checklist, negotiation tables, tips, worked example.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — memory tiers and save-path convention.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless connector recipes per category.
-- Sibling skills: [outreach-manager](../outreach-manager/SKILL.md) (negotiate before contract), [creator-content-auditor](../creator-content-auditor/SKILL.md) (execute the approval clause), [budget-optimizer](../../target/budget-optimizer/SKILL.md) (set compensation), [brief-generator](../../target/brief-generator/SKILL.md) (attach the brief as an exhibit).
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — memory tiers and save-path convention.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless connector recipes per category.
+- Sibling skills: [outreach-manager](../outreach-manager/SKILL.md) (negotiate before contract), [creator-content-auditor](../creator-content-auditor/SKILL.md) (execute the approval clause), [budget-optimizer](../budget-optimizer/SKILL.md) (set compensation), [brief-generator](../brief-generator/SKILL.md) (attach the brief as an exhibit).
 
 ## Next Best Skill
 
@@ -93,6 +93,6 @@ Save the drafted agreement or review memo to `memory/influencer/contract-helper/
 ## Related Skills
 
 - [outreach-manager](../outreach-manager/SKILL.md) - Negotiate before contract
-- [brief-generator](../../target/brief-generator/SKILL.md) - Attach brief as exhibit
+- [brief-generator](../brief-generator/SKILL.md) - Attach brief as exhibit
 - [creator-content-auditor](../creator-content-auditor/SKILL.md) - Execute approval process
-- [budget-optimizer](../../target/budget-optimizer/SKILL.md) - Set compensation terms
+- [budget-optimizer](../budget-optimizer/SKILL.md) - Set compensation terms

@@ -14,7 +14,7 @@ compatibility, error taxonomy, observability surface, and safety
 policy that these workflows assume, see
 [CAPABILITIES.md](CAPABILITIES.md). For where to find docs, the
 installed DOCA layout, or release notes, route through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through the
@@ -60,8 +60,8 @@ install — never hardcode versions or paths.
    not exist on the user's version). Use the discovered sample as the
    modify-target via the five-slot fill in [`## modify`](#modify).
    If the directory is absent or empty, stop and route to
-   [`doca-setup`](../../doca-setup/SKILL.md) for install repair and
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-setup`](../doca-setup/SKILL.md) for install repair and
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    for the current sample-layout source; do not invent a sample name.
    Because every `doca_rdmi_*` symbol is EXPERIMENTAL, authoring RDMI
    source from documentation is forbidden.
@@ -96,7 +96,7 @@ Goal: confirm the user's installed DOCA actually ships `doca-rdmi`
 and the supporting libraries before any RDMI-specific work begins.
 
 This skill does **not** own DOCA installation; that path lives in
-[`doca-setup`](../../doca-setup/SKILL.md). The RDMI-specific
+[`doca-setup`](../doca-setup/SKILL.md). The RDMI-specific
 preconditions the agent verifies after a DOCA install:
 
 1. **`doca-rdmi` `.pc` file is present.** `pkg-config
@@ -105,7 +105,7 @@ preconditions the agent verifies after a DOCA install:
    installed DOCA package set does not include RDMI; the user
    needs to install the matching package (the exact package name
    is platform-specific and looked up via
-   [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)).
+   [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)).
 2. **Supporting `.pc` files are present.** RDMI builds on
    `doca-common`, `doca-verbs`, and (for the DPA datapath)
    `doca-dpa`. All four `pkg-config --modversion` results must
@@ -125,7 +125,7 @@ preconditions the agent verifies after a DOCA install:
    preconditions rather than duplicating them here.
 
 If any precondition fails, **stop and route to
-[`doca-setup`](../../doca-setup/SKILL.md)**; an RDMI-layer
+[`doca-setup`](../doca-setup/SKILL.md)**; an RDMI-layer
 diagnosis against a half-installed DOCA wastes the user's time.
 
 ## configure
@@ -148,7 +148,7 @@ Steps the agent should walk the user through:
    `doca_verbs_context` and a `doca_verbs_pd` before any
    `doca_rdmi_*_create` call. The verbs surface is a precondition;
    route the user to the public DOCA verbs guide via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    if they do not yet have a working verbs setup.
 3. **Pick the datapath.** If the application runs the data path
    on the DPA, the user must call `doca_ctx_set_datapath_on_dpa()`
@@ -199,7 +199,7 @@ This skill carries only the RDMI-specific overlay:
 | --- | --- | --- |
 | `pkg-config` module name (host side) | `doca-rdmi` | The library's `.pc` file installed by the DOCA host packages |
 | Co-required modules | `doca-common`, `doca-verbs`, plus `doca-dpa` when the DPA datapath is in use | RDMI builds on verbs; the DPA datapath additionally requires the `doca-dpa` host-side library plus the DPA toolchain |
-| Header check | `doca_rdmi_connection.h`, `doca_rdmi_poster.h` resolvable under the installed DOCA infrastructure include tree (path via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)) | If `pkg-config --cflags doca-rdmi` resolves but the include is missing, the install is partial |
+| Header check | `doca_rdmi_connection.h`, `doca_rdmi_poster.h` resolvable under the installed DOCA infrastructure include tree (path via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)) | If `pkg-config --cflags doca-rdmi` resolves but the include is missing, the install is partial |
 | DPA-side compilation | `doca_rdmi_dev_*.h` headers are compiled with the DOCA DPA toolchain into the DPA kernel — *not* with the host compiler | Mixing host and DPA toolchains on the same translation unit is the canonical reason a DPA-side build "fails for no reason"; routed to [`doca-dpa`](../doca-dpa/SKILL.md) for the toolchain details |
 | Minimum required DOCA version | Query with `pkg-config --modversion doca-rdmi`; never hardcode in build files | The EXPERIMENTAL tag means a version pin from agent memory is wrong by construction |
 
@@ -535,7 +535,7 @@ The integration shape this skill teaches:
    architecture comes up.
 4. **Operational handoff.** Production deployment uses the
    bundle's hardware-safety meta-policy
-   ([`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md))
+   ([`doca-hardware-safety`](../doca-hardware-safety/SKILL.md))
    for any change that touches the BlueField BFB, firmware, or
    DPA toolchain. RDMI itself does not modify hardware state,
    but every RDMI-using component lives downstream of those
@@ -555,9 +555,9 @@ so the agent does not invent guidance:
 
 - **install (of DOCA itself).** Installing DOCA, choosing
   packages, post-install verification, `pkg-config` wiring —
-  defer to [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  defer to [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill's `## install` verb assumes DOCA is already
   installed and only checks the RDMI-specific preconditions.
 - **deploy.** Deploying RDMI-using applications at scale across
@@ -580,7 +580,7 @@ so the agent does not invent guidance:
   modifying `mlxconfig` parameters — out of scope. Route to
   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug)
   layer 5 and to
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   for the change-application discipline.
 
 ## Command appendix
@@ -611,7 +611,7 @@ the row.
 | `cat /opt/mellanox/doca/applications/VERSION` | [`## install`](#install) step 1; [`## debug`](#debug) layer 1 | What does the install tree itself claim its version is? | A semver matching the other version sources |
 | `DOCA_LOG_LEVEL=trace ./<binary>` | [`## run`](#run) step 3 | What did the structured DOCA logger emit for the first failing call? | A trace-level line on every lifecycle transition. Silence after `doca_ctx_start()` = the DPA kernel was never launched or the host stopped progressing the PE |
 | `dmesg | tail -n 40` (sudo) | [`## debug`](#debug) layer 7 | What did the kernel / driver log around the last RDMI call? | Empty or recent benign messages. Repeated mlx5 / IB errors → driver-layer bug; route to [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug) |
-| `mlxconfig -d <pcie> q | head -n 40` (sudo) | [`## debug`](#debug) layer 7 | What firmware config does the underlying NIC / DPU report? | Stable firmware config; mismatched values indicate a hardware-state change that must go through [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md) |
+| `mlxconfig -d <pcie> q | head -n 40` (sudo) | [`## debug`](#debug) layer 7 | What firmware config does the underlying NIC / DPU report? | Stable firmware config; mismatched values indicate a hardware-state change that must go through [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md) |
 
 For commands shared across libraries (`pkg-config --modversion`,
 `doca_caps`, `cat /opt/mellanox/doca/applications/VERSION`,

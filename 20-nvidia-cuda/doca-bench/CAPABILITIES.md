@@ -126,7 +126,7 @@ on its own.
 
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-docs
-rule, see [`doca-version`](../../doca-version/SKILL.md). The body
+rule, see [`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The `doca_bench`-specific overlay** is:
@@ -137,7 +137,7 @@ lives there; this skill does not duplicate it.
   find doca_bench"* is to confirm the installed version per
   [`doca-version TASKS.md ## configure`](../../doca-version/TASKS.md#configure)
   and, if `< 2.7.0`, route to
-  [`doca-setup`](../../doca-setup/SKILL.md) for an upgrade
+  [`doca-setup`](../doca-setup/SKILL.md) for an upgrade
   rather than recommending alternative tools.
 - **Granular build means the *available library* set is
   install-specific.** The public guide documents granular build
@@ -207,8 +207,8 @@ in escalating order:
    public guide's per-platform support matrix. Routing: bench's
    own query system per [`TASKS.md ## configure`](TASKS.md#configure)
    step 2 + the per-library skill (e.g.
-   [`doca-comch`](../../libs/doca-comch/SKILL.md),
-   [`doca-compress`](../../libs/doca-compress/SKILL.md)) for
+   [`doca-comch`](../doca-comch/SKILL.md),
+   [`doca-compress`](../doca-compress/SKILL.md)) for
    the library-internal capability rules.
 4. **Workload-precondition.** Library exercisable; the workload
    shape is invalid for the library. Cause: a data provider
@@ -257,7 +257,7 @@ in escalating order:
    on one NUMA node, latency spikes correlated with kernel-
    thread scheduling, throughput tied to firmware version
    independent of DOCA version). Routing: hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug);
    the bench surface has reached its limit.
 

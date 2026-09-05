@@ -41,7 +41,7 @@ Open [`TASKS.md`](TASKS.md) if the user wants to *do* something
 hardware-counter domains can this device read* on this install
 (PCC, DPA, DIAG, ADP_RETX, PHY, PCI). If the user has not
 installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user is
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user is
 confused about whether they want this library (HW-counter
 reader on a `doca_dev`) or
 [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md)
@@ -52,7 +52,7 @@ read the reader-vs-exporter role split in
 BEFORE configuring anything; mixing the two is the load-bearing
 first-app failure for this skill. If the user is asking about
 **DOCA Telemetry Service (DTS) as deployed**, route to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 non-goals — DTS is out of scope for this bundle.
 
 ## Audience
@@ -143,7 +143,7 @@ of DOCA itself, the **publishing / export** side
 has its own skill), the externally-productized DOCA Telemetry
 Service (DTS — out of scope), or non-reader library questions.
 For those, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -180,7 +180,7 @@ is available. The [`TASKS.md ## run`](TASKS.md#run) workflow
 opens the corresponding `doca_dev` and requires the per-domain
 cap-query to return `DOCA_SUCCESS`. It does not cover installing
 DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md) — and it does not
+[`doca-setup`](../doca-setup/SKILL.md) — and it does not
 cover writing the publishing / export side, which is
 [`doca-telemetry-exporter`](../doca-telemetry-exporter/SKILL.md).
 
@@ -206,9 +206,9 @@ cover writing the publishing / export side, which is
    run, test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 version-handling rules, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or
 the installed package layout" rather than "reader-specific
 guidance".

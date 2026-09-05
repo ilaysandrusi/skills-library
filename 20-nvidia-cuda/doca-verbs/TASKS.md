@@ -23,7 +23,7 @@ safety policy that these workflows assume, see
 DOCA patterns layered under everything below (the universal
 lifecycle, the cross-library `DOCA_ERROR_*` taxonomy, the
 modify-a-shipped-sample workflow), see
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through the
@@ -34,7 +34,7 @@ next call.
 
 DOCA Verbs is part of the standard DOCA host install — installing
 `doca-verbs` in isolation is not a thing. The install verb routes
-to [`doca-setup`](../../doca-setup/SKILL.md) for the env / install
+to [`doca-setup`](../doca-setup/SKILL.md) for the env / install
 chain, and to
 [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)
 for the on-disk layout the rest of this file assumes.
@@ -56,7 +56,7 @@ raw-verbs work:
    $(pkg-config --variable=includedir doca-common) (`doca_verbs.h`
    plus the adjacent `doca_verbs_*.h` family) per the
    headers-win-over-docs rule in
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 4. **The selected workload has a usable device.** For RDMA-class
    QP workloads, `ibv_devinfo` (with sudo) returns at least one
    device row with `state: PORT_ACTIVE`, the same precondition as
@@ -67,7 +67,7 @@ raw-verbs work:
 
 If any of the four checks fails, **stop** — this skill's workflows
 assume the install is healthy, and a partial install is a
-[`doca-setup`](../../doca-setup/SKILL.md) concern.
+[`doca-setup`](../doca-setup/SKILL.md) concern.
 
 ## configure
 
@@ -611,7 +611,7 @@ the agent does not invent guidance:
 
 - **install.** Installing DOCA, choosing packages, post-install
   verification, `pkg-config` wiring — defer to
-  [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
   [doca-public-knowledge-map ## Layout of an installed DOCA package](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   The [`## install`](#install) anchor in this file holds only the
@@ -630,7 +630,7 @@ the agent does not invent guidance:
   [`## configure`](#configure) with corrected parameters.
 - **kernel-level driver install / firmware burn.** Out of scope
   for this skill. Route to
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   for the meta-policy and to
   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug)
   driver layer for the env-side recovery story.
@@ -670,7 +670,7 @@ the agent should:
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics (four-way match, NGC,
    headers-win) are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Command (worked example) | Owning step | Class of question it answers | What healthy output looks like |
 | --- | --- | --- | --- |

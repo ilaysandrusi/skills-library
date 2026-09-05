@@ -93,7 +93,7 @@ ${CLAUDE_PLUGIN_DATA}/{brand}/seo/keyword-cluster/2026-06-04/
 
 ## Quality scorecard (the four gates)
 
-Every run produces a scorecard from `scripts/keyword_cluster.py`. **All four must pass** for `status: ready`:
+Every run produces a scorecard from `../../scripts/digital-marketing-pro/keyword_cluster.py`. **All four must pass** for `status: ready`:
 
 | Gate | What it checks | Why it matters |
 |---|---|---|
@@ -135,4 +135,4 @@ This skill is a producer in the chain:
 - `/digital-marketing-pro:content-brief` — consumes the cluster plan (use next)
 - `/digital-marketing-pro:seo-implement` — applies internal-link map to CMS
 - `/digital-marketing-pro:seo-drift` — re-run quarterly to detect cluster drift
-- `scripts/keyword_cluster.py` — the underlying clustering engine
+- `../../scripts/digital-marketing-pro/keyword_cluster.py` — the underlying clustering engine

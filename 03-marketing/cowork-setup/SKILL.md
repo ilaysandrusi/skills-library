@@ -178,5 +178,5 @@ If `needs_upload: true`, the agent uses its Drive MCP to upload the file and the
 - `/digital-marketing-pro:status` — confirm Cowork+Drive is detected after setup
 - `/digital-marketing-pro:brand-setup` — actual brand setup (now Drive-default in Cowork)
 - `/digital-marketing-pro:doctor` — per-action readiness check (now reports Cowork+Drive routing too)
-- `scripts/plugin-metadata.py --section environment` — the underlying probe
+- `../../scripts/digital-marketing-pro/plugin-metadata.py --section environment` — the underlying probe
 - README "Cowork team usage" section — canonical doc for which surface to use

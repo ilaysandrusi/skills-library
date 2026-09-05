@@ -128,6 +128,6 @@ node scripts/self_pen_test.mjs --profile ~/.picoclaw/security/clawsec/current-pr
 ## Validation
 
 ```bash
-python utils/validate_skill.py skills/picoclaw-self-pen-testing
+python ../../scripts/clawsec-utils/validate_skill.py skills/picoclaw-self-pen-testing
 node skills/picoclaw-self-pen-testing/test/self_pen_test.test.mjs
 ```

@@ -38,7 +38,7 @@ to *do* something (configure / build / modify / run / test /
 debug); open [`CAPABILITIES.md`](CAPABILITIES.md) when the question
 is *what can a DOCA Ethernet queue express* on this version. If
 the user has not installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user is
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user is
 asking *"how do I get packets to land on my RX queue at all"*, the
 answer lives in [`doca-flow`](../doca-flow/SKILL.md) — DOCA
 Ethernet is the *queue* surface; DOCA Flow is the *steering*
@@ -82,7 +82,7 @@ instance.
   routes the steering side to
   [`doca-flow`](../doca-flow/SKILL.md) and the
   promiscuous-mode side to
-  [`doca-setup`](../../doca-setup/SKILL.md).
+  [`doca-setup`](../doca-setup/SKILL.md).
 - **"Is this Ethernet capability available on my device + my
   installed DOCA?"** — worked example: *"does this device
   advertise L3 checksum offload"*. Answered by the
@@ -99,7 +99,7 @@ instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -162,7 +162,7 @@ of DOCA itself, flow-rule programming (use
 messaging (use [`doca-comch`](../doca-comch/SKILL.md)), or
 RDMA data movement (use [`doca-rdma`](../doca-rdma/SKILL.md)).
 For DOCA documentation orientation, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -191,7 +191,7 @@ installed at the standard location and the user has the
 privileges their public install profile expects (typically sudo
 or `mlnx`-group membership to open a `doca_dev` against a port).
 It does not cover installing DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md).
+[`doca-setup`](../doca-setup/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -205,7 +205,7 @@ contain — and pull requests should not add:
   agent's job is to route the user to those files and prescribe
   a minimum-diff modification on them via the universal
   modify-a-sample workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the Ethernet-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **Standalone build manifests** (`meson.build`,
@@ -230,36 +230,36 @@ contain — and pull requests should not add:
    test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 version-handling rules,
 [`doca-flow`](../doca-flow/SKILL.md) for the steering side
 that the RX queue depends on, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or
 the installed package layout" rather than "Ethernet-specific
 guidance".
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source
   and the on-disk layout of an installed DOCA package. The
   Ethernet URL slug is `DOCA-Ethernet`.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, port-state checks (`devlink dev show`,
   `ip link`), permission and group-membership requirements for
   opening a `doca_dev`. This skill assumes its preconditions
   are satisfied.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. This skill's `## Version
   compatibility` cross-links the four-way match rule and adds
   only the Ethernet-specific overlay (RX-type availability
   windows, checksum-offload device-conditional support).
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect / prefer
   / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library:
   the canonical `pkg-config` + meson build pattern, the
   universal modify-a-shipped-sample first-app workflow, the
@@ -271,7 +271,7 @@ guidance".
   Ethernet does *not* program steering itself; an empty RX queue
   almost always means a missing or wrong Flow rule, not an
   Ethernet bug.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). Ethernet-specific debug (RX-type
   mismatches, send-queue-full retries, steering-empty-queue

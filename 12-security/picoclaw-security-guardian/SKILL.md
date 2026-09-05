@@ -176,7 +176,7 @@ Checksum-only mode is integrity-only, not provenance. Use `--allow-unsigned-chec
 ## Validation
 
 ```bash
-python utils/validate_skill.py skills/picoclaw-security-guardian
+python ../../scripts/clawsec-utils/validate_skill.py skills/picoclaw-security-guardian
 node skills/picoclaw-security-guardian/test/profile.test.mjs
 node skills/picoclaw-security-guardian/test/drift.test.mjs
 node skills/picoclaw-security-guardian/test/supply_chain.test.mjs

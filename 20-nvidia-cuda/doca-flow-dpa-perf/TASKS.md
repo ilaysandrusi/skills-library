@@ -290,7 +290,7 @@ layers in order:
    [`doca-version TASKS.md ## debug`](../../doca-version/TASKS.md#debug)
    end-to-end.
 8. **Cross-cutting.** Hand off to
-   [`doca-debug ## debug`](../../doca-debug/SKILL.md) and
+   [`doca-debug ## debug`](../doca-debug/SKILL.md) and
    [`doca-setup ## debug`](../../doca-setup/TASKS.md#debug).
 
 In every case: **quote what the tool reported**, including
@@ -342,9 +342,9 @@ skill's name.
   [`doca-setup ## configure`](../../doca-setup/TASKS.md#configure)
   and [`## no-install`](../../doca-setup/TASKS.md#no-install).
 - **write a doca-flow / doca-dpa application** ⇒
-  [`doca-flow`](../../libs/doca-flow/SKILL.md) +
+  [`doca-flow`](../doca-flow/SKILL.md) +
   `doca-dpa`, layered on
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md).
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md).
   The tool is the shipped harness; a bespoke application is
   a different artifact.
 - **streaming telemetry / live metrics export** ⇒ not a
@@ -375,7 +375,7 @@ the agent should:
 4. The schemas the structured tools emit are defined in
    [`doca-structured-tools-contract ## Schemas`](../../doca-structured-tools-contract/SKILL.md#schemas);
    the version-handling semantics are owned by
-   [`doca-version`](../../doca-version/SKILL.md).
+   [`doca-version`](../doca-version/SKILL.md).
 
 | Purpose (class) | Invocation (shape) | Owning step | Reads as healthy when … |
 | --- | --- | --- | --- |
@@ -400,7 +400,7 @@ Three cross-cutting rules for this appendix:
 - **Cross-link instead of duplicate.** Cross-cutting
   commands (`pkg-config --modversion`, `doca_caps --list-devs`,
   `dmesg`, `mlxconfig -d <bdf> q`, `numactl --hardware`) live
-  in [`doca-debug TASKS.md ## Command appendix`](../../doca-debug/TASKS.md)
+  in [`doca-debug TASKS.md ## Command appendix`](../doca-debug/TASKS.md)
   and
   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug);
   the host-side Flow-perf commands live in
@@ -426,7 +426,7 @@ A few rules that apply across every verb in this file:
   from this tool is meaningful in.
 - This skill **assumes DPA-capable hardware and a healthy
   DOCA install**. If either is in doubt, route to
-  [`doca-setup`](../../doca-setup/SKILL.md),
-  [`doca-version`](../../doca-version/SKILL.md), or
+  [`doca-setup`](../doca-setup/SKILL.md),
+  [`doca-version`](../doca-version/SKILL.md), or
   [`doca-flow-perf`](../doca-flow-perf/SKILL.md) (for the
   host / DPU-CPU path) before running anything else here.

@@ -40,7 +40,7 @@ without migrating the data-plane to DOCA-native APIs. Open
 [`CAPABILITIES.md`](CAPABILITIES.md) when the question is *what
 the bridge can express* on this version. If the user has not
 installed DOCA yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user is
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user is
 **starting fresh** (no DPDK code yet) and just wants line-rate
 packet I/O against DOCA, route to
 [`doca-eth`](../doca-eth/SKILL.md) instead — the bridge exists
@@ -98,7 +98,7 @@ single instance.
   [`CAPABILITIES.md ## Error taxonomy`](CAPABILITIES.md#error-taxonomy)
   + the layered ladder in
   [`TASKS.md ## debug`](TASKS.md#debug) that escalates to
-  [`doca-debug`](../../doca-debug/SKILL.md).
+  [`doca-debug`](../doca-debug/SKILL.md).
 
 ## Audience
 
@@ -159,7 +159,7 @@ its own (use [`doca-flow`](../doca-flow/SKILL.md)), host ↔ DPU
 control messaging (use [`doca-comch`](../doca-comch/SKILL.md)),
 or RDMA data movement (use [`doca-rdma`](../doca-rdma/SKILL.md)).
 For DOCA documentation orientation, use
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill provides
 
@@ -192,10 +192,10 @@ privileges their public install profile expects (typically sudo
 or `mlnx`-group membership for DOCA, plus the DPDK-side
 privileges to mount hugepages, bind PCIe ports, and open the
 target `rte_eth` device). It does not cover installing DOCA —
-that path goes through [`doca-setup`](../../doca-setup/SKILL.md);
+that path goes through [`doca-setup`](../doca-setup/SKILL.md);
 it does not cover installing or learning DPDK itself — that
 belongs in upstream DPDK documentation reachable via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## What this skill deliberately does not ship
 
@@ -210,12 +210,12 @@ contain — and pull requests should not add:
   which calls `doca_dpdk_port_probe()` / `doca_dpdk_port_as_dev()`),
   plus the canonical reference applications that pair DPDK +
   DOCA Flow (see
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for the reference-applications index). The agent's job is to
   route the user to those files and prescribe a minimum-diff
   modification on them via the universal modify-a-sample
   workflow in
-  [`doca-programming-guide`](../../doca-programming-guide/SKILL.md),
+  [`doca-programming-guide`](../doca-programming-guide/SKILL.md),
   layered with the bridge-specific overrides in
   [`TASKS.md ## modify`](TASKS.md#modify).
 - **Standalone build manifests** (`meson.build`,
@@ -241,43 +241,43 @@ contain — and pull requests should not add:
    test, debug — see [TASKS.md](TASKS.md).**
 
 Both companion files cross-link to each other,
-[`doca-version`](../../doca-version/SKILL.md) for the canonical
+[`doca-version`](../doca-version/SKILL.md) for the canonical
 DOCA version-handling rules,
 [`doca-eth`](../doca-eth/SKILL.md) for the start-fresh path that
 is the bridge's deliberate alternative,
 [`doca-flow`](../doca-flow/SKILL.md) for the steering library
 that is the most common reason to use this bridge in the first
 place, and
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 whenever the right answer is "look it up in the public docs or
 the installed package layout" rather than "bridge-specific
 guidance".
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) —
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) —
   the routing table for every public DOCA documentation source
   and the on-disk layout of an installed DOCA package. The
   bridge URL slug is `DOCA-DPDK-Bridge`. Reference applications
   that pair DPDK + DOCA Flow (the canonical adopters of this
   bridge) are reachable from the same map's reference-
   applications index.
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation,
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation,
   install verification, hugepage mounts (DPDK requirement),
   port-state checks (`devlink dev show`, `ip link`), permission
   and group-membership requirements for opening a `doca_dev`
   AND for binding PCIe ports under DPDK. This skill assumes its
   preconditions are satisfied.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical
+- [`doca-version`](../doca-version/SKILL.md) — canonical
   DOCA version-handling rules. This skill's `## Version
   compatibility` cross-links the four-way match rule and adds
   only the bridge-specific overlay (DPDK ↔ DOCA matched-pair
   coupling).
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect / prefer
   / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md) —
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md) —
   general DOCA programming patterns shared by every library:
   the canonical `pkg-config` + meson build pattern, the
   universal modify-a-shipped-sample first-app workflow, the
@@ -295,7 +295,7 @@ guidance".
   bridge. The bridge binds a DPDK port id to a `doca_dev`;
   DOCA Flow programs steering rules onto that `doca_dev`. The two
   libraries are designed to compose.
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). Bridge-specific debug (DPDK ↔ DOCA version
   drift, port-not-registered symptoms, mbuf-conversion failures)

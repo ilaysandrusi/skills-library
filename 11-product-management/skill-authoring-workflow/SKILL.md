@@ -42,7 +42,7 @@ Use repo-native tools and standards before inventing a custom process:
 - `scripts/add-a-skill.sh`
 - `scripts/build-a-skill.sh`
 - `scripts/test-a-skill.sh`
-- `scripts/check-skill-metadata.py`
+- `../../scripts/pm-skills/check-skill-metadata.py`
 
 ### Pick the Right Creation Path
 
@@ -83,7 +83,7 @@ This file defines the workflow sequence and domain-specific outputs. If there is
 1. Search for overlapping skills:
 
 ```bash
-./scripts/find-a-skill.sh --keyword "<topic>"
+../../scripts/pm-skills/find-a-skill.sh --keyword "<topic>"
 ```
 
 2. Decide type:
@@ -96,13 +96,13 @@ This file defines the workflow sequence and domain-specific outputs. If there is
 If you have source material:
 
 ```bash
-./scripts/add-a-skill.sh research/your-framework.md
+../../scripts/pm-skills/add-a-skill.sh research/your-framework.md
 ```
 
 If you want guided prompts:
 
 ```bash
-./scripts/build-a-skill.sh
+../../scripts/pm-skills/build-a-skill.sh
 ```
 
 ### Phase 3: Tighten the Skill
@@ -119,9 +119,9 @@ Manually review for:
 Run strict checks before thinking about commit:
 
 ```bash
-./scripts/test-a-skill.sh --skill <skill-name> --smoke
-python3 scripts/check-skill-metadata.py skills/<skill-name>/SKILL.md
-python3 scripts/check-skill-triggers.py skills/<skill-name>/SKILL.md --show-cases
+../../scripts/pm-skills/test-a-skill.sh --skill <skill-name> --smoke
+python3 ../../scripts/pm-skills/check-skill-metadata.py skills/<skill-name>/SKILL.md
+python3 ../../scripts/pm-skills/check-skill-triggers.py skills/<skill-name>/SKILL.md --show-cases
 ```
 
 ### Phase 5: Integrate with Repo Docs
@@ -136,11 +136,11 @@ If this is a new skill:
 If targeting Claude custom skill upload:
 
 ```bash
-./scripts/zip-a-skill.sh --skill <skill-name>
+../../scripts/pm-skills/zip-a-skill.sh --skill <skill-name>
 # or zip one category:
-./scripts/zip-a-skill.sh --type component --output dist/skill-zips
+../../scripts/pm-skills/zip-a-skill.sh --type component --output dist/skill-zips
 # or use a curated starter preset:
-./scripts/zip-a-skill.sh --preset core-pm --output dist/skill-zips
+../../scripts/pm-skills/zip-a-skill.sh --preset core-pm --output dist/skill-zips
 ```
 
 ## Examples
@@ -151,9 +151,9 @@ Input: `research/pricing-workshop-notes.md`
 Goal: new interactive advisor
 
 ```bash
-./scripts/add-a-skill.sh research/pricing-workshop-notes.md
-./scripts/test-a-skill.sh --skill <new-skill-name> --smoke
-python3 scripts/check-skill-metadata.py skills/<new-skill-name>/SKILL.md
+../../scripts/pm-skills/add-a-skill.sh research/pricing-workshop-notes.md
+../../scripts/pm-skills/test-a-skill.sh --skill <new-skill-name> --smoke
+python3 ../../scripts/pm-skills/check-skill-metadata.py skills/<new-skill-name>/SKILL.md
 ```
 
 Expected result:
@@ -193,6 +193,6 @@ Result:
 - `scripts/build-a-skill.sh`
 - `scripts/find-a-skill.sh`
 - `scripts/test-a-skill.sh`
-- `scripts/check-skill-metadata.py`
-- `scripts/check-skill-triggers.py`
+- `../../scripts/pm-skills/check-skill-metadata.py`
+- `../../scripts/pm-skills/check-skill-triggers.py`
 - `scripts/zip-a-skill.sh`

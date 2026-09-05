@@ -10,7 +10,7 @@ Read this file when the loader sent you here from
 capabilities (install, configure, build, modify, run, test, debug,
 use) see [TASKS.md](TASKS.md). For where the underlying public
 documentation and installed package paths live, defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) — do
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) — do
 not duplicate URLs or install paths in this file.
 
 ## Pattern overview
@@ -154,7 +154,7 @@ DO belong here because they are GPI-specific:
 
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the headers-win-over-docs
-rule, see [`doca-version`](../../doca-version/SKILL.md). The body
+rule, see [`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The GPI-specific overlay** is:
@@ -174,7 +174,7 @@ lives there; this skill does not duplicate it.
   installed CUDA Toolkit version is a second axis. The
   authoritative DOCA ↔ CUDA pairing for a given DOCA release
   lives in the release notes; route through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for the release-notes URL pattern rather than quoting a CUDA
   version pin from agent memory.
 - **`doca-gpi.pc` plus `doca-gpunetio.pc` plus `doca-dpa.pc`
@@ -189,7 +189,7 @@ lives there; this skill does not duplicate it.
   On disagreement, stop before building or running GPI, identify
   every divergent `.pc` or install-version source, and use
   [`doca-version TASKS.md ## debug`](../../doca-version/TASKS.md#debug)
-  plus [`doca-setup`](../../doca-setup/SKILL.md) to look up and
+  plus [`doca-setup`](../doca-setup/SKILL.md) to look up and
   repair the platform-specific package set. Re-run the complete
   match after repair; do not proceed with a mismatched stack.
 - **The closest public docs surface for the GPU-side handoff is
@@ -203,7 +203,7 @@ lives there; this skill does not duplicate it.
   [DOCA SDK index](https://docs.nvidia.com/doca/sdk/) is the
   authoritative starting point for whether a *GPI*-specific
   page now exists; route through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   for the up-to-date URL pattern rather than quoting a URL
   literal from agent memory.
 
@@ -223,7 +223,7 @@ indicate:
 | `DOCA_ERROR_NO_MEMORY` | `doca_gpi_create` failed to allocate internal state | Inspect the system's available memory; this is rarely an application bug, usually a host-side resource issue |
 | `DOCA_ERROR_INITIALIZATION` | `doca_gpi_create` failed to initialize internal state | Same as above — inspect host resources |
 | `DOCA_ERROR_IN_USE` | `doca_gpi_destroy` ran while domains or channels are still alive | Destroy every channel (`doca_gpi_channel_destroy`) and domain (`doca_gpi_domain_destroy`), and detach mmaps (`doca_gpi_domain_detach_mmap`), before destroying the GPI instance |
-| `DOCA_ERROR_NOT_SUPPORTED` | The installed DOCA version does not export the requested `doca_gpi_*` symbol, or the device does not support the GPU datapath this code requires | Confirm the symbol exists in the installed headers per [`## Version compatibility`](#version-compatibility); confirm GPU-datapath support on the device via `doca_caps` ([`doca-caps`](../../tools/doca-caps/SKILL.md)) |
+| `DOCA_ERROR_NOT_SUPPORTED` | The installed DOCA version does not export the requested `doca_gpi_*` symbol, or the device does not support the GPU datapath this code requires | Confirm the symbol exists in the installed headers per [`## Version compatibility`](#version-compatibility); confirm GPU-datapath support on the device via `doca_caps` ([`doca-caps`](../doca-caps/SKILL.md)) |
 | `DOCA_ERROR_DRIVER` | The layer below DOCA (mlx5 driver, firmware, the verbs / RDMA stack GPI depends on) reported a failure | Stop. This is not a GPI-spec problem. Capture `dmesg | tail` and `mlxconfig -d <pcie> q`; route to [`doca-debug TASKS.md ## debug`](../../doca-debug/TASKS.md#debug) layer 7 |
 
 Quote `doca_error_get_descr()` verbatim — do not paraphrase. The
@@ -279,7 +279,7 @@ var) see
 [`doca-debug CAPABILITIES.md ## Observability`](../../doca-debug/CAPABILITIES.md#observability).
 For the install-tree observability (logger names, package
 layout) defer to
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 ## Safety policy
 
@@ -326,7 +326,7 @@ itself — `mlxconfig`-class writes, firmware burns, BlueField BFB
 reflash, host kernel boot parameters (IOMMU mode is particularly
 load-bearing for GPUDirect-style memory mapping) — the
 cross-cutting meta-policy in
-[`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+[`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
 applies without modification. GPI does not redefine those rules;
 the agent walks the hardware-safety ladder first whenever the
 symptom involves device state, then the GPI overlay above for
@@ -361,6 +361,6 @@ topics the agent will get asked but should route elsewhere:
   [`doca-programming-guide CAPABILITIES.md ## Error taxonomy`](../../doca-programming-guide/CAPABILITIES.md#error-taxonomy).
   This skill adds the GPI overlay, not the taxonomy itself.
 - **Cross-library capability-snapshot tooling** — owned by
-  [`doca-caps`](../../tools/doca-caps/SKILL.md). This skill
+  [`doca-caps`](../doca-caps/SKILL.md). This skill
   references the tool; it does not redefine its invocation
   patterns.

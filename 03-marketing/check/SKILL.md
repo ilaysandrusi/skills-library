@@ -1,6 +1,6 @@
 ---
 name: check
-description: "Run the unified pre-publish quality gate on marketing content — wraps scripts/eval-runner.py to score hallucination risk, claim substantiation (with --evidence), brand-voice fit (with --brand), structure (with --schema), content quality, and readability, plus a C2PA provenance check for AI assets in EU-targeted campaigns; returns a composite score with a PASS / WARN / BLOCKED decision and per-issue fix suggestions. Reports only — it never edits the content. Triggers on \"/digital-marketing-pro:check\", \"is this safe to publish\", \"run a hallucination check on this draft\", \"validate this copy against the brand voice\", \"pre-publish quality gate\". Resolves the active brand profile automatically; pairs with /digital-marketing-pro:c2pa-metadata to fix missing manifests."
+description: "Run the unified pre-publish quality gate on marketing content — wraps ../../scripts/digital-marketing-pro/eval-runner.py to score hallucination risk, claim substantiation (with --evidence), brand-voice fit (with --brand), structure (with --schema), content quality, and readability, plus a C2PA provenance check for AI assets in EU-targeted campaigns; returns a composite score with a PASS / WARN / BLOCKED decision and per-issue fix suggestions. Reports only — it never edits the content. Triggers on \"/digital-marketing-pro:check\", \"is this safe to publish\", \"run a hallucination check on this draft\", \"validate this copy against the brand voice\", \"pre-publish quality gate\". Resolves the active brand profile automatically; pairs with /digital-marketing-pro:c2pa-metadata to fix missing manifests."
 user-invocable: true
 triggers:
   - check this content before publishing
@@ -16,7 +16,7 @@ allowed-tools: Read Bash Glob Grep
 
 # /digital-marketing-pro:check — Unified Pre-Publish Quality Gate
 
-This skill is the canonical pre-publish gate for marketing content. It wraps the evaluation suite (`scripts/eval-runner.py`) and produces a single pass/fail decision with actionable issues.
+This skill is the canonical pre-publish gate for marketing content. It wraps the evaluation suite (`../../scripts/digital-marketing-pro/eval-runner.py`) and produces a single pass/fail decision with actionable issues.
 
 ## Context efficiency
 
@@ -32,7 +32,7 @@ An earlier version shipped a global PreToolUse hook that auto-ran a hallucinatio
 
 ## What the check evaluates
 
-The check delegates to `scripts/eval-runner.py` (the master eval orchestrator) which calls four sibling scripts:
+The check delegates to `../../scripts/digital-marketing-pro/eval-runner.py` (the master eval orchestrator) which calls four sibling scripts:
 
 | Dimension | Script | What it checks |
 |---|---|---|
@@ -172,7 +172,7 @@ The skill follows this flow:
 
 ## Scripts called
 
-- `scripts/eval-runner.py` — master orchestrator
+- `../../scripts/digital-marketing-pro/eval-runner.py` — master orchestrator
 - `scripts/hallucination-detector.py` — invoked by eval-runner
 - `scripts/claim-verifier.py` — invoked by eval-runner if `--evidence` provided
 - `scripts/brand-voice-scorer.py` — invoked by eval-runner if `--brand` provided
@@ -287,7 +287,7 @@ Skill:
 
 ## Related references
 
-- `scripts/eval-runner.py` — the master orchestrator this skill wraps
+- `../../scripts/digital-marketing-pro/eval-runner.py` — the master orchestrator this skill wraps
 - `skills/context-engine/eval-framework-guide.md` — full eval framework documentation
 - `skills/context-engine/eval-rubrics.md` — per-dimension scoring rubrics
 - `docs/architecture.md` Section 16 (Evaluation Layer) — eval framework architecture

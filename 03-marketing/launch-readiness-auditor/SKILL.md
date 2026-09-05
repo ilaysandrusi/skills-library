@@ -53,15 +53,15 @@ Run the outcome profile at day 30; keep it separate from the preflight result.
 
 ### Runtime Reads
 
-- `../../../references/auditor-runbook.md`
-- `../../../references/scoring-semantics.md`
-- `../../../references/ramp-benchmark.md`
-- `../../../references/runtime-invocation.md`
+- `../../references/aaron-marketing/auditor-runbook.md`
+- `../../references/aaron-marketing/scoring-semantics.md`
+- `../../references/aaron-marketing/ramp-benchmark.md`
+- `../../references/aaron-marketing/runtime-invocation.md`
 - `references/auditor-runtime.md`
 
 ### Runtime and Setup
 
-Read `../../../references/auditor-runbook.md`, `scoring-semantics.md`, `ramp-benchmark.md`, and the RAMP catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
+Read `../../references/aaron-marketing/auditor-runbook.md`, `scoring-semantics.md`, `ramp-benchmark.md`, and the RAMP catalog entry. Standalone installs use bundled immutable `references/auditor-runtime.md`; never fetch mutable `main`. Before deterministic calls, follow [`runtime-invocation.md`](../../references/aaron-marketing/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, and require the scorer, validator, and typed catalogs. If unavailable, return `score_state: NOT_SCORED` / `score_confidence: not_scored` with no gate verdict or persistent artifact.
 
 Declare profile/lifecycle read (`preflight|execution|outcome`), target launch, launch type, market, access model, observation date, and evidence window.
 
@@ -114,14 +114,14 @@ Persist only after explicit authorization to `memory/audits/launch/YYYY-MM-DD-<t
 
 ## Reference Materials
 
-- [RAMP benchmark](../../../references/ramp-benchmark.md)
-- [Auditor runbook](../../../references/auditor-runbook.md)
-- [Scoring semantics](../../../references/scoring-semantics.md)
-- [Measurement protocol](../../../references/measurement-protocol.md)
+- [RAMP benchmark](../../references/aaron-marketing/ramp-benchmark.md)
+- [Auditor runbook](../../references/aaron-marketing/auditor-runbook.md)
+- [Scoring semantics](../../references/aaron-marketing/scoring-semantics.md)
+- [Measurement protocol](../../references/aaron-marketing/measurement-protocol.md)
 
 ## Next Best Skill
 
-- **Stage/commitment facts:** [launch-registry](../../../protocol/launch-registry/SKILL.md)
-- **Asset/technical fixes:** [launch-asset-packager](../../assemble/launch-asset-packager/SKILL.md)
+- **Stage/commitment facts:** [launch-registry](../launch-registry/SKILL.md)
+- **Asset/technical fixes:** [launch-asset-packager](../launch-asset-packager/SKILL.md)
 - **Execute approved plan:** [launch-day-conductor](../launch-day-conductor/SKILL.md)
-- **Outcome monitoring:** [launch-monitor](../../prove/launch-monitor/SKILL.md)
+- **Outcome monitoring:** [launch-monitor](../launch-monitor/SKILL.md)

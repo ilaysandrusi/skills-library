@@ -16,11 +16,11 @@ pattern (the verbs `install / configure / build / modify /
 run / test / debug / use`), jump to [TASKS.md](TASKS.md).
 For the canonical DOCA version-handling rules that this
 skill layers on top of, see
-[`doca-version`](../../doca-version/SKILL.md). For the
+[`doca-version`](../doca-version/SKILL.md). For the
 host-side PCC framework that loads this algorithm, see
 [`doca-pcc`](../doca-pcc/SKILL.md). For the read-only
 counter-inspection side, see
-[`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md).
+[`doca-pcc-counters`](../doca-pcc-counters/SKILL.md).
 
 ## Pattern overview
 
@@ -80,7 +80,7 @@ framework, counter tool.**
 | --- | --- | --- | --- |
 | **`doca-pcc-ztr-rttcc-algo`** (this skill) | The shipped reference PCC algorithm; one of several algorithm bodies that could be loaded onto the DPA, except this one is the no-config-required baseline NVIDIA ships | Walk deployment / tuning / evaluation of this specific algorithm | `doca-pcc-ztr-rttcc-algo` |
 | **`doca-pcc`** | Host-side framework that loads ANY PCC algorithm onto the BlueField DPA via the `doca_pcc` Core context and the `doca_pcc_app` image | Cross-link only — the host-side lifecycle lives there; this skill assumes it is already understood | `doca-pcc` (covered by [`doca-pcc`](../doca-pcc/SKILL.md)) |
-| **`doca-pcc-counters`** | Read-only diagnostic CLI shipped under `/opt/mellanox/doca/tools/` that inspects per-port / per-flow PCC counters | Cross-link only — the observability workflow lives there; this skill names what counters this algorithm emits and routes the inspection to the tool | (covered by [`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md)) |
+| **`doca-pcc-counters`** | Read-only diagnostic CLI shipped under `/opt/mellanox/doca/tools/` that inspects per-port / per-flow PCC counters | Cross-link only — the observability workflow lives there; this skill names what counters this algorithm emits and routes the inspection to the tool | (covered by [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md)) |
 
 The agent's rule: when the user asks *"how do I deploy this
 algorithm onto my port"*, this skill is the right one. When
@@ -126,7 +126,7 @@ pick deliberately:
 | RX-rate + PM mode | Combination of the two | When both apply |
 | Multipath (MP) mode | Multipath-aware variant | When the deployment is multipath and the user wants multipath-specific shaping |
 | Multipath + credits | Multipath with credit-based pacing | When multipath shaping needs credit-based pacing |
-| Window-probeless | Probeless windowed multipath variant | Specialized; route to the public PCC programming guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) for the design rationale |
+| Window-probeless | Probeless windowed multipath variant | Specialized; route to the public PCC programming guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) for the design rationale |
 
 The variant is selected at DPACC build time; switching
 variants is a rebuild, not a runtime knob. The agent
@@ -221,7 +221,7 @@ knows what to look for in the tool's output.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body
+[`doca-version`](../doca-version/SKILL.md). The body
 lives there; this skill does not duplicate it.
 
 **The algorithm-specific overlay** is:
@@ -253,7 +253,7 @@ lives there; this skill does not duplicate it.
   surface that subset of the chain when the user is
   building from source rather than from the installed
   binary packages; otherwise the install verb routes
-  through [`doca-setup`](../../doca-setup/SKILL.md).
+  through [`doca-setup`](../doca-setup/SKILL.md).
 - **BlueField generation is part of the version axis.** Per
   the README ("over BlueField-3's DPA processor"), the
   shipped library targets BlueField-3-class hardware. The
@@ -270,7 +270,7 @@ lives there; this skill does not duplicate it.
   at
   <https://docs.nvidia.com/doca/sdk/DOCA+PCC+Application+Guide.md>).
   Route through
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   rather than quoting URLs from memory.
 
 ## Error taxonomy
@@ -333,7 +333,7 @@ Three primary signals the agent should reach for, in order:
 1. **The `doca-pcc-counters` CLI output.** This is the
    *operator-side* canonical view of whether the running
    algorithm is shaping flows. Route to
-   [`doca-pcc-counters`](../../tools/doca-pcc-counters/SKILL.md);
+   [`doca-pcc-counters`](../doca-pcc-counters/SKILL.md);
    that skill walks the list → snapshot → watch → diff
    loop. The agent's job here is to surface that this is
    the *first* check whenever the user says "the
@@ -404,7 +404,7 @@ walk:
 
 | Precondition | What must be true | How the agent verifies | Where to fix |
 | --- | --- | --- | --- |
-| The host-side `doca-pcc` preconditions are satisfied | DPA-capable BlueField, firmware custom-PCC slot enabled, matched DOCA + DPACC versions, `doca_dev` access available | Walk [`doca-pcc TASKS.md ## configure`](../doca-pcc/TASKS.md#configure) step 1 (the triple-axis precondition check); do NOT proceed without all three axes green | [`doca-pcc`](../doca-pcc/SKILL.md) and [`doca-setup`](../../doca-setup/SKILL.md) — NOT a fix in this skill |
+| The host-side `doca-pcc` preconditions are satisfied | DPA-capable BlueField, firmware custom-PCC slot enabled, matched DOCA + DPACC versions, `doca_dev` access available | Walk [`doca-pcc TASKS.md ## configure`](../doca-pcc/TASKS.md#configure) step 1 (the triple-axis precondition check); do NOT proceed without all three axes green | [`doca-pcc`](../doca-pcc/SKILL.md) and [`doca-setup`](../doca-setup/SKILL.md) — NOT a fix in this skill |
 | The attached port carries RoCE-v2 traffic | The BlueField port the `doca_pcc` is attached to has live RoCE-v2 flows | Confirm with the user; if no, route to [`doca-rdma`](../doca-rdma/SKILL.md) for bringing up RoCE-v2 traffic; the algorithm has nothing to shape on an idle port | [`doca-rdma`](../doca-rdma/SKILL.md) — NOT a fix in this skill |
 | Parameters set via `doca_pcc_dev_set_ztr_rttcc_params`, never by direct writes | Every parameter update flows through the framework's set-params path so the algorithm's range-check runs | Walk the parameter-set workflow in [TASKS.md ## use](TASKS.md#use); the public header documents the call signature | Program-side fix; do NOT bypass the framework call |
 | Variant choice is deliberate and rebuilt cleanly | The DPA-side translation unit was compiled against the intended variant (vanilla / PM / RX-rate / MP / etc.); switching variants is a rebuild | Walk the variant selection in [`## Capabilities and modes`](#capabilities-and-modes); the README documents the relevant linkage line in `build_device_code.sh` | DPA-side rebuild via `dpacc`, then host rebuild that embeds it |

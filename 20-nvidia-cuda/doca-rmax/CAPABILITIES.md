@@ -12,7 +12,7 @@ Read this file when the loader sent you here from
 jump to [TASKS.md](TASKS.md). For the canonical DOCA
 version-handling rules that this skill layers a Rivermax
 overlay on top of, see
-[`doca-version`](../../doca-version/SKILL.md). For the queue
+[`doca-version`](../doca-version/SKILL.md). For the queue
 surface that carries the packets a Rivermax stream produces or
 consumes, defer to [`doca-eth`](../doca-eth/SKILL.md);
 for the steering side (which Flow rule sends which packet to
@@ -118,7 +118,7 @@ order, PTP-synced timestamps, receive timeout / min-max packet
 batching) gate on the matching `doca_rmax_get_*_supported`
 query and the corresponding `doca_rmax_in_stream_set_*` setter; the agent should consult
 the public DOCA Rivermax guide (slug `DOCA-Rivermax` via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md))
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md))
 for the canonical setter names on the installed version rather
 than quote them from memory.
 
@@ -127,7 +127,7 @@ than quote them from memory.
 For the canonical DOCA version-detection chain, the four-way
 match rule, NGC container semantics, and the
 headers-win-over-docs rule, see
-[`doca-version`](../../doca-version/SKILL.md). The body lives
+[`doca-version`](../doca-version/SKILL.md). The body lives
 there; this skill does not duplicate it.
 
 **The Rivermax-specific overlay** is:
@@ -142,7 +142,7 @@ there; this skill does not duplicate it.
   `pkg-config --modversion doca-rmax`) **and** the
   Rivermax SDK version (per the Rivermax SDK's own version
   query, documented in the public Rivermax SDK guide via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md))
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md))
   before promising a feature.
 - **`doca_rmax_get_*_supported` is the runtime authority, not the
   public docs.** Per the cross-cutting cap-query rule in
@@ -225,7 +225,7 @@ Four primary signals the agent should reach for:
 3. **Rivermax-side state.** The Rivermax SDK has its own
    logging / status surface documented in the public Rivermax
    SDK guide; the agent should route to it via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
    when the cause is suspected to be Rivermax-side (license,
    stream config, scheduling jitter) rather than DOCA-side.
    The agent must NOT invent Rivermax-side commands or paths
@@ -264,12 +264,12 @@ whether the rest of the matrix is even relevant.
 
 | Precondition | What must be true before `doca_ctx_start()` | How the agent verifies | Where to fix |
 | --- | --- | --- | --- |
-| **Rivermax SDK installed (hard external dep)** | The NVIDIA Rivermax SDK is installed on the host at the location Rivermax expects | Execute the programmatic install or version probe documented for the installed Rivermax SDK release in the public Rivermax SDK guide (slug `DOCA-Rivermax` via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)); copy the exact probe from that guide rather than inventing a command or path. Do not assume from a successful `pkg-config doca-rmax` (that only confirms the DOCA-side wrapper, not the SDK behind it). If no programmatic result can be obtained, treat the SDK status as unverified and stop at this gate | Route to the public Rivermax SDK guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md); this is OUT OF SCOPE for `doca-rmax`. If the SDK is not installed or its status cannot be verified, `doca-rmax` cannot be used — there is no DOCA-side fallback |
-| **Valid Rivermax license readable** | A current, unexpired Rivermax license file is present at the location the Rivermax SDK expects, readable by the user the streaming process will run as | Execute the Rivermax SDK's own license check documented for the installed release; the installed header also documents `DOCA_ERROR_NOT_SUPPORTED` from `doca_rmax_init()` for an invalid or missing license. If neither programmatic result can be obtained, treat the license status as unverified and stop at this gate. Do not assign a later `DOCA_ERROR_NOT_PERMITTED` to licensing without call-specific documentation | Route to the public Rivermax SDK guide via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md); this is OUT OF SCOPE for `doca-rmax` |
-| DOCA-side device access | The `doca_dev` was opened against a port / representor / SF the user has permission to use (typically requires sudo or `mlnx`-group membership) | `id` for group membership; the open call failing with `DOCA_ERROR_NOT_PERMITTED` is the runtime symptom, distinct from the Rivermax-side license cause above | [`doca-setup`](../../doca-setup/SKILL.md) for the env-side; do not modify the program |
+| **Rivermax SDK installed (hard external dep)** | The NVIDIA Rivermax SDK is installed on the host at the location Rivermax expects | Execute the programmatic install or version probe documented for the installed Rivermax SDK release in the public Rivermax SDK guide (slug `DOCA-Rivermax` via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)); copy the exact probe from that guide rather than inventing a command or path. Do not assume from a successful `pkg-config doca-rmax` (that only confirms the DOCA-side wrapper, not the SDK behind it). If no programmatic result can be obtained, treat the SDK status as unverified and stop at this gate | Route to the public Rivermax SDK guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md); this is OUT OF SCOPE for `doca-rmax`. If the SDK is not installed or its status cannot be verified, `doca-rmax` cannot be used — there is no DOCA-side fallback |
+| **Valid Rivermax license readable** | A current, unexpired Rivermax license file is present at the location the Rivermax SDK expects, readable by the user the streaming process will run as | Execute the Rivermax SDK's own license check documented for the installed release; the installed header also documents `DOCA_ERROR_NOT_SUPPORTED` from `doca_rmax_init()` for an invalid or missing license. If neither programmatic result can be obtained, treat the license status as unverified and stop at this gate. Do not assign a later `DOCA_ERROR_NOT_PERMITTED` to licensing without call-specific documentation | Route to the public Rivermax SDK guide via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md); this is OUT OF SCOPE for `doca-rmax` |
+| DOCA-side device access | The `doca_dev` was opened against a port / representor / SF the user has permission to use (typically requires sudo or `mlnx`-group membership) | `id` for group membership; the open call failing with `DOCA_ERROR_NOT_PERMITTED` is the runtime symptom, distinct from the Rivermax-side license cause above | [`doca-setup`](../doca-setup/SKILL.md) for the env-side; do not modify the program |
 | Port up | The underlying port reports linkup at the driver layer (`devlink dev show` reports `state: PORT_ACTIVE`; `ip link` shows the device `UP,LOWER_UP`) | `devlink dev show`; `ip -j link show <dev>`; `ethtool <dev>` | [`doca-setup CAPABILITIES.md ## Capabilities and modes`](../../doca-setup/CAPABILITIES.md#capabilities-and-modes) port-bring-up; do not modify the program |
 | Traffic reaches the underlying queue | A DOCA Flow rule steers matching packets to the `doca_eth_rxq` the Rivermax input stream is attached to (input direction only) | Inspect the flow rule programmed for the queue; programmatic via the [`doca-flow`](../doca-flow/SKILL.md) skill's `## test` workflow | [`doca-flow`](../doca-flow/SKILL.md) for the steering side; this is OUT OF SCOPE for `doca-rmax` |
-| Real-time scheduling on streaming threads | The streaming thread runs at real-time priority (per the Rivermax SDK's recommended scheduling discipline) so timing-precise emission / reception holds | Route to the Rivermax SDK's own docs via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md) for the canonical scheduling guidance | Out of scope for `doca-rmax`; the canonical scheduling discipline lives in the Rivermax SDK guide |
+| Real-time scheduling on streaming threads | The streaming thread runs at real-time priority (per the Rivermax SDK's recommended scheduling discipline) so timing-precise emission / reception holds | Route to the Rivermax SDK's own docs via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md) for the canonical scheduling guidance | Out of scope for `doca-rmax`; the canonical scheduling discipline lives in the Rivermax SDK guide |
 
 **Do not invent a "fallback transport" for Rivermax.** When
 the Rivermax SDK or license is unavailable, the right answer

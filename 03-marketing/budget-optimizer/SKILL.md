@@ -42,15 +42,15 @@ Output: a tier/platform/content allocation table, projected reach + CPM/CPE, 2-3
   1. Allocation sums to 100% of the stated budget with a contingency line.
   2. Every projected metric is labeled Measured / User-provided / Estimated.
   3. One recommended scenario is named with its rationale.
-- **Primary next skill**: [outreach-manager](../../activate/outreach-manager/SKILL.md) — turn the funded allocation into influencer outreach.
+- **Primary next skill**: [outreach-manager](../outreach-manager/SKILL.md) — turn the funded allocation into influencer outreach.
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md).
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md).
 
 ## Cross-discipline: ad spend allocation
 
-This skill also allocates **paid-ads** spend — the tier/platform tables map to channels/campaigns; use the ROAS profile (`direct-response|prospecting|incremental-profit`) as the scenario axis and read its declared CPA/payback/contribution constraint instead of substituting CPM/CPE. Scope: this computes the spend-reallocation **plan** only. It does **not** read in-flight pacing or issue scale-up/down moves — the live pacing read (pacing vs plan, learning-phase respect) belongs to [budget-pacing-monitor](../../../ad/scale/budget-pacing-monitor/SKILL.md), and bid-strategy choice belongs to [bid-strategy-planner](../../../ad/orchestrate/bid-strategy-planner/SKILL.md). [paid-measurement-loop](../../../ad/scale/paid-measurement-loop/SKILL.md) reads one shipped change back against a control, and premature scaling is an **S guardrail flag** in [ad-account-auditor](../../../ad/activate/ad-account-auditor/SKILL.md), not a separate skill or a veto. Save paid runs under `memory/ad/budget-optimizer/`.
+This skill also allocates **paid-ads** spend — the tier/platform tables map to channels/campaigns; use the ROAS profile (`direct-response|prospecting|incremental-profit`) as the scenario axis and read its declared CPA/payback/contribution constraint instead of substituting CPM/CPE. Scope: this computes the spend-reallocation **plan** only. It does **not** read in-flight pacing or issue scale-up/down moves — the live pacing read (pacing vs plan, learning-phase respect) belongs to [budget-pacing-monitor](../budget-pacing-monitor/SKILL.md), and bid-strategy choice belongs to [bid-strategy-planner](../bid-strategy-planner/SKILL.md). [paid-measurement-loop](../paid-measurement-loop/SKILL.md) reads one shipped change back against a control, and premature scaling is an **S guardrail flag** in [ad-account-auditor](../ad-account-auditor/SKILL.md), not a separate skill or a veto. Save paid runs under `memory/ad/budget-optimizer/`.
 
 ## Data Sources
 
@@ -62,7 +62,7 @@ Optional connectors that sharpen the estimates when present:
 - `~~social platform analytics` — actual reach, CPM, and engagement to replace estimated projections.
 - `~~CRM` — past campaign spend and conversion data for ROI calibration.
 
-Mark any connector-derived number Measured; mark benchmark-derived numbers Estimated; mark numbers you state as User-provided. See [CONNECTORS.md](../../../CONNECTORS.md) for the keyless data recipes.
+Mark any connector-derived number Measured; mark benchmark-derived numbers Estimated; mark numbers you state as User-provided. See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the keyless data recipes.
 
 ## Instructions
 
@@ -121,23 +121,23 @@ This allocation prioritizes TikTok for viral potential while using Instagram for
 ## Reference Materials
 
 - Templates, cost benchmarks, scenario A/B/C blocks, optimization tips & second example: [references/templates.md](references/templates.md)
-- Shared contract: [skill-contract.md](../../../references/skill-contract.md)
-- Shared state model: [state-model.md](../../../references/state-model.md)
-- Connector recipes: [CONNECTORS.md](../../../CONNECTORS.md)
+- Shared contract: [skill-contract.md](../../references/aaron-marketing/skill-contract.md)
+- Shared state model: [state-model.md](../../references/aaron-marketing/state-model.md)
+- Connector recipes: [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md)
 - Sibling skills:
   - [campaign-planner](../campaign-planner/SKILL.md) — the campaign plan this budget funds
-  - [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — find influencers in budget range
-  - [outreach-manager](../../activate/outreach-manager/SKILL.md) — turn the allocation into outreach
-  - [roi-calculator](../../report/roi-calculator/SKILL.md) — calculate actual ROI post-campaign
-  - [performance-analyzer](../../report/performance-analyzer/SKILL.md) — inform reallocation decisions
+  - [influencer-discovery](../influencer-discovery/SKILL.md) — find influencers in budget range
+  - [outreach-manager](../outreach-manager/SKILL.md) — turn the allocation into outreach
+  - [roi-calculator](../roi-calculator/SKILL.md) — calculate actual ROI post-campaign
+  - [performance-analyzer](../performance-analyzer/SKILL.md) — inform reallocation decisions
 
 ## Next Best Skill
 
-**Primary**: [outreach-manager](../../activate/outreach-manager/SKILL.md) — once the allocation is funded and the tier mix is locked, move to recruiting the influencers it pays for.
+**Primary**: [outreach-manager](../outreach-manager/SKILL.md) — once the allocation is funded and the tier mix is locked, move to recruiting the influencers it pays for.
 
 **Alternates** (same influencer family):
 
-- [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — if you need to source candidates that fit each tier's per-influencer budget first.
+- [influencer-discovery](../influencer-discovery/SKILL.md) — if you need to source candidates that fit each tier's per-influencer budget first.
 - [campaign-planner](../campaign-planner/SKILL.md) — if the budget exposed a gap in the underlying campaign plan.
 
 **Termination**: keep a visited-set. If the recommended next skill was already invoked in this session's chain, stop and report chain-complete instead of re-invoking. Default `max-depth: 3`. When routing is ambiguous, present the options and stop rather than auto-following.

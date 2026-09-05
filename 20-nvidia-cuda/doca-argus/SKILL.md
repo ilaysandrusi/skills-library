@@ -36,7 +36,7 @@ compatibility: >
 > library is **not covered by this bundle** — it is policy-excluded
 > from the public release; see [AGENTS.md `## Non-goals`](../../../AGENTS.md#non-goals-questions-the-agent-should-recognize-and-refuse-politely)
 > item 7 and route to the public docs via
-> [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+> [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 > When a request is "introspect host processes / detect suspicious
 > activity / runtime security" and asks for the *currently-supported*
 > choice, **Argus is the answer to name first**; the App Shield
@@ -59,12 +59,12 @@ this bundle). If the user wants to *deploy* the Argus container, open
 shape of service is Argus, what does it detect, and how does it
 expose findings*, start at [`CAPABILITIES.md`](CAPABILITIES.md).
 If DOCA is not installed on the BlueField yet, route to
-[`doca-setup`](../../doca-setup/SKILL.md) first. If the user's real
+[`doca-setup`](../doca-setup/SKILL.md) first. If the user's real
 question is *"I want to write a custom security tool against host
 kernel state from the BlueField side"*, the right answer is
 **not** this skill — that is the DOCA App Shield library, which is
 not covered by this bundle; route the user to the public docs via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
 instead.
 
 ## Example questions this skill answers well
@@ -134,7 +134,7 @@ trusting the channel for production-grade decisions.
 It is **not** for NVIDIA developers contributing to Argus itself,
 and it is **not** a programming guide for *building security tools
 on top of* DOCA libraries (that is
-[`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+[`doca-programming-guide`](../doca-programming-guide/SKILL.md)
 plus the matching `libs/<library>` skill — and for the App Shield
 library that custom security tooling builds on, the public docs,
 since App Shield is not covered by this bundle). Argus is a
@@ -154,13 +154,13 @@ own decision logic). Do **not** reach for Argus when (a) there is
 no security-posture concern (Argus is heavyweight overhead for
 nothing); (b) the user actually wants observability / metrics
 rather than security (route to the DOCA Telemetry Service via
-[`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services));
+[`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services));
 (c) the user is building their own DPU-side custom security
 tooling (that is the DOCA App Shield library — the library
 equivalent, same shape of BlueField-side observation, different
 shape of operator effort — which is not covered by this bundle;
 route to the public docs via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
 
 ## When to load this skill
 
@@ -201,8 +201,8 @@ work** on a BlueField where DOCA is already installed. Concretely:
 Do **not** load this skill for general DOCA orientation, install
 of DOCA itself, library-API questions, or non-security topics. For
 those, route via
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md),
-[`doca-setup`](../../doca-setup/SKILL.md), or the matching
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md),
+[`doca-setup`](../doca-setup/SKILL.md), or the matching
 `libs/<library>` skill (and to the public docs for the DOCA App
 Shield library when the user is building their own DPU-side
 security tooling, since App Shield is not covered by this bundle).
@@ -233,7 +233,7 @@ The skill assumes a BlueField where DOCA is already installed and
 the operator has the privileges the public Argus Service Guide
 expects to pull, run, and configure containers on BlueField Arm.
 It does not cover installing DOCA — that path goes through
-[`doca-setup`](../../doca-setup/SKILL.md). It does not cover
+[`doca-setup`](../doca-setup/SKILL.md). It does not cover
 SIEM-side ingest configuration in detail — the SIEM is the user's
 existing infrastructure, owned by the SIEM's own documentation;
 Argus's job is to emit findings in the documented forwarder format,
@@ -260,7 +260,7 @@ contain — and pull requests should not add:
 - **Container image names, tags, or registry paths.** The
   authoritative image source is the public DOCA Argus Service
   Guide reachable through
-  [`doca-public-knowledge-map ## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services);
+  [`doca-public-knowledge-map ## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services);
   Argus's image tag is version-bound and changes between DOCA
   releases. Inventing or memorizing a tag is the canonical
   hallucination failure mode for a service skill.
@@ -301,26 +301,26 @@ contain — and pull requests should not add:
 
 ## Related skills
 
-- [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)
+- [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)
   — the routing table to the public DOCA Argus Service Guide and
   the rest of the public DOCA documentation set. The Argus URL is
   listed under
-  [`## DOCA services`](../../doca-public-knowledge-map/SKILL.md#doca-services).
-- [`doca-setup`](../../doca-setup/SKILL.md) — env preparation and
+  [`## DOCA services`](../doca-public-knowledge-map/SKILL.md#doca-services).
+- [`doca-setup`](../doca-setup/SKILL.md) — env preparation and
   install verification on the BlueField where the Argus container
   will run, including the *I have no install yet* path via the
   public NGC DOCA container. This skill assumes its preconditions
   are satisfied on BlueField Arm.
-- [`doca-version`](../../doca-version/SKILL.md) — canonical DOCA
+- [`doca-version`](../doca-version/SKILL.md) — canonical DOCA
   version-handling rules. Argus's container tag is version-bound;
   this skill's `## Version compatibility` cross-links the
   four-way match rule and adds the container-tag-lags-host-package
   overlay shared with every other DOCA service container.
-- [`doca-structured-tools-contract`](../../doca-structured-tools-contract/SKILL.md) —
+- [`doca-structured-tools-contract`](../doca-structured-tools-contract/SKILL.md) —
   the bundle's structured-tools precedence rule (detect / prefer
   / fall back / report). The Command appendix in
   [TASKS.md](TASKS.md) honors this contract.
-- [`doca-programming-guide`](../../doca-programming-guide/SKILL.md)
+- [`doca-programming-guide`](../doca-programming-guide/SKILL.md)
   — general DOCA patterns. Argus is service-shaped not library-
   shaped, so the build / modify / first-app pattern there does
   not apply directly, but the cross-library debug discipline
@@ -333,7 +333,7 @@ contain — and pull requests should not add:
   (policy-excluded from the public release); when Argus is
   genuinely insufficient and the team needs to build their own
   security product, route to the public docs via
-  [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+  [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
   The path-selection rule in
   [`CAPABILITIES.md ## Safety policy`](CAPABILITIES.md#safety-policy)
   routes the user to Argus first for production security.
@@ -347,7 +347,7 @@ contain — and pull requests should not add:
   (DMS = device management via gNMI / gNOI; Firefly = time
   synchronization via PTP; Argus = runtime security via finding
   emission).
-- [`doca-debug`](../../doca-debug/SKILL.md) — the cross-cutting
+- [`doca-debug`](../doca-debug/SKILL.md) — the cross-cutting
   debug ladder (install / version / build / link / runtime /
   program / driver). Argus-specific debug (no findings arriving,
   too many findings, findings not forwarded, performance impact)

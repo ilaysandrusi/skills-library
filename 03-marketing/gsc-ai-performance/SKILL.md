@@ -131,4 +131,4 @@ A structured GSC AI performance brief containing:
 - `/digital-marketing-pro:aeo-geo` — optimization playbook for AI visibility
 - `/digital-marketing-pro:analytics-insights` — GA4 AI Assistant channel attribution
 - `skills/context-engine/eu-code-of-practice.md` — EU Article 50 transparency context for AI-cited content
-- `scripts/gsc-ai-performance.py` — helper script (placeholder until Google publishes API; reads exported CSV today)
+- `../../scripts/digital-marketing-pro/gsc-ai-performance.py` — helper script (placeholder until Google publishes API; reads exported CSV today)

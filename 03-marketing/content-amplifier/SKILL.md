@@ -17,7 +17,7 @@ metadata: {"author": "aaron-he-zhu", "version": "19.2.0", "discipline": "influen
 
 Extract more value from live, approved creator content. Two modes: **paid** (extend reach with paid spend — whitelisting, Spark Ads, dark posts, budget + optimization) and **repurpose** (reuse one asset across paid, website, email, and social — inventory, repurposing map, format specs, distribution plan). Both start from content that is already published and cleared; neither reviews whether the content is publishable — that gate is [creator-content-auditor](../creator-content-auditor/SKILL.md).
 
-**Scope guard**: this skill does NOT score a deliverable for brand alignment, message accuracy, or FTC/disclosure compliance, and it does NOT compute a STAR Trust/Appeal score or run the `STAR-T1`/`STAR-T2` veto — that is the [creator-content-auditor](../creator-content-auditor/SKILL.md) gate's job. This skill works the downstream lever: turning approved content into paid reach or many-channel assets, then hands off. In a product launch, this skill owns the **repurposing map and the paid-amplification / distribution execution calendar** (including the 30-day plan for launch content); the launch discipline's [momentum-planner](../../../launch/prove/momentum-planner/SKILL.md) schedules only the launch *moments* and hands the distribution work here. In always-on organic social the split is the same shape: the standing brand posting calendar belongs to [social-calendar-builder](../../../social/craft/social-calendar-builder/SKILL.md) and net-new idea-to-multi-platform package drafting to [social-creative-builder](../../../social/craft/social-creative-builder/SKILL.md) — this skill keeps repurposing of existing assets and ALL paid amplification, and the social discipline only flags boost-worthy organic winners to it.
+**Scope guard**: this skill does NOT score a deliverable for brand alignment, message accuracy, or FTC/disclosure compliance, and it does NOT compute a STAR Trust/Appeal score or run the `STAR-T1`/`STAR-T2` veto — that is the [creator-content-auditor](../creator-content-auditor/SKILL.md) gate's job. This skill works the downstream lever: turning approved content into paid reach or many-channel assets, then hands off. In a product launch, this skill owns the **repurposing map and the paid-amplification / distribution execution calendar** (including the 30-day plan for launch content); the launch discipline's [momentum-planner](../momentum-planner/SKILL.md) schedules only the launch *moments* and hands the distribution work here. In always-on organic social the split is the same shape: the standing brand posting calendar belongs to [social-calendar-builder](../social-calendar-builder/SKILL.md) and net-new idea-to-multi-platform package drafting to [social-creative-builder](../social-creative-builder/SKILL.md) — this skill keeps repurposing of existing assets and ALL paid amplification, and the social discipline only flags boost-worthy organic winners to it.
 
 ## Mode selector
 
@@ -57,11 +57,11 @@ Output expectation — **paid**: every candidate scored, tiered, and given a spe
 - **Done when**:
   - *paid* — (1) each candidate is scored /25 and tiered (must amplify / consider / do not amplify) with a recommended spend; (2) a budget allocation by content, objective, and platform sums to the stated budget; (3) an optimization plan with KPI targets and scale/pause rules is recorded.
   - *repurpose* — (1) every source asset has a rights level and expiration recorded; (2) at least one source asset is mapped to 3+ distinct output formats across 2+ channels; (3) a dated distribution plan with an asset checklist exists.
-- **Primary next skill**: *paid* → [performance-analyzer](../../report/performance-analyzer/SKILL.md) once campaigns are live; *repurpose* → [landing-optimizer](../../report/landing-optimizer/SKILL.md) to place the repurposed social proof where it converts.
+- **Primary next skill**: *paid* → [performance-analyzer](../performance-analyzer/SKILL.md) once campaigns are live; *repurpose* → [landing-optimizer](../landing-optimizer/SKILL.md) to place the repurposed social proof where it converts.
 
 ### Handoff Summary
 
-> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md). State which mode ran. Label every metric Measured / User-provided / Estimated — never present a CPM, ROAS, view count, or rights date you were not given as Measured; if it is missing, ask for the export or mark it Estimated with the basis.
+> Emit the standard shape from [skill-contract.md §Handoff Summary Format](../../references/aaron-marketing/skill-contract.md). State which mode ran. Label every metric Measured / User-provided / Estimated — never present a CPM, ROAS, view count, or rights date you were not given as Measured; if it is missing, ask for the export or mark it Estimated with the basis.
 
 ## Data Sources
 
@@ -75,7 +75,7 @@ Where a connector could sharpen the output (all optional, opt-in Tier 2/3):
 - `~~DAM / asset library` — store and tag processed assets; enforce the naming convention (repurpose).
 - `~~CRM` — supply retargeting/exclusion audiences (paid); reconcile creator records with usage-rights expirations (repurpose).
 
-See [CONNECTORS.md](../../../CONNECTORS.md) for the verified free/keyless recipe per category. None are required; absent a connector, the user supplies the numbers.
+See [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) for the verified free/keyless recipe per category. None are required; absent a connector, the user supplies the numbers.
 
 ## Instructions
 
@@ -134,12 +134,12 @@ Full rankings, strategies, setups, and both worked examples: [references/templat
 
 - [templates.md](references/templates.md) — fill-in templates for every step of both modes, platform setup guides, format transformation specs, both worked examples, and tips.
 - [atom-extraction.md](references/atom-extraction.md) — 7-tier content-atom extraction, the virality heuristic, and the Jaccard near-duplicate flag for slicing one source into many (repurpose mode).
-- Per-platform format & placement specs: [tiktok](../../../references/platforms/tiktok.md) · [youtube](../../../references/platforms/youtube.md) · [linkedin](../../../references/platforms/linkedin.md) · [x](../../../references/platforms/x.md) · [reddit](../../../references/platforms/reddit.md) · [grokipedia](../../../references/platforms/grokipedia.md).
-- [star-benchmark.md](../../../references/star-benchmark.md) — the STAR framework; the Trust vetoes (`STAR-T1` FTC disclosure, `STAR-T2` claim integrity) that creator-content-auditor enforces before this skill runs.
-- [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
-- [state-model.md](../../../references/state-model.md) — HOT/WARM/COLD memory tiers and save conventions.
-- [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipe per connector category.
-- Sibling skills: [creator-content-auditor](../creator-content-auditor/SKILL.md), [contract-helper](../contract-helper/SKILL.md), [landing-optimizer](../../report/landing-optimizer/SKILL.md), [budget-optimizer](../../target/budget-optimizer/SKILL.md), [performance-analyzer](../../report/performance-analyzer/SKILL.md).
+- Per-platform format & placement specs: [tiktok](../../references/aaron-marketing/platforms/tiktok.md) · [youtube](../../references/aaron-marketing/platforms/youtube.md) · [linkedin](../../references/aaron-marketing/platforms/linkedin.md) · [x](../../references/aaron-marketing/platforms/x.md) · [reddit](../../references/aaron-marketing/platforms/reddit.md) · [grokipedia](../../references/aaron-marketing/platforms/grokipedia.md).
+- [star-benchmark.md](../../references/aaron-marketing/star-benchmark.md) — the STAR framework; the Trust vetoes (`STAR-T1` FTC disclosure, `STAR-T2` claim integrity) that creator-content-auditor enforces before this skill runs.
+- [skill-contract.md](../../references/aaron-marketing/skill-contract.md) — shared contract and Handoff Summary format.
+- [state-model.md](../../references/aaron-marketing/state-model.md) — HOT/WARM/COLD memory tiers and save conventions.
+- [CONNECTORS.md](../../references/aaron-marketing/CONNECTORS.md) — free/keyless data recipe per connector category.
+- Sibling skills: [creator-content-auditor](../creator-content-auditor/SKILL.md), [contract-helper](../contract-helper/SKILL.md), [landing-optimizer](../landing-optimizer/SKILL.md), [budget-optimizer](../budget-optimizer/SKILL.md), [performance-analyzer](../performance-analyzer/SKILL.md).
 
 ## Save Results
 
@@ -148,12 +148,12 @@ After delivering findings, ask: "Save these results for future sessions?" If yes
 ## Next Best Skill
 
 **Primary**:
-- *paid mode* → [performance-analyzer](../../report/performance-analyzer/SKILL.md) — measure amplification results once campaigns are live.
-- *repurpose mode* → [landing-optimizer](../../report/landing-optimizer/SKILL.md) — drop the repurposed testimonials, hero videos, and quote cards onto the pages that convert.
+- *paid mode* → [performance-analyzer](../performance-analyzer/SKILL.md) — measure amplification results once campaigns are live.
+- *repurpose mode* → [landing-optimizer](../landing-optimizer/SKILL.md) — drop the repurposed testimonials, hero videos, and quote cards onto the pages that convert.
 
 **Alternates**:
 - [content-amplifier --mode paid](SKILL.md) — when repurposed ad variations are ready for paid spend (run only if repurpose ran this session and paid has not).
 - [contract-helper](../contract-helper/SKILL.md) — secure or expand usage rights before reuse (repurpose).
-- [budget-optimizer](../../target/budget-optimizer/SKILL.md) — reallocate paid budget across the recommended tiers (paid).
+- [budget-optimizer](../budget-optimizer/SKILL.md) — reallocate paid budget across the recommended tiers (paid).
 
 **Termination**: maintain a visited-set this session. If a recommended target (including the sibling mode of this skill) already ran, STOP and report the chain complete rather than re-invoking it. Max chain depth 3. When routing is ambiguous, present the options and stop instead of auto-following.

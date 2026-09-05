@@ -13,7 +13,7 @@ compatibility, error taxonomy, observability surface, and safety
 policy that these workflows assume, see
 [CAPABILITIES.md](CAPABILITIES.md). For where to find docs, the
 installed DOCA layout, or release notes, route through
-[`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md).
+[`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md).
 
 Each verb below describes the **shape of the workflow**, not a
 copy-paste recipe. The agent's job is to walk the user through
@@ -27,7 +27,7 @@ plus a compatible CUDA Toolkit before any GPI-specific work
 begins.
 
 This skill does **not** own DOCA installation; that path lives in
-[`doca-setup`](../../doca-setup/SKILL.md). The GPI-specific
+[`doca-setup`](../doca-setup/SKILL.md). The GPI-specific
 preconditions the agent verifies after a DOCA install:
 
 1. **`doca-gpi` `.pc` file is present.** `pkg-config
@@ -36,7 +36,7 @@ preconditions the agent verifies after a DOCA install:
    DOCA package set does not include GPI; the user needs to
    install the matching package (the exact package name is
    platform-specific and looked up via
-   [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)).
+   [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package)).
 2. **Supporting `.pc` files are present.** GPI's DOCA
    dependencies (`dependencies/meson.build`) are `doca-dpa`,
    `doca-gpunetio`, and `doca-verbs`. All of their `pkg-config
@@ -52,7 +52,7 @@ preconditions the agent verifies after a DOCA install:
    handle is consumed by `nvcc`-compiled kernels; the user must
    have a CUDA Toolkit version paired with the installed DOCA
    release per the release notes (looked up via
-   [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)).
+   [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)).
    The agent does NOT quote a specific CUDA version from agent
    memory; the user reads the pairing from the DOCA release
    notes that match `doca_caps --version`.
@@ -66,7 +66,7 @@ preconditions the agent verifies after a DOCA install:
    layer 5 (driver).
 
 If any precondition fails, **stop and route to
-[`doca-setup`](../../doca-setup/SKILL.md)**; a GPI-layer
+[`doca-setup`](../doca-setup/SKILL.md)**; a GPI-layer
 diagnosis against a half-installed DOCA or a missing CUDA Toolkit
 wastes the user's time.
 
@@ -86,7 +86,7 @@ Steps the agent should walk the user through:
    for the driver-reported toolkit, `nvcc --version` for the
    build-time toolkit); do not assume "latest".
 2. **Identify GPU-datapath-capable devices.** Run `doca_caps
-   --list-devs` ([`doca-caps`](../../tools/doca-caps/SKILL.md))
+   --list-devs` ([`doca-caps`](../doca-caps/SKILL.md))
    to see which devices have the GPU-datapath capability. Note
    that `doca_gpi.h` exposes **no** `doca_gpi_cap_*` devinfo
    query — GPI has no runtime capability API — so the agent does
@@ -165,7 +165,7 @@ This skill carries only the GPI-specific overlay:
 | --- | --- | --- |
 | `pkg-config` module name (host side) | `doca-gpi` | The library's `.pc` file installed by the DOCA host packages |
 | Co-required modules | `doca-gpunetio`, `doca-dpa`, `doca-verbs` | GPI's DOCA dependencies per `dependencies/meson.build`; the GPU-side handle type lives in `doca-gpunetio` and the transport layer is `doca-verbs`, so all must be reachable through `pkg-config` |
-| Header check | `doca_gpi.h` resolvable under the installed DOCA infrastructure include tree (path via [`doca-public-knowledge-map`](../../doca-public-knowledge-map/SKILL.md)) | If `pkg-config --cflags doca-gpi` resolves but the include is missing, the install is partial |
+| Header check | `doca_gpi.h` resolvable under the installed DOCA infrastructure include tree (path via [`doca-public-knowledge-map`](../doca-public-knowledge-map/SKILL.md)) | If `pkg-config --cflags doca-gpi` resolves but the include is missing, the install is partial |
 | CUDA-side compilation | The CUDA kernel that consumes `struct doca_gpu_gpi_channel*` is compiled with `nvcc`, against the DOCA GPU NetIO device-side header set — routed to [`doca-gpunetio`](../doca-gpunetio/SKILL.md) for the device-side surface | Mixing host and CUDA toolchains on the same translation unit is the canonical reason a CUDA-side build "fails for no reason"; routed to GPU NetIO for the device-side details |
 | Minimum required DOCA version | Query with `pkg-config --modversion doca-gpi`; never hardcode in build files | Every `doca_gpi_*` symbol is `DOCA_EXPERIMENTAL`, so a version pin from agent memory is wrong by construction — the whole surface can shift between releases |
 | CUDA Toolkit pairing | The DOCA release notes for the installed version name the compatible CUDA Toolkit range | The pairing is a release-notes lookup, not an agent-memory recall |
@@ -422,7 +422,7 @@ The integration shape this skill teaches:
    consumes which channel so handles don't get crossed.
 4. **Operational handoff.** Production deployment uses the
    bundle's hardware-safety meta-policy
-   ([`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md))
+   ([`doca-hardware-safety`](../doca-hardware-safety/SKILL.md))
    for any change that touches the BlueField BFB, firmware,
    IOMMU mode, or host kernel parameters that affect
    GPUDirect-style memory mapping. GPI itself does not modify
@@ -445,9 +445,9 @@ so the agent does not invent guidance:
 
 - **install (of DOCA itself).** Installing DOCA, choosing
   packages, post-install verification, `pkg-config` wiring —
-  defer to [`doca-setup`](../../doca-setup/SKILL.md) and to the
+  defer to [`doca-setup`](../doca-setup/SKILL.md) and to the
   install-tree layout in
-  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
+  [`doca-public-knowledge-map ## Layout of an installed DOCA package`](../doca-public-knowledge-map/SKILL.md#layout-of-an-installed-doca-package).
   This skill's `## install` verb assumes DOCA is already
   installed and only checks the GPI-specific preconditions.
 - **deploy.** Deploying GPI-using applications at scale across
@@ -475,7 +475,7 @@ so the agent does not invent guidance:
   scope. Route to
   [`doca-setup TASKS.md ## debug`](../../doca-setup/TASKS.md#debug)
   layer 5 and to
-  [`doca-hardware-safety`](../../doca-hardware-safety/SKILL.md)
+  [`doca-hardware-safety`](../doca-hardware-safety/SKILL.md)
   for the change-application discipline.
 
 ## Command appendix
