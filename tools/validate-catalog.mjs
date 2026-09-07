@@ -126,7 +126,12 @@ if (sources.skills !== catalog.total) {
   errors.push(`SOURCES.json skill count mismatch: sources=${sources.skills}, catalog=${catalog.total}`);
 }
 
-const allSkillFiles = gitFiles("*SKILL.md");
+// Complete upstream repositories are immutable snapshots, not installable
+// catalog entries. Their SKILL.md files are validated against an upstream
+// manifest by validate-repositories.mjs and must not enter legacy skill checks.
+const allSkillFiles = gitFiles("*SKILL.md").filter(
+  (file) => !file.startsWith("repositories/"),
+);
 const extraSkillFiles = allSkillFiles.filter((file) => !expectedSkillFiles.has(file));
 const nestedWorkflowSkillFiles = extraSkillFiles.filter(
   (file) => !hasFrontmatter(file) && isNestedWorkflowSkillFile(file),
