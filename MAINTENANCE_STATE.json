@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-06",
+ "last_material_change": "2026-09-07",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -2541,6 +2541,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 13,
     "identical": 5
@@ -2552,6 +2553,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "be00903d489baee08a3fd8475979f48b24620e09",
+   "verified_revision": "be00903d489baee08a3fd8475979f48b24620e09",
    "result": {
     "no-upstream-path": 1
    },
@@ -2561,6 +2563,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 8,
     "drift": 27,
@@ -2573,6 +2576,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "a599301980a66eb47ddac5c15e41081b74a2759d",
+   "verified_revision": "a599301980a66eb47ddac5c15e41081b74a2759d",
    "result": {
     "identical": 1
    },
@@ -2582,6 +2586,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "912f7e880aaa89a270aae37844c4e66be34d95c7",
+   "verified_revision": "912f7e880aaa89a270aae37844c4e66be34d95c7",
    "result": {
     "identical": 1
    },
@@ -2591,6 +2596,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "4c6a97d15aa5e023538c3cb06b5192f241dd451d",
+   "verified_revision": "4c6a97d15aa5e023538c3cb06b5192f241dd451d",
    "result": {
     "identical": 2
    },
@@ -2600,6 +2606,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+   "verified_revision": "0590993b35ad51961f65a4d01cf1196dfead05bb",
    "result": {
     "no-upstream-path": 1
    },
@@ -2609,6 +2616,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "061a055768e13cf09108932a90aeb2e957183858",
+   "verified_revision": "061a055768e13cf09108932a90aeb2e957183858",
    "result": {
     "no-upstream-path": 1
    },
@@ -2618,6 +2626,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 22,
     "drift": 1
@@ -2629,6 +2638,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 4,
     "drift": 1
@@ -2640,6 +2650,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "5aec3114379671f33b1c502a51d420a0729c8172",
+   "verified_revision": "5aec3114379671f33b1c502a51d420a0729c8172",
    "result": {
     "no-upstream-path": 1,
     "identical": 11
@@ -2650,6 +2661,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+   "verified_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
    "result": {
     "identical": 10
    },
@@ -2659,6 +2671,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "ff526b0712dad8737caaf0bb8ccf65ac6509140c",
+   "verified_revision": "ff526b0712dad8737caaf0bb8ccf65ac6509140c",
    "result": {
     "no-upstream-path": 1
    },
@@ -2668,6 +2681,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "ab7a40662c8455ece631834dee9670b3322f465b",
+   "verified_revision": "ab7a40662c8455ece631834dee9670b3322f465b",
    "result": {
     "no-upstream-path": 1
    },
@@ -2677,6 +2691,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+   "verified_revision": "30c1e874f1de74bdcd488f1158c03c92c808be55",
    "result": {
     "no-upstream-path": 1
    },
@@ -2686,6 +2701,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 39,
     "unmatched-candidate": 3
@@ -2697,6 +2713,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+   "verified_revision": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
    "result": {
     "no-upstream-path": 1
    },
@@ -2706,6 +2723,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 8
    },
@@ -2716,6 +2734,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 17,
     "drift": 8,
@@ -2728,6 +2747,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 66,
     "no-upstream-path": 3,
@@ -2740,6 +2760,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2,
     "identical": 16,
@@ -2752,6 +2773,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 4,
     "unmatched-candidate": 1
@@ -2763,6 +2785,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "982f2ea32ae0f3958c0bb8367a6c5e3095957718",
+   "verified_revision": "982f2ea32ae0f3958c0bb8367a6c5e3095957718",
    "result": {
     "no-upstream-path": 1
    },
@@ -2772,6 +2795,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "0491a3a29aa18558d2c3c64ff09367adb976c56f",
+   "verified_revision": "0491a3a29aa18558d2c3c64ff09367adb976c56f",
    "result": {
     "no-upstream-path": 1,
     "identical": 72
@@ -2782,6 +2806,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "ccbc15639c97057cbfcf32ecebc38ef716e4bb37",
+   "verified_revision": "ccbc15639c97057cbfcf32ecebc38ef716e4bb37",
    "result": {
     "identical": 13
    },
@@ -2791,6 +2816,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 2,
     "unmatched-candidate": 1
@@ -2802,6 +2828,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1,
     "identical": 8
@@ -2813,6 +2840,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "60aaae52bb2af8162732751a4332f62a5fef518b",
+   "verified_revision": "60aaae52bb2af8162732751a4332f62a5fef518b",
    "result": {
     "identical": 23
    },
@@ -2822,6 +2850,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 3,
     "unmatched-candidate": 2,
@@ -2834,6 +2863,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 257,
     "drift": 75,
@@ -2847,6 +2877,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "84404a24a12545dd250cbe90b593c472d4ef7832",
+   "verified_revision": "84404a24a12545dd250cbe90b593c472d4ef7832",
    "result": {
     "identical": 11
    },
@@ -2856,6 +2887,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 61,
     "unmatched-candidate": 8
@@ -2867,6 +2899,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "2a0e09d8cb9056e044c473dd53a136b81ba428e9",
+   "verified_revision": "2a0e09d8cb9056e044c473dd53a136b81ba428e9",
    "result": {
     "identical": 8
    },
@@ -2876,6 +2909,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -2886,6 +2920,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -2896,6 +2931,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2,
     "identical": 13
@@ -2907,6 +2943,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "03128b278b0926180854703e43abd7ea2ff18c00",
+   "verified_revision": "03128b278b0926180854703e43abd7ea2ff18c00",
    "result": {
     "identical": 1
    },
@@ -2916,6 +2953,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1,
     "unmatched-candidate": 1
@@ -2927,6 +2965,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "da5044d26fc6adddb6554d5679c94ac22e76e428",
+   "verified_revision": "da5044d26fc6adddb6554d5679c94ac22e76e428",
    "result": {
     "no-upstream-path": 1
    },
@@ -2936,6 +2975,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "identical": 22
@@ -2947,6 +2987,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "eea5cb28ba79ab8b078a1eaa44ce9ec44f75dbf8",
+   "verified_revision": "eea5cb28ba79ab8b078a1eaa44ce9ec44f75dbf8",
    "result": {
     "no-upstream-path": 1
    },
@@ -2956,6 +2997,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2
    },
@@ -2966,6 +3008,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "397110c9fefbc6bd5444277686600aec28063c05",
+   "verified_revision": "397110c9fefbc6bd5444277686600aec28063c05",
    "result": {
     "identical": 2
    },
@@ -2975,6 +3018,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -2985,6 +3029,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "bf44efb7f9706f8f563af3b6913a3784c7c52a12",
+   "verified_revision": "bf44efb7f9706f8f563af3b6913a3784c7c52a12",
    "result": {
     "no-upstream-path": 1
    },
@@ -2994,6 +3039,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "bbf77219c997f3b9ab19ee434e81d36f7ebb1953",
+   "verified_revision": "bbf77219c997f3b9ab19ee434e81d36f7ebb1953",
    "result": {
     "no-upstream-path": 1
    },
@@ -3003,6 +3049,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+   "verified_revision": "9e8be8b7a480668d8b237be3a0428deddcab7302",
    "result": {
     "no-upstream-path": 1
    },
@@ -3012,6 +3059,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 14,
     "unmatched-candidate": 4
@@ -3023,6 +3071,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 8,
     "drift": 3
@@ -3034,6 +3083,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "de83d3a5a9ccd724b3e504c72b72001242c50061",
+   "verified_revision": "de83d3a5a9ccd724b3e504c72b72001242c50061",
    "result": {
     "no-upstream-path": 1
    },
@@ -3043,6 +3093,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -3053,6 +3104,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "4a755af153df462e10859336596c73415d64437a",
+   "verified_revision": "4a755af153df462e10859336596c73415d64437a",
    "result": {
     "no-upstream-path": 1
    },
@@ -3062,6 +3114,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de",
+   "verified_revision": "44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de",
    "result": {
     "identical": 2
    },
@@ -3071,6 +3124,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 1,
     "identical": 18,
@@ -3083,6 +3137,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -3093,6 +3148,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "drift": 1
@@ -3104,6 +3160,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "6e16c8d5beefcb410d57e83a799014beb2957977",
+   "verified_revision": "6e16c8d5beefcb410d57e83a799014beb2957977",
    "result": {
     "identical": 14
    },
@@ -3113,6 +3170,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 89,
     "drift": 33
@@ -3124,6 +3182,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 15,
     "unmatched-candidate": 12,
@@ -3136,6 +3195,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 2,
     "unmatched-candidate": 6
@@ -3147,6 +3207,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 25,
     "drift": 6,
@@ -3160,6 +3221,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 9,
     "identical": 63
@@ -3171,6 +3233,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 46,
     "drift": 7,
@@ -3184,6 +3247,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 2,
     "identical": 1
@@ -3195,6 +3259,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f",
+   "verified_revision": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f",
    "result": {
     "identical": 18
    },
@@ -3204,6 +3269,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "0a3a4a66e99001347d36a41e10260a825be3ab62",
+   "verified_revision": "0a3a4a66e99001347d36a41e10260a825be3ab62",
    "result": {
     "identical": 1
    },
@@ -3213,6 +3279,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 14,
     "unmatched-candidate": 1
@@ -3224,6 +3291,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 2,
     "unmatched-candidate": 1
@@ -3235,6 +3303,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 1,
     "unmatched-candidate": 1
@@ -3246,6 +3315,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 101,
     "unmatched-candidate": 4,
@@ -3258,6 +3328,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -3268,6 +3339,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -3278,6 +3350,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 3,
     "no-upstream-path": 5
@@ -3289,6 +3362,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "drift": 1,
@@ -3301,6 +3375,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "b1b11a67e8ce5dd07691b68cf736cff8e4c55c87",
+   "verified_revision": "b1b11a67e8ce5dd07691b68cf736cff8e4c55c87",
    "result": {
     "identical": 53
    },
@@ -3310,6 +3385,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
+   "verified_revision": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
    "result": {
     "no-upstream-path": 1
    },
@@ -3319,6 +3395,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "62793e0c49ed2fc7c8f0c99a8ab8898abdf32a1d",
+   "verified_revision": "62793e0c49ed2fc7c8f0c99a8ab8898abdf32a1d",
    "result": {
     "identical": 13
    },
@@ -3328,6 +3405,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 101,
     "unmatched-candidate": 1
@@ -3339,6 +3417,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "identical": 16
@@ -3350,6 +3429,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 1,
     "identical": 12,
@@ -3362,6 +3442,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "b8aeca6d7e2d614d7bd0e5220c8dd7645fe58a93",
+   "verified_revision": "b8aeca6d7e2d614d7bd0e5220c8dd7645fe58a93",
    "result": {
     "identical": 13
    },
@@ -3371,6 +3452,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 2,
     "unmatched-candidate": 1
@@ -3382,6 +3464,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "70cb79c85f397fab3636ef07c8c99dc52a7c555f",
+   "verified_revision": "70cb79c85f397fab3636ef07c8c99dc52a7c555f",
    "result": {
     "identical": 1
    },
@@ -3391,6 +3474,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1,
     "identical": 2
@@ -3402,6 +3486,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -3412,6 +3497,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 28,
     "drift": 16,
@@ -3424,6 +3510,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
+   "verified_revision": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
    "result": {
     "identical": 1
    },
@@ -3433,6 +3520,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "005d8ae7545b3fe61cf9764557ce4d105d4af01b",
+   "verified_revision": "005d8ae7545b3fe61cf9764557ce4d105d4af01b",
    "result": {
     "identical": 3
    },
@@ -3442,6 +3530,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 11,
     "identical": 4
@@ -3453,6 +3542,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "157edafdc1007e2550c5051649caaff5be32f3b8",
+   "verified_revision": "157edafdc1007e2550c5051649caaff5be32f3b8",
    "result": {
     "no-upstream-path": 1
    },
@@ -3462,6 +3552,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 77,
     "unmatched-candidate": 6,
@@ -3474,6 +3565,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -3484,6 +3576,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 32,
     "unmatched-candidate": 8
@@ -3495,6 +3588,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "5d07e733fa9318ff9c718085191c0c2243f51383",
+   "verified_revision": "5d07e733fa9318ff9c718085191c0c2243f51383",
    "result": {
     "no-upstream-path": 1
    },
@@ -3504,6 +3598,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "9d1a896c6058b2ade94c9078c2e54377b9aa76d3",
+   "verified_revision": "9d1a896c6058b2ade94c9078c2e54377b9aa76d3",
    "result": {
     "identical": 46
    },
@@ -3513,6 +3608,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -3523,6 +3619,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "identical": 9
@@ -3534,6 +3631,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 23,
     "drift": 5
@@ -3545,6 +3643,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "2e9b66b0470a324cf3a6898549279e622aa7df71",
+   "verified_revision": "2e9b66b0470a324cf3a6898549279e622aa7df71",
    "result": {
     "identical": 1
    },
@@ -3554,6 +3653,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "dc2be825d8b439caea78e9eaa8fb3ac23b0ff3e9",
+   "verified_revision": "dc2be825d8b439caea78e9eaa8fb3ac23b0ff3e9",
    "result": {
     "no-upstream-path": 8
    },
@@ -3563,6 +3663,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "4a3f59424ca3ab3380d494557ea9de998701d047",
+   "verified_revision": "4a3f59424ca3ab3380d494557ea9de998701d047",
    "result": {
     "no-upstream-path": 1
    },
@@ -3572,6 +3673,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "d0075ffa09928f1edb3e7ac4f5af07586d4b344d",
+   "verified_revision": "d0075ffa09928f1edb3e7ac4f5af07586d4b344d",
    "result": {
     "identical": 22,
     "no-upstream-path": 1
@@ -3582,6 +3684,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "9ca850412943251fc9a466c4c29fdaf7a303a3d8",
+   "verified_revision": "9ca850412943251fc9a466c4c29fdaf7a303a3d8",
    "result": {
     "identical": 17
    },
@@ -3591,6 +3694,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 8,
     "drift": 4,
@@ -3601,8 +3705,9 @@
   },
   "figma/skills": {
    "last_successful_check": null,
-   "last_attempt": "2026-09-05",
+   "last_attempt": "2026-09-07",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unreachable": 1
    },
@@ -3612,6 +3717,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "a0b4e143f40c1ebe05fe5f9a4787fecd4da8f478",
+   "verified_revision": "a0b4e143f40c1ebe05fe5f9a4787fecd4da8f478",
    "result": {
     "identical": 12
    },
@@ -3621,6 +3727,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 5,
     "unmatched-candidate": 2
@@ -3632,6 +3739,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "no-upstream-path": 9,
@@ -3644,6 +3752,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 14,
     "unmatched-candidate": 13,
@@ -3657,6 +3766,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+   "verified_revision": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
    "result": {
     "identical": 3
    },
@@ -3666,6 +3776,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 5,
     "unmatched-candidate": 2
@@ -3675,8 +3786,9 @@
   },
   "garrytan/skills": {
    "last_successful_check": null,
-   "last_attempt": "2026-09-04",
+   "last_attempt": "2026-09-07",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unreachable": 1
    },
@@ -3686,6 +3798,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 7,
     "identical": 26,
@@ -3698,6 +3811,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "6d3be9c0aec768075e91b4a29b04fb624d72d942",
+   "verified_revision": "6d3be9c0aec768075e91b4a29b04fb624d72d942",
    "result": {
     "no-upstream-path": 1
    },
@@ -3707,6 +3821,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "d0cdd934dcc1bc69e53dc3d042c08a1150abebc4",
+   "verified_revision": "d0cdd934dcc1bc69e53dc3d042c08a1150abebc4",
    "result": {
     "identical": 3,
     "no-upstream-path": 1
@@ -3717,6 +3832,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2,
     "no-upstream-path": 1,
@@ -3729,6 +3845,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 15,
     "no-upstream-path": 1,
@@ -3741,6 +3858,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 4,
     "identical": 92,
@@ -3752,8 +3870,9 @@
   },
   "googleworkspace/skills": {
    "last_successful_check": null,
-   "last_attempt": "2026-09-05",
+   "last_attempt": "2026-09-07",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unreachable": 1
    },
@@ -3763,6 +3882,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 18,
     "identical": 245,
@@ -3776,6 +3896,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+   "verified_revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
    "result": {
     "identical": 8
    },
@@ -3785,6 +3906,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 1,
     "identical": 19,
@@ -3797,6 +3919,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 24
    },
@@ -3807,6 +3930,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 6,
     "unmatched-candidate": 5,
@@ -3819,6 +3943,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
+   "verified_revision": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
    "result": {
     "identical": 3
    },
@@ -3828,6 +3953,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2,
     "identical": 24
@@ -3839,6 +3965,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 15,
     "unmatched-candidate": 4
@@ -3850,6 +3977,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "identical": 28,
@@ -3862,6 +3990,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "9f140de767e6e2d4adc3970eb68d24b3ec896f99",
+   "verified_revision": "9f140de767e6e2d4adc3970eb68d24b3ec896f99",
    "result": {
     "identical": 7
    },
@@ -3871,6 +4000,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 158,
     "unmatched-candidate": 19,
@@ -3883,6 +4013,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 39,
     "unmatched-candidate": 43,
@@ -3896,6 +4027,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
+   "verified_revision": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
    "result": {
     "identical": 1
    },
@@ -3905,6 +4037,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -3915,6 +4048,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "4a4c0134ebb6ad78e24bad8fe8295011499ff9d0",
+   "verified_revision": "4a4c0134ebb6ad78e24bad8fe8295011499ff9d0",
    "result": {
     "identical": 6
    },
@@ -3924,6 +4058,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+   "verified_revision": "21126796f5da91d6d18757f0059762a5ab16ccd4",
    "result": {
     "identical": 1
    },
@@ -3933,6 +4068,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 21,
     "identical": 4,
@@ -3945,6 +4081,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "drift": 1
@@ -3956,6 +4093,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 4,
     "drift": 2
@@ -3967,6 +4105,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 4,
     "drift": 2
@@ -3978,6 +4117,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "423af2bf546cd0354e5cc871017251945d9ad14f",
+   "verified_revision": "423af2bf546cd0354e5cc871017251945d9ad14f",
    "result": {
     "identical": 1
    },
@@ -3987,6 +4127,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -3997,6 +4138,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 31,
     "unmatched-candidate": 3,
@@ -4009,6 +4151,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "856efd268ae85482d882f3d0bed869fd020b5c06",
+   "verified_revision": "856efd268ae85482d882f3d0bed869fd020b5c06",
    "result": {
     "identical": 11
    },
@@ -4018,6 +4161,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "6514810aaab15cdd0e4202af52a6afed27ed314d",
+   "verified_revision": "6514810aaab15cdd0e4202af52a6afed27ed314d",
    "result": {
     "no-upstream-path": 1
    },
@@ -4027,6 +4171,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 5,
     "identical": 3,
@@ -4039,6 +4184,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 3,
     "unmatched-candidate": 1,
@@ -4051,6 +4197,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "8ada610346e678b8dc9f866e8166092840c6eb2f",
+   "verified_revision": "8ada610346e678b8dc9f866e8166092840c6eb2f",
    "result": {
     "no-upstream-path": 1,
     "identical": 8
@@ -4061,6 +4208,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "8e9890fdbe913de70c26342c9ceb2c510ee6e9e2",
+   "verified_revision": "8e9890fdbe913de70c26342c9ceb2c510ee6e9e2",
    "result": {
     "identical": 1
    },
@@ -4070,6 +4218,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 784,
     "drift": 33
@@ -4081,6 +4230,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 1,
     "unmatched-candidate": 1
@@ -4092,6 +4242,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "b1a87cf580e9559469af1baead05bfde29d7c1c0",
+   "verified_revision": "b1a87cf580e9559469af1baead05bfde29d7c1c0",
    "result": {
     "no-upstream-path": 1
    },
@@ -4101,6 +4252,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "drift": 1
@@ -4112,6 +4264,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 2,
     "unmatched-candidate": 7
@@ -4121,8 +4274,9 @@
   },
   "netlify/skills": {
    "last_successful_check": null,
-   "last_attempt": "2026-09-05",
+   "last_attempt": "2026-09-07",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unreachable": 1
    },
@@ -4132,6 +4286,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 10,
     "unmatched-candidate": 2
@@ -4143,6 +4298,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 12,
     "identical": 35,
@@ -4155,6 +4311,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 14,
     "unmatched-candidate": 1
@@ -4166,6 +4323,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "51111f74f24058117752d9aa917cb19859f8ec86",
+   "verified_revision": "51111f74f24058117752d9aa917cb19859f8ec86",
    "result": {
     "identical": 4
    },
@@ -4175,6 +4333,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -4185,6 +4344,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2,
     "identical": 15
@@ -4196,6 +4356,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 3,
     "identical": 6
@@ -4207,6 +4368,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -4217,6 +4379,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "fbda212bca79dfa7611be12527b102c89cc8faeb",
+   "verified_revision": "fbda212bca79dfa7611be12527b102c89cc8faeb",
    "result": {
     "no-upstream-path": 1
    },
@@ -4226,6 +4389,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+   "verified_revision": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
    "result": {
     "no-upstream-path": 1
    },
@@ -4235,6 +4399,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+   "verified_revision": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
    "result": {
     "no-upstream-path": 1
    },
@@ -4244,6 +4409,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 780,
     "unmatched-candidate": 1
@@ -4255,6 +4421,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 6,
     "drift": 2,
@@ -4268,6 +4435,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "7b0841e38024516abf75c17dee48f5b378c8de67",
+   "verified_revision": "7b0841e38024516abf75c17dee48f5b378c8de67",
    "result": {
     "no-upstream-path": 1
    },
@@ -4276,12 +4444,14 @@
   "petekp/claude-code-setup": {
    "last_successful_check": "2026-09-06",
    "checked_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
+   "verified_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
    "result": "complete"
   },
   "phuryn/pm-skills": {
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "identical": 68
@@ -4293,6 +4463,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 3,
     "identical": 2
@@ -4304,6 +4475,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 14,
     "drift": 2
@@ -4315,6 +4487,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "identical": 12
@@ -4326,6 +4499,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "3ec08f5a6f9d2fa22a64950274ba6baee2a38838",
+   "verified_revision": "3ec08f5a6f9d2fa22a64950274ba6baee2a38838",
    "result": {
     "identical": 14
    },
@@ -4335,6 +4509,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "410f81f83e4ac309032eab3d3265353f97ea665f",
+   "verified_revision": "410f81f83e4ac309032eab3d3265353f97ea665f",
    "result": {
     "identical": 5
    },
@@ -4344,6 +4519,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
+   "verified_revision": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
    "result": {
     "identical": 1
    },
@@ -4353,6 +4529,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "45f4a4a1dabe24113193369b55b929b1de4ff04a",
+   "verified_revision": "45f4a4a1dabe24113193369b55b929b1de4ff04a",
    "result": {
     "identical": 12
    },
@@ -4362,6 +4539,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "510caad26c907793e48306262af216ff9f71c9f7",
+   "verified_revision": "510caad26c907793e48306262af216ff9f71c9f7",
    "result": {
     "no-upstream-path": 1
    },
@@ -4371,6 +4549,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 1,
     "identical": 8,
@@ -4383,6 +4562,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "c9f394d2ea5f0665d01d889f2dd15291590c281c",
+   "verified_revision": "c9f394d2ea5f0665d01d889f2dd15291590c281c",
    "result": {
     "identical": 1
    },
@@ -4392,6 +4572,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 12
    },
@@ -4402,6 +4583,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "2f36e415965ae63baa1c9f6635888092bcd771d3",
+   "verified_revision": "2f36e415965ae63baa1c9f6635888092bcd771d3",
    "result": {
     "identical": 7
    },
@@ -4411,6 +4593,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "865a368601c4c88847f0d414f2656b2546cae461",
+   "verified_revision": "865a368601c4c88847f0d414f2656b2546cae461",
    "result": {
     "identical": 5
    },
@@ -4420,6 +4603,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
+   "verified_revision": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
    "result": {
     "no-upstream-path": 1
    },
@@ -4429,6 +4613,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 13,
     "unmatched-candidate": 9,
@@ -4448,6 +4633,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "cc0cc33d23882fd8555af290c2a003d1495a893a",
+   "verified_revision": "cc0cc33d23882fd8555af290c2a003d1495a893a",
    "result": {
     "no-upstream-path": 1
    },
@@ -4455,8 +4641,9 @@
   },
   "sanity-io/skills": {
    "last_successful_check": null,
-   "last_attempt": "2026-09-05",
+   "last_attempt": "2026-09-07",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unreachable": 1
    },
@@ -4466,6 +4653,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 3,
     "identical": 24
@@ -4477,6 +4665,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2
    },
@@ -4487,6 +4676,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -4497,6 +4687,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "drift": 1
@@ -4508,6 +4699,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "84946232ef36d2f1e04a0089ad64380c2de46698",
+   "verified_revision": "84946232ef36d2f1e04a0089ad64380c2de46698",
    "result": {
     "identical": 5
    },
@@ -4517,6 +4709,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "ac06eb255371da35d1db0a146dbfcca8c8857543",
+   "verified_revision": "ac06eb255371da35d1db0a146dbfcca8c8857543",
    "result": {
     "identical": 1
    },
@@ -4526,6 +4719,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 6,
     "drift": 10,
@@ -4538,6 +4732,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "95928ed7506baf90b1d259f792b9cbf5116c24d2",
+   "verified_revision": "95928ed7506baf90b1d259f792b9cbf5116c24d2",
    "result": {
     "identical": 2
    },
@@ -4547,6 +4742,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
+   "verified_revision": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
    "result": {
     "identical": 7
    },
@@ -4556,6 +4752,7 @@
    "last_successful_check": null,
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unreachable": 1
    },
@@ -4565,6 +4762,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+   "verified_revision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
    "result": {
     "identical": 2,
     "no-upstream-path": 1
@@ -4575,6 +4773,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+   "verified_revision": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
    "result": {
     "identical": 1
    },
@@ -4584,6 +4783,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "05a46b89a9c35f15c88fbadc8a2898404525fec0",
+   "verified_revision": "05a46b89a9c35f15c88fbadc8a2898404525fec0",
    "result": {
     "no-upstream-path": 1
    },
@@ -4593,6 +4793,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -4603,6 +4804,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 1,
     "unmatched-candidate": 2,
@@ -4615,6 +4817,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "no-upstream-path": 1
@@ -4626,6 +4829,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -4636,6 +4840,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "acf42427fed507b7bfe98c4039fbacf0c4a69b65",
+   "verified_revision": "acf42427fed507b7bfe98c4039fbacf0c4a69b65",
    "result": {
     "identical": 7
    },
@@ -4645,6 +4850,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "19a3ec18b2270fb82cc3489eabf122da0706e6a0",
+   "verified_revision": "19a3ec18b2270fb82cc3489eabf122da0706e6a0",
    "result": {
     "identical": 4
    },
@@ -4654,6 +4860,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "6623c82d40c6b3e0a4d44333288e4b436b8047c2",
+   "verified_revision": "6623c82d40c6b3e0a4d44333288e4b436b8047c2",
    "result": {
     "identical": 1
    },
@@ -4663,6 +4870,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 22,
     "unmatched-candidate": 35,
@@ -4676,6 +4884,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 48,
     "unmatched-candidate": 23,
@@ -4688,6 +4897,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "identical": 12,
     "unmatched-candidate": 1
@@ -4699,6 +4909,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "e52e007036fb6edea104b6b49eb01f69c155ad51",
+   "verified_revision": "e52e007036fb6edea104b6b49eb01f69c155ad51",
    "result": {
     "no-upstream-path": 1
    },
@@ -4708,6 +4919,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -4718,6 +4930,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "051a266090f8f655801b835bd359abc073e7dec3",
+   "verified_revision": "051a266090f8f655801b835bd359abc073e7dec3",
    "result": {
     "no-upstream-path": 1,
     "identical": 1
@@ -4728,6 +4941,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "ff5c8cc8e46d8e60c2bc2439f7bcb07c05ca3db2",
+   "verified_revision": "ff5c8cc8e46d8e60c2bc2439f7bcb07c05ca3db2",
    "result": {
     "identical": 9
    },
@@ -4737,6 +4951,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -4747,6 +4962,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "be69bebc470353da07d7284ec1d283d5a2f0a168",
+   "verified_revision": "be69bebc470353da07d7284ec1d283d5a2f0a168",
    "result": {
     "identical": 21
    },
@@ -4756,6 +4972,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a",
+   "verified_revision": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a",
    "result": {
     "no-upstream-path": 10,
     "identical": 1
@@ -4766,6 +4983,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1,
     "identical": 1
@@ -4777,6 +4995,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": "066b137c520a8739a899e160516d1f4044add7f3",
+   "verified_revision": "066b137c520a8739a899e160516d1f4044add7f3",
    "result": {
     "identical": 4
    },
@@ -4786,6 +5005,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 1
    },
@@ -4796,6 +5016,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "d61cd9ad05f1863a421d891d9319ec2405904488",
+   "verified_revision": "d61cd9ad05f1863a421d891d9319ec2405904488",
    "result": {
     "no-upstream-path": 1
    },
@@ -4805,6 +5026,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "348a435345b7ddafb4d1002d41d9e2ef3f5b6992",
+   "verified_revision": "348a435345b7ddafb4d1002d41d9e2ef3f5b6992",
    "result": {
     "identical": 1
    },
@@ -4814,6 +5036,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 6,
     "identical": 166,
@@ -4826,6 +5049,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
+   "verified_revision": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
    "result": {
     "identical": 1
    },
@@ -4835,6 +5059,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2,
     "identical": 26
@@ -4846,6 +5071,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "5360f152b96735712e5f925ad728732cb86888df",
+   "verified_revision": "5360f152b96735712e5f925ad728732cb86888df",
    "result": {
     "identical": 4
    },
@@ -4855,6 +5081,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2
    },
@@ -4865,6 +5092,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "unmatched-candidate": 2,
     "identical": 4
@@ -4876,6 +5104,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": "9095f8303847a60de9f564659e561f3f6fd0cdc4",
+   "verified_revision": "9095f8303847a60de9f564659e561f3f6fd0cdc4",
    "result": {
     "no-upstream-path": 1
    },
@@ -4885,6 +5114,7 @@
    "last_successful_check": "2026-09-04",
    "last_attempt": "2026-09-04",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "drift": 1
    },
@@ -4895,6 +5125,7 @@
    "last_successful_check": "2026-09-05",
    "last_attempt": "2026-09-05",
    "checked_revision": null,
+   "verified_revision": null,
    "result": {
     "no-upstream-path": 3,
     "unmatched-candidate": 1,
@@ -4914,6 +5145,48 @@
    "checked_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
    "status": "deferred-size-and-security-review",
    "note": "The recorded GitHub repository redirects to ruvnet/ruflo. Its current tree has 5,628 blobs and about 82 MB of tracked content; a complete security and redistribution review is too large to combine safely with the initial model migration."
+  },
+  {
+   "id": "upstream-unreachable:figma/skills",
+   "source_repository": "figma/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/figma/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:garrytan/skills",
+   "source_repository": "garrytan/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/garrytan/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:googleworkspace/skills",
+   "source_repository": "googleworkspace/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/googleworkspace/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:netlify/skills",
+   "source_repository": "netlify/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/netlify/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:sanity-io/skills",
+   "source_repository": "sanity-io/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/sanity-io/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:stripe/skills",
+   "source_repository": "stripe/skills",
+   "last_attempt": "2026-09-05",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/stripe/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
   }
  ],
  "next_work_items": [

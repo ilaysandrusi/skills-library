@@ -105,14 +105,16 @@ def main():
     for repo, check in legacy_update_checks.get("checked", {}).items():
         result = check.get("result", {})
         unreachable = result.get("unreachable", 0) > 0
+        checked_revision = check.get("candidate_commit") or check.get("verified_commit")
         upstream_checks[repo] = {
             "last_successful_check": None if unreachable else check.get("last_checked"),
             "last_attempt": check.get("last_checked"),
-            "checked_revision": check.get("verified_commit"),
+            "checked_revision": checked_revision,
+            "verified_revision": check.get("verified_commit"),
             "result": result,
             "record_source": "UPDATE_CHECKS.json",
         }
-        if check.get("verified_commit") is None and not unreachable:
+        if checked_revision is None and not unreachable:
             upstream_checks[repo]["note"] = (
                 "The legacy checker found drift or ambiguity but did not retain "
                 "the candidate commit; recheck before migration."
@@ -134,6 +136,7 @@ def main():
         upstream_checks[repo] = {
             "last_successful_check": metadata["review"]["reviewed_on"],
             "checked_revision": metadata["commit"],
+            "verified_revision": metadata["commit"],
             "result": metadata["snapshot"]["status"],
         }
 
@@ -152,6 +155,26 @@ def main():
             }
         ],
     )
+    unresolved = [
+        issue
+        for issue in unresolved
+        if not issue.get("id", "").startswith("upstream-unreachable:")
+    ]
+    for repo, check in sorted(legacy_update_checks.get("checked", {}).items()):
+        if check.get("result", {}).get("unreachable", 0) == 0:
+            continue
+        unresolved.append(
+            {
+                "id": f"upstream-unreachable:{repo}",
+                "source_repository": repo,
+                "last_attempt": check.get("last_checked"),
+                "status": "source-unreachable",
+                "note": check.get(
+                    "note",
+                    "The recorded upstream could not be read; preserve its legacy entries until the exact source identity is verified.",
+                ),
+            }
+        )
     for issue in unresolved:
         if issue.get("id") == "ruflo-size-review":
             upstream_checks["ruvnet/ruflo"] = {
