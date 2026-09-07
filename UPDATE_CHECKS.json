@@ -426,7 +426,7 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "googleworkspace/skills": {
-   "last_checked": "2026-09-05",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 96,
    "result": {
@@ -1417,7 +1417,7 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "netlify/skills": {
-   "last_checked": "2026-09-05",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 14,
    "result": {
@@ -1777,7 +1777,7 @@
    }
   },
   "figma/skills": {
-   "last_checked": "2026-09-05",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 8,
    "result": {
@@ -1847,7 +1847,7 @@
    }
   },
   "sanity-io/skills": {
-   "last_checked": "2026-09-05",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 7,
    "result": {
@@ -2802,7 +2802,7 @@
    }
   },
   "garrytan/skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 1,
    "result": {
