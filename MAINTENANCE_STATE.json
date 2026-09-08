@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-07",
+ "last_material_change": "2026-09-08",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -4442,10 +4442,11 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "petekp/claude-code-setup": {
-   "last_successful_check": "2026-09-06",
+   "last_successful_check": "2026-09-08",
+   "last_attempt": "2026-09-08",
    "checked_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
    "verified_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
-   "result": "complete"
+   "result": "current"
   },
   "phuryn/pm-skills": {
    "last_successful_check": "2026-09-05",
@@ -4623,10 +4624,11 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "ruvnet/ruflo": {
-   "last_successful_check": "2026-09-06",
-   "last_attempt": "2026-09-06",
-   "checked_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
-   "result": "identity-verified-migration-deferred",
+   "last_successful_check": "2026-09-08",
+   "last_attempt": "2026-09-08",
+   "checked_revision": "a295c68703158377a6ce827738bf8f13b94bd695",
+   "verified_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
+   "result": "blocked-redistribution-clearance",
    "record_source": "28-career-education-health/Vibe-Skills/THIRD_PARTY_LICENSES.md"
   },
   "sametbrr/llm-wiki-manager": {
@@ -5143,8 +5145,12 @@
    "verified_identity": "ruvnet/ruflo",
    "source_url": "https://github.com/ruvnet/ruflo",
    "checked_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
-   "status": "deferred-size-and-security-review",
-   "note": "The recorded GitHub repository redirects to ruvnet/ruflo. Its current tree has 5,628 blobs and about 82 MB of tracked content; a complete security and redistribution review is too large to combine safely with the initial model migration."
+   "reviewed_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
+   "candidate_revision": "a295c68703158377a6ce827738bf8f13b94bd695",
+   "last_successful_check": "2026-09-08",
+   "last_attempt": "2026-09-08",
+   "status": "blocked-redistribution-clearance",
+   "note": "The recorded identity redirects to canonical ruvnet/ruflo. Commit 277c7bc03 has a complete 5,628-file Git tree with no submodules or LFS, but whole-snapshot redistribution is not cleared: bundled Inter fonts lack tracked OFL attribution, a RuVocal WASM artifact lacks component-specific source/license evidence, and several large media assets lack provenance records. Static review found no clear malware or genuine credentials; hooks, workflows, agent configs, installers, services, and executables are unsafe to enable and must remain archive-only. Candidate a295c6870 was also inspected and deferred: its tip tree adds ordinary JPEG documentation assets, but its router fix does not fully enforce the claimed model/tier invariant and accompanying documentation overstates verification. Preserve the legacy source record and do not import a partial snapshot."
   },
   {
    "id": "upstream-unreachable:figma/skills",
@@ -5190,7 +5196,7 @@
   }
  ],
  "next_work_items": [
-  "Review ruvnet/ruflo as a dedicated bounded migration; do not import a partial tree.",
+  "Resolve ruvnet/ruflo bundled font, WASM, and media provenance before migration; keep candidate a295c6870 deferred until its router invariant and verification claims are corrected.",
   "Verify the next highest-impact queued source identity and license.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]
