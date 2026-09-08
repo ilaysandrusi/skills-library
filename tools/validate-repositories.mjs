@@ -81,6 +81,18 @@ for (const repository of index.repositories ?? []) {
   if (!Array.isArray(repository.practical_uses) || repository.practical_uses.length === 0) {
     errors.push(`${label}: practical_uses must be a non-empty array`);
   }
+  if (!Array.isArray(repository.source_records) || repository.source_records.length === 0) {
+    errors.push(`${label}: source_records must be a non-empty array`);
+  } else {
+    for (const sourceRecord of repository.source_records) {
+      if (
+        typeof sourceRecord !== "string" ||
+        !fs.existsSync(path.join(root, sourceRecord))
+      ) {
+        errors.push(`${label}: source record does not exist: ${sourceRecord}`);
+      }
+    }
+  }
   if (!/^[0-9a-f]{40}$/.test(repository.commit ?? "")) {
     errors.push(`${label}: commit must be a full Git SHA`);
   }
@@ -118,6 +130,26 @@ for (const repository of index.repositories ?? []) {
   }
   if (repository.review?.archive_only !== true) {
     errors.push(`${label}: imported hooks and instructions must be marked archive_only`);
+  }
+  for (const field of ["submodules", "git_lfs"]) {
+    if (!repository.snapshot?.[field]) {
+      errors.push(`${label}: snapshot ${field} status is missing`);
+    }
+  }
+  const upstreamCheck = repository.upstream_check;
+  if (upstreamCheck) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(upstreamCheck.last_successful_check ?? "")) {
+      errors.push(`${label}: upstream_check last_successful_check must be YYYY-MM-DD`);
+    }
+    if (!/^[0-9a-f]{40}$/.test(upstreamCheck.candidate_revision ?? "")) {
+      errors.push(`${label}: upstream_check candidate_revision must be a full Git SHA`);
+    }
+    if (
+      upstreamCheck.status === "current" &&
+      upstreamCheck.candidate_revision !== repository.commit
+    ) {
+      errors.push(`${label}: current upstream candidate differs from archived commit`);
+    }
   }
 
   const manifestPath = repository.snapshot?.manifest;

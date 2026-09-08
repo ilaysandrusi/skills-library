@@ -133,11 +133,23 @@ def main():
                 "status": metadata["snapshot"]["status"],
             }
         )
+        catalog_check = metadata.get("upstream_check", {})
+        candidate_revision = catalog_check.get("candidate_revision", metadata["commit"])
         upstream_checks[repo] = {
-            "last_successful_check": metadata["review"]["reviewed_on"],
-            "checked_revision": metadata["commit"],
+            "last_successful_check": catalog_check.get(
+                "last_successful_check",
+                metadata["review"]["reviewed_on"],
+            ),
+            "last_attempt": catalog_check.get(
+                "last_attempt",
+                catalog_check.get(
+                    "last_successful_check",
+                    metadata["review"]["reviewed_on"],
+                ),
+            ),
+            "checked_revision": candidate_revision,
             "verified_revision": metadata["commit"],
-            "result": metadata["snapshot"]["status"],
+            "result": catalog_check.get("status", metadata["snapshot"]["status"]),
         }
 
     unresolved = previous.get(
@@ -159,6 +171,10 @@ def main():
         issue
         for issue in unresolved
         if not issue.get("id", "").startswith("upstream-unreachable:")
+        and not (
+            issue.get("id") == "ruflo-size-review"
+            and issue.get("verified_identity") in archived
+        )
     ]
     for repo, check in sorted(legacy_update_checks.get("checked", {}).items()):
         if check.get("result", {}).get("unreachable", 0) == 0:
@@ -178,10 +194,26 @@ def main():
     for issue in unresolved:
         if issue.get("id") == "ruflo-size-review":
             upstream_checks["ruvnet/ruflo"] = {
-                "last_successful_check": "2026-09-06",
-                "last_attempt": "2026-09-06",
-                "checked_revision": issue["checked_revision"],
-                "result": "identity-verified-migration-deferred",
+                "last_successful_check": issue.get(
+                    "last_successful_check",
+                    "2026-09-06",
+                ),
+                "last_attempt": issue.get(
+                    "last_attempt",
+                    issue.get("last_successful_check", "2026-09-06"),
+                ),
+                "checked_revision": issue.get(
+                    "candidate_revision",
+                    issue["checked_revision"],
+                ),
+                "verified_revision": issue.get(
+                    "reviewed_revision",
+                    issue["checked_revision"],
+                ),
+                "result": issue.get(
+                    "status",
+                    "identity-verified-migration-deferred",
+                ),
                 "record_source": issue["source_record"],
             }
     next_work = previous.get(
@@ -192,6 +224,14 @@ def main():
             "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run.",
         ],
     )
+    if "ruvnet/ruflo" in archived:
+        next_work = [
+            item
+            for item in next_work
+            if not item.startswith(
+                "Review ruvnet/ruflo as a dedicated bounded migration"
+            )
+        ]
 
     state = {
         "schema_version": 1,
