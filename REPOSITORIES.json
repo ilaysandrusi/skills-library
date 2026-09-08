@@ -1,0 +1,59 @@
+{
+ "schema_version": 1,
+ "repositories": [
+  {
+   "id": "petekp--claude-code-setup",
+   "source_repository": "petekp/claude-code-setup",
+   "source_url": "https://github.com/petekp/claude-code-setup",
+   "commit": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
+   "tree": "fc127ace8b83dc99dd4331816d31163a8d6f58f0",
+   "license": "MIT",
+   "local_path": "repositories/05-development/petekp--claude-code-setup",
+   "primary_category": "05-development",
+   "tags": [
+    "ai",
+    "automation",
+    "claude-code",
+    "codex",
+    "developer-tools",
+    "productivity"
+   ],
+   "practical_uses": [
+    "Version-controlled Claude Code and Codex configuration",
+    "Agent skill development and synchronization",
+    "Shell-based setup, diagnostics, and usage tracking"
+   ],
+   "snapshot": {
+    "status": "complete",
+    "tracked_files": 84,
+    "tracked_bytes": 548504,
+    "manifest": "repository-manifests/petekp--claude-code-setup.json",
+    "submodules": "none",
+    "git_lfs": "none",
+    "external_dependencies": [
+     "Claude Code",
+     "OpenAI Codex",
+     "bash",
+     "git",
+     "jq",
+     "optional tools documented by upstream"
+    ]
+   },
+   "review": {
+    "status": "reviewed",
+    "reviewed_on": "2026-09-06",
+    "archive_only": true,
+    "notes": "Shell setup and lifecycle hooks were inspected but not executed or enabled. They modify user configuration and can terminate session-scoped browser helpers. No committed credentials or private keys were detected. Upstream-published absolute home paths and references to a separate private project remain unchanged as part of the exact snapshot."
+   },
+   "upstream_check": {
+    "last_successful_check": "2026-09-08",
+    "candidate_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
+    "status": "current"
+   },
+   "source_records": [
+    "SOURCES.json",
+    "05-development/calldiff/SOURCE.md"
+   ]
+  }
+ ]
+}

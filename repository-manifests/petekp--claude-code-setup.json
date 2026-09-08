@@ -1,0 +1,514 @@
+{
+ "schema_version": 1,
+ "source_repository": "petekp/claude-code-setup",
+ "commit": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
+ "tree": "fc127ace8b83dc99dd4331816d31163a8d6f58f0",
+ "tracked_files": 84,
+ "tracked_bytes": 548504,
+ "entries": [
+  {
+   "path": ".codex/config.toml",
+   "mode": "100644",
+   "blob": "5e9c948959230f21eb7c2753ef63524ad508e4ad",
+   "bytes": 76
+  },
+  {
+   "path": ".gitignore",
+   "mode": "100644",
+   "blob": "4946494bda18ed175c0b4cc3cfe8b7ab7e921fe3",
+   "bytes": 113
+  },
+  {
+   "path": ".mcp.json",
+   "mode": "100644",
+   "blob": "fcde3746c4bc2c3f12adf7b8a42049793b3510b4",
+   "bytes": 132
+  },
+  {
+   "path": "AGENTS.md",
+   "mode": "100644",
+   "blob": "7a2839162ef87e0cbf3bde327ae182a7ab721ffd",
+   "bytes": 1084
+  },
+  {
+   "path": "CLAUDE.md",
+   "mode": "100644",
+   "blob": "589f7a0c04eed6dbd6060d546b554a18a0ab70a3",
+   "bytes": 3370
+  },
+  {
+   "path": "FORKING.md",
+   "mode": "100644",
+   "blob": "41b9835304963b0667cd40d9157240b787b4b419",
+   "bytes": 4121
+  },
+  {
+   "path": "LICENSE",
+   "mode": "100644",
+   "blob": "0a463a2486821fac98eb777b9beece104e67a83e",
+   "bytes": 1069
+  },
+  {
+   "path": "README.md",
+   "mode": "100644",
+   "blob": "8bf2e399c3b448559d5d58e557e5a374b58579ff",
+   "bytes": 3166
+  },
+  {
+   "path": "SKILLS.md",
+   "mode": "100644",
+   "blob": "087edeb859ad88447d59bac38712b2bf7fd89dc3",
+   "bytes": 4012
+  },
+  {
+   "path": "codex-exclude",
+   "mode": "100644",
+   "blob": "d357cf9f7e61b52f1e749dc73293e348ae74a3e6",
+   "bytes": 295
+  },
+  {
+   "path": "scripts/gen-skills-manifest.sh",
+   "mode": "100755",
+   "blob": "35fcca18c6d720b4456b4db04871043594ef1448",
+   "bytes": 6396
+  },
+  {
+   "path": "scripts/gh-skill-nudge.sh",
+   "mode": "100755",
+   "blob": "d6fbfa31bf521c5bde8acb31816f27b05cf1e396",
+   "bytes": 3112
+  },
+  {
+   "path": "scripts/mcp-auth-watch.sh",
+   "mode": "100755",
+   "blob": "f67c61cc63f6324506ab1f15b243e076623ea818",
+   "bytes": 2309
+  },
+  {
+   "path": "scripts/session-end-cleanup.sh",
+   "mode": "100755",
+   "blob": "557deb156a223f6c8bf3086180b1bf54acaced6c",
+   "bytes": 632
+  },
+  {
+   "path": "scripts/skill-doctor.sh",
+   "mode": "100755",
+   "blob": "04d18a81e3e66ecea44963a73a509444eca10b49",
+   "bytes": 12054
+  },
+  {
+   "path": "scripts/skill-manager.sh",
+   "mode": "100755",
+   "blob": "564733f08d59e2fca72727c2cf7b0998e71e980e",
+   "bytes": 23817
+  },
+  {
+   "path": "scripts/skill-usage-tracker.sh",
+   "mode": "100755",
+   "blob": "a10d834930c79eb056be14073d7396087695754b",
+   "bytes": 2379
+  },
+  {
+   "path": "scripts/sync-codex-skills.sh",
+   "mode": "100755",
+   "blob": "a9b420e4ea7a78045419b335dd5e31a070cd5df5",
+   "bytes": 3825
+  },
+  {
+   "path": "scripts/validate.sh",
+   "mode": "100755",
+   "blob": "0b83a4a21a674ef96319a685dc2fd225326fb84c",
+   "bytes": 2603
+  },
+  {
+   "path": "settings.json",
+   "mode": "100644",
+   "blob": "f95cf2c824d9a57301b3a6fdaa5c7336c5163b75",
+   "bytes": 13226
+  },
+  {
+   "path": "setup.sh",
+   "mode": "100755",
+   "blob": "63e9374674cc6c3b7bf73bf903ded3bf26df1099",
+   "bytes": 16372
+  },
+  {
+   "path": "skills/.gitignore",
+   "mode": "100644",
+   "blob": "47932395f6940d4a450f50c524cd037b36ef899a",
+   "bytes": 564
+  },
+  {
+   "path": "skills/calldiff/SKILL.md",
+   "mode": "100644",
+   "blob": "62d835d14d4c071c231518d799f0e818a1deb45d",
+   "bytes": 2964
+  },
+  {
+   "path": "skills/catch-up/SKILL.md",
+   "mode": "100644",
+   "blob": "a81270436461373bb9496b9000ecc72f814260c6",
+   "bytes": 8048
+  },
+  {
+   "path": "skills/circuit-resource-analysis/SKILL.md",
+   "mode": "100644",
+   "blob": "f275f1eda3100ff3376db44c4783ec52e18f554d",
+   "bytes": 4930
+  },
+  {
+   "path": "skills/circuit-resource-analysis/agents/openai.yaml",
+   "mode": "100644",
+   "blob": "cc2ae7beb67e220a3f5d5b188eb752121b77acbc",
+   "bytes": 231
+  },
+  {
+   "path": "skills/circuit/SKILL.md",
+   "mode": "100644",
+   "blob": "c5557b0ce2b8f5e63061af3bbbf7c76827e2ef56",
+   "bytes": 15131
+  },
+  {
+   "path": "skills/circuit/evals/evals.json",
+   "mode": "100644",
+   "blob": "a3127a257c452ae319cc7d6e2e98f0d62700f357",
+   "bytes": 4342
+  },
+  {
+   "path": "skills/circuit/references/cli.md",
+   "mode": "100644",
+   "blob": "5bfed863313c273333da6fd3dc109f2b310532fa",
+   "bytes": 7568
+  },
+  {
+   "path": "skills/circuit/references/configuration.md",
+   "mode": "100644",
+   "blob": "d07b11bc826df935943b7740c929c0330c79f225",
+   "bytes": 7049
+  },
+  {
+   "path": "skills/circuit/references/flow-authoring.md",
+   "mode": "100644",
+   "blob": "1384a61489185a17f77a81f2f500c47bbc187970",
+   "bytes": 6186
+  },
+  {
+   "path": "skills/claude-code-audit/SKILL.md",
+   "mode": "100644",
+   "blob": "9448c7ffbdbf0bf627ae3ac71d8bc9c2d88bfcd0",
+   "bytes": 10281
+  },
+  {
+   "path": "skills/claude-code-audit/evals/evals.json",
+   "mode": "100644",
+   "blob": "b43aef0b49fdd001b8e81548a5324f8ec568aa4d",
+   "bytes": 5701
+  },
+  {
+   "path": "skills/claude-code-audit/references/report_template.md",
+   "mode": "100644",
+   "blob": "4440283e2ba0e05f32d5b40cfccd31d0a9eb2083",
+   "bytes": 4238
+  },
+  {
+   "path": "skills/claude-code-audit/references/session_format.md",
+   "mode": "100644",
+   "blob": "ec6b1a736af3f2d24648b03eb4fb18324f7ee45e",
+   "bytes": 4365
+  },
+  {
+   "path": "skills/claude-code-audit/references/step_change_patterns.md",
+   "mode": "100644",
+   "blob": "29d2e257b971e4e59a7608ece98d418014a4332f",
+   "bytes": 8375
+  },
+  {
+   "path": "skills/claude-code-audit/references/subagent_brief.md",
+   "mode": "100644",
+   "blob": "1a42920fa163ed7e1422ec3f2589f08b5a89b9a9",
+   "bytes": 4022
+  },
+  {
+   "path": "skills/claude-code-audit/scripts/extract.py",
+   "mode": "100644",
+   "blob": "111d2cb4361fb5423011d9e4accf9d5a984b00c0",
+   "bytes": 18856
+  },
+  {
+   "path": "skills/claude-code-audit/scripts/inventory.py",
+   "mode": "100644",
+   "blob": "31fc15ddae3156794e61115ad72fa3aff215f399",
+   "bytes": 8224
+  },
+  {
+   "path": "skills/claude-code-audit/scripts/render.py",
+   "mode": "100644",
+   "blob": "7098a28e8a114400a0eb362500a0b315916ac024",
+   "bytes": 6604
+  },
+  {
+   "path": "skills/claude-code-audit/scripts/sample.py",
+   "mode": "100644",
+   "blob": "9eff039e750bced3e76c3b275f69d1b95a516cf5",
+   "bytes": 6262
+  },
+  {
+   "path": "skills/code-comments/SKILL.md",
+   "mode": "100644",
+   "blob": "30658b5582fe37c0891457241e1694ab95c0b959",
+   "bytes": 6966
+  },
+  {
+   "path": "skills/code-comments/references/language-examples.md",
+   "mode": "100644",
+   "blob": "ad1fc2a26e98c57f7fca499c38d9f8a7f67750c2",
+   "bytes": 10837
+  },
+  {
+   "path": "skills/deep-research/SKILL.md",
+   "mode": "100644",
+   "blob": "b42da139d0336ce49d53e71f41ed747ddc704d22",
+   "bytes": 9168
+  },
+  {
+   "path": "skills/deep-research/references/search-strategies.md",
+   "mode": "100644",
+   "blob": "1c02a640f4c14bc7005c00d20e6d26cb3387372a",
+   "bytes": 6293
+  },
+  {
+   "path": "skills/deep-research/references/source-evaluation.md",
+   "mode": "100644",
+   "blob": "1400245ffb15fddd4deaadb6d35eabdb7b4025e8",
+   "bytes": 6118
+  },
+  {
+   "path": "skills/discernment-nudge/LICENSE.txt",
+   "mode": "100644",
+   "blob": "4f881c52d1f72f4cfb720e339e2d35c3058d01a9",
+   "bytes": 11345
+  },
+  {
+   "path": "skills/discernment-nudge/SKILL.md",
+   "mode": "100644",
+   "blob": "49ebbcad692ffdf70e518087468609a5c4ab9e22",
+   "bytes": 10592
+  },
+  {
+   "path": "skills/exhaustive-systems-analysis/SKILL.md",
+   "mode": "100644",
+   "blob": "e14578e9b83e4575d54e67cbdbaa2ee0734376cc",
+   "bytes": 8476
+  },
+  {
+   "path": "skills/exhaustive-systems-analysis/agents/openai.yaml",
+   "mode": "100644",
+   "blob": "20697cd131268f3d59b7c444d52b852730b707f8",
+   "bytes": 264
+  },
+  {
+   "path": "skills/exhaustive-systems-analysis/references/checklists.md",
+   "mode": "100644",
+   "blob": "56152ea6a9c949824e2514d5b45ab013147bae4f",
+   "bytes": 4475
+  },
+  {
+   "path": "skills/exhaustive-systems-analysis/references/templates.md",
+   "mode": "100644",
+   "blob": "cc6977e787a33d69633d257edef26cb106415a23",
+   "bytes": 1703
+  },
+  {
+   "path": "skills/frame-check/SKILL.md",
+   "mode": "100644",
+   "blob": "6c7c82a19bfc3104e5742989c41d0adc00ac6958",
+   "bytes": 8460
+  },
+  {
+   "path": "skills/frame-check/references/frame-moves.md",
+   "mode": "100644",
+   "blob": "e43ba449f8539409861278239a0515d421af7812",
+   "bytes": 9343
+  },
+  {
+   "path": "skills/improve-codebase-architecture/HTML-REPORT.md",
+   "mode": "100644",
+   "blob": "17f6d2c7b8342ee7c4260d8d98024d462c7d3eaa",
+   "bytes": 6685
+  },
+  {
+   "path": "skills/improve-codebase-architecture/SKILL.md",
+   "mode": "100644",
+   "blob": "86c025ba94c45a4a85bdbf2e0318b3b72044d608",
+   "bytes": 6049
+  },
+  {
+   "path": "skills/improve-codebase-architecture/agents/openai.yaml",
+   "mode": "100644",
+   "blob": "706fdca096da5937fe57875a9154017d50668c42",
+   "bytes": 166
+  },
+  {
+   "path": "skills/latent-potential/SKILL.md",
+   "mode": "100644",
+   "blob": "a1b0b1269195e6d8356e88d37dfc8d6f9b47860f",
+   "bytes": 14388
+  },
+  {
+   "path": "skills/latent-potential/evals/evals.json",
+   "mode": "100644",
+   "blob": "6346419b76a8cd50809f7e02e2902b0db5d85eb9",
+   "bytes": 8842
+  },
+  {
+   "path": "skills/latent-potential/references/lenses.md",
+   "mode": "100644",
+   "blob": "a14060a3e09913bbb0a2be4d88bf3cfdf4292689",
+   "bytes": 11223
+  },
+  {
+   "path": "skills/literate-guide/SKILL.md",
+   "mode": "100644",
+   "blob": "2f6526ed375063f3fc9d15d3bbbfa6b75aca6d6e",
+   "bytes": 10074
+  },
+  {
+   "path": "skills/literate-guide/references/guide-template.md",
+   "mode": "100644",
+   "blob": "bd6ee54275684d601f68b6e98d26cf7ecd378606",
+   "bytes": 5683
+  },
+  {
+   "path": "skills/plain/SKILL.md",
+   "mode": "100644",
+   "blob": "ad594fa2ae2c1fcc089bd7f8a48c9ce6b3bb910a",
+   "bytes": 6400
+  },
+  {
+   "path": "skills/pr-description/SKILL.md",
+   "mode": "100644",
+   "blob": "80d364d448350ee3b095ce0c7c8dc38b96ff8351",
+   "bytes": 10607
+  },
+  {
+   "path": "skills/pr-screenshot-comparison/SKILL.md",
+   "mode": "100644",
+   "blob": "c908caaa4d0bc66587904d4ca11151c4c90a899c",
+   "bytes": 7391
+  },
+  {
+   "path": "skills/pr-screenshot-comparison/agents/openai.yaml",
+   "mode": "100644",
+   "blob": "8e3d990ecaaeede25e8ddf80a30e281be0a7c2e3",
+   "bytes": 310
+  },
+  {
+   "path": "skills/pr-self-review/SKILL.md",
+   "mode": "100644",
+   "blob": "dd3db6420fc8c633a11bcc7b4d581be41995bb49",
+   "bytes": 8058
+  },
+  {
+   "path": "skills/pr-self-review/references/github-posting.md",
+   "mode": "100644",
+   "blob": "15d32d959c090eff3f7f2584a58bd4a3ae9df4a4",
+   "bytes": 4620
+  },
+  {
+   "path": "skills/react-change-review/SKILL.md",
+   "mode": "100644",
+   "blob": "329076d64cd61a3ddeb942f1769e2d96aadfcc21",
+   "bytes": 7733
+  },
+  {
+   "path": "skills/react-change-review/agents/openai.yaml",
+   "mode": "100644",
+   "blob": "d60d0cc16ebba2ddf4cebc9f47ffc24610b1d146",
+   "bytes": 256
+  },
+  {
+   "path": "skills/spike/SKILL.md",
+   "mode": "100644",
+   "blob": "2f5288a97a53e359281d26ea38645b8ba89170e9",
+   "bytes": 8554
+  },
+  {
+   "path": "skills/typography/SKILL.md",
+   "mode": "100644",
+   "blob": "7540b30da0d2bffc1571872f90cb13cb1f10d6b1",
+   "bytes": 11449
+  },
+  {
+   "path": "skills/typography/references/fluid-typography.md",
+   "mode": "100644",
+   "blob": "464c86866769c0dd613b078340a7aa9ff1a3719d",
+   "bytes": 10030
+  },
+  {
+   "path": "skills/typography/references/font-loading.md",
+   "mode": "100644",
+   "blob": "731784adf5642a02780c9211447591d41d7b34d1",
+   "bytes": 9314
+  },
+  {
+   "path": "skills/typography/references/internationalization.md",
+   "mode": "100644",
+   "blob": "88cf34486efb508d796b8e22c7229ebdb3dbf1c7",
+   "bytes": 10541
+  },
+  {
+   "path": "skills/typography/references/masters.md",
+   "mode": "100644",
+   "blob": "5fefc0b0e9764b11db7fa1e6518035b61a80e30c",
+   "bytes": 16235
+  },
+  {
+   "path": "skills/typography/references/opentype-features.md",
+   "mode": "100644",
+   "blob": "95ba77ef8c987703326efc18b9aba45123869943",
+   "bytes": 9141
+  },
+  {
+   "path": "skills/typography/references/tailwind-integration.md",
+   "mode": "100644",
+   "blob": "e3d8e00b96d1ed5c4840b9c310af82dc4509011a",
+   "bytes": 10842
+  },
+  {
+   "path": "skills/typography/references/variable-fonts.md",
+   "mode": "100644",
+   "blob": "d15d7097a0cd9589063d72f8e4c1b31c34d3e3d2",
+   "bytes": 7238
+  },
+  {
+   "path": "skills/write-goal/SKILL.md",
+   "mode": "100644",
+   "blob": "d92abee139b1f102f6092d6410345dfcb819b9a1",
+   "bytes": 8121
+  },
+  {
+   "path": "skills/write-goal/agents/openai.yaml",
+   "mode": "100644",
+   "blob": "0121ff805c67b3a7003256901d661a033981ee96",
+   "bytes": 220
+  },
+  {
+   "path": "statusline-command.sh",
+   "mode": "100755",
+   "blob": "3a512c9db1bb4af809d1b344a1fb0973a2ef776a",
+   "bytes": 4606
+  },
+  {
+   "path": "templates/.mcp.json.template",
+   "mode": "100644",
+   "blob": "5cd10a1e7f707f69e98050739c1c95f0953de676",
+   "bytes": 187
+  },
+  {
+   "path": "templates/README.md",
+   "mode": "100644",
+   "blob": "ec86c99e6c43e62872fef49b4ebef7ca84d135fd",
+   "bytes": 1397
+  }
+ ]
+}

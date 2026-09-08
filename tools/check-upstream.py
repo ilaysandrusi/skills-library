@@ -319,6 +319,7 @@ def record(state, report, today):
                     for e in report["skills"])
     entry = {
         "last_checked": today,
+        "candidate_commit": report["head"],
         "verified_commit": report["head"] if clean else None,
         "upstream_pushed_at": report["pushed_at"][:10],
         "license": report["license"],
