@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-08",
+ "last_material_change": "2026-09-09",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -14,18 +14,18 @@
   "legacy_entries_mapped": 21,
   "legacy_entries_total": 6162,
   "upstream_sources_with_checks": 232,
-  "upstream_sources_with_verified_revisions": 100
+  "upstream_sources_with_verified_revisions": 101
  },
  "migration_queue": [
   {
    "source_repository": "mukul975/Anthropic-Cybersecurity-Skills",
-   "status": "queued-source-verification",
+   "status": "identity-license-verified-review-blocked",
    "primary_category_candidate": "17-cybersecurity-pack",
    "legacy_entries": 817,
    "category_counts": {
     "17-cybersecurity-pack": 817
    },
-   "note": "Verify the exact upstream identity and provenance before migration."
+   "note": "Exact source, commit, tree, Apache-2.0 license, file count, submodule status, and LFS status were verified on 2026-09-09. Complete-snapshot security review is blocked because CodeRabbit is not authenticated; preserve all legacy entries and do not import until review succeeds."
   },
   {
    "source_repository": "openaccountants/openaccountants",
@@ -4215,16 +4215,15 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "mukul975/Anthropic-Cybersecurity-Skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-09",
+   "last_attempt": "2026-09-09",
+   "checked_revision": "54a798831d2266a3ca61ce68a7acb80b81160d57",
    "verified_revision": null,
    "result": {
     "identical": 784,
     "drift": 33
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "muratcankoylan/Agent-Skills-for-Context-Engineering": {
    "last_successful_check": "2026-09-04",
@@ -4442,8 +4441,8 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "petekp/claude-code-setup": {
-   "last_successful_check": "2026-09-08",
-   "last_attempt": "2026-09-08",
+   "last_successful_check": "2026-09-09",
+   "last_attempt": "2026-09-09",
    "checked_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
    "verified_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
    "result": "current"
@@ -5153,6 +5152,17 @@
    "note": "The recorded identity redirects to canonical ruvnet/ruflo. Commit 277c7bc03 has a complete 5,628-file Git tree with no submodules or LFS, but whole-snapshot redistribution is not cleared: bundled Inter fonts lack tracked OFL attribution, a RuVocal WASM artifact lacks component-specific source/license evidence, and several large media assets lack provenance records. Static review found no clear malware or genuine credentials; hooks, workflows, agent configs, installers, services, and executables are unsafe to enable and must remain archive-only. Candidate a295c6870 was also inspected and deferred: its tip tree adds ordinary JPEG documentation assets, but its router fix does not fully enforce the claimed model/tier invariant and accompanying documentation overstates verification. Preserve the legacy source record and do not import a partial snapshot."
   },
   {
+   "id": "migration-review-blocked:mukul975/Anthropic-Cybersecurity-Skills",
+   "source_repository": "mukul975/Anthropic-Cybersecurity-Skills",
+   "source_url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+   "checked_revision": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+   "tree": "d110e8cfb2bc042ffc8e5bf06ce160844a167257",
+   "last_successful_check": "2026-09-09",
+   "last_attempt": "2026-09-09",
+   "status": "blocked-coderabbit-authentication",
+   "note": "The exact recorded identity and Apache-2.0 license were verified. The complete tree has 4,532 tracked files / 32,256,136 bytes, no submodules, and no Git LFS pointers. CodeRabbit CLI 0.7.6 reported not_authenticated and agent login remained at awaiting_browser_auth, so the required complete-snapshot security review could not run. No manual review was substituted, no files were imported, and all 817 legacy entries remain preserved."
+  },
+  {
    "id": "upstream-unreachable:figma/skills",
    "source_repository": "figma/skills",
    "last_attempt": "2026-09-07",
@@ -5197,7 +5207,8 @@
  ],
  "next_work_items": [
   "Resolve ruvnet/ruflo bundled font, WASM, and media provenance before migration; keep candidate a295c6870 deferred until its router invariant and verification claims are corrected.",
-  "Verify the next highest-impact queued source identity and license.",
+  "Authenticate CodeRabbit and rerun the complete-snapshot security review for mukul975/Anthropic-Cybersecurity-Skills at 54a798831d2266a3ca61ce68a7acb80b81160d57 before migration.",
+  "After the blocked review is resolved, verify the next highest-impact queued source identity and license.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]
 }
