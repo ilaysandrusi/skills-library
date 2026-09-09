@@ -116,8 +116,9 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "mukul975/Anthropic-Cybersecurity-Skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-09",
    "verified_commit": null,
+   "candidate_commit": "54a798831d2266a3ca61ce68a7acb80b81160d57",
    "upstream_pushed_at": "2026-08-31",
    "license": "Apache-2.0",
    "local_skills": 817,
@@ -125,7 +126,7 @@
     "identical": 784,
     "drift": 33
    },
-   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "The exact recorded upstream identity was verified at commit 54a798831d2266a3ca61ce68a7acb80b81160d57 (tree d110e8cfb2bc042ffc8e5bf06ce160844a167257), Apache-2.0. The complete tree has 4,532 tracked files / 32,256,136 bytes, no submodules, and no Git LFS pointers. The prior legacy comparison remains 784 identical and 33 drifted skills. Complete-snapshot security review is blocked because CodeRabbit is not authenticated; no import or legacy update was applied."
   },
   "openaccountants/openaccountants": {
    "last_checked": "2026-09-04",
@@ -426,7 +427,7 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "googleworkspace/skills": {
-   "last_checked": "2026-09-05",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 96,
    "result": {
@@ -1417,7 +1418,7 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "netlify/skills": {
-   "last_checked": "2026-09-05",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 14,
    "result": {
@@ -1777,7 +1778,7 @@
    }
   },
   "figma/skills": {
-   "last_checked": "2026-09-05",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 8,
    "result": {
@@ -1847,7 +1848,7 @@
    }
   },
   "sanity-io/skills": {
-   "last_checked": "2026-09-05",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 7,
    "result": {
@@ -2802,7 +2803,7 @@
    }
   },
   "garrytan/skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-07",
    "verified_commit": null,
    "local_skills": 1,
    "result": {
@@ -3399,7 +3400,7 @@
    "openai/skills": "2026-09-05: DO NOT APPLY as an origin. openai/skills vendors other vendors' skills under skills/.curated/. Its figma-generate-library and figma-use are older, thinner copies of the Figma originals the archive imported in 34194e9f3 from figma/skills (now 404), and the local copies carry guidance upstream lacks, so applying would downgrade them. Its linear and notion-knowledge-capture differ from the local copies only by an assets/ directory. Treat this repo as a curation mirror, not a source.",
    "GaZmagik/iso-24495": "2026-09-05: all 8 skills drifted at 9ae69e628665. Single-source and high quality, but the pack cannot be split (nine TypeScript files import siblings via ../../<skill>/), so all 8 move together and each import must be re-verified. Deferred to a run that can give it a full review.",
    "NVIDIA/skills": "2026-09-04: 75 drifted of 257 local skills. Over the 10-resource automatic limit, so held. First-party Apache-2.0 and actively pushed, so this is the largest genuinely valuable backlog in the queue — it needs a human to decide whether to take it as one large batch.",
-   "mukul975/Anthropic-Cybersecurity-Skills": "2026-09-04: 33 drifted of 784 local skills — the 17-cybersecurity-pack. Over the limit, held. The 784 identical files prove the baseline is sound, so this is a real partial update, but 33 security skills need reading individually.",
+   "mukul975/Anthropic-Cybersecurity-Skills": "2026-09-09: exact source and Apache-2.0 license verified at 54a798831d2266a3ca61ce68a7acb80b81160d57 (tree d110e8cfb2bc042ffc8e5bf06ce160844a167257). The complete 4,532-file / 32,256,136-byte tree has no submodules or LFS pointers. Prior comparison remains 784 identical and 33 drifted legacy skills. Complete-snapshot security review is blocked because CodeRabbit is not authenticated, so no import or legacy update was applied.",
    "PSPDFKit-labs/nutrient-agent-skill": "2026-09-04: 1 drifted — 06-documents/nutrient-document-processing — but held deliberately despite being a single resource. It is a major-version rewrite (1.0 -> 2.0.0) touching 27 of ~30 files: the one skill is split into a three-product router (DWS Processor / Data Extraction / Accessibility), openclaw runtime metadata is added, and **the licence changes from Apache-2.0 to MIT-0**. Restructuring-heavy plus a licensing change is exactly what the policy says to report rather than apply. Also decide it together with the duplicate 29-ecc/nutrient-document-processing copy.",
    "microsoft/skills + composiohq/skills — mis-attribution risk": "2026-09-04: microsoft/skills reports 3 drifted and composiohq/skills 1, but two of those are multi-source skills where the listed source is probably a vendored fork rather than the origin: 05-development/mcp-builder (anthropics + microsoft + snyk; verified blob-identical to anthropics/skills and carries Anthropic's LICENSE.txt) and 09-anthropic-tools/skill-creator (eight listed sources, an Anthropic original). Applying either would replace an Anthropic original with a third party's copy. The two genuinely single-source microsoft skills — 23-microsoft/azure-enterprise-infra-planner and 23-microsoft/microsoft-foundry — are safe to update and are simply not yet done.",
    "angular/skills + affaan-m/ECC": "2026-09-04: 05-development/angular-developer and 29-ecc/angular-developer both list affaan-m/ECC and angular/skills as sources and both drifted. ECC vendors Angular's skill, so the origin must be settled before either copy is updated, and the two local copies are themselves a duplicate pair. Same shape for 02-design-ui/frontend-slides (affaan-m/ECC + zarazhangrui/frontend-slides).",

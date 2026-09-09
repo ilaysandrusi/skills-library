@@ -55161,7 +55161,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "08-context-engineering/catch-up": {
    "skill": "08-context-engineering/catch-up",
@@ -55170,7 +55170,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/circuit": {
    "skill": "05-development/circuit",
@@ -55179,7 +55179,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/circuit-resource-analysis": {
    "skill": "05-development/circuit-resource-analysis",
@@ -55188,7 +55188,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "09-anthropic-tools/claude-code-audit": {
    "skill": "09-anthropic-tools/claude-code-audit",
@@ -55197,7 +55197,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/code-comments": {
    "skill": "05-development/code-comments",
@@ -55206,7 +55206,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "08-context-engineering/deep-research--petekp": {
    "skill": "08-context-engineering/deep-research--petekp",
@@ -55215,7 +55215,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "08-context-engineering/discernment-nudge": {
    "skill": "08-context-engineering/discernment-nudge",
@@ -55224,7 +55224,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/exhaustive-systems-analysis": {
    "skill": "05-development/exhaustive-systems-analysis",
@@ -55233,7 +55233,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "08-context-engineering/frame-check": {
    "skill": "08-context-engineering/frame-check",
@@ -55242,7 +55242,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/improve-codebase-architecture--petekp": {
    "skill": "05-development/improve-codebase-architecture--petekp",
@@ -55251,7 +55251,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "08-context-engineering/latent-potential": {
    "skill": "08-context-engineering/latent-potential",
@@ -55260,7 +55260,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "01-copy-writing/literate-guide": {
    "skill": "01-copy-writing/literate-guide",
@@ -55269,7 +55269,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "01-copy-writing/plain": {
    "skill": "01-copy-writing/plain",
@@ -55278,7 +55278,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/pr-description": {
    "skill": "05-development/pr-description",
@@ -55287,7 +55287,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/pr-screenshot-comparison": {
    "skill": "05-development/pr-screenshot-comparison",
@@ -55296,7 +55296,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/pr-self-review": {
    "skill": "05-development/pr-self-review",
@@ -55305,7 +55305,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/react-change-review": {
    "skill": "05-development/react-change-review",
@@ -55314,7 +55314,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "05-development/spike": {
    "skill": "05-development/spike",
@@ -55323,7 +55323,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "02-design-ui/typography": {
    "skill": "02-design-ui/typography",
@@ -55332,7 +55332,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "09-anthropic-tools/write-goal": {
    "skill": "09-anthropic-tools/write-goal",
@@ -55341,7 +55341,7 @@
    ],
    "method": "direct-import",
    "added_in": "2026-09-05",
-   "import_note": "daily 2026-09-05: extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77; not from the library snapshot. Dotfiles, hooks and setup.sh were left out."
+   "import_note": "daily 2026-09-05: legacy skill extracted from HEAD of a fresh Desktop clone of petekp/claude-code-setup @ dcd4ca77. Repository-level files were omitted from this extract; the complete upstream tree is now archived at repositories/05-development/petekp--claude-code-setup."
   },
   "12-security/api-security-testing": {
    "skill": "12-security/api-security-testing",
