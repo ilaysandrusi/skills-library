@@ -46,7 +46,8 @@
     "notes": "Shell setup and lifecycle hooks were inspected but not executed or enabled. They modify user configuration and can terminate session-scoped browser helpers. No committed credentials or private keys were detected. Upstream-published absolute home paths and references to a separate private project remain unchanged as part of the exact snapshot."
    },
    "upstream_check": {
-    "last_successful_check": "2026-09-08",
+    "last_successful_check": "2026-09-09",
+    "last_attempt": "2026-09-09",
     "candidate_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
     "status": "current"
    },
