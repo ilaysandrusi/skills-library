@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-10",
+ "last_material_change": "2026-09-11",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -14,7 +14,7 @@
   "legacy_entries_mapped": 21,
   "legacy_entries_total": 6162,
   "upstream_sources_with_checks": 232,
-  "upstream_sources_with_verified_revisions": 101
+  "upstream_sources_with_verified_revisions": 102
  },
  "migration_queue": [
   {
@@ -29,13 +29,13 @@
   },
   {
    "source_repository": "openaccountants/openaccountants",
-   "status": "queued-source-verification",
+   "status": "identity-license-verified-review-deferred",
    "primary_category_candidate": "18-finance-accounting",
    "legacy_entries": 781,
    "category_counts": {
     "18-finance-accounting": 781
    },
-   "note": "Verify the exact upstream identity and provenance before migration."
+   "note": "Exact source identity and candidate ef343eb581112bca85d7f2c7a5451a0eca932adc were verified on 2026-09-11. The 8,950-file / 228,048,084-byte tree uses AGPL-3.0-only for software and LicenseRef-OA-Guide-License-1.0 for guide content. Whole-snapshot migration is deferred pending redistribution-policy clearance for the custom guide license and a complete integrity/security review; preserve all 781 legacy entries."
   },
   {
    "source_repository": "infrasity-labs/dev-gtm-claude-skills",
@@ -4405,16 +4405,15 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "openaccountants/openaccountants": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-11",
+   "last_attempt": "2026-09-11",
+   "checked_revision": "ef343eb581112bca85d7f2c7a5451a0eca932adc",
    "verified_revision": null,
    "result": {
     "identical": 780,
     "unmatched-candidate": 1
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "openai/skills": {
    "last_successful_check": "2026-09-05",
@@ -4623,9 +4622,9 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "ruvnet/ruflo": {
-   "last_successful_check": "2026-09-10",
-   "last_attempt": "2026-09-10",
-   "checked_revision": "9576a1032b0749ac12d08fd9d05b86d4bee893b5",
+   "last_successful_check": "2026-09-11",
+   "last_attempt": "2026-09-11",
+   "checked_revision": "df87b0db338a8632f14e243169208be1d7faa164",
    "verified_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
    "result": "blocked-redistribution-clearance",
    "record_source": "28-career-education-health/Vibe-Skills/THIRD_PARTY_LICENSES.md"
@@ -5145,12 +5144,12 @@
    "source_url": "https://github.com/ruvnet/ruflo",
    "checked_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
    "reviewed_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
-   "candidate_revision": "9576a1032b0749ac12d08fd9d05b86d4bee893b5",
-   "candidate_tree": "60a32ec8245be875caef147c6c81b6ffdf9ee655",
-   "last_successful_check": "2026-09-10",
-   "last_attempt": "2026-09-10",
+   "candidate_revision": "df87b0db338a8632f14e243169208be1d7faa164",
+   "candidate_tree": "627cb1a8bab8ee6cd19124eb07dcfa335845addb",
+   "last_successful_check": "2026-09-11",
+   "last_attempt": "2026-09-11",
    "status": "blocked-redistribution-clearance",
-   "note": "The recorded identity redirects to canonical ruvnet/ruflo. Commit 277c7bc03 has a complete 5,628-file Git tree with no submodules or LFS, but whole-snapshot redistribution is not cleared: bundled Inter fonts lack tracked OFL attribution, a RuVocal WASM artifact lacks component-specific source/license evidence, and several large media assets lack provenance records. Static review found no clear malware or genuine credentials; hooks, workflows, agent configs, installers, services, and executables are unsafe to enable and must remain archive-only. Candidate 9576a1032 was inspected against the previously deferred a295c6870: 17 commits change 68 files (+3,985/-174), add a network-facing Nostr/MCP/WebSocket federation gateway and skills, and update fast-uri 3.1.5 to 3.1.7 for a security fix. Its complete tree has 5,680 tracked files / 85,594,642 bytes, no submodules, and no tracked .gitattributes file. The diff does not add attribution or provenance for the already blocked fonts, WASM, or media, so redistribution clearance remains unresolved. Preserve the legacy source record and do not import a partial snapshot."
+   "note": "The recorded identity redirects to canonical ruvnet/ruflo. Commit 277c7bc03 remains the last fully reviewed revision, but whole-snapshot redistribution is not cleared: bundled Inter fonts lack tracked OFL attribution, a RuVocal WASM artifact lacks component-specific source/license evidence, and several large media assets lack provenance records. Static review found no clear malware or genuine credentials; hooks, workflows, agent configs, installers, services, and executables are unsafe to enable and must remain archive-only. Candidate df87b0db338a8632f14e243169208be1d7faa164 was inspected against 9576a1032: 8 commits change 22 files (+789/-47), harden daemon consent and memory preservation, and expand the network-facing federation gateway. Its tree has 5,686 blobs / 85,638,249 bytes, no submodules, and no tracked .gitattributes. It also adds plugins/ruflo-x-gateway/node_modules as a symlink to an upstream developer's private /private/tmp path, so the candidate is not self-contained even apart from the existing font, WASM, and media provenance blockers. Preserve the legacy source record and do not import a partial snapshot."
   },
   {
    "id": "migration-review-blocked:mukul975/Anthropic-Cybersecurity-Skills",
@@ -5162,6 +5161,17 @@
    "last_attempt": "2026-09-10",
    "status": "blocked-coderabbit-authentication",
    "note": "The exact recorded identity and Apache-2.0 license were verified, and upstream HEAD remained at the recorded commit on 2026-09-10. The complete tree has 4,532 tracked files / 32,256,136 bytes, no submodules, and no Git LFS pointers. CodeRabbit CLI 0.7.6 was installed successfully but auth status remained not_authenticated, so the required complete-snapshot security review could not run. No manual review was substituted, no files were imported, and all 817 legacy entries remain preserved."
+  },
+  {
+   "id": "migration-license-review:openaccountants/openaccountants",
+   "source_repository": "openaccountants/openaccountants",
+   "source_url": "https://github.com/openaccountants/openaccountants",
+   "checked_revision": "ef343eb581112bca85d7f2c7a5451a0eca932adc",
+   "tree": "9a1db5268dc865062fc0c2aded3cc85280eac1b9",
+   "last_successful_check": "2026-09-11",
+   "last_attempt": "2026-09-11",
+   "status": "blocked-custom-license-and-size-review",
+   "note": "The exact source is active and its complete recursive tree is not truncated: 8,950 blobs / 228,048,084 bytes, no submodules, and no tracked .gitattributes. Software is AGPL-3.0-only, while guide content uses LicenseRef-OA-Guide-License-1.0. That custom license permits non-commercial redistribution with attribution and reviewer-provenance conditions, but reserves commercial bulk redistribution; confirm that this archive's distribution policy is compatible before copying the complete guide corpus. The sole legacy mismatch, ga-income-tax, removes reviewed_by metadata upstream while retaining a prose reviewer claim. No snapshot or standalone update was imported, and all 781 legacy entries remain preserved."
   },
   {
    "id": "upstream-unreachable:figma/skills",
@@ -5207,9 +5217,10 @@
   }
  ],
  "next_work_items": [
-  "Resolve ruvnet/ruflo bundled font, WASM, and media provenance before migration; candidate 9576a1032 adds a network-facing federation gateway but does not resolve the redistribution blockers.",
+  "Resolve ruvnet/ruflo bundled font, WASM, media, and dangling node_modules symlink provenance before migration; candidate df87b0db338a8632f14e243169208be1d7faa164 remains blocked.",
   "Authenticate CodeRabbit and rerun the complete-snapshot security review for mukul975/Anthropic-Cybersecurity-Skills at 54a798831d2266a3ca61ce68a7acb80b81160d57 before migration.",
-  "After the blocked review is resolved, verify the next highest-impact queued source identity and license.",
+  "Confirm that non-commercial archive redistribution is compatible with LicenseRef-OA-Guide-License-1.0 before reviewing and migrating openaccountants/openaccountants at ef343eb581112bca85d7f2c7a5451a0eca932adc.",
+  "After the blocked reviews are resolved, verify the next highest-impact queued source identity and license.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]
 }

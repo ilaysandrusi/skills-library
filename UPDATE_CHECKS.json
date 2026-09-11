@@ -129,10 +129,11 @@
    "note": "The exact recorded upstream identity was verified at commit 54a798831d2266a3ca61ce68a7acb80b81160d57 (tree d110e8cfb2bc042ffc8e5bf06ce160844a167257), Apache-2.0. The complete tree has 4,532 tracked files / 32,256,136 bytes, no submodules, and no Git LFS pointers. The prior legacy comparison remains 784 identical and 33 drifted skills. Complete-snapshot security review is blocked because CodeRabbit is not authenticated; no import or legacy update was applied."
   },
   "openaccountants/openaccountants": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-11",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-09-04",
-   "license": "AGPL-3.0",
+   "candidate_commit": "ef343eb581112bca85d7f2c7a5451a0eca932adc",
+   "upstream_pushed_at": "2026-09-11",
+   "license": "AGPL-3.0-only (software) / LicenseRef-OA-Guide-License-1.0 (guide content)",
    "local_skills": 781,
    "result": {
     "identical": 780,
@@ -141,7 +142,7 @@
    "frontmatter_probe": {
     "18-finance-accounting/ga-income-tax": "name-and-description-match"
    },
-   "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
+   "note": "Exact source identity and candidate ef343eb581112bca85d7f2c7a5451a0eca932adc (tree 9a1db5268dc865062fc0c2aded3cc85280eac1b9) were verified. The complete recursive tree is not truncated and contains 8,950 blobs / 228,048,084 bytes, no submodules, and no tracked .gitattributes. The repository uses AGPL-3.0-only for software and the custom LicenseRef-OA-Guide-License-1.0 for guide content; that license permits non-commercial redistribution but reserves commercial bulk redistribution and requires preservation of reviewer provenance, so whole-archive redistribution needs explicit policy/legal clearance before import. The sole legacy mismatch, ga-income-tax, has matching name and description; the inspected upstream diff removes reviewed_by metadata while leaving a prose reviewer claim, so it was not applied independently. No snapshot was imported."
   },
   "infrasity-labs/dev-gtm-claude-skills": {
    "last_checked": "2026-09-04",
