@@ -1,0 +1,5226 @@
+{
+ "schema_version": 1,
+ "last_material_change": "2026-09-11",
+ "migration_limits": {
+  "upstream_repositories_per_run": 2,
+  "legacy_entries_retired_per_run": 10,
+  "upstream_checks_per_run": 5
+ },
+ "progress": {
+  "cataloged_repositories": 1,
+  "completed_migrations": 1,
+  "queued_source_repositories": 230,
+  "legacy_source_repositories": 231,
+  "legacy_entries_mapped": 21,
+  "legacy_entries_total": 6162,
+  "upstream_sources_with_checks": 232,
+  "upstream_sources_with_verified_revisions": 102
+ },
+ "migration_queue": [
+  {
+   "source_repository": "mukul975/Anthropic-Cybersecurity-Skills",
+   "status": "identity-license-verified-review-blocked",
+   "primary_category_candidate": "17-cybersecurity-pack",
+   "legacy_entries": 817,
+   "category_counts": {
+    "17-cybersecurity-pack": 817
+   },
+   "note": "Exact source, commit, tree, Apache-2.0 license, file count, submodule status, and LFS status were verified on 2026-09-09; upstream HEAD was confirmed unchanged on 2026-09-10. Complete-snapshot security review is blocked because CodeRabbit 0.7.6 is installed but not authenticated; preserve all legacy entries and do not import until review succeeds."
+  },
+  {
+   "source_repository": "openaccountants/openaccountants",
+   "status": "identity-license-verified-review-deferred",
+   "primary_category_candidate": "18-finance-accounting",
+   "legacy_entries": 781,
+   "category_counts": {
+    "18-finance-accounting": 781
+   },
+   "note": "Exact source identity and candidate ef343eb581112bca85d7f2c7a5451a0eca932adc were verified on 2026-09-11. The 8,950-file / 228,048,084-byte tree uses AGPL-3.0-only for software and LicenseRef-OA-Guide-License-1.0 for guide content. Whole-snapshot migration is deferred pending redistribution-policy clearance for the custom guide license and a complete integrity/security review; preserve all 781 legacy entries."
+  },
+  {
+   "source_repository": "infrasity-labs/dev-gtm-claude-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "19-sales-gtm-startup",
+   "legacy_entries": 355,
+   "category_counts": {
+    "01-copy-writing": 5,
+    "02-design-ui": 4,
+    "03-marketing": 58,
+    "05-development": 3,
+    "08-context-engineering": 1,
+    "10-hyperfx-marketing": 1,
+    "11-product-management": 8,
+    "19-sales-gtm-startup": 252,
+    "21-goose-agent": 1,
+    "28-career-education-health": 21,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "NVIDIA/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "20-nvidia-cuda",
+   "legacy_entries": 338,
+   "category_counts": {
+    "20-nvidia-cuda": 338
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "affaan-m/ECC",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "29-ecc",
+   "legacy_entries": 297,
+   "category_counts": {
+    "02-design-ui": 4,
+    "03-marketing": 1,
+    "05-development": 1,
+    "06-documents": 1,
+    "12-security": 1,
+    "15-integrations": 2,
+    "16-ai-apis-media": 1,
+    "21-goose-agent": 1,
+    "29-ecc": 285
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "gooseworks-ai/goose-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "21-goose-agent",
+   "legacy_entries": 270,
+   "category_counts": {
+    "04-remotion": 1,
+    "09-anthropic-tools": 1,
+    "10-hyperfx-marketing": 2,
+    "11-product-management": 1,
+    "15-integrations": 1,
+    "21-goose-agent": 263,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "microsoft/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "23-microsoft",
+   "legacy_entries": 188,
+   "category_counts": {
+    "05-development": 1,
+    "09-anthropic-tools": 1,
+    "23-microsoft": 186
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "indranilbanerjee/digital-marketing-pro",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 178,
+   "category_counts": {
+    "03-marketing": 172,
+    "08-context-engineering": 1,
+    "10-hyperfx-marketing": 1,
+    "11-product-management": 2,
+    "16-ai-apis-media": 1,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "wshobson/agents",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 173,
+   "category_counts": {
+    "01-copy-writing": 1,
+    "02-design-ui": 13,
+    "05-development": 55,
+    "06-documents": 6,
+    "08-context-engineering": 12,
+    "09-anthropic-tools": 1,
+    "11-product-management": 3,
+    "12-security": 10,
+    "13-cloud-deploy": 21,
+    "14-testing-qa": 3,
+    "15-integrations": 2,
+    "16-ai-apis-media": 18,
+    "17-cybersecurity-pack": 4,
+    "18-finance-accounting": 3,
+    "19-sales-gtm-startup": 5,
+    "20-nvidia-cuda": 3,
+    "23-microsoft": 1,
+    "25-data-databases": 7,
+    "26-mobile-apple": 1,
+    "27-web3-crypto": 4
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "aaron-he-zhu/aaron-marketing-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 122,
+   "category_counts": {
+    "03-marketing": 121,
+    "11-product-management": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "google/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 110,
+   "category_counts": {
+    "02-design-ui": 1,
+    "05-development": 107,
+    "13-cloud-deploy": 1,
+    "16-ai-apis-media": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "aws/agent-toolkit-for-aws",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 106,
+   "category_counts": {
+    "12-security": 7,
+    "13-cloud-deploy": 69,
+    "14-testing-qa": 2,
+    "25-data-databases": 28
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "browser-act/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "14-testing-qa",
+   "legacy_entries": 102,
+   "category_counts": {
+    "14-testing-qa": 102
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "googleworkspace/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 96,
+   "category_counts": {
+    "15-integrations": 96
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "deanpeters/Product-Manager-Skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "11-product-management",
+   "legacy_entries": 84,
+   "category_counts": {
+    "11-product-management": 83,
+    "14-testing-qa": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "trailofbits/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "12-security",
+   "legacy_entries": 78,
+   "category_counts": {
+    "12-security": 78
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "tobihagemann/turbo",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 74,
+   "category_counts": {
+    "05-development": 74
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "LambdaTest/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "14-testing-qa",
+   "legacy_entries": 73,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "14-testing-qa": 72
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "alinaqi/claude-bootstrap",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 72,
+   "category_counts": {
+    "03-marketing": 1,
+    "05-development": 68,
+    "07-supabase": 1,
+    "10-hyperfx-marketing": 1,
+    "16-ai-apis-media": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "JasonColapietro/suede-creator-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "01-copy-writing",
+   "legacy_entries": 71,
+   "category_counts": {
+    "01-copy-writing": 71
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "NeoLabHQ/context-engineering-kit",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 69,
+   "category_counts": {
+    "01-copy-writing": 1,
+    "05-development": 3,
+    "08-context-engineering": 65
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "phuryn/pm-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "11-product-management",
+   "legacy_entries": 69,
+   "category_counts": {
+    "03-marketing": 1,
+    "11-product-management": 68
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "alirezarezvani/claude-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 65,
+   "category_counts": {
+    "01-copy-writing": 4,
+    "02-design-ui": 3,
+    "03-marketing": 22,
+    "05-development": 5,
+    "06-documents": 1,
+    "08-context-engineering": 2,
+    "11-product-management": 4,
+    "15-integrations": 1,
+    "16-ai-apis-media": 3,
+    "18-finance-accounting": 1,
+    "19-sales-gtm-startup": 10,
+    "21-goose-agent": 2,
+    "26-mobile-apple": 1,
+    "29-ecc": 6
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "nowork-studio/NotFair",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 56,
+   "category_counts": {
+    "02-design-ui": 1,
+    "03-marketing": 48,
+    "08-context-engineering": 1,
+    "10-hyperfx-marketing": 2,
+    "15-integrations": 2,
+    "16-ai-apis-media": 1,
+    "19-sales-gtm-startup": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "openai/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 54,
+   "category_counts": {
+    "02-design-ui": 4,
+    "05-development": 38,
+    "06-documents": 2,
+    "09-anthropic-tools": 1,
+    "12-security": 3,
+    "13-cloud-deploy": 1,
+    "16-ai-apis-media": 4,
+    "26-mobile-apple": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "bitwize-music-studio/claude-ai-music-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 53,
+   "category_counts": {
+    "16-ai-apis-media": 53
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "coreyhaines31/marketingskills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 50,
+   "category_counts": {
+    "01-copy-writing": 6,
+    "03-marketing": 43,
+    "10-hyperfx-marketing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "diegosouzapw/OmniRoute",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 46,
+   "category_counts": {
+    "16-ai-apis-media": 46
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Eronred/aso-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 42,
+   "category_counts": {
+    "03-marketing": 40,
+    "11-product-management": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "dembrandt/dembrandt-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 40,
+   "category_counts": {
+    "03-marketing": 40
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "getsentry/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 40,
+   "category_counts": {
+    "02-design-ui": 1,
+    "05-development": 4,
+    "06-documents": 1,
+    "08-context-engineering": 1,
+    "12-security": 2,
+    "15-integrations": 29,
+    "29-ecc": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "flutter/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 38,
+   "category_counts": {
+    "05-development": 1,
+    "26-mobile-apple": 37
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "foryourhealth111-pixel/Vibe-Skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 38,
+   "category_counts": {
+    "02-design-ui": 2,
+    "03-marketing": 1,
+    "05-development": 17,
+    "06-documents": 4,
+    "09-anthropic-tools": 1,
+    "12-security": 4,
+    "13-cloud-deploy": 1,
+    "16-ai-apis-media": 4,
+    "19-sales-gtm-startup": 2,
+    "28-career-education-health": 1,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "mattpocock/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 37,
+   "category_counts": {
+    "05-development": 36,
+    "26-mobile-apple": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "AgriciDaniel/claude-seo",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 36,
+   "category_counts": {
+    "02-design-ui": 1,
+    "03-marketing": 34,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "GanyuanRan/Aegis",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "12-security",
+   "legacy_entries": 35,
+   "category_counts": {
+    "05-development": 13,
+    "12-security": 22
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "hyperfx-ai/marketing-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "10-hyperfx-marketing",
+   "legacy_entries": 31,
+   "category_counts": {
+    "03-marketing": 1,
+    "10-hyperfx-marketing": 30
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "addyosmani/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 28,
+   "category_counts": {
+    "02-design-ui": 1,
+    "05-development": 20,
+    "08-context-engineering": 6,
+    "13-cloud-deploy": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "eduardo-sl/go-agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 28,
+   "category_counts": {
+    "05-development": 28
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "yusufkaraaslan/Skill_Seekers",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 28,
+   "category_counts": {
+    "06-documents": 2,
+    "08-context-engineering": 26
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "sanjay3290/ai-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 27,
+   "category_counts": {
+    "10-hyperfx-marketing": 2,
+    "15-integrations": 14,
+    "16-ai-apis-media": 7,
+    "25-data-databases": 3,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "huggingface/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 26,
+   "category_counts": {
+    "16-ai-apis-media": 26
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "kreuzberg-dev/kreuzberg",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "06-documents",
+   "legacy_entries": 26,
+   "category_counts": {
+    "06-documents": 26
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "helius-labs/core-ai",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "27-web3-crypto",
+   "legacy_entries": 24,
+   "category_counts": {
+    "27-web3-crypto": 24
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "rudrankriyam/app-store-connect-cli-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 24,
+   "category_counts": {
+    "26-mobile-apple": 24
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "BrianRWagner/ai-marketing-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 23,
+   "category_counts": {
+    "03-marketing": 23
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "expo/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 23,
+   "category_counts": {
+    "26-mobile-apple": 23
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "MiniMax-AI/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 23,
+   "category_counts": {
+    "16-ai-apis-media": 23
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Paramchoudhary/ResumeSkills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "28-career-education-health",
+   "legacy_entries": 23,
+   "category_counts": {
+    "03-marketing": 1,
+    "28-career-education-health": 22
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "hashicorp/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 21,
+   "category_counts": {
+    "13-cloud-deploy": 21
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "veniceai/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 21,
+   "category_counts": {
+    "16-ai-apis-media": 21
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "WordPress/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 20,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "15-integrations": 18,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "huifer/Claude-Ally-Health",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "28-career-education-health",
+   "legacy_entries": 19,
+   "category_counts": {
+    "28-career-education-health": 19
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Joannis/claude-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 19,
+   "category_counts": {
+    "05-development": 1,
+    "26-mobile-apple": 18
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "AIDevGTM/gtm-cofounder",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "19-sales-gtm-startup",
+   "legacy_entries": 18,
+   "category_counts": {
+    "19-sales-gtm-startup": 18
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "anthropics/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 18,
+   "category_counts": {
+    "02-design-ui": 6,
+    "05-development": 3,
+    "06-documents": 6,
+    "09-anthropic-tools": 3
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "binance/binance-skills-hub",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "27-web3-crypto",
+   "legacy_entries": 18,
+   "category_counts": {
+    "27-web3-crypto": 18
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "fcakyon/claude-codex-settings",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 18,
+   "category_counts": {
+    "05-development": 4,
+    "07-supabase": 2,
+    "08-context-engineering": 2,
+    "13-cloud-deploy": 3,
+    "14-testing-qa": 2,
+    "15-integrations": 2,
+    "16-ai-apis-media": 3
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "browserbase/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "14-testing-qa",
+   "legacy_entries": 17,
+   "category_counts": {
+    "11-product-management": 1,
+    "14-testing-qa": 16
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "fal-ai-community/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 17,
+   "category_counts": {
+    "16-ai-apis-media": 17
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "google-labs-code/stitch-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 17,
+   "category_counts": {
+    "02-design-ui": 16,
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ognjengt/founder-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "19-sales-gtm-startup",
+   "legacy_entries": 17,
+   "category_counts": {
+    "03-marketing": 1,
+    "10-hyperfx-marketing": 1,
+    "19-sales-gtm-startup": 15
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "redis/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 17,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "25-data-databases": 16
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Sendmux/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 17,
+   "category_counts": {
+    "16-ai-apis-media": 17
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "snyk/agent-scan",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 17,
+   "category_counts": {
+    "02-design-ui": 6,
+    "05-development": 2,
+    "06-documents": 6,
+    "08-context-engineering": 1,
+    "09-anthropic-tools": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "prompt-security/clawsec",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "12-security",
+   "legacy_entries": 16,
+   "category_counts": {
+    "12-security": 16
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "apollographql/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 15,
+   "category_counts": {
+    "05-development": 14,
+    "09-anthropic-tools": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "czlonkowski/n8n-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 15,
+   "category_counts": {
+    "15-integrations": 15
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "obra/superpowers",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 15,
+   "category_counts": {
+    "05-development": 15
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Orkas-AI/Orkas-VideoStudio",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 15,
+   "category_counts": {
+    "02-design-ui": 1,
+    "16-ai-apis-media": 14
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "callstackincubator/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 14,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "26-mobile-apple": 13
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "honeydew-ai/honeydew-ai-coding-agents-plugins",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 14,
+   "category_counts": {
+    "05-development": 13,
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "netlify/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 14,
+   "category_counts": {
+    "13-cloud-deploy": 14
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "raintree-technology/apple-hig-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 14,
+   "category_counts": {
+    "26-mobile-apple": 14
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ZhangHanDong/makepad-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 14,
+   "category_counts": {
+    "05-development": 14
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "brave/brave-search-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 13,
+   "category_counts": {
+    "15-integrations": 13
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "cloudflare/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 13,
+   "category_counts": {
+    "13-cloud-deploy": 13
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Leonxlnx/taste-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 13,
+   "category_counts": {
+    "02-design-ui": 13
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "qdrant/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 13,
+   "category_counts": {
+    "16-ai-apis-media": 1,
+    "25-data-databases": 12
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "transloadit/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 13,
+   "category_counts": {
+    "15-integrations": 13
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ClickHouse/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 12,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "25-data-databases": 11
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "firebase/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 12,
+   "category_counts": {
+    "13-cloud-deploy": 12
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "realkimbarrett/advertising-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 12,
+   "category_counts": {
+    "03-marketing": 12
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "remotion-dev/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "04-remotion",
+   "legacy_entries": 12,
+   "category_counts": {
+    "04-remotion": 12
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "mcollina/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 11,
+   "category_counts": {
+    "05-development": 11
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Neeeophytee/finding-unknowns-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 11,
+   "category_counts": {
+    "08-context-engineering": 11
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 11,
+   "category_counts": {
+    "02-design-ui": 8,
+    "19-sales-gtm-startup": 2,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Simon-He95/markstream-vue",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 11,
+   "category_counts": {
+    "05-development": 11
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "vercel-labs/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 11,
+   "category_counts": {
+    "05-development": 6,
+    "13-cloud-deploy": 5
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "CloudAI-X/threejs-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 10,
+   "category_counts": {
+    "02-design-ui": 10
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "duckdb/duckdb-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 10,
+   "category_counts": {
+    "08-context-engineering": 1,
+    "25-data-databases": 9
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Lum1104/Understand-Anything",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 9,
+   "category_counts": {
+    "16-ai-apis-media": 9
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "metalbear-co/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 9,
+   "category_counts": {
+    "05-development": 9
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "mongodb/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 9,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "25-data-databases": 8
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "neondatabase/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 9,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "25-data-databases": 8
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ohad6k/emulo",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 9,
+   "category_counts": {
+    "02-design-ui": 2,
+    "03-marketing": 1,
+    "08-context-engineering": 5,
+    "16-ai-apis-media": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "usestrix/strix",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "12-security",
+   "legacy_entries": 9,
+   "category_counts": {
+    "12-security": 9
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "zxkane/aws-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 9,
+   "category_counts": {
+    "13-cloud-deploy": 9
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "addyosmani/web-quality-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 8,
+   "category_counts": {
+    "02-design-ui": 6,
+    "29-ecc": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "better-auth/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 8,
+   "category_counts": {
+    "02-design-ui": 1,
+    "05-development": 1,
+    "15-integrations": 6
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ehmo/platform-design-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 8,
+   "category_counts": {
+    "02-design-ui": 8
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "figma/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 8,
+   "category_counts": {
+    "02-design-ui": 8
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "GaZmagik/iso-24495",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "01-copy-writing",
+   "legacy_entries": 8,
+   "category_counts": {
+    "01-copy-writing": 8
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "greensock/gsap-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 8,
+   "category_counts": {
+    "02-design-ui": 8
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "NoizAI/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 8,
+   "category_counts": {
+    "16-ai-apis-media": 8
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "firecrawl/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 7,
+   "category_counts": {
+    "15-integrations": 7
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "fvadicamo/dev-agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 7,
+   "category_counts": {
+    "05-development": 7
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ibelick/ui-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 7,
+   "category_counts": {
+    "02-design-ui": 7
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "replicate/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 7,
+   "category_counts": {
+    "16-ai-apis-media": 7
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "sanity-io/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 7,
+   "category_counts": {
+    "15-integrations": 7
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "stjbrown/agent-knowledge",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 7,
+   "category_counts": {
+    "05-development": 7
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "timescale/pg-aiguide",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 7,
+   "category_counts": {
+    "25-data-databases": 7
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "khendzel/skills-janitor",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 6,
+   "category_counts": {
+    "08-context-engineering": 6
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "makenotion/claude-code-notion-plugin",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 6,
+   "category_counts": {
+    "15-integrations": 6
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "makenotion/notion-cookbook",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 6,
+   "category_counts": {
+    "15-integrations": 6
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "MohamedAbdallah-14/unslop",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "01-copy-writing",
+   "legacy_entries": 6,
+   "category_counts": {
+    "01-copy-writing": 6
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "stripe/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 6,
+   "category_counts": {
+    "15-integrations": 6
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "zilliztech/mfs",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 6,
+   "category_counts": {
+    "16-ai-apis-media": 1,
+    "25-data-databases": 4,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Charlie85270/Dorothy",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 5,
+   "category_counts": {
+    "02-design-ui": 1,
+    "05-development": 1,
+    "16-ai-apis-media": 3
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "K-Dense-AI/claude-scientific-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "06-documents",
+   "legacy_entries": 5,
+   "category_counts": {
+    "06-documents": 4,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "plasma-ai/fractal",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 5,
+   "category_counts": {
+    "08-context-engineering": 5
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "rameerez/claude-code-startup-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "19-sales-gtm-startup",
+   "legacy_entries": 5,
+   "category_counts": {
+    "19-sales-gtm-startup": 5
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "resend/resend-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 5,
+   "category_counts": {
+    "15-integrations": 5
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "shouldnotappearcalm/a-share-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "18-finance-accounting",
+   "legacy_entries": 5,
+   "category_counts": {
+    "18-finance-accounting": 5
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "gokapso/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 4,
+   "category_counts": {
+    "05-development": 3,
+    "13-cloud-deploy": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "google-gemini/gemini-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 4,
+   "category_counts": {
+    "16-ai-apis-media": 4
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "obra/superpowers-lab",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 4,
+   "category_counts": {
+    "05-development": 4
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "talkstream/ru-text",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "01-copy-writing",
+   "legacy_entries": 4,
+   "category_counts": {
+    "01-copy-writing": 4
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "tinybirdco/tinybird-agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "25-data-databases",
+   "legacy_entries": 4,
+   "category_counts": {
+    "25-data-databases": 4
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "voltagent/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 4,
+   "category_counts": {
+    "08-context-engineering": 4
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "zapier/zapier-mcp",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 4,
+   "category_counts": {
+    "15-integrations": 4
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "angular/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 3,
+   "category_counts": {
+    "05-development": 2,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "auth0/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 3,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "15-integrations": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "coderabbitai/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 3,
+   "category_counts": {
+    "05-development": 3
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "composiohq/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 3,
+   "category_counts": {
+    "09-anthropic-tools": 1,
+    "15-integrations": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "cypress-io/ai-toolkit",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "14-testing-qa",
+   "legacy_entries": 3,
+   "category_counts": {
+    "14-testing-qa": 3
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "frmoretto/clarity-gate",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 3,
+   "category_counts": {
+    "08-context-engineering": 3
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "hqhq1025/skill-optimizer",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 3,
+   "category_counts": {
+    "08-context-engineering": 3
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Linked-API/linkedin-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 3,
+   "category_counts": {
+    "03-marketing": 2,
+    "10-hyperfx-marketing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "supabase/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "07-supabase",
+   "legacy_entries": 3,
+   "category_counts": {
+    "07-supabase": 2,
+    "13-cloud-deploy": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "AvdLee/SwiftUI-Agent-Skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 2,
+   "category_counts": {
+    "26-mobile-apple": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "awrshift/claude-memory-kit",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 2,
+   "category_counts": {
+    "08-context-engineering": 1,
+    "12-security": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "lackeyjb/playwright-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "14-testing-qa",
+   "legacy_entries": 2,
+   "category_counts": {
+    "14-testing-qa": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 2,
+   "category_counts": {
+    "08-context-engineering": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "mvanhorn/last30days-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 2,
+   "category_counts": {
+    "03-marketing": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "PSPDFKit-labs/nutrient-agent-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "06-documents",
+   "legacy_entries": 2,
+   "category_counts": {
+    "06-documents": 1,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ReScienceLab/opc-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 2,
+   "category_counts": {
+    "03-marketing": 1,
+    "10-hyperfx-marketing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "RoundTable02/tutor-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "28-career-education-health",
+   "legacy_entries": 2,
+   "category_counts": {
+    "28-career-education-health": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "santifer/career-ops",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "10-hyperfx-marketing",
+   "legacy_entries": 2,
+   "category_counts": {
+    "10-hyperfx-marketing": 1,
+    "28-career-education-health": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "sergebulaev/linkedin-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 2,
+   "category_counts": {
+    "03-marketing": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "squirrelscan/squirrelscan",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "12-security",
+   "legacy_entries": 2,
+   "category_counts": {
+    "12-security": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "testdino-hq/playwright-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 2,
+   "category_counts": {
+    "05-development": 1,
+    "14-testing-qa": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "typefully/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 2,
+   "category_counts": {
+    "13-cloud-deploy": 1,
+    "15-integrations": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "video-db/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 2,
+   "category_counts": {
+    "05-development": 1,
+    "25-data-databases": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "VoltAgent/voltagent",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 2,
+   "category_counts": {
+    "05-development": 1,
+    "25-data-databases": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Xquik-dev/x-twitter-scraper",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 2,
+   "category_counts": {
+    "03-marketing": 2
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "zarazhangrui/frontend-slides",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 2,
+   "category_counts": {
+    "02-design-ui": 1,
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Alisa0808/vibe-creating-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 1,
+   "category_counts": {
+    "02-design-ui": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "antonbabenko/terraform-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 1,
+   "category_counts": {
+    "13-cloud-deploy": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Aperivue/medsci-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "09-anthropic-tools",
+   "legacy_entries": 1,
+   "category_counts": {
+    "09-anthropic-tools": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "AVGVSTVS96/better-github-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "basecamp/hey-cli",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 1,
+   "category_counts": {
+    "15-integrations": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "baskduf/FableCodex",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "BehiSecc/VibeSec-Skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "12-security",
+   "legacy_entries": 1,
+   "category_counts": {
+    "12-security": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "blader/humanizer",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "01-copy-writing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "01-copy-writing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Bomx/distribb-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "03-marketing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "coinbase/agentic-wallet-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "27-web3-crypto",
+   "legacy_entries": 1,
+   "category_counts": {
+    "27-web3-crypto": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "conorluddy/ios-simulator-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 1,
+   "category_counts": {
+    "26-mobile-apple": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "CosmoBlk/email-marketing-bible",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "03-marketing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "csthink/dashmotion",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 1,
+   "category_counts": {
+    "02-design-ui": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "datadog-labs/agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 1,
+   "category_counts": {
+    "13-cloud-deploy": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "degausai/wonda",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 1,
+   "category_counts": {
+    "16-ai-apis-media": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "deusyu/translate-book",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "01-copy-writing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "01-copy-writing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Digidai/product-manager-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "11-product-management",
+   "legacy_entries": 1,
+   "category_counts": {
+    "11-product-management": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "drogers0/gh-image",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "efremidze/swift-patterns-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 1,
+   "category_counts": {
+    "26-mobile-apple": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Ericyoung-183/alpha-insights",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "18-finance-accounting",
+   "legacy_entries": 1,
+   "category_counts": {
+    "18-finance-accounting": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ethos-link/rails-conventions",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "EveryInc/charlie-cfo-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "18-finance-accounting",
+   "legacy_entries": 1,
+   "category_counts": {
+    "18-finance-accounting": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "garrytan/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "gitroomhq/postiz-agent",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 1,
+   "category_counts": {
+    "15-integrations": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "jthack/ffuf_claude_skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "12-security",
+   "legacy_entries": 1,
+   "category_counts": {
+    "12-security": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "k-kolomeitsev/data-structure-protocol",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Kevin7Qi/codex-collab",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "komal-SkyNET/claude-skill-homeassistant",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 1,
+   "category_counts": {
+    "13-cloud-deploy": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "makenotion/skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 1,
+   "category_counts": {
+    "15-integrations": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "massimodeluisa/recursive-decomposition-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "meodai/skill.color-expert",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 1,
+   "category_counts": {
+    "02-design-ui": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "more-io/claude-apple-bridges",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 1,
+   "category_counts": {
+    "26-mobile-apple": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "muthuishere/hand-drawn-diagrams",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 1,
+   "category_counts": {
+    "02-design-ui": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "NotMyself/claude-win11-speckit-update-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "officialzeroxyz/zero-plugins",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "oliver-zehentleitner/keep-the-why",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "omkamal/pypict-claude-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "14-testing-qa",
+   "legacy_entries": 1,
+   "category_counts": {
+    "14-testing-qa": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "op7418/NanoBanana-PPT-Skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 1,
+   "category_counts": {
+    "16-ai-apis-media": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "op7418/Youtube-clipper-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 1,
+   "category_counts": {
+    "16-ai-apis-media": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Optim-Agent/optim-agent",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "OthmanAdi/planning-with-files",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Panniantong/Agent-Reach",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 1,
+   "category_counts": {
+    "15-integrations": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "pattern-ai-labs/agentcall",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "PleasePrompto/notebooklm-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "ramzesenok/iOS-Accessibility-Audit-Skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 1,
+   "category_counts": {
+    "26-mobile-apple": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "rebelytics/one-skill-to-rule-them-all",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "HEADROOM",
+   "legacy_entries": 1,
+   "category_counts": {
+    "HEADROOM": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "reliefeai/browser-relay",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "14-testing-qa",
+   "legacy_entries": 1,
+   "category_counts": {
+    "14-testing-qa": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "robzolkos/skill-rails-upgrade",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Ryan-yang125/motion-lexicon",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 1,
+   "category_counts": {
+    "02-design-ui": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "sametbrr/llm-wiki-manager",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "scarletkc/vexor",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "05-development",
+   "legacy_entries": 1,
+   "category_counts": {
+    "05-development": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "SeanZoR/claude-speed-reader",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "SHADOWPR0/beautiful_prose",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "01-copy-writing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "01-copy-writing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "SHADOWPR0/security-bluebook-builder",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "12-security",
+   "legacy_entries": 1,
+   "category_counts": {
+    "12-security": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "smixs/creative-director-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 1,
+   "category_counts": {
+    "02-design-ui": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "superdesigndev/superdesign-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "02-design-ui",
+   "legacy_entries": 1,
+   "category_counts": {
+    "02-design-ui": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "taisly/agent",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "takechanman1228/claude-ecom",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "03-marketing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "thedotmack/claude-mem",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "HEADROOM",
+   "legacy_entries": 1,
+   "category_counts": {
+    "HEADROOM": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "tmchow/illo-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "16-ai-apis-media",
+   "legacy_entries": 1,
+   "category_counts": {
+    "16-ai-apis-media": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "truongduy2611/app-store-preflight-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "26-mobile-apple",
+   "legacy_entries": 1,
+   "category_counts": {
+    "26-mobile-apple": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "trycourier/courier-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 1,
+   "category_counts": {
+    "15-integrations": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Tubo2333/obsidian-knowledge-brain",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "uucz/moyu",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Vladimir-Human/humanizer-ru",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "01-copy-writing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "01-copy-writing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "VoltAgent/awesome-agent-skills",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "29-ecc",
+   "legacy_entries": 1,
+   "category_counts": {
+    "29-ecc": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "wrsmith108/linear-claude-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 1,
+   "category_counts": {
+    "15-integrations": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "wrsmith108/varlock-claude-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "15-integrations",
+   "legacy_entries": 1,
+   "category_counts": {
+    "15-integrations": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "wshuyi/x-article-publisher-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "03-marketing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "Xquik-dev/tweetclaw",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "03-marketing",
+   "legacy_entries": 1,
+   "category_counts": {
+    "03-marketing": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "zscole/model-hierarchy-skill",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "08-context-engineering",
+   "legacy_entries": 1,
+   "category_counts": {
+    "08-context-engineering": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  },
+  {
+   "source_repository": "zw008/VMware-AIops",
+   "status": "queued-source-verification",
+   "primary_category_candidate": "13-cloud-deploy",
+   "legacy_entries": 1,
+   "category_counts": {
+    "13-cloud-deploy": 1
+   },
+   "note": "Verify the exact upstream identity and provenance before migration."
+  }
+ ],
+ "completed_migrations": [
+  {
+   "source_repository": "petekp/claude-code-setup",
+   "local_path": "repositories/05-development/petekp--claude-code-setup",
+   "commit": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
+   "legacy_entries_linked": 21,
+   "legacy_entries_retired": 0,
+   "status": "complete"
+  }
+ ],
+ "legacy_to_repository_mappings": {
+  "01-copy-writing/literate-guide": "repositories/05-development/petekp--claude-code-setup",
+  "01-copy-writing/plain": "repositories/05-development/petekp--claude-code-setup",
+  "02-design-ui/typography": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/calldiff": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/circuit": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/circuit-resource-analysis": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/code-comments": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/exhaustive-systems-analysis": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/improve-codebase-architecture--petekp": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/pr-description": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/pr-screenshot-comparison": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/pr-self-review": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/react-change-review": "repositories/05-development/petekp--claude-code-setup",
+  "05-development/spike": "repositories/05-development/petekp--claude-code-setup",
+  "08-context-engineering/catch-up": "repositories/05-development/petekp--claude-code-setup",
+  "08-context-engineering/deep-research--petekp": "repositories/05-development/petekp--claude-code-setup",
+  "08-context-engineering/discernment-nudge": "repositories/05-development/petekp--claude-code-setup",
+  "08-context-engineering/frame-check": "repositories/05-development/petekp--claude-code-setup",
+  "08-context-engineering/latent-potential": "repositories/05-development/petekp--claude-code-setup",
+  "09-anthropic-tools/claude-code-audit": "repositories/05-development/petekp--claude-code-setup",
+  "09-anthropic-tools/write-goal": "repositories/05-development/petekp--claude-code-setup"
+ },
+ "upstream_checks": {
+  "AIDevGTM/gtm-cofounder": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 13,
+    "identical": 5
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "AVGVSTVS96/better-github-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "be00903d489baee08a3fd8475979f48b24620e09",
+   "verified_revision": "be00903d489baee08a3fd8475979f48b24620e09",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "AgriciDaniel/claude-seo": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 8,
+    "drift": 27,
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Alisa0808/vibe-creating-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "a599301980a66eb47ddac5c15e41081b74a2759d",
+   "verified_revision": "a599301980a66eb47ddac5c15e41081b74a2759d",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Aperivue/medsci-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "912f7e880aaa89a270aae37844c4e66be34d95c7",
+   "verified_revision": "912f7e880aaa89a270aae37844c4e66be34d95c7",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "AvdLee/SwiftUI-Agent-Skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "4c6a97d15aa5e023538c3cb06b5192f241dd451d",
+   "verified_revision": "4c6a97d15aa5e023538c3cb06b5192f241dd451d",
+   "result": {
+    "identical": 2
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "BehiSecc/VibeSec-Skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+   "verified_revision": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Bomx/distribb-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "061a055768e13cf09108932a90aeb2e957183858",
+   "verified_revision": "061a055768e13cf09108932a90aeb2e957183858",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "BrianRWagner/ai-marketing-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 22,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Charlie85270/Dorothy": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 4,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "ClickHouse/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "5aec3114379671f33b1c502a51d420a0729c8172",
+   "verified_revision": "5aec3114379671f33b1c502a51d420a0729c8172",
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 11
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "CloudAI-X/threejs-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+   "verified_revision": "b1c623076c661fc9b03dac19292e825a5d106823",
+   "result": {
+    "identical": 10
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "CosmoBlk/email-marketing-bible": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "ff526b0712dad8737caaf0bb8ccf65ac6509140c",
+   "verified_revision": "ff526b0712dad8737caaf0bb8ccf65ac6509140c",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Digidai/product-manager-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "ab7a40662c8455ece631834dee9670b3322f465b",
+   "verified_revision": "ab7a40662c8455ece631834dee9670b3322f465b",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Ericyoung-183/alpha-insights": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+   "verified_revision": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Eronred/aso-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 39,
+    "unmatched-candidate": 3
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "EveryInc/charlie-cfo-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+   "verified_revision": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "GaZmagik/iso-24495": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 8
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "GanyuanRan/Aegis": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 17,
+    "drift": 8,
+    "identical": 10
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "JasonColapietro/suede-creator-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 66,
+    "no-upstream-path": 3,
+    "unmatched-candidate": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Joannis/claude-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2,
+    "identical": 16,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "K-Dense-AI/claude-scientific-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 4,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Kevin7Qi/codex-collab": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "982f2ea32ae0f3958c0bb8367a6c5e3095957718",
+   "verified_revision": "982f2ea32ae0f3958c0bb8367a6c5e3095957718",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "LambdaTest/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "0491a3a29aa18558d2c3c64ff09367adb976c56f",
+   "verified_revision": "0491a3a29aa18558d2c3c64ff09367adb976c56f",
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 72
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Leonxlnx/taste-skill": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "ccbc15639c97057cbfcf32ecebc38ef716e4bb37",
+   "verified_revision": "ccbc15639c97057cbfcf32ecebc38ef716e4bb37",
+   "result": {
+    "identical": 13
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Linked-API/linkedin-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 2,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Lum1104/Understand-Anything": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1,
+    "identical": 8
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "MiniMax-AI/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "60aaae52bb2af8162732751a4332f62a5fef518b",
+   "verified_revision": "60aaae52bb2af8162732751a4332f62a5fef518b",
+   "result": {
+    "identical": 23
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "MohamedAbdallah-14/unslop": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 3,
+    "unmatched-candidate": 2,
+    "identical": 4
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "NVIDIA/skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 257,
+    "drift": 75,
+    "unmatched-candidate": 3,
+    "no-upstream-path": 3
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Neeeophytee/finding-unknowns-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "84404a24a12545dd250cbe90b593c472d4ef7832",
+   "verified_revision": "84404a24a12545dd250cbe90b593c472d4ef7832",
+   "result": {
+    "identical": 11
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "NeoLabHQ/context-engineering-kit": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 61,
+    "unmatched-candidate": 8
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "NoizAI/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "2a0e09d8cb9056e044c473dd53a136b81ba428e9",
+   "verified_revision": "2a0e09d8cb9056e044c473dd53a136b81ba428e9",
+   "result": {
+    "identical": 8
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "NotMyself/claude-win11-speckit-update-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Optim-Agent/optim-agent": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Orkas-AI/Orkas-VideoStudio": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2,
+    "identical": 13
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "OthmanAdi/planning-with-files": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "03128b278b0926180854703e43abd7ea2ff18c00",
+   "verified_revision": "03128b278b0926180854703e43abd7ea2ff18c00",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "PSPDFKit-labs/nutrient-agent-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Panniantong/Agent-Reach": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "da5044d26fc6adddb6554d5679c94ac22e76e428",
+   "verified_revision": "da5044d26fc6adddb6554d5679c94ac22e76e428",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Paramchoudhary/ResumeSkills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 22
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "PleasePrompto/notebooklm-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "eea5cb28ba79ab8b078a1eaa44ce9ec44f75dbf8",
+   "verified_revision": "eea5cb28ba79ab8b078a1eaa44ce9ec44f75dbf8",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "ReScienceLab/opc-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "RoundTable02/tutor-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "397110c9fefbc6bd5444277686600aec28063c05",
+   "verified_revision": "397110c9fefbc6bd5444277686600aec28063c05",
+   "result": {
+    "identical": 2
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Ryan-yang125/motion-lexicon": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "SHADOWPR0/beautiful_prose": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "bf44efb7f9706f8f563af3b6913a3784c7c52a12",
+   "verified_revision": "bf44efb7f9706f8f563af3b6913a3784c7c52a12",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "SHADOWPR0/security-bluebook-builder": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "bbf77219c997f3b9ab19ee434e81d36f7ebb1953",
+   "verified_revision": "bbf77219c997f3b9ab19ee434e81d36f7ebb1953",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "SeanZoR/claude-speed-reader": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+   "verified_revision": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Sendmux/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 14,
+    "unmatched-candidate": 4
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Simon-He95/markstream-vue": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 8,
+    "drift": 3
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Tubo2333/obsidian-knowledge-brain": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "de83d3a5a9ccd724b3e504c72b72001242c50061",
+   "verified_revision": "de83d3a5a9ccd724b3e504c72b72001242c50061",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "Vladimir-Human/humanizer-ru": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "VoltAgent/awesome-agent-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "4a755af153df462e10859336596c73415d64437a",
+   "verified_revision": "4a755af153df462e10859336596c73415d64437a",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "VoltAgent/voltagent": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de",
+   "verified_revision": "44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de",
+   "result": {
+    "identical": 2
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "WordPress/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 18,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Xquik-dev/tweetclaw": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "Xquik-dev/x-twitter-scraper": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "ZhangHanDong/makepad-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "6e16c8d5beefcb410d57e83a799014beb2957977",
+   "verified_revision": "6e16c8d5beefcb410d57e83a799014beb2957977",
+   "result": {
+    "identical": 14
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "aaron-he-zhu/aaron-marketing-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 89,
+    "drift": 33
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "addyosmani/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 15,
+    "unmatched-candidate": 12,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "addyosmani/web-quality-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 2,
+    "unmatched-candidate": 6
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "affaan-m/ECC": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 25,
+    "drift": 6,
+    "identical": 263,
+    "upstream-added-files": 3
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "alinaqi/claude-bootstrap": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 9,
+    "identical": 63
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "alirezarezvani/claude-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 46,
+    "drift": 7,
+    "identical": 9,
+    "no-upstream-path": 3
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "angular/skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 2,
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "anthropics/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f",
+   "verified_revision": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f",
+   "result": {
+    "identical": 18
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "antonbabenko/terraform-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "0a3a4a66e99001347d36a41e10260a825be3ab62",
+   "verified_revision": "0a3a4a66e99001347d36a41e10260a825be3ab62",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "apollographql/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 14,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "auth0/agent-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 2,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "awrshift/claude-memory-kit": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 1,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "aws/agent-toolkit-for-aws": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 101,
+    "unmatched-candidate": 4,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "basecamp/hey-cli": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "baskduf/FableCodex": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "better-auth/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 3,
+    "no-upstream-path": 5
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "binance/binance-skills-hub": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1,
+    "identical": 16
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "bitwize-music-studio/claude-ai-music-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "b1b11a67e8ce5dd07691b68cf736cff8e4c55c87",
+   "verified_revision": "b1b11a67e8ce5dd07691b68cf736cff8e4c55c87",
+   "result": {
+    "identical": 53
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "blader/humanizer": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
+   "verified_revision": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "brave/brave-search-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "62793e0c49ed2fc7c8f0c99a8ab8898abdf32a1d",
+   "verified_revision": "62793e0c49ed2fc7c8f0c99a8ab8898abdf32a1d",
+   "result": {
+    "identical": 13
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "browser-act/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 101,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "browserbase/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 16
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "callstackincubator/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 12,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "cloudflare/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "b8aeca6d7e2d614d7bd0e5220c8dd7645fe58a93",
+   "verified_revision": "b8aeca6d7e2d614d7bd0e5220c8dd7645fe58a93",
+   "result": {
+    "identical": 13
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "coderabbitai/skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 2,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "coinbase/agentic-wallet-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "70cb79c85f397fab3636ef07c8c99dc52a7c555f",
+   "verified_revision": "70cb79c85f397fab3636ef07c8c99dc52a7c555f",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "composiohq/skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1,
+    "identical": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "conorluddy/ios-simulator-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "coreyhaines31/marketingskills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 28,
+    "drift": 16,
+    "unmatched-candidate": 6
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "csthink/dashmotion": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
+   "verified_revision": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "cypress-io/ai-toolkit": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "005d8ae7545b3fe61cf9764557ce4d105d4af01b",
+   "verified_revision": "005d8ae7545b3fe61cf9764557ce4d105d4af01b",
+   "result": {
+    "identical": 3
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "czlonkowski/n8n-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 11,
+    "identical": 4
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "datadog-labs/agent-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "157edafdc1007e2550c5051649caaff5be32f3b8",
+   "verified_revision": "157edafdc1007e2550c5051649caaff5be32f3b8",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "deanpeters/Product-Manager-Skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 77,
+    "unmatched-candidate": 6,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "degausai/wonda": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "dembrandt/dembrandt-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 32,
+    "unmatched-candidate": 8
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "deusyu/translate-book": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "5d07e733fa9318ff9c718085191c0c2243f51383",
+   "verified_revision": "5d07e733fa9318ff9c718085191c0c2243f51383",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "diegosouzapw/OmniRoute": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "9d1a896c6058b2ade94c9078c2e54377b9aa76d3",
+   "verified_revision": "9d1a896c6058b2ade94c9078c2e54377b9aa76d3",
+   "result": {
+    "identical": 46
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "drogers0/gh-image": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "duckdb/duckdb-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 9
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "eduardo-sl/go-agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 23,
+    "drift": 5
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "efremidze/swift-patterns-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "2e9b66b0470a324cf3a6898549279e622aa7df71",
+   "verified_revision": "2e9b66b0470a324cf3a6898549279e622aa7df71",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "ehmo/platform-design-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "dc2be825d8b439caea78e9eaa8fb3ac23b0ff3e9",
+   "verified_revision": "dc2be825d8b439caea78e9eaa8fb3ac23b0ff3e9",
+   "result": {
+    "no-upstream-path": 8
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "ethos-link/rails-conventions": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "4a3f59424ca3ab3380d494557ea9de998701d047",
+   "verified_revision": "4a3f59424ca3ab3380d494557ea9de998701d047",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "expo/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "d0075ffa09928f1edb3e7ac4f5af07586d4b344d",
+   "verified_revision": "d0075ffa09928f1edb3e7ac4f5af07586d4b344d",
+   "result": {
+    "identical": 22,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "fal-ai-community/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "9ca850412943251fc9a466c4c29fdaf7a303a3d8",
+   "verified_revision": "9ca850412943251fc9a466c4c29fdaf7a303a3d8",
+   "result": {
+    "identical": 17
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "fcakyon/claude-codex-settings": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 8,
+    "drift": 4,
+    "unmatched-candidate": 6
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "figma/skills": {
+   "last_successful_check": null,
+   "last_attempt": "2026-09-07",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unreachable": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "firebase/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "a0b4e143f40c1ebe05fe5f9a4787fecd4da8f478",
+   "verified_revision": "a0b4e143f40c1ebe05fe5f9a4787fecd4da8f478",
+   "result": {
+    "identical": 12
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "firecrawl/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 5,
+    "unmatched-candidate": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "flutter/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "no-upstream-path": 9,
+    "identical": 28
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "foryourhealth111-pixel/Vibe-Skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 14,
+    "unmatched-candidate": 13,
+    "identical": 10,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "frmoretto/clarity-gate": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+   "verified_revision": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+   "result": {
+    "identical": 3
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "fvadicamo/dev-agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 5,
+    "unmatched-candidate": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "garrytan/skills": {
+   "last_successful_check": null,
+   "last_attempt": "2026-09-07",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unreachable": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "getsentry/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 7,
+    "identical": 26,
+    "no-upstream-path": 7
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "gitroomhq/postiz-agent": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "6d3be9c0aec768075e91b4a29b04fb624d72d942",
+   "verified_revision": "6d3be9c0aec768075e91b4a29b04fb624d72d942",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "gokapso/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "d0cdd934dcc1bc69e53dc3d042c08a1150abebc4",
+   "verified_revision": "d0cdd934dcc1bc69e53dc3d042c08a1150abebc4",
+   "result": {
+    "identical": 3,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "google-gemini/gemini-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2,
+    "no-upstream-path": 1,
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "google-labs-code/stitch-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 15,
+    "no-upstream-path": 1,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "google/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 4,
+    "identical": 92,
+    "unmatched-candidate": 12,
+    "drift": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "googleworkspace/skills": {
+   "last_successful_check": null,
+   "last_attempt": "2026-09-07",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unreachable": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "gooseworks-ai/goose-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 18,
+    "identical": 245,
+    "drift": 5,
+    "upstream-added-files": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "greensock/gsap-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+   "verified_revision": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+   "result": {
+    "identical": 8
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "hashicorp/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 19,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "helius-labs/core-ai": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 24
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "honeydew-ai/honeydew-ai-coding-agents-plugins": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 6,
+    "unmatched-candidate": 5,
+    "drift": 3
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "hqhq1025/skill-optimizer": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
+   "verified_revision": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
+   "result": {
+    "identical": 3
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "huggingface/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2,
+    "identical": 24
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "huifer/Claude-Ally-Health": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 15,
+    "unmatched-candidate": 4
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "hyperfx-ai/marketing-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 28,
+    "drift": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "ibelick/ui-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "9f140de767e6e2d4adc3970eb68d24b3ec896f99",
+   "verified_revision": "9f140de767e6e2d4adc3970eb68d24b3ec896f99",
+   "result": {
+    "identical": 7
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "indranilbanerjee/digital-marketing-pro": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 158,
+    "unmatched-candidate": 19,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "infrasity-labs/dev-gtm-claude-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 39,
+    "unmatched-candidate": 43,
+    "identical": 275,
+    "upstream-added-files": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "jthack/ffuf_claude_skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
+   "verified_revision": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "k-kolomeitsev/data-structure-protocol": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "khendzel/skills-janitor": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "4a4c0134ebb6ad78e24bad8fe8295011499ff9d0",
+   "verified_revision": "4a4c0134ebb6ad78e24bad8fe8295011499ff9d0",
+   "result": {
+    "identical": 6
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "komal-SkyNET/claude-skill-homeassistant": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+   "verified_revision": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "kreuzberg-dev/kreuzberg": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 21,
+    "identical": 4,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "lackeyjb/playwright-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "makenotion/claude-code-notion-plugin": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 4,
+    "drift": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "makenotion/notion-cookbook": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 4,
+    "drift": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "makenotion/skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "423af2bf546cd0354e5cc871017251945d9ad14f",
+   "verified_revision": "423af2bf546cd0354e5cc871017251945d9ad14f",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "massimodeluisa/recursive-decomposition-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "mattpocock/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 31,
+    "unmatched-candidate": 3,
+    "identical": 3
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "mcollina/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "856efd268ae85482d882f3d0bed869fd020b5c06",
+   "verified_revision": "856efd268ae85482d882f3d0bed869fd020b5c06",
+   "result": {
+    "identical": 11
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "meodai/skill.color-expert": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "6514810aaab15cdd0e4202af52a6afed27ed314d",
+   "verified_revision": "6514810aaab15cdd0e4202af52a6afed27ed314d",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "metalbear-co/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 5,
+    "identical": 3,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "microsoft/skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 3,
+    "unmatched-candidate": 1,
+    "identical": 184
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "mongodb/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "8ada610346e678b8dc9f866e8166092840c6eb2f",
+   "verified_revision": "8ada610346e678b8dc9f866e8166092840c6eb2f",
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 8
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "more-io/claude-apple-bridges": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "8e9890fdbe913de70c26342c9ceb2c510ee6e9e2",
+   "verified_revision": "8e9890fdbe913de70c26342c9ceb2c510ee6e9e2",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "mukul975/Anthropic-Cybersecurity-Skills": {
+   "last_successful_check": "2026-09-09",
+   "last_attempt": "2026-09-09",
+   "checked_revision": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+   "verified_revision": null,
+   "result": {
+    "identical": 784,
+    "drift": 33
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "muratcankoylan/Agent-Skills-for-Context-Engineering": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 1,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "muthuishere/hand-drawn-diagrams": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "b1a87cf580e9559469af1baead05bfde29d7c1c0",
+   "verified_revision": "b1a87cf580e9559469af1baead05bfde29d7c1c0",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "mvanhorn/last30days-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "neondatabase/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 2,
+    "unmatched-candidate": 7
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "netlify/skills": {
+   "last_successful_check": null,
+   "last_attempt": "2026-09-07",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unreachable": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "nextlevelbuilder/ui-ux-pro-max-skill": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 10,
+    "unmatched-candidate": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "nowork-studio/NotFair": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 12,
+    "identical": 35,
+    "drift": 9
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "obra/superpowers": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 14,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "obra/superpowers-lab": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "51111f74f24058117752d9aa917cb19859f8ec86",
+   "verified_revision": "51111f74f24058117752d9aa917cb19859f8ec86",
+   "result": {
+    "identical": 4
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "officialzeroxyz/zero-plugins": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "ognjengt/founder-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2,
+    "identical": 15
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "ohad6k/emulo": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 3,
+    "identical": 6
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "oliver-zehentleitner/keep-the-why": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "omkamal/pypict-claude-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "fbda212bca79dfa7611be12527b102c89cc8faeb",
+   "verified_revision": "fbda212bca79dfa7611be12527b102c89cc8faeb",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "op7418/NanoBanana-PPT-Skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+   "verified_revision": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "op7418/Youtube-clipper-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+   "verified_revision": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "openaccountants/openaccountants": {
+   "last_successful_check": "2026-09-11",
+   "last_attempt": "2026-09-11",
+   "checked_revision": "ef343eb581112bca85d7f2c7a5451a0eca932adc",
+   "verified_revision": null,
+   "result": {
+    "identical": 780,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "openai/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 6,
+    "drift": 2,
+    "identical": 44,
+    "upstream-added-files": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "pattern-ai-labs/agentcall": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "7b0841e38024516abf75c17dee48f5b378c8de67",
+   "verified_revision": "7b0841e38024516abf75c17dee48f5b378c8de67",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "petekp/claude-code-setup": {
+   "last_successful_check": "2026-09-09",
+   "last_attempt": "2026-09-09",
+   "checked_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
+   "verified_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
+   "result": "current"
+  },
+  "phuryn/pm-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 68
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "plasma-ai/fractal": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 3,
+    "identical": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "prompt-security/clawsec": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 14,
+    "drift": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "qdrant/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 12
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "raintree-technology/apple-hig-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "3ec08f5a6f9d2fa22a64950274ba6baee2a38838",
+   "verified_revision": "3ec08f5a6f9d2fa22a64950274ba6baee2a38838",
+   "result": {
+    "identical": 14
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "rameerez/claude-code-startup-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "410f81f83e4ac309032eab3d3265353f97ea665f",
+   "verified_revision": "410f81f83e4ac309032eab3d3265353f97ea665f",
+   "result": {
+    "identical": 5
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "ramzesenok/iOS-Accessibility-Audit-Skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
+   "verified_revision": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "realkimbarrett/advertising-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "45f4a4a1dabe24113193369b55b929b1de4ff04a",
+   "verified_revision": "45f4a4a1dabe24113193369b55b929b1de4ff04a",
+   "result": {
+    "identical": 12
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "rebelytics/one-skill-to-rule-them-all": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "510caad26c907793e48306262af216ff9f71c9f7",
+   "verified_revision": "510caad26c907793e48306262af216ff9f71c9f7",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "redis/agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 8,
+    "drift": 8
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "reliefeai/browser-relay": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "c9f394d2ea5f0665d01d889f2dd15291590c281c",
+   "verified_revision": "c9f394d2ea5f0665d01d889f2dd15291590c281c",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "remotion-dev/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 12
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "replicate/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "2f36e415965ae63baa1c9f6635888092bcd771d3",
+   "verified_revision": "2f36e415965ae63baa1c9f6635888092bcd771d3",
+   "result": {
+    "identical": 7
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "resend/resend-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "865a368601c4c88847f0d414f2656b2546cae461",
+   "verified_revision": "865a368601c4c88847f0d414f2656b2546cae461",
+   "result": {
+    "identical": 5
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "robzolkos/skill-rails-upgrade": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
+   "verified_revision": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "rudrankriyam/app-store-connect-cli-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 13,
+    "unmatched-candidate": 9,
+    "drift": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "ruvnet/ruflo": {
+   "last_successful_check": "2026-09-11",
+   "last_attempt": "2026-09-11",
+   "checked_revision": "df87b0db338a8632f14e243169208be1d7faa164",
+   "verified_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
+   "result": "blocked-redistribution-clearance",
+   "record_source": "28-career-education-health/Vibe-Skills/THIRD_PARTY_LICENSES.md"
+  },
+  "sametbrr/llm-wiki-manager": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "cc0cc33d23882fd8555af290c2a003d1495a893a",
+   "verified_revision": "cc0cc33d23882fd8555af290c2a003d1495a893a",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "sanity-io/skills": {
+   "last_successful_check": null,
+   "last_attempt": "2026-09-07",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unreachable": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "sanjay3290/ai-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 3,
+    "identical": 24
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "santifer/career-ops": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "scarletkc/vexor": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "sergebulaev/linkedin-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "shouldnotappearcalm/a-share-skill": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "84946232ef36d2f1e04a0089ad64380c2de46698",
+   "verified_revision": "84946232ef36d2f1e04a0089ad64380c2de46698",
+   "result": {
+    "identical": 5
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "smixs/creative-director-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "ac06eb255371da35d1db0a146dbfcca8c8857543",
+   "verified_revision": "ac06eb255371da35d1db0a146dbfcca8c8857543",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "snyk/agent-scan": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 6,
+    "drift": 10,
+    "identical": 15
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "squirrelscan/squirrelscan": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "95928ed7506baf90b1d259f792b9cbf5116c24d2",
+   "verified_revision": "95928ed7506baf90b1d259f792b9cbf5116c24d2",
+   "result": {
+    "identical": 2
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "stjbrown/agent-knowledge": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
+   "verified_revision": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
+   "result": {
+    "identical": 7
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "stripe/skills": {
+   "last_successful_check": null,
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unreachable": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "supabase/agent-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+   "verified_revision": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+   "result": {
+    "identical": 2,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "superdesigndev/superdesign-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+   "verified_revision": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "taisly/agent": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "05a46b89a9c35f15c88fbadc8a2898404525fec0",
+   "verified_revision": "05a46b89a9c35f15c88fbadc8a2898404525fec0",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "takechanman1228/claude-ecom": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "talkstream/ru-text": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 1,
+    "unmatched-candidate": 2,
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "testdino-hq/playwright-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "thedotmack/claude-mem": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "timescale/pg-aiguide": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "acf42427fed507b7bfe98c4039fbacf0c4a69b65",
+   "verified_revision": "acf42427fed507b7bfe98c4039fbacf0c4a69b65",
+   "result": {
+    "identical": 7
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "tinybirdco/tinybird-agent-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "19a3ec18b2270fb82cc3489eabf122da0706e6a0",
+   "verified_revision": "19a3ec18b2270fb82cc3489eabf122da0706e6a0",
+   "result": {
+    "identical": 4
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "tmchow/illo-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "6623c82d40c6b3e0a4d44333288e4b436b8047c2",
+   "verified_revision": "6623c82d40c6b3e0a4d44333288e4b436b8047c2",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "tobihagemann/turbo": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 22,
+    "unmatched-candidate": 35,
+    "drift": 8,
+    "no-upstream-path": 9
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "trailofbits/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 48,
+    "unmatched-candidate": 23,
+    "identical": 7
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "transloadit/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "identical": 12,
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "truongduy2611/app-store-preflight-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "e52e007036fb6edea104b6b49eb01f69c155ad51",
+   "verified_revision": "e52e007036fb6edea104b6b49eb01f69c155ad51",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "trycourier/courier-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "typefully/agent-skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "051a266090f8f655801b835bd359abc073e7dec3",
+   "verified_revision": "051a266090f8f655801b835bd359abc073e7dec3",
+   "result": {
+    "no-upstream-path": 1,
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "usestrix/strix": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "ff5c8cc8e46d8e60c2bc2439f7bcb07c05ca3db2",
+   "verified_revision": "ff5c8cc8e46d8e60c2bc2439f7bcb07c05ca3db2",
+   "result": {
+    "identical": 9
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "uucz/moyu": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "veniceai/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "be69bebc470353da07d7284ec1d283d5a2f0a168",
+   "verified_revision": "be69bebc470353da07d7284ec1d283d5a2f0a168",
+   "result": {
+    "identical": 21
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "vercel-labs/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a",
+   "verified_revision": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a",
+   "result": {
+    "no-upstream-path": 10,
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "video-db/skills": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1,
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "voltagent/skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": "066b137c520a8739a899e160516d1f4044add7f3",
+   "verified_revision": "066b137c520a8739a899e160516d1f4044add7f3",
+   "result": {
+    "identical": 4
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "wanshuiyin/Auto-claude-code-research-in-sleep": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "wrsmith108/linear-claude-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "d61cd9ad05f1863a421d891d9319ec2405904488",
+   "verified_revision": "d61cd9ad05f1863a421d891d9319ec2405904488",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "wrsmith108/varlock-claude-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "348a435345b7ddafb4d1002d41d9e2ef3f5b6992",
+   "verified_revision": "348a435345b7ddafb4d1002d41d9e2ef3f5b6992",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "wshobson/agents": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 6,
+    "identical": 166,
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "wshuyi/x-article-publisher-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
+   "verified_revision": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
+   "result": {
+    "identical": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "yusufkaraaslan/Skill_Seekers": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2,
+    "identical": 26
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "zapier/zapier-mcp": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "5360f152b96735712e5f925ad728732cb86888df",
+   "verified_revision": "5360f152b96735712e5f925ad728732cb86888df",
+   "result": {
+    "identical": 4
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "zarazhangrui/frontend-slides": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "zilliztech/mfs": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "unmatched-candidate": 2,
+    "identical": 4
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "zscole/model-hierarchy-skill": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": "9095f8303847a60de9f564659e561f3f6fd0cdc4",
+   "verified_revision": "9095f8303847a60de9f564659e561f3f6fd0cdc4",
+   "result": {
+    "no-upstream-path": 1
+   },
+   "record_source": "UPDATE_CHECKS.json"
+  },
+  "zw008/VMware-AIops": {
+   "last_successful_check": "2026-09-04",
+   "last_attempt": "2026-09-04",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "drift": 1
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  },
+  "zxkane/aws-skills": {
+   "last_successful_check": "2026-09-05",
+   "last_attempt": "2026-09-05",
+   "checked_revision": null,
+   "verified_revision": null,
+   "result": {
+    "no-upstream-path": 3,
+    "unmatched-candidate": 1,
+    "identical": 5
+   },
+   "record_source": "UPDATE_CHECKS.json",
+   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+  }
+ },
+ "unresolved_issues": [
+  {
+   "id": "ruflo-size-review",
+   "source_record": "28-career-education-health/Vibe-Skills/THIRD_PARTY_LICENSES.md",
+   "recorded_identity": "ruvnet/claude-flow",
+   "verified_identity": "ruvnet/ruflo",
+   "source_url": "https://github.com/ruvnet/ruflo",
+   "checked_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
+   "reviewed_revision": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d",
+   "candidate_revision": "df87b0db338a8632f14e243169208be1d7faa164",
+   "candidate_tree": "627cb1a8bab8ee6cd19124eb07dcfa335845addb",
+   "last_successful_check": "2026-09-11",
+   "last_attempt": "2026-09-11",
+   "status": "blocked-redistribution-clearance",
+   "note": "The recorded identity redirects to canonical ruvnet/ruflo. Commit 277c7bc03 remains the last fully reviewed revision, but whole-snapshot redistribution is not cleared: bundled Inter fonts lack tracked OFL attribution, a RuVocal WASM artifact lacks component-specific source/license evidence, and several large media assets lack provenance records. Static review found no clear malware or genuine credentials; hooks, workflows, agent configs, installers, services, and executables are unsafe to enable and must remain archive-only. Candidate df87b0db338a8632f14e243169208be1d7faa164 was inspected against 9576a1032: 8 commits change 22 files (+789/-47), harden daemon consent and memory preservation, and expand the network-facing federation gateway. Its tree has 5,686 blobs / 85,638,249 bytes, no submodules, and no tracked .gitattributes. It also adds plugins/ruflo-x-gateway/node_modules as a symlink to an upstream developer's private /private/tmp path, so the candidate is not self-contained even apart from the existing font, WASM, and media provenance blockers. Preserve the legacy source record and do not import a partial snapshot."
+  },
+  {
+   "id": "migration-review-blocked:mukul975/Anthropic-Cybersecurity-Skills",
+   "source_repository": "mukul975/Anthropic-Cybersecurity-Skills",
+   "source_url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+   "checked_revision": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+   "tree": "d110e8cfb2bc042ffc8e5bf06ce160844a167257",
+   "last_successful_check": "2026-09-09",
+   "last_attempt": "2026-09-10",
+   "status": "blocked-coderabbit-authentication",
+   "note": "The exact recorded identity and Apache-2.0 license were verified, and upstream HEAD remained at the recorded commit on 2026-09-10. The complete tree has 4,532 tracked files / 32,256,136 bytes, no submodules, and no Git LFS pointers. CodeRabbit CLI 0.7.6 was installed successfully but auth status remained not_authenticated, so the required complete-snapshot security review could not run. No manual review was substituted, no files were imported, and all 817 legacy entries remain preserved."
+  },
+  {
+   "id": "migration-license-review:openaccountants/openaccountants",
+   "source_repository": "openaccountants/openaccountants",
+   "source_url": "https://github.com/openaccountants/openaccountants",
+   "checked_revision": "ef343eb581112bca85d7f2c7a5451a0eca932adc",
+   "tree": "9a1db5268dc865062fc0c2aded3cc85280eac1b9",
+   "last_successful_check": "2026-09-11",
+   "last_attempt": "2026-09-11",
+   "status": "blocked-custom-license-and-size-review",
+   "note": "The exact source is active and its complete recursive tree is not truncated: 8,950 blobs / 228,048,084 bytes, no submodules, and no tracked .gitattributes. Software is AGPL-3.0-only, while guide content uses LicenseRef-OA-Guide-License-1.0. That custom license permits non-commercial redistribution with attribution and reviewer-provenance conditions, but reserves commercial bulk redistribution; confirm that this archive's distribution policy is compatible before copying the complete guide corpus. The sole legacy mismatch, ga-income-tax, removes reviewed_by metadata upstream while retaining a prose reviewer claim. No snapshot or standalone update was imported, and all 781 legacy entries remain preserved."
+  },
+  {
+   "id": "upstream-unreachable:figma/skills",
+   "source_repository": "figma/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/figma/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:garrytan/skills",
+   "source_repository": "garrytan/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/garrytan/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:googleworkspace/skills",
+   "source_repository": "googleworkspace/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/googleworkspace/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:netlify/skills",
+   "source_repository": "netlify/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/netlify/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:sanity-io/skills",
+   "source_repository": "sanity-io/skills",
+   "last_attempt": "2026-09-07",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/sanity-io/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  },
+  {
+   "id": "upstream-unreachable:stripe/skills",
+   "source_repository": "stripe/skills",
+   "last_attempt": "2026-09-05",
+   "status": "source-unreachable",
+   "note": "Upstream could not be read (gh api repos/stripe/skills failed: gh: Not Found (HTTP 404)). Renamed, deleted, or made private — needs a manual look before the local copies are treated as orphaned."
+  }
+ ],
+ "next_work_items": [
+  "Resolve ruvnet/ruflo bundled font, WASM, media, and dangling node_modules symlink provenance before migration; candidate df87b0db338a8632f14e243169208be1d7faa164 remains blocked.",
+  "Authenticate CodeRabbit and rerun the complete-snapshot security review for mukul975/Anthropic-Cybersecurity-Skills at 54a798831d2266a3ca61ce68a7acb80b81160d57 before migration.",
+  "Confirm that non-commercial archive redistribution is compatible with LicenseRef-OA-Guide-License-1.0 before reviewing and migrating openaccountants/openaccountants at ef343eb581112bca85d7f2c7a5451a0eca932adc.",
+  "After the blocked reviews are resolved, verify the next highest-impact queued source identity and license.",
+  "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
+ ]
+}
