@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-11",
+ "last_material_change": "2026-09-12",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -14,7 +14,7 @@
   "legacy_entries_mapped": 21,
   "legacy_entries_total": 6162,
   "upstream_sources_with_checks": 232,
-  "upstream_sources_with_verified_revisions": 102
+  "upstream_sources_with_verified_revisions": 103
  },
  "migration_queue": [
   {
@@ -39,7 +39,8 @@
   },
   {
    "source_repository": "infrasity-labs/dev-gtm-claude-skills",
-   "status": "queued-source-verification",
+   "verified_identity": "Infrasity-Labs/dev-gtm-claude-skills",
+   "status": "identity-license-verified-review-deferred",
    "primary_category_candidate": "19-sales-gtm-startup",
    "legacy_entries": 355,
    "category_counts": {
@@ -55,7 +56,7 @@
     "28-career-education-health": 21,
     "29-ecc": 1
    },
-   "note": "Verify the exact upstream identity and provenance before migration."
+   "note": "The recorded source resolves to canonical Infrasity-Labs/dev-gtm-claude-skills. Commit 02cfefb3a213041de8b80bc659ebc5f17b5e746a, tree 2637500bc18de4a8481432e09d88ac86c81abe35, root MIT license, 2,572 tracked files / 100,952,948 bytes, absence of submodules, and absence of Git LFS pointers were verified on 2026-09-12. Migration is deferred because the tree includes 54 bundled third-party font files without tracked component license or attribution files, and the required complete-snapshot CodeRabbit review is blocked by unauthenticated reviewer tooling. Preserve all legacy entries."
   },
   {
    "source_repository": "NVIDIA/skills",
@@ -4010,9 +4011,9 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "infrasity-labs/dev-gtm-claude-skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-12",
+   "last_attempt": "2026-09-12",
+   "checked_revision": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
    "verified_revision": null,
    "result": {
     "drift": 39,
@@ -4020,8 +4021,8 @@
     "identical": 275,
     "upstream-added-files": 1
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "direct repository review",
+   "note": "The candidate revision and complete tree shape are verified, but no archived snapshot is approved. The previous legacy comparison remains 275 identical, 39 drifted, 43 unmatched candidates, and one upstream-added file. Complete review and bundled-font redistribution provenance are unresolved."
   },
   "jthack/ffuf_claude_skill": {
    "last_successful_check": "2026-09-04",
@@ -5174,6 +5175,18 @@
    "note": "The exact source is active and its complete recursive tree is not truncated: 8,950 blobs / 228,048,084 bytes, no submodules, and no tracked .gitattributes. Software is AGPL-3.0-only, while guide content uses LicenseRef-OA-Guide-License-1.0. That custom license permits non-commercial redistribution with attribution and reviewer-provenance conditions, but reserves commercial bulk redistribution; confirm that this archive's distribution policy is compatible before copying the complete guide corpus. The sole legacy mismatch, ga-income-tax, removes reviewed_by metadata upstream while retaining a prose reviewer claim. No snapshot or standalone update was imported, and all 781 legacy entries remain preserved."
   },
   {
+   "id": "migration-license-review:infrasity-labs/dev-gtm-claude-skills",
+   "source_repository": "infrasity-labs/dev-gtm-claude-skills",
+   "verified_identity": "Infrasity-Labs/dev-gtm-claude-skills",
+   "source_url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills",
+   "checked_revision": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
+   "tree": "2637500bc18de4a8481432e09d88ac86c81abe35",
+   "last_successful_check": "2026-09-12",
+   "last_attempt": "2026-09-12",
+   "status": "blocked-font-provenance-and-review-tooling",
+   "note": "The exact canonical identity, root MIT license, and complete 2,572-file / 100,952,948-byte tree were inspected without executing imported code. There are no submodules, symlinks, Git LFS pointers, or tracked .gitattributes. The tree bundles 54 TTF files from multiple font families under .claude/skills/ui-styling/canvas-fonts, but contains no component license, attribution, COPYING, or NOTICE files beyond the repository-level MIT license; establish the font sources and required redistribution notices before importing. Static credential-pattern checks found only documented placeholders, but CodeRabbit 0.7.6 reported not_authenticated, so no complete security-review result was produced. Preserve all 355 legacy mappings and do not import a partial snapshot."
+  },
+  {
    "id": "upstream-unreachable:figma/skills",
    "source_repository": "figma/skills",
    "last_attempt": "2026-09-07",
@@ -5220,6 +5233,7 @@
   "Resolve ruvnet/ruflo bundled font, WASM, media, and dangling node_modules symlink provenance before migration; candidate df87b0db338a8632f14e243169208be1d7faa164 remains blocked.",
   "Authenticate CodeRabbit and rerun the complete-snapshot security review for mukul975/Anthropic-Cybersecurity-Skills at 54a798831d2266a3ca61ce68a7acb80b81160d57 before migration.",
   "Confirm that non-commercial archive redistribution is compatible with LicenseRef-OA-Guide-License-1.0 before reviewing and migrating openaccountants/openaccountants at ef343eb581112bca85d7f2c7a5451a0eca932adc.",
+  "Establish bundled-font provenance and restore CodeRabbit review capability before migrating Infrasity-Labs/dev-gtm-claude-skills at 02cfefb3a213041de8b80bc659ebc5f17b5e746a.",
   "After the blocked reviews are resolved, verify the next highest-impact queued source identity and license.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]
