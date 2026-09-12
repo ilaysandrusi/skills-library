@@ -82,9 +82,11 @@ def main():
             key=lambda category: (-category_counts[category], category),
         )[0]
         old = old_queue.get(repo, {})
-        queue.append(
+        entry = {"source_repository": repo}
+        if old.get("verified_identity"):
+            entry["verified_identity"] = old["verified_identity"]
+        entry.update(
             {
-                "source_repository": repo,
                 "status": old.get("status", "queued-source-verification"),
                 "primary_category_candidate": primary,
                 "legacy_entries": len(legacy_paths),
@@ -97,6 +99,7 @@ def main():
                 ),
             }
         )
+        queue.append(entry)
     queue.sort(key=lambda item: (-item["legacy_entries"], item["source_repository"].lower()))
 
     mappings = {}
@@ -151,6 +154,17 @@ def main():
             "verified_revision": metadata["commit"],
             "result": catalog_check.get("status", metadata["snapshot"]["status"]),
         }
+
+    for repo, previous_check in previous.get("upstream_checks", {}).items():
+        if repo in archived or previous_check.get("record_source") == "UPDATE_CHECKS.json":
+            continue
+        generated_check = upstream_checks.get(repo)
+        if (
+            generated_check is None
+            or (previous_check.get("last_attempt") or "")
+            >= (generated_check.get("last_attempt") or "")
+        ):
+            upstream_checks[repo] = previous_check
 
     unresolved = previous.get(
         "unresolved_issues",

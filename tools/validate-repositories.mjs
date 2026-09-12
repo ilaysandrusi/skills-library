@@ -243,6 +243,16 @@ if (!fs.existsSync(statePath)) {
   if (state.progress?.queued_source_repositories !== queued.size) {
     errors.push("maintenance progress queued_source_repositories is stale");
   }
+  const upstreamChecks = Object.values(state.upstream_checks ?? {});
+  if (state.progress?.upstream_sources_with_checks !== upstreamChecks.length) {
+    errors.push("maintenance progress upstream_sources_with_checks is stale");
+  }
+  const checksWithRevisions = upstreamChecks.filter(
+    (check) => typeof check.checked_revision === "string",
+  ).length;
+  if (state.progress?.upstream_sources_with_verified_revisions !== checksWithRevisions) {
+    errors.push("maintenance progress upstream_sources_with_verified_revisions is stale");
+  }
 }
 
 const report = {
