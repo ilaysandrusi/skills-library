@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-12",
+ "last_material_change": "2026-09-13",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -14,7 +14,7 @@
   "legacy_entries_mapped": 21,
   "legacy_entries_total": 6162,
   "upstream_sources_with_checks": 232,
-  "upstream_sources_with_verified_revisions": 103
+  "upstream_sources_with_verified_revisions": 104
  },
  "migration_queue": [
   {
@@ -60,13 +60,13 @@
   },
   {
    "source_repository": "NVIDIA/skills",
-   "status": "queued-source-verification",
+   "status": "identity-license-verified-review-deferred",
    "primary_category_candidate": "20-nvidia-cuda",
    "legacy_entries": 338,
    "category_counts": {
     "20-nvidia-cuda": 338
    },
-   "note": "Verify the exact upstream identity and provenance before migration."
+   "note": "The exact first-party identity, candidate commit 27fa3e16d95f32b55843da712f163754395bd05f, tree e519333dedbe5ab4c6021a2470c823aec6c4c9fc, and dual license scope (Apache-2.0 for code and CC-BY-4.0 for documentation/skills) were verified on 2026-09-13. The complete tree has 4,686 tracked files / 45,099,987 bytes, no submodules, symlinks, or Git LFS pointers, and one blob over 1 MB. Compared with the 2026-09-04 candidate c3168ca798561c5aef7f69e6f99c4a874485ca24, 17 commits change 90 files (+4,214/-5,552), including seven retired healthcare skills and new CUDA-Q, healthcare RL, and NeMo Retriever content. The legacy comparison has 227 identical, 85 drifted, 16 unmatched-candidate, and 10 no-upstream-path entries. Migration is deferred pending complete review of the 4,686-file snapshot; CodeRabbit is unavailable in this environment. Preserve all 338 legacy entries."
   },
   {
    "source_repository": "affaan-m/ECC",
@@ -2861,18 +2861,17 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "NVIDIA/skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-13",
+   "last_attempt": "2026-09-13",
+   "checked_revision": "27fa3e16d95f32b55843da712f163754395bd05f",
    "verified_revision": null,
    "result": {
-    "identical": 257,
-    "drift": 75,
-    "unmatched-candidate": 3,
-    "no-upstream-path": 3
+    "identical": 227,
+    "drift": 85,
+    "unmatched-candidate": 16,
+    "no-upstream-path": 10
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "Neeeophytee/finding-unknowns-skills": {
    "last_successful_check": "2026-09-05",
@@ -5187,6 +5186,17 @@
    "note": "The exact canonical identity, root MIT license, and complete 2,572-file / 100,952,948-byte tree were inspected without executing imported code. There are no submodules, symlinks, Git LFS pointers, or tracked .gitattributes. The tree bundles 54 TTF files from multiple font families under .claude/skills/ui-styling/canvas-fonts, but contains no component license, attribution, COPYING, or NOTICE files beyond the repository-level MIT license; establish the font sources and required redistribution notices before importing. Static credential-pattern checks found only documented placeholders, but CodeRabbit 0.7.6 reported not_authenticated, so no complete security-review result was produced. Preserve all 355 legacy mappings and do not import a partial snapshot."
   },
   {
+   "id": "migration-review-blocked:NVIDIA/skills",
+   "source_repository": "NVIDIA/skills",
+   "source_url": "https://github.com/NVIDIA/skills",
+   "checked_revision": "27fa3e16d95f32b55843da712f163754395bd05f",
+   "tree": "e519333dedbe5ab4c6021a2470c823aec6c4c9fc",
+   "last_successful_check": "2026-09-13",
+   "last_attempt": "2026-09-13",
+   "status": "blocked-complete-review-tooling",
+   "note": "The exact first-party source and dual Apache-2.0 / CC-BY-4.0 licensing scope were verified. Its complete tree has 4,686 tracked files / 45,099,987 bytes, 118 executable files, 403 automation-sensitive paths, no submodules, symlinks, or Git LFS pointers, and no credential-signature or prompt-injection matches in targeted static scans. The only precise curl-pipe matches were a warning against that antipattern plus localhost JSON formatting examples. The reviewed diff from candidate c3168ca798561c5aef7f69e6f99c4a874485ca24 spans 17 commits and 90 files (+4,214/-5,552); executable Python changes tighten generated-catalog removal checks and add tests. The legacy comparison now reports 227 identical, 85 drifted, 16 unmatched-candidate, and 10 no-upstream-path entries. CodeRabbit is not present in this environment, so a complete snapshot review was not produced. Do not import a partial tree or retire any of the 338 legacy entries."
+  },
+  {
    "id": "upstream-unreachable:figma/skills",
    "source_repository": "figma/skills",
    "last_attempt": "2026-09-07",
@@ -5234,6 +5244,7 @@
   "Authenticate CodeRabbit and rerun the complete-snapshot security review for mukul975/Anthropic-Cybersecurity-Skills at 54a798831d2266a3ca61ce68a7acb80b81160d57 before migration.",
   "Confirm that non-commercial archive redistribution is compatible with LicenseRef-OA-Guide-License-1.0 before reviewing and migrating openaccountants/openaccountants at ef343eb581112bca85d7f2c7a5451a0eca932adc.",
   "Establish bundled-font provenance and restore CodeRabbit review capability before migrating Infrasity-Labs/dev-gtm-claude-skills at 02cfefb3a213041de8b80bc659ebc5f17b5e746a.",
+  "Restore complete-snapshot review tooling and review NVIDIA/skills at 27fa3e16d95f32b55843da712f163754395bd05f before migrating its 4,686-file dual-licensed tree.",
   "After the blocked reviews are resolved, verify the next highest-impact queued source identity and license.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]
