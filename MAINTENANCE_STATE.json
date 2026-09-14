@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-13",
+ "last_material_change": "2026-09-14",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -14,7 +14,7 @@
   "legacy_entries_mapped": 21,
   "legacy_entries_total": 6162,
   "upstream_sources_with_checks": 232,
-  "upstream_sources_with_verified_revisions": 104
+  "upstream_sources_with_verified_revisions": 108
  },
  "migration_queue": [
   {
@@ -70,7 +70,7 @@
   },
   {
    "source_repository": "affaan-m/ECC",
-   "status": "queued-source-verification",
+   "status": "identity-license-verified-review-blocked",
    "primary_category_candidate": "29-ecc",
    "legacy_entries": 297,
    "category_counts": {
@@ -84,7 +84,7 @@
     "21-goose-agent": 1,
     "29-ecc": 285
    },
-   "note": "Verify the exact upstream identity and provenance before migration."
+   "note": "The recorded identity resolves exactly to affaan-m/ECC. Candidate 8321021c54d670126ce3b2969d5deb880b4b0c2a, tree a7489fb4da00fc7b4995df3a3c59c018d08a3807, root MIT license, 3,716 tracked files / 53,720,253 bytes, and absence of submodules, symlinks, and Git LFS pointers were verified on 2026-09-14. The legacy comparison reports 252 identical, 7 drifted, 34 unmatched-candidate, 3 upstream-added-files, and 1 no-upstream-path entry. Targeted credential scans found only synthetic test fixtures; the tree includes security examples, hooks, workflows, and agent configuration that must remain archive-only. The required complete-snapshot CodeRabbit review covered 0 files because the CLI is not installed in this environment. Preserve all 297 legacy entries and do not import a partial snapshot."
   },
   {
    "source_repository": "gooseworks-ai/goose-skills",
@@ -3204,18 +3204,18 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "affaan-m/ECC": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-14",
+   "last_attempt": "2026-09-14",
+   "checked_revision": "8321021c54d670126ce3b2969d5deb880b4b0c2a",
    "verified_revision": null,
    "result": {
-    "unmatched-candidate": 25,
-    "drift": 6,
-    "identical": 263,
-    "upstream-added-files": 3
+    "unmatched-candidate": 34,
+    "drift": 7,
+    "identical": 252,
+    "upstream-added-files": 3,
+    "no-upstream-path": 1
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "alinaqi/claude-bootstrap": {
    "last_successful_check": "2026-09-05",
@@ -3879,9 +3879,9 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "gooseworks-ai/goose-skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-14",
+   "last_attempt": "2026-09-14",
+   "checked_revision": "e1592ee2bdc563e3aa6e36b308bcd88f393e3817",
    "verified_revision": null,
    "result": {
     "unmatched-candidate": 18,
@@ -3889,8 +3889,7 @@
     "drift": 5,
     "upstream-added-files": 2
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "greensock/gsap-skills": {
    "last_successful_check": "2026-09-05",
@@ -3997,31 +3996,28 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "indranilbanerjee/digital-marketing-pro": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-14",
+   "last_attempt": "2026-09-14",
+   "checked_revision": "d86675397ea51ee4cfe6db07fe8306d84335bd3b",
    "verified_revision": null,
    "result": {
     "identical": 158,
     "unmatched-candidate": 19,
     "drift": 1
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "infrasity-labs/dev-gtm-claude-skills": {
-   "last_successful_check": "2026-09-12",
-   "last_attempt": "2026-09-12",
+   "last_successful_check": "2026-09-14",
+   "last_attempt": "2026-09-14",
    "checked_revision": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
    "verified_revision": null,
    "result": {
     "drift": 39,
     "unmatched-candidate": 43,
-    "identical": 275,
-    "upstream-added-files": 1
+    "identical": 273
    },
-   "record_source": "direct repository review",
-   "note": "The candidate revision and complete tree shape are verified, but no archived snapshot is approved. The previous legacy comparison remains 275 identical, 39 drifted, 43 unmatched candidates, and one upstream-added file. Complete review and bundled-font redistribution provenance are unresolved."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "jthack/ffuf_claude_skill": {
    "last_successful_check": "2026-09-04",
@@ -4181,17 +4177,16 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "microsoft/skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-14",
+   "last_attempt": "2026-09-14",
+   "checked_revision": "903dc62b1e4c833235b54db918a9a51cb6d3cc8f",
    "verified_revision": null,
    "result": {
-    "drift": 3,
+    "drift": 5,
     "unmatched-candidate": 1,
-    "identical": 184
+    "identical": 182
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "mongodb/agent-skills": {
    "last_successful_check": "2026-09-05",
@@ -5197,6 +5192,17 @@
    "note": "The exact first-party source and dual Apache-2.0 / CC-BY-4.0 licensing scope were verified. Its complete tree has 4,686 tracked files / 45,099,987 bytes, 118 executable files, 403 automation-sensitive paths, no submodules, symlinks, or Git LFS pointers, and no credential-signature or prompt-injection matches in targeted static scans. The only precise curl-pipe matches were a warning against that antipattern plus localhost JSON formatting examples. The reviewed diff from candidate c3168ca798561c5aef7f69e6f99c4a874485ca24 spans 17 commits and 90 files (+4,214/-5,552); executable Python changes tighten generated-catalog removal checks and add tests. The legacy comparison now reports 227 identical, 85 drifted, 16 unmatched-candidate, and 10 no-upstream-path entries. CodeRabbit is not present in this environment, so a complete snapshot review was not produced. Do not import a partial tree or retire any of the 338 legacy entries."
   },
   {
+   "id": "migration-review-blocked:affaan-m/ECC",
+   "source_repository": "affaan-m/ECC",
+   "source_url": "https://github.com/affaan-m/ECC",
+   "checked_revision": "8321021c54d670126ce3b2969d5deb880b4b0c2a",
+   "tree": "a7489fb4da00fc7b4995df3a3c59c018d08a3807",
+   "last_successful_check": "2026-09-14",
+   "last_attempt": "2026-09-14",
+   "status": "blocked-complete-review-tooling",
+   "note": "The exact source identity, root MIT license, and complete 3,716-file / 53,720,253-byte tree were inspected without executing imported code. There are no submodules, symlinks, or Git LFS pointers; the tracked .gitattributes contains only text and binary handling rules. Targeted credential-pattern matches were synthetic fixtures in tests. The snapshot contains hooks, workflows, agent configuration, executable tooling, and a destructive prompt-injection example presented in security-guide context, so it must remain archive-only. CodeRabbit could not review the snapshot because coderabbit is not installed; coverage was 0 files and no manual review was substituted. Preserve all 297 legacy entries and do not import a partial tree."
+  },
+  {
    "id": "upstream-unreachable:figma/skills",
    "source_repository": "figma/skills",
    "last_attempt": "2026-09-07",
@@ -5245,6 +5251,7 @@
   "Confirm that non-commercial archive redistribution is compatible with LicenseRef-OA-Guide-License-1.0 before reviewing and migrating openaccountants/openaccountants at ef343eb581112bca85d7f2c7a5451a0eca932adc.",
   "Establish bundled-font provenance and restore CodeRabbit review capability before migrating Infrasity-Labs/dev-gtm-claude-skills at 02cfefb3a213041de8b80bc659ebc5f17b5e746a.",
   "Restore complete-snapshot review tooling and review NVIDIA/skills at 27fa3e16d95f32b55843da712f163754395bd05f before migrating its 4,686-file dual-licensed tree.",
+  "Install and authenticate CodeRabbit, then review the complete affaan-m/ECC snapshot at 8321021c54d670126ce3b2969d5deb880b4b0c2a before migration.",
   "After the blocked reviews are resolved, verify the next highest-impact queued source identity and license.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]

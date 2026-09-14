@@ -145,16 +145,16 @@
    "note": "Exact source identity and candidate ef343eb581112bca85d7f2c7a5451a0eca932adc (tree 9a1db5268dc865062fc0c2aded3cc85280eac1b9) were verified. The complete recursive tree is not truncated and contains 8,950 blobs / 228,048,084 bytes, no submodules, and no tracked .gitattributes. The repository uses AGPL-3.0-only for software and the custom LicenseRef-OA-Guide-License-1.0 for guide content; that license permits non-commercial redistribution but reserves commercial bulk redistribution and requires preservation of reviewer provenance, so whole-archive redistribution needs explicit policy/legal clearance before import. The sole legacy mismatch, ga-income-tax, has matching name and description; the inspected upstream diff removes reviewed_by metadata while leaving a prose reviewer claim, so it was not applied independently. No snapshot was imported."
   },
   "infrasity-labs/dev-gtm-claude-skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-14",
+   "candidate_commit": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
    "verified_commit": null,
    "upstream_pushed_at": "2026-06-28",
    "license": "MIT",
-   "local_skills": 358,
+   "local_skills": 355,
    "result": {
     "drift": 39,
     "unmatched-candidate": 43,
-    "identical": 275,
-    "upstream-added-files": 1
+    "identical": 273
    },
    "frontmatter_probe": {
     "01-copy-writing/stop-slop": "name-matches-description-differs",
@@ -237,16 +237,18 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "affaan-m/ECC": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-14",
+   "candidate_commit": "8321021c54d670126ce3b2969d5deb880b4b0c2a",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-09-03",
+   "upstream_pushed_at": "2026-09-14",
    "license": "MIT",
    "local_skills": 297,
    "result": {
-    "unmatched-candidate": 25,
-    "drift": 6,
-    "identical": 263,
-    "upstream-added-files": 3
+    "unmatched-candidate": 34,
+    "drift": 7,
+    "identical": 252,
+    "upstream-added-files": 3,
+    "no-upstream-path": 1
    },
    "frontmatter_probe": {
     "02-design-ui/accessibility": "name-matches-description-differs",
@@ -259,26 +261,36 @@
     "15-integrations/prompt-optimizer": "name-matches-description-differs",
     "16-ai-apis-media/deep-research": "name-matches-description-differs",
     "21-goose-agent/market-research": "name-matches-description-differs",
+    "29-ecc/autonomous-agent-harness": "name-matches-description-differs",
+    "29-ecc/benchmark-methodology": "name-and-description-match",
     "29-ecc/cost-aware-llm-pipeline": "name-matches-description-differs",
     "29-ecc/crosspost": "name-and-description-match",
     "29-ecc/data-scraper-agent": "name-matches-description-differs",
     "29-ecc/deep-research": "name-and-description-match",
     "29-ecc/email-ops": "name-matches-description-differs",
+    "29-ecc/eval-harness": "name-and-description-match",
     "29-ecc/exa-search": "name-and-description-match",
+    "29-ecc/fal-ai-media": "name-and-description-match",
+    "29-ecc/frontend-a11y": "name-and-description-match",
     "29-ecc/gateguard": "name-matches-description-differs",
     "29-ecc/github-ops": "name-matches-description-differs",
     "29-ecc/ito-compute": "name-and-description-match",
     "29-ecc/jira-integration": "name-matches-description-differs",
     "29-ecc/market-research": "name-and-description-match",
     "29-ecc/nasiko-control-plane": "name-matches-description-differs",
+    "29-ecc/plan-canvas": "name-and-description-match",
     "29-ecc/social-publisher": "name-and-description-match",
     "29-ecc/strategic-compact": "name-and-description-match",
+    "29-ecc/tdd-workflow": "name-and-description-match",
+    "29-ecc/unified-memory": "name-and-description-match",
+    "29-ecc/video-editing": "name-and-description-match",
     "29-ecc/x-api": "name-and-description-match"
    },
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "gooseworks-ai/goose-skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-14",
+   "candidate_commit": "e1592ee2bdc563e3aa6e36b308bcd88f393e3817",
    "verified_commit": null,
    "upstream_pushed_at": "2026-09-01",
    "license": "MIT",
@@ -312,15 +324,16 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "microsoft/skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-14",
+   "candidate_commit": "903dc62b1e4c833235b54db918a9a51cb6d3cc8f",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-09-03",
+   "upstream_pushed_at": "2026-09-11",
    "license": "MIT",
    "local_skills": 188,
    "result": {
-    "drift": 3,
+    "drift": 5,
     "unmatched-candidate": 1,
-    "identical": 184
+    "identical": 182
    },
    "frontmatter_probe": {
     "09-anthropic-tools/skill-creator": "name-matches-description-differs"
@@ -328,9 +341,10 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "indranilbanerjee/digital-marketing-pro": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-14",
+   "candidate_commit": "d86675397ea51ee4cfe6db07fe8306d84335bd3b",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-08-17",
+   "upstream_pushed_at": "2026-09-07",
    "license": "MIT",
    "local_skills": 178,
    "result": {
