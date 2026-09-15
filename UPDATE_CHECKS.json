@@ -376,9 +376,10 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "wshobson/agents": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-15",
+   "candidate_commit": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-09-01",
+   "upstream_pushed_at": "2026-09-14",
    "license": "MIT",
    "local_skills": 173,
    "result": {
@@ -392,9 +393,10 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "aaron-he-zhu/aaron-marketing-skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-15",
+   "candidate_commit": "1d6b2fb842bb0f04af7b4cb06737e91feb48f2c7",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-09-04",
+   "upstream_pushed_at": "2026-09-15",
    "license": "Apache-2.0",
    "local_skills": 122,
    "result": {
@@ -2109,7 +2111,8 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "zapier/zapier-mcp": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-15",
+   "candidate_commit": "5360f152b96735712e5f925ad728732cb86888df",
    "verified_commit": "5360f152b96735712e5f925ad728732cb86888df",
    "upstream_pushed_at": "2026-07-29",
    "license": "MIT",
@@ -2119,7 +2122,8 @@
    }
   },
   "Linked-API/linkedin-skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-15",
+   "candidate_commit": "e5e642e2bbbd839501c59a7742cdc04a9d9c66a0",
    "verified_commit": null,
    "upstream_pushed_at": "2026-08-13",
    "license": "MIT",
@@ -2134,9 +2138,10 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "angular/skills": {
-   "last_checked": "2026-09-04",
+   "last_checked": "2026-09-15",
+   "candidate_commit": "a7f825692db669dc97e2059fe2220cc4a3dc34a7",
    "verified_commit": null,
-   "upstream_pushed_at": "2026-09-03",
+   "upstream_pushed_at": "2026-09-13",
    "license": null,
    "local_skills": 3,
    "result": {

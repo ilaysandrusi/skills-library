@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-14",
+ "last_material_change": "2026-09-15",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -14,7 +14,7 @@
   "legacy_entries_mapped": 21,
   "legacy_entries_total": 6162,
   "upstream_sources_with_checks": 232,
-  "upstream_sources_with_verified_revisions": 108
+  "upstream_sources_with_verified_revisions": 112
  },
  "migration_queue": [
   {
@@ -88,7 +88,7 @@
   },
   {
    "source_repository": "gooseworks-ai/goose-skills",
-   "status": "queued-source-verification",
+   "status": "identity-license-verified-completeness-blocked",
    "primary_category_candidate": "21-goose-agent",
    "legacy_entries": 270,
    "category_counts": {
@@ -100,7 +100,7 @@
     "21-goose-agent": 263,
     "29-ecc": 1
    },
-   "note": "Verify the exact upstream identity and provenance before migration."
+   "note": "The recorded identity resolves exactly to canonical gooseworks-ai/goose-skills; the stale athina-ai/goose-skills URL in package.json redirects to that same repository. Commit e1592ee2bdc563e3aa6e36b308bcd88f393e3817, tree 356b4126364c0d8469203b3a5757930678c2bb30, root MIT license, 1,104 tracked files / 9,352,769 committed bytes, and absence of submodules and symlinks were verified on 2026-09-15. Migration is blocked because 11 tracked image files are unmaterialized Git LFS pointers for 10 objects / 3,748,420 declared bytes: the tree has no .gitattributes, git lfs pull leaves the pointers in place, fsck reports the objects missing, and GitHub media retrieval returns 404. The tree also bundles four TTF fonts without tracked component licenses and six generated lead datasets containing 3,989 rows / 2,396 unique public LinkedIn profile URLs whose redistribution provenance and privacy review are unresolved. Preserve all 270 legacy entries and do not import a partial snapshot."
   },
   {
    "source_repository": "microsoft/skills",
@@ -2814,16 +2814,15 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "Linked-API/linkedin-skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-15",
+   "last_attempt": "2026-09-15",
+   "checked_revision": "e5e642e2bbbd839501c59a7742cdc04a9d9c66a0",
    "verified_revision": null,
    "result": {
     "identical": 2,
     "unmatched-candidate": 1
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "Lum1104/Understand-Anything": {
    "last_successful_check": "2026-09-05",
@@ -3167,16 +3166,15 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "aaron-he-zhu/aaron-marketing-skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-15",
+   "last_attempt": "2026-09-15",
+   "checked_revision": "1d6b2fb842bb0f04af7b4cb06737e91feb48f2c7",
    "verified_revision": null,
    "result": {
     "unmatched-candidate": 89,
     "drift": 33
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "addyosmani/agent-skills": {
    "last_successful_check": "2026-09-05",
@@ -3244,16 +3242,15 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "angular/skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-15",
+   "last_attempt": "2026-09-15",
+   "checked_revision": "a7f825692db669dc97e2059fe2220cc4a3dc34a7",
    "verified_revision": null,
    "result": {
     "drift": 2,
     "identical": 1
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "anthropics/skills": {
    "last_successful_check": "2026-09-05",
@@ -5028,17 +5025,16 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "wshobson/agents": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-15",
+   "last_attempt": "2026-09-15",
+   "checked_revision": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
    "verified_revision": null,
    "result": {
     "unmatched-candidate": 6,
     "identical": 166,
     "no-upstream-path": 1
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "wshuyi/x-article-publisher-skill": {
    "last_successful_check": "2026-09-04",
@@ -5063,8 +5059,8 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "zapier/zapier-mcp": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
+   "last_successful_check": "2026-09-15",
+   "last_attempt": "2026-09-15",
    "checked_revision": "5360f152b96735712e5f925ad728732cb86888df",
    "verified_revision": "5360f152b96735712e5f925ad728732cb86888df",
    "result": {
@@ -5203,6 +5199,17 @@
    "note": "The exact source identity, root MIT license, and complete 3,716-file / 53,720,253-byte tree were inspected without executing imported code. There are no submodules, symlinks, or Git LFS pointers; the tracked .gitattributes contains only text and binary handling rules. Targeted credential-pattern matches were synthetic fixtures in tests. The snapshot contains hooks, workflows, agent configuration, executable tooling, and a destructive prompt-injection example presented in security-guide context, so it must remain archive-only. CodeRabbit could not review the snapshot because coderabbit is not installed; coverage was 0 files and no manual review was substituted. Preserve all 297 legacy entries and do not import a partial tree."
   },
   {
+   "id": "migration-completeness-review:gooseworks-ai/goose-skills",
+   "source_repository": "gooseworks-ai/goose-skills",
+   "source_url": "https://github.com/gooseworks-ai/goose-skills",
+   "checked_revision": "e1592ee2bdc563e3aa6e36b308bcd88f393e3817",
+   "tree": "356b4126364c0d8469203b3a5757930678c2bb30",
+   "last_successful_check": "2026-09-15",
+   "last_attempt": "2026-09-15",
+   "status": "blocked-missing-lfs-assets-and-component-provenance",
+   "note": "The exact canonical source and root MIT license were verified, but a complete snapshot cannot currently be produced. Eleven tracked PNG/JPG files are bare Git LFS pointer blobs for ten unique objects (3,748,420 declared bytes) without a tracked .gitattributes file; git lfs pull did not materialize them, git lfs fsck reported each object missing, and direct retrieval through GitHub's media endpoint returned 404. Four bundled Cormorant/Montserrat TTF files have no embedded license metadata or tracked component license/attribution. Six committed generated-output CSV files contain 3,989 rows and 2,396 unique public LinkedIn profile URLs with names, roles, and companies, so their data provenance, redistribution basis, and privacy impact need review before archival. The snapshot also contains 68 executables plus push-triggered release and private-repository-dispatch workflows; these were inspected as archive content and were not enabled. Preserve all 270 legacy entries and do not copy only the available files."
+  },
+  {
    "id": "upstream-unreachable:figma/skills",
    "source_repository": "figma/skills",
    "last_attempt": "2026-09-07",
@@ -5252,7 +5259,8 @@
   "Establish bundled-font provenance and restore CodeRabbit review capability before migrating Infrasity-Labs/dev-gtm-claude-skills at 02cfefb3a213041de8b80bc659ebc5f17b5e746a.",
   "Restore complete-snapshot review tooling and review NVIDIA/skills at 27fa3e16d95f32b55843da712f163754395bd05f before migrating its 4,686-file dual-licensed tree.",
   "Install and authenticate CodeRabbit, then review the complete affaan-m/ECC snapshot at 8321021c54d670126ce3b2969d5deb880b4b0c2a before migration.",
-  "After the blocked reviews are resolved, verify the next highest-impact queued source identity and license.",
+  "Recover or obtain the ten missing Git LFS objects, document the four bundled font licenses, and review the committed LinkedIn lead datasets before migrating gooseworks-ai/goose-skills at e1592ee2bdc563e3aa6e36b308bcd88f393e3817.",
+  "Verify the next highest-impact queued source identity and license while blocked migrations remain preserved.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]
 }
