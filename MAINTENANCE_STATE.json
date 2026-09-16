@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-15",
+ "last_material_change": "2026-09-16",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -14,7 +14,7 @@
   "legacy_entries_mapped": 21,
   "legacy_entries_total": 6162,
   "upstream_sources_with_checks": 232,
-  "upstream_sources_with_verified_revisions": 112
+  "upstream_sources_with_verified_revisions": 114
  },
  "migration_queue": [
   {
@@ -104,7 +104,7 @@
   },
   {
    "source_repository": "microsoft/skills",
-   "status": "queued-source-verification",
+   "status": "identity-license-verified-completeness-and-review-blocked",
    "primary_category_candidate": "23-microsoft",
    "legacy_entries": 188,
    "category_counts": {
@@ -112,7 +112,7 @@
     "09-anthropic-tools": 1,
     "23-microsoft": 186
    },
-   "note": "Verify the exact upstream identity and provenance before migration."
+   "note": "The exact first-party source resolves to canonical microsoft/skills. Candidate 8cf1d65cc5c6ada062192938ea4f6b49458ec617, tree 7611902d7c5a77b0644e591bd83d1e0603db01ca, root MIT license, 2,202 tracked files / 17,968,152 bytes, 30 executable files, and absence of submodules and Git LFS pointers were verified on 2026-09-16. The tree has 60 symlinks; ten microsoft-foundry plugin links point to absent foundry-* target directories, so links alone would not preserve that content as a complete self-contained snapshot. Compared with the 2026-09-14 candidate 903dc62b1e4c833235b54db918a9a51cb6d3cc8f, six commits change 55 files (+2,690/-113), adding Azure Local skills and hooks that invoke @azure/mcp@latest to publish telemetry after tool use unless opted out. CodeRabbit 0.7.7 was not authenticated, so the attempted complete review covered 0 of 2,202 files and produced no review result. Preserve all 188 legacy entries and do not import a partial snapshot."
   },
   {
    "source_repository": "indranilbanerjee/digital-marketing-pro",
@@ -3285,16 +3285,15 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "auth0/agent-skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-16",
+   "last_attempt": "2026-09-16",
+   "checked_revision": "f135610540ea41e4d99882dc1f06162030c7340b",
    "verified_revision": null,
    "result": {
     "no-upstream-path": 2,
     "unmatched-candidate": 1
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "awrshift/claude-memory-kit": {
    "last_successful_check": "2026-09-04",
@@ -3446,16 +3445,15 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "coderabbitai/skills": {
-   "last_successful_check": "2026-09-04",
-   "last_attempt": "2026-09-04",
-   "checked_revision": null,
+   "last_successful_check": "2026-09-16",
+   "last_attempt": "2026-09-16",
+   "checked_revision": "e380f1b34cecd56fbd13a8ee1474f226cd01f4f5",
    "verified_revision": null,
    "result": {
-    "identical": 2,
-    "unmatched-candidate": 1
+    "identical": 1,
+    "unmatched-candidate": 2
    },
-   "record_source": "UPDATE_CHECKS.json",
-   "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
+   "record_source": "UPDATE_CHECKS.json"
   },
   "coinbase/agentic-wallet-skills": {
    "last_successful_check": "2026-09-04",
@@ -4174,9 +4172,9 @@
    "note": "The legacy checker found drift or ambiguity but did not retain the candidate commit; recheck before migration."
   },
   "microsoft/skills": {
-   "last_successful_check": "2026-09-14",
-   "last_attempt": "2026-09-14",
-   "checked_revision": "903dc62b1e4c833235b54db918a9a51cb6d3cc8f",
+   "last_successful_check": "2026-09-16",
+   "last_attempt": "2026-09-16",
+   "checked_revision": "8cf1d65cc5c6ada062192938ea4f6b49458ec617",
    "verified_revision": null,
    "result": {
     "drift": 5,
@@ -5210,6 +5208,17 @@
    "note": "The exact canonical source and root MIT license were verified, but a complete snapshot cannot currently be produced. Eleven tracked PNG/JPG files are bare Git LFS pointer blobs for ten unique objects (3,748,420 declared bytes) without a tracked .gitattributes file; git lfs pull did not materialize them, git lfs fsck reported each object missing, and direct retrieval through GitHub's media endpoint returned 404. Four bundled Cormorant/Montserrat TTF files have no embedded license metadata or tracked component license/attribution. Six committed generated-output CSV files contain 3,989 rows and 2,396 unique public LinkedIn profile URLs with names, roles, and companies, so their data provenance, redistribution basis, and privacy impact need review before archival. Static targeted scans found no credential signatures, but CodeRabbit 0.7.6 reported not_authenticated and reviewed 0 of 1,104 tracked files, so no complete security-review result or zero-issue conclusion exists. The snapshot also contains 68 executables plus push-triggered release and private-repository-dispatch workflows; these were treated as archive content and were not enabled. Preserve all 270 legacy entries and do not copy only the available files."
   },
   {
+   "id": "migration-completeness-review:microsoft/skills",
+   "source_repository": "microsoft/skills",
+   "source_url": "https://github.com/microsoft/skills",
+   "checked_revision": "8cf1d65cc5c6ada062192938ea4f6b49458ec617",
+   "tree": "7611902d7c5a77b0644e591bd83d1e0603db01ca",
+   "last_successful_check": "2026-09-16",
+   "last_attempt": "2026-09-16",
+   "status": "blocked-dangling-symlinks-and-review-tooling",
+   "note": "The exact first-party source and root MIT license were verified. The candidate tree has 2,202 tracked files / 17,968,152 bytes, 30 executable files, no submodules, and no Git LFS pointers. Of its 60 tracked symlinks, ten under .github/plugins/microsoft-foundry/skills point to absent foundry-* target directories; preserving those links would not materialize the missing content, so the snapshot is not self-contained. The six-commit diff from candidate 903dc62b1e4c833235b54db918a9a51cb6d3cc8f changes 55 files (+2,690/-113), including new Azure Local skills and post-tool-use hooks that run npx -y @azure/mcp@latest and publish skill, tool, and reference-file telemetry unless AZURE_MCP_COLLECT_TELEMETRY=false. Imported hooks and MCP configuration were inspected as archive content and not enabled or executed. Targeted credential-pattern matches were synthetic examples in acceptance-test fixtures. CodeRabbit 0.7.7 reported not_authenticated, covered 0 of 2,202 files, and produced no review result; no manual clean conclusion was substituted. Preserve all 188 legacy entries and do not import a partial snapshot."
+  },
+  {
    "id": "upstream-unreachable:figma/skills",
    "source_repository": "figma/skills",
    "last_attempt": "2026-09-07",
@@ -5260,6 +5269,7 @@
   "Restore complete-snapshot review tooling and review NVIDIA/skills at 27fa3e16d95f32b55843da712f163754395bd05f before migrating its 4,686-file dual-licensed tree.",
   "Install and authenticate CodeRabbit, then review the complete affaan-m/ECC snapshot at 8321021c54d670126ce3b2969d5deb880b4b0c2a before migration.",
   "Recover or obtain the ten missing Git LFS objects, document the four bundled font licenses, review the committed LinkedIn lead datasets, and authenticate CodeRabbit for a complete 1,104-file review before migrating gooseworks-ai/goose-skills at e1592ee2bdc563e3aa6e36b308bcd88f393e3817.",
+  "Materialize or repair the ten dangling microsoft-foundry skill targets and authenticate CodeRabbit for a complete 2,202-file review before migrating microsoft/skills at 8cf1d65cc5c6ada062192938ea4f6b49458ec617.",
   "Verify the next highest-impact queued source identity and license while blocked migrations remain preserved.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]
