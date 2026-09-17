@@ -46,10 +46,11 @@
     "notes": "Shell setup and lifecycle hooks were inspected but not executed or enabled. They modify user configuration and can terminate session-scoped browser helpers. No committed credentials or private keys were detected. Upstream-published absolute home paths and references to a separate private project remain unchanged as part of the exact snapshot."
    },
    "upstream_check": {
-    "last_successful_check": "2026-09-09",
-    "last_attempt": "2026-09-09",
-    "candidate_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
-    "status": "current"
+    "last_successful_check": "2026-09-17",
+    "last_attempt": "2026-09-17",
+    "candidate_revision": "460770b3c8cd1a2640cb378b9e652da1e989f8f5",
+    "status": "deferred-breaking-review-blocked",
+    "note": "Candidate 460770b3c8cd1a2640cb378b9e652da1e989f8f5 removes the Circuit integration and substantially condenses shared skills: 27 files changed (+299/-2,475), including seven deleted Circuit files and one new attachment-URL checker. The actual diff and executable/config changes were inspected. Retain the verified archived revision until the breaking removals are reviewed and complete-snapshot CodeRabbit review is available."
    },
    "source_records": [
     "SOURCES.json",

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "last_material_change": "2026-09-16",
+ "last_material_change": "2026-09-17",
  "migration_limits": {
   "upstream_repositories_per_run": 2,
   "legacy_entries_retired_per_run": 10,
@@ -116,7 +116,7 @@
   },
   {
    "source_repository": "indranilbanerjee/digital-marketing-pro",
-   "status": "queued-source-verification",
+   "status": "identity-license-completeness-verified-review-blocked",
    "primary_category_candidate": "03-marketing",
    "legacy_entries": 178,
    "category_counts": {
@@ -127,7 +127,7 @@
     "16-ai-apis-media": 1,
     "29-ecc": 1
    },
-   "note": "Verify the exact upstream identity and provenance before migration."
+   "note": "The exact canonical identity, candidate d86675397ea51ee4cfe6db07fe8306d84335bd3b, tree be43417f54f125561096ffcfe8a47f68f739dbae, root MIT license, and complete 567-file / 7,332,874-byte tree were verified on 2026-09-17. There are no submodules, symlinks, executable files, or Git LFS pointers. The legacy comparison reports 158 identical, 19 unmatched-candidate, and 1 drifted entry; all 178 legacy copies must remain until unique local changes are separated. A targeted credential scan found only a synthetic Slack token example in documentation. CodeRabbit 0.7.8 was not authenticated, so the attempted review covered 0 of 568 temporary archive files and produced no clean result. Preserve all legacy entries and do not import until complete-snapshot review succeeds."
   },
   {
    "source_repository": "wshobson/agents",
@@ -3991,8 +3991,8 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "indranilbanerjee/digital-marketing-pro": {
-   "last_successful_check": "2026-09-14",
-   "last_attempt": "2026-09-14",
+   "last_successful_check": "2026-09-17",
+   "last_attempt": "2026-09-17",
    "checked_revision": "d86675397ea51ee4cfe6db07fe8306d84335bd3b",
    "verified_revision": null,
    "result": {
@@ -4430,11 +4430,11 @@
    "record_source": "UPDATE_CHECKS.json"
   },
   "petekp/claude-code-setup": {
-   "last_successful_check": "2026-09-09",
-   "last_attempt": "2026-09-09",
-   "checked_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
+   "last_successful_check": "2026-09-17",
+   "last_attempt": "2026-09-17",
+   "checked_revision": "460770b3c8cd1a2640cb378b9e652da1e989f8f5",
    "verified_revision": "dcd4ca772bcf4b0e773a43e93258d0a8f59169fb",
-   "result": "current"
+   "result": "deferred-breaking-review-blocked"
   },
   "phuryn/pm-skills": {
    "last_successful_check": "2026-09-05",
@@ -5219,6 +5219,17 @@
    "note": "The exact first-party source and root MIT license were verified. The candidate tree has 2,202 tracked files / 17,968,152 bytes, 30 executable files, no submodules, and no Git LFS pointers. Of its 60 tracked symlinks, ten under .github/plugins/microsoft-foundry/skills point to absent foundry-* target directories; preserving those links would not materialize the missing content, so the snapshot is not self-contained. The six-commit diff from candidate 903dc62b1e4c833235b54db918a9a51cb6d3cc8f changes 55 files (+2,690/-113), including new Azure Local skills and post-tool-use hooks that run npx -y @azure/mcp@latest and publish skill, tool, and reference-file telemetry unless AZURE_MCP_COLLECT_TELEMETRY=false. Imported hooks and MCP configuration were inspected as archive content and not enabled or executed. Targeted credential-pattern matches were synthetic examples in acceptance-test fixtures. CodeRabbit 0.7.7 reported not_authenticated, covered 0 of 2,202 files, and produced no review result; no manual clean conclusion was substituted. Preserve all 188 legacy entries and do not import a partial snapshot."
   },
   {
+   "id": "migration-review-blocked:indranilbanerjee/digital-marketing-pro",
+   "source_repository": "indranilbanerjee/digital-marketing-pro",
+   "source_url": "https://github.com/indranilbanerjee/digital-marketing-pro",
+   "checked_revision": "d86675397ea51ee4cfe6db07fe8306d84335bd3b",
+   "tree": "be43417f54f125561096ffcfe8a47f68f739dbae",
+   "last_successful_check": "2026-09-17",
+   "last_attempt": "2026-09-17",
+   "status": "blocked-complete-review-tooling",
+   "note": "The source identity is corroborated by GitHub, the clone origin, and the upstream package metadata. The root MIT license and complete 567-file / 7,332,874-byte tree were inspected without executing imported code. There are no submodules, symlinks, executable files, or Git LFS pointers. The repository includes an inert hooks manifest, a PR workflow that installs the Tessl CLI when its secret gate is enabled, scripts that can install Python packages, download NLTK data, scrape public web pages, and write user-local marketing data, and archived agent instructions; none were enabled or executed. A targeted credential scan found only a synthetic Slack token example in docs/integrations-guide.md. CodeRabbit 0.7.8 reported not_authenticated and reviewed 0 of the 567 snapshot files plus its manifest, so no complete security-review result exists. The temporary snapshot was removed; preserve all 178 legacy entries and do not import until review succeeds."
+  },
+  {
    "id": "upstream-unreachable:figma/skills",
    "source_repository": "figma/skills",
    "last_attempt": "2026-09-07",
@@ -5270,6 +5281,8 @@
   "Install and authenticate CodeRabbit, then review the complete affaan-m/ECC snapshot at 8321021c54d670126ce3b2969d5deb880b4b0c2a before migration.",
   "Recover or obtain the ten missing Git LFS objects, document the four bundled font licenses, review the committed LinkedIn lead datasets, and authenticate CodeRabbit for a complete 1,104-file review before migrating gooseworks-ai/goose-skills at e1592ee2bdc563e3aa6e36b308bcd88f393e3817.",
   "Materialize or repair the ten dangling microsoft-foundry skill targets and authenticate CodeRabbit for a complete 2,202-file review before migrating microsoft/skills at 8cf1d65cc5c6ada062192938ea4f6b49458ec617.",
+  "Authenticate CodeRabbit and review the complete 567-file indranilbanerjee/digital-marketing-pro snapshot at d86675397ea51ee4cfe6db07fe8306d84335bd3b before migration; retain its 20 non-identical legacy entries until local provenance is separated.",
+  "Review the breaking 27-file petekp/claude-code-setup candidate update at 460770b3c8cd1a2640cb378b9e652da1e989f8f5 before replacing the verified archive; it removes Circuit and 2,475 lines.",
   "Verify the next highest-impact queued source identity and license while blocked migrations remain preserved.",
   "Retire legacy skill copies only after content equivalence is documented, at no more than 10 entries per run."
  ]

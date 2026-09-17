@@ -341,7 +341,7 @@
    "note": "Drift or an unmatched candidate was found; no baseline recorded. The diff has to be read before anything is applied."
   },
   "indranilbanerjee/digital-marketing-pro": {
-   "last_checked": "2026-09-14",
+   "last_checked": "2026-09-17",
    "candidate_commit": "d86675397ea51ee4cfe6db07fe8306d84335bd3b",
    "verified_commit": null,
    "upstream_pushed_at": "2026-09-07",
