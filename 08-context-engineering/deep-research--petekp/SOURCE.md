@@ -32,10 +32,12 @@ previously sat at `09-anthropic-tools/claude-code-setup`.
 
 ## What was deliberately not imported
 
-The rest of `petekp/claude-code-setup` is personal dotfiles, hooks, and
-`setup.sh`. Those were deliberately left out of the library (and out of this
-skill) — hooks are archived nowhere from this repo, and the setup script is the
-author's machine config, not material the skill owns.
+The rest of `petekp/claude-code-setup` was deliberately omitted from this
+legacy standalone skill extract because those files are repository-level, not
+owned by this skill. The complete upstream tree, including dotfiles, hooks, and
+`setup.sh`, is now preserved unchanged at
+`repositories/05-development/petekp--claude-code-setup`. Its hooks and setup
+scripts remain archive-only and are not enabled automatically.
 
 `emil-design-eng` and `fixing-motion-performance` are not in this HEAD and were
 not imported.

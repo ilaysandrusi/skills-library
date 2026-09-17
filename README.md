@@ -4,6 +4,22 @@
 
 **סה״כ סקילים:** 6162
 
+## ארכיון הריפוזיטוריז
+
+הספרייה עוברת בהדרגה למודל שבו כל upstream נשמר פעם אחת כ־snapshot שלם
+תחת [`repositories/`](./repositories/), בלי לשנות את המבנה הפנימי שלו.
+הקטלוג וה־commit המדויק נמצאים ב־[`REPOSITORIES.json`](./REPOSITORIES.json),
+חתימות השלמות ב־[`repository-manifests/`](./repository-manifests/), והתקדמות
+ההגירה ב־[`MAINTENANCE_STATE.json`](./MAINTENANCE_STATE.json).
+
+כרגע שמור snapshot מלא אחד: `petekp/claude-code-setup` ב־commit
+`dcd4ca772bcf4b0e773a43e93258d0a8f59169fb`. עץ הסקילים הישן נשאר זמין
+בזמן שההגירה מתבצעת במנות קטנות ומאומתות.
+
+```bash
+node tools/validate-repositories.mjs
+```
+
 ## איך ללמוד
 
 1. פתח קטגוריה למטה.

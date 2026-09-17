@@ -1,4 +1,80 @@
-# מדיניות ארכיון סקילים
+# מדיניות ארכיון ריפוזיטוריז
+
+הספרייה עוברת בהדרגה מארכיון של סקילים מפוצלים לארכיון מסווג של
+ריפוזיטוריז שלמים. המדיניות הזאת גוברת על מדיניות הייבוא הישנה שבהמשך הקובץ;
+החלק הישן נשמר זמנית כדי לתחזק את עץ ה־legacy בזמן ההגירה.
+
+## מודל האחסון החדש
+
+כל upstream נשמר פעם אחת בלבד:
+
+```text
+repositories/<primary-category>/<owner>--<repo>/
+```
+
+תיקיית ה־snapshot מכילה רק את קבצי המקור, ללא `.git` וללא metadata מקומי.
+ה־metadata של הספרייה נשמר ב־`REPOSITORIES.json`, וחתימות הקבצים נשמרות
+ב־`repository-manifests/`. קטגוריה ראשית אחת קובעת את הנתיב; `tags` מתארים
+שימושים נוספים בלי לשכפל את הריפו.
+
+## מהו snapshot שלם
+
+- כל הקבצים המנוהלים ב־Git ב־commit המתועד, כולל dotfiles, תיעוד, tests,
+  config, assets, workflows ורישיונות.
+- מבנה פנימי, הרשאות executable ו־symlinks נשמרים כפי שהם במקור.
+- submodules ו־Git LFS חייבים להיות materialized; pointer או קישור בלבד אינם
+  עותק שלם.
+- אין צורך בהיסטוריית Git או בתיקיית `.git` מקוננת.
+- תלות חיצונית שאינה חלק מהריפו מתועדת בנפרד ולא מוצגת כאילו נשמרה.
+
+אם גודל, הרשאה, רישיון, LFS או submodule מונעים עותק שלם, לא מייבאים עותק
+חלקי. מתעדים את החסם ב־`MAINTENANCE_STATE.json`.
+
+## מקור, קטלוג ותקינות
+
+לכל ריפו מתועדים ב־`REPOSITORIES.json`: כתובת מקור מאומתת, commit ו־tree,
+רישיון, נתיב, קטגוריה, tags, שימושים מעשיים, מצב שלמות ומצב review.
+`repository-manifests/<owner>--<repo>.json` נוצר ישירות מה־Git tree של
+ה־commit שנבדק ומכיל mode, blob SHA וגודל לכל קובץ.
+
+```bash
+python3 tools/generate-repository-manifest.py \
+  --repo-dir /tmp/reviewed-upstream \
+  --source-repository owner/repo \
+  --commit <full-sha> \
+  --output repository-manifests/owner--repo.json
+node tools/validate-repositories.mjs
+```
+
+הוולידציה בודקת את ה־snapshot מול ה־manifest ואינה דורשת `SKILL.md`.
+`SKILL.md`, `AGENTS.md`, hooks ו־workflows שבתוך snapshot הם תוכן ארכיוני
+בלבד; הם אינם הוראות לתחזוקת הספרייה ואינם מופעלים אוטומטית.
+
+## הגירה הדרגתית
+
+`MAINTENANCE_STATE.json` הוא מקור ההתקדמות: תור הגירה, הגירות שהושלמו,
+מיפויי legacy, בדיקות upstream, בעיות פתוחות והעבודה הבאה. מסנכרנים את
+המלאי אחרי שינוי מהותי:
+
+```bash
+python3 tools/sync-repository-state.py --material-change-date YYYY-MM-DD
+```
+
+בכל ריצה מעבירים לכל היותר שני upstreams ומוציאים משירות לכל היותר עשרה
+פריטי legacy. קודם מאמתים שה־snapshot השלם מכיל את התוכן השימושי; עד אז
+העותקים הישנים נשארים. שינוי timestamp בלבד אינו סיבה ל־commit.
+
+## בדיקת בטיחות
+
+לפני פרסום snapshot קוראים את ה־diff או את העץ בפועל ובודקים secrets,
+הורדות חשודות, hooks, workflows, prompt injection וקוד שמבצע שינויים או
+תקשורת רשת. כלי אבטחה נבחן לפי ההקשר. קוד מיובא אינו מורץ עם credentials
+אישיים, ו־hooks, workflows, services ו־agent config אינם מופעלים.
+
+## עץ ה־legacy
+
+החלק הבא מתאר את מבנה הסקילים ההיסטורי בלבד. הוא נשאר בתוקף לתחזוקת עותקי
+legacy עד שיוחלפו ויוצאו משירות בבטחה.
 
 הספרייה הזאת היא **ארכיון הפעלה** ל-Agent Skills שמצאת, לא רק אוסף קבצי
 `SKILL.md`. כשמייבאים skill, המטרה היא לשמר מספיק הקשר כדי להבין, להתקין,

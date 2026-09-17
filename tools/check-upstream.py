@@ -319,6 +319,7 @@ def record(state, report, today):
                     for e in report["skills"])
     entry = {
         "last_checked": today,
+        "candidate_commit": report["head"],
         "verified_commit": report["head"] if clean else None,
         "upstream_pushed_at": report["pushed_at"][:10],
         "license": report["license"],
@@ -344,6 +345,13 @@ def record(state, report, today):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("repo", nargs="*", help="upstream repositories, e.g. anthropics/skills")
+    parser.add_argument(
+        "--batch",
+        nargs="+",
+        default=[],
+        metavar="OWNER/REPO",
+        help="check multiple upstream repositories in one invocation",
+    )
     parser.add_argument("--json", action="store_true", help="emit the full per-skill report")
     parser.add_argument("--rotate", type=int, metavar="N",
                         help="check the next N repositories in the rotation")
@@ -354,11 +362,12 @@ def main():
                              "frontmatter to the local one (one extra API call each)")
     args = parser.parse_args()
 
-    repos = list(args.repo)
+    repos = list(args.repo) + args.batch
     if args.rotate:
         repos += rotation(args.rotate)
+    repos = list(dict.fromkeys(repos))
     if not repos:
-        parser.error("give at least one repository, or --rotate N")
+        parser.error("give at least one repository, --batch OWNER/REPO ..., or --rotate N")
 
     state = load_state() if args.record else None
     today = __import__("datetime").date.today().isoformat()
